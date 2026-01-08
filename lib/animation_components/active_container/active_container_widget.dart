@@ -3,11 +3,14 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 
 class ActiveContainerWidget extends StatefulWidget {
-  const ActiveContainerWidget({super.key, this.isReverse, this.color, this.isStop, this.numBars, this.width, this.height});
+  const ActiveContainerWidget({super.key, this.isReverse, this.color, this.isStop, this.numBars, this.width, this.height, this.angleBarItem, this.widthBarItem});
 
   final double? width;
   final double? height;
   final int? numBars;
+
+  final double? widthBarItem;
+  final double? angleBarItem;
 
   final bool? isReverse;
   final Color? color;
@@ -38,7 +41,8 @@ class _ActiveContainerWidgetState extends State<ActiveContainerWidget> with Sing
     double containerWidth = widget.width ?? 500;
     double containerHeight = widget.height ?? 70;
     int numBars = widget.numBars ?? 20;
-    const double barWidth = 20;
+    double barWidth = widget.widthBarItem ?? 20;
+    double angleBarItem = widget.angleBarItem ?? -math.pi / 16;
 
     // Khoảng cách đều nhau
     final double spacing = (containerWidth - (numBars * barWidth)) / (numBars - 1);
@@ -75,9 +79,9 @@ class _ActiveContainerWidgetState extends State<ActiveContainerWidget> with Sing
                 return Transform.scale(
                   scaleY: 1.2,
                   child: Transform.translate(
-                    offset: Offset(x - barWidth, -5.0),
+                    offset: Offset(x - barWidth, -10.0),
                     child: Transform.rotate(
-                      angle: -math.pi / 16, // nghiêng nhẹ
+                      angle: angleBarItem, // nghiêng nhẹ
                       child: Container(
                         width: barWidth,
                         height: containerHeight + 50.0,

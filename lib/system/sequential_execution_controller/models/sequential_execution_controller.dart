@@ -26,6 +26,7 @@ import 'package:frame_creator_v2/features/pomodoro/models/pomodoro_feature.dart'
 import 'package:frame_creator_v2/features/pomodoro_ending_conversation/models/pomodoro_ending_conversation_feature.dart';
 import 'package:frame_creator_v2/features/pomodoro_starting_conversation/models/pomodoro_starting_conversation_feature.dart';
 import 'package:frame_creator_v2/features/scene_transition/models/scene_transition_feature.dart';
+import 'package:frame_creator_v2/features/system/models/system_feature.dart';
 import 'package:frame_creator_v2/features/system_timeline/models/system_timeline_feature.dart';
 import 'package:frame_creator_v2/features/vocabulary_conversation/models/vocabulary_conversation_feature.dart';
 import 'package:frame_creator_v2/features/vocabulary_definition/models/vocabulary_definition_feature.dart';
@@ -221,6 +222,15 @@ class SequentialExecutionController with ExecutionCore, FeatureMixin, WindowFeat
       if (SystemConfig.isFormatCrosswordPuzzleGameBoard == true) {
         setCrosswordPuzzleScript(value: CrosswordPuzzleScriptModel(sequentialExecutionController: this));
       }
+
+      /// -----
+      /// TODO:
+      /// -----
+      setSystemFeature(value: SystemFeature(systemStateManagement: getSystemStateManagement, sizeDx: null, sizeDy: null), isPriorityOverride: true);
+      getSystemFeature?.setSizeDx(value: getSizeDx - 30.0, isPriorityOverride: true, isSetActiveSizeDx: true);
+      getSystemFeature?.setSizeDy(value: getSizeDy - 30.0, isPriorityOverride: true, isSetActiveSizeDy: true);
+      getSystemFeature?.setTopPosition(value: 15.0, isPriorityOverride: true, isSetActiveTopPosition: true);
+      getSystemFeature?.setLeftPosition(value: 15.0, isPriorityOverride: true, isSetActiveLeftPosition: true);
 
       /// -----
       /// TODO:
@@ -683,6 +693,7 @@ class SequentialExecutionController with ExecutionCore, FeatureMixin, WindowFeat
       /// -----
       /// TODO:
       /// -----
+      await getSystemFeature?.onSetupRoot();
       await getIntroductionFeature?.onSetupRoot();
       await getBreakTimeSpaceFeature?.onSetupRoot();
       await getIntroductoryConversationFeature?.onSetupRoot();
@@ -831,7 +842,6 @@ class SequentialExecutionController with ExecutionCore, FeatureMixin, WindowFeat
       ///
       ///
       await getContentItemSequentialExecution?.onSetupRoot();
-
     } catch (e) {
       await onReportRootIssue(nameFunction: '[onSetupRootForSubCom]');
     }
@@ -855,6 +865,7 @@ class SequentialExecutionController with ExecutionCore, FeatureMixin, WindowFeat
       /// -----
       /// TODO:
       /// -----
+      await getSystemFeature?.onInitRoot();
       await getIntroductionFeature?.onInitRoot();
       await getBreakTimeSpaceFeature?.onInitRoot();
       await getIntroductoryConversationFeature?.onInitRoot();

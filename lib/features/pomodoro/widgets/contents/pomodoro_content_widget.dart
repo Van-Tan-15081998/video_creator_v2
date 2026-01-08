@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:frame_creator_v2/animation_components/active_container/active_container_widget.dart';
@@ -74,8 +75,7 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
           ///
 
           /// TODO: StayFocused SS01
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS01?.getStatus?.isActive() == true &&
-              widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS01?.isCompletedPreparing() == true) {
+          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS01?.getStatus?.isActive() == true && widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS01?.isCompletedPreparing() == true) {
             stayFocusedProgressbarPomodoroSS01 = stayFocusedProgressbar * ((widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS01?.getPercentComplete ?? 0) / 100);
 
             processingId = '[PomodoroSS01]';
@@ -88,8 +88,7 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
           }
 
           /// TODO: StayFocused SS02
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS02?.getStatus?.isActive() == true &&
-              widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS02?.isCompletedPreparing() == true) {
+          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS02?.getStatus?.isActive() == true && widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS02?.isCompletedPreparing() == true) {
             stayFocusedProgressbarPomodoroSS02 = stayFocusedProgressbar * ((widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS02?.getPercentComplete ?? 0) / 100);
 
             processingId = '[PomodoroSS02]';
@@ -102,8 +101,7 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
           }
 
           /// TODO: StayFocused SS03
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS03?.getStatus?.isActive() == true &&
-              widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS03?.isCompletedPreparing() == true) {
+          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS03?.getStatus?.isActive() == true && widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS03?.isCompletedPreparing() == true) {
             stayFocusedProgressbarPomodoroSS03 = stayFocusedProgressbar * ((widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS03?.getPercentComplete ?? 0) / 100);
 
             processingId = '[PomodoroSS03]';
@@ -116,8 +114,7 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
           }
 
           /// TODO: StayFocused SS04
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS04?.getStatus?.isActive() == true &&
-              widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS04?.isCompletedPreparing() == true) {
+          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS04?.getStatus?.isActive() == true && widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS04?.isCompletedPreparing() == true) {
             stayFocusedProgressbarPomodoroSS04 = stayFocusedProgressbar * ((widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS04?.getPercentComplete ?? 0) / 100);
 
             processingId = '[PomodoroSS04]';
@@ -134,8 +131,7 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
           ///
 
           /// TODO: BreakTime SS01
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS01?.getStatus?.isActive() == true &&
-              widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS01?.isCompletedPreparing() == true) {
+          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS01?.getStatus?.isActive() == true && widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS01?.isCompletedPreparing() == true) {
             breakTimeProgressbarPomodoroSS01 = breakTimeProgressbar * ((widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS01?.getPercentComplete ?? 0) / 100);
 
             processingId = '[PomodoroSS01]';
@@ -148,8 +144,7 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
           }
 
           /// TODO: BreakTime SS02
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS02?.getStatus?.isActive() == true &&
-              widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS02?.isCompletedPreparing() == true) {
+          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS02?.getStatus?.isActive() == true && widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS02?.isCompletedPreparing() == true) {
             breakTimeProgressbarPomodoroSS02 = breakTimeProgressbar * ((widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS02?.getPercentComplete ?? 0) / 100);
 
             processingId = '[PomodoroSS02]';
@@ -162,8 +157,7 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
           }
 
           /// TODO: BreakTime SS03
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS03?.getStatus?.isActive() == true &&
-              widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS03?.isCompletedPreparing() == true) {
+          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS03?.getStatus?.isActive() == true && widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS03?.isCompletedPreparing() == true) {
             breakTimeProgressbarPomodoroSS03 = breakTimeProgressbar * ((widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS03?.getPercentComplete ?? 0) / 100);
 
             processingId = '[PomodoroSS03]';
@@ -176,8 +170,7 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
           }
 
           /// TODO: BreakTime SS04
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS04?.getStatus?.isActive() == true &&
-              widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS04?.isCompletedPreparing() == true) {
+          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS04?.getStatus?.isActive() == true && widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS04?.isCompletedPreparing() == true) {
             breakTimeProgressbarPomodoroSS04 = breakTimeProgressbar * ((widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS04?.getPercentComplete ?? 0) / 100);
 
             processingId = '[PomodoroSS04]';
@@ -294,6 +287,12 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
         break;
     }
 
+    Color? color = isProcessing
+        ? Color(0xFF00BFFF)
+        : (isProcessingStayFocused == true || isProcessingBreakTime == true)
+        ? Colors.white.withValues(alpha: 0.8)
+        : Color(0xFFFF4040);
+
     return AnimatedPositioned(
       top: top,
       bottom: bottom,
@@ -318,45 +317,80 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
             children: [
               AnimatedPositioned(
                 duration: const Duration(milliseconds: 100),
-                top: 0,
-                left: 0,
-                child: Stack(
-                  children: [
-                    AnimatedContainer(
-                      duration: const Duration(milliseconds: 100),
-                      width: widget.sizeDx * 0.3,
-                      height: widget.sizeDy * 0.18,
+                top: 1.0,
+                left: 1.0,
+                width: widget.sizeDx * 0.3 - 2.0,
+                height: widget.sizeDy * 0.18 - 2.0,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(15.0),
+                  child: Stack(
+                    alignment: AlignmentDirectional.center,
+                    children: [
+                      AnimatedPositioned(
+                        duration: const Duration(milliseconds: 100),
+                        bottom: -10.0,
+                        left: -10.0,
+                        height: 60.0,
+                        width: 700.0,
+                        child: Container(height: 25.0, width: 700.0, decoration: BoxDecoration(color: Color(0xFF1C1C1C))),
+                      ),
 
-                      child: Center(
-                        child: Text.rich(
-                          TextSpan(
-                            style: TextStyle(fontSize: 20, height: 1.0),
-                            children: [
-                              titleAnimation(
-                                word: title,
-                                isActive: isProcessing,
-                                color: isProcessing
-                                    ? Color(0xFF00BFFF)
-                                    : (isProcessingStayFocused == true || isProcessingBreakTime == true)
-                                    ? Colors.white.withValues(alpha: 0.8)
-                                    : Color(0xFFFF4040),
-                              ),
-                            ],
+                      AnimatedPositioned(
+                        duration: const Duration(milliseconds: 100),
+                        top: -15.0,
+                        left: -20.0,
+                        height: 70.0,
+                        width: 700.0,
+                        child: Container(
+                          height: 70.0,
+                          width: 700.0,
+                          decoration: BoxDecoration(color: Colors.transparent),
+                          child: isProcessing
+                              ? //
+                                ActiveContainerWidget(isReverse: false, color: color, width: 700.0, height: 70.0, numBars: 16, widthBarItem: 35.0, angleBarItem: -math.pi / 12) //
+                              : InactiveContainerWidget(isReverse: false, color: color, width: 700.0, height: 70.0, numBars: 16, widthBarItem: 35.0, angleBarItem: -math.pi / 12),
+                        ),
+                      ),
+
+                      AnimatedPositioned(
+                        duration: const Duration(milliseconds: 100),
+                        width: widget.sizeDx * 0.3,
+                        height: widget.sizeDy * 0.18,
+                        child: Center(
+                          child: Text.rich(
+                            TextSpan(
+                              style: TextStyle(fontSize: 20, height: 1.0),
+                              children: [
+                                titleAnimation(
+                                  word: title,
+                                  isActive: isProcessing,
+                                  color: isProcessing
+                                      ? Color(0xFF00BFFF)
+                                      : (isProcessingStayFocused == true || isProcessingBreakTime == true)
+                                      ? Colors.white.withValues(alpha: 0.8)
+                                      : Color(0xFFFF4040),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
 
               AnimatedPositioned(
                 duration: const Duration(milliseconds: 100),
-                top: 3,
-                left: 3,
+                // top: 3,
+                // left: 3,
+                top: 0,
+                left: 0,
                 child: Container(
-                  width: widget.sizeDx * 0.3 - 6.0,
-                  height: widget.sizeDy * 0.18 - 6.0,
+                  // width: widget.sizeDx * 0.3 - 6.0,
+                  // height: widget.sizeDy * 0.18 - 6.0,
+                  width: widget.sizeDx * 0.3,
+                  height: widget.sizeDy * 0.18,
                   decoration: BoxDecoration(
                     border: Border.all(width: 5.0, color: Colors.black),
                     borderRadius: BorderRadius.all(Radius.circular(16.0)),
@@ -522,25 +556,24 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
 
               child: Stack(
                 children: [
-                  Positioned(
-                    bottom: -1.0,
-                    left: -1.0,
-                    height: 25.0,
-                    width: 500.0,
-                    child: Container(height: 25.0, width: 500.0, decoration: BoxDecoration(color: Color(0xFF1C1C1C))),
-                  ),
-
-                  Positioned(
-                    top: -1.0,
-                    left: -1.0,
-                    child: Container(
-                      height: 35.0,
-                      width: 500.0,
-                      decoration: BoxDecoration(color: Colors.transparent),
-                      child: isActive ? ActiveContainerWidget(isReverse: false, color: color ?? Color(0xFF363636)) : InactiveContainerWidget(isReverse: false, color: color ?? Color(0xFF363636)),
-                    ),
-                  ),
-
+                  // Positioned(
+                  //   bottom: -1.0,
+                  //   left: -1.0,
+                  //   height: 25.0,
+                  //   width: 500.0,
+                  //   child: Container(height: 25.0, width: 500.0, decoration: BoxDecoration(color: Color(0xFF1C1C1C))),
+                  // ),
+                  //
+                  // Positioned(
+                  //   top: -1.0,
+                  //   left: -1.0,
+                  //   child: Container(
+                  //     height: 35.0,
+                  //     width: 500.0,
+                  //     decoration: BoxDecoration(color: Colors.transparent),
+                  //     child: isActive ? ActiveContainerWidget(isReverse: false, color: color ?? Color(0xFF363636)) : InactiveContainerWidget(isReverse: false, color: color ?? Color(0xFF363636)),
+                  //   ),
+                  // ),
                   Positioned(
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2.5),

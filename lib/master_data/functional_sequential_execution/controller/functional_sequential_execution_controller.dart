@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
-import 'package:frame_creator_v2/master_data/content_item/03_pomodoro_content_stage/pomodoro_content_stage.dart';
+import 'package:frame_creator_v2/master_data/content_item/03_content_stage/abstract/content_stage.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/controller/attributes/gap_time.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/phase_item/functional_sequential_execution_phase.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/specific_scripts/topic_a_script.dart';
@@ -388,7 +388,7 @@ class FunctionalSequentialExecutionController with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
-  onUpdateSpecific({required PomodoroContentStage? pomodoroContentStage}) {
+  onUpdateSpecific({required ContentStage? contentStage}) {
     /// -----
     /// TODO:
     /// -----
@@ -401,15 +401,15 @@ class FunctionalSequentialExecutionController with ExecutionCore {
     }
 
     if (getGapTime?.isCompleted() == true) {
-      if (pomodoroContentStage?.getFunctionalSequentialExecutionStepItemStateListAsStack?.isNotEmpty == true) {
-        FunctionalSequentialExecutionStepItemState? functionalSequentialExecutionStepItemState = pomodoroContentStage?.getFunctionalSequentialExecutionStepItemStateListAsStack?.first;
+      if (contentStage?.getFunctionalSequentialExecutionStepItemStateListAsStack?.isNotEmpty == true) {
+        FunctionalSequentialExecutionStepItemState? functionalSequentialExecutionStepItemState = contentStage?.getFunctionalSequentialExecutionStepItemStateListAsStack?.first;
 
         /// -----
         /// TODO: Gap
         /// -----
         if (functionalSequentialExecutionStepItemState?.getStateModel?.getFlowType?.isTypeAsGapFlow() == true) {
           getGapTime?.setSeconds(value: functionalSequentialExecutionStepItemState?.getStateModel?.getGapTime?.getSeconds, isPriorityOverride: true);
-          pomodoroContentStage?.getFunctionalSequentialExecutionStepItemStateListAsStack?.remove(functionalSequentialExecutionStepItemState);
+          contentStage?.getFunctionalSequentialExecutionStepItemStateListAsStack?.remove(functionalSequentialExecutionStepItemState);
 
           /// TODO: Perform
           functionalSequentialExecutionStepItemState?.getStateModel?.onPerform?.call();
@@ -423,7 +423,7 @@ class FunctionalSequentialExecutionController with ExecutionCore {
           /// -----
           if (functionalSequentialExecutionStepItemState?.getStateModel?.getFlowType?.isTypeAsCharacterFlow() == true) {
             getFlowController?.getCharacterFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(functionalSequentialExecutionStepItemState);
-            pomodoroContentStage?.getFunctionalSequentialExecutionStepItemStateListAsStack?.remove(functionalSequentialExecutionStepItemState);
+            contentStage?.getFunctionalSequentialExecutionStepItemStateListAsStack?.remove(functionalSequentialExecutionStepItemState);
 
             /// TODO: Perform
             functionalSequentialExecutionStepItemState?.getStateModel?.onPerform?.call();
@@ -436,7 +436,7 @@ class FunctionalSequentialExecutionController with ExecutionCore {
           /// -----
           if (functionalSequentialExecutionStepItemState?.getStateModel?.getFlowType?.isTypeAsMessageFlow() == true) {
             getFlowController?.getMessageFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(functionalSequentialExecutionStepItemState);
-            pomodoroContentStage?.getFunctionalSequentialExecutionStepItemStateListAsStack?.remove(functionalSequentialExecutionStepItemState);
+            contentStage?.getFunctionalSequentialExecutionStepItemStateListAsStack?.remove(functionalSequentialExecutionStepItemState);
 
             /// TODO: Perform
             functionalSequentialExecutionStepItemState?.getStateModel?.onPerform?.call();
@@ -449,7 +449,7 @@ class FunctionalSequentialExecutionController with ExecutionCore {
           /// -----
           if (functionalSequentialExecutionStepItemState?.getStateModel?.getFlowType?.isTypeAsWindowFlow() == true) {
             getFlowController?.getWindowFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(functionalSequentialExecutionStepItemState);
-            pomodoroContentStage?.getFunctionalSequentialExecutionStepItemStateListAsStack?.remove(functionalSequentialExecutionStepItemState);
+            contentStage?.getFunctionalSequentialExecutionStepItemStateListAsStack?.remove(functionalSequentialExecutionStepItemState);
 
             /// TODO: Perform
             functionalSequentialExecutionStepItemState?.getStateModel?.onPerform?.call();

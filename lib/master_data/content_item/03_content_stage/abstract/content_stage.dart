@@ -1,15 +1,14 @@
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
-import 'package:frame_creator_v2/master_data/content_item/02_content_item_section/content_item_section.dart';
-import 'package:frame_creator_v2/master_data/content_item/03_pomodoro_content_stage/models/pomodoro_content_stage_active_status.dart';
+import 'package:frame_creator_v2/master_data/content_item/03_content_stage/abstract/content_stage_active_status.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item_state.dart';
 
-class PomodoroContentStage with ExecutionCore {
+class ContentStage with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
-  PomodoroContentStageActiveStatus? _activeStatus;
-  PomodoroContentStageActiveStatus? get getActiveStatus => _activeStatus;
-  void setActiveStatus({required PomodoroContentStageActiveStatus? value, bool? isPriorityOverride}) {
+  ContentStageActiveStatus? _activeStatus;
+  ContentStageActiveStatus? get getActiveStatus => _activeStatus;
+  void setActiveStatus({required ContentStageActiveStatus? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
       _activeStatus = value;
     } else {
@@ -18,21 +17,6 @@ class PomodoroContentStage with ExecutionCore {
 
     return;
   }
-
-  // ///
-  // /// TODO:
-  // ///
-  // List<ContentItemSection>? _contentItemSectionListAsStack;
-  // List<ContentItemSection>? get getContentItemSectionListAsStack => _contentItemSectionListAsStack;
-  // void setContentItemSectionListAsStack({required List<ContentItemSection>? value, bool? isPriorityOverride}) {
-  //   if (isPriorityOverride == true) {
-  //     _contentItemSectionListAsStack = value;
-  //   } else {
-  //     _contentItemSectionListAsStack ??= value;
-  //   }
-  //
-  //   return;
-  // }
 
   ///
   /// TODO: FunctionalSequentialExecutionStepItemState List As Stack
@@ -106,10 +90,9 @@ class PomodoroContentStage with ExecutionCore {
       /// -----
       /// TODO:
       /// -----
+      setActiveStatus(value: ContentStageActiveStatus.asDefault(), isPriorityOverride: true);
 
-      setActiveStatus(value: PomodoroContentStageActiveStatus.asDefault(), isPriorityOverride: true);
-
-      // setContentItemSectionListAsStack(value: [], isPriorityOverride: true);
+      ///
       setFunctionalSequentialExecutionStepItemStateListAsStack(value: [], isPriorityOverride: true);
 
       /// -----

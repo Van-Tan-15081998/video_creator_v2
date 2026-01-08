@@ -22,6 +22,7 @@ import 'package:frame_creator_v2/features/pomodoro/models/pomodoro_feature.dart'
 import 'package:frame_creator_v2/features/pomodoro_ending_conversation/models/pomodoro_ending_conversation_feature.dart';
 import 'package:frame_creator_v2/features/pomodoro_starting_conversation/models/pomodoro_starting_conversation_feature.dart';
 import 'package:frame_creator_v2/features/scene_transition/models/scene_transition_feature.dart';
+import 'package:frame_creator_v2/features/system/models/system_feature.dart';
 import 'package:frame_creator_v2/features/system_timeline/models/system_timeline_feature.dart';
 import 'package:frame_creator_v2/features/vocabulary_conversation/models/vocabulary_conversation_feature.dart';
 import 'package:frame_creator_v2/features/vocabulary_definition/models/vocabulary_definition_feature.dart';
@@ -35,6 +36,22 @@ import 'package:frame_creator_v2/features/vocabulary_title/models/vocabulary_tit
 import 'package:frame_creator_v2/system/sequential_execution_controller/models/script_models/vocabulary_script_model.dart';
 
 mixin FeatureMixin {
+  /// -----
+  /// TODO:
+  /// -----
+  SystemFeature? _systemFeature;
+  SystemFeature? get getSystemFeature => _systemFeature;
+  void setSystemFeature({required SystemFeature? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _systemFeature = value;
+    } else {
+      _systemFeature ??= value;
+    }
+
+    ///
+    return;
+  }
+
   /// -----
   /// TODO:
   /// -----

@@ -1,15 +1,18 @@
 import 'package:flutter/foundation.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
-import 'package:frame_creator_v2/features/pomodoro/models/data/pomodoro_status.dart';
-import 'package:frame_creator_v2/master_data/content_item/03_content_stage/pomodoro_content_stage.dart';
+import 'package:frame_creator_v2/master_data/content_item/03_content_stage/system_content_stage.dart';
+import 'package:frame_creator_v2/master_data/system_item/system_active_status.dart';
 
-class PomodoroItem with ExecutionCore {
-  PomodoroItem({required String? id, required List<VoidCallback?>? completedCallbackFunctionStack, required double? totalMinutes, required double? totalPrepareSeconds, required this.onComplete}) {
-    setId(value: id, isPriorityOverride: true);
-    setTotalMinutes(value: totalMinutes, isPriorityOverride: true);
-    setTotalPrepareSeconds(value: totalPrepareSeconds, isPriorityOverride: true);
-    setCompletedCallbackFunctionStack(value: completedCallbackFunctionStack, isPriorityOverride: true);
-  }
+class SystemItem with ExecutionCore {
+  /// -----
+  /// TODO:
+  /// -----
+  // SystemItem({required String? id, required List<VoidCallback?>? completedCallbackFunctionStack, required double? totalMinutes, required double? totalPrepareSeconds, required this.onComplete}) {
+  //   setId(value: id, isPriorityOverride: true);
+  //   setTotalMinutes(value: totalMinutes, isPriorityOverride: true);
+  //   setTotalPrepareSeconds(value: totalPrepareSeconds, isPriorityOverride: true);
+  // }
+  SystemItem();
 
   /// -----
   /// TODO:
@@ -27,60 +30,15 @@ class PomodoroItem with ExecutionCore {
   }
 
   /// -----
-  /// TODO: PomodoroContentStage
+  /// TODO: SystemContentStage
   /// -----
-  PomodoroContentStage? _pomodoroContentStage;
-  PomodoroContentStage? get getPomodoroContentStage => _pomodoroContentStage;
-  void setPomodoroContentStage({required PomodoroContentStage? value, bool? isPriorityOverride}) {
+  SystemContentStage? _systemContentStage;
+  SystemContentStage? get getSystemContentStage => _systemContentStage;
+  void setSystemContentStage({required SystemContentStage? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
-      _pomodoroContentStage = value;
+      _systemContentStage = value;
     } else {
-      _pomodoroContentStage ??= value;
-    }
-
-    return;
-  }
-
-  /// -----
-  /// TODO: GO PomodoroContentStage
-  /// -----
-  PomodoroContentStage? _goPomodoroContentStage;
-  PomodoroContentStage? get getGoPomodoroContentStage => _goPomodoroContentStage;
-  void setGoPomodoroContentStage({required PomodoroContentStage? value, bool? isPriorityOverride}) {
-    if (isPriorityOverride == true) {
-      _goPomodoroContentStage = value;
-    } else {
-      _goPomodoroContentStage ??= value;
-    }
-
-    return;
-  }
-
-  /// -----
-  /// TODO: DONE PomodoroContentStage
-  /// -----
-  PomodoroContentStage? _donePomodoroContentStage;
-  PomodoroContentStage? get getDonePomodoroContentStage => _donePomodoroContentStage;
-  void setDonePomodoroContentStage({required PomodoroContentStage? value, bool? isPriorityOverride}) {
-    if (isPriorityOverride == true) {
-      _donePomodoroContentStage = value;
-    } else {
-      _donePomodoroContentStage ??= value;
-    }
-
-    return;
-  }
-
-  /// -----
-  /// TODO:
-  /// -----
-  List<VoidCallback?>? _completedCallbackFunctionStack;
-  List<VoidCallback?>? get getCompletedCallbackFunctionStack => _completedCallbackFunctionStack;
-  void setCompletedCallbackFunctionStack({required List<VoidCallback?>? value, bool? isPriorityOverride}) {
-    if (isPriorityOverride == true) {
-      _completedCallbackFunctionStack = value;
-    } else {
-      _completedCallbackFunctionStack ??= value;
+      _systemContentStage ??= value;
     }
 
     return;
@@ -183,9 +141,9 @@ class PomodoroItem with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
-  PomodoroStatus? _status;
-  PomodoroStatus? get getStatus => _status;
-  void setStatus({required PomodoroStatus? value, bool? isPriorityOverride}) {
+  SystemActiveStatus? _status;
+  SystemActiveStatus? get getStatus => _status;
+  void setStatus({required SystemActiveStatus? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
       _status = value;
     } else {
@@ -267,7 +225,7 @@ class PomodoroItem with ExecutionCore {
   /// TODO:
   /// -----
   void onStart() {
-    getStatus?.setStatusActive();
+    getStatus?.setStatusAsActive();
   }
 
   /// -----
@@ -276,7 +234,7 @@ class PomodoroItem with ExecutionCore {
   void onUpdate() {
     if (getIsPaused == true) {
       /// TODO: Set Active Status
-      getPomodoroContentStage?.getActiveStatus?.setStatusAsInActive();
+      getSystemContentStage?.getActiveStatus?.setStatusAsInActive();
     } else if (getIsPaused == false) {
       /// Điều Kiện Tiên Quyết => Tổng Số Giây Của Giai Đoạn Chuẩn Bị Phải = 0
       if ((getTotalPrepareSeconds ?? 0) >= 500) {
@@ -286,9 +244,9 @@ class PomodoroItem with ExecutionCore {
           setTotalPrepareSeconds(value: currentTotalPrepareSeconds, isPriorityOverride: true);
 
           /// TODO: Set Active Status
-          getPomodoroContentStage?.getActiveStatus?.setStatusAsInActive();
+          getSystemContentStage?.getActiveStatus?.setStatusAsInActive();
         }
-      } else if (getStatus?.isActive() == true) {
+      } else if (getStatus?.isStatusAsActive() == true) {
         if (isCompletedPreparing() == true) {
           if ((getTotalRemainingSeconds ?? 0) > 0) {
             double updateUpdate = (getTotalRemainingSeconds ?? 0) - 1;
@@ -300,9 +258,9 @@ class PomodoroItem with ExecutionCore {
             setPercentComplete(value: percentComplete, isPriorityOverride: true);
 
             /// TODO: Set Active Status
-            getPomodoroContentStage?.getActiveStatus?.setStatusAsActive();
+            getSystemContentStage?.getActiveStatus?.setStatusAsActive();
           } else if ((getTotalRemainingSeconds ?? 0) == 0) {
-            getStatus?.setStatusComplete();
+            getStatus?.setStatusAsPerformCompleted();
 
             ///
             setPercentComplete(value: 100, isPriorityOverride: true);
@@ -310,13 +268,8 @@ class PomodoroItem with ExecutionCore {
             ///
             onComplete?.call();
 
-            ///
-            if (getCompletedCallbackFunctionStack?.isNotEmpty == true) {
-              getCompletedCallbackFunctionStack?.first?.call();
-            }
-
             /// TODO: Set Active Status
-            getPomodoroContentStage?.getActiveStatus?.setStatusAsPerformCompleted();
+            getSystemContentStage?.getActiveStatus?.setStatusAsPerformCompleted();
           }
 
           int totalRemainingMinutes = (getTotalRemainingSeconds ?? 0) ~/ 60;
@@ -391,7 +344,7 @@ class PomodoroItem with ExecutionCore {
       /// TODO:
       /// -----
 
-      setStatus(value: PomodoroStatus.inActive(), isPriorityOverride: true);
+      setStatus(value: SystemActiveStatus.asDefault(), isPriorityOverride: true);
 
       /// -----
       /// TODO: Setup Root For SubCom

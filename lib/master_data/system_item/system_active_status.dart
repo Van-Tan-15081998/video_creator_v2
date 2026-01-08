@@ -1,17 +1,17 @@
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 
-class PomodoroContentStageActiveStatus with ExecutionCore {
+class SystemActiveStatus with ExecutionCore {
   ///
   /// TODO:
   ///
-  PomodoroContentStageActiveStatus.asDefault() {
+  SystemActiveStatus.asDefault() {
     setStatusAsDefault();
   }
 
   ///
   /// TODO:
   ///
-  PomodoroContentStageActiveStatus.asActive() {
+  SystemActiveStatus.asActive() {
     setStatusAsActive();
   }
 

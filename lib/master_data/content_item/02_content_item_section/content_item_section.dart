@@ -2,7 +2,7 @@ import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/master_data/content_item/01_content_item_unit/content_item_unit.dart';
 import 'package:frame_creator_v2/master_data/content_item/02_content_item_section/models/content_item_section_active_status.dart';
 import 'package:frame_creator_v2/master_data/content_item/02_content_item_section/models/content_item_timer.dart';
-import 'package:frame_creator_v2/master_data/content_item/03_pomodoro_content_stage/pomodoro_content_stage.dart';
+import 'package:frame_creator_v2/master_data/content_item/03_content_stage/abstract/content_stage.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/controller/functional_sequential_execution_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item_state.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/status/content_existence_status.dart';
@@ -149,190 +149,7 @@ class ContentItemSection with ExecutionCore {
   /// TODO: Integrate Script [_] Bind To [FlowController]
   /// TODO: Tích Hợp FunctionalSequentialExecutionStepItem (State) Vào Luồng Chính [FlowController] => Luồng Chính Có Trách Nhiệm Thực Thi
   /// -----
-  onIntegrateScriptBindToFlowControllerAsSystem({
-    // bool? isBreakTimeContentItemSectionSS01,
-    // bool? isBreakTimeContentItemSectionSS02,
-    // bool? isBreakTimeContentItemSectionSS03,
-    // bool? isBreakTimeContentItemSectionSS04,
-    bool? isFirstStartingContentItemSection,
-    bool? isLastEndingContentItemSection,
-  }) {
-    // /// ----- | ----- | -----
-    // ///  TODO: BreakTimeContentItemSectionSS01
-    // /// ----- | ----- | -----
-    // if (isBreakTimeContentItemSectionSS01 == true) {
-    //   /// -----
-    //   /// TODO: Start Section
-    //   /// -----
-    //   onIntegrateScriptAsStartSectionBindToFlowController();
-    //
-    //   /// -----
-    //   /// TODO: Content Of Section (Include All Of Unit Inside)
-    //   /// -----
-    //   if (getContentItemUnitListAsStack?.isNotEmpty == true) {
-    //     for (ContentItemUnit? contentItemUnit in (getContentItemUnitListAsStack ?? [])) {
-    //       if (contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.isNotEmpty == true) {
-    //         for (FunctionalSequentialExecutionStepItemState? functionalSequentialExecutionStepItemState in (contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack ?? [])) {
-    //           getFunctionalSequentialExecutionController?.getFunctionalSequentialExecutionStepItemStateListAsStackBindToBreakTimeSectionSS01?.add(functionalSequentialExecutionStepItemState);
-    //         }
-    //       }
-    //     }
-    //   }
-    //
-    //   /// -----
-    //   /// TODO: End Section
-    //   /// -----
-    //   onIntegrateScriptAsEndSectionBindToFlowController();
-    // }
-    //
-    // /// ----- | ----- | -----
-    // ///  TODO: BreakTimeContentItemSectionSS02
-    // /// ----- | ----- | -----
-    // if (isBreakTimeContentItemSectionSS02 == true) {
-    //   /// -----
-    //   /// TODO: Start Section
-    //   /// -----
-    //   onIntegrateScriptAsStartSectionBindToFlowController();
-    //
-    //   /// -----
-    //   /// TODO: Content Of Section (Include All Of Unit Inside)
-    //   /// -----
-    //   if (getContentItemUnitListAsStack?.isNotEmpty == true) {
-    //     for (ContentItemUnit? contentItemUnit in (getContentItemUnitListAsStack ?? [])) {
-    //       if (contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.isNotEmpty == true) {
-    //         for (FunctionalSequentialExecutionStepItemState? functionalSequentialExecutionStepItemState in (contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack ?? [])) {
-    //           getFunctionalSequentialExecutionController?.getFunctionalSequentialExecutionStepItemStateListAsStackBindToBreakTimeSectionSS02?.add(functionalSequentialExecutionStepItemState);
-    //         }
-    //       }
-    //     }
-    //   }
-    //
-    //   /// -----
-    //   /// TODO: End Section
-    //   /// -----
-    //   onIntegrateScriptAsEndSectionBindToFlowController();
-    // }
-    //
-    // /// ----- | ----- | -----
-    // ///  TODO: BreakTimeContentItemSectionSS03
-    // /// ----- | ----- | -----
-    // if (isBreakTimeContentItemSectionSS03 == true) {
-    //   /// -----
-    //   /// TODO: Start Section
-    //   /// -----
-    //   onIntegrateScriptAsStartSectionBindToFlowController();
-    //
-    //   /// -----
-    //   /// TODO: Content Of Section (Include All Of Unit Inside)
-    //   /// -----
-    //   if (getContentItemUnitListAsStack?.isNotEmpty == true) {
-    //     for (ContentItemUnit? contentItemUnit in (getContentItemUnitListAsStack ?? [])) {
-    //       if (contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.isNotEmpty == true) {
-    //         for (FunctionalSequentialExecutionStepItemState? functionalSequentialExecutionStepItemState in (contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack ?? [])) {
-    //           getFunctionalSequentialExecutionController?.getFunctionalSequentialExecutionStepItemStateListAsStackBindToBreakTimeSectionSS03?.add(functionalSequentialExecutionStepItemState);
-    //         }
-    //       }
-    //     }
-    //   }
-    //
-    //   /// -----
-    //   /// TODO: End Section
-    //   /// -----
-    //   onIntegrateScriptAsEndSectionBindToFlowController();
-    // }
-    //
-    // /// ----- | ----- | -----
-    // ///  TODO: BreakTimeContentItemSectionSS04
-    // /// ----- | ----- | -----
-    // if (isBreakTimeContentItemSectionSS04 == true) {
-    //   /// -----
-    //   /// TODO: Start Section
-    //   /// -----
-    //   onIntegrateScriptAsStartSectionBindToFlowController();
-    //
-    //   /// -----
-    //   /// TODO: Content Of Section (Include All Of Unit Inside)
-    //   /// -----
-    //   if (getContentItemUnitListAsStack?.isNotEmpty == true) {
-    //     for (ContentItemUnit? contentItemUnit in (getContentItemUnitListAsStack ?? [])) {
-    //       if (contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.isNotEmpty == true) {
-    //         for (FunctionalSequentialExecutionStepItemState? functionalSequentialExecutionStepItemState in (contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack ?? [])) {
-    //           getFunctionalSequentialExecutionController?.getFunctionalSequentialExecutionStepItemStateListAsStackBindToBreakTimeSectionSS04?.add(functionalSequentialExecutionStepItemState);
-    //         }
-    //       }
-    //     }
-    //   }
-    //
-    //   /// -----
-    //   /// TODO: End Section
-    //   /// -----
-    //   onIntegrateScriptAsEndSectionBindToFlowController();
-    // }
-
-    /// ----- | ----- | -----
-    ///  TODO: FirstStartingContentItemSection
-    /// ----- | ----- | -----
-    if (isFirstStartingContentItemSection == true) {
-      /// -----
-      /// TODO: Start Section
-      /// -----
-      onIntegrateScriptAsStartSectionBindToFlowController();
-
-      /// -----
-      /// TODO: Content Of Section (Include All Of Unit Inside)
-      /// -----
-      if (getContentItemUnitListAsStack?.isNotEmpty == true) {
-        for (ContentItemUnit? contentItemUnit in (getContentItemUnitListAsStack ?? [])) {
-          if (contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.isNotEmpty == true) {
-            for (FunctionalSequentialExecutionStepItemState? functionalSequentialExecutionStepItemState in (contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack ?? [])) {
-              getFunctionalSequentialExecutionController?.getFunctionalSequentialExecutionStepItemStateListAsStackBindToFirstStartingSection?.add(functionalSequentialExecutionStepItemState);
-            }
-          }
-        }
-      }
-
-      /// -----
-      /// TODO: End Section
-      /// -----
-      onIntegrateScriptAsEndSectionBindToFlowController();
-    }
-
-    /// ----- | ----- | -----
-    ///  TODO: LastEndingContentItemSection
-    /// ----- | ----- | -----
-    if (isLastEndingContentItemSection == true) {
-      /// -----
-      /// TODO: Start Section
-      /// -----
-      onIntegrateScriptAsStartSectionBindToFlowController();
-
-      /// -----
-      /// TODO: Content Of Section (Include All Of Unit Inside)
-      /// -----
-      if (getContentItemUnitListAsStack?.isNotEmpty == true) {
-        for (ContentItemUnit? contentItemUnit in (getContentItemUnitListAsStack ?? [])) {
-          if (contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.isNotEmpty == true) {
-            for (FunctionalSequentialExecutionStepItemState? functionalSequentialExecutionStepItemState in (contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack ?? [])) {
-              getFunctionalSequentialExecutionController?.getFunctionalSequentialExecutionStepItemStateListAsStackBindToLastEndingSection?.add(functionalSequentialExecutionStepItemState);
-            }
-          }
-        }
-      }
-
-      /// -----
-      /// TODO: End Section
-      /// -----
-      onIntegrateScriptAsEndSectionBindToFlowController();
-    }
-
-    return;
-  }
-
-  /// -----
-  /// TODO: Integrate Script [_] Bind To [FlowController]
-  /// TODO: Tích Hợp FunctionalSequentialExecutionStepItem (State) Vào Luồng Chính [FlowController] => Luồng Chính Có Trách Nhiệm Thực Thi
-  /// -----
-  onIntegrateScriptBindToFlowControllerAsPomodoroContent({required PomodoroContentStage? pomodoroContentStage}) {
+  onIntegrateScriptBindToFlowControllerAsSystem({required ContentStage? contentStage}) {
     /// -----
     /// TODO: Start Section
     /// -----
@@ -345,7 +162,38 @@ class ContentItemSection with ExecutionCore {
       for (ContentItemUnit? contentItemUnit in (getContentItemUnitListAsStack ?? [])) {
         if (contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.isNotEmpty == true) {
           for (FunctionalSequentialExecutionStepItemState? functionalSequentialExecutionStepItemState in (contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack ?? [])) {
-            pomodoroContentStage?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(functionalSequentialExecutionStepItemState);
+            contentStage?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(functionalSequentialExecutionStepItemState);
+          }
+        }
+      }
+    }
+
+    /// -----
+    /// TODO: End Section
+    /// -----
+    onIntegrateScriptAsEndSectionBindToFlowController();
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Integrate Script [_] Bind To [FlowController]
+  /// TODO: Tích Hợp FunctionalSequentialExecutionStepItem (State) Vào Luồng Chính [FlowController] => Luồng Chính Có Trách Nhiệm Thực Thi
+  /// -----
+  onIntegrateScriptBindToFlowControllerAsPomodoroContent({required ContentStage? contentStage}) {
+    /// -----
+    /// TODO: Start Section
+    /// -----
+    onIntegrateScriptAsStartSectionBindToFlowController();
+
+    /// -----
+    /// TODO: Content Of Section (Include All Of Unit Inside)
+    /// -----
+    if (getContentItemUnitListAsStack?.isNotEmpty == true) {
+      for (ContentItemUnit? contentItemUnit in (getContentItemUnitListAsStack ?? [])) {
+        if (contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.isNotEmpty == true) {
+          for (FunctionalSequentialExecutionStepItemState? functionalSequentialExecutionStepItemState in (contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack ?? [])) {
+            contentStage?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(functionalSequentialExecutionStepItemState);
           }
         }
       }
