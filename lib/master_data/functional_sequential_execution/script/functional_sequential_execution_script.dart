@@ -1,0 +1,581 @@
+import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
+import 'package:frame_creator_v2/master_data/content_item/04_content_item_sequential_execution/content_item_sequential_execution.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/controller/functional_sequential_execution_controller.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item_state.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/status/flow_controller.dart';
+import 'package:frame_creator_v2/system/sequential_execution_controller/models/sequential_execution_controller.dart';
+
+abstract class FunctionalSequentialExecutionScript with ExecutionCore {
+  ///
+  /// TODO:
+  ///
+  FunctionalSequentialExecutionScript({
+    required SequentialExecutionController? sequentialExecutionController, //
+    required ContentItemSequentialExecution? contentItemSequentialExecution, //
+    required FunctionalSequentialExecutionController? functionalSequentialExecutionController,
+  }) {
+    ///
+    setSequentialExecutionController(value: sequentialExecutionController, isPriorityOverride: true);
+
+    ///
+    setContentItemSequentialExecution(value: contentItemSequentialExecution, isPriorityOverride: true);
+
+    ///
+    setFunctionalSequentialExecutionController(value: functionalSequentialExecutionController, isPriorityOverride: true);
+
+    ///
+    setFunctionalSequentialExecutionStepItemStateListAsStackPhraseSS01(value: [], isPriorityOverride: true);
+    setFunctionalSequentialExecutionStepItemStateListAsStackPhraseSS02(value: [], isPriorityOverride: true);
+    setFunctionalSequentialExecutionStepItemStateListAsStackPhraseSS03(value: [], isPriorityOverride: true);
+    setFunctionalSequentialExecutionStepItemStateListAsStackPhraseSS04(value: [], isPriorityOverride: true);
+  }
+
+  ///
+  /// TODO:
+  ///
+  ContentItemSequentialExecution? _contentItemSequentialExecution;
+  ContentItemSequentialExecution? get getContentItemSequentialExecution => _contentItemSequentialExecution;
+  void setContentItemSequentialExecution({required ContentItemSequentialExecution? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _contentItemSequentialExecution = value;
+    } else {
+      _contentItemSequentialExecution ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  /// TODO:
+  ///
+  FunctionalSequentialExecutionController? _functionalSequentialExecutionController;
+  FunctionalSequentialExecutionController? get getFunctionalSequentialExecutionController => _functionalSequentialExecutionController;
+  void setFunctionalSequentialExecutionController({required FunctionalSequentialExecutionController? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _functionalSequentialExecutionController = value;
+    } else {
+      _functionalSequentialExecutionController ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  /// TODO:
+  ///
+  int? _seconds;
+  int get getSeconds => _seconds ?? 0;
+  void setSeconds({required int? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _seconds = value;
+    } else {
+      _seconds ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: FlowController [CharacterFlowController|MessageFlowController|WindowFlowController]
+  /// -----
+  // FlowController? _flowController;
+  // FlowController? get getFlowController => _flowController;
+  // void setFlowController({required FlowController? value, bool? isPriorityOverride}) {
+  //   if (isPriorityOverride == true) {
+  //     _flowController = value;
+  //   } else {
+  //     _flowController ??= value;
+  //   }
+  //
+  //   return;
+  // }
+
+  ///
+  /// TODO: FunctionalSequentialExecutionStepItemState List As Stack => Phrase SS01
+  ///
+  List<FunctionalSequentialExecutionStepItemState>? _functionalSequentialExecutionStepItemStateListAsStackPhraseSS01;
+  List<FunctionalSequentialExecutionStepItemState>? get getFunctionalSequentialExecutionStepItemStateListAsStackPhraseSS01 => _functionalSequentialExecutionStepItemStateListAsStackPhraseSS01;
+  void setFunctionalSequentialExecutionStepItemStateListAsStackPhraseSS01({required List<FunctionalSequentialExecutionStepItemState>? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _functionalSequentialExecutionStepItemStateListAsStackPhraseSS01 = value;
+    } else {
+      _functionalSequentialExecutionStepItemStateListAsStackPhraseSS01 ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  /// TODO: FunctionalSequentialExecutionStepItemState List As Stack => Phrase SS02
+  ///
+  List<FunctionalSequentialExecutionStepItemState>? _functionalSequentialExecutionStepItemStateListAsStackPhraseSS02;
+  List<FunctionalSequentialExecutionStepItemState>? get getFunctionalSequentialExecutionStepItemStateListAsStackPhraseSS02 => _functionalSequentialExecutionStepItemStateListAsStackPhraseSS02;
+  void setFunctionalSequentialExecutionStepItemStateListAsStackPhraseSS02({required List<FunctionalSequentialExecutionStepItemState>? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _functionalSequentialExecutionStepItemStateListAsStackPhraseSS02 = value;
+    } else {
+      _functionalSequentialExecutionStepItemStateListAsStackPhraseSS02 ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  /// TODO: FunctionalSequentialExecutionStepItemState List As Stack => Phrase SS03
+  ///
+  List<FunctionalSequentialExecutionStepItemState>? _functionalSequentialExecutionStepItemStateListAsStackPhraseSS03;
+  List<FunctionalSequentialExecutionStepItemState>? get getFunctionalSequentialExecutionStepItemStateListAsStackPhraseSS03 => _functionalSequentialExecutionStepItemStateListAsStackPhraseSS03;
+  void setFunctionalSequentialExecutionStepItemStateListAsStackPhraseSS03({required List<FunctionalSequentialExecutionStepItemState>? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _functionalSequentialExecutionStepItemStateListAsStackPhraseSS03 = value;
+    } else {
+      _functionalSequentialExecutionStepItemStateListAsStackPhraseSS03 ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  /// TODO: FunctionalSequentialExecutionStepItemState List As Stack => Phrase SS04
+  ///
+  List<FunctionalSequentialExecutionStepItemState>? _functionalSequentialExecutionStepItemStateListAsStackPhraseSS04;
+  List<FunctionalSequentialExecutionStepItemState>? get getFunctionalSequentialExecutionStepItemStateListAsStackPhraseSS04 => _functionalSequentialExecutionStepItemStateListAsStackPhraseSS04;
+  void setFunctionalSequentialExecutionStepItemStateListAsStackPhraseSS04({required List<FunctionalSequentialExecutionStepItemState>? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _functionalSequentialExecutionStepItemStateListAsStackPhraseSS04 = value;
+    } else {
+      _functionalSequentialExecutionStepItemStateListAsStackPhraseSS04 ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  Future<void> onGenerateScript() async {
+    /// -----
+    /// TODO: Xác Định Những [ContentItemSection] Có Nội Dung
+    /// -----
+    await onGenerateScriptBindToContentItemSection();
+
+    /// -----
+    /// TODO: NHÓM SECTION THUỘC PHẦN HỆ THỐNG
+    /// -----
+    await onGenerateScriptBindToBreakTimeContentItemSectionSS01();
+    await onGenerateScriptBindToBreakTimeContentItemSectionSS02();
+    await onGenerateScriptBindToBreakTimeContentItemSectionSS03();
+    await onGenerateScriptBindToBreakTimeContentItemSectionSS04();
+
+    await onGenerateScriptBindToFirstStartingContentItemSection();
+    await onGenerateScriptBindToLastEndingContentItemSection();
+
+    /// -----
+    /// TODO: Tạo Kịch Bản CHi Tiết Cho Từng [ContentItemUnit]
+    /// TODO: Bao Gồm Cả Việc Đưa Unit Nào Vào Section Nào
+    /// -----
+    await onGenerateScriptBindToContentItemUnitSS01();
+    await onGenerateScriptBindToContentItemUnitSS02();
+    await onGenerateScriptBindToContentItemUnitSS03();
+    await onGenerateScriptBindToContentItemUnitSS04();
+    await onGenerateScriptBindToContentItemUnitSS05();
+    await onGenerateScriptBindToContentItemUnitSS06();
+    await onGenerateScriptBindToContentItemUnitSS07();
+    await onGenerateScriptBindToContentItemUnitSS08();
+    await onGenerateScriptBindToContentItemUnitSS09();
+    await onGenerateScriptBindToContentItemUnitSS10();
+
+    await onGenerateScriptBindToContentItemUnitSS11();
+    await onGenerateScriptBindToContentItemUnitSS12();
+    await onGenerateScriptBindToContentItemUnitSS13();
+    await onGenerateScriptBindToContentItemUnitSS14();
+    await onGenerateScriptBindToContentItemUnitSS15();
+    await onGenerateScriptBindToContentItemUnitSS16();
+    await onGenerateScriptBindToContentItemUnitSS17();
+    await onGenerateScriptBindToContentItemUnitSS18();
+    await onGenerateScriptBindToContentItemUnitSS19();
+    await onGenerateScriptBindToContentItemUnitSS20();
+
+    /// -----
+    /// TODO: Tích Hợp Vào Luồng Điều Khiển Chính [FlowController]
+    /// -----
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: NHÓM SECTION THUỘC PHẦN HỆ THỐNG
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+    // getContentItemSequentialExecution?.getBreakTimeContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsSystem(
+    //   isBreakTimeContentItemSectionSS01: true, //
+    // );
+    // getContentItemSequentialExecution?.getBreakTimeContentItemSectionSS02?.onIntegrateScriptBindToFlowControllerAsSystem(
+    //   isBreakTimeContentItemSectionSS02: true, //
+    // );
+    // getContentItemSequentialExecution?.getBreakTimeContentItemSectionSS03?.onIntegrateScriptBindToFlowControllerAsSystem(
+    //   isBreakTimeContentItemSectionSS03: true, //
+    // );
+    // getContentItemSequentialExecution?.getBreakTimeContentItemSectionSS04?.onIntegrateScriptBindToFlowControllerAsSystem(
+    //   isBreakTimeContentItemSectionSS04: true, //
+    // );
+
+    ///
+    /// TODO: Set Đến PomodoroBreakTime
+    ///
+    getContentItemSequentialExecution?.getBreakTimeContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(pomodoroContentStage: getContentItemSequentialExecution?.getPomodoroBreakTimeContentStageSS01);
+    getContentItemSequentialExecution?.getBreakTimeContentItemSectionSS02?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(pomodoroContentStage: getContentItemSequentialExecution?.getPomodoroBreakTimeContentStageSS02);
+    getContentItemSequentialExecution?.getBreakTimeContentItemSectionSS03?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(pomodoroContentStage: getContentItemSequentialExecution?.getPomodoroBreakTimeContentStageSS03);
+    getContentItemSequentialExecution?.getBreakTimeContentItemSectionSS04?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(pomodoroContentStage: getContentItemSequentialExecution?.getPomodoroBreakTimeContentStageSS04);
+
+    ///
+    /// TODO: Set Ngoài PomodoroContent
+    /// TODO: Cụ Thể Set Đến [getFunctionalSequentialExecutionStepItemStateListAsStackBindToFirstStartingSection] Hoặc [getFunctionalSequentialExecutionStepItemStateListAsStackBindToLastEndingSection]
+    ///
+    getContentItemSequentialExecution?.getFirstStartingContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(
+      isFirstStartingContentItemSection: true, //
+    );
+    getContentItemSequentialExecution?.getLastEndingContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(
+      isLastEndingContentItemSection: true, //
+    );
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: NHÓM SECTION THUỘC PHẦN NỘI DUNG
+    /// TODO:
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+    // getContentItemSequentialExecution?.getContentItemSectionSS01?.onIntegrateScriptBindToFlowController();
+    // getContentItemSequentialExecution?.getContentItemSectionSS02?.onIntegrateScriptBindToFlowController();
+    // getContentItemSequentialExecution?.getContentItemSectionSS03?.onIntegrateScriptBindToFlowController();
+    // getContentItemSequentialExecution?.getContentItemSectionSS04?.onIntegrateScriptBindToFlowController();
+    // getContentItemSequentialExecution?.getContentItemSectionSS05?.onIntegrateScriptBindToFlowController();
+    // getContentItemSequentialExecution?.getContentItemSectionSS06?.onIntegrateScriptBindToFlowController();
+    // getContentItemSequentialExecution?.getContentItemSectionSS07?.onIntegrateScriptBindToFlowController();
+    // getContentItemSequentialExecution?.getContentItemSectionSS08?.onIntegrateScriptBindToFlowController();
+    // getContentItemSequentialExecution?.getContentItemSectionSS09?.onIntegrateScriptBindToFlowController();
+    // getContentItemSequentialExecution?.getContentItemSectionSS10?.onIntegrateScriptBindToFlowController();
+    await onGenerateScriptAsPomodoroContent();
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Gắn Kết Kịch Bản Của Section Vào Một Pomodoro Theo Chỉ Định
+  /// -----
+  Future<void> onGenerateScriptAsPomodoroContent();
+
+  /// -----
+  /// TODO: Kịch Bản Gắn Kết Với Content Item Section
+  /// -----
+  Future<void> onGenerateScriptBindToContentItemSection();
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: NHÓM SECTION THUỘC PHẦN HỆ THỐNG
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+  /// -----
+  /// TODO: Tạo Kịch Bản Gắn Kết Với First Starting Section
+  /// -----
+  Future<void> onGenerateScriptBindToFirstStartingContentItemSection();
+
+  /// -----
+  /// TODO: Tạo Kịch Bản Gắn Kết Với Last Ending Section
+  /// -----
+  Future<void> onGenerateScriptBindToLastEndingContentItemSection();
+
+  /// -----
+  /// TODO: Tạo Kịch Bản Gắn Kết Với BreakTime Section SS01
+  /// -----
+  Future<void> onGenerateScriptBindToBreakTimeContentItemSectionSS01();
+
+  /// -----
+  /// TODO: Tạo Kịch Bản Gắn Kết Với BreakTime Section SS02
+  /// -----
+  Future<void> onGenerateScriptBindToBreakTimeContentItemSectionSS02();
+
+  /// -----
+  /// TODO: Tạo Kịch Bản Gắn Kết Với BreakTime Section SS03
+  /// -----
+  Future<void> onGenerateScriptBindToBreakTimeContentItemSectionSS03();
+
+  /// -----
+  /// TODO: Tạo Kịch Bản Gắn Kết Với BreakTime Section SS04
+  /// -----
+  Future<void> onGenerateScriptBindToBreakTimeContentItemSectionSS04();
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: NHÓM SECTION THUỘC PHẦN NỘI DUNG (Bao Gồm Các Unit Trong Các Section)
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+  /// -----
+  /// TODO: Kịch Bản Gắn Kết Với Content Item Unit SS01
+  /// -----
+  Future<void> onGenerateScriptBindToContentItemUnitSS01();
+
+  /// -----
+  /// TODO: Kịch Bản Gắn Kết Với Content Item Unit SS02
+  /// -----
+  Future<void> onGenerateScriptBindToContentItemUnitSS02();
+
+  /// -----
+  /// TODO: Kịch Bản Gắn Kết Với Content Item Unit SS03
+  /// -----
+  Future<void> onGenerateScriptBindToContentItemUnitSS03();
+
+  /// -----
+  /// TODO: Kịch Bản Gắn Kết Với Content Item Unit SS04
+  /// -----
+  Future<void> onGenerateScriptBindToContentItemUnitSS04();
+
+  /// -----
+  /// TODO: Kịch Bản Gắn Kết Với Content Item Unit SS05
+  /// -----
+  Future<void> onGenerateScriptBindToContentItemUnitSS05();
+
+  /// -----
+  /// TODO: Kịch Bản Gắn Kết Với Content Item Unit SS06
+  /// -----
+  Future<void> onGenerateScriptBindToContentItemUnitSS06();
+
+  /// -----
+  /// TODO: Kịch Bản Gắn Kết Với Content Item Unit SS07
+  /// -----
+  Future<void> onGenerateScriptBindToContentItemUnitSS07();
+
+  /// -----
+  /// TODO: Kịch Bản Gắn Kết Với Content Item Unit SS08
+  /// -----
+  Future<void> onGenerateScriptBindToContentItemUnitSS08();
+
+  /// -----
+  /// TODO: Kịch Bản Gắn Kết Với Content Item Unit SS09
+  /// -----
+  Future<void> onGenerateScriptBindToContentItemUnitSS09();
+
+  /// -----
+  /// TODO: Kịch Bản Gắn Kết Với Content Item Unit SS10
+  /// -----
+  Future<void> onGenerateScriptBindToContentItemUnitSS10();
+
+  ///
+
+  /// -----
+  /// TODO: Kịch Bản Gắn Kết Với Content Item Unit SS11
+  /// -----
+  Future<void> onGenerateScriptBindToContentItemUnitSS11();
+
+  /// -----
+  /// TODO: Kịch Bản Gắn Kết Với Content Item Unit SS12
+  /// -----
+  Future<void> onGenerateScriptBindToContentItemUnitSS12();
+
+  /// -----
+  /// TODO: Kịch Bản Gắn Kết Với Content Item Unit SS13
+  /// -----
+  Future<void> onGenerateScriptBindToContentItemUnitSS13();
+
+  /// -----
+  /// TODO: Kịch Bản Gắn Kết Với Content Item Unit SS14
+  /// -----
+  Future<void> onGenerateScriptBindToContentItemUnitSS14();
+
+  /// -----
+  /// TODO: Kịch Bản Gắn Kết Với Content Item Unit SS15
+  /// -----
+  Future<void> onGenerateScriptBindToContentItemUnitSS15();
+
+  /// -----
+  /// TODO: Kịch Bản Gắn Kết Với Content Item Unit SS16
+  /// -----
+  Future<void> onGenerateScriptBindToContentItemUnitSS16();
+
+  /// -----
+  /// TODO: Kịch Bản Gắn Kết Với Content Item Unit SS17
+  /// -----
+  Future<void> onGenerateScriptBindToContentItemUnitSS17();
+
+  /// -----
+  /// TODO: Kịch Bản Gắn Kết Với Content Item Unit SS18
+  /// -----
+  Future<void> onGenerateScriptBindToContentItemUnitSS18();
+
+  /// -----
+  /// TODO: Kịch Bản Gắn Kết Với Content Item Unit SS19
+  /// -----
+  Future<void> onGenerateScriptBindToContentItemUnitSS19();
+
+  /// -----
+  /// TODO: Kịch Bản Gắn Kết Với Content Item Unit SS20
+  /// -----
+  Future<void> onGenerateScriptBindToContentItemUnitSS20();
+
+  /// -----
+  /// TODO: Attach Root
+  /// -----
+  @override
+  Future<void> onAttachRoot({required dynamic attachValue, bool? isIgnoreAttachRootForSubCom}) async {
+    try {
+      /// -----
+      /// TODO:
+      /// -----
+
+      /// -----
+      /// TODO: Attach Root For SubCom
+      /// -----
+      if (isIgnoreAttachRootForSubCom == null || isIgnoreAttachRootForSubCom == false) {
+        await onAttachRootForSubCom(attachValue: attachValue);
+      }
+    } catch (e) {
+      await onReportRootIssue(nameFunction: '[onAttachRoot]');
+    }
+
+    ///
+    return;
+  }
+
+  /// -----
+  /// TODO: Init Root
+  /// -----
+  @override
+  Future<void> onInitRoot({bool? isIgnoreInitRootForSubCom}) async {
+    try {
+      /// -----
+      /// TODO:
+      /// -----
+
+      /// -----
+      /// TODO: Init Root For SubCom
+      /// -----
+      if (isIgnoreInitRootForSubCom == null || isIgnoreInitRootForSubCom == false) {
+        await onInitRootForSubCom();
+      }
+    } catch (e) {
+      await onReportRootIssue(nameFunction: '[onInitRoot]');
+    }
+
+    ///
+    return;
+  }
+
+  /// -----
+  /// TODO: Setup Root
+  /// -----
+  @override
+  Future<void> onSetupRoot({bool? isIgnoreSetupRootForSubCom}) async {
+    try {
+      /// -----
+      /// TODO:
+      /// -----
+
+      /// -----
+      /// TODO: Setup Root For SubCom
+      /// -----
+      if (isIgnoreSetupRootForSubCom == null || isIgnoreSetupRootForSubCom == false) {
+        await onSetupRootForSubCom();
+      }
+    } catch (e) {
+      await onReportRootIssue(nameFunction: '[onSetupRoot]');
+    }
+
+    ///
+    return;
+  }
+
+  /// -----
+  /// TODO: Reset Root
+  /// -----
+  @override
+  Future<void> onResetRoot({bool? isIgnoreResetRootForSubCom}) async {
+    try {
+      /// -----
+      /// TODO:
+      /// -----
+
+      /// -----
+      /// TODO: Init Root For SubCom
+      /// -----
+      if (isIgnoreResetRootForSubCom == null || isIgnoreResetRootForSubCom == false) {
+        await onResetRootForSubCom();
+      }
+    } catch (e) {
+      await onReportRootIssue(nameFunction: '[onResetRoot]');
+    }
+
+    ///
+    return;
+  }
+
+  /// -----
+  /// TODO: Attach Root For SubCom
+  /// -----
+  @override
+  Future<void> onAttachRootForSubCom({required dynamic attachValue}) async {
+    try {
+      /// -----
+      /// TODO:
+      /// -----
+    } catch (e) {
+      await onReportRootIssue(nameFunction: '[onAttachRootForSubCom]');
+    }
+
+    ///
+    return;
+  }
+
+  /// -----
+  /// TODO: Setup Root For SubCom
+  /// -----
+  @override
+  Future<void> onSetupRootForSubCom() async {
+    try {
+      /// -----
+      /// TODO:
+      /// -----
+    } catch (e) {
+      await onReportRootIssue(nameFunction: '[onSetupRootForSubCom]');
+    }
+
+    ///
+    return;
+  }
+
+  /// -----
+  /// TODO: Init Root For SubCom
+  /// -----
+  @override
+  Future<void> onInitRootForSubCom() async {
+    try {
+      /// -----
+      /// TODO:
+      /// -----
+    } catch (e) {
+      await onReportRootIssue(nameFunction: '[onInitRootForSubCom]');
+    }
+
+    ///
+    return;
+  }
+
+  /// -----
+  /// TODO: Reset Root For SubCom
+  /// -----
+  @override
+  Future<void> onResetRootForSubCom() async {
+    try {
+      /// -----
+      /// TODO:
+      /// -----
+    } catch (e) {
+      await onReportRootIssue(nameFunction: '[onResetRootForSubCom]');
+    }
+
+    ///
+    return;
+  }
+}
