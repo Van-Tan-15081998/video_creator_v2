@@ -130,6 +130,147 @@ class ContentItemSequentialExecution with ExecutionCore {
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 
   /// -----
+  /// TODO: Bridge From - DoneFirstStartSystemItem - To - GoPomodoroStayFocusedSS01
+  /// -----
+  ContentItemSection? _bridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01ContentItemSection;
+  ContentItemSection? get getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01ContentItemSection => _bridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01ContentItemSection;
+  void setBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01ContentItemSection({required ContentItemSection? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01ContentItemSection = value;
+    } else {
+      _bridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01ContentItemSection ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroStayFocusedSS01 - To - GoPomodoroBreakTimeSS01
+  /// -----
+  ContentItemSection? _bridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01ContentItemSection;
+  ContentItemSection? get getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01ContentItemSection => _bridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01ContentItemSection;
+  void setBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01ContentItemSection({required ContentItemSection? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01ContentItemSection = value;
+    } else {
+      _bridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01ContentItemSection ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroBreakTimeSS01 - To - GoPomodoroStayFocusedSS02
+  /// -----
+  ContentItemSection? _bridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02ContentItemSection;
+  ContentItemSection? get getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02ContentItemSection => _bridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02ContentItemSection;
+  void setBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02ContentItemSection({required ContentItemSection? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02ContentItemSection = value;
+    } else {
+      _bridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02ContentItemSection ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroStayFocusedSS02 - To - GoPomodoroBreakTimeSS02
+  /// -----
+  ContentItemSection? _bridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02ContentItemSection;
+  ContentItemSection? get getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02ContentItemSection => _bridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02ContentItemSection;
+  void setBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02ContentItemSection({required ContentItemSection? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02ContentItemSection = value;
+    } else {
+      _bridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02ContentItemSection ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroBreakTimeSS02 - To - GoPomodoroStayFocusedSS03
+  /// -----
+  ContentItemSection? _bridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03ContentItemSection;
+  ContentItemSection? get getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03ContentItemSection => _bridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03ContentItemSection;
+  void setBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03ContentItemSection({required ContentItemSection? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03ContentItemSection = value;
+    } else {
+      _bridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03ContentItemSection ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroStayFocusedSS03 - To - GoPomodoroBreakTimeSS03
+  /// -----
+  ContentItemSection? _bridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03ContentItemSection;
+  ContentItemSection? get getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03ContentItemSection => _bridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03ContentItemSection;
+  void setBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03ContentItemSection({required ContentItemSection? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03ContentItemSection = value;
+    } else {
+      _bridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03ContentItemSection ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroBreakTimeSS03 - To - GoPomodoroStayFocusedSS04
+  /// -----
+  ContentItemSection? _bridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04ContentItemSection;
+  ContentItemSection? get getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04ContentItemSection => _bridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04ContentItemSection;
+  void setBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04ContentItemSection({required ContentItemSection? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04ContentItemSection = value;
+    } else {
+      _bridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04ContentItemSection ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroStayFocusedSS04 - To - GoPomodoroBreakTimeSS04
+  /// -----
+  ContentItemSection? _bridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04ContentItemSection;
+  ContentItemSection? get getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04ContentItemSection => _bridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04ContentItemSection;
+  void setBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04ContentItemSection({required ContentItemSection? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04ContentItemSection = value;
+    } else {
+      _bridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04ContentItemSection ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroBreakTimeSS04 - To - GoLastFinishSystemItem
+  /// -----
+  ContentItemSection? _bridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemContentItemSection;
+  ContentItemSection? get getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemContentItemSection => _bridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemContentItemSection;
+  void setBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemContentItemSection({required ContentItemSection? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemContentItemSection = value;
+    } else {
+      _bridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemContentItemSection ??= value;
+    }
+
+    return;
+  }
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: NHÓM SECTION THUỘC PHẦN HỆ THỐNG
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+  /// -----
   /// TODO: BreakTime Section SS01
   /// -----
   ContentItemSection? _breakTimeContentItemSectionSS01;
@@ -821,6 +962,147 @@ class ContentItemSequentialExecution with ExecutionCore {
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 
   /// -----
+  /// TODO: Bridge From - DoneFirstStartSystemItem - To - GoPomodoroStayFocusedSS01
+  /// -----
+  SystemContentStage? _bridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01SystemContentStage;
+  SystemContentStage? get getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01SystemContentStage => _bridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01SystemContentStage;
+  void setBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01SystemContentStage({required SystemContentStage? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01SystemContentStage = value;
+    } else {
+      _bridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01SystemContentStage ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroStayFocusedSS01 - To - GoPomodoroBreakTimeSS01
+  /// -----
+  SystemContentStage? _bridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01SystemContentStage;
+  SystemContentStage? get getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01SystemContentStage => _bridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01SystemContentStage;
+  void setBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01SystemContentStage({required SystemContentStage? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01SystemContentStage = value;
+    } else {
+      _bridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01SystemContentStage ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroBreakTimeSS01 - To - GoPomodoroStayFocusedSS02
+  /// -----
+  SystemContentStage? _bridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02SystemContentStage;
+  SystemContentStage? get getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02SystemContentStage => _bridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02SystemContentStage;
+  void setBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02SystemContentStage({required SystemContentStage? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02SystemContentStage = value;
+    } else {
+      _bridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02SystemContentStage ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroStayFocusedSS02 - To - GoPomodoroBreakTimeSS02
+  /// -----
+  SystemContentStage? _bridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02SystemContentStage;
+  SystemContentStage? get getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02SystemContentStage => _bridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02SystemContentStage;
+  void setBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02SystemContentStage({required SystemContentStage? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02SystemContentStage = value;
+    } else {
+      _bridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02SystemContentStage ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroBreakTimeSS02 - To - GoPomodoroStayFocusedSS03
+  /// -----
+  SystemContentStage? _bridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03SystemContentStage;
+  SystemContentStage? get getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03SystemContentStage => _bridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03SystemContentStage;
+  void setBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03SystemContentStage({required SystemContentStage? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03SystemContentStage = value;
+    } else {
+      _bridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03SystemContentStage ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroStayFocusedSS03 - To - GoPomodoroBreakTimeSS03
+  /// -----
+  SystemContentStage? _bridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03SystemContentStage;
+  SystemContentStage? get getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03SystemContentStage => _bridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03SystemContentStage;
+  void setBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03SystemContentStage({required SystemContentStage? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03SystemContentStage = value;
+    } else {
+      _bridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03SystemContentStage ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroBreakTimeSS03 - To - GoPomodoroStayFocusedSS04
+  /// -----
+  SystemContentStage? _bridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04SystemContentStage;
+  SystemContentStage? get getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04SystemContentStage => _bridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04SystemContentStage;
+  void setBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04SystemContentStage({required SystemContentStage? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04SystemContentStage = value;
+    } else {
+      _bridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04SystemContentStage ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroStayFocusedSS04 - To - GoPomodoroBreakTimeSS04
+  /// -----
+  SystemContentStage? _bridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04SystemContentStage;
+  SystemContentStage? get getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04SystemContentStage => _bridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04SystemContentStage;
+  void setBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04SystemContentStage({required SystemContentStage? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04SystemContentStage = value;
+    } else {
+      _bridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04SystemContentStage ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroBreakTimeSS04 - To - GoLastFinishSystemItem
+  /// -----
+  SystemContentStage? _bridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemSystemContentStage;
+  SystemContentStage? get getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemSystemContentStage => _bridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemSystemContentStage;
+  void setBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemSystemContentStage({required SystemContentStage? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemSystemContentStage = value;
+    } else {
+      _bridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemSystemContentStage ??= value;
+    }
+
+    return;
+  }
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO:
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+  /// -----
   /// TODO: PomodoroStayFocusedContentStage SS01
   /// -----
   PomodoroContentStage? _pomodoroStayFocusedContentStageSS01;
@@ -1150,9 +1432,42 @@ class ContentItemSequentialExecution with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
+  void onReady() {
+    if (getGoFirstStartSystemContentStage?.getActiveStatus?.isStatusAsDefault() == true) {
+      getGoFirstStartSystemContentStage?.getActiveStatus?.setStatusAsReady();
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  void onStart() {
+    if (getGoFirstStartSystemContentStage?.getActiveStatus?.isStatusAsReady() == true) {
+      getGoFirstStartSystemContentStage?.getActiveStatus?.setStatusAsActive();
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
   void onUpdate() {
     ///
     if (getActiveStatus?.isStatusAsActive() == true) {
+      /// -----
+      /// TODO:
+      /// -----
+      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.onUpdateBaseOnContentStage();
+
+      /// -----
+      /// TODO:
+      /// -----
+      onExecutionStepBaseOnScript();
+
+      ///
       if (getFirstStartSystemContentStage?.getActiveStatus?.isStatusAsActive() == true) {
         getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getFirstStartSystemContentStage);
       }
@@ -1177,85 +1492,782 @@ class ContentItemSequentialExecution with ExecutionCore {
       ///
       /// TODO:
       ///
+      if (getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01SystemContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01SystemContentStage);
+      }
+      if (getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01SystemContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01SystemContentStage);
+      }
+      if (getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02SystemContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02SystemContentStage);
+      }
+      if (getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02SystemContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02SystemContentStage);
+      }
+      if (getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03SystemContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03SystemContentStage);
+      }
+      if (getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03SystemContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03SystemContentStage);
+      }
+      if (getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04SystemContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04SystemContentStage);
+      }
+      if (getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04SystemContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04SystemContentStage);
+      }
+      if (getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemSystemContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemSystemContentStage);
+      }
+
+      ///
+      /// TODO:
+      ///
 
       ///
       if (getPomodoroStayFocusedContentStageSS01?.getActiveStatus?.isStatusAsActive() == true) {
         getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getPomodoroStayFocusedContentStageSS01);
       }
+      if (getGoPomodoroStayFocusedContentStageSS01?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getGoPomodoroStayFocusedContentStageSS01);
+      }
+      if (getDonePomodoroStayFocusedContentStageSS01?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getDonePomodoroStayFocusedContentStageSS01);
+      }
+
+      ///
       if (getPomodoroStayFocusedContentStageSS02?.getActiveStatus?.isStatusAsActive() == true) {
         getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getPomodoroStayFocusedContentStageSS02);
       }
+      if (getGoPomodoroStayFocusedContentStageSS02?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getGoPomodoroStayFocusedContentStageSS02);
+      }
+      if (getDonePomodoroStayFocusedContentStageSS02?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getDonePomodoroStayFocusedContentStageSS02);
+      }
+
+      ///
       if (getPomodoroStayFocusedContentStageSS03?.getActiveStatus?.isStatusAsActive() == true) {
         getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getPomodoroStayFocusedContentStageSS03);
       }
+      if (getGoPomodoroStayFocusedContentStageSS03?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getGoPomodoroStayFocusedContentStageSS03);
+      }
+      if (getDonePomodoroStayFocusedContentStageSS03?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getDonePomodoroStayFocusedContentStageSS03);
+      }
+
+      ///
       if (getPomodoroStayFocusedContentStageSS04?.getActiveStatus?.isStatusAsActive() == true) {
         getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getPomodoroStayFocusedContentStageSS04);
       }
+      if (getGoPomodoroStayFocusedContentStageSS04?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getGoPomodoroStayFocusedContentStageSS04);
+      }
+      if (getDonePomodoroStayFocusedContentStageSS04?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getDonePomodoroStayFocusedContentStageSS04);
+      }
+
+      ///
+      /// TODO:
+      ///
 
       ///
       if (getPomodoroBreakTimeContentStageSS01?.getActiveStatus?.isStatusAsActive() == true) {
         getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getPomodoroBreakTimeContentStageSS01);
+      }
+      if (getGoPomodoroBreakTimeContentStageSS01?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getGoPomodoroBreakTimeContentStageSS01);
+      }
+      if (getDonePomodoroBreakTimeContentStageSS01?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getDonePomodoroBreakTimeContentStageSS01);
       }
 
       ///
       if (getPomodoroBreakTimeContentStageSS02?.getActiveStatus?.isStatusAsActive() == true) {
         getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getPomodoroBreakTimeContentStageSS02);
       }
+      if (getGoPomodoroBreakTimeContentStageSS02?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getGoPomodoroBreakTimeContentStageSS02);
+      }
+      if (getDonePomodoroBreakTimeContentStageSS02?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getDonePomodoroBreakTimeContentStageSS02);
+      }
 
       ///
       if (getPomodoroBreakTimeContentStageSS03?.getActiveStatus?.isStatusAsActive() == true) {
         getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getPomodoroBreakTimeContentStageSS03);
+      }
+      if (getGoPomodoroBreakTimeContentStageSS03?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getGoPomodoroBreakTimeContentStageSS03);
+      }
+      if (getDonePomodoroBreakTimeContentStageSS03?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getDonePomodoroBreakTimeContentStageSS03);
       }
 
       ///
       if (getPomodoroBreakTimeContentStageSS04?.getActiveStatus?.isStatusAsActive() == true) {
         getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getPomodoroBreakTimeContentStageSS04);
       }
+      if (getGoPomodoroBreakTimeContentStageSS04?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getGoPomodoroBreakTimeContentStageSS04);
+      }
+      if (getDonePomodoroBreakTimeContentStageSS04?.getActiveStatus?.isStatusAsActive() == true) {
+        getFunctionalSequentialExecutionController?.onUpdateSpecific(contentStage: getDonePomodoroBreakTimeContentStageSS04);
+      }
 
       return;
     }
   }
 
-  /// -----
-  /// TODO:
-  /// -----
-  onStartFirstExecutionStep() {
+  onExecutionStepBaseOnScript() {
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Chuyển Trạng Thái Từ [READY] => [ACTIVE]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: CONTENT_STAGE
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: NHÓM CONTENT_STAGE THUỘC PHẦN HỆ THỐNG
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// -----
+    /// TODO: SystemItem (MAIN DETAIL & GO & DONE) [ContentItemSection]
+    /// -----
+
+    if (getFirstStartSystemContentStage?.getActiveStatus?.isStatusAsReady() == true) {
+      getFirstStartSystemContentStage?.getActiveStatus?.setStatusAsActive(); // ok
+    }
+    if (getGoFirstStartSystemContentStage?.getActiveStatus?.isStatusAsReady() == true) {
+      getGoFirstStartSystemContentStage?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getDoneFirstStartSystemContentStage?.getActiveStatus?.isStatusAsReady() == true) {
+      getDoneFirstStartSystemContentStage?.getActiveStatus?.setStatusAsActive(); // ok
+    }
+
     ///
-    /// TODO: Nếu Section Item Tồn Tại Nội Dung & Hoàn Thành Thực Thi
-    /// TODO: NextExecutionStep => Tức Chuyển Đến (Kích Hoạt) Section Item Kế Tiếp Gần Nhất (Nếu Section Item Tồn Tại Nội Dung)
+
+    if (getLastFinishSystemContentStage?.getActiveStatus?.isStatusAsReady() == true) {
+      getLastFinishSystemContentStage?.getActiveStatus?.setStatusAsActive(); // ok
+    }
+    if (getGoLastFinishSystemContentStage?.getActiveStatus?.isStatusAsReady() == true) {
+      getGoLastFinishSystemContentStage?.getActiveStatus?.setStatusAsActive(); // ok
+    }
+    if (getDoneLastFinishSystemContentStage?.getActiveStatus?.isStatusAsReady() == true) {
+      getDoneLastFinishSystemContentStage?.getActiveStatus?.setStatusAsActive(); // ok
+    }
+
+    /// -----
+    /// TODO: BreakTime (MAIN DETAIL & GO & DONE) [ContentStage]
+    /// -----
+
+    if (getPomodoroBreakTimeContentStageSS01?.getActiveStatus?.isStatusAsReady() == true) {
+      getPomodoroBreakTimeContentStageSS01?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getGoPomodoroBreakTimeContentStageSS01?.getActiveStatus?.isStatusAsReady() == true) {
+      getGoPomodoroBreakTimeContentStageSS01?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getDonePomodoroBreakTimeContentStageSS01?.getActiveStatus?.isStatusAsReady() == true) {
+      getDonePomodoroBreakTimeContentStageSS01?.getActiveStatus?.setStatusAsActive();
+    }
+
     ///
-    if (getFirstStartContentItemSection?.getContentExistenceStatus?.isStatusAsExistingContent() == true) {
-      if (getFirstStartSystemContentStage?.getActiveStatus?.isStatusAsReady() == true) {
-        getFirstStartSystemContentStage?.getActiveStatus?.setStatusAsActive();
+    if (getPomodoroBreakTimeContentStageSS02?.getActiveStatus?.isStatusAsReady() == true) {
+      getPomodoroBreakTimeContentStageSS02?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getGoPomodoroBreakTimeContentStageSS02?.getActiveStatus?.isStatusAsReady() == true) {
+      getGoPomodoroBreakTimeContentStageSS02?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getDonePomodoroBreakTimeContentStageSS02?.getActiveStatus?.isStatusAsReady() == true) {
+      getDonePomodoroBreakTimeContentStageSS02?.getActiveStatus?.setStatusAsActive();
+    }
+
+    ///
+    if (getPomodoroBreakTimeContentStageSS03?.getActiveStatus?.isStatusAsReady() == true) {
+      getPomodoroBreakTimeContentStageSS03?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getGoPomodoroBreakTimeContentStageSS03?.getActiveStatus?.isStatusAsReady() == true) {
+      getGoPomodoroBreakTimeContentStageSS03?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getDonePomodoroBreakTimeContentStageSS03?.getActiveStatus?.isStatusAsReady() == true) {
+      getDonePomodoroBreakTimeContentStageSS03?.getActiveStatus?.setStatusAsActive();
+    }
+
+    ///
+    if (getPomodoroBreakTimeContentStageSS04?.getActiveStatus?.isStatusAsReady() == true) {
+      getPomodoroBreakTimeContentStageSS04?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getGoPomodoroBreakTimeContentStageSS04?.getActiveStatus?.isStatusAsReady() == true) {
+      getGoPomodoroBreakTimeContentStageSS04?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getDonePomodoroBreakTimeContentStageSS04?.getActiveStatus?.isStatusAsReady() == true) {
+      getDonePomodoroBreakTimeContentStageSS04?.getActiveStatus?.setStatusAsActive();
+    }
+
+    /// -----
+    /// TODO: Bridge From - To [ContentStage]
+    /// -----
+
+    if (getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01SystemContentStage?.getActiveStatus?.isStatusAsReady() == true) {
+      getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01SystemContentStage?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01SystemContentStage?.getActiveStatus?.isStatusAsReady() == true) {
+      getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01SystemContentStage?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02SystemContentStage?.getActiveStatus?.isStatusAsReady() == true) {
+      getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02SystemContentStage?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02SystemContentStage?.getActiveStatus?.isStatusAsReady() == true) {
+      getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02SystemContentStage?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03SystemContentStage?.getActiveStatus?.isStatusAsReady() == true) {
+      getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03SystemContentStage?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03SystemContentStage?.getActiveStatus?.isStatusAsReady() == true) {
+      getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03SystemContentStage?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04SystemContentStage?.getActiveStatus?.isStatusAsReady() == true) {
+      getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04SystemContentStage?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04SystemContentStage?.getActiveStatus?.isStatusAsReady() == true) {
+      getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04SystemContentStage?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemSystemContentStage?.getActiveStatus?.isStatusAsReady() == true) {
+      getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemSystemContentStage?.getActiveStatus?.setStatusAsActive();
+    }
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: NHÓM CONTENT_STAGE THUỘC PHẦN NỘI DUNG
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// -----
+    /// TODO: Pomodoro StayFocused (MAIN DETAIL & GO & DONE) [ContentStage]
+    /// -----
+
+    if (getPomodoroStayFocusedContentStageSS01?.getActiveStatus?.isStatusAsReady() == true) {
+      getPomodoroStayFocusedContentStageSS01?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getGoPomodoroStayFocusedContentStageSS01?.getActiveStatus?.isStatusAsReady() == true) {
+      getGoPomodoroStayFocusedContentStageSS01?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getDonePomodoroStayFocusedContentStageSS01?.getActiveStatus?.isStatusAsReady() == true) {
+      getDonePomodoroStayFocusedContentStageSS01?.getActiveStatus?.setStatusAsActive();
+    }
+
+    ///
+    if (getPomodoroStayFocusedContentStageSS02?.getActiveStatus?.isStatusAsReady() == true) {
+      getPomodoroStayFocusedContentStageSS02?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getGoPomodoroStayFocusedContentStageSS02?.getActiveStatus?.isStatusAsReady() == true) {
+      getGoPomodoroStayFocusedContentStageSS02?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getDonePomodoroStayFocusedContentStageSS02?.getActiveStatus?.isStatusAsReady() == true) {
+      getDonePomodoroStayFocusedContentStageSS02?.getActiveStatus?.setStatusAsActive();
+    }
+
+    ///
+    if (getPomodoroStayFocusedContentStageSS03?.getActiveStatus?.isStatusAsReady() == true) {
+      getPomodoroStayFocusedContentStageSS03?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getGoPomodoroStayFocusedContentStageSS03?.getActiveStatus?.isStatusAsReady() == true) {
+      getGoPomodoroStayFocusedContentStageSS03?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getDonePomodoroStayFocusedContentStageSS03?.getActiveStatus?.isStatusAsReady() == true) {
+      getDonePomodoroStayFocusedContentStageSS03?.getActiveStatus?.setStatusAsActive();
+    }
+
+    ///
+    if (getPomodoroStayFocusedContentStageSS04?.getActiveStatus?.isStatusAsReady() == true) {
+      getPomodoroStayFocusedContentStageSS04?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getGoPomodoroStayFocusedContentStageSS04?.getActiveStatus?.isStatusAsReady() == true) {
+      getGoPomodoroStayFocusedContentStageSS04?.getActiveStatus?.setStatusAsActive();
+    }
+    if (getDonePomodoroStayFocusedContentStageSS04?.getActiveStatus?.isStatusAsReady() == true) {
+      getDonePomodoroStayFocusedContentStageSS04?.getActiveStatus?.setStatusAsActive();
+    }
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Chuyển Trạng Thái Từ STEP-1 - [PERFORM_COMPLETED] => STEP-2 - [ACTIVE] ... => Tự Động Chuyển (Các Step Thuộc Hệ Thống)
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+    ///
+    ///
+    /// TODO: GIAI ĐOẠN BẮT ĐẦU
+    ///
+    ///
+
+    /// TODO: getGoFirstStartSystemContentStage => getFirstStartSystemContentStage
+    if (getGoFirstStartSystemContentStage?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getFirstStartSystemContentStage?.getActiveStatus?.isStatusAsDefault() == true) {
+        getFirstStartSystemContentStage?.getActiveStatus?.setStatusAsReady(); // ok
+        getGoFirstStartSystemContentStage?.getActiveStatus?.setStatusAsClosed();
       }
     }
-  }
 
-  onNextExecutionStep() {}
-
-  onActivateContentStage({required ContentStage? contentStage}) {}
-
-  onPerformCompletedContentStage({required ContentStage? contentStage}) {}
-
-  /// -----
-  /// TODO:
-  /// -----
-  void onActivateContentStageStatus({required ContentStage? contentStage}) {
-    if (contentStage?.getActiveStatus?.isStatusAsDefault() == true) {
-      contentStage?.getActiveStatus?.setStatusAsActive();
+    /// TODO: getFirstStartSystemContentStage => getDoneFirstStartSystemContentStage
+    if (getFirstStartSystemContentStage?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getDoneFirstStartSystemContentStage?.getActiveStatus?.isStatusAsDefault() == true) {
+        getDoneFirstStartSystemContentStage?.getActiveStatus?.setStatusAsReady(); // ok
+        getFirstStartSystemContentStage?.getActiveStatus?.setStatusAsClosed();
+      }
     }
-  }
 
-  void onInActivateContentStageStatus({required ContentStage? contentStage}) {
-    if (contentStage?.getActiveStatus?.isStatusAsActive() == true) {
-      contentStage?.getActiveStatus?.setStatusAsInActive();
+    /// TODO: getDoneFirstStartSystemContentStage => getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01SystemContentStage
+    if (getDoneFirstStartSystemContentStage?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01SystemContentStage?.getActiveStatus?.isStatusAsDefault() == true) {
+        getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01SystemContentStage?.getActiveStatus?.setStatusAsReady(); // ok
+        getDoneFirstStartSystemContentStage?.getActiveStatus?.setStatusAsClosed();
+      }
     }
-  }
 
-  void onPerformCompletedContentStageStatus({required ContentStage? contentStage}) {
-    if (contentStage?.getActiveStatus?.isStatusAsActive() == true) {
-      contentStage?.getActiveStatus?.setStatusAsPerformCompleted();
+    ///
+    ///
+    /// TODO: GIAI ĐOẠN NỘI DUNG
+    ///
+    ///
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: BRIDGE
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// TODO: getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01SystemContentStage => getGoPomodoroStayFocusedContentStageSS01
+    if (getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01SystemContentStage?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getGoPomodoroStayFocusedContentStageSS01?.getActiveStatus?.isStatusAsDefault() == true) {
+        getGoPomodoroStayFocusedContentStageSS01?.getActiveStatus?.setStatusAsReady(); // ok
+        getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01SystemContentStage?.getActiveStatus?.setStatusAsClosed();
+      }
     }
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: POMODORO STAY FOCUSED SS01
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// TODO: getGoPomodoroStayFocusedContentStageSS01 => getPomodoroStayFocusedContentStageSS01
+    if (getGoPomodoroStayFocusedContentStageSS01?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getPomodoroStayFocusedContentStageSS01?.getActiveStatus?.isStatusAsDefault() == true) {
+        getPomodoroStayFocusedContentStageSS01?.getActiveStatus?.setStatusAsReady(); // ok
+        getGoPomodoroStayFocusedContentStageSS01?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// TODO: getPomodoroStayFocusedContentStageSS01 => getDonePomodoroStayFocusedContentStageSS01
+    if (getPomodoroStayFocusedContentStageSS01?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getDonePomodoroStayFocusedContentStageSS01?.getActiveStatus?.isStatusAsDefault() == true) {
+        getDonePomodoroStayFocusedContentStageSS01?.getActiveStatus?.setStatusAsReady(); // ok
+        getPomodoroStayFocusedContentStageSS01?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// TODO: getDonePomodoroStayFocusedContentStageSS01 => getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01SystemContentStage
+    if (getDonePomodoroStayFocusedContentStageSS01?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01SystemContentStage?.getActiveStatus?.isStatusAsDefault() == true) {
+        getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01SystemContentStage?.getActiveStatus?.setStatusAsReady(); // ok
+        getDonePomodoroStayFocusedContentStageSS01?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: BRIDGE
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// TODO: getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01SystemContentStage => getGoPomodoroBreakTimeContentStageSS01
+    if (getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01SystemContentStage?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getGoPomodoroBreakTimeContentStageSS01?.getActiveStatus?.isStatusAsDefault() == true) {
+        getGoPomodoroBreakTimeContentStageSS01?.getActiveStatus?.setStatusAsReady(); // ok
+        getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01SystemContentStage?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: POMODORO BREAK TIME SS01
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// TODO: getGoPomodoroBreakTimeContentStageSS01 => getPomodoroBreakTimeContentStageSS01
+    if (getGoPomodoroBreakTimeContentStageSS01?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getPomodoroBreakTimeContentStageSS01?.getActiveStatus?.isStatusAsDefault() == true) {
+        getPomodoroBreakTimeContentStageSS01?.getActiveStatus?.setStatusAsReady(); // ok
+        getGoPomodoroBreakTimeContentStageSS01?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// TODO: getPomodoroBreakTimeContentStageSS01 => getDonePomodoroBreakTimeContentStageSS01
+    if (getPomodoroBreakTimeContentStageSS01?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getDonePomodoroBreakTimeContentStageSS01?.getActiveStatus?.isStatusAsDefault() == true) {
+        getDonePomodoroBreakTimeContentStageSS01?.getActiveStatus?.setStatusAsReady(); // ok
+        getPomodoroBreakTimeContentStageSS01?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// TODO: getDonePomodoroBreakTimeContentStageSS01 => getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02SystemContentStage
+    if (getDonePomodoroBreakTimeContentStageSS01?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02SystemContentStage?.getActiveStatus?.isStatusAsDefault() == true) {
+        getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02SystemContentStage?.getActiveStatus?.setStatusAsReady(); // ok
+        getDonePomodoroBreakTimeContentStageSS01?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: BRIDGE
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// TODO: getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02SystemContentStage => getGoPomodoroStayFocusedContentStageSS02
+    if (getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02SystemContentStage?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getGoPomodoroStayFocusedContentStageSS02?.getActiveStatus?.isStatusAsDefault() == true) {
+        getGoPomodoroStayFocusedContentStageSS02?.getActiveStatus?.setStatusAsReady(); // ok
+        getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02SystemContentStage?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: POMODORO STAY FOCUSED SS02
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// TODO: getGoPomodoroStayFocusedContentStageSS02 => getPomodoroStayFocusedContentStageSS02
+    if (getGoPomodoroStayFocusedContentStageSS02?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getPomodoroStayFocusedContentStageSS02?.getActiveStatus?.isStatusAsDefault() == true) {
+        getPomodoroStayFocusedContentStageSS02?.getActiveStatus?.setStatusAsReady(); // ok
+        getGoPomodoroStayFocusedContentStageSS02?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// TODO: getPomodoroStayFocusedContentStageSS02 => getDonePomodoroStayFocusedContentStageSS02
+    if (getPomodoroStayFocusedContentStageSS02?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getDonePomodoroStayFocusedContentStageSS02?.getActiveStatus?.isStatusAsDefault() == true) {
+        getDonePomodoroStayFocusedContentStageSS02?.getActiveStatus?.setStatusAsReady(); // ok
+        getPomodoroStayFocusedContentStageSS02?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// TODO: getDonePomodoroStayFocusedContentStageSS02 => getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02SystemContentStage
+    if (getDonePomodoroStayFocusedContentStageSS02?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02SystemContentStage?.getActiveStatus?.isStatusAsDefault() == true) {
+        getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02SystemContentStage?.getActiveStatus?.setStatusAsReady(); // ok
+        getDonePomodoroStayFocusedContentStageSS02?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: BRIDGE
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// TODO: getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02SystemContentStage => getGoPomodoroBreakTimeContentStageSS02
+    if (getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02SystemContentStage?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getGoPomodoroBreakTimeContentStageSS02?.getActiveStatus?.isStatusAsDefault() == true) {
+        getGoPomodoroBreakTimeContentStageSS02?.getActiveStatus?.setStatusAsReady(); // ok
+        getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02SystemContentStage?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: POMODORO BREAK TIME SS02
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// TODO: getGoPomodoroBreakTimeContentStageSS02 => getPomodoroBreakTimeContentStageSS02
+    if (getGoPomodoroBreakTimeContentStageSS02?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getPomodoroBreakTimeContentStageSS02?.getActiveStatus?.isStatusAsDefault() == true) {
+        getPomodoroBreakTimeContentStageSS02?.getActiveStatus?.setStatusAsReady(); // ok
+        getGoPomodoroBreakTimeContentStageSS02?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// TODO: getPomodoroBreakTimeContentStageSS02 => getDonePomodoroBreakTimeContentStageSS02
+    if (getPomodoroBreakTimeContentStageSS02?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getDonePomodoroBreakTimeContentStageSS02?.getActiveStatus?.isStatusAsDefault() == true) {
+        getDonePomodoroBreakTimeContentStageSS02?.getActiveStatus?.setStatusAsReady(); // ok
+        getPomodoroBreakTimeContentStageSS02?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// TODO: getDonePomodoroBreakTimeContentStageSS02 => getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03SystemContentStage
+    if (getDonePomodoroBreakTimeContentStageSS02?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03SystemContentStage?.getActiveStatus?.isStatusAsDefault() == true) {
+        getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03SystemContentStage?.getActiveStatus?.setStatusAsReady(); // ok
+        getDonePomodoroBreakTimeContentStageSS02?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: BRIDGE
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// TODO: getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03SystemContentStage => getGoPomodoroStayFocusedContentStageSS03
+    if (getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03SystemContentStage?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getGoPomodoroStayFocusedContentStageSS03?.getActiveStatus?.isStatusAsDefault() == true) {
+        getGoPomodoroStayFocusedContentStageSS03?.getActiveStatus?.setStatusAsReady(); // ok
+        getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03SystemContentStage?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: POMODORO STAY FOCUSED SS03
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// TODO: getGoPomodoroStayFocusedContentStageSS03 => getPomodoroStayFocusedContentStageSS03
+    if (getGoPomodoroStayFocusedContentStageSS03?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getPomodoroStayFocusedContentStageSS03?.getActiveStatus?.isStatusAsDefault() == true) {
+        getPomodoroStayFocusedContentStageSS03?.getActiveStatus?.setStatusAsReady(); // ok
+        getGoPomodoroStayFocusedContentStageSS03?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// TODO: getPomodoroStayFocusedContentStageSS03 => getDonePomodoroStayFocusedContentStageSS03
+    if (getPomodoroStayFocusedContentStageSS03?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getDonePomodoroStayFocusedContentStageSS03?.getActiveStatus?.isStatusAsDefault() == true) {
+        getDonePomodoroStayFocusedContentStageSS03?.getActiveStatus?.setStatusAsReady(); // ok
+        getPomodoroStayFocusedContentStageSS03?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// TODO: getDonePomodoroStayFocusedContentStageSS03 => getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03SystemContentStage
+    if (getDonePomodoroStayFocusedContentStageSS03?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03SystemContentStage?.getActiveStatus?.isStatusAsDefault() == true) {
+        getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03SystemContentStage?.getActiveStatus?.setStatusAsReady(); // ok
+        getDonePomodoroStayFocusedContentStageSS03?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: BRIDGE
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// TODO: getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03SystemContentStage => getGoPomodoroBreakTimeContentStageSS03
+    if (getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03SystemContentStage?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getGoPomodoroBreakTimeContentStageSS03?.getActiveStatus?.isStatusAsDefault() == true) {
+        getGoPomodoroBreakTimeContentStageSS03?.getActiveStatus?.setStatusAsReady(); // ok
+        getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03SystemContentStage?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: POMODORO BREAK TIME SS03
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// TODO: getGoPomodoroBreakTimeContentStageSS03 => getPomodoroBreakTimeContentStageSS03
+    if (getGoPomodoroBreakTimeContentStageSS03?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getPomodoroBreakTimeContentStageSS03?.getActiveStatus?.isStatusAsDefault() == true) {
+        getPomodoroBreakTimeContentStageSS03?.getActiveStatus?.setStatusAsReady(); // ok
+        getGoPomodoroBreakTimeContentStageSS03?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// TODO: getPomodoroBreakTimeContentStageSS03 => getDonePomodoroBreakTimeContentStageSS03
+    if (getPomodoroBreakTimeContentStageSS03?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getDonePomodoroBreakTimeContentStageSS03?.getActiveStatus?.isStatusAsDefault() == true) {
+        getDonePomodoroBreakTimeContentStageSS03?.getActiveStatus?.setStatusAsReady(); // ok
+        getPomodoroBreakTimeContentStageSS03?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// TODO: getDonePomodoroBreakTimeContentStageSS03 => getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04SystemContentStage
+    if (getDonePomodoroBreakTimeContentStageSS03?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04SystemContentStage?.getActiveStatus?.isStatusAsDefault() == true) {
+        getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04SystemContentStage?.getActiveStatus?.setStatusAsReady(); // ok
+        getDonePomodoroBreakTimeContentStageSS03?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: BRIDGE
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// TODO: getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04SystemContentStage => getGoPomodoroStayFocusedContentStageSS04
+    if (getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04SystemContentStage?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getGoPomodoroStayFocusedContentStageSS04?.getActiveStatus?.isStatusAsDefault() == true) {
+        getGoPomodoroStayFocusedContentStageSS04?.getActiveStatus?.setStatusAsReady(); // ok
+        getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04SystemContentStage?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: POMODORO STAY FOCUSED SS04
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// TODO: getGoPomodoroStayFocusedContentStageSS04 => getPomodoroStayFocusedContentStageSS04
+    if (getGoPomodoroStayFocusedContentStageSS04?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getPomodoroStayFocusedContentStageSS04?.getActiveStatus?.isStatusAsDefault() == true) {
+        getPomodoroStayFocusedContentStageSS04?.getActiveStatus?.setStatusAsReady(); // ok
+        getGoPomodoroStayFocusedContentStageSS04?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// TODO: getPomodoroStayFocusedContentStageSS04 => getDonePomodoroStayFocusedContentStageSS04
+    if (getPomodoroStayFocusedContentStageSS04?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getDonePomodoroStayFocusedContentStageSS04?.getActiveStatus?.isStatusAsDefault() == true) {
+        getDonePomodoroStayFocusedContentStageSS04?.getActiveStatus?.setStatusAsReady(); // ok
+        getPomodoroStayFocusedContentStageSS04?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// TODO: getDonePomodoroStayFocusedContentStageSS04 => getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04SystemContentStage
+    if (getDonePomodoroStayFocusedContentStageSS04?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04SystemContentStage?.getActiveStatus?.isStatusAsDefault() == true) {
+        getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04SystemContentStage?.getActiveStatus?.setStatusAsReady(); // ok
+        getDonePomodoroStayFocusedContentStageSS04?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: BRIDGE
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// TODO: getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04SystemContentStage => getGoPomodoroBreakTimeContentStageSS04
+    if (getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04SystemContentStage?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getGoPomodoroBreakTimeContentStageSS04?.getActiveStatus?.isStatusAsDefault() == true) {
+        getGoPomodoroBreakTimeContentStageSS04?.getActiveStatus?.setStatusAsReady(); // ok
+        getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04SystemContentStage?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: POMODORO BREAK TIME SS04
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// TODO: getGoPomodoroBreakTimeContentStageSS04 => getPomodoroBreakTimeContentStageSS04
+    if (getGoPomodoroBreakTimeContentStageSS04?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getPomodoroBreakTimeContentStageSS04?.getActiveStatus?.isStatusAsDefault() == true) {
+        getPomodoroBreakTimeContentStageSS04?.getActiveStatus?.setStatusAsReady(); // ok
+        getGoPomodoroBreakTimeContentStageSS04?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// TODO: getPomodoroBreakTimeContentStageSS04 => getDonePomodoroBreakTimeContentStageSS04
+    if (getPomodoroBreakTimeContentStageSS04?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getDonePomodoroBreakTimeContentStageSS04?.getActiveStatus?.isStatusAsDefault() == true) {
+        getDonePomodoroBreakTimeContentStageSS04?.getActiveStatus?.setStatusAsReady(); // ok
+        getPomodoroBreakTimeContentStageSS04?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// TODO: getDonePomodoroBreakTimeContentStageSS04 => getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemSystemContentStage
+    if (getDonePomodoroBreakTimeContentStageSS04?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemSystemContentStage?.getActiveStatus?.isStatusAsDefault() == true) {
+        getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemSystemContentStage?.getActiveStatus?.setStatusAsReady(); // ok
+        getDonePomodoroBreakTimeContentStageSS04?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: BRIDGE
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// TODO: getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemSystemContentStage => getGoLastFinishSystemContentStage
+    if (getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemSystemContentStage?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getGoLastFinishSystemContentStage?.getActiveStatus?.isStatusAsDefault() == true) {
+        getGoLastFinishSystemContentStage?.getActiveStatus?.setStatusAsReady(); // ok
+        getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemSystemContentStage?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    ///
+    ///
+    /// TODO: GIAI ĐOẠN KẾT THÚC
+    ///
+    ///
+
+    /// TODO: getGoLastFinishSystemContentStage => getLastFinishSystemContentStage
+    if (getGoLastFinishSystemContentStage?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getLastFinishSystemContentStage?.getActiveStatus?.isStatusAsDefault() == true) {
+        getLastFinishSystemContentStage?.getActiveStatus?.setStatusAsReady(); // ok
+        getGoLastFinishSystemContentStage?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// TODO: getLastFinishSystemContentStage => getDoneLastFinishSystemContentStage
+    if (getLastFinishSystemContentStage?.getActiveStatus?.isStatusAsPerformCompleted() == true) {
+      if (getDoneLastFinishSystemContentStage?.getActiveStatus?.isStatusAsDefault() == true) {
+        getDoneLastFinishSystemContentStage?.getActiveStatus?.setStatusAsReady(); // ok
+        getLastFinishSystemContentStage?.getActiveStatus?.setStatusAsClosed();
+      }
+    }
+
+    /// -----
+    /// TODO: Chuyển Trạng Thái Từ STEP-1 - [ACTIVE] => STEP-1 [PERFORM_COMPLETED] => STEP-2 - [READY] ... => Cấu Hình Tại Phần Triển Khai Chi Tiết Của Kịch Bản
+    /// -----
   }
 
   /// -----
@@ -1320,9 +2332,20 @@ class ContentItemSequentialExecution with ExecutionCore {
 
       setFunctionalSequentialExecutionController(value: FunctionalSequentialExecutionController(), isPriorityOverride: true);
 
-      /// -----
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: CONTENT ITEM SECTION
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
       /// TODO: NHÓM SECTION THUỘC PHẦN HỆ THỐNG
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+
       /// -----
+      /// TODO: SystemItem (MAIN DETAIL & GO & DONE) [ContentItemSection]
+      /// -----
+
       setFirstStartContentItemSection(
         value: ContentItemSection(sequentialExecutionController: getSequentialExecutionController, functionalSequentialExecutionController: getFunctionalSequentialExecutionController),
         isPriorityOverride: true,
@@ -1351,7 +2374,7 @@ class ContentItemSequentialExecution with ExecutionCore {
       );
 
       /// -----
-      /// TODO: NHÓM SECTION THUỘC PHẦN NỘI DUNG
+      /// TODO: BreakTime (MAIN DETAIL & GO & DONE) [ContentItemSection]
       /// -----
       setBreakTimeContentItemSectionSS01(
         value: ContentItemSection(sequentialExecutionController: getSequentialExecutionController, functionalSequentialExecutionController: getFunctionalSequentialExecutionController),
@@ -1409,8 +2432,50 @@ class ContentItemSequentialExecution with ExecutionCore {
       );
 
       /// -----
-      /// TODO: NHÓM SECTION THUỘC PHẦN NỘI DUNG
+      /// TODO: Bridge From - To [ContentItemSection]
       /// -----
+
+      setBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01ContentItemSection(
+        value: ContentItemSection(sequentialExecutionController: getSequentialExecutionController, functionalSequentialExecutionController: getFunctionalSequentialExecutionController),
+        isPriorityOverride: true,
+      );
+      setBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01ContentItemSection(
+        value: ContentItemSection(sequentialExecutionController: getSequentialExecutionController, functionalSequentialExecutionController: getFunctionalSequentialExecutionController),
+        isPriorityOverride: true,
+      );
+      setBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02ContentItemSection(
+        value: ContentItemSection(sequentialExecutionController: getSequentialExecutionController, functionalSequentialExecutionController: getFunctionalSequentialExecutionController),
+        isPriorityOverride: true,
+      );
+      setBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02ContentItemSection(
+        value: ContentItemSection(sequentialExecutionController: getSequentialExecutionController, functionalSequentialExecutionController: getFunctionalSequentialExecutionController),
+        isPriorityOverride: true,
+      );
+      setBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03ContentItemSection(
+        value: ContentItemSection(sequentialExecutionController: getSequentialExecutionController, functionalSequentialExecutionController: getFunctionalSequentialExecutionController),
+        isPriorityOverride: true,
+      );
+      setBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03ContentItemSection(
+        value: ContentItemSection(sequentialExecutionController: getSequentialExecutionController, functionalSequentialExecutionController: getFunctionalSequentialExecutionController),
+        isPriorityOverride: true,
+      );
+      setBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04ContentItemSection(
+        value: ContentItemSection(sequentialExecutionController: getSequentialExecutionController, functionalSequentialExecutionController: getFunctionalSequentialExecutionController),
+        isPriorityOverride: true,
+      );
+      setBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04ContentItemSection(
+        value: ContentItemSection(sequentialExecutionController: getSequentialExecutionController, functionalSequentialExecutionController: getFunctionalSequentialExecutionController),
+        isPriorityOverride: true,
+      );
+      setBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemContentItemSection(
+        value: ContentItemSection(sequentialExecutionController: getSequentialExecutionController, functionalSequentialExecutionController: getFunctionalSequentialExecutionController),
+        isPriorityOverride: true,
+      );
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: NHÓM SECTION THUỘC PHẦN NỘI DUNG
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+
       setContentItemSectionSS01(
         value: ContentItemSection(
           sequentialExecutionController: getSequentialExecutionController, //
@@ -1482,8 +2547,12 @@ class ContentItemSequentialExecution with ExecutionCore {
         isPriorityOverride: true,
       );
 
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: NHÓM SECTION THUỘC PHẦN NỘI DUNG
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+
       /// -----
-      /// TODO: NHÓM SECTION THUỘC PHẦN NỘI DUNG (GO & DONE)
+      /// TODO: Pomodoro StayFocused (GO & DONE) [ContentItemSection]
       /// -----
 
       setGoStayFocusedContentItemSectionSS01(
@@ -1549,11 +2618,19 @@ class ContentItemSequentialExecution with ExecutionCore {
         isPriorityOverride: true,
       );
 
-      ///
-      ///
-      ///
-      ///
-      ///
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: CONTENT STAGE
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: NHÓM CONTENT_STAGE THUỘC PHẦN HỆ THỐNG
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// -----
+      /// TODO: SystemItem (MAIN DETAIL & GO & DONE) [ContentStage]
+      /// -----
 
       setFirstStartSystemContentStage(value: SystemContentStage(), isPriorityOverride: true);
       setGoFirstStartSystemContentStage(value: SystemContentStage(), isPriorityOverride: true);
@@ -1563,29 +2640,9 @@ class ContentItemSequentialExecution with ExecutionCore {
       setGoLastFinishSystemContentStage(value: SystemContentStage(), isPriorityOverride: true);
       setDoneLastFinishSystemContentStage(value: SystemContentStage(), isPriorityOverride: true);
 
-      ///
-      ///
-      ///
-
-      setPomodoroStayFocusedContentStageSS01(value: PomodoroContentStage(), isPriorityOverride: true);
-      setGoPomodoroStayFocusedContentStageSS01(value: PomodoroContentStage(), isPriorityOverride: true);
-      setDonePomodoroStayFocusedContentStageSS01(value: PomodoroContentStage(), isPriorityOverride: true);
-
-      setPomodoroStayFocusedContentStageSS02(value: PomodoroContentStage(), isPriorityOverride: true);
-      setGoPomodoroStayFocusedContentStageSS02(value: PomodoroContentStage(), isPriorityOverride: true);
-      setDonePomodoroStayFocusedContentStageSS02(value: PomodoroContentStage(), isPriorityOverride: true);
-
-      setPomodoroStayFocusedContentStageSS03(value: PomodoroContentStage(), isPriorityOverride: true);
-      setGoPomodoroStayFocusedContentStageSS03(value: PomodoroContentStage(), isPriorityOverride: true);
-      setDonePomodoroStayFocusedContentStageSS03(value: PomodoroContentStage(), isPriorityOverride: true);
-
-      setPomodoroStayFocusedContentStageSS04(value: PomodoroContentStage(), isPriorityOverride: true);
-      setGoPomodoroStayFocusedContentStageSS04(value: PomodoroContentStage(), isPriorityOverride: true);
-      setDonePomodoroStayFocusedContentStageSS04(value: PomodoroContentStage(), isPriorityOverride: true);
-
-      ///
-      ///
-      ///
+      /// -----
+      /// TODO: BreakTime (MAIN DETAIL & GO & DONE) [ContentStage]
+      /// -----
 
       setPomodoroBreakTimeContentStageSS01(value: PomodoroContentStage(), isPriorityOverride: true);
       setGoPomodoroBreakTimeContentStageSS01(value: PomodoroContentStage(), isPriorityOverride: true);
@@ -1603,9 +2660,57 @@ class ContentItemSequentialExecution with ExecutionCore {
       setGoPomodoroBreakTimeContentStageSS04(value: PomodoroContentStage(), isPriorityOverride: true);
       setDonePomodoroBreakTimeContentStageSS04(value: PomodoroContentStage(), isPriorityOverride: true);
 
-      ///
-      ///
-      ///
+      /// -----
+      /// TODO: Bridge From - To [ContentStage]
+      /// -----
+
+      setBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01SystemContentStage(value: SystemContentStage(), isPriorityOverride: true);
+      setBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01SystemContentStage(value: SystemContentStage(), isPriorityOverride: true);
+      setBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02SystemContentStage(value: SystemContentStage(), isPriorityOverride: true);
+      setBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02SystemContentStage(value: SystemContentStage(), isPriorityOverride: true);
+      setBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03SystemContentStage(value: SystemContentStage(), isPriorityOverride: true);
+      setBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03SystemContentStage(value: SystemContentStage(), isPriorityOverride: true);
+      setBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04SystemContentStage(value: SystemContentStage(), isPriorityOverride: true);
+      setBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04SystemContentStage(value: SystemContentStage(), isPriorityOverride: true);
+      setBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemSystemContentStage(value: SystemContentStage(), isPriorityOverride: true);
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: NHÓM CONTENT_STAGE THUỘC PHẦN NỘI DUNG
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// -----
+      /// TODO: Pomodoro StayFocused (MAIN DETAIL & GO & DONE) [ContentStage]
+      /// -----
+
+      setPomodoroStayFocusedContentStageSS01(value: PomodoroContentStage(), isPriorityOverride: true);
+      setGoPomodoroStayFocusedContentStageSS01(value: PomodoroContentStage(), isPriorityOverride: true);
+      setDonePomodoroStayFocusedContentStageSS01(value: PomodoroContentStage(), isPriorityOverride: true);
+
+      setPomodoroStayFocusedContentStageSS02(value: PomodoroContentStage(), isPriorityOverride: true);
+      setGoPomodoroStayFocusedContentStageSS02(value: PomodoroContentStage(), isPriorityOverride: true);
+      setDonePomodoroStayFocusedContentStageSS02(value: PomodoroContentStage(), isPriorityOverride: true);
+
+      setPomodoroStayFocusedContentStageSS03(value: PomodoroContentStage(), isPriorityOverride: true);
+      setGoPomodoroStayFocusedContentStageSS03(value: PomodoroContentStage(), isPriorityOverride: true);
+      setDonePomodoroStayFocusedContentStageSS03(value: PomodoroContentStage(), isPriorityOverride: true);
+
+      setPomodoroStayFocusedContentStageSS04(value: PomodoroContentStage(), isPriorityOverride: true);
+      setGoPomodoroStayFocusedContentStageSS04(value: PomodoroContentStage(), isPriorityOverride: true);
+      setDonePomodoroStayFocusedContentStageSS04(value: PomodoroContentStage(), isPriorityOverride: true);
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: BINDING CONTENT_STAGE
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: NHÓM CONTENT_STAGE THUỘC PHẦN HỆ THỐNG
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// -----
+      /// TODO: SystemItem (MAIN DETAIL & GO & DONE) [ContentStage]
+      /// -----
 
       getSequentialExecutionController?.getSystemFeature?.getSystemTime?.getFirstStartSystemItem?.setSystemContentStage(value: getFirstStartSystemContentStage, isPriorityOverride: true);
       getSequentialExecutionController?.getSystemFeature?.getSystemTime?.getGoFirstStartSystemItem?.setSystemContentStage(value: getGoFirstStartSystemContentStage, isPriorityOverride: true);
@@ -1615,25 +2720,9 @@ class ContentItemSequentialExecution with ExecutionCore {
       getSequentialExecutionController?.getSystemFeature?.getSystemTime?.getGoLastFinishSystemItem?.setSystemContentStage(value: getGoLastFinishSystemContentStage, isPriorityOverride: true);
       getSequentialExecutionController?.getSystemFeature?.getSystemTime?.getDoneLastFinishSystemItem?.setSystemContentStage(value: getDoneLastFinishSystemContentStage, isPriorityOverride: true);
 
-      ///
-
-      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS01?.setPomodoroContentStage(value: getPomodoroStayFocusedContentStageSS01, isPriorityOverride: true);
-      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS01?.setGoPomodoroContentStage(value: getGoPomodoroStayFocusedContentStageSS01, isPriorityOverride: true);
-      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS01?.setDonePomodoroContentStage(value: getDonePomodoroStayFocusedContentStageSS01, isPriorityOverride: true);
-
-      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS02?.setPomodoroContentStage(value: getPomodoroStayFocusedContentStageSS02, isPriorityOverride: true);
-      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS02?.setGoPomodoroContentStage(value: getGoPomodoroStayFocusedContentStageSS02, isPriorityOverride: true);
-      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS02?.setDonePomodoroContentStage(value: getDonePomodoroStayFocusedContentStageSS02, isPriorityOverride: true);
-
-      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS03?.setPomodoroContentStage(value: getPomodoroStayFocusedContentStageSS03, isPriorityOverride: true);
-      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS03?.setGoPomodoroContentStage(value: getGoPomodoroStayFocusedContentStageSS03, isPriorityOverride: true);
-      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS03?.setDonePomodoroContentStage(value: getDonePomodoroStayFocusedContentStageSS03, isPriorityOverride: true);
-
-      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS04?.setPomodoroContentStage(value: getPomodoroStayFocusedContentStageSS04, isPriorityOverride: true);
-      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS04?.setGoPomodoroContentStage(value: getGoPomodoroStayFocusedContentStageSS04, isPriorityOverride: true);
-      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS04?.setDonePomodoroContentStage(value: getDonePomodoroStayFocusedContentStageSS04, isPriorityOverride: true);
-
-      ///
+      /// -----
+      /// TODO: BreakTime (MAIN DETAIL & GO & DONE) [ContentStage]
+      /// -----
 
       getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS01?.setPomodoroContentStage(value: getPomodoroBreakTimeContentStageSS01, isPriorityOverride: true);
       getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS01?.setGoPomodoroContentStage(value: getGoPomodoroBreakTimeContentStageSS01, isPriorityOverride: true);
@@ -1650,6 +2739,44 @@ class ContentItemSequentialExecution with ExecutionCore {
       getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS04?.setPomodoroContentStage(value: getPomodoroBreakTimeContentStageSS04, isPriorityOverride: true);
       getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS04?.setGoPomodoroContentStage(value: getGoPomodoroBreakTimeContentStageSS04, isPriorityOverride: true);
       getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getBreakTimeSS04?.setDonePomodoroContentStage(value: getDonePomodoroBreakTimeContentStageSS04, isPriorityOverride: true);
+
+      /// -----
+      /// TODO: Bridge From - To [ContentStage]
+      /// -----
+
+      getSequentialExecutionController?.getSystemFeature?.getSystemTime?.getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01?.setSystemContentStage(value: getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01SystemContentStage, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeature?.getSystemTime?.getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01?.setSystemContentStage(value: getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01SystemContentStage, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeature?.getSystemTime?.getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02?.setSystemContentStage(value: getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02SystemContentStage, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeature?.getSystemTime?.getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02?.setSystemContentStage(value: getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02SystemContentStage, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeature?.getSystemTime?.getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03?.setSystemContentStage(value: getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03SystemContentStage, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeature?.getSystemTime?.getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03?.setSystemContentStage(value: getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03SystemContentStage, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeature?.getSystemTime?.getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04?.setSystemContentStage(value: getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04SystemContentStage, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeature?.getSystemTime?.getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04?.setSystemContentStage(value: getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04SystemContentStage, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeature?.getSystemTime?.getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItem?.setSystemContentStage(value: getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemSystemContentStage, isPriorityOverride: true);
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: NHÓM CONTENT_STAGE THUỘC PHẦN NỘI DUNG
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// -----
+      /// TODO: Pomodoro StayFocused (MAIN DETAIL & GO & DONE) [ContentStage]
+      /// -----
+
+      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS01?.setPomodoroContentStage(value: getPomodoroStayFocusedContentStageSS01, isPriorityOverride: true);
+      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS01?.setGoPomodoroContentStage(value: getGoPomodoroStayFocusedContentStageSS01, isPriorityOverride: true);
+      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS01?.setDonePomodoroContentStage(value: getDonePomodoroStayFocusedContentStageSS01, isPriorityOverride: true);
+
+      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS02?.setPomodoroContentStage(value: getPomodoroStayFocusedContentStageSS02, isPriorityOverride: true);
+      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS02?.setGoPomodoroContentStage(value: getGoPomodoroStayFocusedContentStageSS02, isPriorityOverride: true);
+      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS02?.setDonePomodoroContentStage(value: getDonePomodoroStayFocusedContentStageSS02, isPriorityOverride: true);
+
+      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS03?.setPomodoroContentStage(value: getPomodoroStayFocusedContentStageSS03, isPriorityOverride: true);
+      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS03?.setGoPomodoroContentStage(value: getGoPomodoroStayFocusedContentStageSS03, isPriorityOverride: true);
+      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS03?.setDonePomodoroContentStage(value: getDonePomodoroStayFocusedContentStageSS03, isPriorityOverride: true);
+
+      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS04?.setPomodoroContentStage(value: getPomodoroStayFocusedContentStageSS04, isPriorityOverride: true);
+      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS04?.setGoPomodoroContentStage(value: getGoPomodoroStayFocusedContentStageSS04, isPriorityOverride: true);
+      getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.getStayFocusedSS04?.setDonePomodoroContentStage(value: getDonePomodoroStayFocusedContentStageSS04, isPriorityOverride: true);
 
       ///
       /// TODO: Cài Đặt Kịch Bản
@@ -1725,20 +2852,65 @@ class ContentItemSequentialExecution with ExecutionCore {
       /// -----
       await getFunctionalSequentialExecutionController?.onSetupRoot();
 
-      /// -----
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: CONTENT ITEM SECTION
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
       /// TODO: NHÓM SECTION THUỘC PHẦN HỆ THỐNG
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+
       /// -----
+      /// TODO: SystemItem (MAIN DETAIL & GO & DONE) [ContentItemSection]
+      /// -----
+
       await getFirstStartContentItemSection?.onSetupRoot();
+      await getGoFirstStartContentItemSection?.onSetupRoot();
+      await getDoneFirstStartContentItemSection?.onSetupRoot();
+
       await getLastFinishContentItemSection?.onSetupRoot();
+      await getGoLastFinishContentItemSection?.onSetupRoot();
+      await getDoneLastFinishContentItemSection?.onSetupRoot();
+
+      /// -----
+      /// TODO: BreakTime (MAIN DETAIL & GO & DONE) [ContentItemSection]
+      /// -----
 
       await getBreakTimeContentItemSectionSS01?.onSetupRoot();
+      await getGoBreakTimeContentItemSectionSS01?.onSetupRoot();
+      await getDoneBreakTimeContentItemSectionSS01?.onSetupRoot();
+
       await getBreakTimeContentItemSectionSS02?.onSetupRoot();
+      await getGoBreakTimeContentItemSectionSS02?.onSetupRoot();
+      await getDoneBreakTimeContentItemSectionSS02?.onSetupRoot();
+
       await getBreakTimeContentItemSectionSS03?.onSetupRoot();
+      await getGoBreakTimeContentItemSectionSS03?.onSetupRoot();
+      await getDoneBreakTimeContentItemSectionSS03?.onSetupRoot();
+
       await getBreakTimeContentItemSectionSS04?.onSetupRoot();
+      await getGoBreakTimeContentItemSectionSS04?.onSetupRoot();
+      await getDoneBreakTimeContentItemSectionSS04?.onSetupRoot();
 
       /// -----
-      /// TODO: NHÓM SECTION THUỘC PHẦN NỘI DUNG
+      /// TODO: Bridge From - To [ContentItemSection]
       /// -----
+
+      await getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01ContentItemSection?.onSetupRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01ContentItemSection?.onSetupRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02ContentItemSection?.onSetupRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02ContentItemSection?.onSetupRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03ContentItemSection?.onSetupRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03ContentItemSection?.onSetupRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04ContentItemSection?.onSetupRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04ContentItemSection?.onSetupRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemContentItemSection?.onSetupRoot();
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: NHÓM SECTION THUỘC PHẦN NỘI DUNG
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
       await getContentItemSectionSS01?.onSetupRoot();
       await getContentItemSectionSS02?.onSetupRoot();
       await getContentItemSectionSS03?.onSetupRoot();
@@ -1750,6 +2922,40 @@ class ContentItemSequentialExecution with ExecutionCore {
       await getContentItemSectionSS09?.onSetupRoot();
       await getContentItemSectionSS10?.onSetupRoot();
 
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: NHÓM SECTION THUỘC PHẦN NỘI DUNG
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// -----
+      /// TODO: Pomodoro StayFocused (GO & DONE) [ContentItemSection]
+      /// -----
+
+      await getGoStayFocusedContentItemSectionSS01?.onSetupRoot();
+      await getDoneStayFocusedContentItemSectionSS01?.onSetupRoot();
+
+      await getGoStayFocusedContentItemSectionSS02?.onSetupRoot();
+      await getDoneStayFocusedContentItemSectionSS02?.onSetupRoot();
+
+      await getGoStayFocusedContentItemSectionSS03?.onSetupRoot();
+      await getDoneStayFocusedContentItemSectionSS03?.onSetupRoot();
+
+      await getGoStayFocusedContentItemSectionSS04?.onSetupRoot();
+      await getDoneStayFocusedContentItemSectionSS04?.onSetupRoot();
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: CONTENT_STAGE
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: NHÓM CONTENT_STAGE THUỘC PHẦN HỆ THỐNG
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// -----
+      /// TODO: SystemItem (MAIN DETAIL & GO & DONE) [ContentStage]
+      /// -----
+
       await getFirstStartSystemContentStage?.onSetupRoot();
       await getGoFirstStartSystemContentStage?.onSetupRoot();
       await getDoneFirstStartSystemContentStage?.onSetupRoot();
@@ -1758,17 +2964,72 @@ class ContentItemSequentialExecution with ExecutionCore {
       await getGoLastFinishSystemContentStage?.onSetupRoot();
       await getDoneLastFinishSystemContentStage?.onSetupRoot();
 
-      await getPomodoroStayFocusedContentStageSS01?.onSetupRoot();
-      await getPomodoroStayFocusedContentStageSS02?.onSetupRoot();
-      await getPomodoroStayFocusedContentStageSS03?.onSetupRoot();
-      await getPomodoroStayFocusedContentStageSS04?.onSetupRoot();
+      /// -----
+      /// TODO: BreakTime (MAIN DETAIL & GO & DONE) [ContentStage]
+      /// -----
 
       await getPomodoroBreakTimeContentStageSS01?.onSetupRoot();
-      await getPomodoroBreakTimeContentStageSS02?.onSetupRoot();
-      await getPomodoroBreakTimeContentStageSS03?.onSetupRoot();
-      await getPomodoroBreakTimeContentStageSS04?.onSetupRoot();
+      await getGoPomodoroBreakTimeContentStageSS01?.onSetupRoot();
+      await getDonePomodoroBreakTimeContentStageSS01?.onSetupRoot();
 
+      await getPomodoroBreakTimeContentStageSS02?.onSetupRoot();
+      await getGoPomodoroBreakTimeContentStageSS02?.onSetupRoot();
+      await getDonePomodoroBreakTimeContentStageSS02?.onSetupRoot();
+
+      await getPomodoroBreakTimeContentStageSS03?.onSetupRoot();
+      await getGoPomodoroBreakTimeContentStageSS03?.onSetupRoot();
+      await getDonePomodoroBreakTimeContentStageSS03?.onSetupRoot();
+
+      await getPomodoroBreakTimeContentStageSS04?.onSetupRoot();
+      await getGoPomodoroBreakTimeContentStageSS04?.onSetupRoot();
+      await getDonePomodoroBreakTimeContentStageSS04?.onSetupRoot();
+
+      /// -----
+      /// TODO: Bridge From - To [ContentStage]
+      /// -----
+
+      await getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01SystemContentStage?.onSetupRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01SystemContentStage?.onSetupRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02SystemContentStage?.onSetupRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02SystemContentStage?.onSetupRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03SystemContentStage?.onSetupRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03SystemContentStage?.onSetupRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04SystemContentStage?.onSetupRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04SystemContentStage?.onSetupRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemSystemContentStage?.onSetupRoot();
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: NHÓM CONTENT_STAGE THUỘC PHẦN NỘI DUNG
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// -----
+      /// TODO: Pomodoro StayFocused (MAIN DETAIL & GO & DONE) [ContentStage]
+      /// -----
+
+      await getPomodoroStayFocusedContentStageSS01?.onSetupRoot();
+      await getGoPomodoroStayFocusedContentStageSS01?.onSetupRoot();
+      await getDonePomodoroStayFocusedContentStageSS01?.onSetupRoot();
+
+      await getPomodoroStayFocusedContentStageSS02?.onSetupRoot();
+      await getGoPomodoroStayFocusedContentStageSS02?.onSetupRoot();
+      await getDonePomodoroStayFocusedContentStageSS02?.onSetupRoot();
+
+      await getPomodoroStayFocusedContentStageSS03?.onSetupRoot();
+      await getGoPomodoroStayFocusedContentStageSS03?.onSetupRoot();
+      await getDonePomodoroStayFocusedContentStageSS03?.onSetupRoot();
+
+      await getPomodoroStayFocusedContentStageSS04?.onSetupRoot();
+      await getGoPomodoroStayFocusedContentStageSS04?.onSetupRoot();
+      await getDonePomodoroStayFocusedContentStageSS04?.onSetupRoot();
+
+      /// -----
+      /// TODO: Kịch Bản
+      /// -----
       await getFunctionalSequentialExecutionScript?.onSetupRoot();
+
+      ///
+      ///
+      ///
     } catch (e) {
       await onReportRootIssue(nameFunction: '[onSetupRootForSubCom]');
     }
@@ -1788,20 +3049,65 @@ class ContentItemSequentialExecution with ExecutionCore {
       /// -----
       await getFunctionalSequentialExecutionController?.onInitRoot();
 
-      /// -----
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: CONTENT ITEM SECTION
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
       /// TODO: NHÓM SECTION THUỘC PHẦN HỆ THỐNG
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+
       /// -----
+      /// TODO: SystemItem (MAIN DETAIL & GO & DONE) [ContentItemSection]
+      /// -----
+
       await getFirstStartContentItemSection?.onInitRoot();
+      await getGoFirstStartContentItemSection?.onInitRoot();
+      await getDoneFirstStartContentItemSection?.onInitRoot();
+
       await getLastFinishContentItemSection?.onInitRoot();
+      await getGoLastFinishContentItemSection?.onInitRoot();
+      await getDoneLastFinishContentItemSection?.onInitRoot();
+
+      /// -----
+      /// TODO: BreakTime (MAIN DETAIL & GO & DONE) [ContentItemSection]
+      /// -----
 
       await getBreakTimeContentItemSectionSS01?.onInitRoot();
+      await getGoBreakTimeContentItemSectionSS01?.onInitRoot();
+      await getDoneBreakTimeContentItemSectionSS01?.onInitRoot();
+
       await getBreakTimeContentItemSectionSS02?.onInitRoot();
+      await getGoBreakTimeContentItemSectionSS02?.onInitRoot();
+      await getDoneBreakTimeContentItemSectionSS02?.onInitRoot();
+
       await getBreakTimeContentItemSectionSS03?.onInitRoot();
+      await getGoBreakTimeContentItemSectionSS03?.onInitRoot();
+      await getDoneBreakTimeContentItemSectionSS03?.onInitRoot();
+
       await getBreakTimeContentItemSectionSS04?.onInitRoot();
+      await getGoBreakTimeContentItemSectionSS04?.onInitRoot();
+      await getDoneBreakTimeContentItemSectionSS04?.onInitRoot();
 
       /// -----
-      /// TODO: NHÓM SECTION THUỘC PHẦN NỘI DUNG
+      /// TODO: Bridge From - To [ContentItemSection]
       /// -----
+
+      await getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01ContentItemSection?.onInitRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01ContentItemSection?.onInitRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02ContentItemSection?.onInitRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02ContentItemSection?.onInitRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03ContentItemSection?.onInitRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03ContentItemSection?.onInitRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04ContentItemSection?.onInitRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04ContentItemSection?.onInitRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemContentItemSection?.onInitRoot();
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: NHÓM SECTION THUỘC PHẦN NỘI DUNG
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
       await getContentItemSectionSS01?.onInitRoot();
       await getContentItemSectionSS02?.onInitRoot();
       await getContentItemSectionSS03?.onInitRoot();
@@ -1813,19 +3119,109 @@ class ContentItemSequentialExecution with ExecutionCore {
       await getContentItemSectionSS09?.onInitRoot();
       await getContentItemSectionSS10?.onInitRoot();
 
-      await getFirstStartSystemContentStage?.onInitRoot();
-      await getLastFinishSystemContentStage?.onInitRoot();
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: NHÓM SECTION THUỘC PHẦN NỘI DUNG
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
 
-      await getPomodoroStayFocusedContentStageSS01?.onInitRoot();
-      await getPomodoroStayFocusedContentStageSS02?.onInitRoot();
-      await getPomodoroStayFocusedContentStageSS03?.onInitRoot();
-      await getPomodoroStayFocusedContentStageSS04?.onInitRoot();
+      /// -----
+      /// TODO: Pomodoro StayFocused (GO & DONE) [ContentItemSection]
+      /// -----
+
+      await getGoStayFocusedContentItemSectionSS01?.onInitRoot();
+      await getDoneStayFocusedContentItemSectionSS01?.onInitRoot();
+
+      await getGoStayFocusedContentItemSectionSS02?.onInitRoot();
+      await getDoneStayFocusedContentItemSectionSS02?.onInitRoot();
+
+      await getGoStayFocusedContentItemSectionSS03?.onInitRoot();
+      await getDoneStayFocusedContentItemSectionSS03?.onInitRoot();
+
+      await getGoStayFocusedContentItemSectionSS04?.onInitRoot();
+      await getDoneStayFocusedContentItemSectionSS04?.onInitRoot();
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: CONTENT_STAGE
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: NHÓM CONTENT_STAGE THUỘC PHẦN HỆ THỐNG
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// -----
+      /// TODO: SystemItem (MAIN DETAIL & GO & DONE) [ContentStage]
+      /// -----
+
+      await getFirstStartSystemContentStage?.onInitRoot();
+      await getGoFirstStartSystemContentStage?.onInitRoot();
+      await getDoneFirstStartSystemContentStage?.onInitRoot();
+
+      await getLastFinishSystemContentStage?.onInitRoot();
+      await getGoLastFinishSystemContentStage?.onInitRoot();
+      await getDoneLastFinishSystemContentStage?.onInitRoot();
+
+      /// -----
+      /// TODO: BreakTime (MAIN DETAIL & GO & DONE) [ContentStage]
+      /// -----
 
       await getPomodoroBreakTimeContentStageSS01?.onInitRoot();
-      await getPomodoroBreakTimeContentStageSS02?.onInitRoot();
-      await getPomodoroBreakTimeContentStageSS03?.onInitRoot();
-      await getPomodoroBreakTimeContentStageSS04?.onInitRoot();
+      await getGoPomodoroBreakTimeContentStageSS01?.onInitRoot();
+      await getDonePomodoroBreakTimeContentStageSS01?.onInitRoot();
 
+      await getPomodoroBreakTimeContentStageSS02?.onInitRoot();
+      await getGoPomodoroBreakTimeContentStageSS02?.onInitRoot();
+      await getDonePomodoroBreakTimeContentStageSS02?.onInitRoot();
+
+      await getPomodoroBreakTimeContentStageSS03?.onInitRoot();
+      await getGoPomodoroBreakTimeContentStageSS03?.onInitRoot();
+      await getDonePomodoroBreakTimeContentStageSS03?.onInitRoot();
+
+      await getPomodoroBreakTimeContentStageSS04?.onInitRoot();
+      await getGoPomodoroBreakTimeContentStageSS04?.onInitRoot();
+      await getDonePomodoroBreakTimeContentStageSS04?.onInitRoot();
+
+      /// -----
+      /// TODO: Bridge From - To [ContentStage]
+      /// -----
+
+      await getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01SystemContentStage?.onInitRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01SystemContentStage?.onInitRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02SystemContentStage?.onInitRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02SystemContentStage?.onInitRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03SystemContentStage?.onInitRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03SystemContentStage?.onInitRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04SystemContentStage?.onInitRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04SystemContentStage?.onInitRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemSystemContentStage?.onInitRoot();
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: NHÓM CONTENT_STAGE THUỘC PHẦN NỘI DUNG
+      /// ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// -----
+      /// TODO: Pomodoro StayFocused (MAIN DETAIL & GO & DONE) [ContentStage]
+      /// -----
+
+      await getPomodoroStayFocusedContentStageSS01?.onInitRoot();
+      await getGoPomodoroStayFocusedContentStageSS01?.onInitRoot();
+      await getDonePomodoroStayFocusedContentStageSS01?.onInitRoot();
+
+      await getPomodoroStayFocusedContentStageSS02?.onInitRoot();
+      await getGoPomodoroStayFocusedContentStageSS02?.onInitRoot();
+      await getDonePomodoroStayFocusedContentStageSS02?.onInitRoot();
+
+      await getPomodoroStayFocusedContentStageSS03?.onInitRoot();
+      await getGoPomodoroStayFocusedContentStageSS03?.onInitRoot();
+      await getDonePomodoroStayFocusedContentStageSS03?.onInitRoot();
+
+      await getPomodoroStayFocusedContentStageSS04?.onInitRoot();
+      await getGoPomodoroStayFocusedContentStageSS04?.onInitRoot();
+      await getDonePomodoroStayFocusedContentStageSS04?.onInitRoot();
+
+      /// -----
+      /// TODO: Kịch Bản
+      /// -----
       await getFunctionalSequentialExecutionScript?.onInitRoot();
       await getFunctionalSequentialExecutionScript?.onGenerateScript();
 

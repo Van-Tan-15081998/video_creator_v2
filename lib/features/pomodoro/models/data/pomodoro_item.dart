@@ -331,6 +331,57 @@ class PomodoroItem with ExecutionCore {
   }
 
   /// -----
+  /// TODO:
+  /// -----
+  void onUpdateBaseOnContentStage() {
+    if (getPomodoroContentStage?.getActiveStatus?.isStatusAsReady() == true) {
+      /// TODO: Điều Kiện Tiên Quyết => Tổng Số Giây Của Giai Đoạn Chuẩn Bị Phải = 0 [Cấu Hình Mặc Định = 505]
+      if ((getTotalPrepareSeconds ?? 0) >= 500) {
+        ///
+        if ((getTotalPrepareSeconds ?? 0) > 500) {
+          double currentTotalPrepareSeconds = (getTotalPrepareSeconds ?? 0) - 1;
+
+          setTotalPrepareSeconds(value: currentTotalPrepareSeconds, isPriorityOverride: true);
+        } else if ((getTotalPrepareSeconds ?? 0) == 500) {
+          double currentTotalPrepareSeconds = (getTotalPrepareSeconds ?? 0) - 1;
+
+          setTotalPrepareSeconds(value: currentTotalPrepareSeconds, isPriorityOverride: true);
+
+          /// TODO: Hoàn Tất Giai Đoạn Sẵn Sàng Thực Thi => Thiết Lập Giai Đoạn Thực Thi
+          getPomodoroContentStage?.getActiveStatus?.setStatusAsActive();
+        }
+      }
+    }
+    /// TODO: Giai Đoạn Thực Thi
+    else if (getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+      if (isCompletedPreparing() == true) {
+        if ((getTotalRemainingSeconds ?? 0) > 0) {
+          double updateUpdate = (getTotalRemainingSeconds ?? 0) - 1;
+
+          setTotalRemainingSeconds(value: updateUpdate, isPriorityOverride: true);
+
+          ///
+          double percentComplete = ((getTotalSeconds ?? 1) - (getTotalRemainingSeconds ?? 1)) / (getTotalSeconds ?? 1) * 100;
+          setPercentComplete(value: percentComplete, isPriorityOverride: true);
+        } else if ((getTotalRemainingSeconds ?? 0) == 0) {
+          ///
+          setPercentComplete(value: 100, isPriorityOverride: true);
+
+          /// TODO: Set Active Status
+          getPomodoroContentStage?.getActiveStatus?.setStatusAsPerformCompleted();
+        }
+
+        int totalRemainingMinutes = (getTotalRemainingSeconds ?? 0) ~/ 60;
+        setTotalRemainingMinutes(value: totalRemainingMinutes.toDouble(), isPriorityOverride: true);
+
+        if (kDebugMode) {
+          // print((getTotalRemainingSeconds ?? 1));
+        }
+      }
+    }
+  }
+
+  /// -----
   /// TODO: Attach Root
   /// -----
   @override
@@ -366,6 +417,10 @@ class PomodoroItem with ExecutionCore {
 
       setTotalSeconds(value: (getTotalMinutes ?? 0) * 60);
       setTotalRemainingSeconds(value: getTotalSeconds);
+
+      setTotalPrepareSeconds(value: 500, isPriorityOverride: true);
+
+      /// TODO: DEMO => MUST COMMENT THIS
 
       /// -----
       /// TODO: Init Root For SubCom

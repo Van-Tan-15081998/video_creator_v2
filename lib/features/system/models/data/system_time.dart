@@ -100,6 +100,142 @@ class SystemTime with ExecutionCore {
     return;
   }
 
+
+  /// -----
+  /// TODO: Bridge From - DoneFirstStartSystemItem - To - GoPomodoroStayFocusedSS01
+  /// -----
+  SystemItem? _bridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01;
+  SystemItem? get getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01 => _bridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01;
+  void setBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01({required SystemItem? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01 = value;
+    } else {
+      _bridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01 ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroStayFocusedSS01 - To - GoPomodoroBreakTimeSS01
+  /// -----
+  SystemItem? _bridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01;
+  SystemItem? get getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01 => _bridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01;
+  void setBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01({required SystemItem? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01 = value;
+    } else {
+      _bridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01 ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroBreakTimeSS01 - To - GoPomodoroStayFocusedSS02
+  /// -----
+  SystemItem? _bridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02;
+  SystemItem? get getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02 => _bridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02;
+  void setBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02({required SystemItem? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02 = value;
+    } else {
+      _bridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02 ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroStayFocusedSS02 - To - GoPomodoroBreakTimeSS02
+  /// -----
+  SystemItem? _bridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02;
+  SystemItem? get getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02 => _bridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02;
+  void setBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02({required SystemItem? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02 = value;
+    } else {
+      _bridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02 ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroBreakTimeSS02 - To - GoPomodoroStayFocusedSS03
+  /// -----
+  SystemItem? _bridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03;
+  SystemItem? get getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03 => _bridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03;
+  void setBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03({required SystemItem? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03 = value;
+    } else {
+      _bridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03 ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroStayFocusedSS03 - To - GoPomodoroBreakTimeSS03
+  /// -----
+  SystemItem? _bridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03;
+  SystemItem? get getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03 => _bridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03;
+  void setBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03({required SystemItem? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03 = value;
+    } else {
+      _bridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03 ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroBreakTimeSS03 - To - GoPomodoroStayFocusedSS04
+  /// -----
+  SystemItem? _bridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04;
+  SystemItem? get getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04 => _bridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04;
+  void setBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04({required SystemItem? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04 = value;
+    } else {
+      _bridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04 ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroStayFocusedSS04 - To - GoPomodoroBreakTimeSS04
+  /// -----
+  SystemItem? _bridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04;
+  SystemItem? get getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04 => _bridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04;
+  void setBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04({required SystemItem? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04 = value;
+    } else {
+      _bridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04 ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bridge From - DonePomodoroBreakTimeSS04 - To - GoLastFinishSystemItem
+  /// -----
+  SystemItem? _bridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItem;
+  SystemItem? get getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItem => _bridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItem;
+  void setBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItem({required SystemItem? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItem = value;
+    } else {
+      _bridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItem ??= value;
+    }
+
+    return;
+  }
+
   ///
   /// TODO:
   ///
@@ -259,6 +395,20 @@ class SystemTime with ExecutionCore {
       setGoLastFinishSystemItem(value: SystemItem(), isPriorityOverride: true);
       setDoneLastFinishSystemItem(value: SystemItem(), isPriorityOverride: true);
 
+      ///
+      ///
+      ///
+
+      setBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01(value: SystemItem(), isPriorityOverride: true);
+      setBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01(value: SystemItem(), isPriorityOverride: true);
+      setBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02(value: SystemItem(), isPriorityOverride: true);
+      setBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02(value: SystemItem(), isPriorityOverride: true);
+      setBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03(value: SystemItem(), isPriorityOverride: true);
+      setBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03(value: SystemItem(), isPriorityOverride: true);
+      setBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04(value: SystemItem(), isPriorityOverride: true);
+      setBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04(value: SystemItem(), isPriorityOverride: true);
+      setBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItem(value: SystemItem(), isPriorityOverride: true);
+
       /// -----
       /// TODO: Setup Root For SubCom
       /// -----
@@ -331,6 +481,19 @@ class SystemTime with ExecutionCore {
       await getLastFinishSystemItem?.onSetupRoot();
       await getGoLastFinishSystemItem?.onSetupRoot();
       await getDoneLastFinishSystemItem?.onSetupRoot();
+
+      ///
+
+      await getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01?.onSetupRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01?.onSetupRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02?.onSetupRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02?.onSetupRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03?.onSetupRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03?.onSetupRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04?.onSetupRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04?.onSetupRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItem?.onSetupRoot();
+
     } catch (e) {
       await onReportRootIssue(nameFunction: '[onSetupRootForSubCom]');
     }
@@ -356,6 +519,18 @@ class SystemTime with ExecutionCore {
       await getLastFinishSystemItem?.onInitRoot();
       await getGoLastFinishSystemItem?.onInitRoot();
       await getDoneLastFinishSystemItem?.onInitRoot();
+
+      ///
+
+      await getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01?.onInitRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01?.onInitRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02?.onInitRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02?.onInitRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03?.onInitRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03?.onInitRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04?.onInitRoot();
+      await getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04?.onInitRoot();
+      await getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItem?.onInitRoot();
     } catch (e) {
       await onReportRootIssue(nameFunction: '[onInitRootForSubCom]');
     }

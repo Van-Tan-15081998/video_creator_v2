@@ -173,6 +173,21 @@ class PomodoroTime with ExecutionCore {
     return;
   }
 
+  /// -----
+  /// TODO:
+  /// -----
+  void onUpdateBaseOnContentStage() {
+    getStayFocusedSS01?.onUpdateBaseOnContentStage();
+    getStayFocusedSS02?.onUpdateBaseOnContentStage();
+    getStayFocusedSS03?.onUpdateBaseOnContentStage();
+    getStayFocusedSS04?.onUpdateBaseOnContentStage();
+
+    getBreakTimeSS01?.onUpdateBaseOnContentStage();
+    getBreakTimeSS02?.onUpdateBaseOnContentStage();
+    getBreakTimeSS03?.onUpdateBaseOnContentStage();
+    getBreakTimeSS04?.onUpdateBaseOnContentStage();
+  }
+
   void onUpdate() {
     if (getIsPaused == false) {
       getStayFocusedSS01?.onUpdate();

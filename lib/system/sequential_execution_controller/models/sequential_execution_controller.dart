@@ -935,6 +935,9 @@ class SequentialExecutionController with ExecutionCore, FeatureMixin, WindowFeat
   Future<void> start() async {
     // getVocabularyScript?.onStartVocabularyDefinitionSS01();
 
+    getContentItemSequentialExecution?.onReady();
+    getContentItemSequentialExecution?.onStart();
+
     return;
 
     SequentialExecutionStructure? cauTrucThucThiTuanTuSS010 = SequentialExecutionStructure.onMacDinh();
@@ -1005,7 +1008,7 @@ class SequentialExecutionController with ExecutionCore, FeatureMixin, WindowFeat
   }
 
   void updateSeconds() {
-    getPomodoroFeature?.getPomodoroTime?.onUpdate();
+    // getPomodoroFeature?.getPomodoroTime?.onUpdate();
 
     ///
     getVocabularyDefinitionFeature?.getVocabularyTime?.onUpdate();

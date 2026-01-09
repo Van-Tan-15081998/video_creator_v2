@@ -109,24 +109,66 @@ abstract class FunctionalSequentialExecutionScript with ExecutionCore {
     getContentItemSequentialExecution?.getGoLastFinishContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(contentStage: getContentItemSequentialExecution?.getGoLastFinishSystemContentStage);
     getContentItemSequentialExecution?.getDoneLastFinishContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(contentStage: getContentItemSequentialExecution?.getDoneLastFinishSystemContentStage);
 
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: NHÓM SECTION THUỘC PHẦN HỆ THỐNG
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+    await onGenerateScriptBindToBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01ContentItemSectionContentItemSection();
+    await onGenerateScriptBindToBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01ContentItemSectionContentItemSection();
+    await onGenerateScriptBindToBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02ContentItemSectionContentItemSection();
+    await onGenerateScriptBindToBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02ContentItemSectionContentItemSection();
+    await onGenerateScriptBindToBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03ContentItemSectionContentItemSection();
+    await onGenerateScriptBindToBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03ContentItemSectionContentItemSection();
+    await onGenerateScriptBindToBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04ContentItemSectionContentItemSection();
+    await onGenerateScriptBindToBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04ContentItemSectionContentItemSection();
+    await onGenerateScriptBindToBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemContentItemSectionContentItemSection();
+
+    getContentItemSequentialExecution?.getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01ContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(
+      contentStage: getContentItemSequentialExecution?.getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01SystemContentStage,
+    );
+    getContentItemSequentialExecution?.getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01ContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(
+      contentStage: getContentItemSequentialExecution?.getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01SystemContentStage,
+    );
+    getContentItemSequentialExecution?.getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02ContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(
+      contentStage: getContentItemSequentialExecution?.getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02SystemContentStage,
+    );
+    getContentItemSequentialExecution?.getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02ContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(
+      contentStage: getContentItemSequentialExecution?.getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02SystemContentStage,
+    );
+    getContentItemSequentialExecution?.getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03ContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(
+      contentStage: getContentItemSequentialExecution?.getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03SystemContentStage,
+    );
+    getContentItemSequentialExecution?.getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03ContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(
+      contentStage: getContentItemSequentialExecution?.getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03SystemContentStage,
+    );
+    getContentItemSequentialExecution?.getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04ContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(
+      contentStage: getContentItemSequentialExecution?.getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04SystemContentStage,
+    );
+    getContentItemSequentialExecution?.getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04ContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(
+      contentStage: getContentItemSequentialExecution?.getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04SystemContentStage,
+    );
+    getContentItemSequentialExecution?.getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(contentStage: getContentItemSequentialExecution?.getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemSystemContentStage);
+
     /// -----
     /// TODO: Set Đến PomodoroBreakTime
     /// -----
-    await onGenerateScriptBindToBreakTimeContentItemSectionSS01();
-    await onGenerateScriptBindToGoBreakTimeContentItemSectionSS01();
-    await onGenerateScriptBindToDoneBreakTimeContentItemSectionSS01();
+    await onGenerateScriptBindToPomodoroBreakTimeContentItemSectionSS01();
+    await onGenerateScriptBindToGoPomodoroBreakTimeContentItemSectionSS01();
+    await onGenerateScriptBindToDonePomodoroBreakTimeContentItemSectionSS01();
 
-    await onGenerateScriptBindToBreakTimeContentItemSectionSS02();
-    await onGenerateScriptBindToGoBreakTimeContentItemSectionSS02();
-    await onGenerateScriptBindToDoneBreakTimeContentItemSectionSS02();
+    await onGenerateScriptBindToPomodoroBreakTimeContentItemSectionSS02();
+    await onGenerateScriptBindToGoPomodoroBreakTimeContentItemSectionSS02();
+    await onGenerateScriptBindToDonePomodoroBreakTimeContentItemSectionSS02();
 
-    await onGenerateScriptBindToBreakTimeContentItemSectionSS03();
-    await onGenerateScriptBindToGoBreakTimeContentItemSectionSS03();
-    await onGenerateScriptBindToDoneBreakTimeContentItemSectionSS03();
+    await onGenerateScriptBindToPomodoroBreakTimeContentItemSectionSS03();
+    await onGenerateScriptBindToGoPomodoroBreakTimeContentItemSectionSS03();
+    await onGenerateScriptBindToDonePomodoroBreakTimeContentItemSectionSS03();
 
-    await onGenerateScriptBindToBreakTimeContentItemSectionSS04();
-    await onGenerateScriptBindToGoBreakTimeContentItemSectionSS04();
-    await onGenerateScriptBindToDoneBreakTimeContentItemSectionSS04();
+    await onGenerateScriptBindToPomodoroBreakTimeContentItemSectionSS04();
+    await onGenerateScriptBindToGoPomodoroBreakTimeContentItemSectionSS04();
+    await onGenerateScriptBindToDonePomodoroBreakTimeContentItemSectionSS04();
 
     getContentItemSequentialExecution?.getBreakTimeContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getPomodoroBreakTimeContentStageSS01);
     getContentItemSequentialExecution?.getGoBreakTimeContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getGoPomodoroBreakTimeContentStageSS01);
@@ -154,21 +196,21 @@ abstract class FunctionalSequentialExecutionScript with ExecutionCore {
     /// -----
     /// TODO: Set Đến PomodoroStayFocused
     /// -----
-    await onGenerateScriptBindToStayFocusedContentItemSectionSS01();
-    await onGenerateScriptBindToGoStayFocusedContentItemSectionSS01();
-    await onGenerateScriptBindToDoneStayFocusedContentItemSectionSS01();
+    await onGenerateScriptBindToPomodoroStayFocusedContentItemSectionSS01();
+    await onGenerateScriptBindToGoPomodoroStayFocusedContentItemSectionSS01();
+    await onGenerateScriptBindToDonePomodoroStayFocusedContentItemSectionSS01();
 
-    await onGenerateScriptBindToStayFocusedContentItemSectionSS02();
-    await onGenerateScriptBindToGoStayFocusedContentItemSectionSS02();
-    await onGenerateScriptBindToDoneStayFocusedContentItemSectionSS02();
+    await onGenerateScriptBindToPomodoroStayFocusedContentItemSectionSS02();
+    await onGenerateScriptBindToGoPomodoroStayFocusedContentItemSectionSS02();
+    await onGenerateScriptBindToDonePomodoroStayFocusedContentItemSectionSS02();
 
-    await onGenerateScriptBindToStayFocusedContentItemSectionSS03();
-    await onGenerateScriptBindToGoStayFocusedContentItemSectionSS03();
-    await onGenerateScriptBindToDoneStayFocusedContentItemSectionSS03();
+    await onGenerateScriptBindToPomodoroStayFocusedContentItemSectionSS03();
+    await onGenerateScriptBindToGoPomodoroStayFocusedContentItemSectionSS03();
+    await onGenerateScriptBindToDonePomodoroStayFocusedContentItemSectionSS03();
 
-    await onGenerateScriptBindToStayFocusedContentItemSectionSS04();
-    await onGenerateScriptBindToGoStayFocusedContentItemSectionSS04();
-    await onGenerateScriptBindToDoneStayFocusedContentItemSectionSS04();
+    await onGenerateScriptBindToPomodoroStayFocusedContentItemSectionSS04();
+    await onGenerateScriptBindToGoPomodoroStayFocusedContentItemSectionSS04();
+    await onGenerateScriptBindToDonePomodoroStayFocusedContentItemSectionSS04();
 
     getContentItemSequentialExecution?.getGoStayFocusedContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getGoPomodoroStayFocusedContentStageSS01);
     getContentItemSequentialExecution?.getDoneStayFocusedContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getDonePomodoroStayFocusedContentStageSS01);
@@ -251,33 +293,55 @@ abstract class FunctionalSequentialExecutionScript with ExecutionCore {
   Future<void> onGenerateScriptBindToGoLastFinishContentItemSection();
   Future<void> onGenerateScriptBindToDoneLastFinishContentItemSection();
 
-  /// -----
-  /// TODO: Tạo Kịch Bản Gắn Kết Với BreakTime Section SS01
-  /// -----
-  Future<void> onGenerateScriptBindToBreakTimeContentItemSectionSS01();
-  Future<void> onGenerateScriptBindToGoBreakTimeContentItemSectionSS01();
-  Future<void> onGenerateScriptBindToDoneBreakTimeContentItemSectionSS01();
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: NHÓM SECTION THUỘC PHẦN HỆ THỐNG
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+  Future<void> onGenerateScriptBindToBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01ContentItemSectionContentItemSection();
+  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01ContentItemSectionContentItemSection();
+  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02ContentItemSectionContentItemSection();
+  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02ContentItemSectionContentItemSection();
+  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03ContentItemSectionContentItemSection();
+  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03ContentItemSectionContentItemSection();
+  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04ContentItemSectionContentItemSection();
+  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04ContentItemSectionContentItemSection();
+  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemContentItemSectionContentItemSection();
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: NHÓM SECTION THUỘC PHẦN NỘI DUNG
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 
   /// -----
-  /// TODO: Tạo Kịch Bản Gắn Kết Với BreakTime Section SS02
+  /// TODO: Tạo Kịch Bản Gắn Kết Với Pomodoro BreakTime Section SS01
   /// -----
-  Future<void> onGenerateScriptBindToBreakTimeContentItemSectionSS02();
-  Future<void> onGenerateScriptBindToGoBreakTimeContentItemSectionSS02();
-  Future<void> onGenerateScriptBindToDoneBreakTimeContentItemSectionSS02();
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeContentItemSectionSS01();
+  Future<void> onGenerateScriptBindToGoPomodoroBreakTimeContentItemSectionSS01();
+  Future<void> onGenerateScriptBindToDonePomodoroBreakTimeContentItemSectionSS01();
 
   /// -----
-  /// TODO: Tạo Kịch Bản Gắn Kết Với BreakTime Section SS03
+  /// TODO: Tạo Kịch Bản Gắn Kết Với Pomodoro BreakTime Section SS02
   /// -----
-  Future<void> onGenerateScriptBindToBreakTimeContentItemSectionSS03();
-  Future<void> onGenerateScriptBindToGoBreakTimeContentItemSectionSS03();
-  Future<void> onGenerateScriptBindToDoneBreakTimeContentItemSectionSS03();
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeContentItemSectionSS02();
+  Future<void> onGenerateScriptBindToGoPomodoroBreakTimeContentItemSectionSS02();
+  Future<void> onGenerateScriptBindToDonePomodoroBreakTimeContentItemSectionSS02();
 
   /// -----
-  /// TODO: Tạo Kịch Bản Gắn Kết Với BreakTime Section SS04
+  /// TODO: Tạo Kịch Bản Gắn Kết Với Pomodoro BreakTime Section SS03
   /// -----
-  Future<void> onGenerateScriptBindToBreakTimeContentItemSectionSS04();
-  Future<void> onGenerateScriptBindToGoBreakTimeContentItemSectionSS04();
-  Future<void> onGenerateScriptBindToDoneBreakTimeContentItemSectionSS04();
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeContentItemSectionSS03();
+  Future<void> onGenerateScriptBindToGoPomodoroBreakTimeContentItemSectionSS03();
+  Future<void> onGenerateScriptBindToDonePomodoroBreakTimeContentItemSectionSS03();
+
+  /// -----
+  /// TODO: Tạo Kịch Bản Gắn Kết Với Pomodoro BreakTime Section SS04
+  /// -----
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeContentItemSectionSS04();
+  Future<void> onGenerateScriptBindToGoPomodoroBreakTimeContentItemSectionSS04();
+  Future<void> onGenerateScriptBindToDonePomodoroBreakTimeContentItemSectionSS04();
 
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -286,32 +350,32 @@ abstract class FunctionalSequentialExecutionScript with ExecutionCore {
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 
   /// -----
-  /// TODO: Tạo Kịch Bản Gắn Kết Với StayFocused Section SS01
+  /// TODO: Tạo Kịch Bản Gắn Kết Với Pomodoro StayFocused Section SS01
   /// -----
-  Future<void> onGenerateScriptBindToStayFocusedContentItemSectionSS01();
-  Future<void> onGenerateScriptBindToGoStayFocusedContentItemSectionSS01();
-  Future<void> onGenerateScriptBindToDoneStayFocusedContentItemSectionSS01();
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedContentItemSectionSS01();
+  Future<void> onGenerateScriptBindToGoPomodoroStayFocusedContentItemSectionSS01();
+  Future<void> onGenerateScriptBindToDonePomodoroStayFocusedContentItemSectionSS01();
 
   /// -----
-  /// TODO: Tạo Kịch Bản Gắn Kết Với StayFocused Section SS02
+  /// TODO: Tạo Kịch Bản Gắn Kết Với Pomodoro StayFocused Section SS02
   /// -----
-  Future<void> onGenerateScriptBindToStayFocusedContentItemSectionSS02();
-  Future<void> onGenerateScriptBindToGoStayFocusedContentItemSectionSS02();
-  Future<void> onGenerateScriptBindToDoneStayFocusedContentItemSectionSS02();
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedContentItemSectionSS02();
+  Future<void> onGenerateScriptBindToGoPomodoroStayFocusedContentItemSectionSS02();
+  Future<void> onGenerateScriptBindToDonePomodoroStayFocusedContentItemSectionSS02();
 
   /// -----
-  /// TODO: Tạo Kịch Bản Gắn Kết Với StayFocused Section SS03
+  /// TODO: Tạo Kịch Bản Gắn Kết Với Pomodoro StayFocused Section SS03
   /// -----
-  Future<void> onGenerateScriptBindToStayFocusedContentItemSectionSS03();
-  Future<void> onGenerateScriptBindToGoStayFocusedContentItemSectionSS03();
-  Future<void> onGenerateScriptBindToDoneStayFocusedContentItemSectionSS03();
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedContentItemSectionSS03();
+  Future<void> onGenerateScriptBindToGoPomodoroStayFocusedContentItemSectionSS03();
+  Future<void> onGenerateScriptBindToDonePomodoroStayFocusedContentItemSectionSS03();
 
   /// -----
-  /// TODO: Tạo Kịch Bản Gắn Kết Với StayFocused Section SS04
+  /// TODO: Tạo Kịch Bản Gắn Kết Với Pomodoro StayFocused Section SS04
   /// -----
-  Future<void> onGenerateScriptBindToStayFocusedContentItemSectionSS04();
-  Future<void> onGenerateScriptBindToGoStayFocusedContentItemSectionSS04();
-  Future<void> onGenerateScriptBindToDoneStayFocusedContentItemSectionSS04();
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedContentItemSectionSS04();
+  Future<void> onGenerateScriptBindToGoPomodoroStayFocusedContentItemSectionSS04();
+  Future<void> onGenerateScriptBindToDonePomodoroStayFocusedContentItemSectionSS04();
 
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
