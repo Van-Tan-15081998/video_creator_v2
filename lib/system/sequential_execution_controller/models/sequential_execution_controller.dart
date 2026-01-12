@@ -38,13 +38,19 @@ import 'package:frame_creator_v2/features/vocabulary_scene_transition/models/voc
 import 'package:frame_creator_v2/features/vocabulary_subject/models/vocabulary_subject_feature.dart';
 import 'package:frame_creator_v2/features/vocabulary_title/models/vocabulary_title_feature.dart';
 import 'package:frame_creator_v2/master_data/content_item/04_content_item_sequential_execution/content_item_sequential_execution.dart';
+import 'package:frame_creator_v2/master_features/functional_features/functional_feature_management.dart';
+import 'package:frame_creator_v2/master_features/functional_features/two_character_conversation/models/two_character_conversation_functional_feature.dart';
+import 'package:frame_creator_v2/master_features/system_features/countdown_timer/models/countdown_time_cycle_system_feature.dart';
+import 'package:frame_creator_v2/master_features/system_features/pomodoro_cycle/models/pomodoro_cycle_system_feature.dart';
+import 'package:frame_creator_v2/master_features/system_features/system_feature_management.dart';
 import 'package:frame_creator_v2/state_managements/mixins/feature_mixin.dart';
+import 'package:frame_creator_v2/state_managements/mixins/master_feature_mixin.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 import 'package:frame_creator_v2/system/sequential_execution_controller/models/script_models/vocabulary_script_model.dart';
 import 'package:frame_creator_v2/system/sequential_execution_controller/models/sequential_execution_detail.dart';
 import 'package:frame_creator_v2/system_config.dart';
 
-class SequentialExecutionController with ExecutionCore, FeatureMixin, WindowFeature {
+class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, FeatureMixin, WindowFeature {
   SequentialExecutionController({required SystemStateManagement? systemStateManagement, required double? sizeDx, required double? sizeDy}) {
     setSystemStateManagement(value: systemStateManagement);
     setSizeDx(value: sizeDx, isPriorityOverride: true);
@@ -113,6 +119,39 @@ class SequentialExecutionController with ExecutionCore, FeatureMixin, WindowFeat
   @override
   Future<void> onInitRoot({bool? isIgnoreInitRootForSubCom}) async {
     try {
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: Feature Management
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: Feature Management Details [START]
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// ----- | ----- | ----- | ----- | ----- |
+      /// TODO: Functional Feature Management
+      /// ----- | ----- | ----- | ----- | ----- |
+      getSystemStateManagement?.setFunctionalFeatureManagement(value: getFunctionalFeatureManagement);
+
+      /// ----- | ----- | ----- | ----- | ----- |
+      /// TODO: System Feature Management
+      /// ----- | ----- | ----- | ----- | ----- |
+      getSystemStateManagement?.setSystemFeatureManagement(value: getSystemFeatureManagement);
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: Feature Management Details [END]
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// -----
+      /// TODO:
+      /// -----
+      getSystemStateManagement?.setContentItemSequentialExecution(value: getContentItemSequentialExecution, isPriorityOverride: true);
+
       /// -----
       /// TODO:
       /// -----
@@ -202,6 +241,61 @@ class SequentialExecutionController with ExecutionCore, FeatureMixin, WindowFeat
   @override
   Future<void> onSetupRoot({bool? isIgnoreSetupRootForSubCom}) async {
     try {
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: Feature Management
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      setFunctionalFeatureManagement(value: FunctionalFeatureManagement(), isPriorityOverride: true);
+      setSystemFeatureManagement(value: SystemFeatureManagement(), isPriorityOverride: true);
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: Feature Management Details [START]
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// ----- | ----- | ----- | ----- | ----- |
+      /// TODO: Functional Feature Management
+      /// ----- | ----- | ----- | ----- | ----- |
+      setTwoCharacterConversationFunctionalFeature(value: TwoCharacterConversationFunctionalFeature(systemStateManagement: getSystemStateManagement, sizeDx: null, sizeDy: null), isPriorityOverride: true);
+      getTwoCharacterConversationFunctionalFeature?.setSizeDx(value: getSizeDx * 0.6, isPriorityOverride: true, isSetActiveSizeDx: true);
+      getTwoCharacterConversationFunctionalFeature?.setSizeDy(value: getSizeDy * 1.0 - 30.0, isPriorityOverride: true, isSetActiveSizeDy: true);
+      getTwoCharacterConversationFunctionalFeature?.setTopPosition(value: 15.0, isPriorityOverride: true, isSetActiveTopPosition: true);
+      getTwoCharacterConversationFunctionalFeature?.setLeftPosition(value: 15.0, isPriorityOverride: true, isSetActiveLeftPosition: true);
+
+      ///
+      ///
+      ///
+      getFunctionalFeatureManagement?.setTwoCharacterConversationFunctionalFeature(value: getTwoCharacterConversationFunctionalFeature, isPriorityOverride: true);
+
+      /// ----- | ----- | ----- | ----- | ----- |
+      /// TODO: System Feature Management
+      /// ----- | ----- | ----- | ----- | ----- |
+      setPomodoroCycleSystemFeature(value: PomodoroCycleSystemFeature(systemStateManagement: getSystemStateManagement, sizeDx: null, sizeDy: null), isPriorityOverride: true);
+      getPomodoroCycleSystemFeature?.setSizeDx(value: getSizeDx - (getSizeDx * 0.6 + 45), isPriorityOverride: true, isSetActiveSizeDx: true);
+      getPomodoroCycleSystemFeature?.setSizeDy(value: getSizeDy - (getSizeDy * 0.6 + 45), isPriorityOverride: true, isSetActiveSizeDy: true);
+      getPomodoroCycleSystemFeature?.setBottomPosition(value: 15.0, isPriorityOverride: true, isSetActiveBottomPosition: true);
+      getPomodoroCycleSystemFeature?.setRightPosition(value: 15.0, isPriorityOverride: true, isSetActiveRightPosition: true);
+
+      setCountdownTimeCycleSystemFeature(value: CountdownTimeCycleSystemFeature(systemStateManagement: getSystemStateManagement, sizeDx: null, sizeDy: null), isPriorityOverride: true);
+      getCountdownTimeCycleSystemFeature?.setSizeDx(value: getSizeDx - (getSizeDx * 0.6 + 45.0), isPriorityOverride: true, isSetActiveSizeDx: true);
+      getCountdownTimeCycleSystemFeature?.setSizeDy(value: getSizeDy * 0.6 - (getSizeDy * 0.4 + 15.0), isPriorityOverride: true, isSetActiveSizeDy: true);
+      getCountdownTimeCycleSystemFeature?.setTopPosition(value: 15.0 + (getSizeDy * 0.4 + 15.0), isPriorityOverride: true, isSetActiveTopPosition: true);
+      getCountdownTimeCycleSystemFeature?.setRightPosition(value: 15.0, isPriorityOverride: true, isSetActiveRightPosition: true);
+
+      ///
+      ///
+      ///
+      getSystemFeatureManagement?.setPomodoroCycleSystemFeature(value: getPomodoroCycleSystemFeature, isPriorityOverride: true);
+      getSystemFeatureManagement?.setCountdownTimeCycleSystemFeature(value: getCountdownTimeCycleSystemFeature, isPriorityOverride: true);
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: Feature Management Details [END]
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
       /// -----
       /// TODO:
       /// -----
@@ -616,6 +710,39 @@ class SequentialExecutionController with ExecutionCore, FeatureMixin, WindowFeat
 
                 /// TODO: IntroductionFeature
                 AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getIntroductionFeature?.getWindowWidget ?? Container()),
+
+                /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+                /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+                /// TODO: Feature Management
+                /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+                /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+                /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+                /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+                /// TODO: Feature Management Details [START]
+                /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+                /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+                /// ----- | ----- | ----- | ----- | ----- |
+                /// TODO: Functional Feature Management
+                /// ----- | ----- | ----- | ----- | ----- |
+
+                /// TODO:
+                AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getTwoCharacterConversationFunctionalFeature?.getWindowWidget ?? Container()),
+
+                /// ----- | ----- | ----- | ----- | ----- |
+                /// TODO: System Feature Management
+                /// ----- | ----- | ----- | ----- | ----- |
+
+                /// TODO:
+                AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getPomodoroCycleSystemFeature?.getWindowWidget ?? Container()),
+                AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getCountdownTimeCycleSystemFeature?.getWindowWidget ?? Container()),
+
+                /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+                /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+                /// TODO: Feature Management Details [END]
+                /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+                /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
               ],
             );
           },
@@ -684,6 +811,42 @@ class SequentialExecutionController with ExecutionCore, FeatureMixin, WindowFeat
   @override
   Future<void> onSetupRootForSubCom() async {
     try {
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: Feature Management
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      await getFunctionalFeatureManagement?.onSetupRoot();
+      await getSystemFeatureManagement?.onSetupRoot();
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: Feature Management Details [START]
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// ----- | ----- | ----- | ----- | ----- |
+      /// TODO: Functional Feature Management
+      /// ----- | ----- | ----- | ----- | ----- |
+
+      /// TODO:
+      await getTwoCharacterConversationFunctionalFeature?.onSetupRoot();
+
+      /// ----- | ----- | ----- | ----- | ----- |
+      /// TODO: System Feature Management
+      /// ----- | ----- | ----- | ----- | ----- |
+
+      /// TODO:
+      await getPomodoroCycleSystemFeature?.onSetupRoot();
+      await getCountdownTimeCycleSystemFeature?.onSetupRoot();
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: Feature Management Details [END]
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
       /// -----
       /// TODO:
       /// -----
@@ -730,6 +893,46 @@ class SequentialExecutionController with ExecutionCore, FeatureMixin, WindowFeat
       ///
       await getCrosswordPuzzleGameBoardFeature?.onSetupRoot();
       await getCrosswordPuzzleGameBoardSceneTransitionFeature?.onSetupRoot();
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: Feature Management
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: Feature Management Details [START]
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// ----- | ----- | ----- | ----- | ----- |
+      /// TODO: Functional Feature Management
+      /// ----- | ----- | ----- | ----- | ----- |
+
+      /// TODO:
+      getTwoCharacterConversationFunctionalFeature
+        ?..setConditionActiveByLeftDirection()
+        ..onDeactivateWindow();
+
+      /// ----- | ----- | ----- | ----- | ----- |
+      /// TODO: System Feature Management
+      /// ----- | ----- | ----- | ----- | ----- |
+
+      /// TODO:
+      getPomodoroCycleSystemFeature
+        ?..setConditionActiveByBottomDirection()
+        ..onDeactivateWindow();
+      /// TODO:
+      getCountdownTimeCycleSystemFeature
+        ?..setConditionActiveByRightDirection()
+        ..onDeactivateWindow();
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: Feature Management Details [END]
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 
       getIntroductionFeature
         ?..setConditionActiveByTopDirection()
@@ -856,6 +1059,42 @@ class SequentialExecutionController with ExecutionCore, FeatureMixin, WindowFeat
   @override
   Future<void> onInitRootForSubCom() async {
     try {
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: Feature Management
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      await getFunctionalFeatureManagement?.onInitRoot();
+      await getSystemFeatureManagement?.onInitRoot();
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: Feature Management Details [START]
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      /// ----- | ----- | ----- | ----- | ----- |
+      /// TODO: Functional Feature Management
+      /// ----- | ----- | ----- | ----- | ----- |
+
+      /// TODO:
+      await getTwoCharacterConversationFunctionalFeature?.onInitRoot();
+
+      /// ----- | ----- | ----- | ----- | ----- |
+      /// TODO: System Feature Management
+      /// ----- | ----- | ----- | ----- | ----- |
+
+      /// TODO:
+      await getPomodoroCycleSystemFeature?.onInitRoot();
+      await getCountdownTimeCycleSystemFeature?.onInitRoot();
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: Feature Management Details [END]
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
       /// -----
       /// TODO:
       /// -----
@@ -1011,27 +1250,25 @@ class SequentialExecutionController with ExecutionCore, FeatureMixin, WindowFeat
     // getPomodoroFeature?.getPomodoroTime?.onUpdate();
 
     ///
-    getVocabularyDefinitionFeature?.getVocabularyTime?.onUpdate();
+    // getVocabularyDefinitionFeature?.getVocabularyTime?.onUpdate();
 
     ///
-    getMemoryGameBoardFeature?.getMemoryTime?.onUpdate();
+    // getMemoryGameBoardFeature?.getMemoryTime?.onUpdate();
 
     ///
-    getCrosswordPuzzleGameBoardFeature?.getCrosswordPuzzleTime?.onUpdate();
+    // getCrosswordPuzzleGameBoardFeature?.getCrosswordPuzzleTime?.onUpdate();
 
-    getSequentialExecutionDetail?.onUpdate();
+    // getSequentialExecutionDetail?.onUpdate();
 
     ///
     getContentItemSequentialExecution?.onUpdate();
 
-    /// TODO: 00:00:05
+    /// TODO: 00:00:01
     if (getSystemStateManagement?.getMainTimelineStateManagement?.getTimeline?.getTotalMinutes == 0 && getSystemStateManagement?.getMainTimelineStateManagement?.getTimeline?.getSeconds == 1) {
-      // getCountdownTimerFeature?.onActivateWindow();
-      // getPomodoroFeature?.onActivateWindow();
+      getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.onActivateWindow();
+      getSystemFeatureManagement?.getCountdownTimeCycleSystemFeature?.onActivateWindow();
 
-      // getBlackboardFeature?.onActivateWindow();
-      // getVocabularySubjectFeature?.onActivateWindow();
-      // getVocabularyListFeature?.onActivateWindow();
+      getFunctionalFeatureManagement?.getTwoCharacterConversationFunctionalFeature?.onActivateWindow();
     }
 
     return;
@@ -1050,7 +1287,7 @@ class SequentialExecutionController with ExecutionCore, FeatureMixin, WindowFeat
       getCountdownTimerFeature?.onActivateWindow();
       getPomodoroFeature?.onActivateWindow();
 
-      getPomodoroFeature?.getPomodoroTime?.pause();
+      // getPomodoroFeature?.getPomodoroTime?.pause();
       getSystemStateManagement?.getMainTimelineStateManagement?.getPomodoroTimeline?.pause();
 
       // getSystemStateManagement?.getMainTimelineStateManagement?.getTimeline?.pause();
@@ -1060,7 +1297,7 @@ class SequentialExecutionController with ExecutionCore, FeatureMixin, WindowFeat
 
     /// TODO: 00:00:10
     if (getSystemStateManagement?.getMainTimelineStateManagement?.getTimeline?.getTotalMinutes == 0 && getSystemStateManagement?.getMainTimelineStateManagement?.getTimeline?.getSeconds == 10) {
-      getPomodoroFeature?.getPomodoroTime?.resume();
+      // getPomodoroFeature?.getPomodoroTime?.resume();
       getSystemStateManagement?.getMainTimelineStateManagement?.getPomodoroTimeline?.resume();
 
       ///

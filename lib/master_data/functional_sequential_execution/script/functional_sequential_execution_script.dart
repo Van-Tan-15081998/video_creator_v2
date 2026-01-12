@@ -5,6 +5,7 @@ import 'package:frame_creator_v2/master_data/functional_sequential_execution/con
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item_state.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/status/flow_controller.dart';
+import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 import 'package:frame_creator_v2/system/sequential_execution_controller/models/sequential_execution_controller.dart';
 
 abstract class FunctionalSequentialExecutionScript with ExecutionCore {
@@ -12,10 +13,15 @@ abstract class FunctionalSequentialExecutionScript with ExecutionCore {
   /// TODO:
   ///
   FunctionalSequentialExecutionScript({
+    required SystemStateManagement? systemStateManagement, //
     required SequentialExecutionController? sequentialExecutionController, //
     required ContentItemSequentialExecution? contentItemSequentialExecution, //
     required FunctionalSequentialExecutionController? functionalSequentialExecutionController,
   }) {
+    
+    ///
+    setSystemStateManagement(value: systemStateManagement, isPriorityOverride: true);
+
     ///
     setSequentialExecutionController(value: sequentialExecutionController, isPriorityOverride: true);
 

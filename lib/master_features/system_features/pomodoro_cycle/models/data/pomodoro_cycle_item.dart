@@ -1,10 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
-import 'package:frame_creator_v2/features/pomodoro/models/data/pomodoro_status.dart';
 import 'package:frame_creator_v2/master_data/content_item/03_content_stage/pomodoro_content_stage.dart';
 
-class PomodoroItem1 with ExecutionCore {
-  PomodoroItem1({required String? id, required List<VoidCallback?>? completedCallbackFunctionStack, required double? totalMinutes, required double? totalPrepareSeconds, required this.onComplete}) {
+class PomodoroCycleItem with ExecutionCore {
+  PomodoroCycleItem({required String? id, required List<VoidCallback?>? completedCallbackFunctionStack, required double? totalMinutes, required double? totalPrepareSeconds, required this.onComplete}) {
     setId(value: id, isPriorityOverride: true);
     setTotalMinutes(value: totalMinutes, isPriorityOverride: true);
     setTotalPrepareSeconds(value: totalPrepareSeconds, isPriorityOverride: true);
@@ -180,21 +179,6 @@ class PomodoroItem1 with ExecutionCore {
     return;
   }
 
-  /// -----
-  /// TODO:
-  /// -----
-  PomodoroStatus1? _status1;
-  PomodoroStatus1? get getStatus1 => _status1;
-  void setStatus1({required PomodoroStatus1? value, bool? isPriorityOverride}) {
-    if (isPriorityOverride == true) {
-      _status1 = value;
-    } else {
-      _status1 ??= value;
-    }
-
-    return;
-  }
-
   ///
   /// TODO:
   ///
@@ -262,73 +246,6 @@ class PomodoroItem1 with ExecutionCore {
   }
 
   VoidCallback? onComplete;
-
-  /// -----
-  /// TODO:
-  /// -----
-  void onStart() {
-    getStatus1?.setStatusActive();
-  }
-
-  /// -----
-  /// TODO:
-  /// -----
-  void onUpdate() {
-    if (getIsPaused == true) {
-      /// TODO: Set Active Status
-      getPomodoroContentStage?.getActiveStatus?.setStatusAsInActive();
-    } else if (getIsPaused == false) {
-      /// Điều Kiện Tiên Quyết => Tổng Số Giây Của Giai Đoạn Chuẩn Bị Phải = 0
-      if ((getTotalPrepareSeconds ?? 0) >= 500) {
-        if (isPreparing() == true) {
-          double currentTotalPrepareSeconds = (getTotalPrepareSeconds ?? 0) - 1;
-
-          setTotalPrepareSeconds(value: currentTotalPrepareSeconds, isPriorityOverride: true);
-
-          /// TODO: Set Active Status
-          getPomodoroContentStage?.getActiveStatus?.setStatusAsInActive();
-        }
-      } else if (getStatus1?.isActive() == true) {
-        if (isCompletedPreparing() == true) {
-          if ((getTotalRemainingSeconds ?? 0) > 0) {
-            double updateUpdate = (getTotalRemainingSeconds ?? 0) - 1;
-
-            setTotalRemainingSeconds(value: updateUpdate, isPriorityOverride: true);
-
-            ///
-            double percentComplete = ((getTotalSeconds ?? 1) - (getTotalRemainingSeconds ?? 1)) / (getTotalSeconds ?? 1) * 100;
-            setPercentComplete(value: percentComplete, isPriorityOverride: true);
-
-            /// TODO: Set Active Status
-            getPomodoroContentStage?.getActiveStatus?.setStatusAsActive();
-          } else if ((getTotalRemainingSeconds ?? 0) == 0) {
-            getStatus1?.setStatusComplete();
-
-            ///
-            setPercentComplete(value: 100, isPriorityOverride: true);
-
-            ///
-            onComplete?.call();
-
-            ///
-            if (getCompletedCallbackFunctionStack?.isNotEmpty == true) {
-              getCompletedCallbackFunctionStack?.first?.call();
-            }
-
-            /// TODO: Set Active Status
-            getPomodoroContentStage?.getActiveStatus?.setStatusAsPerformCompleted();
-          }
-
-          int totalRemainingMinutes = (getTotalRemainingSeconds ?? 0) ~/ 60;
-          setTotalRemainingMinutes(value: totalRemainingMinutes.toDouble(), isPriorityOverride: true);
-
-          if (kDebugMode) {
-            // print((getTotalRemainingSeconds ?? 1));
-          }
-        }
-      }
-    }
-  }
 
   /// -----
   /// TODO:
@@ -446,8 +363,6 @@ class PomodoroItem1 with ExecutionCore {
       /// TODO:
       /// -----
 
-      setStatus1(value: PomodoroStatus1.inActive(), isPriorityOverride: true);
-
       /// -----
       /// TODO: Setup Root For SubCom
       /// -----
@@ -512,8 +427,6 @@ class PomodoroItem1 with ExecutionCore {
       /// -----
       /// TODO:
       /// -----
-
-      await getStatus1?.onSetupRoot();
     } catch (e) {
       await onReportRootIssue(nameFunction: '[onSetupRootForSubCom]');
     }
@@ -531,8 +444,6 @@ class PomodoroItem1 with ExecutionCore {
       /// -----
       /// TODO:
       /// -----
-
-      await getStatus1?.onInitRoot();
     } catch (e) {
       await onReportRootIssue(nameFunction: '[onInitRootForSubCom]');
     }

@@ -1,10 +1,29 @@
 import 'package:frame_creator_v2/components/animated_background/widgets/helpful_study_advice/helpful_study_advice_related_to_topic_animated_background_widget.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
+import 'package:frame_creator_v2/master_data/content_item/04_content_item_sequential_execution/content_item_sequential_execution.dart';
+import 'package:frame_creator_v2/master_features/constant_data/system_constant_data.dart';
 import 'package:frame_creator_v2/state_managements/main_timeline/main_timeline_state_management.dart';
 import 'package:frame_creator_v2/state_managements/mixins/feature_mixin.dart';
+import 'package:frame_creator_v2/state_managements/mixins/master_feature_mixin.dart';
 import 'package:frame_creator_v2/state_managements/music_and_sound/music_and_sound.dart';
 
-class SystemStateManagement with ExecutionCore, FeatureMixin {
+class SystemStateManagement with ExecutionCore, MasterFeatureMixin, FeatureMixin {
+  /// -----
+  /// TODO:
+  /// -----
+  ContentItemSequentialExecution? _contentItemSequentialExecution;
+  ContentItemSequentialExecution? get getContentItemSequentialExecution => _contentItemSequentialExecution;
+  void setContentItemSequentialExecution({required ContentItemSequentialExecution? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _contentItemSequentialExecution = value;
+    } else {
+      _contentItemSequentialExecution ??= value;
+    }
+
+    ///
+    return;
+  }
+
   /// -----
   /// TODO:
   /// -----
@@ -31,6 +50,22 @@ class SystemStateManagement with ExecutionCore, FeatureMixin {
       _musicAndSound = value;
     } else {
       _musicAndSound ??= value;
+    }
+
+    ///
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  SystemConstantData? _systemConstantData;
+  SystemConstantData? get getSystemConstantData => _systemConstantData;
+  void setSystemConstantData({required SystemConstantData? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _systemConstantData = value;
+    } else {
+      _systemConstantData ??= value;
     }
 
     ///
@@ -97,6 +132,8 @@ class SystemStateManagement with ExecutionCore, FeatureMixin {
       setMainTimelineStateManagement(value: MainTimelineStateManagement());
 
       setMusicAndSound(value: MusicAndSound());
+      setSystemConstantData(value: SystemConstantData());
+
       /// -----
       /// TODO: Setup Root For SubCom
       /// -----
@@ -163,6 +200,7 @@ class SystemStateManagement with ExecutionCore, FeatureMixin {
       /// -----
       await getMainTimelineStateManagement?.onSetupRoot();
       await getMusicAndSound?.onSetupRoot();
+      await getSystemConstantData?.onSetupRoot();
     } catch (e) {
       await onReportRootIssue(nameFunction: '[onSetupRootForSubCom]');
     }
@@ -182,6 +220,7 @@ class SystemStateManagement with ExecutionCore, FeatureMixin {
       /// -----
       await getMainTimelineStateManagement?.onInitRoot();
       await getMusicAndSound?.onInitRoot();
+      await getSystemConstantData?.onInitRoot();
     } catch (e) {
       await onReportRootIssue(nameFunction: '[onInitRootForSubCom]');
     }

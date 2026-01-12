@@ -1,30 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/core/window_feature.dart';
-import 'package:frame_creator_v2/features/pomodoro/models/data/pomodoro_time.dart';
-import 'package:frame_creator_v2/features/pomodoro/widgets/pomodoro_widget.dart';
+import 'package:frame_creator_v2/master_features/functional_features/two_character_conversation/widgets/two_character_conversation_widget.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 
-class PomodoroFeature with ExecutionCore, WindowFeature {
-  PomodoroFeature({required SystemStateManagement? systemStateManagement, required double? sizeDx, required double? sizeDy}) {
+class TwoCharacterConversationFunctionalFeature with ExecutionCore, WindowFeature {
+  TwoCharacterConversationFunctionalFeature({required SystemStateManagement? systemStateManagement, required double? sizeDx, required double? sizeDy}) {
     setSystemStateManagement(value: systemStateManagement);
     setSizeDx(value: sizeDx, isPriorityOverride: true);
     setSizeDy(value: sizeDy, isPriorityOverride: true);
-  }
-
-  /// -----
-  /// TODO:
-  /// -----
-  PomodoroTime1? _pomodoroTime1;
-  PomodoroTime1? get getPomodoroTime1 => _pomodoroTime1;
-  void setPomodoroTime1({required PomodoroTime1? value, bool? isPriorityOverride}) {
-    if (isPriorityOverride == true) {
-      _pomodoroTime1 = value;
-    } else {
-      _pomodoroTime1 ??= value;
-    }
-
-    return;
   }
 
   /// -----
@@ -61,9 +45,6 @@ class PomodoroFeature with ExecutionCore, WindowFeature {
       /// TODO:
       /// -----
 
-      getPomodoroTime1?.getStayFocusedSS01?.onStart();
-      getPomodoroTime1?.setCurrentPomodoroItem1(value: getPomodoroTime1?.getStayFocusedSS01, isPriorityOverride: true);
-
       /// -----
       /// TODO: Init Root For SubCom
       /// -----
@@ -87,19 +68,14 @@ class PomodoroFeature with ExecutionCore, WindowFeature {
       /// -----
       /// TODO:
       /// -----
-      setPomodoroTime1(value: PomodoroTime1(systemStateManagement: getSystemStateManagement));
-
-      /// -----
-      /// TODO:
-      /// -----
       setWindowWidget(
         value: LayoutBuilder(
           builder: (context, constraints) {
             return Stack(
               alignment: AlignmentDirectional.center, //
               children: [
-                // Text('PomodoroFeature'), //
-                PomodoroWidget(pomodoroFeature: this),
+                // Text('ConversationFeature'), //
+                TwoCharacterConversationWidget(twoCharacterConversationFunctionalFeature: this),
               ],
             );
           },
@@ -171,8 +147,6 @@ class PomodoroFeature with ExecutionCore, WindowFeature {
       /// -----
       /// TODO:
       /// -----
-
-      await getPomodoroTime1?.onSetupRoot();
     } catch (e) {
       await onReportRootIssue(nameFunction: '[onSetupRootForSubCom]');
     }
@@ -190,8 +164,6 @@ class PomodoroFeature with ExecutionCore, WindowFeature {
       /// -----
       /// TODO:
       /// -----
-
-      await getPomodoroTime1?.onInitRoot();
     } catch (e) {
       await onReportRootIssue(nameFunction: '[onInitRootForSubCom]');
     }

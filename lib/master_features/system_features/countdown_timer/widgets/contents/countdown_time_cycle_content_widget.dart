@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CountdownTimerContentWidget extends StatefulWidget {
-  const CountdownTimerContentWidget({super.key, required this.systemStateManagement, required this.sizeDx, required this.sizeDy});
+class CountdownTimeCycleContentWidget extends StatefulWidget {
+  const CountdownTimeCycleContentWidget({super.key, required this.systemStateManagement, required this.sizeDx, required this.sizeDy});
 
   /// -----
   /// TODO:
@@ -17,10 +17,10 @@ class CountdownTimerContentWidget extends StatefulWidget {
   final double sizeDy;
 
   @override
-  State<CountdownTimerContentWidget> createState() => _CountdownTimerContentWidgetState();
+  State<CountdownTimeCycleContentWidget> createState() => _CountdownTimeCycleContentWidgetState();
 }
 
-class _CountdownTimerContentWidgetState extends State<CountdownTimerContentWidget> {
+class _CountdownTimeCycleContentWidgetState extends State<CountdownTimeCycleContentWidget> {
   Timer? _timer;
 
   int minute = 0;
@@ -43,17 +43,17 @@ class _CountdownTimerContentWidgetState extends State<CountdownTimerContentWidge
     });
 
     _timer = Timer.periodic(const Duration(milliseconds: 10), (timer) {
-      if (widget.systemStateManagement?.getCountdownTimerFeature?.checkConditionActiveByDirection() == true) {
+      if (widget.systemStateManagement?.getSystemFeatureManagement?.getCountdownTimeCycleSystemFeature?.checkConditionActiveByDirection() == true) {
         ///
         /// TODO: StayFocused
         ///
 
         /// TODO: StayFocused SS01
-        if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS01?.getStatus1?.isActive() == true) {
-          minute = widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS01?.getTotalRemainingMinutes?.toInt() ?? 0;
-          second = (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS01?.getTotalRemainingSeconds?.toInt() ?? 0) % 60;
+        if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS01?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+          minute = widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS01?.getTotalRemainingMinutes?.toInt() ?? 0;
+          second = (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS01?.getTotalRemainingSeconds?.toInt() ?? 0) % 60;
 
-          prepareSecond = (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS01?.getTotalPrepareSeconds?.toInt() ?? 0);
+          prepareSecond = (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS01?.getTotalPrepareSeconds?.toInt() ?? 0);
 
           if (mounted) {
             setState(() {});
@@ -63,11 +63,11 @@ class _CountdownTimerContentWidgetState extends State<CountdownTimerContentWidge
         }
 
         /// TODO: StayFocused SS02
-        if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS02?.getStatus1?.isActive() == true) {
-          minute = widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS02?.getTotalRemainingMinutes?.toInt() ?? 0;
-          second = (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS02?.getTotalRemainingSeconds?.toInt() ?? 0) % 60;
+        if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS02?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+          minute = widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS02?.getTotalRemainingMinutes?.toInt() ?? 0;
+          second = (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS02?.getTotalRemainingSeconds?.toInt() ?? 0) % 60;
 
-          prepareSecond = (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS02?.getTotalPrepareSeconds?.toInt() ?? 0);
+          prepareSecond = (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS02?.getTotalPrepareSeconds?.toInt() ?? 0);
 
           if (mounted) {
             setState(() {});
@@ -77,11 +77,11 @@ class _CountdownTimerContentWidgetState extends State<CountdownTimerContentWidge
         }
 
         /// TODO: StayFocused SS03
-        if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS03?.getStatus1?.isActive() == true) {
-          minute = widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS03?.getTotalRemainingMinutes?.toInt() ?? 0;
-          second = (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS03?.getTotalRemainingSeconds?.toInt() ?? 0) % 60;
+        if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS03?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+          minute = widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS03?.getTotalRemainingMinutes?.toInt() ?? 0;
+          second = (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS03?.getTotalRemainingSeconds?.toInt() ?? 0) % 60;
 
-          prepareSecond = (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS03?.getTotalPrepareSeconds?.toInt() ?? 0);
+          prepareSecond = (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS03?.getTotalPrepareSeconds?.toInt() ?? 0);
 
           if (mounted) {
             setState(() {});
@@ -91,11 +91,11 @@ class _CountdownTimerContentWidgetState extends State<CountdownTimerContentWidge
         }
 
         /// TODO: StayFocused SS04
-        if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS04?.getStatus1?.isActive() == true) {
-          minute = widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS04?.getTotalRemainingMinutes?.toInt() ?? 0;
-          second = (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS04?.getTotalRemainingSeconds?.toInt() ?? 0) % 60;
+        if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS04?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+          minute = widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS04?.getTotalRemainingMinutes?.toInt() ?? 0;
+          second = (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS04?.getTotalRemainingSeconds?.toInt() ?? 0) % 60;
 
-          prepareSecond = (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS04?.getTotalPrepareSeconds?.toInt() ?? 0);
+          prepareSecond = (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS04?.getTotalPrepareSeconds?.toInt() ?? 0);
 
           if (mounted) {
             setState(() {});
@@ -109,11 +109,11 @@ class _CountdownTimerContentWidgetState extends State<CountdownTimerContentWidge
         ///
 
         /// TODO: BreakTime SS01
-        if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS01?.getStatus1?.isActive() == true) {
-          minute = widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS01?.getTotalRemainingMinutes?.toInt() ?? 0;
-          second = (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS01?.getTotalRemainingSeconds?.toInt() ?? 0) % 60;
+        if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS01?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+          minute = widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS01?.getTotalRemainingMinutes?.toInt() ?? 0;
+          second = (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS01?.getTotalRemainingSeconds?.toInt() ?? 0) % 60;
 
-          prepareSecond = (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS01?.getTotalPrepareSeconds?.toInt() ?? 0);
+          prepareSecond = (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS01?.getTotalPrepareSeconds?.toInt() ?? 0);
 
           if (mounted) {
             setState(() {});
@@ -123,11 +123,11 @@ class _CountdownTimerContentWidgetState extends State<CountdownTimerContentWidge
         }
 
         /// TODO: BreakTime SS02
-        if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS02?.getStatus1?.isActive() == true) {
-          minute = widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS02?.getTotalRemainingMinutes?.toInt() ?? 0;
-          second = (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS02?.getTotalRemainingSeconds?.toInt() ?? 0) % 60;
+        if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS02?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+          minute = widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS02?.getTotalRemainingMinutes?.toInt() ?? 0;
+          second = (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS02?.getTotalRemainingSeconds?.toInt() ?? 0) % 60;
 
-          prepareSecond = (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS02?.getTotalPrepareSeconds?.toInt() ?? 0);
+          prepareSecond = (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS02?.getTotalPrepareSeconds?.toInt() ?? 0);
 
           if (mounted) {
             setState(() {});
@@ -137,11 +137,11 @@ class _CountdownTimerContentWidgetState extends State<CountdownTimerContentWidge
         }
 
         /// TODO: BreakTime SS03
-        if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS03?.getStatus1?.isActive() == true) {
-          minute = widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS03?.getTotalRemainingMinutes?.toInt() ?? 0;
-          second = (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS03?.getTotalRemainingSeconds?.toInt() ?? 0) % 60;
+        if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS03?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+          minute = widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS03?.getTotalRemainingMinutes?.toInt() ?? 0;
+          second = (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS03?.getTotalRemainingSeconds?.toInt() ?? 0) % 60;
 
-          prepareSecond = (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS03?.getTotalPrepareSeconds?.toInt() ?? 0);
+          prepareSecond = (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS03?.getTotalPrepareSeconds?.toInt() ?? 0);
 
           if (mounted) {
             setState(() {});
@@ -151,11 +151,11 @@ class _CountdownTimerContentWidgetState extends State<CountdownTimerContentWidge
         }
 
         /// TODO: BreakTime SS04
-        if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS04?.getStatus1?.isActive() == true) {
-          minute = widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS04?.getTotalRemainingMinutes?.toInt() ?? 0;
-          second = (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS04?.getTotalRemainingSeconds?.toInt() ?? 0) % 60;
+        if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS04?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+          minute = widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS04?.getTotalRemainingMinutes?.toInt() ?? 0;
+          second = (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS04?.getTotalRemainingSeconds?.toInt() ?? 0) % 60;
 
-          prepareSecond = (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS04?.getTotalPrepareSeconds?.toInt() ?? 0);
+          prepareSecond = (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS04?.getTotalPrepareSeconds?.toInt() ?? 0);
 
           if (mounted) {
             setState(() {});
@@ -173,7 +173,7 @@ class _CountdownTimerContentWidgetState extends State<CountdownTimerContentWidge
     });
 
     _timer = Timer.periodic(const Duration(milliseconds: 10), (timer) {
-      if (widget.systemStateManagement?.getCountdownTimerFeature?.checkConditionActiveByDirection() == true) {
+      if (widget.systemStateManagement?.getSystemFeatureManagement?.getCountdownTimeCycleSystemFeature?.checkConditionActiveByDirection() == true) {
         String minuteStringTick = '';
         String secondStringTick = '';
         String prepareSecondStringTick = '';
@@ -850,11 +850,11 @@ class _CountdownTimerContentWidgetState extends State<CountdownTimerContentWidge
 
               onPlaySFXStayFocusedBreakTime();
             }
-          } else if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getCurrentPomodoroItem1?.getId == '[POMODORO_STAY_FOCUSED_SS01]' ||
-              widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getCurrentPomodoroItem1?.getId == '[POMODORO_STAY_FOCUSED_SS02]' ||
-              widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getCurrentPomodoroItem1?.getId == '[POMODORO_STAY_FOCUSED_SS03]' ||
-              widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getCurrentPomodoroItem1?.getId == '[POMODORO_STAY_FOCUSED_SS04]') {
-            if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getCurrentPomodoroItem1?.isCompletedPreparing() == true) {
+          } else if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getCurrentPomodoroCycleItem?.getId == '[POMODORO_STAY_FOCUSED_SS01]' ||
+              widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getCurrentPomodoroCycleItem?.getId == '[POMODORO_STAY_FOCUSED_SS02]' ||
+              widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getCurrentPomodoroCycleItem?.getId == '[POMODORO_STAY_FOCUSED_SS03]' ||
+              widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getCurrentPomodoroCycleItem?.getId == '[POMODORO_STAY_FOCUSED_SS04]') {
+            if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getCurrentPomodoroCycleItem?.isCompletedPreparing() == true) {
               if (isStayFocused != true || isBreakTime != false) {
                 isStayFocused = true;
                 isBreakTime = false;
@@ -862,11 +862,11 @@ class _CountdownTimerContentWidgetState extends State<CountdownTimerContentWidge
                 onPlaySFXStayFocusedBreakTime();
               }
             }
-          } else if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getCurrentPomodoroItem1?.getId == '[POMODORO_BREAK_TIME_SS01]' ||
-              widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getCurrentPomodoroItem1?.getId == '[POMODORO_BREAK_TIME_SS02]' ||
-              widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getCurrentPomodoroItem1?.getId == '[POMODORO_BREAK_TIME_SS03]' ||
-              widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getCurrentPomodoroItem1?.getId == '[POMODORO_BREAK_TIME_SS04]') {
-            if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getCurrentPomodoroItem1?.isCompletedPreparing() == true) {
+          } else if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getCurrentPomodoroCycleItem?.getId == '[POMODORO_BREAK_TIME_SS01]' ||
+              widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getCurrentPomodoroCycleItem?.getId == '[POMODORO_BREAK_TIME_SS02]' ||
+              widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getCurrentPomodoroCycleItem?.getId == '[POMODORO_BREAK_TIME_SS03]' ||
+              widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getCurrentPomodoroCycleItem?.getId == '[POMODORO_BREAK_TIME_SS04]') {
+            if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getCurrentPomodoroCycleItem?.isCompletedPreparing() == true) {
               if (isStayFocused != false || isBreakTime != true) {
                 isBreakTime = true;
                 isStayFocused = false;

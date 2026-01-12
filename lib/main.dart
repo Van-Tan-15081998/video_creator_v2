@@ -124,7 +124,7 @@ class _MyAppState extends State<MyApp> {
 
       ///
       // _timerSeconds = Timer.periodic(const Duration(seconds: 1), (timer) {
-      _timerSeconds = Timer.periodic(const Duration(milliseconds: 100), (timer) {
+      _timerSeconds = Timer.periodic(const Duration(milliseconds: 1000), (timer) {
         getSequentialExecutionController?.updateSeconds();
       });
 

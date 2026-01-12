@@ -246,7 +246,7 @@ class SequentialExecutionDetail with ExecutionCore {
       // getSequentialExecutionController?.getSystemStateManagement?.getMainTimelineStateManagement?.getTimeline?.setSeconds(value: 6, isPriorityOverride: true);
     }
 
-    // return;
+    return;
 
     if (totalHours == 0 && totalMinutes == 0 && seconds == 100) {
       if (getSequentialExecutionController?.getSystemStateManagement?.getMainTimelineStateManagement?.getTimeline?.isRunning() == true) {
@@ -693,7 +693,7 @@ class SequentialExecutionDetail with ExecutionCore {
 
       if (getSequentialExecutionController?.getSystemStateManagement?.getMainTimelineStateManagement?.getTimeline?.isRunning() == true) {
         /// Bắt đầu chạy Pomodoro đầu tiên
-        getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime?.start();
+        getSequentialExecutionController?.getPomodoroFeature?.getPomodoroTime1?.start();
 
         if (SystemConfig.isFormatVocabularyList == true) {
           getSequentialExecutionController?.getVocabularyScript?.onStartVocabularyDefinition();

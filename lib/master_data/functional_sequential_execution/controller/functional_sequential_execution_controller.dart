@@ -462,15 +462,15 @@ class FunctionalSequentialExecutionController with ExecutionCore {
 
     if (getFlowController?.getCharacterFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.isNotEmpty == true) {
       getFlowController?.getCharacterFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.first?.getStateModel?.onStart?.call();
-      getFlowController?.getCharacterFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.clear();
+      // getFlowController?.getCharacterFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.clear();
     }
     if (getFlowController?.getMessageFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.isNotEmpty == true) {
       getFlowController?.getMessageFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.first?.getStateModel?.onStart?.call();
-      getFlowController?.getMessageFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.clear();
+      // getFlowController?.getMessageFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.clear();
     }
     if (getFlowController?.getWindowFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.isNotEmpty == true) {
       getFlowController?.getWindowFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.first?.getStateModel?.onStart?.call();
-      getFlowController?.getWindowFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.clear();
+      // getFlowController?.getWindowFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.clear();
     }
 
     return;

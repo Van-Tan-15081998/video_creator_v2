@@ -1,6 +1,6 @@
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 
-class PomodoroStatus with ExecutionCore {
+class PomodoroStatus1 with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
@@ -16,15 +16,15 @@ class PomodoroStatus with ExecutionCore {
     return;
   }
 
-  PomodoroStatus.inActive() {
+  PomodoroStatus1.inActive() {
     setStatusInActive();
   }
 
-  PomodoroStatus.active() {
+  PomodoroStatus1.active() {
     setStatusActive();
   }
 
-  PomodoroStatus.complete() {
+  PomodoroStatus1.complete() {
     setStatusComplete();
   }
 

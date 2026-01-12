@@ -132,12 +132,12 @@ class _PomodoroStartingConversationContentWidgetState extends State<PomodoroStar
             //   });
             // }
             if (messageStringList.isNotEmpty == true) {
-              if (messageStringList[0] == readyMessage && widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getCurrentPomodoroItem?.isPreparing() == false) {
+              if (messageStringList[0] == readyMessage && widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getCurrentPomodoroItem1?.isPreparing() == false) {
                 setState(() {
                   messageList.add(messageByWordWidget(isLeftSide: true, isRightSide: false, engSentence: messageStringList.first, vieSentence: messageStringList.first));
 
                   Future.delayed(Duration(seconds: 1), () {
-                    widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getCurrentPomodoroItem?.prepare();
+                    widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getCurrentPomodoroItem1?.prepare();
                   });
 
                   messageStringList.removeAt(0);
@@ -146,7 +146,7 @@ class _PomodoroStartingConversationContentWidgetState extends State<PomodoroStar
                   widget.systemStateManagement?.getMusicAndSound?.onPlaySFXConversationSentenceAppear();
                 });
               }
-              if (messageStringList[0] == startMessage && widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime?.getCurrentPomodoroItem?.isCompletedPreparing() == true) {
+              if (messageStringList[0] == startMessage && widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getCurrentPomodoroItem1?.isCompletedPreparing() == true) {
                 setState(() {
                   messageList.add(messageByWordWidget(isLeftSide: true, isRightSide: false, engSentence: messageStringList.first, vieSentence: messageStringList.first));
 

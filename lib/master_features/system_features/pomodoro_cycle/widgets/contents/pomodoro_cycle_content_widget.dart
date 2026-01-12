@@ -9,8 +9,8 @@ import 'package:frame_creator_v2/features/pomodoro/widgets/contents/total_elapse
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class PomodoroContentWidget extends StatefulWidget {
-  const PomodoroContentWidget({super.key, required this.systemStateManagement, required this.sizeDx, required this.sizeDy});
+class PomodoroCycleContentWidget extends StatefulWidget {
+  const PomodoroCycleContentWidget({super.key, required this.systemStateManagement, required this.sizeDx, required this.sizeDy});
 
   /// -----
   /// TODO:
@@ -21,10 +21,10 @@ class PomodoroContentWidget extends StatefulWidget {
   final double sizeDy;
 
   @override
-  State<PomodoroContentWidget> createState() => _PomodoroWidgetState();
+  State<PomodoroCycleContentWidget> createState() => _PomodoroCycleContentWidgetState();
 }
 
-class _PomodoroWidgetState extends State<PomodoroContentWidget> {
+class _PomodoroCycleContentWidgetState extends State<PomodoroCycleContentWidget> {
   Timer? _timer;
 
   String processingId = '';
@@ -69,15 +69,14 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _timer = Timer.periodic(const Duration(milliseconds: 10), (timer) {
-        if (widget.systemStateManagement?.getPomodoroFeature?.checkConditionActiveByDirection() == true) {
+        if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.checkConditionActiveByDirection() == true) {
           ///
           /// TODO: StayFocused
           ///
 
           /// TODO: StayFocused SS01
-          // if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS01?.getStatus?.isActive() == true && widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS01?.isCompletedPreparing() == true) {
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS01?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
-            stayFocusedProgressbarPomodoroSS01 = stayFocusedProgressbar * ((widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS01?.getPercentComplete ?? 0) / 100);
+          if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS01?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+            stayFocusedProgressbarPomodoroSS01 = stayFocusedProgressbar * ((widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS01?.getPercentComplete ?? 0) / 100);
 
             processingId = '[PomodoroSS01]';
 
@@ -89,9 +88,8 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
           }
 
           /// TODO: StayFocused SS02
-          // if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS02?.getStatus?.isActive() == true && widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS02?.isCompletedPreparing() == true) {
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS02?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
-            stayFocusedProgressbarPomodoroSS02 = stayFocusedProgressbar * ((widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS02?.getPercentComplete ?? 0) / 100);
+          if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS02?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+            stayFocusedProgressbarPomodoroSS02 = stayFocusedProgressbar * ((widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS02?.getPercentComplete ?? 0) / 100);
 
             processingId = '[PomodoroSS02]';
 
@@ -103,9 +101,8 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
           }
 
           /// TODO: StayFocused SS03
-          // if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS03?.getStatus?.isActive() == true && widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS03?.isCompletedPreparing() == true) {
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS03?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
-            stayFocusedProgressbarPomodoroSS03 = stayFocusedProgressbar * ((widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS03?.getPercentComplete ?? 0) / 100);
+          if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS03?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+            stayFocusedProgressbarPomodoroSS03 = stayFocusedProgressbar * ((widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS03?.getPercentComplete ?? 0) / 100);
 
             processingId = '[PomodoroSS03]';
 
@@ -117,9 +114,8 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
           }
 
           /// TODO: StayFocused SS04
-          // if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS04?.getStatus?.isActive() == true && widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS04?.isCompletedPreparing() == true) {
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS04?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
-            stayFocusedProgressbarPomodoroSS04 = stayFocusedProgressbar * ((widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS04?.getPercentComplete ?? 0) / 100);
+          if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS04?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+            stayFocusedProgressbarPomodoroSS04 = stayFocusedProgressbar * ((widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS04?.getPercentComplete ?? 0) / 100);
 
             processingId = '[PomodoroSS04]';
 
@@ -135,9 +131,8 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
           ///
 
           /// TODO: BreakTime SS01
-          // if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS01?.getStatus?.isActive() == true && widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS01?.isCompletedPreparing() == true) {
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS01?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
-            breakTimeProgressbarPomodoroSS01 = breakTimeProgressbar * ((widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS01?.getPercentComplete ?? 0) / 100);
+          if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS01?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+            breakTimeProgressbarPomodoroSS01 = breakTimeProgressbar * ((widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS01?.getPercentComplete ?? 0) / 100);
 
             processingId = '[PomodoroSS01]';
 
@@ -149,9 +144,8 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
           }
 
           /// TODO: BreakTime SS02
-          // if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS02?.getStatus?.isActive() == true && widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS02?.isCompletedPreparing() == true) {
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS02?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
-            breakTimeProgressbarPomodoroSS02 = breakTimeProgressbar * ((widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS02?.getPercentComplete ?? 0) / 100);
+          if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS02?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+            breakTimeProgressbarPomodoroSS02 = breakTimeProgressbar * ((widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS02?.getPercentComplete ?? 0) / 100);
 
             processingId = '[PomodoroSS02]';
 
@@ -163,9 +157,8 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
           }
 
           /// TODO: BreakTime SS03
-          // if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS03?.getStatus?.isActive() == true && widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS03?.isCompletedPreparing() == true) {
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS03?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
-            breakTimeProgressbarPomodoroSS03 = breakTimeProgressbar * ((widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS03?.getPercentComplete ?? 0) / 100);
+          if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS03?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+            breakTimeProgressbarPomodoroSS03 = breakTimeProgressbar * ((widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS03?.getPercentComplete ?? 0) / 100);
 
             processingId = '[PomodoroSS03]';
 
@@ -177,9 +170,8 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
           }
 
           /// TODO: BreakTime SS04
-          // if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS04?.getStatus?.isActive() == true && widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS04?.isCompletedPreparing() == true) {
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS04?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
-            breakTimeProgressbarPomodoroSS04 = breakTimeProgressbar * ((widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS04?.getPercentComplete ?? 0) / 100);
+          if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS04?.getPomodoroContentStage?.getActiveStatus?.isStatusAsActive() == true) {
+            breakTimeProgressbarPomodoroSS04 = breakTimeProgressbar * ((widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS04?.getPercentComplete ?? 0) / 100);
 
             processingId = '[PomodoroSS04]';
 
@@ -222,10 +214,10 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
           stayFocusedProgressbar = stayFocusedProgressbarPomodoroSS01;
           breakTimeProgressbar = breakTimeProgressbarPomodoroSS01;
 
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS01?.getPercentComplete != 100) {
+          if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS01?.getPercentComplete != 100) {
             isProcessingStayFocused = true;
           }
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS01?.getPercentComplete != 100) {
+          if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS01?.getPercentComplete != 100) {
             isProcessingBreakTime = true;
           }
 
@@ -241,10 +233,10 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
           stayFocusedProgressbar = stayFocusedProgressbarPomodoroSS02;
           breakTimeProgressbar = breakTimeProgressbarPomodoroSS02;
 
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS02?.getPercentComplete != 100) {
+          if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS02?.getPercentComplete != 100) {
             isProcessingStayFocused = true;
           }
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS02?.getPercentComplete != 100) {
+          if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS02?.getPercentComplete != 100) {
             isProcessingBreakTime = true;
           }
 
@@ -260,10 +252,10 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
           stayFocusedProgressbar = stayFocusedProgressbarPomodoroSS03;
           breakTimeProgressbar = breakTimeProgressbarPomodoroSS03;
 
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS03?.getPercentComplete != 100) {
+          if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS03?.getPercentComplete != 100) {
             isProcessingStayFocused = true;
           }
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS03?.getPercentComplete != 100) {
+          if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS03?.getPercentComplete != 100) {
             isProcessingBreakTime = true;
           }
 
@@ -279,10 +271,10 @@ class _PomodoroWidgetState extends State<PomodoroContentWidget> {
           stayFocusedProgressbar = stayFocusedProgressbarPomodoroSS04;
           breakTimeProgressbar = breakTimeProgressbarPomodoroSS04;
 
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getStayFocusedSS04?.getPercentComplete != 100) {
+          if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS04?.getPercentComplete != 100) {
             isProcessingStayFocused = true;
           }
-          if (widget.systemStateManagement?.getPomodoroFeature?.getPomodoroTime1?.getBreakTimeSS04?.getPercentComplete != 100) {
+          if (widget.systemStateManagement?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS04?.getPercentComplete != 100) {
             isProcessingBreakTime = true;
           }
 

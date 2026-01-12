@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/controller/attributes/gap_time.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/contents/step_item_content_abstract.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/status/active_status.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/status/content_existence_status.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/status/flow_controller.dart';
@@ -174,6 +175,21 @@ class FunctionalSequentialExecutionStepItem with ExecutionCore {
   /// TODO: Hàm Thực Thi Chính Của Step Item
   /// -----
   VoidCallback? onPerform;
+
+  /// -----
+  /// TODO: StepItemContent
+  /// -----
+  StepItemContentAbstract? _stepItemContent;
+  StepItemContentAbstract? get getStepItemContent => _stepItemContent;
+  void setStepItemContent({required StepItemContentAbstract? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _stepItemContent = value;
+    } else {
+      _stepItemContent ??= value;
+    }
+
+    return;
+  }
 
   /// -----
   /// TODO: Attach Root

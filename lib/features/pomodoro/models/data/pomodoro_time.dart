@@ -3,8 +3,8 @@ import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/features/pomodoro/models/data/pomodoro_item.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 
-class PomodoroTime with ExecutionCore {
-  PomodoroTime({required SystemStateManagement? systemStateManagement}) {
+class PomodoroTime1 with ExecutionCore {
+  PomodoroTime1({required SystemStateManagement? systemStateManagement}) {
     setSystemStateManagement(value: systemStateManagement);
   }
 
@@ -26,13 +26,13 @@ class PomodoroTime with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
-  PomodoroItem? _currentPomodoroItem;
-  PomodoroItem? get getCurrentPomodoroItem => _currentPomodoroItem;
-  void setCurrentPomodoroItem({required PomodoroItem? value, bool? isPriorityOverride}) {
+  PomodoroItem1? _currentPomodoroItem1;
+  PomodoroItem1? get getCurrentPomodoroItem1 => _currentPomodoroItem1;
+  void setCurrentPomodoroItem1({required PomodoroItem1? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
-      _currentPomodoroItem = value;
+      _currentPomodoroItem1 = value;
     } else {
-      _currentPomodoroItem ??= value;
+      _currentPomodoroItem1 ??= value;
     }
 
     return;
@@ -41,9 +41,9 @@ class PomodoroTime with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
-  PomodoroItem? _stayFocusedSS01;
-  PomodoroItem? get getStayFocusedSS01 => _stayFocusedSS01;
-  void setStayFocusedSS01({required PomodoroItem? value, bool? isPriorityOverride}) {
+  PomodoroItem1? _stayFocusedSS01;
+  PomodoroItem1? get getStayFocusedSS01 => _stayFocusedSS01;
+  void setStayFocusedSS01({required PomodoroItem1? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
       _stayFocusedSS01 = value;
     } else {
@@ -56,9 +56,9 @@ class PomodoroTime with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
-  PomodoroItem? _stayFocusedSS02;
-  PomodoroItem? get getStayFocusedSS02 => _stayFocusedSS02;
-  void setStayFocusedSS02({required PomodoroItem? value, bool? isPriorityOverride}) {
+  PomodoroItem1? _stayFocusedSS02;
+  PomodoroItem1? get getStayFocusedSS02 => _stayFocusedSS02;
+  void setStayFocusedSS02({required PomodoroItem1? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
       _stayFocusedSS02 = value;
     } else {
@@ -71,9 +71,9 @@ class PomodoroTime with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
-  PomodoroItem? _stayFocusedSS03;
-  PomodoroItem? get getStayFocusedSS03 => _stayFocusedSS03;
-  void setStayFocusedSS03({required PomodoroItem? value, bool? isPriorityOverride}) {
+  PomodoroItem1? _stayFocusedSS03;
+  PomodoroItem1? get getStayFocusedSS03 => _stayFocusedSS03;
+  void setStayFocusedSS03({required PomodoroItem1? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
       _stayFocusedSS03 = value;
     } else {
@@ -86,9 +86,9 @@ class PomodoroTime with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
-  PomodoroItem? _stayFocusedSS04;
-  PomodoroItem? get getStayFocusedSS04 => _stayFocusedSS04;
-  void setStayFocusedSS04({required PomodoroItem? value, bool? isPriorityOverride}) {
+  PomodoroItem1? _stayFocusedSS04;
+  PomodoroItem1? get getStayFocusedSS04 => _stayFocusedSS04;
+  void setStayFocusedSS04({required PomodoroItem1? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
       _stayFocusedSS04 = value;
     } else {
@@ -101,9 +101,9 @@ class PomodoroTime with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
-  PomodoroItem? _breakTimeSS01;
-  PomodoroItem? get getBreakTimeSS01 => _breakTimeSS01;
-  void setBreakTimeSS01({required PomodoroItem? value, bool? isPriorityOverride}) {
+  PomodoroItem1? _breakTimeSS01;
+  PomodoroItem1? get getBreakTimeSS01 => _breakTimeSS01;
+  void setBreakTimeSS01({required PomodoroItem1? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
       _breakTimeSS01 = value;
     } else {
@@ -116,9 +116,9 @@ class PomodoroTime with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
-  PomodoroItem? _breakTimeSS02;
-  PomodoroItem? get getBreakTimeSS02 => _breakTimeSS02;
-  void setBreakTimeSS02({required PomodoroItem? value, bool? isPriorityOverride}) {
+  PomodoroItem1? _breakTimeSS02;
+  PomodoroItem1? get getBreakTimeSS02 => _breakTimeSS02;
+  void setBreakTimeSS02({required PomodoroItem1? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
       _breakTimeSS02 = value;
     } else {
@@ -131,9 +131,9 @@ class PomodoroTime with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
-  PomodoroItem? _breakTimeSS03;
-  PomodoroItem? get getBreakTimeSS03 => _breakTimeSS03;
-  void setBreakTimeSS03({required PomodoroItem? value, bool? isPriorityOverride}) {
+  PomodoroItem1? _breakTimeSS03;
+  PomodoroItem1? get getBreakTimeSS03 => _breakTimeSS03;
+  void setBreakTimeSS03({required PomodoroItem1? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
       _breakTimeSS03 = value;
     } else {
@@ -146,9 +146,9 @@ class PomodoroTime with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
-  PomodoroItem? _breakTimeSS04;
-  PomodoroItem? get getBreakTimeSS04 => _breakTimeSS04;
-  void setBreakTimeSS04({required PomodoroItem? value, bool? isPriorityOverride}) {
+  PomodoroItem1? _breakTimeSS04;
+  PomodoroItem1? get getBreakTimeSS04 => _breakTimeSS04;
+  void setBreakTimeSS04({required PomodoroItem1? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
       _breakTimeSS04 = value;
     } else {
@@ -327,7 +327,7 @@ class PomodoroTime with ExecutionCore {
       setCompletedCallbackFunctionStack(value: [], isPriorityOverride: true);
 
       setStayFocusedSS01(
-        value: PomodoroItem(
+        value: PomodoroItem1(
           id: '[POMODORO_STAY_FOCUSED_SS01]',
           totalMinutes: 30,
           totalPrepareSeconds: 506,
@@ -337,14 +337,14 @@ class PomodoroTime with ExecutionCore {
             }
 
             getBreakTimeSS01?.onStart();
-            setCurrentPomodoroItem(value: getBreakTimeSS01, isPriorityOverride: true);
+            setCurrentPomodoroItem1(value: getBreakTimeSS01, isPriorityOverride: true);
           },
           completedCallbackFunctionStack: [],
         ),
         isPriorityOverride: true,
       );
       setStayFocusedSS02(
-        value: PomodoroItem(
+        value: PomodoroItem1(
           id: '[POMODORO_STAY_FOCUSED_SS02]',
           totalMinutes: 30,
           totalPrepareSeconds: 506,
@@ -354,14 +354,14 @@ class PomodoroTime with ExecutionCore {
             }
 
             getBreakTimeSS02?.onStart();
-            setCurrentPomodoroItem(value: getBreakTimeSS02, isPriorityOverride: true);
+            setCurrentPomodoroItem1(value: getBreakTimeSS02, isPriorityOverride: true);
           },
           completedCallbackFunctionStack: [],
         ),
         isPriorityOverride: true,
       );
       setStayFocusedSS03(
-        value: PomodoroItem(
+        value: PomodoroItem1(
           id: '[POMODORO_STAY_FOCUSED_SS03]',
           totalMinutes: 30,
           totalPrepareSeconds: 506,
@@ -371,14 +371,14 @@ class PomodoroTime with ExecutionCore {
             }
 
             getBreakTimeSS03?.onStart();
-            setCurrentPomodoroItem(value: getBreakTimeSS03, isPriorityOverride: true);
+            setCurrentPomodoroItem1(value: getBreakTimeSS03, isPriorityOverride: true);
           },
           completedCallbackFunctionStack: [],
         ),
         isPriorityOverride: true,
       );
       setStayFocusedSS04(
-        value: PomodoroItem(
+        value: PomodoroItem1(
           id: '[POMODORO_STAY_FOCUSED_SS04]',
           totalMinutes: 30,
           totalPrepareSeconds: 506,
@@ -388,7 +388,7 @@ class PomodoroTime with ExecutionCore {
             }
 
             getBreakTimeSS04?.onStart();
-            setCurrentPomodoroItem(value: getBreakTimeSS04, isPriorityOverride: true);
+            setCurrentPomodoroItem1(value: getBreakTimeSS04, isPriorityOverride: true);
           },
           completedCallbackFunctionStack: [],
         ),
@@ -397,7 +397,7 @@ class PomodoroTime with ExecutionCore {
 
       ///
       setBreakTimeSS01(
-        value: PomodoroItem(
+        value: PomodoroItem1(
           id: '[POMODORO_BREAK_TIME_SS01]',
           totalMinutes: 5,
           totalPrepareSeconds: 506,
@@ -407,14 +407,14 @@ class PomodoroTime with ExecutionCore {
             }
 
             getStayFocusedSS02?.onStart();
-            setCurrentPomodoroItem(value: getStayFocusedSS02, isPriorityOverride: true);
+            setCurrentPomodoroItem1(value: getStayFocusedSS02, isPriorityOverride: true);
           },
           completedCallbackFunctionStack: [],
         ),
         isPriorityOverride: true,
       );
       setBreakTimeSS02(
-        value: PomodoroItem(
+        value: PomodoroItem1(
           id: '[POMODORO_BREAK_TIME_SS02]',
           totalMinutes: 5,
           totalPrepareSeconds: 506,
@@ -424,14 +424,14 @@ class PomodoroTime with ExecutionCore {
             }
 
             getStayFocusedSS03?.onStart();
-            setCurrentPomodoroItem(value: getStayFocusedSS03, isPriorityOverride: true);
+            setCurrentPomodoroItem1(value: getStayFocusedSS03, isPriorityOverride: true);
           },
           completedCallbackFunctionStack: [],
         ),
         isPriorityOverride: true,
       );
       setBreakTimeSS03(
-        value: PomodoroItem(
+        value: PomodoroItem1(
           id: '[POMODORO_BREAK_TIME_SS03]',
           totalMinutes: 5,
           totalPrepareSeconds: 506,
@@ -441,14 +441,14 @@ class PomodoroTime with ExecutionCore {
             }
 
             getStayFocusedSS04?.onStart();
-            setCurrentPomodoroItem(value: getStayFocusedSS04, isPriorityOverride: true);
+            setCurrentPomodoroItem1(value: getStayFocusedSS04, isPriorityOverride: true);
           },
           completedCallbackFunctionStack: [],
         ),
         isPriorityOverride: true,
       );
       setBreakTimeSS04(
-        value: PomodoroItem(
+        value: PomodoroItem1(
           id: '[POMODORO_BREAK_TIME_SS04]',
           totalMinutes: 5,
           totalPrepareSeconds: 506,

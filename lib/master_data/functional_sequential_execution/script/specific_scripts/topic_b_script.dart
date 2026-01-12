@@ -1,11 +1,12 @@
 import 'package:flutter/foundation.dart';
 import 'package:frame_creator_v2/master_data/content_item/01_content_item_unit/content_item_unit.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/functional_sequential_execution_script.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/contents/details/step_item_content_as_new_message_conversation.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item_state.dart';
 
-class TopicAScript extends FunctionalSequentialExecutionScript {
-  TopicAScript({required super.systemStateManagement, required super.sequentialExecutionController, required super.contentItemSequentialExecution, required super.functionalSequentialExecutionController});
+class TopicBScript extends FunctionalSequentialExecutionScript {
+  TopicBScript({required super.systemStateManagement, required super.sequentialExecutionController, required super.contentItemSequentialExecution, required super.functionalSequentialExecutionController});
 
   /// -----
   /// TODO: Kịch Bản Gắn Kết Với Content Item Section
@@ -1144,6 +1145,8 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
     /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section SS01]
     /// -----
     getContentItemSequentialExecution?.getContentItemSectionSS01?.getContentItemUnitListAsStack?.add(contentItemUnit);
+
+    return;
 
     ///
   }
@@ -3794,6 +3797,968 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
     /// -----
     /// TODO: Cập Nhật Dựa Trên Đơn Vị Thực Thi [POMODORO-ITEM]
     /// -----
+
+    /// -----
+    /// TODO: Tạo ContentItemUnit
+    /// -----
+    ContentItemUnit contentItemUnit = ContentItemUnit();
+    await contentItemUnit.onSetupRoot();
+    await contentItemUnit.onInitRoot();
+
+    /// ----- | ----- | -----
+    /// TODO: Step 1.0
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..setStepItemContent(
+            value: StepItemContentAsNewMessageConversation(
+              message: '1234567890 _10',
+              imageSource: null, //
+              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
+            ),
+            isPriorityOverride: true,
+          ),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 0.0 - GAP
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[Unit 2][Step] 0.0 - [GAP]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 1.0
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..setStepItemContent(
+            value: StepItemContentAsNewMessageConversation(
+              message: '1234567890 1234567890 _20',
+              imageSource: null, //
+              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA02Id,
+            ),
+            isPriorityOverride: true,
+          ),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 0.0 - GAP
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[Unit 2][Step] 0.0 - [GAP]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 1.0
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..setStepItemContent(
+            value: StepItemContentAsNewMessageConversation(
+              message: '1234567890 1234567890 1234567890 _30',
+              imageSource: null, //
+              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
+            ),
+            isPriorityOverride: true,
+          ),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 0.0 - GAP
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[Unit 2][Step] 0.0 - [GAP]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 1.0
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..setStepItemContent(
+            value: StepItemContentAsNewMessageConversation(
+              message: '1234567890 1234567890 1234567890 1234567890 _40',
+              imageSource: null, //
+              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
+            ),
+            isPriorityOverride: true,
+          ),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 0.0 - GAP
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[Unit 2][Step] 0.0 - [GAP]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 1.0
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..setStepItemContent(
+            value: StepItemContentAsNewMessageConversation(
+              message: '1234567890 1234567890 1234567890 1234567890 1234567890 _50',
+              imageSource: null, //
+              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
+            ),
+            isPriorityOverride: true,
+          ),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 0.0 - GAP
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[Unit 2][Step] 0.0 - [GAP]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 1.0
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..setStepItemContent(
+            value: StepItemContentAsNewMessageConversation(
+              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _60',
+              imageSource: null, //
+              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
+            ),
+            isPriorityOverride: true,
+          ),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 0.0 - GAP
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[Unit 2][Step] 0.0 - [GAP]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 1.0
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..setStepItemContent(
+            value: StepItemContentAsNewMessageConversation(
+              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _70',
+              imageSource: null, //
+              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
+            ),
+            isPriorityOverride: true,
+          ),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 0.0 - GAP
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[Unit 2][Step] 0.0 - [GAP]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 1.0
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..setStepItemContent(
+            value: StepItemContentAsNewMessageConversation(
+              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _80',
+              imageSource: null, //
+              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
+            ),
+            isPriorityOverride: true,
+          ),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 0.0 - GAP
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[Unit 2][Step] 0.0 - [GAP]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 1.0
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..setStepItemContent(
+            value: StepItemContentAsNewMessageConversation(
+              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _90',
+              imageSource: null, //
+              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
+            ),
+            isPriorityOverride: true,
+          ),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 0.0 - GAP
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[Unit 2][Step] 0.0 - [GAP]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 1.0
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..setStepItemContent(
+            value: StepItemContentAsNewMessageConversation(
+              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _100',
+              imageSource: null, //
+              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
+            ),
+            isPriorityOverride: true,
+          ),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 0.0 - GAP
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[Unit 2][Step] 0.0 - [GAP]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 1.0
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..setStepItemContent(
+            value: StepItemContentAsNewMessageConversation(
+              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _110',
+              imageSource: null, //
+              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
+            ),
+            isPriorityOverride: true,
+          ),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 0.0 - GAP
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[Unit 2][Step] 0.0 - [GAP]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 1.0
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..setStepItemContent(
+            value: StepItemContentAsNewMessageConversation(
+              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _120',
+              imageSource: null, //
+              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
+            ),
+            isPriorityOverride: true,
+          ),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 0.0 - GAP
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[Unit 2][Step] 0.0 - [GAP]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 1.0
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..setStepItemContent(
+            value: StepItemContentAsNewMessageConversation(
+              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _130',
+              imageSource: null, //
+              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
+            ),
+            isPriorityOverride: true,
+          ),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 0.0 - GAP
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[Unit 2][Step] 0.0 - [GAP]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 1.0
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..setStepItemContent(
+            value: StepItemContentAsNewMessageConversation(
+              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _140',
+              imageSource: null, //
+              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
+            ),
+            isPriorityOverride: true,
+          ),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 0.0 - GAP
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[Unit 2][Step] 0.0 - [GAP]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 1.0
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..setStepItemContent(
+            value: StepItemContentAsNewMessageConversation(
+              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _150',
+              imageSource: null, //
+              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
+            ),
+            isPriorityOverride: true,
+          ),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 0.0 - GAP
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[Unit 2][Step] 0.0 - [GAP]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 1.0
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..setStepItemContent(
+            value: StepItemContentAsNewMessageConversation(
+              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _160',
+              imageSource: null, //
+              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
+            ),
+            isPriorityOverride: true,
+          ),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 0.0 - GAP
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[Unit 2][Step] 0.0 - [GAP]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 1.0
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..setStepItemContent(
+            value: StepItemContentAsNewMessageConversation(
+              message: null,
+              imageSource: 'assets/images/interesting_knowledge/knowledge_01.jpg', //
+              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
+            ),
+            isPriorityOverride: true,
+          ),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 0.0 - GAP
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[Unit 2][Step] 0.0 - [GAP]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step 1.0
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..setStepItemContent(
+            value: StepItemContentAsNewMessageConversation(
+              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _170',
+              imageSource: null, //
+              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
+            ),
+            isPriorityOverride: true,
+          ),
+      ),
+    );
+
+    /// -----
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
+    /// -----
+    getContentItemSequentialExecution?.getContentItemSectionSS01?.getContentItemUnitListAsStack?.add(contentItemUnit);
+
     return;
   }
 
