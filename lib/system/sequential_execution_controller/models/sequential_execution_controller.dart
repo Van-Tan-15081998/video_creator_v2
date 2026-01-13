@@ -41,6 +41,7 @@ import 'package:frame_creator_v2/master_data/content_item/04_content_item_sequen
 import 'package:frame_creator_v2/master_features/functional_features/functional_feature_management.dart';
 import 'package:frame_creator_v2/master_features/functional_features/two_character_conversation/models/two_character_conversation_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/countdown_timer/models/countdown_time_cycle_system_feature.dart';
+import 'package:frame_creator_v2/master_features/system_features/introductory_conversation/models/introductory_conversation_system_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/pomodoro_cycle/models/pomodoro_cycle_system_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/system_feature_management.dart';
 import 'package:frame_creator_v2/state_managements/mixins/feature_mixin.dart';
@@ -284,11 +285,18 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       getCountdownTimeCycleSystemFeature?.setTopPosition(value: 15.0 + (getSizeDy * 0.4 + 15.0), isPriorityOverride: true, isSetActiveTopPosition: true);
       getCountdownTimeCycleSystemFeature?.setRightPosition(value: 15.0, isPriorityOverride: true, isSetActiveRightPosition: true);
 
+      setIntroductoryConversationSystemFeature(value: IntroductoryConversationSystemFeature(systemStateManagement: getSystemStateManagement, sizeDx: null, sizeDy: null), isPriorityOverride: true);
+      getIntroductoryConversationSystemFeature?.setSizeDx(value: getSizeDx - 30.0, isPriorityOverride: true, isSetActiveSizeDx: true);
+      getIntroductoryConversationSystemFeature?.setSizeDy(value: getSizeDy - 30.0, isPriorityOverride: true, isSetActiveSizeDy: true);
+      getIntroductoryConversationSystemFeature?.setBottomPosition(value: 15.0, isPriorityOverride: true, isSetActiveBottomPosition: true);
+      getIntroductoryConversationSystemFeature?.setLeftPosition(value: 15.0, isPriorityOverride: true, isSetActiveLeftPosition: true);
+
       ///
       ///
       ///
       getSystemFeatureManagement?.setPomodoroCycleSystemFeature(value: getPomodoroCycleSystemFeature, isPriorityOverride: true);
       getSystemFeatureManagement?.setCountdownTimeCycleSystemFeature(value: getCountdownTimeCycleSystemFeature, isPriorityOverride: true);
+      getSystemFeatureManagement?.setIntroductoryConversationSystemFeature(value: getIntroductoryConversationSystemFeature, isPriorityOverride: true);
 
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -737,6 +745,7 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
                 /// TODO:
                 AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getPomodoroCycleSystemFeature?.getWindowWidget ?? Container()),
                 AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getCountdownTimeCycleSystemFeature?.getWindowWidget ?? Container()),
+                AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getIntroductoryConversationSystemFeature?.getWindowWidget ?? Container()),
 
                 /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
                 /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -840,6 +849,7 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       /// TODO:
       await getPomodoroCycleSystemFeature?.onSetupRoot();
       await getCountdownTimeCycleSystemFeature?.onSetupRoot();
+      await getIntroductoryConversationSystemFeature?.onSetupRoot();
 
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -923,9 +933,15 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       getPomodoroCycleSystemFeature
         ?..setConditionActiveByBottomDirection()
         ..onDeactivateWindow();
+
       /// TODO:
       getCountdownTimeCycleSystemFeature
         ?..setConditionActiveByRightDirection()
+        ..onDeactivateWindow();
+
+      /// TODO:
+      getIntroductoryConversationSystemFeature
+        ?..setConditionActiveByBottomDirection()
         ..onDeactivateWindow();
 
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -1088,6 +1104,7 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       /// TODO:
       await getPomodoroCycleSystemFeature?.onInitRoot();
       await getCountdownTimeCycleSystemFeature?.onInitRoot();
+      await getIntroductoryConversationSystemFeature?.onInitRoot();
 
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -1268,7 +1285,7 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.onActivateWindow();
       getSystemFeatureManagement?.getCountdownTimeCycleSystemFeature?.onActivateWindow();
 
-      getFunctionalFeatureManagement?.getTwoCharacterConversationFunctionalFeature?.onActivateWindow();
+      // getFunctionalFeatureManagement?.getTwoCharacterConversationFunctionalFeature?.onActivateWindow();
     }
 
     return;

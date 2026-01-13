@@ -6,25 +6,25 @@ import 'package:frame_creator_v2/features/introductory_conversation/models/intro
 import 'package:frame_creator_v2/features/introductory_conversation/widgets/contents/introductory_conversation_character_widget.dart';
 import 'package:frame_creator_v2/features/introductory_conversation/widgets/contents/introductory_conversation_content_widget.dart';
 
-class IntroductoryConversationWidget extends StatefulWidget {
-  const IntroductoryConversationWidget({super.key, required this.introductoryConversationFeature});
+class IntroductoryConversationWidget1 extends StatefulWidget {
+  const IntroductoryConversationWidget1({super.key, required this.introductoryConversationFeature});
 
   final IntroductoryConversationFeature? introductoryConversationFeature;
 
   @override
-  State<IntroductoryConversationWidget> createState() => _IntroductoryConversationWidgetState();
+  State<IntroductoryConversationWidget1> createState() => _IntroductoryConversationWidgetState();
 }
 
-class _IntroductoryConversationWidgetState extends State<IntroductoryConversationWidget> with SimpleAnimationPositionSize, SingleTickerProviderStateMixin {
+class _IntroductoryConversationWidgetState extends State<IntroductoryConversationWidget1> with SimpleAnimationPositionSize, SingleTickerProviderStateMixin {
   late final Ticker _ticker;
 
-  IntroductoryConversationContentWidget? _introductoryConversationContentWidget;
+  IntroductoryConversationContentWidget1? _introductoryConversationContentWidget;
 
   @override
   void initState() {
     super.initState();
 
-    _introductoryConversationContentWidget = IntroductoryConversationContentWidget(
+    _introductoryConversationContentWidget = IntroductoryConversationContentWidget1(
       systemStateManagement: widget.introductoryConversationFeature?.getSystemStateManagement,
       sizeDx: widget.introductoryConversationFeature?.getSizeDx ?? 0,
       sizeDy: widget.introductoryConversationFeature?.getSizeDy ?? 0,
@@ -143,7 +143,7 @@ class _IntroductoryConversationWidgetState extends State<IntroductoryConversatio
                             left: 0,
                             width: sizeDx,
                             height: sizeDy,
-                            child: IntroductoryConversationCharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy),
+                            child: IntroductoryConversationCharacterWidget1(sizeDx: sizeDx, sizeDy: sizeDy),
                           )
                         : Container(),
                   ],

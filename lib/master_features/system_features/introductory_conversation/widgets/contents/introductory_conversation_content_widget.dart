@@ -5,8 +5,8 @@ import 'package:frame_creator_v2/components/transparent_effect_wall/transparent_
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class IntroductoryConversationContentWidget1 extends StatefulWidget {
-  const IntroductoryConversationContentWidget1({super.key, required this.systemStateManagement, required this.sizeDx, required this.sizeDy});
+class IntroductoryConversationContentWidget extends StatefulWidget {
+  const IntroductoryConversationContentWidget({super.key, required this.systemStateManagement, required this.sizeDx, required this.sizeDy});
 
   /// -----
   /// TODO:
@@ -17,10 +17,10 @@ class IntroductoryConversationContentWidget1 extends StatefulWidget {
   final double sizeDy;
 
   @override
-  State<IntroductoryConversationContentWidget1> createState() => _IntroductoryConversationContentWidgetState();
+  State<IntroductoryConversationContentWidget> createState() => _IntroductoryConversationContentWidgetState();
 }
 
-class _IntroductoryConversationContentWidgetState extends State<IntroductoryConversationContentWidget1> {
+class _IntroductoryConversationContentWidgetState extends State<IntroductoryConversationContentWidget> {
   Timer? _timer;
 
   final ScrollController _scrollController = ScrollController();

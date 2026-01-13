@@ -1,17 +1,65 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
-import 'package:frame_creator_v2/core/window_feature.dart';
-import 'package:frame_creator_v2/features/introductory_conversation/widgets/introductory_conversation_widget.dart';
+import 'package:frame_creator_v2/master_data/content_item/01_content_item_unit/content_item_unit.dart';
+import 'package:frame_creator_v2/master_data/content_item/04_content_item_sequential_execution/content_item_sequential_execution.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/controller/functional_sequential_execution_controller.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item_state.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
+import 'package:frame_creator_v2/system/sequential_execution_controller/models/sequential_execution_controller.dart';
 
-class IntroductoryConversationFeature with ExecutionCore, WindowFeature {
-  IntroductoryConversationFeature({required SystemStateManagement? systemStateManagement, required this.onComplete, required double? sizeDx, required double? sizeDy}) {
-    setSystemStateManagement(value: systemStateManagement);
-    setSizeDx(value: sizeDx, isPriorityOverride: true);
-    setSizeDy(value: sizeDy, isPriorityOverride: true);
+class ScriptFrame with ExecutionCore {
+  ///
+  /// TODO:
+  ///
+  ScriptFrame({
+    required SystemStateManagement? systemStateManagement, //
+    required SequentialExecutionController? sequentialExecutionController, //
+    required ContentItemSequentialExecution? contentItemSequentialExecution, //
+    required FunctionalSequentialExecutionController? functionalSequentialExecutionController,
+  }) {
+    ///
+    setSystemStateManagement(value: systemStateManagement, isPriorityOverride: true);
+
+    ///
+    setSequentialExecutionController(value: sequentialExecutionController, isPriorityOverride: true);
+
+    ///
+    setContentItemSequentialExecution(value: contentItemSequentialExecution, isPriorityOverride: true);
+
+    ///
+    setFunctionalSequentialExecutionController(value: functionalSequentialExecutionController, isPriorityOverride: true);
   }
 
-  final VoidCallback? onComplete;
+  ///
+  /// TODO:
+  ///
+  ContentItemSequentialExecution? _contentItemSequentialExecution;
+  ContentItemSequentialExecution? get getContentItemSequentialExecution => _contentItemSequentialExecution;
+  void setContentItemSequentialExecution({required ContentItemSequentialExecution? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _contentItemSequentialExecution = value;
+    } else {
+      _contentItemSequentialExecution ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  /// TODO:
+  ///
+  FunctionalSequentialExecutionController? _functionalSequentialExecutionController;
+  FunctionalSequentialExecutionController? get getFunctionalSequentialExecutionController => _functionalSequentialExecutionController;
+  void setFunctionalSequentialExecutionController({required FunctionalSequentialExecutionController? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _functionalSequentialExecutionController = value;
+    } else {
+      _functionalSequentialExecutionController ??= value;
+    }
+
+    return;
+  }
 
   /// -----
   /// TODO: Attach Root
@@ -70,20 +118,6 @@ class IntroductoryConversationFeature with ExecutionCore, WindowFeature {
       /// -----
       /// TODO:
       /// -----
-      setWindowWidget(
-        value: LayoutBuilder(
-          builder: (context, constraints) {
-            return Stack(
-              alignment: AlignmentDirectional.center, //
-              children: [
-                // Text('ConversationFeature'), //
-                IntroductoryConversationWidget1(introductoryConversationFeature: this),
-              ],
-            );
-          },
-        ),
-        isPriorityOverride: true,
-      );
 
       /// -----
       /// TODO: Setup Root For SubCom

@@ -36,6 +36,7 @@ import 'package:frame_creator_v2/features/vocabulary_title/models/vocabulary_tit
 import 'package:frame_creator_v2/master_features/functional_features/functional_feature_management.dart';
 import 'package:frame_creator_v2/master_features/functional_features/two_character_conversation/models/two_character_conversation_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/countdown_timer/models/countdown_time_cycle_system_feature.dart';
+import 'package:frame_creator_v2/master_features/system_features/introductory_conversation/models/introductory_conversation_system_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/pomodoro_cycle/models/pomodoro_cycle_system_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/system_feature_management.dart';
 import 'package:frame_creator_v2/system/sequential_execution_controller/models/script_models/vocabulary_script_model.dart';
@@ -121,6 +122,22 @@ mixin MasterFeatureMixin {
       _countdownTimeCycleSystemFeature = value;
     } else {
       _countdownTimeCycleSystemFeature ??= value;
+    }
+
+    ///
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  IntroductoryConversationSystemFeature? _introductoryConversationSystemFeature;
+  IntroductoryConversationSystemFeature? get getIntroductoryConversationSystemFeature => _introductoryConversationSystemFeature;
+  void setIntroductoryConversationSystemFeature({required IntroductoryConversationSystemFeature? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _introductoryConversationSystemFeature = value;
+    } else {
+      _introductoryConversationSystemFeature ??= value;
     }
 
     ///

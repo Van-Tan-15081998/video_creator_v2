@@ -1,5 +1,6 @@
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/master_features/system_features/countdown_timer/models/countdown_time_cycle_system_feature.dart';
+import 'package:frame_creator_v2/master_features/system_features/introductory_conversation/models/introductory_conversation_system_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/pomodoro_cycle/models/pomodoro_cycle_system_feature.dart';
 import 'package:frame_creator_v2/state_managements/mixins/feature_mixin.dart';
 
@@ -30,6 +31,22 @@ class SystemFeatureManagement with ExecutionCore, FeatureMixin {
       _countdownTimeCycleSystemFeature = value;
     } else {
       _countdownTimeCycleSystemFeature ??= value;
+    }
+
+    ///
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  IntroductoryConversationSystemFeature? _introductoryConversationSystemFeature;
+  IntroductoryConversationSystemFeature? get getIntroductoryConversationSystemFeature => _introductoryConversationSystemFeature;
+  void setIntroductoryConversationSystemFeature({required IntroductoryConversationSystemFeature? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _introductoryConversationSystemFeature = value;
+    } else {
+      _introductoryConversationSystemFeature ??= value;
     }
 
     ///

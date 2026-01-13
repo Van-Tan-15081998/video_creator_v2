@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/core/window_feature.dart';
-import 'package:frame_creator_v2/features/introductory_conversation/widgets/introductory_conversation_widget.dart';
+import 'package:frame_creator_v2/master_features/system_features/introductory_conversation/widgets/introductory_conversation_widget.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 
-class IntroductoryConversationFeature with ExecutionCore, WindowFeature {
-  IntroductoryConversationFeature({required SystemStateManagement? systemStateManagement, required this.onComplete, required double? sizeDx, required double? sizeDy}) {
+class IntroductoryConversationSystemFeature with ExecutionCore, WindowFeature {
+  IntroductoryConversationSystemFeature({required SystemStateManagement? systemStateManagement, required double? sizeDx, required double? sizeDy}) {
     setSystemStateManagement(value: systemStateManagement);
     setSizeDx(value: sizeDx, isPriorityOverride: true);
     setSizeDy(value: sizeDy, isPriorityOverride: true);
   }
-
-  final VoidCallback? onComplete;
 
   /// -----
   /// TODO: Attach Root
@@ -75,10 +73,7 @@ class IntroductoryConversationFeature with ExecutionCore, WindowFeature {
           builder: (context, constraints) {
             return Stack(
               alignment: AlignmentDirectional.center, //
-              children: [
-                // Text('ConversationFeature'), //
-                IntroductoryConversationWidget1(introductoryConversationFeature: this),
-              ],
+              children: [IntroductoryConversationWidget(introductoryConversationSystemFeature: this)],
             );
           },
         ),

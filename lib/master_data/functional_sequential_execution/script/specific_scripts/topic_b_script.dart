@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:frame_creator_v2/master_data/content_item/01_content_item_unit/content_item_unit.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/functional_sequential_execution_script.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/system_sequential_execution_script.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/contents/details/step_item_content_as_new_message_conversation.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item_state.dart';
@@ -3805,6 +3806,35 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onSetupRoot();
     await contentItemUnit.onInitRoot();
 
+    /// -----
+    /// TODO: [OPEN TWO CHARACTER CONVERSATION WINDOW]
+    /// -----
+    getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onStartTwoCharacterConversationAsOpenWindow, contentItemUnit: contentItemUnit);
+
+
+    /// ----- | ----- | -----
+    /// TODO: Step 0.0 - GAP
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[Unit 2][Step] 0.0 - [GAP]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
     /// ----- | ----- | -----
     /// TODO: Step 1.0
     /// ----- | ----- | -----
@@ -4754,6 +4784,34 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
       ),
     );
 
+    /// ----- | ----- | -----
+    /// TODO: Step 0.0 - GAP
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[Unit 2][Step] 0.0 - [GAP]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// -----
+    /// TODO: [CLOSE TWO CHARACTER CONVERSATION WINDOW]
+    /// -----
+    getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onFinishTwoCharacterConversationAsCloseWindow, contentItemUnit: contentItemUnit);
+
     /// -----
     /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
@@ -5361,6 +5419,34 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onSetupRoot();
     await contentItemUnit.onInitRoot();
 
+    /// -----
+    /// TODO: [OPEN INTRODUCTORY CONVERSATION WINDOW]
+    /// -----
+    getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onStartIntroductoryConversationAsOpenWindow, contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | -----
+    /// TODO: Step GAP
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID_GAP_]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[GAP]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
     /// ----- | ----- | -----
     /// TODO: Step 1.0
     /// ----- | ----- | -----
@@ -5372,7 +5458,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[DONE_LAST_FINISH][Step] 1.0');
+              print('__________[]');
             }
 
             ///
@@ -5382,6 +5468,34 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           },
       ),
     );
+
+    /// ----- | ----- | -----
+    /// TODO: Step GAP
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID_GAP_]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[GAP]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// -----
+    /// TODO: [CLOSE INTRODUCTORY CONVERSATION WINDOW]
+    /// -----
+    getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onFinishIntroductoryConversationAsCloseWindow, contentItemUnit: contentItemUnit);
 
     /// ----- | ----- | -----
     /// TODO: Step End
@@ -5394,7 +5508,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('__________[]');
             }
 
             ///

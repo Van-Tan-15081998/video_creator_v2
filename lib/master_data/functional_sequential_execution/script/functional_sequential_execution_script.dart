@@ -2,6 +2,7 @@ import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/master_data/content_item/03_content_stage/abstract/content_stage.dart';
 import 'package:frame_creator_v2/master_data/content_item/04_content_item_sequential_execution/content_item_sequential_execution.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/controller/functional_sequential_execution_controller.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/system_sequential_execution_script.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item_state.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/status/flow_controller.dart';
@@ -18,7 +19,6 @@ abstract class FunctionalSequentialExecutionScript with ExecutionCore {
     required ContentItemSequentialExecution? contentItemSequentialExecution, //
     required FunctionalSequentialExecutionController? functionalSequentialExecutionController,
   }) {
-    
     ///
     setSystemStateManagement(value: systemStateManagement, isPriorityOverride: true);
 
@@ -30,6 +30,19 @@ abstract class FunctionalSequentialExecutionScript with ExecutionCore {
 
     ///
     setFunctionalSequentialExecutionController(value: functionalSequentialExecutionController, isPriorityOverride: true);
+
+    /// -----
+    /// TODO:
+    /// -----
+    setSystemSequentialExecutionScript(
+      value: SystemSequentialExecutionScript(
+        systemStateManagement: getSystemStateManagement,
+        sequentialExecutionController: getSequentialExecutionController,
+        contentItemSequentialExecution: getContentItemSequentialExecution,
+        functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
+      ),
+      isPriorityOverride: true,
+    );
   }
 
   ///
@@ -62,16 +75,16 @@ abstract class FunctionalSequentialExecutionScript with ExecutionCore {
     return;
   }
 
-  ///
+  /// -----
   /// TODO:
-  ///
-  int? _seconds;
-  int get getSeconds => _seconds ?? 0;
-  void setSeconds({required int? value, bool? isPriorityOverride}) {
+  /// -----
+  SystemSequentialExecutionScript? _systemSequentialExecutionScript;
+  SystemSequentialExecutionScript? get getSystemSequentialExecutionScript => _systemSequentialExecutionScript;
+  void setSystemSequentialExecutionScript({required SystemSequentialExecutionScript? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
-      _seconds = value;
+      _systemSequentialExecutionScript = value;
     } else {
-      _seconds ??= value;
+      _systemSequentialExecutionScript ??= value;
     }
 
     return;
