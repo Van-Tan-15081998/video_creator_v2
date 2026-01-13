@@ -1,11 +1,46 @@
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
-import 'package:frame_creator_v2/master_data/content_item/03_content_stage/abstract/content_stage.dart';
 import 'package:frame_creator_v2/master_data/content_item/04_content_item_sequential_execution/content_item_sequential_execution.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/controller/functional_sequential_execution_controller.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/01_start/first_start_script_frame_1st_as_go.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/01_start/first_start_script_frame_2nd_as_main.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/01_start/first_start_script_frame_3rd_as_done.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/02_finish/last_finish_script_frame_1st_as_go.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/02_finish/last_finish_script_frame_2nd_as_main.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/02_finish/last_finish_script_frame_3rd_as_done.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/03_bridge/bridge_script_frame_as_1st_From_Done_First_Start_To_Go_Pomodoro_Stay_Focused_SS01.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/03_bridge/bridge_script_frame_as_2nd_From_Done_Pomodoro_Stay_Focused_SS01_To_Go_Pomodoro_Break_Time_SS01.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/03_bridge/bridge_script_frame_as_3rd_From_Done_Pomodoro_Break_Time_SS01_To_Go_Pomodoro_Stay_Focused_SS02.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/03_bridge/bridge_script_frame_as_4th_From_Done_Pomodoro_Stay_Focused_SS02_To_Go_Pomodoro_Break_Time_SS02.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/03_bridge/bridge_script_frame_as_5th_From_Done_Pomodoro_Break_Time_SS02_To_Go_Pomodoro_Stay_Focused_SS03.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/03_bridge/bridge_script_frame_as_6th_From_Done_Pomodoro_Stay_Focused_SS03_To_Go_Pomodoro_Break_Time_SS03.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/03_bridge/bridge_script_frame_as_7th_From_Done_Pomodoro_Break_Time_SS03_To_Go_Pomodoro_Stay_Focused_SS04.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/03_bridge/bridge_script_frame_as_8th_From_Done_Pomodoro_Stay_Focused_SS04_To_Go_Pomodoro_Break_Time_SS04.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/03_bridge/bridge_script_frame_as_9th_From_Done_Pomodoro_Break_Time_SS04_To_Go_Last_Finish.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/04_break_time/break_time_ss01/pomodoro_break_time_ss01_script_frame_1st_as_go.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/04_break_time/break_time_ss01/pomodoro_break_time_ss01_script_frame_2nd_as_main.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/04_break_time/break_time_ss01/pomodoro_break_time_ss01_script_frame_3rd_as_done.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/04_break_time/break_time_ss02/pomodoro_break_time_ss02_script_frame_1st_as_go.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/04_break_time/break_time_ss02/pomodoro_break_time_ss02_script_frame_2nd_as_main.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/04_break_time/break_time_ss02/pomodoro_break_time_ss02_script_frame_3rd_as_done.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/04_break_time/break_time_ss03/pomodoro_break_time_ss03_script_frame_1st_as_go.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/04_break_time/break_time_ss03/pomodoro_break_time_ss03_script_frame_2nd_as_main.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/04_break_time/break_time_ss03/pomodoro_break_time_ss03_script_frame_3rd_as_done.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/04_break_time/break_time_ss04/pomodoro_break_time_ss04_script_frame_1st_as_go.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/04_break_time/break_time_ss04/pomodoro_break_time_ss04_script_frame_2nd_as_main.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/04_break_time/break_time_ss04/pomodoro_break_time_ss04_script_frame_3rd_as_done.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/05_stay_focused/stay_focused_ss01/pomodoro_stay_focused_ss01_script_frame_1st_as_go.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/05_stay_focused/stay_focused_ss01/pomodoro_stay_focused_ss01_script_frame_2nd_as_main.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/05_stay_focused/stay_focused_ss01/pomodoro_stay_focused_ss01_script_frame_3rd_as_done.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/05_stay_focused/stay_focused_ss02/pomodoro_stay_focused_ss02_script_frame_1st_as_go.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/05_stay_focused/stay_focused_ss02/pomodoro_stay_focused_ss02_script_frame_2nd_as_main.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/05_stay_focused/stay_focused_ss02/pomodoro_stay_focused_ss02_script_frame_3rd_as_done.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/05_stay_focused/stay_focused_ss03/pomodoro_stay_focused_ss03_script_frame_1st_as_go.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/05_stay_focused/stay_focused_ss03/pomodoro_stay_focused_ss03_script_frame_2nd_as_main.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/05_stay_focused/stay_focused_ss03/pomodoro_stay_focused_ss03_script_frame_3rd_as_done.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/05_stay_focused/stay_focused_ss04/pomodoro_stay_focused_ss04_script_frame_1st_as_go.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/05_stay_focused/stay_focused_ss04/pomodoro_stay_focused_ss04_script_frame_2nd_as_main.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/05_stay_focused/stay_focused_ss04/pomodoro_stay_focused_ss04_script_frame_3rd_as_done.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/system_sequential_execution_script.dart';
-import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item.dart';
-import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item_state.dart';
-import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/status/flow_controller.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 import 'package:frame_creator_v2/system/sequential_execution_controller/models/sequential_execution_controller.dart';
 
@@ -43,6 +78,8 @@ abstract class FunctionalSequentialExecutionScript with ExecutionCore {
       ),
       isPriorityOverride: true,
     );
+
+    onSetScriptFrame();
   }
 
   ///
@@ -90,6 +127,519 @@ abstract class FunctionalSequentialExecutionScript with ExecutionCore {
     return;
   }
 
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: SCRIPT FRAMES [START]
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+  /// -----
+  /// TODO:
+  /// -----
+  void onSetScriptFrame();
+
+  // 01_start
+  ///
+  FirstStartScriptFrame1stAsGo? _firstStartScriptFrame1stAsGo;
+  FirstStartScriptFrame1stAsGo? get getFirstStartScriptFrame1stAsGo => _firstStartScriptFrame1stAsGo;
+  void setFirstStartScriptFrame1stAsGo({required FirstStartScriptFrame1stAsGo? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _firstStartScriptFrame1stAsGo = value;
+    } else {
+      _firstStartScriptFrame1stAsGo ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  FirstStartScriptFrame2ndAsMain? _firstStartScriptFrame2ndAsMain;
+  FirstStartScriptFrame2ndAsMain? get getFirstStartScriptFrame2ndAsMain => _firstStartScriptFrame2ndAsMain;
+  void setFirstStartScriptFrame2ndAsMain({required FirstStartScriptFrame2ndAsMain? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _firstStartScriptFrame2ndAsMain = value;
+    } else {
+      _firstStartScriptFrame2ndAsMain ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  FirstStartScriptFrame3rdAsDone? _firstStartScriptFrame3rdAsDone;
+  FirstStartScriptFrame3rdAsDone? get getFirstStartScriptFrame3rdAsDone => _firstStartScriptFrame3rdAsDone;
+  void setFirstStartScriptFrame3rdAsDone({required FirstStartScriptFrame3rdAsDone? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _firstStartScriptFrame3rdAsDone = value;
+    } else {
+      _firstStartScriptFrame3rdAsDone ??= value;
+    }
+
+    return;
+  }
+
+  // 02_finish
+  ///
+  LastFinishScriptFrame1stAsGo? _lastFinishScriptFrame1stAsGo;
+  LastFinishScriptFrame1stAsGo? get getLastFinishScriptFrame1stAsGo => _lastFinishScriptFrame1stAsGo;
+  void setLastFinishScriptFrame1stAsGo({required LastFinishScriptFrame1stAsGo? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _lastFinishScriptFrame1stAsGo = value;
+    } else {
+      _lastFinishScriptFrame1stAsGo ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  LastFinishScriptFrame2ndAsMain? _lastFinishScriptFrame2ndAsMain;
+  LastFinishScriptFrame2ndAsMain? get getLastFinishScriptFrame2ndAsMain => _lastFinishScriptFrame2ndAsMain;
+  void setLastFinishScriptFrame2ndAsMain({required LastFinishScriptFrame2ndAsMain? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _lastFinishScriptFrame2ndAsMain = value;
+    } else {
+      _lastFinishScriptFrame2ndAsMain ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  LastFinishScriptFrame3rdAsDone? _lastFinishScriptFrame3rdAsDone;
+  LastFinishScriptFrame3rdAsDone? get getLastFinishScriptFrame3rdAsDone => _lastFinishScriptFrame3rdAsDone;
+  void setLastFinishScriptFrame3rdAsDone({required LastFinishScriptFrame3rdAsDone? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _lastFinishScriptFrame3rdAsDone = value;
+    } else {
+      _lastFinishScriptFrame3rdAsDone ??= value;
+    }
+
+    return;
+  }
+
+  // 03_bridge
+  ///
+  BridgeScriptFrameAs1stFromDoneFirstStartToGoPomodoroStayFocusedSs01? _bridgeScriptFrameAs1stFromDoneFirstStartToGoPomodoroStayFocusedSs01;
+  BridgeScriptFrameAs1stFromDoneFirstStartToGoPomodoroStayFocusedSs01? get getBridgeScriptFrameAs1stFromDoneFirstStartToGoPomodoroStayFocusedSs01 => _bridgeScriptFrameAs1stFromDoneFirstStartToGoPomodoroStayFocusedSs01;
+  void setBridgeScriptFrameAs1stFromDoneFirstStartToGoPomodoroStayFocusedSs01({required BridgeScriptFrameAs1stFromDoneFirstStartToGoPomodoroStayFocusedSs01? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeScriptFrameAs1stFromDoneFirstStartToGoPomodoroStayFocusedSs01 = value;
+    } else {
+      _bridgeScriptFrameAs1stFromDoneFirstStartToGoPomodoroStayFocusedSs01 ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  BridgeScriptFrameAs2ndFromDonePomodoroStayFocusedSs01ToGoPomodoroBreakTimeSs01? _bridgeScriptFrameAs2ndFromDonePomodoroStayFocusedSs01ToGoPomodoroBreakTimeSs01;
+  BridgeScriptFrameAs2ndFromDonePomodoroStayFocusedSs01ToGoPomodoroBreakTimeSs01? get getBridgeScriptFrameAs2ndFromDonePomodoroStayFocusedSs01ToGoPomodoroBreakTimeSs01 => _bridgeScriptFrameAs2ndFromDonePomodoroStayFocusedSs01ToGoPomodoroBreakTimeSs01;
+  void setBridgeScriptFrameAs2ndFromDonePomodoroStayFocusedSs01ToGoPomodoroBreakTimeSs01({required BridgeScriptFrameAs2ndFromDonePomodoroStayFocusedSs01ToGoPomodoroBreakTimeSs01? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeScriptFrameAs2ndFromDonePomodoroStayFocusedSs01ToGoPomodoroBreakTimeSs01 = value;
+    } else {
+      _bridgeScriptFrameAs2ndFromDonePomodoroStayFocusedSs01ToGoPomodoroBreakTimeSs01 ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  BridgeScriptFrameAs3rdFromDonePomodoroBreakTimeSs01ToGoPomodoroStayFocusedSs02? _bridgeScriptFrameAs3rdFromDonePomodoroBreakTimeSs01ToGoPomodoroStayFocusedSs02;
+  BridgeScriptFrameAs3rdFromDonePomodoroBreakTimeSs01ToGoPomodoroStayFocusedSs02? get getBridgeScriptFrameAs3rdFromDonePomodoroBreakTimeSs01ToGoPomodoroStayFocusedSs02 => _bridgeScriptFrameAs3rdFromDonePomodoroBreakTimeSs01ToGoPomodoroStayFocusedSs02;
+  void setBridgeScriptFrameAs3rdFromDonePomodoroBreakTimeSs01ToGoPomodoroStayFocusedSs02({required BridgeScriptFrameAs3rdFromDonePomodoroBreakTimeSs01ToGoPomodoroStayFocusedSs02? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeScriptFrameAs3rdFromDonePomodoroBreakTimeSs01ToGoPomodoroStayFocusedSs02 = value;
+    } else {
+      _bridgeScriptFrameAs3rdFromDonePomodoroBreakTimeSs01ToGoPomodoroStayFocusedSs02 ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  BridgeScriptFrameAs4thFromDonePomodoroStayFocusedSs02ToGoPomodoroBreakTimeSs02? _bridgeScriptFrameAs4thFromDonePomodoroStayFocusedSs02ToGoPomodoroBreakTimeSs02;
+  BridgeScriptFrameAs4thFromDonePomodoroStayFocusedSs02ToGoPomodoroBreakTimeSs02? get getBridgeScriptFrameAs4thFromDonePomodoroStayFocusedSs02ToGoPomodoroBreakTimeSs02 => _bridgeScriptFrameAs4thFromDonePomodoroStayFocusedSs02ToGoPomodoroBreakTimeSs02;
+  void setBridgeScriptFrameAs4thFromDonePomodoroStayFocusedSs02ToGoPomodoroBreakTimeSs02({required BridgeScriptFrameAs4thFromDonePomodoroStayFocusedSs02ToGoPomodoroBreakTimeSs02? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeScriptFrameAs4thFromDonePomodoroStayFocusedSs02ToGoPomodoroBreakTimeSs02 = value;
+    } else {
+      _bridgeScriptFrameAs4thFromDonePomodoroStayFocusedSs02ToGoPomodoroBreakTimeSs02 ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  BridgeScriptFrameAs5thFromDonePomodoroBreakTimeSs02ToGoPomodoroStayFocusedSs03? _bridgeScriptFrameAs5thFromDonePomodoroBreakTimeSs02ToGoPomodoroStayFocusedSs03;
+  BridgeScriptFrameAs5thFromDonePomodoroBreakTimeSs02ToGoPomodoroStayFocusedSs03? get getBridgeScriptFrameAs5thFromDonePomodoroBreakTimeSs02ToGoPomodoroStayFocusedSs03 => _bridgeScriptFrameAs5thFromDonePomodoroBreakTimeSs02ToGoPomodoroStayFocusedSs03;
+  void setBridgeScriptFrameAs5thFromDonePomodoroBreakTimeSs02ToGoPomodoroStayFocusedSs03({required BridgeScriptFrameAs5thFromDonePomodoroBreakTimeSs02ToGoPomodoroStayFocusedSs03? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeScriptFrameAs5thFromDonePomodoroBreakTimeSs02ToGoPomodoroStayFocusedSs03 = value;
+    } else {
+      _bridgeScriptFrameAs5thFromDonePomodoroBreakTimeSs02ToGoPomodoroStayFocusedSs03 ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  BridgeScriptFrameAs6thFromDonePomodoroStayFocusedSs03ToGoPomodoroBreakTimeSs03? _bridgeScriptFrameAs6thFromDonePomodoroStayFocusedSs03ToGoPomodoroBreakTimeSs03;
+  BridgeScriptFrameAs6thFromDonePomodoroStayFocusedSs03ToGoPomodoroBreakTimeSs03? get getBridgeScriptFrameAs6thFromDonePomodoroStayFocusedSs03ToGoPomodoroBreakTimeSs03 => _bridgeScriptFrameAs6thFromDonePomodoroStayFocusedSs03ToGoPomodoroBreakTimeSs03;
+  void setBridgeScriptFrameAs6thFromDonePomodoroStayFocusedSs03ToGoPomodoroBreakTimeSs03({required BridgeScriptFrameAs6thFromDonePomodoroStayFocusedSs03ToGoPomodoroBreakTimeSs03? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeScriptFrameAs6thFromDonePomodoroStayFocusedSs03ToGoPomodoroBreakTimeSs03 = value;
+    } else {
+      _bridgeScriptFrameAs6thFromDonePomodoroStayFocusedSs03ToGoPomodoroBreakTimeSs03 ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  BridgeScriptFrameAs7thFromDonePomodoroBreakTimeSs03ToGoPomodoroStayFocusedSs04? _bridgeScriptFrameAs7thFromDonePomodoroBreakTimeSs03ToGoPomodoroStayFocusedSs04;
+  BridgeScriptFrameAs7thFromDonePomodoroBreakTimeSs03ToGoPomodoroStayFocusedSs04? get getBridgeScriptFrameAs7thFromDonePomodoroBreakTimeSs03ToGoPomodoroStayFocusedSs04 => _bridgeScriptFrameAs7thFromDonePomodoroBreakTimeSs03ToGoPomodoroStayFocusedSs04;
+  void setBridgeScriptFrameAs7thFromDonePomodoroBreakTimeSs03ToGoPomodoroStayFocusedSs04({required BridgeScriptFrameAs7thFromDonePomodoroBreakTimeSs03ToGoPomodoroStayFocusedSs04? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeScriptFrameAs7thFromDonePomodoroBreakTimeSs03ToGoPomodoroStayFocusedSs04 = value;
+    } else {
+      _bridgeScriptFrameAs7thFromDonePomodoroBreakTimeSs03ToGoPomodoroStayFocusedSs04 ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  BridgeScriptFrameAs8thFromDonePomodoroStayFocusedSs04ToGoPomodoroBreakTimeSs04? _bridgeScriptFrameAs8thFromDonePomodoroStayFocusedSs04ToGoPomodoroBreakTimeSs04;
+  BridgeScriptFrameAs8thFromDonePomodoroStayFocusedSs04ToGoPomodoroBreakTimeSs04? get getBridgeScriptFrameAs8thFromDonePomodoroStayFocusedSs04ToGoPomodoroBreakTimeSs04 => _bridgeScriptFrameAs8thFromDonePomodoroStayFocusedSs04ToGoPomodoroBreakTimeSs04;
+  void setBridgeScriptFrameAs8thFromDonePomodoroStayFocusedSs04ToGoPomodoroBreakTimeSs04({required BridgeScriptFrameAs8thFromDonePomodoroStayFocusedSs04ToGoPomodoroBreakTimeSs04? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeScriptFrameAs8thFromDonePomodoroStayFocusedSs04ToGoPomodoroBreakTimeSs04 = value;
+    } else {
+      _bridgeScriptFrameAs8thFromDonePomodoroStayFocusedSs04ToGoPomodoroBreakTimeSs04 ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  BridgeScriptFrameAs9thFromDonePomodoroBreakTimeSs04ToGoLastFinish? _bridgeScriptFrameAs9thFromDonePomodoroBreakTimeSs04ToGoLastFinish;
+  BridgeScriptFrameAs9thFromDonePomodoroBreakTimeSs04ToGoLastFinish? get getBridgeScriptFrameAs9thFromDonePomodoroBreakTimeSs04ToGoLastFinish => _bridgeScriptFrameAs9thFromDonePomodoroBreakTimeSs04ToGoLastFinish;
+  void setBridgeScriptFrameAs9thFromDonePomodoroBreakTimeSs04ToGoLastFinish({required BridgeScriptFrameAs9thFromDonePomodoroBreakTimeSs04ToGoLastFinish? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bridgeScriptFrameAs9thFromDonePomodoroBreakTimeSs04ToGoLastFinish = value;
+    } else {
+      _bridgeScriptFrameAs9thFromDonePomodoroBreakTimeSs04ToGoLastFinish ??= value;
+    }
+
+    return;
+  }
+
+  // 04_break_time
+  ///
+  PomodoroBreakTimeSs01ScriptFrame1stAsGo? _pomodoroBreakTimeSs01ScriptFrame1stAsGo;
+  PomodoroBreakTimeSs01ScriptFrame1stAsGo? get getPomodoroBreakTimeSs01ScriptFrame1stAsGo => _pomodoroBreakTimeSs01ScriptFrame1stAsGo;
+  void setPomodoroBreakTimeSs01ScriptFrame1stAsGo({required PomodoroBreakTimeSs01ScriptFrame1stAsGo? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroBreakTimeSs01ScriptFrame1stAsGo = value;
+    } else {
+      _pomodoroBreakTimeSs01ScriptFrame1stAsGo ??= value;
+    }
+
+    return;
+  }
+
+  PomodoroBreakTimeSs01ScriptFrame2ndAsMain? _pomodoroBreakTimeSs01ScriptFrame2ndAsMain;
+  PomodoroBreakTimeSs01ScriptFrame2ndAsMain? get getPomodoroBreakTimeSs01ScriptFrame2ndAsMain => _pomodoroBreakTimeSs01ScriptFrame2ndAsMain;
+  void setPomodoroBreakTimeSs01ScriptFrame2ndAsMain({required PomodoroBreakTimeSs01ScriptFrame2ndAsMain? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroBreakTimeSs01ScriptFrame2ndAsMain = value;
+    } else {
+      _pomodoroBreakTimeSs01ScriptFrame2ndAsMain ??= value;
+    }
+
+    return;
+  }
+
+  PomodoroBreakTimeSs01ScriptFrame3rdAsDone? _pomodoroBreakTimeSs01ScriptFrame3rdAsDone;
+  PomodoroBreakTimeSs01ScriptFrame3rdAsDone? get getPomodoroBreakTimeSs01ScriptFrame3rdAsDone => _pomodoroBreakTimeSs01ScriptFrame3rdAsDone;
+  void setPomodoroBreakTimeSs01ScriptFrame3rdAsDone({required PomodoroBreakTimeSs01ScriptFrame3rdAsDone? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroBreakTimeSs01ScriptFrame3rdAsDone = value;
+    } else {
+      _pomodoroBreakTimeSs01ScriptFrame3rdAsDone ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  PomodoroBreakTimeSs02ScriptFrame1stAsGo? _pomodoroBreakTimeSs02ScriptFrame1stAsGo;
+  PomodoroBreakTimeSs02ScriptFrame1stAsGo? get getPomodoroBreakTimeSs02ScriptFrame1stAsGo => _pomodoroBreakTimeSs02ScriptFrame1stAsGo;
+  void setPomodoroBreakTimeSs02ScriptFrame1stAsGo({required PomodoroBreakTimeSs02ScriptFrame1stAsGo? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroBreakTimeSs02ScriptFrame1stAsGo = value;
+    } else {
+      _pomodoroBreakTimeSs02ScriptFrame1stAsGo ??= value;
+    }
+
+    return;
+  }
+
+  PomodoroBreakTimeSs02ScriptFrame2ndAsMain? _pomodoroBreakTimeSs02ScriptFrame2ndAsMain;
+  PomodoroBreakTimeSs02ScriptFrame2ndAsMain? get getPomodoroBreakTimeSs02ScriptFrame2ndAsMain => _pomodoroBreakTimeSs02ScriptFrame2ndAsMain;
+  void setPomodoroBreakTimeSs02ScriptFrame2ndAsMain({required PomodoroBreakTimeSs02ScriptFrame2ndAsMain? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroBreakTimeSs02ScriptFrame2ndAsMain = value;
+    } else {
+      _pomodoroBreakTimeSs02ScriptFrame2ndAsMain ??= value;
+    }
+
+    return;
+  }
+
+  PomodoroBreakTimeSs02ScriptFrame3rdAsDone? _pomodoroBreakTimeSs02ScriptFrame3rdAsDone;
+  PomodoroBreakTimeSs02ScriptFrame3rdAsDone? get getPomodoroBreakTimeSs02ScriptFrame3rdAsDone => _pomodoroBreakTimeSs02ScriptFrame3rdAsDone;
+  void setPomodoroBreakTimeSs02ScriptFrame3rdAsDone({required PomodoroBreakTimeSs02ScriptFrame3rdAsDone? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroBreakTimeSs02ScriptFrame3rdAsDone = value;
+    } else {
+      _pomodoroBreakTimeSs02ScriptFrame3rdAsDone ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  PomodoroBreakTimeSs03ScriptFrame1stAsGo? _pomodoroBreakTimeSs03ScriptFrame1stAsGo;
+  PomodoroBreakTimeSs03ScriptFrame1stAsGo? get getPomodoroBreakTimeSs03ScriptFrame1stAsGo => _pomodoroBreakTimeSs03ScriptFrame1stAsGo;
+  void setPomodoroBreakTimeSs03ScriptFrame1stAsGo({required PomodoroBreakTimeSs03ScriptFrame1stAsGo? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroBreakTimeSs03ScriptFrame1stAsGo = value;
+    } else {
+      _pomodoroBreakTimeSs03ScriptFrame1stAsGo ??= value;
+    }
+
+    return;
+  }
+
+  PomodoroBreakTimeSs03ScriptFrame2ndAsMain? _pomodoroBreakTimeSs03ScriptFrame2ndAsMain;
+  PomodoroBreakTimeSs03ScriptFrame2ndAsMain? get getPomodoroBreakTimeSs03ScriptFrame2ndAsMain => _pomodoroBreakTimeSs03ScriptFrame2ndAsMain;
+  void setPomodoroBreakTimeSs03ScriptFrame2ndAsMain({required PomodoroBreakTimeSs03ScriptFrame2ndAsMain? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroBreakTimeSs03ScriptFrame2ndAsMain = value;
+    } else {
+      _pomodoroBreakTimeSs03ScriptFrame2ndAsMain ??= value;
+    }
+
+    return;
+  }
+
+  PomodoroBreakTimeSs03ScriptFrame3rdAsDone? _pomodoroBreakTimeSs03ScriptFrame3rdAsDone;
+  PomodoroBreakTimeSs03ScriptFrame3rdAsDone? get getPomodoroBreakTimeSs03ScriptFrame3rdAsDone => _pomodoroBreakTimeSs03ScriptFrame3rdAsDone;
+  void setPomodoroBreakTimeSs03ScriptFrame3rdAsDone({required PomodoroBreakTimeSs03ScriptFrame3rdAsDone? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroBreakTimeSs03ScriptFrame3rdAsDone = value;
+    } else {
+      _pomodoroBreakTimeSs03ScriptFrame3rdAsDone ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  PomodoroBreakTimeSs04ScriptFrame1stAsGo? _pomodoroBreakTimeSs04ScriptFrame1stAsGo;
+  PomodoroBreakTimeSs04ScriptFrame1stAsGo? get getPomodoroBreakTimeSs04ScriptFrame1stAsGo => _pomodoroBreakTimeSs04ScriptFrame1stAsGo;
+  void setPomodoroBreakTimeSs04ScriptFrame1stAsGo({required PomodoroBreakTimeSs04ScriptFrame1stAsGo? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroBreakTimeSs04ScriptFrame1stAsGo = value;
+    } else {
+      _pomodoroBreakTimeSs04ScriptFrame1stAsGo ??= value;
+    }
+
+    return;
+  }
+
+  PomodoroBreakTimeSs04ScriptFrame2ndAsMain? _pomodoroBreakTimeSs04ScriptFrame2ndAsMain;
+  PomodoroBreakTimeSs04ScriptFrame2ndAsMain? get getPomodoroBreakTimeSs04ScriptFrame2ndAsMain => _pomodoroBreakTimeSs04ScriptFrame2ndAsMain;
+  void setPomodoroBreakTimeSs04ScriptFrame2ndAsMain({required PomodoroBreakTimeSs04ScriptFrame2ndAsMain? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroBreakTimeSs04ScriptFrame2ndAsMain = value;
+    } else {
+      _pomodoroBreakTimeSs04ScriptFrame2ndAsMain ??= value;
+    }
+
+    return;
+  }
+
+  PomodoroBreakTimeSs04ScriptFrame3rdAsDone? _pomodoroBreakTimeSs04ScriptFrame3rdAsDone;
+  PomodoroBreakTimeSs04ScriptFrame3rdAsDone? get getPomodoroBreakTimeSs04ScriptFrame3rdAsDone => _pomodoroBreakTimeSs04ScriptFrame3rdAsDone;
+  void setPomodoroBreakTimeSs04ScriptFrame3rdAsDone({required PomodoroBreakTimeSs04ScriptFrame3rdAsDone? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroBreakTimeSs04ScriptFrame3rdAsDone = value;
+    } else {
+      _pomodoroBreakTimeSs04ScriptFrame3rdAsDone ??= value;
+    }
+
+    return;
+  }
+
+  // 05_stay_focused
+  ///
+  PomodoroStayFocusedSs01ScriptFrame1stAsGo? _pomodoroStayFocusedSs01ScriptFrame1stAsGo;
+  PomodoroStayFocusedSs01ScriptFrame1stAsGo? get getPomodoroStayFocusedSs01ScriptFrame1stAsGo => _pomodoroStayFocusedSs01ScriptFrame1stAsGo;
+  void setPomodoroStayFocusedSs01ScriptFrame1stAsGo({required PomodoroStayFocusedSs01ScriptFrame1stAsGo? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroStayFocusedSs01ScriptFrame1stAsGo = value;
+    } else {
+      _pomodoroStayFocusedSs01ScriptFrame1stAsGo ??= value;
+    }
+
+    return;
+  }
+
+  PomodoroStayFocusedSs01ScriptFrame2ndAsMain? _pomodoroStayFocusedSs01ScriptFrame2ndAsMain;
+  PomodoroStayFocusedSs01ScriptFrame2ndAsMain? get getPomodoroStayFocusedSs01ScriptFrame2ndAsMain => _pomodoroStayFocusedSs01ScriptFrame2ndAsMain;
+  void setPomodoroStayFocusedSs01ScriptFrame2ndAsMain({required PomodoroStayFocusedSs01ScriptFrame2ndAsMain? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroStayFocusedSs01ScriptFrame2ndAsMain = value;
+    } else {
+      _pomodoroStayFocusedSs01ScriptFrame2ndAsMain ??= value;
+    }
+
+    return;
+  }
+
+  PomodoroStayFocusedSs01ScriptFrame3rdAsDone? _pomodoroStayFocusedSs01ScriptFrame3rdAsDone;
+  PomodoroStayFocusedSs01ScriptFrame3rdAsDone? get getPomodoroStayFocusedSs01ScriptFrame3rdAsDone => _pomodoroStayFocusedSs01ScriptFrame3rdAsDone;
+  void setPomodoroStayFocusedSs01ScriptFrame3rdAsDone({required PomodoroStayFocusedSs01ScriptFrame3rdAsDone? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroStayFocusedSs01ScriptFrame3rdAsDone = value;
+    } else {
+      _pomodoroStayFocusedSs01ScriptFrame3rdAsDone ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  PomodoroStayFocusedSs02ScriptFrame1stAsGo? _pomodoroStayFocusedSs02ScriptFrame1stAsGo;
+  PomodoroStayFocusedSs02ScriptFrame1stAsGo? get getPomodoroStayFocusedSs02ScriptFrame1stAsGo => _pomodoroStayFocusedSs02ScriptFrame1stAsGo;
+  void setPomodoroStayFocusedSs02ScriptFrame1stAsGo({required PomodoroStayFocusedSs02ScriptFrame1stAsGo? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroStayFocusedSs02ScriptFrame1stAsGo = value;
+    } else {
+      _pomodoroStayFocusedSs02ScriptFrame1stAsGo ??= value;
+    }
+
+    return;
+  }
+
+  PomodoroStayFocusedSs02ScriptFrame2ndAsMain? _pomodoroStayFocusedSs02ScriptFrame2ndAsMain;
+  PomodoroStayFocusedSs02ScriptFrame2ndAsMain? get getPomodoroStayFocusedSs02ScriptFrame2ndAsMain => _pomodoroStayFocusedSs02ScriptFrame2ndAsMain;
+  void setPomodoroStayFocusedSs02ScriptFrame2ndAsMain({required PomodoroStayFocusedSs02ScriptFrame2ndAsMain? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroStayFocusedSs02ScriptFrame2ndAsMain = value;
+    } else {
+      _pomodoroStayFocusedSs02ScriptFrame2ndAsMain ??= value;
+    }
+
+    return;
+  }
+
+  PomodoroStayFocusedSs02ScriptFrame3rdAsDone? _pomodoroStayFocusedSs02ScriptFrame3rdAsDone;
+  PomodoroStayFocusedSs02ScriptFrame3rdAsDone? get getPomodoroStayFocusedSs02ScriptFrame3rdAsDone => _pomodoroStayFocusedSs02ScriptFrame3rdAsDone;
+  void setPomodoroStayFocusedSs02ScriptFrame3rdAsDone({required PomodoroStayFocusedSs02ScriptFrame3rdAsDone? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroStayFocusedSs02ScriptFrame3rdAsDone = value;
+    } else {
+      _pomodoroStayFocusedSs02ScriptFrame3rdAsDone ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  PomodoroStayFocusedSs03ScriptFrame1stAsGo? _pomodoroStayFocusedSs03ScriptFrame1stAsGo;
+  PomodoroStayFocusedSs03ScriptFrame1stAsGo? get getPomodoroStayFocusedSs03ScriptFrame1stAsGo => _pomodoroStayFocusedSs03ScriptFrame1stAsGo;
+  void setPomodoroStayFocusedSs03ScriptFrame1stAsGo({required PomodoroStayFocusedSs03ScriptFrame1stAsGo? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroStayFocusedSs03ScriptFrame1stAsGo = value;
+    } else {
+      _pomodoroStayFocusedSs03ScriptFrame1stAsGo ??= value;
+    }
+
+    return;
+  }
+
+  PomodoroStayFocusedSs03ScriptFrame2ndAsMain? _pomodoroStayFocusedSs03ScriptFrame2ndAsMain;
+  PomodoroStayFocusedSs03ScriptFrame2ndAsMain? get getPomodoroStayFocusedSs03ScriptFrame2ndAsMain => _pomodoroStayFocusedSs03ScriptFrame2ndAsMain;
+  void setPomodoroStayFocusedSs03ScriptFrame2ndAsMain({required PomodoroStayFocusedSs03ScriptFrame2ndAsMain? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroStayFocusedSs03ScriptFrame2ndAsMain = value;
+    } else {
+      _pomodoroStayFocusedSs03ScriptFrame2ndAsMain ??= value;
+    }
+
+    return;
+  }
+
+  PomodoroStayFocusedSs03ScriptFrame3rdAsDone? _pomodoroStayFocusedSs03ScriptFrame3rdAsDone;
+  PomodoroStayFocusedSs03ScriptFrame3rdAsDone? get getPomodoroStayFocusedSs03ScriptFrame3rdAsDone => _pomodoroStayFocusedSs03ScriptFrame3rdAsDone;
+  void setPomodoroStayFocusedSs03ScriptFrame3rdAsDone({required PomodoroStayFocusedSs03ScriptFrame3rdAsDone? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroStayFocusedSs03ScriptFrame3rdAsDone = value;
+    } else {
+      _pomodoroStayFocusedSs03ScriptFrame3rdAsDone ??= value;
+    }
+
+    return;
+  }
+
+  ///
+  PomodoroStayFocusedSs04ScriptFrame1stAsGo? _pomodoroStayFocusedSs04ScriptFrame1stAsGo;
+  PomodoroStayFocusedSs04ScriptFrame1stAsGo? get getPomodoroStayFocusedSs04ScriptFrame1stAsGo => _pomodoroStayFocusedSs04ScriptFrame1stAsGo;
+  void setPomodoroStayFocusedSs04ScriptFrame1stAsGo({required PomodoroStayFocusedSs04ScriptFrame1stAsGo? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroStayFocusedSs04ScriptFrame1stAsGo = value;
+    } else {
+      _pomodoroStayFocusedSs04ScriptFrame1stAsGo ??= value;
+    }
+
+    return;
+  }
+
+  PomodoroStayFocusedSs04ScriptFrame2ndAsMain? _pomodoroStayFocusedSs04ScriptFrame2ndAsMain;
+  PomodoroStayFocusedSs04ScriptFrame2ndAsMain? get getPomodoroStayFocusedSs04ScriptFrame2ndAsMain => _pomodoroStayFocusedSs04ScriptFrame2ndAsMain;
+  void setPomodoroStayFocusedSs04ScriptFrame2ndAsMain({required PomodoroStayFocusedSs04ScriptFrame2ndAsMain? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroStayFocusedSs04ScriptFrame2ndAsMain = value;
+    } else {
+      _pomodoroStayFocusedSs04ScriptFrame2ndAsMain ??= value;
+    }
+
+    return;
+  }
+
+  PomodoroStayFocusedSs04ScriptFrame3rdAsDone? _pomodoroStayFocusedSs04ScriptFrame3rdAsDone;
+  PomodoroStayFocusedSs04ScriptFrame3rdAsDone? get getPomodoroStayFocusedSs04ScriptFrame3rdAsDone => _pomodoroStayFocusedSs04ScriptFrame3rdAsDone;
+  void setPomodoroStayFocusedSs04ScriptFrame3rdAsDone({required PomodoroStayFocusedSs04ScriptFrame3rdAsDone? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _pomodoroStayFocusedSs04ScriptFrame3rdAsDone = value;
+    } else {
+      _pomodoroStayFocusedSs04ScriptFrame3rdAsDone ??= value;
+    }
+
+    return;
+  }
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: SCRIPT FRAMES [END]
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
   /// -----
   /// TODO:
   /// -----
@@ -112,13 +662,13 @@ abstract class FunctionalSequentialExecutionScript with ExecutionCore {
     /// -----
     /// TODO: Set Đến SystemTime
     /// -----
-    await onGenerateScriptBindToFirstStartContentItemSection();
-    await onGenerateScriptBindToGoFirstStartContentItemSection();
-    await onGenerateScriptBindToDoneFirstStartContentItemSection();
+    await onGenerateScriptBindToFirstStartAsMain();
+    await onGenerateScriptBindToFirstStartAsGo();
+    await onGenerateScriptBindToFirstStartAsDone();
 
-    await onGenerateScriptBindToLastFinishContentItemSection();
-    await onGenerateScriptBindToGoLastFinishContentItemSection();
-    await onGenerateScriptBindToDoneLastFinishContentItemSection();
+    await onGenerateScriptBindToLastFinishAsMain();
+    await onGenerateScriptBindToLastFinishAsGo();
+    await onGenerateScriptBindToLastFinishAsDone();
 
     getContentItemSequentialExecution?.getFirstStartContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(contentStage: getContentItemSequentialExecution?.getFirstStartSystemContentStage);
     getContentItemSequentialExecution?.getGoFirstStartContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(contentStage: getContentItemSequentialExecution?.getGoFirstStartSystemContentStage);
@@ -134,15 +684,15 @@ abstract class FunctionalSequentialExecutionScript with ExecutionCore {
     /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
     /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 
-    await onGenerateScriptBindToBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01ContentItemSectionContentItemSection();
-    await onGenerateScriptBindToBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01ContentItemSectionContentItemSection();
-    await onGenerateScriptBindToBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02ContentItemSectionContentItemSection();
-    await onGenerateScriptBindToBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02ContentItemSectionContentItemSection();
-    await onGenerateScriptBindToBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03ContentItemSectionContentItemSection();
-    await onGenerateScriptBindToBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03ContentItemSectionContentItemSection();
-    await onGenerateScriptBindToBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04ContentItemSectionContentItemSection();
-    await onGenerateScriptBindToBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04ContentItemSectionContentItemSection();
-    await onGenerateScriptBindToBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemContentItemSectionContentItemSection();
+    await onGenerateScriptBindToBridge1stFromDoneFirstStartToGoPomodoroStayFocusedSS01();
+    await onGenerateScriptBindToBridge2ndFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01();
+    await onGenerateScriptBindToBridge3rdFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02();
+    await onGenerateScriptBindToBridge4thFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02();
+    await onGenerateScriptBindToBridge5thFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03();
+    await onGenerateScriptBindToBridge6thFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03();
+    await onGenerateScriptBindToBridge7thFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04();
+    await onGenerateScriptBindToBridge8thFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04();
+    await onGenerateScriptBindToBridge9thFromDonePomodoroBreakTimeSS04ToGoLastFinish();
 
     getContentItemSequentialExecution?.getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01ContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(
       contentStage: getContentItemSequentialExecution?.getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01SystemContentStage,
@@ -173,21 +723,21 @@ abstract class FunctionalSequentialExecutionScript with ExecutionCore {
     /// -----
     /// TODO: Set Đến PomodoroBreakTime
     /// -----
-    await onGenerateScriptBindToPomodoroBreakTimeContentItemSectionSS01();
-    await onGenerateScriptBindToGoPomodoroBreakTimeContentItemSectionSS01();
-    await onGenerateScriptBindToDonePomodoroBreakTimeContentItemSectionSS01();
+    await onGenerateScriptBindToPomodoroBreakTimeSS01AsMain();
+    await onGenerateScriptBindToPomodoroBreakTimeSS01AsGo();
+    await onGenerateScriptBindToPomodoroBreakTimeSS01AsDone();
 
-    await onGenerateScriptBindToPomodoroBreakTimeContentItemSectionSS02();
-    await onGenerateScriptBindToGoPomodoroBreakTimeContentItemSectionSS02();
-    await onGenerateScriptBindToDonePomodoroBreakTimeContentItemSectionSS02();
+    await onGenerateScriptBindToPomodoroBreakTimeSS02AsMain();
+    await onGenerateScriptBindToPomodoroBreakTimeSS02AsGo();
+    await onGenerateScriptBindToPomodoroBreakTimeSS02AsDone();
 
-    await onGenerateScriptBindToPomodoroBreakTimeContentItemSectionSS03();
-    await onGenerateScriptBindToGoPomodoroBreakTimeContentItemSectionSS03();
-    await onGenerateScriptBindToDonePomodoroBreakTimeContentItemSectionSS03();
+    await onGenerateScriptBindToPomodoroBreakTimeSS03AsMain();
+    await onGenerateScriptBindToPomodoroBreakTimeSS03AsGo();
+    await onGenerateScriptBindToPomodoroBreakTimeSS03AsDone();
 
-    await onGenerateScriptBindToPomodoroBreakTimeContentItemSectionSS04();
-    await onGenerateScriptBindToGoPomodoroBreakTimeContentItemSectionSS04();
-    await onGenerateScriptBindToDonePomodoroBreakTimeContentItemSectionSS04();
+    await onGenerateScriptBindToPomodoroBreakTimeSS04AsMain();
+    await onGenerateScriptBindToPomodoroBreakTimeSS04AsGo();
+    await onGenerateScriptBindToPomodoroBreakTimeSS04AsDone();
 
     getContentItemSequentialExecution?.getBreakTimeContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getPomodoroBreakTimeContentStageSS01);
     getContentItemSequentialExecution?.getGoBreakTimeContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getGoPomodoroBreakTimeContentStageSS01);
@@ -215,21 +765,21 @@ abstract class FunctionalSequentialExecutionScript with ExecutionCore {
     /// -----
     /// TODO: Set Đến PomodoroStayFocused
     /// -----
-    await onGenerateScriptBindToPomodoroStayFocusedContentItemSectionSS01();
-    await onGenerateScriptBindToGoPomodoroStayFocusedContentItemSectionSS01();
-    await onGenerateScriptBindToDonePomodoroStayFocusedContentItemSectionSS01();
+    await onGenerateScriptBindToPomodoroStayFocusedSS01AsMain();
+    await onGenerateScriptBindToPomodoroStayFocusedSS01AsGo();
+    await onGenerateScriptBindToPomodoroStayFocusedSS01AsDone();
 
-    await onGenerateScriptBindToPomodoroStayFocusedContentItemSectionSS02();
-    await onGenerateScriptBindToGoPomodoroStayFocusedContentItemSectionSS02();
-    await onGenerateScriptBindToDonePomodoroStayFocusedContentItemSectionSS02();
+    await onGenerateScriptBindToPomodoroStayFocusedSS02AsMain();
+    await onGenerateScriptBindToPomodoroStayFocusedSS02AsGo();
+    await onGenerateScriptBindToPomodoroStayFocusedSS02AsDone();
 
-    await onGenerateScriptBindToPomodoroStayFocusedContentItemSectionSS03();
-    await onGenerateScriptBindToGoPomodoroStayFocusedContentItemSectionSS03();
-    await onGenerateScriptBindToDonePomodoroStayFocusedContentItemSectionSS03();
+    await onGenerateScriptBindToPomodoroStayFocusedSS03AsMain();
+    await onGenerateScriptBindToPomodoroStayFocusedSS03AsGo();
+    await onGenerateScriptBindToPomodoroStayFocusedSS03AsDone();
 
-    await onGenerateScriptBindToPomodoroStayFocusedContentItemSectionSS04();
-    await onGenerateScriptBindToGoPomodoroStayFocusedContentItemSectionSS04();
-    await onGenerateScriptBindToDonePomodoroStayFocusedContentItemSectionSS04();
+    await onGenerateScriptBindToPomodoroStayFocusedSS04AsMain();
+    await onGenerateScriptBindToPomodoroStayFocusedSS04AsGo();
+    await onGenerateScriptBindToPomodoroStayFocusedSS04AsDone();
 
     getContentItemSequentialExecution?.getGoStayFocusedContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getGoPomodoroStayFocusedContentStageSS01);
     getContentItemSequentialExecution?.getDoneStayFocusedContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getDonePomodoroStayFocusedContentStageSS01);
@@ -301,16 +851,16 @@ abstract class FunctionalSequentialExecutionScript with ExecutionCore {
   /// -----
   /// TODO: Tạo Kịch Bản Gắn Kết Với First Start Section
   /// -----
-  Future<void> onGenerateScriptBindToFirstStartContentItemSection();
-  Future<void> onGenerateScriptBindToGoFirstStartContentItemSection();
-  Future<void> onGenerateScriptBindToDoneFirstStartContentItemSection();
+  Future<void> onGenerateScriptBindToFirstStartAsMain();
+  Future<void> onGenerateScriptBindToFirstStartAsGo();
+  Future<void> onGenerateScriptBindToFirstStartAsDone();
 
   /// -----
   /// TODO: Tạo Kịch Bản Gắn Kết Với Last Finish Section
   /// -----
-  Future<void> onGenerateScriptBindToLastFinishContentItemSection();
-  Future<void> onGenerateScriptBindToGoLastFinishContentItemSection();
-  Future<void> onGenerateScriptBindToDoneLastFinishContentItemSection();
+  Future<void> onGenerateScriptBindToLastFinishAsMain();
+  Future<void> onGenerateScriptBindToLastFinishAsGo();
+  Future<void> onGenerateScriptBindToLastFinishAsDone();
 
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -318,15 +868,15 @@ abstract class FunctionalSequentialExecutionScript with ExecutionCore {
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 
-  Future<void> onGenerateScriptBindToBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01ContentItemSectionContentItemSection();
-  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01ContentItemSectionContentItemSection();
-  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02ContentItemSectionContentItemSection();
-  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02ContentItemSectionContentItemSection();
-  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03ContentItemSectionContentItemSection();
-  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03ContentItemSectionContentItemSection();
-  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04ContentItemSectionContentItemSection();
-  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04ContentItemSectionContentItemSection();
-  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemContentItemSectionContentItemSection();
+  Future<void> onGenerateScriptBindToBridge1stFromDoneFirstStartToGoPomodoroStayFocusedSS01();
+  Future<void> onGenerateScriptBindToBridge2ndFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01();
+  Future<void> onGenerateScriptBindToBridge3rdFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02();
+  Future<void> onGenerateScriptBindToBridge4thFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02();
+  Future<void> onGenerateScriptBindToBridge5thFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03();
+  Future<void> onGenerateScriptBindToBridge6thFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03();
+  Future<void> onGenerateScriptBindToBridge7thFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04();
+  Future<void> onGenerateScriptBindToBridge8thFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04();
+  Future<void> onGenerateScriptBindToBridge9thFromDonePomodoroBreakTimeSS04ToGoLastFinish();
 
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -337,30 +887,30 @@ abstract class FunctionalSequentialExecutionScript with ExecutionCore {
   /// -----
   /// TODO: Tạo Kịch Bản Gắn Kết Với Pomodoro BreakTime Section SS01
   /// -----
-  Future<void> onGenerateScriptBindToPomodoroBreakTimeContentItemSectionSS01();
-  Future<void> onGenerateScriptBindToGoPomodoroBreakTimeContentItemSectionSS01();
-  Future<void> onGenerateScriptBindToDonePomodoroBreakTimeContentItemSectionSS01();
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS01AsMain();
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS01AsGo();
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS01AsDone();
 
   /// -----
   /// TODO: Tạo Kịch Bản Gắn Kết Với Pomodoro BreakTime Section SS02
   /// -----
-  Future<void> onGenerateScriptBindToPomodoroBreakTimeContentItemSectionSS02();
-  Future<void> onGenerateScriptBindToGoPomodoroBreakTimeContentItemSectionSS02();
-  Future<void> onGenerateScriptBindToDonePomodoroBreakTimeContentItemSectionSS02();
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS02AsMain();
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS02AsGo();
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS02AsDone();
 
   /// -----
   /// TODO: Tạo Kịch Bản Gắn Kết Với Pomodoro BreakTime Section SS03
   /// -----
-  Future<void> onGenerateScriptBindToPomodoroBreakTimeContentItemSectionSS03();
-  Future<void> onGenerateScriptBindToGoPomodoroBreakTimeContentItemSectionSS03();
-  Future<void> onGenerateScriptBindToDonePomodoroBreakTimeContentItemSectionSS03();
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS03AsMain();
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS03AsGo();
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS03AsDone();
 
   /// -----
   /// TODO: Tạo Kịch Bản Gắn Kết Với Pomodoro BreakTime Section SS04
   /// -----
-  Future<void> onGenerateScriptBindToPomodoroBreakTimeContentItemSectionSS04();
-  Future<void> onGenerateScriptBindToGoPomodoroBreakTimeContentItemSectionSS04();
-  Future<void> onGenerateScriptBindToDonePomodoroBreakTimeContentItemSectionSS04();
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS04AsMain();
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS04AsGo();
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS04AsDone();
 
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -371,30 +921,30 @@ abstract class FunctionalSequentialExecutionScript with ExecutionCore {
   /// -----
   /// TODO: Tạo Kịch Bản Gắn Kết Với Pomodoro StayFocused Section SS01
   /// -----
-  Future<void> onGenerateScriptBindToPomodoroStayFocusedContentItemSectionSS01();
-  Future<void> onGenerateScriptBindToGoPomodoroStayFocusedContentItemSectionSS01();
-  Future<void> onGenerateScriptBindToDonePomodoroStayFocusedContentItemSectionSS01();
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS01AsMain();
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS01AsGo();
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS01AsDone();
 
   /// -----
   /// TODO: Tạo Kịch Bản Gắn Kết Với Pomodoro StayFocused Section SS02
   /// -----
-  Future<void> onGenerateScriptBindToPomodoroStayFocusedContentItemSectionSS02();
-  Future<void> onGenerateScriptBindToGoPomodoroStayFocusedContentItemSectionSS02();
-  Future<void> onGenerateScriptBindToDonePomodoroStayFocusedContentItemSectionSS02();
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS02AsMain();
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS02AsGo();
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS02AsDone();
 
   /// -----
   /// TODO: Tạo Kịch Bản Gắn Kết Với Pomodoro StayFocused Section SS03
   /// -----
-  Future<void> onGenerateScriptBindToPomodoroStayFocusedContentItemSectionSS03();
-  Future<void> onGenerateScriptBindToGoPomodoroStayFocusedContentItemSectionSS03();
-  Future<void> onGenerateScriptBindToDonePomodoroStayFocusedContentItemSectionSS03();
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS03AsMain();
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS03AsGo();
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS03AsDone();
 
   /// -----
   /// TODO: Tạo Kịch Bản Gắn Kết Với Pomodoro StayFocused Section SS04
   /// -----
-  Future<void> onGenerateScriptBindToPomodoroStayFocusedContentItemSectionSS04();
-  Future<void> onGenerateScriptBindToGoPomodoroStayFocusedContentItemSectionSS04();
-  Future<void> onGenerateScriptBindToDonePomodoroStayFocusedContentItemSectionSS04();
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS04AsMain();
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS04AsGo();
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS04AsDone();
 
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |

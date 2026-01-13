@@ -8,6 +8,14 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   TopicAScript({required super.systemStateManagement, required super.sequentialExecutionController, required super.contentItemSequentialExecution, required super.functionalSequentialExecutionController});
 
   /// -----
+  /// TODO:
+  /// -----
+  @override
+  void onSetScriptFrame() {
+    ///
+  }
+
+  /// -----
   /// TODO: Kịch Bản Gắn Kết Với Content Item Section
   /// -----
   @override
@@ -2405,7 +2413,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   }
 
   @override
-  Future<void> onGenerateScriptBindToFirstStartContentItemSection() async {
+  Future<void> onGenerateScriptBindToFirstStartAsMain() async {
     getContentItemSequentialExecution?.getFirstStartContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -2654,7 +2662,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   }
 
   @override
-  Future<void> onGenerateScriptBindToGoFirstStartContentItemSection() async {
+  Future<void> onGenerateScriptBindToFirstStartAsGo() async {
     getContentItemSequentialExecution?.getGoFirstStartContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -2723,7 +2731,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   }
 
   @override
-  Future<void> onGenerateScriptBindToDoneFirstStartContentItemSection() async {
+  Future<void> onGenerateScriptBindToFirstStartAsDone() async {
     getContentItemSequentialExecution?.getDoneFirstStartContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -2792,7 +2800,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   }
 
   @override
-  Future<void> onGenerateScriptBindToLastFinishContentItemSection() async {
+  Future<void> onGenerateScriptBindToLastFinishAsMain() async {
     getContentItemSequentialExecution?.getLastFinishContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -3041,7 +3049,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   }
 
   @override
-  Future<void> onGenerateScriptBindToGoLastFinishContentItemSection() async {
+  Future<void> onGenerateScriptBindToLastFinishAsGo() async {
     getContentItemSequentialExecution?.getGoLastFinishContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -3110,7 +3118,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   }
 
   @override
-  Future<void> onGenerateScriptBindToDoneLastFinishContentItemSection() async {
+  Future<void> onGenerateScriptBindToLastFinishAsDone() async {
     getContentItemSequentialExecution?.getDoneLastFinishContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -3188,7 +3196,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   /// TODO: Tạo Kịch Bản Gắn Kết Với BreakTime Section SS01
   /// -----
   @override
-  Future<void> onGenerateScriptBindToPomodoroBreakTimeContentItemSectionSS01() async {
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS01AsMain() async {
     /// -----
     /// TODO: Cập Nhật Dựa Trên Đơn Vị Thực Thi [POMODORO-ITEM]
     /// -----
@@ -3196,7 +3204,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   }
 
   @override
-  Future<void> onGenerateScriptBindToGoPomodoroBreakTimeContentItemSectionSS01() async {
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS01AsGo() async {
     getContentItemSequentialExecution?.getGoBreakTimeContentItemSectionSS01?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -3265,7 +3273,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   }
 
   @override
-  Future<void> onGenerateScriptBindToDonePomodoroBreakTimeContentItemSectionSS01() async {
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS01AsDone() async {
     getContentItemSequentialExecution?.getDoneBreakTimeContentItemSectionSS01?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -3337,7 +3345,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   /// TODO: Tạo Kịch Bản Gắn Kết Với BreakTime Section SS02
   /// -----
   @override
-  Future<void> onGenerateScriptBindToPomodoroBreakTimeContentItemSectionSS02() async {
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS02AsMain() async {
     /// -----
     /// TODO: Cập Nhật Dựa Trên Đơn Vị Thực Thi [POMODORO-ITEM]
     /// -----
@@ -3345,7 +3353,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   }
 
   @override
-  Future<void> onGenerateScriptBindToGoPomodoroBreakTimeContentItemSectionSS02() async {
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS02AsGo() async {
     getContentItemSequentialExecution?.getGoBreakTimeContentItemSectionSS02?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -3414,7 +3422,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   }
 
   @override
-  Future<void> onGenerateScriptBindToDonePomodoroBreakTimeContentItemSectionSS02() async {
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS02AsDone() async {
     getContentItemSequentialExecution?.getDoneBreakTimeContentItemSectionSS02?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -3486,7 +3494,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   /// TODO: Tạo Kịch Bản Gắn Kết Với BreakTime Section SS03
   /// -----
   @override
-  Future<void> onGenerateScriptBindToPomodoroBreakTimeContentItemSectionSS03() async {
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS03AsMain() async {
     /// -----
     /// TODO: Cập Nhật Dựa Trên Đơn Vị Thực Thi [POMODORO-ITEM]
     /// -----
@@ -3494,7 +3502,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   }
 
   @override
-  Future<void> onGenerateScriptBindToGoPomodoroBreakTimeContentItemSectionSS03() async {
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS03AsGo() async {
     getContentItemSequentialExecution?.getGoBreakTimeContentItemSectionSS03?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -3563,7 +3571,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   }
 
   @override
-  Future<void> onGenerateScriptBindToDonePomodoroBreakTimeContentItemSectionSS03() async {
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS03AsDone() async {
     getContentItemSequentialExecution?.getDoneBreakTimeContentItemSectionSS03?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -3635,7 +3643,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   /// TODO: Tạo Kịch Bản Gắn Kết Với BreakTime Section SS04
   /// -----
   @override
-  Future<void> onGenerateScriptBindToPomodoroBreakTimeContentItemSectionSS04() async {
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS04AsMain() async {
     /// -----
     /// TODO: Cập Nhật Dựa Trên Đơn Vị Thực Thi [POMODORO-ITEM]
     /// -----
@@ -3643,7 +3651,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   }
 
   @override
-  Future<void> onGenerateScriptBindToGoPomodoroBreakTimeContentItemSectionSS04() async {
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS04AsGo() async {
     getContentItemSequentialExecution?.getGoBreakTimeContentItemSectionSS04?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -3712,7 +3720,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   }
 
   @override
-  Future<void> onGenerateScriptBindToDonePomodoroBreakTimeContentItemSectionSS04() async {
+  Future<void> onGenerateScriptBindToPomodoroBreakTimeSS04AsDone() async {
     getContentItemSequentialExecution?.getDoneBreakTimeContentItemSectionSS04?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -3790,7 +3798,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   /// TODO: Tạo Kịch Bản Gắn Kết Với StayFocused Section SS01
   /// -----
   @override
-  Future<void> onGenerateScriptBindToPomodoroStayFocusedContentItemSectionSS01() async {
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS01AsMain() async {
     /// -----
     /// TODO: Cập Nhật Dựa Trên Đơn Vị Thực Thi [POMODORO-ITEM]
     /// -----
@@ -3798,7 +3806,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   }
 
   @override
-  Future<void> onGenerateScriptBindToGoPomodoroStayFocusedContentItemSectionSS01() async {
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS01AsGo() async {
     getContentItemSequentialExecution?.getGoStayFocusedContentItemSectionSS01?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -3867,7 +3875,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   }
 
   @override
-  Future<void> onGenerateScriptBindToDonePomodoroStayFocusedContentItemSectionSS01() async {
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS01AsDone() async {
     getContentItemSequentialExecution?.getDoneStayFocusedContentItemSectionSS01?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -3939,7 +3947,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   /// TODO: Tạo Kịch Bản Gắn Kết Với StayFocused Section SS02
   /// -----
   @override
-  Future<void> onGenerateScriptBindToPomodoroStayFocusedContentItemSectionSS02() async {
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS02AsMain() async {
     /// -----
     /// TODO: Cập Nhật Dựa Trên Đơn Vị Thực Thi [POMODORO-ITEM]
     /// -----
@@ -3947,7 +3955,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   }
 
   @override
-  Future<void> onGenerateScriptBindToGoPomodoroStayFocusedContentItemSectionSS02() async {
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS02AsGo() async {
     getContentItemSequentialExecution?.getGoStayFocusedContentItemSectionSS02?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -4016,7 +4024,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   }
 
   @override
-  Future<void> onGenerateScriptBindToDonePomodoroStayFocusedContentItemSectionSS02() async {
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS02AsDone() async {
     getContentItemSequentialExecution?.getDoneStayFocusedContentItemSectionSS02?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -4088,7 +4096,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   /// TODO: Tạo Kịch Bản Gắn Kết Với StayFocused Section SS03
   /// -----
   @override
-  Future<void> onGenerateScriptBindToPomodoroStayFocusedContentItemSectionSS03() async {
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS03AsMain() async {
     /// -----
     /// TODO: Cập Nhật Dựa Trên Đơn Vị Thực Thi [POMODORO-ITEM]
     /// -----
@@ -4096,7 +4104,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   }
 
   @override
-  Future<void> onGenerateScriptBindToGoPomodoroStayFocusedContentItemSectionSS03() async {
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS03AsGo() async {
     getContentItemSequentialExecution?.getGoStayFocusedContentItemSectionSS03?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -4165,7 +4173,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   }
 
   @override
-  Future<void> onGenerateScriptBindToDonePomodoroStayFocusedContentItemSectionSS03() async {
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS03AsDone() async {
     getContentItemSequentialExecution?.getDoneStayFocusedContentItemSectionSS03?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -4237,7 +4245,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   /// TODO: Tạo Kịch Bản Gắn Kết Với StayFocused Section SS04
   /// -----
   @override
-  Future<void> onGenerateScriptBindToPomodoroStayFocusedContentItemSectionSS04() async {
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS04AsMain() async {
     /// -----
     /// TODO: Cập Nhật Dựa Trên Đơn Vị Thực Thi [POMODORO-ITEM]
     /// -----
@@ -4245,7 +4253,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   }
 
   @override
-  Future<void> onGenerateScriptBindToGoPomodoroStayFocusedContentItemSectionSS04() async {
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS04AsGo() async {
     getContentItemSequentialExecution?.getGoStayFocusedContentItemSectionSS04?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -4314,7 +4322,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   }
 
   @override
-  Future<void> onGenerateScriptBindToDonePomodoroStayFocusedContentItemSectionSS04() async {
+  Future<void> onGenerateScriptBindToPomodoroStayFocusedSS04AsDone() async {
     getContentItemSequentialExecution?.getDoneStayFocusedContentItemSectionSS04?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -4386,7 +4394,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   /// TODO: Bridge From - DoneFirstStartSystemItem - To - GoPomodoroStayFocusedSS01
   /// -----
   @override
-  Future<void> onGenerateScriptBindToBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01ContentItemSectionContentItemSection() async {
+  Future<void> onGenerateScriptBindToBridge1stFromDoneFirstStartToGoPomodoroStayFocusedSS01() async {
     getContentItemSequentialExecution?.getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01ContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -4458,7 +4466,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   /// TODO: Bridge From - DonePomodoroStayFocusedSS01 - To - GoPomodoroBreakTimeSS01
   /// -----
   @override
-  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01ContentItemSectionContentItemSection() async {
+  Future<void> onGenerateScriptBindToBridge2ndFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01() async {
     getContentItemSequentialExecution?.getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01ContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -4530,7 +4538,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   /// TODO: Bridge From - DonePomodoroBreakTimeSS01 - To - GoPomodoroStayFocusedSS02
   /// -----
   @override
-  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02ContentItemSectionContentItemSection() async {
+  Future<void> onGenerateScriptBindToBridge3rdFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02() async {
     getContentItemSequentialExecution?.getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02ContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -4602,7 +4610,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   /// TODO: Bridge From - DonePomodoroStayFocusedSS02 - To - GoPomodoroBreakTimeSS02
   /// -----
   @override
-  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02ContentItemSectionContentItemSection() async {
+  Future<void> onGenerateScriptBindToBridge4thFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02() async {
     getContentItemSequentialExecution?.getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02ContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -4674,7 +4682,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   /// TODO: Bridge From - DonePomodoroBreakTimeSS02 - To - GoPomodoroStayFocusedSS03
   /// -----
   @override
-  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03ContentItemSectionContentItemSection() async {
+  Future<void> onGenerateScriptBindToBridge5thFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03() async {
     getContentItemSequentialExecution?.getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03ContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -4746,7 +4754,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   /// TODO: Bridge From - DonePomodoroStayFocusedSS03 - To - GoPomodoroBreakTimeSS03
   /// -----
   @override
-  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03ContentItemSectionContentItemSection() async {
+  Future<void> onGenerateScriptBindToBridge6thFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03() async {
     getContentItemSequentialExecution?.getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03ContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -4818,7 +4826,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   /// TODO: Bridge From - DonePomodoroBreakTimeSS03 - To - GoPomodoroStayFocusedSS04
   /// -----
   @override
-  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04ContentItemSectionContentItemSection() async {
+  Future<void> onGenerateScriptBindToBridge7thFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04() async {
     getContentItemSequentialExecution?.getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04ContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -4890,7 +4898,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   /// TODO: Bridge From - DonePomodoroStayFocusedSS04 - To - GoPomodoroBreakTimeSS04
   /// -----
   @override
-  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04ContentItemSectionContentItemSection() async {
+  Future<void> onGenerateScriptBindToBridge8thFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04() async {
     getContentItemSequentialExecution?.getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04ContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
@@ -4962,7 +4970,7 @@ class TopicAScript extends FunctionalSequentialExecutionScript {
   /// TODO: Bridge From - DonePomodoroBreakTimeSS04 - To - GoLastFinishSystemItem
   /// -----
   @override
-  Future<void> onGenerateScriptBindToBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemContentItemSectionContentItemSection() async {
+  Future<void> onGenerateScriptBindToBridge9thFromDonePomodoroBreakTimeSS04ToGoLastFinish() async {
     getContentItemSequentialExecution?.getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
