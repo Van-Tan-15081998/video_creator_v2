@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/phase_item/status/functional_sequential_execution_phase_active_status.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item.dart';
@@ -57,6 +58,31 @@ class FunctionalSequentialExecutionContentItemUnit with ExecutionCore {
     }
 
     return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  void addGap({required int? seconds, required FlowController? flowController}) {
+    getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: flowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('__________[GAP]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            ///
+          }
+          ..getGapTime?.setSeconds(value: seconds ?? 1, isPriorityOverride: true),
+      ),
+    );
   }
 
   /// -----

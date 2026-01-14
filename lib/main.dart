@@ -11,6 +11,60 @@ import 'package:frame_creator_v2/state_managements/system_state_management.dart'
 import 'package:frame_creator_v2/system/sequential_execution_controller/models/sequential_execution_controller.dart';
 import 'package:window_size/window_size.dart';
 
+// start = left
+// end = right
+
+// topStart
+// topCenter
+// topEnd
+
+// centerStart
+// center
+// centerEnd
+
+// bottomStart
+// bottomCenter
+// bottomEnd
+
+// (-1,-1)                     (1,-1)
+// topStart     topCenter     topEnd
+// +------------+------------+
+// |            |            |
+// |            |            |
+// |            |            |
+// centerStart     center     centerEnd
+// |            |            |
+// |            |            |
+// |            |            |
+// +------------+------------+
+// bottomStart  bottomCenter  bottomEnd
+// (-1,1)                      (1,1)
+
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
 main() async {
   // ✅ Khởi tạo binding trước khi gọi bất kỳ hàm nào khác
   WidgetsFlutterBinding.ensureInitialized();

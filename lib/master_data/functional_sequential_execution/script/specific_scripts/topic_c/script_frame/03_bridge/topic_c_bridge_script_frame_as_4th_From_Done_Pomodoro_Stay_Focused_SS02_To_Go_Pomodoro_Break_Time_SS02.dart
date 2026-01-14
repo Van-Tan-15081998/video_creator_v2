@@ -15,6 +15,7 @@ class TopicCBridgeScriptFrameAs4thFromDonePomodoroStayFocusedSs02ToGoPomodoroBre
     required super.systemStateManagement, //
     required super.sequentialExecutionController, //
     required super.contentItemSequentialExecution, //
+    required super.systemSequentialExecutionScript, //
     required super.functionalSequentialExecutionController,
   });
 
@@ -22,7 +23,7 @@ class TopicCBridgeScriptFrameAs4thFromDonePomodoroStayFocusedSs02ToGoPomodoroBre
   /// TODO:
   /// -----
   @override
-  void onSystemSequentialExecutionAs({required String? executionId, required ContentItemUnit? contentItemUnit}) {
+  void onGenerateDetailSequentialExecutionScript({required ContentItemUnit? contentItemUnit}) {
     return;
   }
 }

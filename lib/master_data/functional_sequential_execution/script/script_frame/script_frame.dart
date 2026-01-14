@@ -2,6 +2,7 @@ import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/master_data/content_item/01_content_item_unit/content_item_unit.dart';
 import 'package:frame_creator_v2/master_data/content_item/04_content_item_sequential_execution/content_item_sequential_execution.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/controller/functional_sequential_execution_controller.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/system_sequential_execution_script.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 import 'package:frame_creator_v2/system/sequential_execution_controller/models/sequential_execution_controller.dart';
 
@@ -13,6 +14,7 @@ class ScriptFrame with ExecutionCore {
     required SystemStateManagement? systemStateManagement, //
     required SequentialExecutionController? sequentialExecutionController, //
     required ContentItemSequentialExecution? contentItemSequentialExecution, //
+    required SystemSequentialExecutionScript? systemSequentialExecutionScript,
     required FunctionalSequentialExecutionController? functionalSequentialExecutionController,
   }) {
     ///
@@ -23,6 +25,9 @@ class ScriptFrame with ExecutionCore {
 
     ///
     setContentItemSequentialExecution(value: contentItemSequentialExecution, isPriorityOverride: true);
+
+    ///
+    setSystemSequentialExecutionScript(value: systemSequentialExecutionScript, isPriorityOverride: true);
 
     ///
     setFunctionalSequentialExecutionController(value: functionalSequentialExecutionController, isPriorityOverride: true);
@@ -61,7 +66,29 @@ class ScriptFrame with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
+  SystemSequentialExecutionScript? _systemSequentialExecutionScript;
+  SystemSequentialExecutionScript? get getSystemSequentialExecutionScript => _systemSequentialExecutionScript;
+  void setSystemSequentialExecutionScript({required SystemSequentialExecutionScript? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _systemSequentialExecutionScript = value;
+    } else {
+      _systemSequentialExecutionScript ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
   void onSystemSequentialExecutionAs({required String? executionId, required ContentItemUnit? contentItemUnit}) {
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  void onGenerateDetailSequentialExecutionScript({required ContentItemUnit? contentItemUnit}) {
     return;
   }
 

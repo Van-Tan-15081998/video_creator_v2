@@ -16,6 +16,13 @@ class FlowType with ExecutionCore {
   }
 
   ///
+  /// TODO: as Stop Point Flow
+  ///
+  FlowType.asStopPointFlow() {
+    setTypeAsStopPointFlow();
+  }
+
+  ///
   /// TODO: as CharacterFlow
   ///
   FlowType.asCharacterFlow() {
@@ -75,6 +82,21 @@ class FlowType with ExecutionCore {
 
   bool isTypeAsGapFlow() {
     if (getType == '[GAP_FLOW]') {
+      return true;
+    }
+
+    return false;
+  }
+
+  ///
+  /// TODO: Loại => Stop Point Flow
+  ///
+  void setTypeAsStopPointFlow() {
+    setType(value: '[STOP_POINT_FLOW]', isPriorityOverride: true);
+  }
+
+  bool isTypeAsStopPointFlow() {
+    if (getType == '[STOP_POINT_FLOW]') {
       return true;
     }
 

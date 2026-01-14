@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/core/window_feature.dart';
-import 'package:frame_creator_v2/master_features/functional_features/two_character_conversation/widgets/two_character_conversation_widget.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 
-class TwoCharacterConversationFunctionalFeature with ExecutionCore, WindowFeature {
-  TwoCharacterConversationFunctionalFeature({required SystemStateManagement? systemStateManagement, required double? sizeDx, required double? sizeDy}) {
+class FromCenterStartPositionAsTwoCharacterConversationFunctionalFeature with ExecutionCore, WindowFeature {
+  FromCenterStartPositionAsTwoCharacterConversationFunctionalFeature({required SystemStateManagement? systemStateManagement, required double? sizeDx, required double? sizeDy}) {
     setSystemStateManagement(value: systemStateManagement);
     setSizeDx(value: sizeDx, isPriorityOverride: true);
     setSizeDy(value: sizeDy, isPriorityOverride: true);

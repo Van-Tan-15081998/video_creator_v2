@@ -45,8 +45,8 @@ import 'package:frame_creator_v2/master_data/functional_sequential_execution/ste
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item_state.dart';
 
-class TopicBScript extends FunctionalSequentialExecutionScript {
-  TopicBScript({required super.systemStateManagement, required super.sequentialExecutionController, required super.contentItemSequentialExecution, required super.functionalSequentialExecutionController});
+class TopicCScript extends FunctionalSequentialExecutionScript {
+  TopicCScript({required super.systemStateManagement, required super.sequentialExecutionController, required super.contentItemSequentialExecution, required super.functionalSequentialExecutionController});
 
   /// -----
   /// TODO:
@@ -59,6 +59,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -68,6 +69,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -77,6 +79,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -88,6 +91,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -97,6 +101,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -106,6 +111,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -117,6 +123,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -126,6 +133,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -135,6 +143,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -144,6 +153,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -153,6 +163,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -162,6 +173,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -171,6 +183,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -180,6 +193,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -189,6 +203,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -200,6 +215,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -209,6 +225,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -218,6 +235,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -228,6 +246,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -237,6 +256,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -246,6 +266,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -256,6 +277,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -265,6 +287,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -274,6 +297,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -284,6 +308,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -293,6 +318,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -302,6 +328,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -313,6 +340,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -322,6 +350,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -331,6 +360,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -341,6 +371,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -350,6 +381,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -359,6 +391,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -369,6 +402,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -378,6 +412,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -387,6 +422,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -397,6 +433,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -406,6 +443,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -415,6 +453,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
         systemStateManagement: getSystemStateManagement,
         sequentialExecutionController: getSequentialExecutionController,
         contentItemSequentialExecution: getContentItemSequentialExecution,
+        systemSequentialExecutionScript: getSystemSequentialExecutionScript,
         functionalSequentialExecutionController: getFunctionalSequentialExecutionController,
       ),
       isPriorityOverride: true,
@@ -682,7 +721,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section SS01]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getContentItemSectionSS01?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -727,7 +766,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section SS02]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getContentItemSectionSS02?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -770,7 +809,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section SS01]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getContentItemSectionSS03?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -815,7 +854,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section SS01]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getContentItemSectionSS04?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -960,21 +999,24 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
   /// -----
   @override
   Future<void> onGenerateScriptAsPomodoroContent() async {
+
+    return;
+    
     /// TODO: Set [ContentItemSectionSS01] Và [ContentItemSectionSS02] Đến [PomodoroStayFocusedContentStageSS01]
-    getContentItemSequentialExecution?.getContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getPomodoroStayFocusedContentStageSS01);
-    getContentItemSequentialExecution?.getContentItemSectionSS02?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getPomodoroStayFocusedContentStageSS01);
+    getContentItemSequentialExecution?.getContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS01);
+    getContentItemSequentialExecution?.getContentItemSectionSS02?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS01);
 
     /// TODO: Set [ContentItemSectionSS03] Và [ContentItemSectionSS04] Đến [PomodoroStayFocusedContentStageSS02]
-    getContentItemSequentialExecution?.getContentItemSectionSS03?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getPomodoroStayFocusedContentStageSS02);
-    getContentItemSequentialExecution?.getContentItemSectionSS04?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getPomodoroStayFocusedContentStageSS03);
+    getContentItemSequentialExecution?.getContentItemSectionSS03?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS02);
+    getContentItemSequentialExecution?.getContentItemSectionSS04?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS02);
 
     /// TODO: Set [ContentItemSectionSS05] Và [ContentItemSectionSS06] Đến [PomodoroStayFocusedContentStageSS03]
-    getContentItemSequentialExecution?.getContentItemSectionSS05?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getPomodoroStayFocusedContentStageSS03);
-    getContentItemSequentialExecution?.getContentItemSectionSS06?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getPomodoroStayFocusedContentStageSS03);
+    getContentItemSequentialExecution?.getContentItemSectionSS05?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS03);
+    getContentItemSequentialExecution?.getContentItemSectionSS06?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS03);
 
     /// TODO: Set [ContentItemSectionSS07] Và [ContentItemSectionSS08] Đến [PomodoroStayFocusedContentStageSS04]
-    getContentItemSequentialExecution?.getContentItemSectionSS07?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getPomodoroStayFocusedContentStageSS04);
-    getContentItemSequentialExecution?.getContentItemSectionSS08?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getPomodoroStayFocusedContentStageSS04);
+    getContentItemSequentialExecution?.getContentItemSectionSS07?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS04);
+    getContentItemSequentialExecution?.getContentItemSectionSS08?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS04);
 
     ///
     return;
@@ -1008,8 +1050,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getFirstStartScriptFrame1stAsGo?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -1018,36 +1096,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[GO_FIRST_START][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -1061,7 +1117,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [GoFirstStart Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getGoFirstStartContentItemSection?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -1074,7 +1130,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     /// TODO: SYSTEM REQUIRED !!!
     /// TODO: SYSTEM REQUIRED !!!
     /// TODO: SYSTEM REQUIRED !!!
-    getContentItemSequentialExecution?.getFirstStartContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
+    getContentItemSequentialExecution?.getMainFirstStartContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     ///
 
@@ -1086,8 +1142,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getFirstStartScriptFrame2ndAsMain?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -1096,222 +1188,20 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[FIRST_START][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[FIRST_START][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 2.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[FIRST_START][Step] 2.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[FIRST_START][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 3.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[FIRST_START][Step] 3.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[FIRST_START][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 4.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[FIRST_START][Step] 4.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[FIRST_START][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 5.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[FIRST_START][Step] 5.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
             /// [TODO: SYSTEM REQUIRED !!!]
             /// [TODO: SYSTEM REQUIRED !!!]
-            getContentItemSequentialExecution?.getFirstStartSystemContentStage?.getActiveStatus?.setStatusAsPerformCompleted();
+            getContentItemSequentialExecution?.getMainFirstStartSystemContentStage?.getActiveStatus?.setStatusAsPerformCompleted();
 
             ///
           },
@@ -1319,9 +1209,9 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [FirstStart Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
-    getContentItemSequentialExecution?.getFirstStartContentItemSection?.getContentItemUnitListAsStack?.add(contentItemUnit);
+    getContentItemSequentialExecution?.getMainFirstStartContentItemSection?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
     ///
     return;
@@ -1344,8 +1234,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getFirstStartScriptFrame3rdAsDone?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -1354,36 +1280,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[DONE_FIRST_START][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -1397,7 +1301,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneFirstStart Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getDoneFirstStartContentItemSection?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -1427,8 +1331,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getLastFinishScriptFrame1stAsGo?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -1437,36 +1377,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[GO_LAST_FINISH][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -1480,7 +1398,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [GoLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getGoLastFinishContentItemSection?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -1493,7 +1411,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     /// TODO: SYSTEM REQUIRED !!!
     /// TODO: SYSTEM REQUIRED !!!
     /// TODO: SYSTEM REQUIRED !!!
-    getContentItemSequentialExecution?.getLastFinishContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
+    getContentItemSequentialExecution?.getMainLastFinishContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     ///
 
@@ -1505,8 +1423,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getLastFinishScriptFrame2ndAsMain?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -1515,222 +1469,20 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[LAST_FINISH][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[LAST_FINISH][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 2.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[LAST_FINISH][Step] 2.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[LAST_FINISH][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 3.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[LAST_FINISH][Step] 3.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[LAST_FINISH][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 4.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[LAST_FINISH][Step] 4.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[LAST_FINISH][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 5.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[LAST_FINISH][Step] 5.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
             /// [TODO: SYSTEM REQUIRED !!!]
             /// [TODO: SYSTEM REQUIRED !!!]
-            getContentItemSequentialExecution?.getLastFinishSystemContentStage?.getActiveStatus?.setStatusAsPerformCompleted();
+            getContentItemSequentialExecution?.getMainLastFinishSystemContentStage?.getActiveStatus?.setStatusAsPerformCompleted();
 
             ///
           },
@@ -1738,9 +1490,9 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [LastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
-    getContentItemSequentialExecution?.getLastFinishContentItemSection?.getContentItemUnitListAsStack?.add(contentItemUnit);
+    getContentItemSequentialExecution?.getMainLastFinishContentItemSection?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
     ///
     return;
@@ -1763,8 +1515,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getLastFinishScriptFrame3rdAsDone?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -1773,36 +1561,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[DONE_LAST_FINISH][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK] 
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -1816,7 +1582,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getDoneLastFinishContentItemSection?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -1841,8 +1607,6 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     getContentItemSequentialExecution?.getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01ContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     ///
-    ///
-    ///
 
     /// -----
     /// TODO: Tạo ContentItemUnit
@@ -1851,87 +1615,45 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onSetupRoot();
     await contentItemUnit.onInitRoot();
 
-    /// -----
-    /// TODO: [OPEN INTRODUCTORY CONVERSATION WINDOW]
-    /// -----
-    getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onStartIntroductoryConversationAsOpenWindow, contentItemUnit: contentItemUnit);
+    /// ----- | ----- | -----
+    /// TODO: Step [SUPER FIRST START]
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
 
-    /// ----- | ----- | -----
-    /// TODO: Step GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID_GAP_]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[GAP]');
+              ///
             }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
 
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getBridgeScriptFrameAs1stFromDoneFirstStartToGoPomodoroStayFocusedSs01?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
 
-    /// ----- | ----- | -----
-    /// TODO: Step 1.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID_GAP_]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// -----
-    /// TODO: [CLOSE INTRODUCTORY CONVERSATION WINDOW]
-    /// -----
-    getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onFinishIntroductoryConversationAsCloseWindow, contentItemUnit: contentItemUnit);
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -1940,14 +1662,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[]');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -1961,7 +1683,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getBridgeFromDoneFirstStartSystemItemToGoPomodoroStayFocusedSS01ContentItemSection?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -1991,8 +1713,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getBridgeScriptFrameAs2ndFromDonePomodoroStayFocusedSs01ToGoPomodoroBreakTimeSs01?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -2001,36 +1759,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[Bridge From - DonePomodoroStayFocusedSS01 - To - GoPomodoroBreakTimeSS01][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -2044,7 +1780,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getBridgeFromDonePomodoroStayFocusedSS01ToGoPomodoroBreakTimeSS01ContentItemSection?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -2072,8 +1808,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getBridgeScriptFrameAs3rdFromDonePomodoroBreakTimeSs01ToGoPomodoroStayFocusedSs02?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -2082,36 +1854,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[Bridge From - DonePomodoroBreakTimeSS01 - To - GoPomodoroStayFocusedSS02][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -2125,7 +1875,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getBridgeFromDonePomodoroBreakTimeSS01ToGoPomodoroStayFocusedSS02ContentItemSection?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -2153,8 +1903,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getBridgeScriptFrameAs4thFromDonePomodoroStayFocusedSs02ToGoPomodoroBreakTimeSs02?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -2163,36 +1949,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[Bridge From - DonePomodoroStayFocusedSS02 - To - GoPomodoroBreakTimeSS02][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -2206,7 +1970,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getBridgeFromDonePomodoroStayFocusedSS02ToGoPomodoroBreakTimeSS02ContentItemSection?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -2234,8 +1998,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getBridgeScriptFrameAs5thFromDonePomodoroBreakTimeSs02ToGoPomodoroStayFocusedSs03?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -2244,36 +2044,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[Bridge From - DonePomodoroBreakTimeSS02 - To - GoPomodoroStayFocusedSS03][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -2287,7 +2065,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getBridgeFromDonePomodoroBreakTimeSS02ToGoPomodoroStayFocusedSS03ContentItemSection?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -2315,8 +2093,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getBridgeScriptFrameAs6thFromDonePomodoroStayFocusedSs03ToGoPomodoroBreakTimeSs03?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -2325,36 +2139,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[Bridge From - DonePomodoroStayFocusedSS03 - To - GoPomodoroBreakTimeSS03][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -2368,7 +2160,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getBridgeFromDonePomodoroStayFocusedSS03ToGoPomodoroBreakTimeSS03ContentItemSection?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -2396,8 +2188,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getBridgeScriptFrameAs7thFromDonePomodoroBreakTimeSs03ToGoPomodoroStayFocusedSs04?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -2406,36 +2234,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[Bridge From - DonePomodoroBreakTimeSS03 - To - GoPomodoroStayFocusedSS04][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -2449,7 +2255,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04ContentItemSection?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -2477,8 +2283,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]');
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getBridgeScriptFrameAs8thFromDonePomodoroStayFocusedSs04ToGoPomodoroBreakTimeSs04?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -2487,36 +2329,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[Bridge From - DonePomodoroStayFocusedSS04 - To - GoPomodoroBreakTimeSS04][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -2530,7 +2350,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04ContentItemSection?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -2558,8 +2378,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getBridgeScriptFrameAs9thFromDonePomodoroBreakTimeSs04ToGoLastFinish?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -2568,36 +2424,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[Bridge From - DonePomodoroBreakTimeSS04 - To - GoLastFinishSystemItem][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -2611,7 +2445,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItemContentItemSection?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -2646,8 +2480,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getPomodoroBreakTimeSs01ScriptFrame1stAsGo?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -2656,36 +2526,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[DONE_LAST_FINISH][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -2699,7 +2547,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getGoBreakTimeContentItemSectionSS01?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -2710,8 +2558,95 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
   @override
   Future<void> onGenerateScriptBindToPomodoroBreakTimeSS01AsMain() async {
     /// -----
-    /// TODO: Cập Nhật Dựa Trên Đơn Vị Thực Thi [POMODORO-ITEM]
+    /// TODO: KỊCH BẢN THỰC THI NỘI DUNG CHÍNH TRONG PHẠM VI [KHOẢNG] CHO PHÉP
     /// -----
+
+    /// TODO: SYSTEM REQUIRED !!!
+    /// TODO: SYSTEM REQUIRED !!!
+    /// TODO: SYSTEM REQUIRED !!!
+    getContentItemSequentialExecution?.getMainBreakTimeContentItemSectionSS01?.getContentExistenceStatus?.setStatusAsExistingContent();
+
+    ///
+
+    /// -----
+    /// TODO: Tạo ContentItemUnit
+    /// -----
+    ContentItemUnit contentItemUnit = ContentItemUnit();
+    await contentItemUnit.onSetupRoot();
+    await contentItemUnit.onInitRoot();
+
+    /// ----- | ----- | -----
+    /// TODO: Step [SUPER FIRST START]
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getPomodoroBreakTimeSs01ScriptFrame2ndAsMain?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            if (kDebugMode) {
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
+            }
+
+            /// [TODO: SYSTEM REQUIRED !!!]
+            /// [TODO: SYSTEM REQUIRED !!!]
+            /// [TODO: SYSTEM REQUIRED !!!]
+            // getContentItemSequentialExecution?.getMainPomodoroBreakTimeContentStageSS01?.getActiveStatus?.setStatusAsPerformCompleted();
+
+            ///
+          },
+      ),
+    );
+
+    /// -----
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
+    /// -----
+    getContentItemSequentialExecution?.getMainBreakTimeContentItemSectionSS01?.getContentItemUnitListAsStack?.add(contentItemUnit);
+
     return;
   }
 
@@ -2732,8 +2667,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getPomodoroBreakTimeSs01ScriptFrame3rdAsDone?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -2742,36 +2713,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[DONE_LAST_FINISH][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -2785,7 +2734,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getDoneBreakTimeContentItemSectionSS01?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -2813,8 +2762,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getPomodoroBreakTimeSs02ScriptFrame1stAsGo?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -2823,36 +2808,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[DONE_LAST_FINISH][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -2866,7 +2829,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getGoBreakTimeContentItemSectionSS02?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -2877,8 +2840,95 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
   @override
   Future<void> onGenerateScriptBindToPomodoroBreakTimeSS02AsMain() async {
     /// -----
-    /// TODO: Cập Nhật Dựa Trên Đơn Vị Thực Thi [POMODORO-ITEM]
+    /// TODO: KỊCH BẢN THỰC THI NỘI DUNG CHÍNH TRONG PHẠM VI [KHOẢNG] CHO PHÉP
     /// -----
+
+    /// TODO: SYSTEM REQUIRED !!!
+    /// TODO: SYSTEM REQUIRED !!!
+    /// TODO: SYSTEM REQUIRED !!!
+    getContentItemSequentialExecution?.getMainBreakTimeContentItemSectionSS02?.getContentExistenceStatus?.setStatusAsExistingContent();
+
+    ///
+
+    /// -----
+    /// TODO: Tạo ContentItemUnit
+    /// -----
+    ContentItemUnit contentItemUnit = ContentItemUnit();
+    await contentItemUnit.onSetupRoot();
+    await contentItemUnit.onInitRoot();
+
+    /// ----- | ----- | -----
+    /// TODO: Step [SUPER FIRST START]
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getPomodoroBreakTimeSs02ScriptFrame2ndAsMain?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            if (kDebugMode) {
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
+            }
+
+            /// [TODO: SYSTEM REQUIRED !!!]
+            /// [TODO: SYSTEM REQUIRED !!!]
+            /// [TODO: SYSTEM REQUIRED !!!]
+            // getContentItemSequentialExecution?.getMainPomodoroBreakTimeContentStageSS02?.getActiveStatus?.setStatusAsPerformCompleted();
+
+            ///
+          },
+      ),
+    );
+
+    /// -----
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
+    /// -----
+    getContentItemSequentialExecution?.getMainBreakTimeContentItemSectionSS02?.getContentItemUnitListAsStack?.add(contentItemUnit);
+
     return;
   }
 
@@ -2899,8 +2949,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getPomodoroBreakTimeSs02ScriptFrame3rdAsDone?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -2909,36 +2995,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[DONE_LAST_FINISH][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -2952,7 +3016,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getDoneBreakTimeContentItemSectionSS02?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -2980,8 +3044,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getPomodoroBreakTimeSs03ScriptFrame1stAsGo?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -2990,36 +3090,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[DONE_LAST_FINISH][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -3033,7 +3111,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getGoBreakTimeContentItemSectionSS03?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -3044,8 +3122,95 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
   @override
   Future<void> onGenerateScriptBindToPomodoroBreakTimeSS03AsMain() async {
     /// -----
-    /// TODO: Cập Nhật Dựa Trên Đơn Vị Thực Thi [POMODORO-ITEM]
+    /// TODO: KỊCH BẢN THỰC THI NỘI DUNG CHÍNH TRONG PHẠM VI [KHOẢNG] CHO PHÉP
     /// -----
+
+    /// TODO: SYSTEM REQUIRED !!!
+    /// TODO: SYSTEM REQUIRED !!!
+    /// TODO: SYSTEM REQUIRED !!!
+    getContentItemSequentialExecution?.getMainBreakTimeContentItemSectionSS03?.getContentExistenceStatus?.setStatusAsExistingContent();
+
+    ///
+
+    /// -----
+    /// TODO: Tạo ContentItemUnit
+    /// -----
+    ContentItemUnit contentItemUnit = ContentItemUnit();
+    await contentItemUnit.onSetupRoot();
+    await contentItemUnit.onInitRoot();
+
+    /// ----- | ----- | -----
+    /// TODO: Step [SUPER FIRST START]
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getPomodoroBreakTimeSs03ScriptFrame2ndAsMain?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            if (kDebugMode) {
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
+            }
+
+            /// [TODO: SYSTEM REQUIRED !!!]
+            /// [TODO: SYSTEM REQUIRED !!!]
+            /// [TODO: SYSTEM REQUIRED !!!]
+            // getContentItemSequentialExecution?.getMainPomodoroBreakTimeContentStageSS03?.getActiveStatus?.setStatusAsPerformCompleted();
+
+            ///
+          },
+      ),
+    );
+
+    /// -----
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
+    /// -----
+    getContentItemSequentialExecution?.getMainBreakTimeContentItemSectionSS03?.getContentItemUnitListAsStack?.add(contentItemUnit);
+
     return;
   }
 
@@ -3066,8 +3231,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getPomodoroBreakTimeSs03ScriptFrame3rdAsDone?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -3076,36 +3277,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[DONE_LAST_FINISH][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -3119,7 +3298,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getDoneBreakTimeContentItemSectionSS03?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -3147,8 +3326,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getPomodoroBreakTimeSs04ScriptFrame1stAsGo?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -3157,36 +3372,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[DONE_LAST_FINISH][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -3200,7 +3393,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getGoBreakTimeContentItemSectionSS04?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -3211,8 +3404,95 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
   @override
   Future<void> onGenerateScriptBindToPomodoroBreakTimeSS04AsMain() async {
     /// -----
-    /// TODO: Cập Nhật Dựa Trên Đơn Vị Thực Thi [POMODORO-ITEM]
+    /// TODO: KỊCH BẢN THỰC THI NỘI DUNG CHÍNH TRONG PHẠM VI [KHOẢNG] CHO PHÉP
     /// -----
+
+    /// TODO: SYSTEM REQUIRED !!!
+    /// TODO: SYSTEM REQUIRED !!!
+    /// TODO: SYSTEM REQUIRED !!!
+    getContentItemSequentialExecution?.getMainBreakTimeContentItemSectionSS04?.getContentExistenceStatus?.setStatusAsExistingContent();
+
+    ///
+
+    /// -----
+    /// TODO: Tạo ContentItemUnit
+    /// -----
+    ContentItemUnit contentItemUnit = ContentItemUnit();
+    await contentItemUnit.onSetupRoot();
+    await contentItemUnit.onInitRoot();
+
+    /// ----- | ----- | -----
+    /// TODO: Step [SUPER FIRST START]
+    /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getPomodoroBreakTimeSs04ScriptFrame2ndAsMain?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            if (kDebugMode) {
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
+            }
+
+            /// [TODO: SYSTEM REQUIRED !!!]
+            /// [TODO: SYSTEM REQUIRED !!!]
+            /// [TODO: SYSTEM REQUIRED !!!]
+            // getContentItemSequentialExecution?.getMainPomodoroBreakTimeContentStageSS04?.getActiveStatus?.setStatusAsPerformCompleted();
+
+            ///
+          },
+      ),
+    );
+
+    /// -----
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
+    /// -----
+    getContentItemSequentialExecution?.getMainBreakTimeContentItemSectionSS04?.getContentItemUnitListAsStack?.add(contentItemUnit);
+
     return;
   }
 
@@ -3233,8 +3513,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getPomodoroBreakTimeSs04ScriptFrame3rdAsDone?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -3243,36 +3559,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[DONE_LAST_FINISH][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -3286,7 +3580,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getDoneBreakTimeContentItemSectionSS04?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -3321,8 +3615,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getPomodoroStayFocusedSs01ScriptFrame1stAsGo?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -3331,36 +3661,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[DONE_LAST_FINISH][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -3374,7 +3682,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getGoStayFocusedContentItemSectionSS01?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -3385,8 +3693,52 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
   @override
   Future<void> onGenerateScriptBindToPomodoroStayFocusedSS01AsMain() async {
     /// -----
-    /// TODO: Cập Nhật Dựa Trên Đơn Vị Thực Thi [POMODORO-ITEM]
+    /// TODO: KỊCH BẢN THỰC THI NỘI DUNG CHÍNH TRONG PHẠM VI [KHOẢNG] CHO PHÉP
+    /// TODO: XÁC ĐỊNH NHỮNG SECTION (ĐÃ GENERATE SCRIPT) NÀO SẼ THUỘC STAGE NÀY [[[ PHƯƠNG THỨC 1 ]]]
+    /// TODO: HOẶC
+    /// TODO: GENERATE KỊCH BẢN THỦ CÔNG [[[ PHƯƠNG THỨC 2 ]]]
     /// -----
+
+    ///
+    /// TODO: [[[ PHƯƠNG THỨC 1 ]]]
+    ///
+    /// TODO: Set
+    ///
+    /// [ContentItemSectionSS01]
+    /// [ContentItemSectionSS02]
+    /// [ContentItemSectionSS03]
+    /// [ContentItemSectionSS04]
+    /// [ContentItemSectionSS05]
+    /// [ContentItemSectionSS06]
+    /// [ContentItemSectionSS07]
+    /// [ContentItemSectionSS08]
+    /// [ContentItemSectionSS09]
+    /// [ContentItemSectionSS10]
+    ///
+    ///  TODO: Đến
+    ///
+    /// [PomodoroStayFocusedContentStageSS01]
+    // getContentItemSequentialExecution?.getContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS01);
+    // getContentItemSequentialExecution?.getContentItemSectionSS02?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS01);
+    // getContentItemSequentialExecution?.getContentItemSectionSS03?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS01);
+    // getContentItemSequentialExecution?.getContentItemSectionSS04?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS01);
+    // getContentItemSequentialExecution?.getContentItemSectionSS05?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS01);
+    // getContentItemSequentialExecution?.getContentItemSectionSS06?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS01);
+    // getContentItemSequentialExecution?.getContentItemSectionSS07?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS01);
+    // getContentItemSequentialExecution?.getContentItemSectionSS08?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS01);
+    // getContentItemSequentialExecution?.getContentItemSectionSS09?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS01);
+    // getContentItemSequentialExecution?.getContentItemSectionSS10?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS01);
+
+    ///
+    /// TODO: [[[ PHƯƠNG THỨC 2 ]]]
+    ///
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 
     /// -----
     /// TODO: Tạo ContentItemUnit
@@ -3394,1016 +3746,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     ContentItemUnit contentItemUnit = ContentItemUnit();
     await contentItemUnit.onSetupRoot();
     await contentItemUnit.onInitRoot();
-
-    /// -----
-    /// TODO: [OPEN TWO CHARACTER CONVERSATION WINDOW]
-    /// -----
-    getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onStartTwoCharacterConversationAsOpenWindow, contentItemUnit: contentItemUnit);
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[Unit 2][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 1.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..setStepItemContent(
-            value: StepItemContentAsNewMessageConversation(
-              message: '1234567890 _10',
-              imageSource: null, //
-              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
-              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
-            ),
-            isPriorityOverride: true,
-          ),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[Unit 2][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 1.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..setStepItemContent(
-            value: StepItemContentAsNewMessageConversation(
-              message: '1234567890 1234567890 _20',
-              imageSource: null, //
-              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
-              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA02Id,
-            ),
-            isPriorityOverride: true,
-          ),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[Unit 2][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 1.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..setStepItemContent(
-            value: StepItemContentAsNewMessageConversation(
-              message: '1234567890 1234567890 1234567890 _30',
-              imageSource: null, //
-              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
-              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
-            ),
-            isPriorityOverride: true,
-          ),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[Unit 2][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 1.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..setStepItemContent(
-            value: StepItemContentAsNewMessageConversation(
-              message: '1234567890 1234567890 1234567890 1234567890 _40',
-              imageSource: null, //
-              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
-              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
-            ),
-            isPriorityOverride: true,
-          ),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[Unit 2][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 1.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..setStepItemContent(
-            value: StepItemContentAsNewMessageConversation(
-              message: '1234567890 1234567890 1234567890 1234567890 1234567890 _50',
-              imageSource: null, //
-              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
-              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
-            ),
-            isPriorityOverride: true,
-          ),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[Unit 2][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 1.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..setStepItemContent(
-            value: StepItemContentAsNewMessageConversation(
-              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _60',
-              imageSource: null, //
-              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
-              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
-            ),
-            isPriorityOverride: true,
-          ),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[Unit 2][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 1.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..setStepItemContent(
-            value: StepItemContentAsNewMessageConversation(
-              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _70',
-              imageSource: null, //
-              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
-              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
-            ),
-            isPriorityOverride: true,
-          ),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[Unit 2][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 1.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..setStepItemContent(
-            value: StepItemContentAsNewMessageConversation(
-              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _80',
-              imageSource: null, //
-              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
-              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
-            ),
-            isPriorityOverride: true,
-          ),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[Unit 2][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 1.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..setStepItemContent(
-            value: StepItemContentAsNewMessageConversation(
-              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _90',
-              imageSource: null, //
-              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
-              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
-            ),
-            isPriorityOverride: true,
-          ),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[Unit 2][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 1.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..setStepItemContent(
-            value: StepItemContentAsNewMessageConversation(
-              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _100',
-              imageSource: null, //
-              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
-              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
-            ),
-            isPriorityOverride: true,
-          ),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[Unit 2][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 1.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..setStepItemContent(
-            value: StepItemContentAsNewMessageConversation(
-              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _110',
-              imageSource: null, //
-              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
-              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
-            ),
-            isPriorityOverride: true,
-          ),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[Unit 2][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 1.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..setStepItemContent(
-            value: StepItemContentAsNewMessageConversation(
-              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _120',
-              imageSource: null, //
-              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
-              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
-            ),
-            isPriorityOverride: true,
-          ),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[Unit 2][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 1.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..setStepItemContent(
-            value: StepItemContentAsNewMessageConversation(
-              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _130',
-              imageSource: null, //
-              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
-              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
-            ),
-            isPriorityOverride: true,
-          ),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[Unit 2][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 1.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..setStepItemContent(
-            value: StepItemContentAsNewMessageConversation(
-              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _140',
-              imageSource: null, //
-              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
-              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
-            ),
-            isPriorityOverride: true,
-          ),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[Unit 2][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 1.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..setStepItemContent(
-            value: StepItemContentAsNewMessageConversation(
-              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _150',
-              imageSource: null, //
-              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
-              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
-            ),
-            isPriorityOverride: true,
-          ),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[Unit 2][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 1.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..setStepItemContent(
-            value: StepItemContentAsNewMessageConversation(
-              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _160',
-              imageSource: null, //
-              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
-              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
-            ),
-            isPriorityOverride: true,
-          ),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[Unit 2][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 1.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..setStepItemContent(
-            value: StepItemContentAsNewMessageConversation(
-              message: null,
-              imageSource: 'assets/images/interesting_knowledge/knowledge_01.jpg', //
-              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
-              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
-            ),
-            isPriorityOverride: true,
-          ),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[Unit 2][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 1.0
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asMessageFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('__________[CONTENT_ITEM_SECTION_01][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..setStepItemContent(
-            value: StepItemContentAsNewMessageConversation(
-              message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _170',
-              imageSource: null, //
-              windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
-              characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
-            ),
-            isPriorityOverride: true,
-          ),
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step 0.0 - GAP
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[Unit 2][Step] 0.0 - [GAP]');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          }
-          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
-      ),
-    );
-
-    /// -----
-    /// TODO: [CLOSE TWO CHARACTER CONVERSATION WINDOW]
-    /// -----
-    getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onFinishTwoCharacterConversationAsCloseWindow, contentItemUnit: contentItemUnit);
+    getPomodoroStayFocusedSs01ScriptFrame2ndAsMain?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
 
     /// -----
     /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
-    getContentItemSequentialExecution?.getContentItemSectionSS01?.getContentItemUnitListAsStack?.add(contentItemUnit);
+
+    getContentItemSequentialExecution?.getMainStayFocusedContentItemSectionSS01?.getContentItemUnitListAsStack?.add(contentItemUnit);
+    getContentItemSequentialExecution?.getMainStayFocusedContentItemSectionSS01?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     return;
   }
@@ -4425,8 +3775,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getPomodoroStayFocusedSs01ScriptFrame3rdAsDone?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -4435,36 +3821,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[DONE_LAST_FINISH][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -4478,7 +3842,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getDoneStayFocusedContentItemSectionSS01?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -4507,8 +3871,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getPomodoroStayFocusedSs02ScriptFrame1stAsGo?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -4517,36 +3917,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[DONE_LAST_FINISH][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -4560,7 +3938,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getGoStayFocusedContentItemSectionSS02?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -4571,8 +3949,68 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
   @override
   Future<void> onGenerateScriptBindToPomodoroStayFocusedSS02AsMain() async {
     /// -----
-    /// TODO: Cập Nhật Dựa Trên Đơn Vị Thực Thi [POMODORO-ITEM]
+    /// TODO: KỊCH BẢN THỰC THI NỘI DUNG CHÍNH TRONG PHẠM VI [KHOẢNG] CHO PHÉP
+    /// TODO: XÁC ĐỊNH NHỮNG SECTION (ĐÃ GENERATE SCRIPT) NÀO SẼ THUỘC STAGE NÀY [[[ PHƯƠNG THỨC 1 ]]]
+    /// TODO: HOẶC
+    /// TODO: GENERATE KỊCH BẢN THỦ CÔNG [[[ PHƯƠNG THỨC 2 ]]]
     /// -----
+
+    ///
+    /// TODO: [[[ PHƯƠNG THỨC 1 ]]]
+    ///
+    /// TODO: Set
+    ///
+    /// [ContentItemSectionSS01]
+    /// [ContentItemSectionSS02]
+    /// [ContentItemSectionSS03]
+    /// [ContentItemSectionSS04]
+    /// [ContentItemSectionSS05]
+    /// [ContentItemSectionSS06]
+    /// [ContentItemSectionSS07]
+    /// [ContentItemSectionSS08]
+    /// [ContentItemSectionSS09]
+    /// [ContentItemSectionSS10]
+    ///
+    ///  TODO: Đến
+    ///
+    /// [PomodoroStayFocusedContentStageSS02]
+    // getContentItemSequentialExecution?.getContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS02);
+    // getContentItemSequentialExecution?.getContentItemSectionSS02?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS02);
+    // getContentItemSequentialExecution?.getContentItemSectionSS03?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS02);
+    // getContentItemSequentialExecution?.getContentItemSectionSS04?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS02);
+    // getContentItemSequentialExecution?.getContentItemSectionSS05?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS02);
+    // getContentItemSequentialExecution?.getContentItemSectionSS06?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS02);
+    // getContentItemSequentialExecution?.getContentItemSectionSS07?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS02);
+    // getContentItemSequentialExecution?.getContentItemSectionSS08?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS02);
+    // getContentItemSequentialExecution?.getContentItemSectionSS09?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS02);
+    // getContentItemSequentialExecution?.getContentItemSectionSS10?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS02);
+
+    ///
+    /// TODO: [[[ PHƯƠNG THỨC 2 ]]]
+    ///
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// -----
+    /// TODO: Tạo ContentItemUnit
+    /// -----
+    ContentItemUnit contentItemUnit = ContentItemUnit();
+    await contentItemUnit.onSetupRoot();
+    await contentItemUnit.onInitRoot();
+    getPomodoroStayFocusedSs02ScriptFrame2ndAsMain?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// -----
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
+    /// -----
+
+    getContentItemSequentialExecution?.getMainStayFocusedContentItemSectionSS02?.getContentItemUnitListAsStack?.add(contentItemUnit);
+    getContentItemSequentialExecution?.getMainStayFocusedContentItemSectionSS02?.getContentExistenceStatus?.setStatusAsExistingContent();
+
     return;
   }
 
@@ -4593,8 +4031,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getPomodoroStayFocusedSs02ScriptFrame3rdAsDone?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -4603,36 +4077,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[DONE_LAST_FINISH][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -4646,7 +4098,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getDoneStayFocusedContentItemSectionSS02?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -4675,8 +4127,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getPomodoroStayFocusedSs03ScriptFrame1stAsGo?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -4685,36 +4173,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[DONE_LAST_FINISH][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -4728,7 +4194,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getGoStayFocusedContentItemSectionSS03?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -4739,8 +4205,68 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
   @override
   Future<void> onGenerateScriptBindToPomodoroStayFocusedSS03AsMain() async {
     /// -----
-    /// TODO: Cập Nhật Dựa Trên Đơn Vị Thực Thi [POMODORO-ITEM]
+    /// TODO: KỊCH BẢN THỰC THI NỘI DUNG CHÍNH TRONG PHẠM VI [KHOẢNG] CHO PHÉP
+    /// TODO: XÁC ĐỊNH NHỮNG SECTION (ĐÃ GENERATE SCRIPT) NÀO SẼ THUỘC STAGE NÀY [[[ PHƯƠNG THỨC 1 ]]]
+    /// TODO: HOẶC
+    /// TODO: GENERATE KỊCH BẢN THỦ CÔNG [[[ PHƯƠNG THỨC 2 ]]]
     /// -----
+
+    ///
+    /// TODO: [[[ PHƯƠNG THỨC 1 ]]]
+    ///
+    /// TODO: Set
+    ///
+    /// [ContentItemSectionSS01]
+    /// [ContentItemSectionSS02]
+    /// [ContentItemSectionSS03]
+    /// [ContentItemSectionSS04]
+    /// [ContentItemSectionSS05]
+    /// [ContentItemSectionSS06]
+    /// [ContentItemSectionSS07]
+    /// [ContentItemSectionSS08]
+    /// [ContentItemSectionSS09]
+    /// [ContentItemSectionSS10]
+    ///
+    ///  TODO: Đến
+    ///
+    /// [PomodoroStayFocusedContentStageSS03]
+    // getContentItemSequentialExecution?.getContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS03);
+    // getContentItemSequentialExecution?.getContentItemSectionSS02?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS03);
+    // getContentItemSequentialExecution?.getContentItemSectionSS03?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS03);
+    // getContentItemSequentialExecution?.getContentItemSectionSS04?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS03);
+    // getContentItemSequentialExecution?.getContentItemSectionSS05?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS03);
+    // getContentItemSequentialExecution?.getContentItemSectionSS06?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS03);
+    // getContentItemSequentialExecution?.getContentItemSectionSS07?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS03);
+    // getContentItemSequentialExecution?.getContentItemSectionSS08?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS03);
+    // getContentItemSequentialExecution?.getContentItemSectionSS09?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS03);
+    // getContentItemSequentialExecution?.getContentItemSectionSS10?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS03);
+
+    ///
+    /// TODO: [[[ PHƯƠNG THỨC 2 ]]]
+    ///
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// -----
+    /// TODO: Tạo ContentItemUnit
+    /// -----
+    ContentItemUnit contentItemUnit = ContentItemUnit();
+    await contentItemUnit.onSetupRoot();
+    await contentItemUnit.onInitRoot();
+    getPomodoroStayFocusedSs03ScriptFrame2ndAsMain?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// -----
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
+    /// -----
+
+    getContentItemSequentialExecution?.getMainStayFocusedContentItemSectionSS03?.getContentItemUnitListAsStack?.add(contentItemUnit);
+    getContentItemSequentialExecution?.getMainStayFocusedContentItemSectionSS03?.getContentExistenceStatus?.setStatusAsExistingContent();
+
     return;
   }
 
@@ -4761,8 +4287,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getPomodoroStayFocusedSs03ScriptFrame3rdAsDone?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -4771,36 +4333,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[DONE_LAST_FINISH][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -4814,7 +4354,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getDoneStayFocusedContentItemSectionSS03?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -4843,8 +4383,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getPomodoroStayFocusedSs04ScriptFrame1stAsGo?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -4853,36 +4429,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[DONE_LAST_FINISH][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -4896,7 +4450,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getGoStayFocusedContentItemSectionSS04?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
@@ -4907,8 +4461,68 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
   @override
   Future<void> onGenerateScriptBindToPomodoroStayFocusedSS04AsMain() async {
     /// -----
-    /// TODO: Cập Nhật Dựa Trên Đơn Vị Thực Thi [POMODORO-ITEM]
+    /// TODO: KỊCH BẢN THỰC THI NỘI DUNG CHÍNH TRONG PHẠM VI [KHOẢNG] CHO PHÉP
+    /// TODO: XÁC ĐỊNH NHỮNG SECTION (ĐÃ GENERATE SCRIPT) NÀO SẼ THUỘC STAGE NÀY [[[ PHƯƠNG THỨC 1 ]]]
+    /// TODO: HOẶC
+    /// TODO: GENERATE KỊCH BẢN THỦ CÔNG [[[ PHƯƠNG THỨC 2 ]]]
     /// -----
+
+    ///
+    /// TODO: [[[ PHƯƠNG THỨC 1 ]]]
+    ///
+    /// TODO: Set
+    ///
+    /// [ContentItemSectionSS01]
+    /// [ContentItemSectionSS02]
+    /// [ContentItemSectionSS03]
+    /// [ContentItemSectionSS04]
+    /// [ContentItemSectionSS05]
+    /// [ContentItemSectionSS06]
+    /// [ContentItemSectionSS07]
+    /// [ContentItemSectionSS08]
+    /// [ContentItemSectionSS09]
+    /// [ContentItemSectionSS10]
+    ///
+    ///  TODO: Đến
+    ///
+    /// [PomodoroStayFocusedContentStageSS04]
+    // getContentItemSequentialExecution?.getContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS04);
+    // getContentItemSequentialExecution?.getContentItemSectionSS02?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS04);
+    // getContentItemSequentialExecution?.getContentItemSectionSS03?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS04);
+    // getContentItemSequentialExecution?.getContentItemSectionSS04?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS04);
+    // getContentItemSequentialExecution?.getContentItemSectionSS05?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS04);
+    // getContentItemSequentialExecution?.getContentItemSectionSS06?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS04);
+    // getContentItemSequentialExecution?.getContentItemSectionSS07?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS04);
+    // getContentItemSequentialExecution?.getContentItemSectionSS08?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS04);
+    // getContentItemSequentialExecution?.getContentItemSectionSS09?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS04);
+    // getContentItemSequentialExecution?.getContentItemSectionSS10?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS04);
+
+    ///
+    /// TODO: [[[ PHƯƠNG THỨC 2 ]]]
+    ///
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+    /// -----
+    /// TODO: Tạo ContentItemUnit
+    /// -----
+    ContentItemUnit contentItemUnit = ContentItemUnit();
+    await contentItemUnit.onSetupRoot();
+    await contentItemUnit.onInitRoot();
+    getPomodoroStayFocusedSs04ScriptFrame2ndAsMain?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// -----
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
+    /// -----
+
+    getContentItemSequentialExecution?.getMainStayFocusedContentItemSectionSS04?.getContentItemUnitListAsStack?.add(contentItemUnit);
+    getContentItemSequentialExecution?.getMainStayFocusedContentItemSectionSS04?.getContentExistenceStatus?.setStatusAsExistingContent();
+
     return;
   }
 
@@ -4929,8 +4543,44 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     await contentItemUnit.onInitRoot();
 
     /// ----- | ----- | -----
-    /// TODO: Step 1.0
+    /// TODO: Step [SUPER FIRST START]
     /// ----- | ----- | -----
+    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_________[SET STATUS_AS]_[START]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]__________[SET STATUS_AS]_[START]'); // [OK]
+              }
+            },
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 1);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: Step [SUPER MAIN]
+    /// TODO: NỘI DUNG CHI TIẾT DỰA VÀO [FILE KỊCH BẢN] KỊCH BẢN CHỈ ĐỊNH
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    getPomodoroStayFocusedSs04ScriptFrame3rdAsDone?.onGenerateDetailSequentialExecutionScript(contentItemUnit: contentItemUnit);
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// TODO: Step [SUPER LAST FINISH] [Set Status As Perform Completed]
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
+    /// ----- | ----- | ----- | ----- | ----- | ----- | -----
     contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
       FunctionalSequentialExecutionStepItemState(
         stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
@@ -4939,36 +4589,14 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
           ..onInitRoot()
           ..onStart = () {
             if (kDebugMode) {
-              print('__________[DONE_LAST_FINISH][Step] 1.0');
-            }
-
-            ///
-          }
-          ..onPerform = () {
-            ///
-          },
-      ),
-    );
-
-    /// ----- | ----- | -----
-    /// TODO: Step End
-    /// ----- | ----- | -----
-    contentItemUnit.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
-      FunctionalSequentialExecutionStepItemState(
-        stateModel: FunctionalSequentialExecutionStepItem.asCharacterFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
-          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
-          ..onSetupRoot()
-          ..onInitRoot()
-          ..onStart = () {
-            if (kDebugMode) {
-              print('[END]__________[DONE_LAST_FINISH][Step] 1.0');
+              print('[ON_START]_________[SET STATUS_AS]_[PERFORM_COMPLETED]');
             }
 
             ///
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]
@@ -4982,7 +4610,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     );
 
     /// -----
-    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [DoneLastFinish Content Item Section]
+    /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]
     /// -----
     getContentItemSequentialExecution?.getDoneStayFocusedContentItemSectionSS04?.getContentItemUnitListAsStack?.add(contentItemUnit);
 

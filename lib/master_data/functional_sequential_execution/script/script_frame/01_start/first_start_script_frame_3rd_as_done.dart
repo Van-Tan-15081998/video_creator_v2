@@ -14,6 +14,7 @@ class FirstStartScriptFrame3rdAsDone extends ScriptFrame {
     required super.systemStateManagement, //
     required super.sequentialExecutionController, //
     required super.contentItemSequentialExecution, //
+    required super.systemSequentialExecutionScript, //
     required super.functionalSequentialExecutionController,
   });
 
@@ -22,7 +23,7 @@ class FirstStartScriptFrame3rdAsDone extends ScriptFrame {
   /// TODO:
   /// -----
   @override
-  void onSystemSequentialExecutionAs({required String? executionId, required ContentItemUnit? contentItemUnit}) {
+  void onGenerateDetailSequentialExecutionScript({required ContentItemUnit? contentItemUnit}) {
     return;
   }
 }

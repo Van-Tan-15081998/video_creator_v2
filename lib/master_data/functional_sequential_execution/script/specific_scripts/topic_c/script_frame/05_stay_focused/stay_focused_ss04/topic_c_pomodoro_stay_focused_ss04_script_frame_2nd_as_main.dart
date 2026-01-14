@@ -15,6 +15,7 @@ class TopicCPomodoroStayFocusedSs04ScriptFrame2ndAsMain extends PomodoroStayFocu
     required super.systemStateManagement, //
     required super.sequentialExecutionController, //
     required super.contentItemSequentialExecution, //
+    required super.systemSequentialExecutionScript, //
     required super.functionalSequentialExecutionController,
   });
 
@@ -22,7 +23,7 @@ class TopicCPomodoroStayFocusedSs04ScriptFrame2ndAsMain extends PomodoroStayFocu
   /// TODO:
   /// -----
   @override
-  void onSystemSequentialExecutionAs({required String? executionId, required ContentItemUnit? contentItemUnit}) {
+  void onGenerateDetailSequentialExecutionScript({required ContentItemUnit? contentItemUnit}) {
     return;
   }
 }

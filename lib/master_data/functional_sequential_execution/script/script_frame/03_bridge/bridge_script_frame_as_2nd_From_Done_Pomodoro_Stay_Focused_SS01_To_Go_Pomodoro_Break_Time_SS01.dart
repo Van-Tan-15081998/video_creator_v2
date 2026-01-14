@@ -14,6 +14,7 @@ class BridgeScriptFrameAs2ndFromDonePomodoroStayFocusedSs01ToGoPomodoroBreakTime
     required super.systemStateManagement, //
     required super.sequentialExecutionController, //
     required super.contentItemSequentialExecution, //
+    required super.systemSequentialExecutionScript, //
     required super.functionalSequentialExecutionController,
   });
 
@@ -21,7 +22,7 @@ class BridgeScriptFrameAs2ndFromDonePomodoroStayFocusedSs01ToGoPomodoroBreakTime
   /// TODO:
   /// -----
   @override
-  void onSystemSequentialExecutionAs({required String? executionId, required ContentItemUnit? contentItemUnit}) {
+  void onGenerateDetailSequentialExecutionScript({required ContentItemUnit? contentItemUnit}) {
     return;
   }
 }

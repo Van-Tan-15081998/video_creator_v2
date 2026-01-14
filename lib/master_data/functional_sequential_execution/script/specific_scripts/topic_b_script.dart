@@ -2453,20 +2453,20 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
   @override
   Future<void> onGenerateScriptAsPomodoroContent() async {
     /// TODO: Set [ContentItemSectionSS01] Và [ContentItemSectionSS02] Đến [PomodoroStayFocusedContentStageSS01]
-    getContentItemSequentialExecution?.getContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getPomodoroStayFocusedContentStageSS01);
-    getContentItemSequentialExecution?.getContentItemSectionSS02?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getPomodoroStayFocusedContentStageSS01);
+    getContentItemSequentialExecution?.getContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS01);
+    getContentItemSequentialExecution?.getContentItemSectionSS02?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS01);
 
     /// TODO: Set [ContentItemSectionSS03] Và [ContentItemSectionSS04] Đến [PomodoroStayFocusedContentStageSS02]
-    getContentItemSequentialExecution?.getContentItemSectionSS03?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getPomodoroStayFocusedContentStageSS02);
-    getContentItemSequentialExecution?.getContentItemSectionSS04?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getPomodoroStayFocusedContentStageSS03);
+    getContentItemSequentialExecution?.getContentItemSectionSS03?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS02);
+    getContentItemSequentialExecution?.getContentItemSectionSS04?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS03);
 
     /// TODO: Set [ContentItemSectionSS05] Và [ContentItemSectionSS06] Đến [PomodoroStayFocusedContentStageSS03]
-    getContentItemSequentialExecution?.getContentItemSectionSS05?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getPomodoroStayFocusedContentStageSS03);
-    getContentItemSequentialExecution?.getContentItemSectionSS06?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getPomodoroStayFocusedContentStageSS03);
+    getContentItemSequentialExecution?.getContentItemSectionSS05?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS03);
+    getContentItemSequentialExecution?.getContentItemSectionSS06?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS03);
 
     /// TODO: Set [ContentItemSectionSS07] Và [ContentItemSectionSS08] Đến [PomodoroStayFocusedContentStageSS04]
-    getContentItemSequentialExecution?.getContentItemSectionSS07?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getPomodoroStayFocusedContentStageSS04);
-    getContentItemSequentialExecution?.getContentItemSectionSS08?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getPomodoroStayFocusedContentStageSS04);
+    getContentItemSequentialExecution?.getContentItemSectionSS07?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS04);
+    getContentItemSequentialExecution?.getContentItemSectionSS08?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS04);
 
     ///
     return;
@@ -2474,7 +2474,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
 
   @override
   Future<void> onGenerateScriptBindToFirstStartAsMain() async {
-    getContentItemSequentialExecution?.getFirstStartContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
+    getContentItemSequentialExecution?.getMainFirstStartContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
     /// TODO: Tạo ContentItemUnit
@@ -2705,7 +2705,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
             if (kDebugMode) {
               print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
             }
-            getContentItemSequentialExecution?.getFirstStartSystemContentStage?.getActiveStatus?.setStatusAsPerformCompleted();
+            getContentItemSequentialExecution?.getMainFirstStartSystemContentStage?.getActiveStatus?.setStatusAsPerformCompleted();
 
             ///
           },
@@ -2715,7 +2715,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     /// -----
     /// TODO: Đưa Nội Dung [Content Item Unit] Vào [FirstStart Content Item Section]
     /// -----
-    getContentItemSequentialExecution?.getFirstStartContentItemSection?.getContentItemUnitListAsStack?.add(contentItemUnit);
+    getContentItemSequentialExecution?.getMainFirstStartContentItemSection?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
     ///
     return;
@@ -2861,7 +2861,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
 
   @override
   Future<void> onGenerateScriptBindToLastFinishAsMain() async {
-    getContentItemSequentialExecution?.getLastFinishContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
+    getContentItemSequentialExecution?.getMainLastFinishContentItemSection?.getContentExistenceStatus?.setStatusAsExistingContent();
 
     /// -----
     /// TODO: Tạo ContentItemUnit
@@ -3092,7 +3092,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
             if (kDebugMode) {
               print('[ON_PERFORM]__________[PERFORM_COMPLETED]'); // ok
             }
-            getContentItemSequentialExecution?.getLastFinishSystemContentStage?.getActiveStatus?.setStatusAsPerformCompleted();
+            getContentItemSequentialExecution?.getMainLastFinishSystemContentStage?.getActiveStatus?.setStatusAsPerformCompleted();
 
             ///
           },
@@ -3102,7 +3102,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     /// -----
     /// TODO: Đưa Nội Dung [Content Item Unit] Vào [LastFinish Content Item Section]
     /// -----
-    getContentItemSequentialExecution?.getLastFinishContentItemSection?.getContentItemUnitListAsStack?.add(contentItemUnit);
+    getContentItemSequentialExecution?.getMainLastFinishContentItemSection?.getContentItemUnitListAsStack?.add(contentItemUnit);
 
     ///
     return;

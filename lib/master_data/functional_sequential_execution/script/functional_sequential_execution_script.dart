@@ -662,20 +662,21 @@ abstract class FunctionalSequentialExecutionScript with ExecutionCore {
     /// -----
     /// TODO: Set Đến SystemTime
     /// -----
-    await onGenerateScriptBindToFirstStartAsMain();
+
     await onGenerateScriptBindToFirstStartAsGo();
+    await onGenerateScriptBindToFirstStartAsMain();
     await onGenerateScriptBindToFirstStartAsDone();
 
-    await onGenerateScriptBindToLastFinishAsMain();
     await onGenerateScriptBindToLastFinishAsGo();
+    await onGenerateScriptBindToLastFinishAsMain();
     await onGenerateScriptBindToLastFinishAsDone();
 
-    getContentItemSequentialExecution?.getFirstStartContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(contentStage: getContentItemSequentialExecution?.getFirstStartSystemContentStage);
     getContentItemSequentialExecution?.getGoFirstStartContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(contentStage: getContentItemSequentialExecution?.getGoFirstStartSystemContentStage);
+    getContentItemSequentialExecution?.getMainFirstStartContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(contentStage: getContentItemSequentialExecution?.getMainFirstStartSystemContentStage);
     getContentItemSequentialExecution?.getDoneFirstStartContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(contentStage: getContentItemSequentialExecution?.getDoneFirstStartSystemContentStage);
 
-    getContentItemSequentialExecution?.getLastFinishContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(contentStage: getContentItemSequentialExecution?.getLastFinishSystemContentStage);
     getContentItemSequentialExecution?.getGoLastFinishContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(contentStage: getContentItemSequentialExecution?.getGoLastFinishSystemContentStage);
+    getContentItemSequentialExecution?.getMainLastFinishContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(contentStage: getContentItemSequentialExecution?.getMainLastFinishSystemContentStage);
     getContentItemSequentialExecution?.getDoneLastFinishContentItemSection?.onIntegrateScriptBindToFlowControllerAsSystem(contentStage: getContentItemSequentialExecution?.getDoneLastFinishSystemContentStage);
 
     /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -723,36 +724,37 @@ abstract class FunctionalSequentialExecutionScript with ExecutionCore {
     /// -----
     /// TODO: Set Đến PomodoroBreakTime
     /// -----
-    await onGenerateScriptBindToPomodoroBreakTimeSS01AsMain();
+
     await onGenerateScriptBindToPomodoroBreakTimeSS01AsGo();
+    await onGenerateScriptBindToPomodoroBreakTimeSS01AsMain();
     await onGenerateScriptBindToPomodoroBreakTimeSS01AsDone();
 
-    await onGenerateScriptBindToPomodoroBreakTimeSS02AsMain();
     await onGenerateScriptBindToPomodoroBreakTimeSS02AsGo();
+    await onGenerateScriptBindToPomodoroBreakTimeSS02AsMain();
     await onGenerateScriptBindToPomodoroBreakTimeSS02AsDone();
 
-    await onGenerateScriptBindToPomodoroBreakTimeSS03AsMain();
     await onGenerateScriptBindToPomodoroBreakTimeSS03AsGo();
+    await onGenerateScriptBindToPomodoroBreakTimeSS03AsMain();
     await onGenerateScriptBindToPomodoroBreakTimeSS03AsDone();
 
-    await onGenerateScriptBindToPomodoroBreakTimeSS04AsMain();
     await onGenerateScriptBindToPomodoroBreakTimeSS04AsGo();
+    await onGenerateScriptBindToPomodoroBreakTimeSS04AsMain();
     await onGenerateScriptBindToPomodoroBreakTimeSS04AsDone();
 
-    getContentItemSequentialExecution?.getBreakTimeContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getPomodoroBreakTimeContentStageSS01);
     getContentItemSequentialExecution?.getGoBreakTimeContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getGoPomodoroBreakTimeContentStageSS01);
+    getContentItemSequentialExecution?.getMainBreakTimeContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroBreakTimeContentStageSS01);
     getContentItemSequentialExecution?.getDoneBreakTimeContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getDonePomodoroBreakTimeContentStageSS01);
 
-    getContentItemSequentialExecution?.getBreakTimeContentItemSectionSS02?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getPomodoroBreakTimeContentStageSS02);
     getContentItemSequentialExecution?.getGoBreakTimeContentItemSectionSS02?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getGoPomodoroBreakTimeContentStageSS02);
+    getContentItemSequentialExecution?.getMainBreakTimeContentItemSectionSS02?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroBreakTimeContentStageSS02);
     getContentItemSequentialExecution?.getDoneBreakTimeContentItemSectionSS02?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getDonePomodoroBreakTimeContentStageSS02);
 
-    getContentItemSequentialExecution?.getBreakTimeContentItemSectionSS03?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getPomodoroBreakTimeContentStageSS03);
     getContentItemSequentialExecution?.getGoBreakTimeContentItemSectionSS03?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getGoPomodoroBreakTimeContentStageSS03);
+    getContentItemSequentialExecution?.getMainBreakTimeContentItemSectionSS03?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroBreakTimeContentStageSS03);
     getContentItemSequentialExecution?.getDoneBreakTimeContentItemSectionSS03?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getDonePomodoroBreakTimeContentStageSS03);
 
-    getContentItemSequentialExecution?.getBreakTimeContentItemSectionSS04?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getPomodoroBreakTimeContentStageSS04);
     getContentItemSequentialExecution?.getGoBreakTimeContentItemSectionSS04?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getGoPomodoroBreakTimeContentStageSS04);
+    getContentItemSequentialExecution?.getMainBreakTimeContentItemSectionSS04?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroBreakTimeContentStageSS04);
     getContentItemSequentialExecution?.getDoneBreakTimeContentItemSectionSS04?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getDonePomodoroBreakTimeContentStageSS04);
 
     /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -765,32 +767,37 @@ abstract class FunctionalSequentialExecutionScript with ExecutionCore {
     /// -----
     /// TODO: Set Đến PomodoroStayFocused
     /// -----
-    await onGenerateScriptBindToPomodoroStayFocusedSS01AsMain();
+
     await onGenerateScriptBindToPomodoroStayFocusedSS01AsGo();
+    await onGenerateScriptBindToPomodoroStayFocusedSS01AsMain();
     await onGenerateScriptBindToPomodoroStayFocusedSS01AsDone();
 
-    await onGenerateScriptBindToPomodoroStayFocusedSS02AsMain();
     await onGenerateScriptBindToPomodoroStayFocusedSS02AsGo();
+    await onGenerateScriptBindToPomodoroStayFocusedSS02AsMain();
     await onGenerateScriptBindToPomodoroStayFocusedSS02AsDone();
 
-    await onGenerateScriptBindToPomodoroStayFocusedSS03AsMain();
     await onGenerateScriptBindToPomodoroStayFocusedSS03AsGo();
+    await onGenerateScriptBindToPomodoroStayFocusedSS03AsMain();
     await onGenerateScriptBindToPomodoroStayFocusedSS03AsDone();
 
-    await onGenerateScriptBindToPomodoroStayFocusedSS04AsMain();
     await onGenerateScriptBindToPomodoroStayFocusedSS04AsGo();
+    await onGenerateScriptBindToPomodoroStayFocusedSS04AsMain();
     await onGenerateScriptBindToPomodoroStayFocusedSS04AsDone();
 
     getContentItemSequentialExecution?.getGoStayFocusedContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getGoPomodoroStayFocusedContentStageSS01);
+    getContentItemSequentialExecution?.getMainStayFocusedContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS01);
     getContentItemSequentialExecution?.getDoneStayFocusedContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getDonePomodoroStayFocusedContentStageSS01);
 
     getContentItemSequentialExecution?.getGoStayFocusedContentItemSectionSS02?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getGoPomodoroStayFocusedContentStageSS02);
+    getContentItemSequentialExecution?.getMainStayFocusedContentItemSectionSS02?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS02);
     getContentItemSequentialExecution?.getDoneStayFocusedContentItemSectionSS02?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getDonePomodoroStayFocusedContentStageSS02);
 
     getContentItemSequentialExecution?.getGoStayFocusedContentItemSectionSS03?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getGoPomodoroStayFocusedContentStageSS03);
+    getContentItemSequentialExecution?.getMainStayFocusedContentItemSectionSS03?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS03);
     getContentItemSequentialExecution?.getDoneStayFocusedContentItemSectionSS03?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getDonePomodoroStayFocusedContentStageSS03);
 
     getContentItemSequentialExecution?.getGoStayFocusedContentItemSectionSS04?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getGoPomodoroStayFocusedContentStageSS04);
+    getContentItemSequentialExecution?.getMainStayFocusedContentItemSectionSS04?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS04);
     getContentItemSequentialExecution?.getDoneStayFocusedContentItemSectionSS04?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getDonePomodoroStayFocusedContentStageSS04);
 
     /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
