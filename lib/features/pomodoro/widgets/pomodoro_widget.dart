@@ -23,11 +23,7 @@ class _PomodoroWidgetState extends State<PomodoroWidget> with SimpleAnimationPos
   void initState() {
     super.initState();
 
-    _pomodoroContentWidget = PomodoroContentWidget(
-      systemStateManagement: widget.pomodoroFeature?.getSystemStateManagement,
-      sizeDx: widget.pomodoroFeature?.getSizeDx ?? 0,
-      sizeDy: widget.pomodoroFeature?.getSizeDy ?? 0,
-    );
+    _pomodoroContentWidget = PomodoroContentWidget(systemStateManagement: widget.pomodoroFeature?.getSystemStateManagement, sizeDx: widget.pomodoroFeature?.getSizeDx ?? 0, sizeDy: widget.pomodoroFeature?.getSizeDy ?? 0);
 
     topPosition = widget.pomodoroFeature?.getTopPosition;
     rightPosition = widget.pomodoroFeature?.getRightPosition;

@@ -40,8 +40,6 @@ import 'package:window_size/window_size.dart';
 // bottomStart  bottomCenter  bottomEnd
 // (-1,1)                      (1,1)
 
-
-
 //
 //
 //
@@ -61,9 +59,6 @@ import 'package:window_size/window_size.dart';
 //
 //
 //
-
-
-
 
 main() async {
   // ✅ Khởi tạo binding trước khi gọi bất kỳ hàm nào khác
@@ -105,10 +100,7 @@ main() async {
   }
 
   await Window.initialize();
-  await Window.setEffect(
-    effect: WindowEffect.transparent,
-    color: Colors.transparent,
-  );
+  await Window.setEffect(effect: WindowEffect.transparent, color: Colors.transparent);
 
   runApp(MyApp(sizeDx: 2560, sizeDy: 1440));
 }

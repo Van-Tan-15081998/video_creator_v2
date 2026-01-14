@@ -4,6 +4,4 @@ import 'package:frame_creator_v2/master_data/content_item/03_content_stage/abstr
 import 'package:frame_creator_v2/master_data/content_item/03_content_stage/abstract/content_stage_active_status.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item_state.dart';
 
-class PomodoroContentStage extends ContentStage {
-
-}
+class PomodoroContentStage extends ContentStage {}

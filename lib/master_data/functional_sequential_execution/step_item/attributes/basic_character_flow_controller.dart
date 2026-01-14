@@ -71,7 +71,6 @@ class BasicCharacterFlowController with ExecutionCore {
   @override
   Future<void> onSetupRoot({bool? isIgnoreSetupRootForSubCom}) async {
     try {
-
       /// -----
       /// TODO: Setup Root For SubCom
       /// -----

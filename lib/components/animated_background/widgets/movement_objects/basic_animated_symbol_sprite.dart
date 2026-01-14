@@ -1,13 +1,11 @@
 import 'dart:async';
 import 'dart:ui' as ui;
-import 'package:flame/text.dart';
-import 'package:flame/game.dart';
+
 import 'package:flame/cache.dart' as cache;
-import 'package:flutter/material.dart';
 import 'package:flame/components.dart';
+import 'package:flame/text.dart';
 import 'package:frame_creator_v2/components/animated_background/models/animated_icon_status.dart';
 import 'package:frame_creator_v2/components/animated_background/models/basic_sprite_unit.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 ///
 /// TODO:

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/core/window_feature.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_conversation_functional_feature/widgets/from_center_start_position_as_two_character_conversation_widget.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 
 class FromCenterStartPositionAsTwoCharacterConversationFunctionalFeature with ExecutionCore, WindowFeature {
@@ -72,10 +73,7 @@ class FromCenterStartPositionAsTwoCharacterConversationFunctionalFeature with Ex
           builder: (context, constraints) {
             return Stack(
               alignment: AlignmentDirectional.center, //
-              children: [
-                // Text('ConversationFeature'), //
-                TwoCharacterConversationWidget(twoCharacterConversationFunctionalFeature: this),
-              ],
+              children: [FromCenterStartPositionAsTwoCharacterConversationWidget(fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature: this)],
             );
           },
         ),

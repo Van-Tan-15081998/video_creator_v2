@@ -1,18 +1,35 @@
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
-import 'package:frame_creator_v2/master_features/functional_features/two_character_conversation/models/two_character_conversation_functional_feature.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_conversation_functional_feature/models/from_center_start_position_as_two_character_conversation_functional_feature.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_top_end_position_as_one_character_conversation_functional_feature/models/from_top_end_position_as_one_character_conversation_functional_feature.dart';
 import 'package:frame_creator_v2/state_managements/mixins/feature_mixin.dart';
 
 class FunctionalFeatureManagement with ExecutionCore, FeatureMixin {
   /// -----
   /// TODO:
   /// -----
-  TwoCharacterConversationFunctionalFeature? _twoCharacterConversationFunctionalFeature;
-  TwoCharacterConversationFunctionalFeature? get getTwoCharacterConversationFunctionalFeature => _twoCharacterConversationFunctionalFeature;
-  void setTwoCharacterConversationFunctionalFeature({required TwoCharacterConversationFunctionalFeature? value, bool? isPriorityOverride}) {
+  FromCenterStartPositionAsTwoCharacterConversationFunctionalFeature? _fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature;
+  FromCenterStartPositionAsTwoCharacterConversationFunctionalFeature? get getFromCenterStartPositionAsTwoCharacterConversationFunctionalFeature => _fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature;
+  void setFromCenterStartPositionAsTwoCharacterConversationFunctionalFeature({required FromCenterStartPositionAsTwoCharacterConversationFunctionalFeature? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
-      _twoCharacterConversationFunctionalFeature = value;
+      _fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature = value;
     } else {
-      _twoCharacterConversationFunctionalFeature ??= value;
+      _fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature ??= value;
+    }
+
+    ///
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  FromTopEndPositionAsOneCharacterConversationFunctionalFeature? _fromTopEndPositionAsOneCharacterConversationFunctionalFeature;
+  FromTopEndPositionAsOneCharacterConversationFunctionalFeature? get getFromTopEndPositionAsOneCharacterConversationFunctionalFeature => _fromTopEndPositionAsOneCharacterConversationFunctionalFeature;
+  void setFromTopEndPositionAsOneCharacterConversationFunctionalFeature({required FromTopEndPositionAsOneCharacterConversationFunctionalFeature? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _fromTopEndPositionAsOneCharacterConversationFunctionalFeature = value;
+    } else {
+      _fromTopEndPositionAsOneCharacterConversationFunctionalFeature ??= value;
     }
 
     ///

@@ -77,9 +77,7 @@ class HelpfulStudyAdviceRelatedToTopicFeature with ExecutionCore, WindowFeature 
               alignment: AlignmentDirectional.center, //
               children: [
                 // Text('VocabularyListFeature'), //
-                HelpfulStudyAdviceRelatedToTopicWidget(
-                  helpfulStudyAdviceRelatedToTopicFeature: this,
-                ),
+                HelpfulStudyAdviceRelatedToTopicWidget(helpfulStudyAdviceRelatedToTopicFeature: this),
               ],
             );
           },

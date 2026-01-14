@@ -1,4 +1,3 @@
-import 'package:frame_creator_v2/components/animated_background/widgets/helpful_study_advice/helpful_study_advice_related_to_topic_animated_background_widget.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/master_data/content_item/04_content_item_sequential_execution/content_item_sequential_execution.dart';
 import 'package:frame_creator_v2/master_features/constant_data/system_constant_data.dart';

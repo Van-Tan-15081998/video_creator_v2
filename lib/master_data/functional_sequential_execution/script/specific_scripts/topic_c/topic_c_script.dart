@@ -999,9 +999,8 @@ class TopicCScript extends FunctionalSequentialExecutionScript {
   /// -----
   @override
   Future<void> onGenerateScriptAsPomodoroContent() async {
-
     return;
-    
+
     /// TODO: Set [ContentItemSectionSS01] Và [ContentItemSectionSS02] Đến [PomodoroStayFocusedContentStageSS01]
     getContentItemSequentialExecution?.getContentItemSectionSS01?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS01);
     getContentItemSequentialExecution?.getContentItemSectionSS02?.onIntegrateScriptBindToFlowControllerAsPomodoroContent(contentStage: getContentItemSequentialExecution?.getMainPomodoroStayFocusedContentStageSS01);
@@ -1568,7 +1567,7 @@ class TopicCScript extends FunctionalSequentialExecutionScript {
           }
           ..onPerform = () {
             if (kDebugMode) {
-              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK] 
+              print('[ON_PERFORM]__________[SET STATUS_AS]_[PERFORM_COMPLETED]'); // [OK]
             }
 
             /// [TODO: SYSTEM REQUIRED !!!]

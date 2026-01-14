@@ -26,11 +26,7 @@ class _VocabularyDefinitionWidgetState extends State<VocabularyDefinitionWidget>
   void initState() {
     super.initState();
 
-    _vocabularyDefinitionContentWidget = VocabularyDefinitionContentWidget(
-      systemStateManagement: widget.vocabularyDefinitionFeature?.getSystemStateManagement,
-      sizeDx: widget.vocabularyDefinitionFeature?.getSizeDx ?? 0,
-      sizeDy: widget.vocabularyDefinitionFeature?.getSizeDy ?? 0,
-    );
+    _vocabularyDefinitionContentWidget = VocabularyDefinitionContentWidget(systemStateManagement: widget.vocabularyDefinitionFeature?.getSystemStateManagement, sizeDx: widget.vocabularyDefinitionFeature?.getSizeDx ?? 0, sizeDy: widget.vocabularyDefinitionFeature?.getSizeDy ?? 0);
 
     topPosition = widget.vocabularyDefinitionFeature?.getTopPosition;
     rightPosition = widget.vocabularyDefinitionFeature?.getRightPosition;

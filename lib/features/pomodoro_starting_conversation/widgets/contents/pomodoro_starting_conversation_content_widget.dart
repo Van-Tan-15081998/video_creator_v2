@@ -158,9 +158,7 @@ class _PomodoroStartingConversationContentWidgetState extends State<PomodoroStar
 
                 /// Chỉ Định Chuyển Tiếp
                 Future.delayed(Duration(seconds: 1), () {
-                  widget.systemStateManagement?.getMainTimelineStateManagement?.getTimeline?.moveToNextExecution(
-                    markId: 'PomodoroStartingConversationContentWidget'
-                  );
+                  widget.systemStateManagement?.getMainTimelineStateManagement?.getTimeline?.moveToNextExecution(markId: 'PomodoroStartingConversationContentWidget');
                 });
               }
             }

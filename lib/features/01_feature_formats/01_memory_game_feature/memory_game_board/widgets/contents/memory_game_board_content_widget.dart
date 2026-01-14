@@ -236,9 +236,7 @@ class _MemoryGameBoardContentWidgetState extends State<MemoryGameBoardContentWid
       }
     });
 
-    _ticker = createTicker((Duration elapsed) {
-
-    })..start();
+    _ticker = createTicker((Duration elapsed) {})..start();
   }
 
   onPlaySFXInterestingKnowledgeConversationSentenceAppear() {
@@ -272,9 +270,7 @@ class _MemoryGameBoardContentWidgetState extends State<MemoryGameBoardContentWid
             right: 40.0,
             width: widget.sizeDx - 80.0,
             height: widget.sizeDy - 80.0,
-            child: SquareBoardWidget(systemStateManagement: widget.systemStateManagement,
-                sizeDx: widget.sizeDx - 80.0,
-                sizeDy: widget.sizeDy - 80.0),
+            child: SquareBoardWidget(systemStateManagement: widget.systemStateManagement, sizeDx: widget.sizeDx - 80.0, sizeDy: widget.sizeDy - 80.0),
           ),
 
           Positioned(

@@ -137,13 +137,15 @@ class _InterestingKnowledgeConversationWidgetState extends State<InterestingKnow
                   children: [
                     isActivatedWindow ? _interestingKnowledgeConversationContentWidget ?? Container() : Container(),
 
-                    isActivatedWindow ? Positioned(
-                      top: 0,
-                      left: 0,
-                      width: sizeDx,
-                      height: sizeDy,
-                      child: InterestingKnowledgeConversationCharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy),
-                    ) : Container(),
+                    isActivatedWindow
+                        ? Positioned(
+                            top: 0,
+                            left: 0,
+                            width: sizeDx,
+                            height: sizeDy,
+                            child: InterestingKnowledgeConversationCharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy),
+                          )
+                        : Container(),
                   ],
                 ),
               ),

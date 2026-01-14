@@ -25,11 +25,7 @@ class _ConversationWidgetState extends State<VocabularyConversationWidget> with 
   void initState() {
     super.initState();
 
-    _vocabularyConversationContentWidget = VocabularyConversationContentWidget(
-      systemStateManagement: widget.vocabularyConversationFeature?.getSystemStateManagement,
-      sizeDx: widget.vocabularyConversationFeature?.getSizeDx ?? 0,
-      sizeDy: widget.vocabularyConversationFeature?.getSizeDy ?? 0,
-    );
+    _vocabularyConversationContentWidget = VocabularyConversationContentWidget(systemStateManagement: widget.vocabularyConversationFeature?.getSystemStateManagement, sizeDx: widget.vocabularyConversationFeature?.getSizeDx ?? 0, sizeDy: widget.vocabularyConversationFeature?.getSizeDy ?? 0);
 
     topPosition = widget.vocabularyConversationFeature?.getTopPosition;
     rightPosition = widget.vocabularyConversationFeature?.getRightPosition;

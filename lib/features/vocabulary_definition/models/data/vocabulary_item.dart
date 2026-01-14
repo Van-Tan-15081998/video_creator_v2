@@ -435,7 +435,6 @@ class VocabularyItem with ExecutionCore {
 
   final AudioPlayer _player = AudioPlayer();
   Future<void> playRandomSFXAudioPlayer() async {
-
     getSequentialExecutionController?.getSystemStateManagement?.getMusicAndSound?.setIsFixedBackgroundMusicVolume(value: true, isPriorityOverride: true);
     _player.onPlayerComplete.listen((_) {
       getSequentialExecutionController?.getSystemStateManagement?.getMusicAndSound?.setIsFixedBackgroundMusicVolume(value: false, isPriorityOverride: true);

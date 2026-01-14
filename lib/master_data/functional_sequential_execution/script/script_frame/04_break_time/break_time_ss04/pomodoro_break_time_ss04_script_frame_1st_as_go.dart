@@ -26,4 +26,3 @@ class PomodoroBreakTimeSs04ScriptFrame1stAsGo extends ScriptFrame {
     return;
   }
 }
-

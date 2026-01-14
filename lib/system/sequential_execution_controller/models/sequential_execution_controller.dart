@@ -38,8 +38,9 @@ import 'package:frame_creator_v2/features/vocabulary_scene_transition/models/voc
 import 'package:frame_creator_v2/features/vocabulary_subject/models/vocabulary_subject_feature.dart';
 import 'package:frame_creator_v2/features/vocabulary_title/models/vocabulary_title_feature.dart';
 import 'package:frame_creator_v2/master_data/content_item/04_content_item_sequential_execution/content_item_sequential_execution.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_conversation_functional_feature/models/from_center_start_position_as_two_character_conversation_functional_feature.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_top_end_position_as_one_character_conversation_functional_feature/models/from_top_end_position_as_one_character_conversation_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/functional_feature_management.dart';
-import 'package:frame_creator_v2/master_features/functional_features/two_character_conversation/models/two_character_conversation_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/countdown_timer/models/countdown_time_cycle_system_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/introductory_conversation/models/introductory_conversation_system_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/pomodoro_cycle/models/pomodoro_cycle_system_feature.dart';
@@ -259,16 +260,23 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       /// ----- | ----- | ----- | ----- | ----- |
       /// TODO: Functional Feature Management
       /// ----- | ----- | ----- | ----- | ----- |
-      setTwoCharacterConversationFunctionalFeature(value: TwoCharacterConversationFunctionalFeature(systemStateManagement: getSystemStateManagement, sizeDx: null, sizeDy: null), isPriorityOverride: true);
-      getTwoCharacterConversationFunctionalFeature?.setSizeDx(value: getSizeDx * 0.6, isPriorityOverride: true, isSetActiveSizeDx: true);
-      getTwoCharacterConversationFunctionalFeature?.setSizeDy(value: getSizeDy * 1.0 - 30.0, isPriorityOverride: true, isSetActiveSizeDy: true);
-      getTwoCharacterConversationFunctionalFeature?.setTopPosition(value: 15.0, isPriorityOverride: true, isSetActiveTopPosition: true);
-      getTwoCharacterConversationFunctionalFeature?.setLeftPosition(value: 15.0, isPriorityOverride: true, isSetActiveLeftPosition: true);
+      setFromCenterStartPositionAsTwoCharacterConversationFunctionalFeature(value: FromCenterStartPositionAsTwoCharacterConversationFunctionalFeature(systemStateManagement: getSystemStateManagement, sizeDx: null, sizeDy: null), isPriorityOverride: true);
+      getFromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.setSizeDx(value: getSizeDx * 0.6, isPriorityOverride: true, isSetActiveSizeDx: true);
+      getFromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.setSizeDy(value: getSizeDy * 1.0 - 30.0, isPriorityOverride: true, isSetActiveSizeDy: true);
+      getFromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.setTopPosition(value: 15.0, isPriorityOverride: true, isSetActiveTopPosition: true);
+      getFromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.setLeftPosition(value: 15.0, isPriorityOverride: true, isSetActiveLeftPosition: true);
+
+      setFromTopEndPositionAsOneCharacterConversationFunctionalFeature(value: FromTopEndPositionAsOneCharacterConversationFunctionalFeature(systemStateManagement: getSystemStateManagement, sizeDx: null, sizeDy: null), isPriorityOverride: true);
+      getFromTopEndPositionAsOneCharacterConversationFunctionalFeature?.setSizeDx(value: getSizeDx - (getSizeDx * 0.6 + 45), isPriorityOverride: true, isSetActiveSizeDx: true);
+      getFromTopEndPositionAsOneCharacterConversationFunctionalFeature?.setSizeDy(value: getSizeDy * 0.4, isPriorityOverride: true, isSetActiveSizeDy: true);
+      getFromTopEndPositionAsOneCharacterConversationFunctionalFeature?.setTopPosition(value: 15.0, isPriorityOverride: true, isSetActiveTopPosition: true);
+      getFromTopEndPositionAsOneCharacterConversationFunctionalFeature?.setRightPosition(value: 15.0, isPriorityOverride: true, isSetActiveRightPosition: true);
 
       ///
       ///
       ///
-      getFunctionalFeatureManagement?.setTwoCharacterConversationFunctionalFeature(value: getTwoCharacterConversationFunctionalFeature, isPriorityOverride: true);
+      getFunctionalFeatureManagement?.setFromCenterStartPositionAsTwoCharacterConversationFunctionalFeature(value: getFromCenterStartPositionAsTwoCharacterConversationFunctionalFeature, isPriorityOverride: true);
+      getFunctionalFeatureManagement?.setFromTopEndPositionAsOneCharacterConversationFunctionalFeature(value: getFromTopEndPositionAsOneCharacterConversationFunctionalFeature, isPriorityOverride: true);
 
       /// ----- | ----- | ----- | ----- | ----- |
       /// TODO: System Feature Management
@@ -736,7 +744,8 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
                 /// ----- | ----- | ----- | ----- | ----- |
 
                 /// TODO:
-                AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getTwoCharacterConversationFunctionalFeature?.getWindowWidget ?? Container()),
+                AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getWindowWidget ?? Container()),
+                AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromTopEndPositionAsOneCharacterConversationFunctionalFeature?.getWindowWidget ?? Container()),
 
                 /// ----- | ----- | ----- | ----- | ----- |
                 /// TODO: System Feature Management
@@ -840,7 +849,8 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       /// ----- | ----- | ----- | ----- | ----- |
 
       /// TODO:
-      await getTwoCharacterConversationFunctionalFeature?.onSetupRoot();
+      await getFromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.onSetupRoot();
+      await getFromTopEndPositionAsOneCharacterConversationFunctionalFeature?.onSetupRoot();
 
       /// ----- | ----- | ----- | ----- | ----- |
       /// TODO: System Feature Management
@@ -921,8 +931,13 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       /// ----- | ----- | ----- | ----- | ----- |
 
       /// TODO:
-      getTwoCharacterConversationFunctionalFeature
+      getFromCenterStartPositionAsTwoCharacterConversationFunctionalFeature
         ?..setConditionActiveByLeftDirection()
+        ..onDeactivateWindow();
+
+      /// TODO:
+      getFromTopEndPositionAsOneCharacterConversationFunctionalFeature
+        ?..setConditionActiveByRightDirection()
         ..onDeactivateWindow();
 
       /// ----- | ----- | ----- | ----- | ----- |
@@ -1095,7 +1110,8 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       /// ----- | ----- | ----- | ----- | ----- |
 
       /// TODO:
-      await getTwoCharacterConversationFunctionalFeature?.onInitRoot();
+      await getFromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.onInitRoot();
+      await getFromTopEndPositionAsOneCharacterConversationFunctionalFeature?.onInitRoot();
 
       /// ----- | ----- | ----- | ----- | ----- |
       /// TODO: System Feature Management

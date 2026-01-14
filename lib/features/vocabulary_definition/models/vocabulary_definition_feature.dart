@@ -7,12 +7,7 @@ import 'package:frame_creator_v2/state_managements/system_state_management.dart'
 import 'package:frame_creator_v2/system/sequential_execution_controller/models/sequential_execution_controller.dart';
 
 class VocabularyDefinitionFeature with ExecutionCore, WindowFeature {
-  VocabularyDefinitionFeature({
-    required SystemStateManagement? systemStateManagement,
-    required SequentialExecutionController? sequentialExecutionController,
-    required double? sizeDx,
-    required double? sizeDy,
-  }) {
+  VocabularyDefinitionFeature({required SystemStateManagement? systemStateManagement, required SequentialExecutionController? sequentialExecutionController, required double? sizeDx, required double? sizeDy}) {
     setSystemStateManagement(value: systemStateManagement);
     setSizeDx(value: sizeDx, isPriorityOverride: true);
     setSizeDy(value: sizeDy, isPriorityOverride: true);

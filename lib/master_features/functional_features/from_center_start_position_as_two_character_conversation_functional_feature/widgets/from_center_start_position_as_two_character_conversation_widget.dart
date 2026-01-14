@@ -3,85 +3,85 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:frame_creator_v2/components/transparent_effect_wall/transparent_effect_wall_widget.dart';
 import 'package:frame_creator_v2/core/simple_position_size.dart';
-import 'package:frame_creator_v2/features/vocabulary_conversation/widgets/contents/vocabulary_conversation_character_widget.dart';
-import 'package:frame_creator_v2/master_features/functional_features/two_character_conversation/models/two_character_conversation_functional_feature.dart';
-import 'package:frame_creator_v2/master_features/functional_features/two_character_conversation/widgets/contents/two_character_conversation_content_widget.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_conversation_functional_feature/models/from_center_start_position_as_two_character_conversation_functional_feature.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_conversation_functional_feature/widgets/contents/from_center_start_position_as_two_character_conversation_character_widget.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_conversation_functional_feature/widgets/contents/from_center_start_position_as_two_character_conversation_content_widget.dart';
 
-class TwoCharacterConversationWidget extends StatefulWidget {
-  const TwoCharacterConversationWidget({super.key, required this.twoCharacterConversationFunctionalFeature});
+class FromCenterStartPositionAsTwoCharacterConversationWidget extends StatefulWidget {
+  const FromCenterStartPositionAsTwoCharacterConversationWidget({super.key, required this.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature});
 
-  final TwoCharacterConversationFunctionalFeature? twoCharacterConversationFunctionalFeature;
+  final FromCenterStartPositionAsTwoCharacterConversationFunctionalFeature? fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature;
 
   @override
-  State<TwoCharacterConversationWidget> createState() => _TwoCharacterConversationWidgetState();
+  State<FromCenterStartPositionAsTwoCharacterConversationWidget> createState() => _FromCenterStartPositionAsTwoCharacterConversationWidgetState();
 }
 
-class _TwoCharacterConversationWidgetState extends State<TwoCharacterConversationWidget> with SimpleAnimationPositionSize, SingleTickerProviderStateMixin {
+class _FromCenterStartPositionAsTwoCharacterConversationWidgetState extends State<FromCenterStartPositionAsTwoCharacterConversationWidget> with SimpleAnimationPositionSize, SingleTickerProviderStateMixin {
   late final Ticker _ticker;
 
-  TwoCharacterConversationContentWidget? _twoCharacterConversationContentWidget;
+  FromCenterStartPositionAsTwoCharacterConversationContentWidget? _fromCenterStartPositionAsTwoCharacterConversationContentWidget;
 
   @override
   void initState() {
     super.initState();
 
-    _twoCharacterConversationContentWidget = TwoCharacterConversationContentWidget(
-      systemStateManagement: widget.twoCharacterConversationFunctionalFeature?.getSystemStateManagement,
-      sizeDx: widget.twoCharacterConversationFunctionalFeature?.getSizeDx ?? 0,
-      sizeDy: widget.twoCharacterConversationFunctionalFeature?.getSizeDy ?? 0,
+    _fromCenterStartPositionAsTwoCharacterConversationContentWidget = FromCenterStartPositionAsTwoCharacterConversationContentWidget(
+      systemStateManagement: widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getSystemStateManagement,
+      sizeDx: widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getSizeDx ?? 0,
+      sizeDy: widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getSizeDy ?? 0,
     );
 
-    topPosition = widget.twoCharacterConversationFunctionalFeature?.getTopPosition;
-    rightPosition = widget.twoCharacterConversationFunctionalFeature?.getRightPosition;
-    bottomPosition = widget.twoCharacterConversationFunctionalFeature?.getBottomPosition;
-    leftPosition = widget.twoCharacterConversationFunctionalFeature?.getLeftPosition;
-    sizeDx = widget.twoCharacterConversationFunctionalFeature?.getSizeDx ?? 0;
-    sizeDy = widget.twoCharacterConversationFunctionalFeature?.getSizeDy ?? 0;
+    topPosition = widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getTopPosition;
+    rightPosition = widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getRightPosition;
+    bottomPosition = widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getBottomPosition;
+    leftPosition = widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getLeftPosition;
+    sizeDx = widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getSizeDx ?? 0;
+    sizeDy = widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getSizeDy ?? 0;
 
     _ticker = createTicker((Duration elapsed) {
       ///
 
-      if (widget.twoCharacterConversationFunctionalFeature?.isConditionActiveByTopDirection() == true && topPosition != widget.twoCharacterConversationFunctionalFeature?.getTopPosition) {
-        topPosition = widget.twoCharacterConversationFunctionalFeature?.getTopPosition;
+      if (widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.isConditionActiveByTopDirection() == true && topPosition != widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getTopPosition) {
+        topPosition = widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getTopPosition;
         isUpdate = true;
       }
 
-      if (widget.twoCharacterConversationFunctionalFeature?.isConditionActiveByRightDirection() == true && rightPosition != widget.twoCharacterConversationFunctionalFeature?.getRightPosition) {
-        rightPosition = widget.twoCharacterConversationFunctionalFeature?.getRightPosition;
+      if (widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.isConditionActiveByRightDirection() == true && rightPosition != widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getRightPosition) {
+        rightPosition = widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getRightPosition;
         isUpdate = true;
       }
 
-      if (widget.twoCharacterConversationFunctionalFeature?.isConditionActiveByBottomDirection() == true && bottomPosition != widget.twoCharacterConversationFunctionalFeature?.getBottomPosition) {
-        bottomPosition = widget.twoCharacterConversationFunctionalFeature?.getBottomPosition;
+      if (widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.isConditionActiveByBottomDirection() == true && bottomPosition != widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getBottomPosition) {
+        bottomPosition = widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getBottomPosition;
         isUpdate = true;
       }
 
-      if (widget.twoCharacterConversationFunctionalFeature?.isConditionActiveByLeftDirection() == true && leftPosition != widget.twoCharacterConversationFunctionalFeature?.getLeftPosition) {
-        leftPosition = widget.twoCharacterConversationFunctionalFeature?.getLeftPosition;
+      if (widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.isConditionActiveByLeftDirection() == true && leftPosition != widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getLeftPosition) {
+        leftPosition = widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getLeftPosition;
         isUpdate = true;
       }
 
-      if (sizeDx != widget.twoCharacterConversationFunctionalFeature?.getSizeDx) {
-        sizeDx = widget.twoCharacterConversationFunctionalFeature?.getSizeDx ?? 0;
+      if (sizeDx != widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getSizeDx) {
+        sizeDx = widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getSizeDx ?? 0;
         isUpdate = true;
       }
 
-      if (sizeDy != widget.twoCharacterConversationFunctionalFeature?.getSizeDy) {
-        sizeDy = widget.twoCharacterConversationFunctionalFeature?.getSizeDy ?? 0;
+      if (sizeDy != widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getSizeDy) {
+        sizeDy = widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getSizeDy ?? 0;
         isUpdate = true;
       }
 
       /// -----
       /// TODO: Check Update Activate Window
       /// -----
-      if (widget.twoCharacterConversationFunctionalFeature?.checkConditionActiveByDirection() == true) {
+      if (widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.checkConditionActiveByDirection() == true) {
         ///
         if (isActivatedWindow == false) {
           setState(() {
             isActivatedWindow = true;
           });
         }
-      } else if (widget.twoCharacterConversationFunctionalFeature?.checkConditionActiveByDirection() == false) {
+      } else if (widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.checkConditionActiveByDirection() == false) {
         ///
         if (isActivatedWindow == true && isAnimatedShow == true && isMarkedUnactivatedWindow == false) {
           setState(() {
@@ -99,7 +99,7 @@ class _TwoCharacterConversationWidgetState extends State<TwoCharacterConversatio
       }
 
       WidgetsBinding.instance.addPostFrameCallback((_) {
-        if (widget.twoCharacterConversationFunctionalFeature?.checkConditionActiveByDirection() == true && isAnimatedShow == false) {
+        if (widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.checkConditionActiveByDirection() == true && isAnimatedShow == false) {
           setState(() {
             isAnimatedShow = true;
           });
@@ -143,7 +143,7 @@ class _TwoCharacterConversationWidgetState extends State<TwoCharacterConversatio
                           )
                         : Container(),
 
-                    isActivatedWindow ? _twoCharacterConversationContentWidget ?? Container() : Container(),
+                    isActivatedWindow ? _fromCenterStartPositionAsTwoCharacterConversationContentWidget ?? Container() : Container(),
 
                     isActivatedWindow
                         ? Positioned(
@@ -151,7 +151,7 @@ class _TwoCharacterConversationWidgetState extends State<TwoCharacterConversatio
                             left: 0,
                             width: sizeDx,
                             height: sizeDy,
-                            child: VocabularyConversationCharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy),
+                            child: FromCenterStartPositionAsTwoCharacterConversationCharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy),
                           )
                         : Container(),
                   ],

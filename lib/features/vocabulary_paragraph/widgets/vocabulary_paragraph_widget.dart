@@ -24,11 +24,7 @@ class _VocabularyParagraphWidgetState extends State<VocabularyParagraphWidget> w
   void initState() {
     super.initState();
 
-    _vocabularyParagraphContentWidget = VocabularyParagraphContentWidget(
-      systemStateManagement: widget.vocabularyParagraphFeature?.getSystemStateManagement,
-      sizeDx: widget.vocabularyParagraphFeature?.getSizeDx ?? 0,
-      sizeDy: widget.vocabularyParagraphFeature?.getSizeDy ?? 0,
-    );
+    _vocabularyParagraphContentWidget = VocabularyParagraphContentWidget(systemStateManagement: widget.vocabularyParagraphFeature?.getSystemStateManagement, sizeDx: widget.vocabularyParagraphFeature?.getSizeDx ?? 0, sizeDy: widget.vocabularyParagraphFeature?.getSizeDy ?? 0);
 
     topPosition = widget.vocabularyParagraphFeature?.getTopPosition;
     rightPosition = widget.vocabularyParagraphFeature?.getRightPosition;

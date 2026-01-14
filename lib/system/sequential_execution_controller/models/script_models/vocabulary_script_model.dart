@@ -84,10 +84,7 @@ class VocabularyScriptModel with ExecutionCore {
     /// TODO: Chuyển Cảnh 1/2
     /// -----
 
-    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(
-      value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS01,
-      isPriorityOverride: true,
-    );
+    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS01, isPriorityOverride: true);
 
     /// -----
     /// TODO:
@@ -380,10 +377,7 @@ class VocabularyScriptModel with ExecutionCore {
     /// TODO: Chuyển Cảnh 1/2
     /// -----
 
-    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(
-      value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS02,
-      isPriorityOverride: true,
-    );
+    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS02, isPriorityOverride: true);
 
     /// -----
     /// TODO:
@@ -411,10 +405,7 @@ class VocabularyScriptModel with ExecutionCore {
     /// TODO: Chuyển Cảnh 1/2
     /// -----
 
-    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(
-      value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS03,
-      isPriorityOverride: true,
-    );
+    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS03, isPriorityOverride: true);
 
     /// -----
     /// TODO:
@@ -442,10 +433,7 @@ class VocabularyScriptModel with ExecutionCore {
     /// TODO: Chuyển Cảnh 1/2
     /// -----
 
-    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(
-      value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS04,
-      isPriorityOverride: true,
-    );
+    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS04, isPriorityOverride: true);
 
     /// -----
     /// TODO:
@@ -473,10 +461,7 @@ class VocabularyScriptModel with ExecutionCore {
     /// TODO: Chuyển Cảnh 1/2
     /// -----
 
-    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(
-      value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS05,
-      isPriorityOverride: true,
-    );
+    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS05, isPriorityOverride: true);
 
     /// -----
     /// TODO:
@@ -504,10 +489,7 @@ class VocabularyScriptModel with ExecutionCore {
     /// TODO: Chuyển Cảnh 1/2
     /// -----
 
-    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(
-      value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS06,
-      isPriorityOverride: true,
-    );
+    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS06, isPriorityOverride: true);
 
     /// -----
     /// TODO:
@@ -535,10 +517,7 @@ class VocabularyScriptModel with ExecutionCore {
     /// TODO: Chuyển Cảnh 1/2
     /// -----
 
-    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(
-      value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS07,
-      isPriorityOverride: true,
-    );
+    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS07, isPriorityOverride: true);
 
     /// -----
     /// TODO:
@@ -566,10 +545,7 @@ class VocabularyScriptModel with ExecutionCore {
     /// TODO: Chuyển Cảnh 1/2
     /// -----
 
-    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(
-      value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS08,
-      isPriorityOverride: true,
-    );
+    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS08, isPriorityOverride: true);
 
     /// -----
     /// TODO:
@@ -597,10 +573,7 @@ class VocabularyScriptModel with ExecutionCore {
     /// TODO: Chuyển Cảnh 1/2
     /// -----
 
-    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(
-      value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS09,
-      isPriorityOverride: true,
-    );
+    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS09, isPriorityOverride: true);
 
     /// -----
     /// TODO:
@@ -628,10 +601,7 @@ class VocabularyScriptModel with ExecutionCore {
     /// TODO: Chuyển Cảnh 1/2
     /// -----
 
-    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(
-      value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS10,
-      isPriorityOverride: true,
-    );
+    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS10, isPriorityOverride: true);
 
     /// -----
     /// TODO:
@@ -659,10 +629,7 @@ class VocabularyScriptModel with ExecutionCore {
     /// TODO: Chuyển Cảnh 1/2
     /// -----
 
-    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(
-      value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS11,
-      isPriorityOverride: true,
-    );
+    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS11, isPriorityOverride: true);
 
     /// -----
     /// TODO:
@@ -690,10 +657,7 @@ class VocabularyScriptModel with ExecutionCore {
     /// TODO: Chuyển Cảnh 1/2
     /// -----
 
-    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(
-      value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS12,
-      isPriorityOverride: true,
-    );
+    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS12, isPriorityOverride: true);
 
     /// -----
     /// TODO:
@@ -721,10 +685,7 @@ class VocabularyScriptModel with ExecutionCore {
     /// TODO: Chuyển Cảnh 1/2
     /// -----
 
-    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(
-      value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS13,
-      isPriorityOverride: true,
-    );
+    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS13, isPriorityOverride: true);
 
     /// -----
     /// TODO:
@@ -752,10 +713,7 @@ class VocabularyScriptModel with ExecutionCore {
     /// TODO: Chuyển Cảnh 1/2
     /// -----
 
-    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(
-      value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS14,
-      isPriorityOverride: true,
-    );
+    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS14, isPriorityOverride: true);
 
     /// -----
     /// TODO:
@@ -783,10 +741,7 @@ class VocabularyScriptModel with ExecutionCore {
     /// TODO: Chuyển Cảnh 1/2
     /// -----
 
-    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(
-      value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS15,
-      isPriorityOverride: true,
-    );
+    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS15, isPriorityOverride: true);
 
     /// -----
     /// TODO:
@@ -814,10 +769,7 @@ class VocabularyScriptModel with ExecutionCore {
     /// TODO: Chuyển Cảnh 1/2
     /// -----
 
-    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(
-      value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS16,
-      isPriorityOverride: true,
-    );
+    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS16, isPriorityOverride: true);
 
     /// -----
     /// TODO:
@@ -845,10 +797,7 @@ class VocabularyScriptModel with ExecutionCore {
     /// TODO: Chuyển Cảnh 1/2
     /// -----
 
-    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(
-      value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS17,
-      isPriorityOverride: true,
-    );
+    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS17, isPriorityOverride: true);
 
     /// -----
     /// TODO:
@@ -876,10 +825,7 @@ class VocabularyScriptModel with ExecutionCore {
     /// TODO: Chuyển Cảnh 1/2
     /// -----
 
-    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(
-      value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS18,
-      isPriorityOverride: true,
-    );
+    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS18, isPriorityOverride: true);
 
     /// -----
     /// TODO:
@@ -907,10 +853,7 @@ class VocabularyScriptModel with ExecutionCore {
     /// TODO: Chuyển Cảnh 1/2
     /// -----
 
-    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(
-      value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS19,
-      isPriorityOverride: true,
-    );
+    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS19, isPriorityOverride: true);
 
     /// -----
     /// TODO:
@@ -938,10 +881,7 @@ class VocabularyScriptModel with ExecutionCore {
     /// TODO: Chuyển Cảnh 1/2
     /// -----
 
-    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(
-      value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS20,
-      isPriorityOverride: true,
-    );
+    getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.setCurrentVocabularyItemForStart(value: getSequentialExecutionController?.getVocabularyDefinitionFeature?.getVocabularyTime?.getVocabularySS20, isPriorityOverride: true);
 
     /// -----
     /// TODO:

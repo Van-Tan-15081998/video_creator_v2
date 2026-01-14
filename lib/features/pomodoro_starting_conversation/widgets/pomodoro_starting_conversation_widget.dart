@@ -137,13 +137,15 @@ class _PomodoroStartingConversationWidgetState extends State<PomodoroStartingCon
                   children: [
                     isActivatedWindow ? _pomodoroStartingConversationContentWidget ?? Container() : Container(),
 
-                    isActivatedWindow ? Positioned(
-                      top: 0,
-                      left: 0,
-                      width: sizeDx,
-                      height: sizeDy,
-                      child: PomodoroStartingConversationCharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy),
-                    ) : Container(),
+                    isActivatedWindow
+                        ? Positioned(
+                            top: 0,
+                            left: 0,
+                            width: sizeDx,
+                            height: sizeDy,
+                            child: PomodoroStartingConversationCharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy),
+                          )
+                        : Container(),
                   ],
                 ),
               ),

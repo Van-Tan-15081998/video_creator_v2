@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/core/window_feature.dart';
-import 'package:frame_creator_v2/features/pomodoro/models/data/pomodoro_time.dart';
-import 'package:frame_creator_v2/features/pomodoro/widgets/pomodoro_widget.dart';
 import 'package:frame_creator_v2/features/system/models/data/system_time.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 

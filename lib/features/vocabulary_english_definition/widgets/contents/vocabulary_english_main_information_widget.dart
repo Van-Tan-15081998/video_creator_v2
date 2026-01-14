@@ -74,8 +74,7 @@ class _VocabularyEnglishMainInformationWidgetState extends State<VocabularyEngli
       });
 
       _ticker = createTicker((Duration elapsed) {
-        if (englishDefinitionString != getCurrentVocabularyItem?.getVocabularyDataModel?.getTopicSpecificMeaningInEng &&
-            getCurrentVocabularyItem?.getVocabularyDataModel?.getTopicSpecificMeaningInEng?.isNotEmpty == true) {
+        if (englishDefinitionString != getCurrentVocabularyItem?.getVocabularyDataModel?.getTopicSpecificMeaningInEng && getCurrentVocabularyItem?.getVocabularyDataModel?.getTopicSpecificMeaningInEng?.isNotEmpty == true) {
           setState(() {
             englishDefinitionString = getCurrentVocabularyItem?.getVocabularyDataModel?.getTopicSpecificMeaningInEng ?? '';
             pronunciationUK = getCurrentVocabularyItem?.getVocabularyDataModel?.getPronunciationUK ?? '';

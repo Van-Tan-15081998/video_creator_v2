@@ -24,11 +24,7 @@ class _MemoryGameBoardWidgetState extends State<MemoryGameBoardWidget> with Simp
   void initState() {
     super.initState();
 
-    _memoryGameBoardContentWidget = MemoryGameBoardContentWidget(
-      systemStateManagement: widget.memoryGameBoardFeature?.getSystemStateManagement,
-      sizeDx: widget.memoryGameBoardFeature?.getSizeDx ?? 0,
-      sizeDy: widget.memoryGameBoardFeature?.getSizeDy ?? 0,
-    );
+    _memoryGameBoardContentWidget = MemoryGameBoardContentWidget(systemStateManagement: widget.memoryGameBoardFeature?.getSystemStateManagement, sizeDx: widget.memoryGameBoardFeature?.getSizeDx ?? 0, sizeDy: widget.memoryGameBoardFeature?.getSizeDy ?? 0);
 
     topPosition = widget.memoryGameBoardFeature?.getTopPosition;
     rightPosition = widget.memoryGameBoardFeature?.getRightPosition;

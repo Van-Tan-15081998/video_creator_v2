@@ -34,8 +34,8 @@ class _HelpfulStudyAdviceAnimatedBackgroundWidgetState extends State<HelpfulStud
           ),
         ),
         backgroundAnimatedIcon: '☘️',
-          imageSpriteSource: 'assets/images/animated_background_symbols/symbol_01.webp',
-        movementUnit: 0.5
+        imageSpriteSource: 'assets/images/animated_background_symbols/symbol_01.webp',
+        movementUnit: 0.5,
       ),
     );
   }

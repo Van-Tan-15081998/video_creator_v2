@@ -100,7 +100,6 @@ class SystemTime with ExecutionCore {
     return;
   }
 
-
   /// -----
   /// TODO: Bridge From - DoneFirstStartSystemItem - To - GoPomodoroStayFocusedSS01
   /// -----
@@ -493,7 +492,6 @@ class SystemTime with ExecutionCore {
       await getBridgeFromDonePomodoroBreakTimeSS03ToGoPomodoroStayFocusedSS04?.onSetupRoot();
       await getBridgeFromDonePomodoroStayFocusedSS04ToGoPomodoroBreakTimeSS04?.onSetupRoot();
       await getBridgeFromDonePomodoroBreakTimeSS04ToGoLastFinishSystemItem?.onSetupRoot();
-
     } catch (e) {
       await onReportRootIssue(nameFunction: '[onSetupRootForSubCom]');
     }

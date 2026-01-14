@@ -190,11 +190,7 @@ class _LayoutDemoState extends State<LayoutDemo> {
                 alignment: AlignmentDirectional.center,
                 children: [
                   Positioned(
-                    child: PomodoroWidget0(
-                      systemStateManagement: widget.systemStateManagement,
-                      sizeDx: constraints.maxWidth - (constraints.maxWidth * 0.6 + 45),
-                      sizeDy: constraints.maxHeight - (constraints.maxHeight * 0.6 + 45),
-                    ),
+                    child: PomodoroWidget0(systemStateManagement: widget.systemStateManagement, sizeDx: constraints.maxWidth - (constraints.maxWidth * 0.6 + 45), sizeDy: constraints.maxHeight - (constraints.maxHeight * 0.6 + 45)),
                   ),
                 ],
               ),

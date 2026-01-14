@@ -127,25 +127,11 @@ class _PomodoroEndingConversationContentWidgetState extends State<PomodoroEnding
             if (getConversationItemList?.isNotEmpty == true) {
               if (getConversationItemList?.firstOrNull?.getIsLeftCharacterSS01 == true) {
                 setState(() {
-                  messageList.add(
-                    messageByWordWidget(
-                      isLeftSide: true,
-                      isRightSide: false,
-                      engSentence: getConversationItemList?.firstOrNull?.getEngSentence ?? '',
-                      vieSentence: getConversationItemList?.firstOrNull?.getVieSentence ?? '',
-                    ),
-                  );
+                  messageList.add(messageByWordWidget(isLeftSide: true, isRightSide: false, engSentence: getConversationItemList?.firstOrNull?.getEngSentence ?? '', vieSentence: getConversationItemList?.firstOrNull?.getVieSentence ?? ''));
                 });
               } else if (getConversationItemList?.firstOrNull?.getIsRightCharacterSS02 == true) {
                 setState(() {
-                  messageList.add(
-                    messageByWordWidget(
-                      isLeftSide: false,
-                      isRightSide: true,
-                      engSentence: getConversationItemList?.firstOrNull?.getEngSentence ?? '',
-                      vieSentence: getConversationItemList?.firstOrNull?.getVieSentence ?? '',
-                    ),
-                  );
+                  messageList.add(messageByWordWidget(isLeftSide: false, isRightSide: true, engSentence: getConversationItemList?.firstOrNull?.getEngSentence ?? '', vieSentence: getConversationItemList?.firstOrNull?.getVieSentence ?? ''));
                 });
               }
 

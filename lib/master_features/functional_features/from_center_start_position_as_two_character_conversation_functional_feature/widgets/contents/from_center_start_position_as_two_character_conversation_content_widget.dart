@@ -6,16 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:frame_creator_v2/core/character_mixin.dart';
 import 'package:frame_creator_v2/core/window_mixin.dart';
-import 'package:frame_creator_v2/features/vocabulary_definition/models/data/vocabulary_data_model.dart';
-import 'package:frame_creator_v2/features/vocabulary_definition/models/data/vocabulary_item.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/controller/functional_sequential_execution_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/contents/details/step_item_content_as_new_message_conversation.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item_state.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class TwoCharacterConversationContentWidget extends StatefulWidget {
-  const TwoCharacterConversationContentWidget({super.key, required this.systemStateManagement, required this.sizeDx, required this.sizeDy});
+class FromCenterStartPositionAsTwoCharacterConversationContentWidget extends StatefulWidget {
+  const FromCenterStartPositionAsTwoCharacterConversationContentWidget({super.key, required this.systemStateManagement, required this.sizeDx, required this.sizeDy});
 
   /// -----
   /// TODO:
@@ -26,10 +24,10 @@ class TwoCharacterConversationContentWidget extends StatefulWidget {
   final double sizeDy;
 
   @override
-  State<TwoCharacterConversationContentWidget> createState() => _TwoCharacterConversationContentWidgetState();
+  State<FromCenterStartPositionAsTwoCharacterConversationContentWidget> createState() => _FromCenterStartPositionAsTwoCharacterConversationContentWidgetState();
 }
 
-class _TwoCharacterConversationContentWidgetState extends State<TwoCharacterConversationContentWidget> with SingleTickerProviderStateMixin, CharacterMixin, WindowMixin {
+class _FromCenterStartPositionAsTwoCharacterConversationContentWidgetState extends State<FromCenterStartPositionAsTwoCharacterConversationContentWidget> with SingleTickerProviderStateMixin, CharacterMixin, WindowMixin {
   late final Ticker _ticker;
   Timer? _timer;
 
@@ -149,6 +147,7 @@ class _TwoCharacterConversationContentWidgetState extends State<TwoCharacterConv
     ];
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
+      // return;
       _ticker = createTicker((Duration elapsed) {
         if (getFunctionalSequentialExecutionController?.getFlowController?.getMessageFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.isNotEmpty == true) {
           /// -----

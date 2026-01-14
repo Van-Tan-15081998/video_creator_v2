@@ -2,7 +2,6 @@ import 'package:flutter/foundation.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/master_data/content_item/03_content_stage/abstract/content_stage.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/controller/attributes/gap_time.dart';
-import 'package:frame_creator_v2/master_data/functional_sequential_execution/phase_item/functional_sequential_execution_phase.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/specific_scripts/topic_a_script.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item_state.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/status/flow_controller.dart';

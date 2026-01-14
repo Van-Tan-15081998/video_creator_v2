@@ -23,11 +23,7 @@ class _VocabularySubjectWidgetState extends State<VocabularySubjectWidget> with 
   void initState() {
     super.initState();
 
-    _vocabularySubjectContentWidget = VocabularySubjectContentWidget(
-      systemStateManagement: widget.vocabularySubjectFeature?.getSystemStateManagement,
-      sizeDx: widget.vocabularySubjectFeature?.getSizeDx ?? 0,
-      sizeDy: widget.vocabularySubjectFeature?.getSizeDy ?? 0,
-    );
+    _vocabularySubjectContentWidget = VocabularySubjectContentWidget(systemStateManagement: widget.vocabularySubjectFeature?.getSystemStateManagement, sizeDx: widget.vocabularySubjectFeature?.getSizeDx ?? 0, sizeDy: widget.vocabularySubjectFeature?.getSizeDy ?? 0);
 
     topPosition = widget.vocabularySubjectFeature?.getTopPosition;
     rightPosition = widget.vocabularySubjectFeature?.getRightPosition;

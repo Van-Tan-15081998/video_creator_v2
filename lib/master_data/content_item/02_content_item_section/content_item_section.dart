@@ -249,7 +249,6 @@ class ContentItemSection with ExecutionCore {
   /// TODO: Tích Hợp FunctionalSequentialExecutionStepItem (State) - Bắt Đầu Section - Vào Luồng Chính [FlowController] => Luồng Chính Có Trách Nhiệm Thực Thi
   /// -----
   onIntegrateScriptAsStartSectionBindToFlowController() {
-
     if (getFunctionalSequentialExecutionStepItemStateAsStartSection != null) {
       getFunctionalSequentialExecutionController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(getFunctionalSequentialExecutionStepItemStateAsStartSection);
     }
@@ -262,7 +261,6 @@ class ContentItemSection with ExecutionCore {
   /// TODO: Tích Hợp FunctionalSequentialExecutionStepItem (State) - Kết Thúc Section - Vào Luồng Chính [FlowController] => Luồng Chính Có Trách Nhiệm Thực Thi
   /// -----
   onIntegrateScriptAsEndSectionBindToFlowController() {
-
     if (getFunctionalSequentialExecutionStepItemStateAsEndSection != null) {
       getFunctionalSequentialExecutionController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(getFunctionalSequentialExecutionStepItemStateAsEndSection);
     }

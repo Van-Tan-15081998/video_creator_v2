@@ -26,4 +26,3 @@ class FirstStartScriptFrame2ndAsMain extends ScriptFrame {
     return;
   }
 }
-

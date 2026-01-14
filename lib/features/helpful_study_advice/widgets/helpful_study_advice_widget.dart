@@ -26,11 +26,7 @@ class _HelpfulStudyAdviceWidgetState extends State<HelpfulStudyAdviceWidget> wit
   void initState() {
     super.initState();
 
-    _helpfulStudyAdviceContentWidget = HelpfulStudyAdviceContentWidget(
-      systemStateManagement: widget.helpfulStudyAdviceFeature?.getSystemStateManagement,
-      sizeDx: widget.helpfulStudyAdviceFeature?.getSizeDx ?? 0,
-      sizeDy: widget.helpfulStudyAdviceFeature?.getSizeDy ?? 0,
-    );
+    _helpfulStudyAdviceContentWidget = HelpfulStudyAdviceContentWidget(systemStateManagement: widget.helpfulStudyAdviceFeature?.getSystemStateManagement, sizeDx: widget.helpfulStudyAdviceFeature?.getSizeDx ?? 0, sizeDy: widget.helpfulStudyAdviceFeature?.getSizeDy ?? 0);
 
     topPosition = widget.helpfulStudyAdviceFeature?.getTopPosition;
     rightPosition = widget.helpfulStudyAdviceFeature?.getRightPosition;

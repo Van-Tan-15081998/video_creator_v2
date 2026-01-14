@@ -23,11 +23,7 @@ class _GlobalAnnouncementWidgetState extends State<GlobalAnnouncementWidget> wit
   void initState() {
     super.initState();
 
-    _globalAnnouncementContentWidget = GlobalAnnouncementContentWidget(
-      systemStateManagement: widget.globalAnnouncementFeature?.getSystemStateManagement,
-      sizeDx: widget.globalAnnouncementFeature?.getSizeDx ?? 0,
-      sizeDy: widget.globalAnnouncementFeature?.getSizeDy ?? 0,
-    );
+    _globalAnnouncementContentWidget = GlobalAnnouncementContentWidget(systemStateManagement: widget.globalAnnouncementFeature?.getSystemStateManagement, sizeDx: widget.globalAnnouncementFeature?.getSizeDx ?? 0, sizeDy: widget.globalAnnouncementFeature?.getSizeDy ?? 0);
 
     topPosition = widget.globalAnnouncementFeature?.getTopPosition;
     rightPosition = widget.globalAnnouncementFeature?.getRightPosition;

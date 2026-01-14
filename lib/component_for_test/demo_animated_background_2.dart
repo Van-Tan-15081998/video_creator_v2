@@ -128,18 +128,7 @@ class _BlockData {
   double layerDepth;
   double windPhase;
 
-  _BlockData({
-    required this.lifeSpan,
-    required this.x,
-    required this.y,
-    required this.dx,
-    required this.dy,
-    required this.size,
-    required this.color,
-    required this.layerDepth,
-    required this.age,
-    required this.windPhase,
-  });
+  _BlockData({required this.lifeSpan, required this.x, required this.y, required this.dx, required this.dy, required this.size, required this.color, required this.layerDepth, required this.age, required this.windPhase});
 }
 
 class _BlocksPainter extends CustomPainter {

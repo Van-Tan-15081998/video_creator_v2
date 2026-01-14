@@ -2,17 +2,17 @@ import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
 import 'package:frame_creator_v2/components/flame/communication_flame_widget.dart';
 
-class TwoCharacterConversationCharacterWidget extends StatefulWidget {
-  const TwoCharacterConversationCharacterWidget({super.key, required this.sizeDx, required this.sizeDy});
+class FromCenterStartPositionAsTwoCharacterConversationCharacterWidget extends StatefulWidget {
+  const FromCenterStartPositionAsTwoCharacterConversationCharacterWidget({super.key, required this.sizeDx, required this.sizeDy});
 
   final double sizeDx;
   final double sizeDy;
 
   @override
-  State<TwoCharacterConversationCharacterWidget> createState() => _TwoCharacterConversationCharacterWidgetState();
+  State<FromCenterStartPositionAsTwoCharacterConversationCharacterWidget> createState() => _TwoCharacterConversationCharacterWidgetState();
 }
 
-class _TwoCharacterConversationCharacterWidgetState extends State<TwoCharacterConversationCharacterWidget> {
+class _TwoCharacterConversationCharacterWidgetState extends State<FromCenterStartPositionAsTwoCharacterConversationCharacterWidget> {
   @override
   void initState() {
     super.initState();

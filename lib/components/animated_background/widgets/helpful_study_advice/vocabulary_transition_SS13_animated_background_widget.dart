@@ -13,7 +13,6 @@ class VocabularyTransitionSs13AnimatedBackgroundWidget extends StatefulWidget {
 }
 
 class _VocabularyTransitionSs13AnimatedBackgroundWidgetState extends State<VocabularyTransitionSs13AnimatedBackgroundWidget> {
-
   @override
   void initState() {
     super.initState();

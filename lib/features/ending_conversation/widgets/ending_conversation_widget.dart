@@ -24,11 +24,7 @@ class _EndingConversationWidgetState extends State<EndingConversationWidget> wit
   void initState() {
     super.initState();
 
-    _endingConversationContentWidget = EndingConversationContentWidget(
-      systemStateManagement: widget.endingConversationFeature?.getSystemStateManagement,
-      sizeDx: widget.endingConversationFeature?.getSizeDx ?? 0,
-      sizeDy: widget.endingConversationFeature?.getSizeDy ?? 0,
-    );
+    _endingConversationContentWidget = EndingConversationContentWidget(systemStateManagement: widget.endingConversationFeature?.getSystemStateManagement, sizeDx: widget.endingConversationFeature?.getSizeDx ?? 0, sizeDy: widget.endingConversationFeature?.getSizeDy ?? 0);
 
     topPosition = widget.endingConversationFeature?.getTopPosition;
     rightPosition = widget.endingConversationFeature?.getRightPosition;

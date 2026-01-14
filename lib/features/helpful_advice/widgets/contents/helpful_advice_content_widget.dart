@@ -42,7 +42,6 @@ class _HelpfulAdviceContentWidgetState extends State<HelpfulAdviceContentWidget>
           //   borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(15.0), bottomLeft: Radius.circular(15.0)),
           //   child: TransparentEffectWallWidget(sizeDx: widget.sizeDx, sizeDy: widget.sizeDy),
           // ),
-
           HelpfulAdviceDetailWidget(systemStateManagement: widget.systemStateManagement, sizeDx: widget.sizeDx, sizeDy: widget.sizeDy),
 
           Positioned(

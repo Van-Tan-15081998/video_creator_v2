@@ -179,7 +179,6 @@ class BasicTimeline with ExecutionCore {
   }
 
   void moveToNextExecution({required String markId}) {
-
     setIsMoveToNextExecution(value: true, isPriorityOverride: true);
 
     if (kDebugMode) {

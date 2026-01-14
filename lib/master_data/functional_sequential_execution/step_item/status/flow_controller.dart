@@ -1,10 +1,8 @@
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/basic_character_flow_controller.dart';
-import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/basic_message_flow_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/character_flow_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/message_flow_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/window_flow_controller.dart';
-import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item_state.dart';
 
 class FlowController with ExecutionCore {
   ///
@@ -71,8 +69,6 @@ class FlowController with ExecutionCore {
 
     return;
   }
-
-
 
   /// -----
   /// TODO: Attach Root

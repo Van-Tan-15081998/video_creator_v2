@@ -299,7 +299,6 @@ class _VocabularyIntroductionContentWidgetState extends State<VocabularyIntroduc
         //     ),
         //   ),
         // ),
-
         AnimatedPositioned(
           duration: const Duration(milliseconds: 500),
           top: 0,

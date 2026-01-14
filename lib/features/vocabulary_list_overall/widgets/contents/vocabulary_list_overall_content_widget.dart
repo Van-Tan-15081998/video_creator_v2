@@ -317,12 +317,7 @@ class _VocabularyListOverallContentWidgetState extends State<VocabularyListOvera
 
     List<int> angles = [0, 90, 180, 270, 360];
 
-    List<String> srcs = [
-      'assets/images/colorful/colorful_style_a1.jpg',
-      'assets/images/colorful/colorful_style_a2.jpg',
-      'assets/images/colorful/colorful_style_a3.jpg',
-      'assets/images/colorful/colorful_style_a4.jpg',
-    ];
+    List<String> srcs = ['assets/images/colorful/colorful_style_a1.jpg', 'assets/images/colorful/colorful_style_a2.jpg', 'assets/images/colorful/colorful_style_a3.jpg', 'assets/images/colorful/colorful_style_a4.jpg'];
 
     String src = srcs[random.nextInt(srcs.length)];
 
@@ -830,13 +825,7 @@ class _VocabularyListOverallContentWidgetState extends State<VocabularyListOvera
                             child: Text(
                               word,
                               style: GoogleFonts.titanOne(
-                                textStyle: TextStyle(
-                                  fontSize: 25.0,
-                                  fontWeight: FontWeight.w500,
-                                  fontStyle: FontStyle.normal,
-                                  color: isHide ? Colors.transparent : Color(0xFFECECEC),
-                                  letterSpacing: 3,
-                                ),
+                                textStyle: TextStyle(fontSize: 25.0, fontWeight: FontWeight.w500, fontStyle: FontStyle.normal, color: isHide ? Colors.transparent : Color(0xFFECECEC), letterSpacing: 3),
                               ),
                               textAlign: TextAlign.start,
                               overflow: TextOverflow.ellipsis,
@@ -873,7 +862,6 @@ class _VocabularyListOverallContentWidgetState extends State<VocabularyListOvera
 
               child: Stack(
                 children: [
-
                   // Positioned(
                   //   top: -1.0,
                   //   left: -1.0,

@@ -4,5 +4,4 @@ class SystemConfig {
   static bool isFormatVocabularyList = false;
 
   static bool isJumpOnDebugMode = true;
-
 }

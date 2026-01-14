@@ -196,12 +196,7 @@ class _SceneTransitionContentWidgetState extends State<SceneTransitionContentWid
                                   height: 5000.0,
                                   decoration: BoxDecoration(
                                     color: Color(0xFFFFFFFF).withValues(alpha: 1.0),
-                                    borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(15.0),
-                                      topRight: Radius.circular(15.0),
-                                      bottomRight: Radius.circular(15.0),
-                                      bottomLeft: Radius.circular(15.0),
-                                    ),
+                                    borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0), topRight: Radius.circular(15.0), bottomRight: Radius.circular(15.0), bottomLeft: Radius.circular(15.0)),
                                     border: Border.all(width: 15.0, color: Colors.black),
                                     boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.5), blurRadius: 15.0, spreadRadius: 1.0, offset: Offset(0, 0))],
                                   ),
@@ -263,12 +258,7 @@ class _SceneTransitionContentWidgetState extends State<SceneTransitionContentWid
                                   height: 5000.0,
                                   decoration: BoxDecoration(
                                     color: Color(0xFF00EE00).withValues(alpha: 1.0),
-                                    borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(15.0),
-                                      topRight: Radius.circular(15.0),
-                                      bottomRight: Radius.circular(15.0),
-                                      bottomLeft: Radius.circular(15.0),
-                                    ),
+                                    borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0), topRight: Radius.circular(15.0), bottomRight: Radius.circular(15.0), bottomLeft: Radius.circular(15.0)),
                                     border: Border.all(width: 15.0, color: Colors.black),
                                     boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.5), blurRadius: 15.0, spreadRadius: 1.0, offset: Offset(0, 0))],
                                   ),
@@ -310,12 +300,7 @@ class _SceneTransitionContentWidgetState extends State<SceneTransitionContentWid
                                   height: 5000.0,
                                   decoration: BoxDecoration(
                                     color: Color(0xFF000000).withValues(alpha: 0.6),
-                                    borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(15.0),
-                                      topRight: Radius.circular(15.0),
-                                      bottomRight: Radius.circular(15.0),
-                                      bottomLeft: Radius.circular(15.0),
-                                    ),
+                                    borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0), topRight: Radius.circular(15.0), bottomRight: Radius.circular(15.0), bottomLeft: Radius.circular(15.0)),
                                     boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.5), blurRadius: 15.0, spreadRadius: 1.0, offset: Offset(0, 0))],
                                   ),
                                 ),
@@ -336,12 +321,7 @@ class _SceneTransitionContentWidgetState extends State<SceneTransitionContentWid
                                   height: 5000.0,
                                   decoration: BoxDecoration(
                                     color: Color(0xFF00EE00).withValues(alpha: 0.8),
-                                    borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(15.0),
-                                      topRight: Radius.circular(15.0),
-                                      bottomRight: Radius.circular(15.0),
-                                      bottomLeft: Radius.circular(15.0),
-                                    ),
+                                    borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0), topRight: Radius.circular(15.0), bottomRight: Radius.circular(15.0), bottomLeft: Radius.circular(15.0)),
                                     border: Border.all(width: 15.0, color: Colors.black),
                                     boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.5), blurRadius: 15.0, spreadRadius: 1.0, offset: Offset(0, 0))],
                                   ),
@@ -603,12 +583,7 @@ class _SceneTransitionContentWidgetState extends State<SceneTransitionContentWid
                                 height: 5000.0,
                                 decoration: BoxDecoration(
                                   color: Color(0xFFFF7F24).withValues(alpha: 1.0),
-                                  borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(15.0),
-                                    topRight: Radius.circular(15.0),
-                                    bottomRight: Radius.circular(15.0),
-                                    bottomLeft: Radius.circular(15.0),
-                                  ),
+                                  borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0), topRight: Radius.circular(15.0), bottomRight: Radius.circular(15.0), bottomLeft: Radius.circular(15.0)),
                                   border: Border.all(width: 15.0, color: Colors.black),
                                   boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.8), blurRadius: 15.0, spreadRadius: 1.0, offset: Offset(0, 0))],
                                 ),
@@ -650,12 +625,7 @@ class _SceneTransitionContentWidgetState extends State<SceneTransitionContentWid
                                 height: 5000.0,
                                 decoration: BoxDecoration(
                                   color: Color(0xFF000000).withValues(alpha: 0.8),
-                                  borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(15.0),
-                                    topRight: Radius.circular(15.0),
-                                    bottomRight: Radius.circular(15.0),
-                                    bottomLeft: Radius.circular(15.0),
-                                  ),
+                                  borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0), topRight: Radius.circular(15.0), bottomRight: Radius.circular(15.0), bottomLeft: Radius.circular(15.0)),
                                   boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.8), blurRadius: 15.0, spreadRadius: 1.0, offset: Offset(0, 0))],
                                 ),
                                 child: Stack(
@@ -695,12 +665,7 @@ class _SceneTransitionContentWidgetState extends State<SceneTransitionContentWid
                                 height: 5000.0,
                                 decoration: BoxDecoration(
                                   color: Color(0xFFFF7F24).withValues(alpha: 1.0),
-                                  borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(15.0),
-                                    topRight: Radius.circular(15.0),
-                                    bottomRight: Radius.circular(15.0),
-                                    bottomLeft: Radius.circular(15.0),
-                                  ),
+                                  borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0), topRight: Radius.circular(15.0), bottomRight: Radius.circular(15.0), bottomLeft: Radius.circular(15.0)),
                                   border: Border.all(width: 15.0, color: Colors.black),
                                   boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.5), blurRadius: 15.0, spreadRadius: 1.0, offset: Offset(0, 0))],
                                 ),

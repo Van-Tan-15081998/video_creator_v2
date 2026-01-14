@@ -23,11 +23,7 @@ class _CountdownTimerWidgetState extends State<CountdownTimerWidget> with Simple
   void initState() {
     super.initState();
 
-    _countdownTimerContentWidget = CountdownTimerContentWidget(
-      systemStateManagement: widget.countdownTimerFeature?.getSystemStateManagement,
-      sizeDx: widget.countdownTimerFeature?.getSizeDx ?? 0,
-      sizeDy: widget.countdownTimerFeature?.getSizeDy ?? 0,
-    );
+    _countdownTimerContentWidget = CountdownTimerContentWidget(systemStateManagement: widget.countdownTimerFeature?.getSystemStateManagement, sizeDx: widget.countdownTimerFeature?.getSizeDx ?? 0, sizeDy: widget.countdownTimerFeature?.getSizeDy ?? 0);
 
     topPosition = widget.countdownTimerFeature?.getTopPosition;
     rightPosition = widget.countdownTimerFeature?.getRightPosition;

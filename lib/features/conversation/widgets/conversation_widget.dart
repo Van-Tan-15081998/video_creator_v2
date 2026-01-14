@@ -23,11 +23,7 @@ class _ConversationWidgetState extends State<ConversationWidget> with SimpleAnim
   void initState() {
     super.initState();
 
-    _conversationContentWidget = ConversationContentWidget(
-      systemStateManagement: widget.conversationFeature?.getSystemStateManagement,
-      sizeDx: widget.conversationFeature?.getSizeDx ?? 0,
-      sizeDy: widget.conversationFeature?.getSizeDy ?? 0,
-    );
+    _conversationContentWidget = ConversationContentWidget(systemStateManagement: widget.conversationFeature?.getSystemStateManagement, sizeDx: widget.conversationFeature?.getSizeDx ?? 0, sizeDy: widget.conversationFeature?.getSizeDy ?? 0);
 
     topPosition = widget.conversationFeature?.getTopPosition;
     rightPosition = widget.conversationFeature?.getRightPosition;

@@ -26,4 +26,3 @@ class LastFinishScriptFrame1stAsGo extends ScriptFrame {
     return;
   }
 }
-

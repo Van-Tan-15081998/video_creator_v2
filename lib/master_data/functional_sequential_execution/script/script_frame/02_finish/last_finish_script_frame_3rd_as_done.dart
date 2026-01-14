@@ -26,4 +26,3 @@ class LastFinishScriptFrame3rdAsDone extends ScriptFrame {
     return;
   }
 }
-

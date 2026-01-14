@@ -1047,14 +1047,7 @@ class BasicMovementObject with ExecutionCore {
   /// -----
   /// TODO: Hàm Cập Nhật Các Thuộc Tính Biên
   /// -----
-  Future<void> onCapNhatCacGiaTriBien({
-    required double? bienTrai,
-    required double? bienPhai,
-    required double? bienTren,
-    required double? bienDuoi,
-    required double? chieuRongThan,
-    required double? chieuCaoThan,
-  }) async {
+  Future<void> onCapNhatCacGiaTriBien({required double? bienTrai, required double? bienPhai, required double? bienTren, required double? bienDuoi, required double? chieuRongThan, required double? chieuCaoThan}) async {
     if (kDebugMode == true) {
       final double? bienTraiHienHanh = getBienTrai;
       final double? bienPhaiHienHanh = getBienPhai;

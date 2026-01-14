@@ -24,11 +24,7 @@ class _BreakTimeSpaceWidgetState extends State<BreakTimeSpaceWidget> with Simple
   void initState() {
     super.initState();
 
-    _breakTimeSpaceContentWidget = BreakTimeSpaceContentWidget(
-      systemStateManagement: widget.breakTimeSpaceFeature?.getSystemStateManagement,
-      sizeDx: widget.breakTimeSpaceFeature?.getSizeDx ?? 0,
-      sizeDy: widget.breakTimeSpaceFeature?.getSizeDy ?? 0,
-    );
+    _breakTimeSpaceContentWidget = BreakTimeSpaceContentWidget(systemStateManagement: widget.breakTimeSpaceFeature?.getSystemStateManagement, sizeDx: widget.breakTimeSpaceFeature?.getSizeDx ?? 0, sizeDy: widget.breakTimeSpaceFeature?.getSizeDy ?? 0);
 
     topPosition = widget.breakTimeSpaceFeature?.getTopPosition;
     rightPosition = widget.breakTimeSpaceFeature?.getRightPosition;

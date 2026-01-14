@@ -3,9 +3,6 @@ import 'package:frame_creator_v2/master_data/content_item/01_content_item_unit/m
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/unit_item/functional_sequential_execution_content_item_unit.dart';
 
 class ContentItemUnit with ExecutionCore {
-
-
-
   /// -----
   /// TODO:
   /// -----

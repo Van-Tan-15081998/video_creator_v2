@@ -45,136 +45,16 @@ class _PomodoroIntroductionContentWidgetState extends State<PomodoroIntroduction
   void initState() {
     super.initState();
 
-    pomodoroItemSS01 = PomodoroItemModel(
-      word: 'Start',
-      minute: '',
-      width: 850.0,
-      height: 150.0,
-      left: 1600 - 40 * 1,
-      bottom: 200.0 * 5,
-      isStayFocused: false,
-      isBreakTime: false,
-      isRunIn: true,
-      isStart: true,
-      isFinish: false,
-    );
-    pomodoroItemSS02 = PomodoroItemModel(
-      word: 'Stay focused',
-      minute: '30',
-      width: 850.0,
-      height: 150.0,
-      left: 1500 - 41 * 2,
-      bottom: 200.0 * 4,
-      isStayFocused: true,
-      isBreakTime: false,
-      isRunIn: true,
-      isStart: false,
-      isFinish: false,
-    );
-    pomodoroItemSS03 = PomodoroItemModel(
-      word: 'Break time',
-      minute: '5',
-      width: 850.0,
-      height: 150.0,
-      left: 1400 - 42 * 3,
-      bottom: 200.0 * 3,
-      isStayFocused: false,
-      isBreakTime: true,
-      isRunIn: true,
-      isStart: false,
-      isFinish: false,
-    );
-    pomodoroItemSS04 = PomodoroItemModel(
-      word: 'Stay focused',
-      minute: '30',
-      width: 850.0,
-      height: 150.0,
-      left: 1300 - 43 * 4,
-      bottom: 200.0 * 2,
-      isStayFocused: true,
-      isBreakTime: false,
-      isRunIn: true,
-      isStart: false,
-      isFinish: false,
-    );
-    pomodoroItemSS05 = PomodoroItemModel(
-      word: 'Break time',
-      minute: '5',
-      width: 850.0,
-      height: 150.0,
-      left: 1200 - 44 * 5,
-      bottom: 200.0 * 1,
-      isStayFocused: false,
-      isBreakTime: true,
-      isRunIn: true,
-      isStart: false,
-      isFinish: false,
-    );
-    pomodoroItemSS06 = PomodoroItemModel(
-      word: 'Stay focused',
-      minute: '30',
-      width: 850.0,
-      height: 150.0,
-      left: 1100 - 45 * 6,
-      bottom: 200.0 * 0,
-      isStayFocused: true,
-      isBreakTime: false,
-      isRunIn: true,
-      isStart: false,
-      isFinish: false,
-    );
-    pomodoroItemSS07 = PomodoroItemModel(
-      word: 'Break time',
-      minute: '5',
-      width: 850.0,
-      height: 150.0,
-      left: 1000 - 46 * 7,
-      bottom: -200.0 * 1,
-      isStayFocused: false,
-      isBreakTime: true,
-      isRunIn: true,
-      isStart: false,
-      isFinish: false,
-    );
-    pomodoroItemSS08 = PomodoroItemModel(
-      word: 'Stay focused',
-      minute: '30',
-      width: 850.0,
-      height: 150.0,
-      left: 900 - 47 * 8,
-      bottom: -200.0 * 2,
-      isStayFocused: true,
-      isBreakTime: false,
-      isRunIn: true,
-      isStart: false,
-      isFinish: false,
-    );
-    pomodoroItemSS09 = PomodoroItemModel(
-      word: 'Break time',
-      minute: '5',
-      width: 850.0,
-      height: 150.0,
-      left: 800 - 48 * 9,
-      bottom: -200.0 * 3,
-      isStayFocused: false,
-      isBreakTime: true,
-      isRunIn: true,
-      isStart: false,
-      isFinish: false,
-    );
-    pomodoroItemSS10 = PomodoroItemModel(
-      word: 'Finish',
-      minute: '',
-      width: 850.0,
-      height: 150.0,
-      left: 700 - 49 * 10,
-      bottom: -200.0 * 4,
-      isStayFocused: false,
-      isBreakTime: false,
-      isRunIn: true,
-      isStart: false,
-      isFinish: true,
-    );
+    pomodoroItemSS01 = PomodoroItemModel(word: 'Start', minute: '', width: 850.0, height: 150.0, left: 1600 - 40 * 1, bottom: 200.0 * 5, isStayFocused: false, isBreakTime: false, isRunIn: true, isStart: true, isFinish: false);
+    pomodoroItemSS02 = PomodoroItemModel(word: 'Stay focused', minute: '30', width: 850.0, height: 150.0, left: 1500 - 41 * 2, bottom: 200.0 * 4, isStayFocused: true, isBreakTime: false, isRunIn: true, isStart: false, isFinish: false);
+    pomodoroItemSS03 = PomodoroItemModel(word: 'Break time', minute: '5', width: 850.0, height: 150.0, left: 1400 - 42 * 3, bottom: 200.0 * 3, isStayFocused: false, isBreakTime: true, isRunIn: true, isStart: false, isFinish: false);
+    pomodoroItemSS04 = PomodoroItemModel(word: 'Stay focused', minute: '30', width: 850.0, height: 150.0, left: 1300 - 43 * 4, bottom: 200.0 * 2, isStayFocused: true, isBreakTime: false, isRunIn: true, isStart: false, isFinish: false);
+    pomodoroItemSS05 = PomodoroItemModel(word: 'Break time', minute: '5', width: 850.0, height: 150.0, left: 1200 - 44 * 5, bottom: 200.0 * 1, isStayFocused: false, isBreakTime: true, isRunIn: true, isStart: false, isFinish: false);
+    pomodoroItemSS06 = PomodoroItemModel(word: 'Stay focused', minute: '30', width: 850.0, height: 150.0, left: 1100 - 45 * 6, bottom: 200.0 * 0, isStayFocused: true, isBreakTime: false, isRunIn: true, isStart: false, isFinish: false);
+    pomodoroItemSS07 = PomodoroItemModel(word: 'Break time', minute: '5', width: 850.0, height: 150.0, left: 1000 - 46 * 7, bottom: -200.0 * 1, isStayFocused: false, isBreakTime: true, isRunIn: true, isStart: false, isFinish: false);
+    pomodoroItemSS08 = PomodoroItemModel(word: 'Stay focused', minute: '30', width: 850.0, height: 150.0, left: 900 - 47 * 8, bottom: -200.0 * 2, isStayFocused: true, isBreakTime: false, isRunIn: true, isStart: false, isFinish: false);
+    pomodoroItemSS09 = PomodoroItemModel(word: 'Break time', minute: '5', width: 850.0, height: 150.0, left: 800 - 48 * 9, bottom: -200.0 * 3, isStayFocused: false, isBreakTime: true, isRunIn: true, isStart: false, isFinish: false);
+    pomodoroItemSS10 = PomodoroItemModel(word: 'Finish', minute: '', width: 850.0, height: 150.0, left: 700 - 49 * 10, bottom: -200.0 * 4, isStayFocused: false, isBreakTime: false, isRunIn: true, isStart: false, isFinish: true);
     Future.delayed(Duration(seconds: 1), () {
       if (mounted) {
         WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -296,7 +176,6 @@ class _PomodoroIntroductionContentWidgetState extends State<PomodoroIntroduction
         //     ),
         //   ),
         // ),
-
         AnimatedPositioned(
           duration: const Duration(milliseconds: 500),
           top: 0,
@@ -467,86 +346,16 @@ class _PomodoroIntroductionContentWidgetState extends State<PomodoroIntroduction
         child: Stack(
           children: [
             ///
-            pomodoroWidget(
-              title: pomodoroItemSS01?.word ?? 'pomodoro 1',
-              minutes: pomodoroItemSS01?.minute ?? '',
-              isStayFocused: false,
-              left: pomodoroItemSS01?.left ?? 0,
-              bottom: pomodoroItemSS01?.bottom ?? 0,
-              pomodoroItem: pomodoroItemSS01,
-            ),
-            pomodoroWidget(
-              title: pomodoroItemSS02?.word ?? 'pomodoro 1',
-              minutes: pomodoroItemSS02?.minute ?? '',
-              isStayFocused: true,
-              left: pomodoroItemSS02?.left ?? 0,
-              bottom: pomodoroItemSS02?.bottom ?? 0,
-              pomodoroItem: pomodoroItemSS02,
-            ),
-            pomodoroWidget(
-              title: pomodoroItemSS03?.word ?? 'pomodoro 1',
-              minutes: pomodoroItemSS03?.minute ?? '',
-              isStayFocused: false,
-              left: pomodoroItemSS03?.left ?? 0,
-              bottom: pomodoroItemSS03?.bottom ?? 0,
-              pomodoroItem: pomodoroItemSS03,
-            ),
-            pomodoroWidget(
-              title: pomodoroItemSS04?.word ?? 'pomodoro 1',
-              minutes: pomodoroItemSS04?.minute ?? '',
-              isStayFocused: true,
-              left: pomodoroItemSS04?.left ?? 0,
-              bottom: pomodoroItemSS04?.bottom ?? 0,
-              pomodoroItem: pomodoroItemSS04,
-            ),
-            pomodoroWidget(
-              title: pomodoroItemSS05?.word ?? 'pomodoro 1',
-              minutes: pomodoroItemSS05?.minute ?? '',
-              isStayFocused: false,
-              left: pomodoroItemSS05?.left ?? 0,
-              bottom: pomodoroItemSS05?.bottom ?? 0,
-              pomodoroItem: pomodoroItemSS05,
-            ),
-            pomodoroWidget(
-              title: pomodoroItemSS06?.word ?? 'pomodoro 1',
-              minutes: pomodoroItemSS06?.minute ?? '',
-              isStayFocused: true,
-              left: pomodoroItemSS06?.left ?? 0,
-              bottom: pomodoroItemSS06?.bottom ?? 0,
-              pomodoroItem: pomodoroItemSS06,
-            ),
-            pomodoroWidget(
-              title: pomodoroItemSS07?.word ?? 'pomodoro 1',
-              minutes: pomodoroItemSS07?.minute ?? '',
-              isStayFocused: false,
-              left: pomodoroItemSS07?.left ?? 0,
-              bottom: pomodoroItemSS07?.bottom ?? 0,
-              pomodoroItem: pomodoroItemSS07,
-            ),
-            pomodoroWidget(
-              title: pomodoroItemSS08?.word ?? 'pomodoro 1',
-              minutes: pomodoroItemSS08?.minute ?? '',
-              isStayFocused: true,
-              left: pomodoroItemSS08?.left ?? 0,
-              bottom: pomodoroItemSS08?.bottom ?? 0,
-              pomodoroItem: pomodoroItemSS08,
-            ),
-            pomodoroWidget(
-              title: pomodoroItemSS09?.word ?? 'pomodoro 1',
-              minutes: pomodoroItemSS09?.minute ?? '',
-              isStayFocused: false,
-              left: pomodoroItemSS09?.left ?? 0,
-              bottom: pomodoroItemSS09?.bottom ?? 0,
-              pomodoroItem: pomodoroItemSS09,
-            ),
-            pomodoroWidget(
-              title: pomodoroItemSS10?.word ?? 'pomodoro 1',
-              minutes: pomodoroItemSS10?.minute ?? '',
-              isStayFocused: false,
-              left: pomodoroItemSS10?.left ?? 0,
-              bottom: pomodoroItemSS10?.bottom ?? 0,
-              pomodoroItem: pomodoroItemSS10,
-            ),
+            pomodoroWidget(title: pomodoroItemSS01?.word ?? 'pomodoro 1', minutes: pomodoroItemSS01?.minute ?? '', isStayFocused: false, left: pomodoroItemSS01?.left ?? 0, bottom: pomodoroItemSS01?.bottom ?? 0, pomodoroItem: pomodoroItemSS01),
+            pomodoroWidget(title: pomodoroItemSS02?.word ?? 'pomodoro 1', minutes: pomodoroItemSS02?.minute ?? '', isStayFocused: true, left: pomodoroItemSS02?.left ?? 0, bottom: pomodoroItemSS02?.bottom ?? 0, pomodoroItem: pomodoroItemSS02),
+            pomodoroWidget(title: pomodoroItemSS03?.word ?? 'pomodoro 1', minutes: pomodoroItemSS03?.minute ?? '', isStayFocused: false, left: pomodoroItemSS03?.left ?? 0, bottom: pomodoroItemSS03?.bottom ?? 0, pomodoroItem: pomodoroItemSS03),
+            pomodoroWidget(title: pomodoroItemSS04?.word ?? 'pomodoro 1', minutes: pomodoroItemSS04?.minute ?? '', isStayFocused: true, left: pomodoroItemSS04?.left ?? 0, bottom: pomodoroItemSS04?.bottom ?? 0, pomodoroItem: pomodoroItemSS04),
+            pomodoroWidget(title: pomodoroItemSS05?.word ?? 'pomodoro 1', minutes: pomodoroItemSS05?.minute ?? '', isStayFocused: false, left: pomodoroItemSS05?.left ?? 0, bottom: pomodoroItemSS05?.bottom ?? 0, pomodoroItem: pomodoroItemSS05),
+            pomodoroWidget(title: pomodoroItemSS06?.word ?? 'pomodoro 1', minutes: pomodoroItemSS06?.minute ?? '', isStayFocused: true, left: pomodoroItemSS06?.left ?? 0, bottom: pomodoroItemSS06?.bottom ?? 0, pomodoroItem: pomodoroItemSS06),
+            pomodoroWidget(title: pomodoroItemSS07?.word ?? 'pomodoro 1', minutes: pomodoroItemSS07?.minute ?? '', isStayFocused: false, left: pomodoroItemSS07?.left ?? 0, bottom: pomodoroItemSS07?.bottom ?? 0, pomodoroItem: pomodoroItemSS07),
+            pomodoroWidget(title: pomodoroItemSS08?.word ?? 'pomodoro 1', minutes: pomodoroItemSS08?.minute ?? '', isStayFocused: true, left: pomodoroItemSS08?.left ?? 0, bottom: pomodoroItemSS08?.bottom ?? 0, pomodoroItem: pomodoroItemSS08),
+            pomodoroWidget(title: pomodoroItemSS09?.word ?? 'pomodoro 1', minutes: pomodoroItemSS09?.minute ?? '', isStayFocused: false, left: pomodoroItemSS09?.left ?? 0, bottom: pomodoroItemSS09?.bottom ?? 0, pomodoroItem: pomodoroItemSS09),
+            pomodoroWidget(title: pomodoroItemSS10?.word ?? 'pomodoro 1', minutes: pomodoroItemSS10?.minute ?? '', isStayFocused: false, left: pomodoroItemSS10?.left ?? 0, bottom: pomodoroItemSS10?.bottom ?? 0, pomodoroItem: pomodoroItemSS10),
           ],
         ),
       ),

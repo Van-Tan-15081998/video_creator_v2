@@ -3873,7 +3873,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     /// -----
     /// TODO: [OPEN TWO CHARACTER CONVERSATION WINDOW]
     /// -----
-    getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onStartTwoCharacterConversationAsOpenWindow, contentItemUnit: contentItemUnit);
+    getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onStartFromCenterStartPositionAsTwoCharacterConversationAsOpenWindow, contentItemUnit: contentItemUnit);
 
     /// ----- | ----- | -----
     /// TODO: Step 0.0 - GAP
@@ -4873,7 +4873,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     /// -----
     /// TODO: [CLOSE TWO CHARACTER CONVERSATION WINDOW]
     /// -----
-    getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onFinishTwoCharacterConversationAsCloseWindow, contentItemUnit: contentItemUnit);
+    getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onFinishFromCenterStartPositionAsTwoCharacterConversationAsCloseWindow, contentItemUnit: contentItemUnit);
 
     /// -----
     /// TODO: Đưa Nội Dung [Content Item Unit] Vào [Content Item Section]

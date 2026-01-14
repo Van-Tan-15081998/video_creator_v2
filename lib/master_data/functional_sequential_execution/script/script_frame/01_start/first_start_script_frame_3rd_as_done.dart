@@ -18,7 +18,6 @@ class FirstStartScriptFrame3rdAsDone extends ScriptFrame {
     required super.functionalSequentialExecutionController,
   });
 
-
   /// -----
   /// TODO:
   /// -----
@@ -27,4 +26,3 @@ class FirstStartScriptFrame3rdAsDone extends ScriptFrame {
     return;
   }
 }
-

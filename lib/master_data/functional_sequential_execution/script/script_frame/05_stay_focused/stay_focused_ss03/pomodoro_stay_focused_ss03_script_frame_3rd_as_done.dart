@@ -26,4 +26,3 @@ class PomodoroStayFocusedSs03ScriptFrame3rdAsDone extends ScriptFrame {
     return;
   }
 }
-

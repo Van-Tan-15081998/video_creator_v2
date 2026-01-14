@@ -1,4 +1,3 @@
-
 import 'package:frame_creator_v2/components/animated_background/models/basic_first_speed.dart';
 import 'package:frame_creator_v2/components/animated_background/models/basic_speed.dart';
 

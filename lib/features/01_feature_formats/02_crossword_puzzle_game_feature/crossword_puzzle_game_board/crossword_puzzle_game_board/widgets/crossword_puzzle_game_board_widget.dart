@@ -24,11 +24,7 @@ class _CrosswordPuzzleGameBoardWidgetState extends State<CrosswordPuzzleGameBoar
   void initState() {
     super.initState();
 
-    _crosswordPuzzleGameBoardContentWidget = CrosswordPuzzleGameBoardContentWidget(
-      systemStateManagement: widget.crosswordPuzzleGameBoardFeature?.getSystemStateManagement,
-      sizeDx: widget.crosswordPuzzleGameBoardFeature?.getSizeDx ?? 0,
-      sizeDy: widget.crosswordPuzzleGameBoardFeature?.getSizeDy ?? 0,
-    );
+    _crosswordPuzzleGameBoardContentWidget = CrosswordPuzzleGameBoardContentWidget(systemStateManagement: widget.crosswordPuzzleGameBoardFeature?.getSystemStateManagement, sizeDx: widget.crosswordPuzzleGameBoardFeature?.getSizeDx ?? 0, sizeDy: widget.crosswordPuzzleGameBoardFeature?.getSizeDy ?? 0);
 
     topPosition = widget.crosswordPuzzleGameBoardFeature?.getTopPosition;
     rightPosition = widget.crosswordPuzzleGameBoardFeature?.getRightPosition;

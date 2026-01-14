@@ -26,7 +26,5 @@ class FunctionalSequentialExecutionStepItemState {
     setStateModel(value: stateModel, isPriorityOverride: true);
   }
 
-  void activateStepItem() {
-
-  }
+  void activateStepItem() {}
 }

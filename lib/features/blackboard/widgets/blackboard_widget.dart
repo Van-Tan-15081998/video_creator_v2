@@ -23,11 +23,7 @@ class _BlackboardWidgetState extends State<BlackboardWidget> with SimpleAnimatio
   void initState() {
     super.initState();
 
-    _blackboardContentWidget = BlackboardContentWidget(
-      systemStateManagement: widget.blackboardFeature?.getSystemStateManagement,
-      sizeDx: widget.blackboardFeature?.getSizeDx ?? 0,
-      sizeDy: widget.blackboardFeature?.getSizeDy ?? 0,
-    );
+    _blackboardContentWidget = BlackboardContentWidget(systemStateManagement: widget.blackboardFeature?.getSystemStateManagement, sizeDx: widget.blackboardFeature?.getSizeDx ?? 0, sizeDy: widget.blackboardFeature?.getSizeDy ?? 0);
 
     topPosition = widget.blackboardFeature?.getTopPosition;
     rightPosition = widget.blackboardFeature?.getRightPosition;

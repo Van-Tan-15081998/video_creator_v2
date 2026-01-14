@@ -8,7 +8,6 @@ import 'package:frame_creator_v2/master_data/functional_sequential_execution/ste
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/status/flow_type.dart';
 
 class FunctionalSequentialExecutionStepItem with ExecutionCore {
-
   ///
   /// TODO: Mã Thực Thi
   ///

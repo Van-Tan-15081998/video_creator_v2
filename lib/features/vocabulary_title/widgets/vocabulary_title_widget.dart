@@ -23,11 +23,7 @@ class _VocabularyTitleWidgetState extends State<VocabularyTitleWidget> with Simp
   void initState() {
     super.initState();
 
-    _vocabularyTitleContentWidget = VocabularyTitleContentWidget(
-      systemStateManagement: widget.vocabularyTitleFeature?.getSystemStateManagement,
-      sizeDx: widget.vocabularyTitleFeature?.getSizeDx ?? 0,
-      sizeDy: widget.vocabularyTitleFeature?.getSizeDy ?? 0,
-    );
+    _vocabularyTitleContentWidget = VocabularyTitleContentWidget(systemStateManagement: widget.vocabularyTitleFeature?.getSystemStateManagement, sizeDx: widget.vocabularyTitleFeature?.getSizeDx ?? 0, sizeDy: widget.vocabularyTitleFeature?.getSizeDy ?? 0);
 
     topPosition = widget.vocabularyTitleFeature?.getTopPosition;
     rightPosition = widget.vocabularyTitleFeature?.getRightPosition;

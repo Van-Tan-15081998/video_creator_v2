@@ -23,11 +23,7 @@ class _BackgroundImageWidgetState extends State<BackgroundImageWidget> with Simp
   void initState() {
     super.initState();
 
-    _backgroundImageContentWidget = BackgroundImageContentWidget(
-      systemStateManagement: widget.backgroundImageFeature?.getSystemStateManagement,
-      sizeDx: widget.backgroundImageFeature?.getSizeDx ?? 0,
-      sizeDy: widget.backgroundImageFeature?.getSizeDy ?? 0,
-    );
+    _backgroundImageContentWidget = BackgroundImageContentWidget(systemStateManagement: widget.backgroundImageFeature?.getSystemStateManagement, sizeDx: widget.backgroundImageFeature?.getSizeDx ?? 0, sizeDy: widget.backgroundImageFeature?.getSizeDy ?? 0);
 
     topPosition = widget.backgroundImageFeature?.getTopPosition;
     rightPosition = widget.backgroundImageFeature?.getRightPosition;

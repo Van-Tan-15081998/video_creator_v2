@@ -27,4 +27,3 @@ class TopicCPomodoroBreakTimeSs02ScriptFrame2ndAsMain extends PomodoroBreakTimeS
     return;
   }
 }
-

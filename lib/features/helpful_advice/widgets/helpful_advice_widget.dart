@@ -24,11 +24,7 @@ class _HelpfulAdviceWidgetState extends State<HelpfulAdviceWidget> with SimpleAn
   void initState() {
     super.initState();
 
-    _helpfulAdviceContentWidget = HelpfulAdviceContentWidget(
-      systemStateManagement: widget.helpfulAdviceFeature?.getSystemStateManagement,
-      sizeDx: widget.helpfulAdviceFeature?.getSizeDx ?? 0,
-      sizeDy: widget.helpfulAdviceFeature?.getSizeDy ?? 0,
-    );
+    _helpfulAdviceContentWidget = HelpfulAdviceContentWidget(systemStateManagement: widget.helpfulAdviceFeature?.getSystemStateManagement, sizeDx: widget.helpfulAdviceFeature?.getSizeDx ?? 0, sizeDy: widget.helpfulAdviceFeature?.getSizeDy ?? 0);
 
     topPosition = widget.helpfulAdviceFeature?.getTopPosition;
     rightPosition = widget.helpfulAdviceFeature?.getRightPosition;

@@ -25,11 +25,7 @@ class _VocabularyListOverallWidgetState extends State<VocabularyListOverallWidge
   void initState() {
     super.initState();
 
-    _vocabularyListOverallContentWidget = VocabularyListOverallContentWidget(
-      systemStateManagement: widget.vocabularyListOverallFeature?.getSystemStateManagement,
-      sizeDx: widget.vocabularyListOverallFeature?.getSizeDx ?? 0,
-      sizeDy: widget.vocabularyListOverallFeature?.getSizeDy ?? 0,
-    );
+    _vocabularyListOverallContentWidget = VocabularyListOverallContentWidget(systemStateManagement: widget.vocabularyListOverallFeature?.getSystemStateManagement, sizeDx: widget.vocabularyListOverallFeature?.getSizeDx ?? 0, sizeDy: widget.vocabularyListOverallFeature?.getSizeDy ?? 0);
 
     topPosition = widget.vocabularyListOverallFeature?.getTopPosition;
     rightPosition = widget.vocabularyListOverallFeature?.getRightPosition;

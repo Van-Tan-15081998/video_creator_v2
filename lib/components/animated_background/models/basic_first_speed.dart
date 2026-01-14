@@ -59,12 +59,7 @@ class BasicFirstSpeed {
     return;
   }
 
-  BasicFirstSpeed({
-    required BasicSpeed? tocDoCuongChe,
-    required BasicSpeed? tocDoToiDa,
-    required BasicSpeed? tocDoToiThieu,
-    required BasicIncreasingDecreasingSpeed? heSoTangGiamTocDo,
-  }) {
+  BasicFirstSpeed({required BasicSpeed? tocDoCuongChe, required BasicSpeed? tocDoToiDa, required BasicSpeed? tocDoToiThieu, required BasicIncreasingDecreasingSpeed? heSoTangGiamTocDo}) {
     setTocDoBayCuongChe(value: tocDoCuongChe);
     setTocDoToiDa(value: tocDoToiDa);
     setTocDoToiThieu(value: tocDoToiThieu);

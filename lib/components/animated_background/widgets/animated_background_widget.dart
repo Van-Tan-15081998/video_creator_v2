@@ -1,10 +1,11 @@
 import 'dart:async';
-import 'package:flame/components.dart';
-import 'package:flame/text.dart';
-import 'package:flutter/material.dart';
-import 'package:flame/game.dart';
+
 import 'package:flame/cache.dart' as cache;
+import 'package:flame/components.dart';
+import 'package:flame/game.dart';
+import 'package:flame/text.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:frame_creator_v2/components/animated_background/widgets/animated_background_unit_component.dart';
 
 class AnimatedBackgroundWidget extends FlameGame {
