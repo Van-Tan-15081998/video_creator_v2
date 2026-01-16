@@ -1,20 +1,21 @@
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
-import 'package:frame_creator_v2/master_features/system_features/countdown_timer/models/countdown_time_cycle_system_feature.dart';
-import 'package:frame_creator_v2/master_features/system_features/introductory_conversation/models/introductory_conversation_system_feature.dart';
-import 'package:frame_creator_v2/master_features/system_features/pomodoro_cycle/models/pomodoro_cycle_system_feature.dart';
+import 'package:frame_creator_v2/master_features/system_features/from_bottom_end_position_as_pomodoro_cycle/models/from_bottom_end_position_as_pomodoro_cycle_system_feature.dart';
+import 'package:frame_creator_v2/master_features/system_features/from_center_end_position_as_countdown_timer/models/from_center_end_position_as_countdown_time_cycle_system_feature.dart';
+import 'package:frame_creator_v2/master_features/system_features/from_center_end_position_as_countdown_timer/widgets/from_center_end_position_as_countdown_time_cycle_widget.dart';
+import 'package:frame_creator_v2/master_features/system_features/from_center_position_as_introductory_conversation/models/from_center_position_as_introductory_conversation_system_feature.dart';
 import 'package:frame_creator_v2/state_managements/mixins/feature_mixin.dart';
 
 class SystemFeatureManagement with ExecutionCore, FeatureMixin {
   /// -----
   /// TODO:
   /// -----
-  PomodoroCycleSystemFeature? _pomodoroCycleSystemFeature;
-  PomodoroCycleSystemFeature? get getPomodoroCycleSystemFeature => _pomodoroCycleSystemFeature;
-  void setPomodoroCycleSystemFeature({required PomodoroCycleSystemFeature? value, bool? isPriorityOverride}) {
+  FromBottomEndPositionAsPomodoroCycleSystemFeature? _fromBottomEndPositionAsPomodoroCycleSystemFeature;
+  FromBottomEndPositionAsPomodoroCycleSystemFeature? get getFromBottomEndPositionAsPomodoroCycleSystemFeature => _fromBottomEndPositionAsPomodoroCycleSystemFeature;
+  void setFromBottomEndPositionAsPomodoroCycleSystemFeature({required FromBottomEndPositionAsPomodoroCycleSystemFeature? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
-      _pomodoroCycleSystemFeature = value;
+      _fromBottomEndPositionAsPomodoroCycleSystemFeature = value;
     } else {
-      _pomodoroCycleSystemFeature ??= value;
+      _fromBottomEndPositionAsPomodoroCycleSystemFeature ??= value;
     }
 
     ///
@@ -24,13 +25,13 @@ class SystemFeatureManagement with ExecutionCore, FeatureMixin {
   /// -----
   /// TODO:
   /// -----
-  CountdownTimeCycleSystemFeature? _countdownTimeCycleSystemFeature;
-  CountdownTimeCycleSystemFeature? get getCountdownTimeCycleSystemFeature => _countdownTimeCycleSystemFeature;
-  void setCountdownTimeCycleSystemFeature({required CountdownTimeCycleSystemFeature? value, bool? isPriorityOverride}) {
+  FromCenterEndPositionAsCountdownTimeCycleSystemFeature? _fromCenterEndPositionAsCountdownTimeCycleSystemFeature;
+  FromCenterEndPositionAsCountdownTimeCycleSystemFeature? get getFromCenterEndPositionAsCountdownTimeCycleSystemFeature => _fromCenterEndPositionAsCountdownTimeCycleSystemFeature;
+  void setFromCenterEndPositionAsCountdownTimeCycleSystemFeature({required FromCenterEndPositionAsCountdownTimeCycleSystemFeature? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
-      _countdownTimeCycleSystemFeature = value;
+      _fromCenterEndPositionAsCountdownTimeCycleSystemFeature = value;
     } else {
-      _countdownTimeCycleSystemFeature ??= value;
+      _fromCenterEndPositionAsCountdownTimeCycleSystemFeature ??= value;
     }
 
     ///
@@ -40,13 +41,13 @@ class SystemFeatureManagement with ExecutionCore, FeatureMixin {
   /// -----
   /// TODO:
   /// -----
-  IntroductoryConversationSystemFeature? _introductoryConversationSystemFeature;
-  IntroductoryConversationSystemFeature? get getIntroductoryConversationSystemFeature => _introductoryConversationSystemFeature;
-  void setIntroductoryConversationSystemFeature({required IntroductoryConversationSystemFeature? value, bool? isPriorityOverride}) {
+  FromCenterPositionAsIntroductoryConversationSystemFeature? _fromCenterPositionAsIntroductoryConversationSystemFeature;
+  FromCenterPositionAsIntroductoryConversationSystemFeature? get getFromCenterPositionAsIntroductoryConversationSystemFeature => _fromCenterPositionAsIntroductoryConversationSystemFeature;
+  void setFromCenterPositionAsIntroductoryConversationSystemFeature({required FromCenterPositionAsIntroductoryConversationSystemFeature? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
-      _introductoryConversationSystemFeature = value;
+      _fromCenterPositionAsIntroductoryConversationSystemFeature = value;
     } else {
-      _introductoryConversationSystemFeature ??= value;
+      _fromCenterPositionAsIntroductoryConversationSystemFeature ??= value;
     }
 
     ///

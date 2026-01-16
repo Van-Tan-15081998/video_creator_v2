@@ -1,9 +1,46 @@
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_bottom_end_position_as_one_character_conversation_functional_feature/models/from_bottom_end_position_as_one_character_conversation_functional_feature.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_conversation_functional_feature/models/from_center_start_position_as_one_character_conversation_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_conversation_functional_feature/models/from_center_start_position_as_two_character_conversation_functional_feature.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/from_center_start_position_as_two_character_playing_chess_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_top_end_position_as_one_character_conversation_functional_feature/models/from_top_end_position_as_one_character_conversation_functional_feature.dart';
 import 'package:frame_creator_v2/state_managements/mixins/feature_mixin.dart';
 
 class FunctionalFeatureManagement with ExecutionCore, FeatureMixin {
+
+  /// -----
+  /// TODO:
+  /// -----
+  FromBottomEndPositionAsOneCharacterConversationFunctionalFeature? _fromBottomEndPositionAsOneCharacterConversationFunctionalFeature;
+  FromBottomEndPositionAsOneCharacterConversationFunctionalFeature? get getFromBottomEndPositionAsOneCharacterConversationFunctionalFeature => _fromBottomEndPositionAsOneCharacterConversationFunctionalFeature;
+  void setFromBottomEndPositionAsOneCharacterConversationFunctionalFeature({required FromBottomEndPositionAsOneCharacterConversationFunctionalFeature? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _fromBottomEndPositionAsOneCharacterConversationFunctionalFeature = value;
+    } else {
+      _fromBottomEndPositionAsOneCharacterConversationFunctionalFeature ??= value;
+    }
+
+    ///
+    return;
+  }
+
+
+  /// -----
+  /// TODO:
+  /// -----
+  FromCenterStartPositionAsOneCharacterConversationFunctionalFeature? _fromCenterStartPositionAsOneCharacterConversationFunctionalFeature;
+  FromCenterStartPositionAsOneCharacterConversationFunctionalFeature? get getFromCenterStartPositionAsOneCharacterConversationFunctionalFeature => _fromCenterStartPositionAsOneCharacterConversationFunctionalFeature;
+  void setFromCenterStartPositionAsOneCharacterConversationFunctionalFeature({required FromCenterStartPositionAsOneCharacterConversationFunctionalFeature? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _fromCenterStartPositionAsOneCharacterConversationFunctionalFeature = value;
+    } else {
+      _fromCenterStartPositionAsOneCharacterConversationFunctionalFeature ??= value;
+    }
+
+    ///
+    return;
+  }
+
   /// -----
   /// TODO:
   /// -----
@@ -14,6 +51,22 @@ class FunctionalFeatureManagement with ExecutionCore, FeatureMixin {
       _fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature = value;
     } else {
       _fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature ??= value;
+    }
+
+    ///
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  FromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature? _fromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature;
+  FromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature? get getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature => _fromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature;
+  void setFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature({required FromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _fromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature = value;
+    } else {
+      _fromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature ??= value;
     }
 
     ///

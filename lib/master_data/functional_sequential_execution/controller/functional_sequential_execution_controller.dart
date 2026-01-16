@@ -431,6 +431,19 @@ class FunctionalSequentialExecutionController with ExecutionCore {
           }
 
           /// -----
+          /// TODO: Image Slide Flow
+          /// -----
+          if (functionalSequentialExecutionStepItemState?.getStateModel?.getFlowType?.isTypeAsImageSlideFlow() == true) {
+            getFlowController?.getImageSlideFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(functionalSequentialExecutionStepItemState);
+            contentStage?.getFunctionalSequentialExecutionStepItemStateListAsStack?.remove(functionalSequentialExecutionStepItemState);
+
+            /// TODO: Perform
+            functionalSequentialExecutionStepItemState?.getStateModel?.onPerform?.call();
+
+            ///
+          }
+
+          /// -----
           /// TODO: Message Flow
           /// -----
           if (functionalSequentialExecutionStepItemState?.getStateModel?.getFlowType?.isTypeAsMessageFlow() == true) {

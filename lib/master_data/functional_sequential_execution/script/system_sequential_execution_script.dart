@@ -39,21 +39,77 @@ class SystemSequentialExecutionScript with ExecutionCore {
 
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-  /// TODO: Introductory Conversation
+  /// TODO: From Bottom End Position As Pomodoro Cycle
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 
-  /// TODO: Bắt Đầu Đoạn Hội Thoại Giới Thiệu Bằng Việc Mở Cửa Sổ
-  static const String onStartIntroductoryConversationAsOpenWindow = '[ON_START_INTRODUCTORY_CONVERSATION_AS_OPEN_WINDOW]';
+  /// TODO:
+  static const String onStartFromBottomEndPositionAsPomodoroCycleAsOpenWindow = '[ON_START_FROM_BOTTOM_END_POSITION_AS_POMODORO_CYCLE_AS_OPEN_WINDOW]';
 
-  /// TODO: Kết Thúc Đoạn Hội Thoại Giới Thiệu Bằng Việc Đóng Cửa Sổ
-  static const String onFinishIntroductoryConversationAsCloseWindow = '[ON_FINISH_INTRODUCTORY_CONVERSATION_AS_CLOSE_WINDOW]';
+  /// TODO:
+  static const String onFinishFromBottomEndPositionAsPomodoroCycleAsCloseWindow = '[ON_FINISH_FROM_BOTTOM_END_POSITION_AS_POMODORO_CYCLE_AS_CLOSE_WINDOW]';
 
   ///
 
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-  /// TODO: Two Character Conversation
+  /// TODO: From Center End Position As Countdown Time Cycle
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+  /// TODO:
+  static const String onStartFromCenterEndPositionAsCountdownTimeCycleAsOpenWindow = '[ON_START_FROM_CENTER_END_POSITION_AS_COUNTDOWN_TIME_CYCLE_AS_OPEN_WINDOW]';
+
+  /// TODO:
+  static const String onFinishFromCenterEndPositionAsCountdownTimeCycleAsCloseWindow = '[ON_FINISH_FROM_CENTER_END_POSITION_AS_COUNTDOWN_TIME_CYCLE_AS_CLOSE_WINDOW]';
+
+  ///
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: From Center Position As Introductory Conversation
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+  /// TODO:
+  static const String onStartFromCenterPositionAsIntroductoryConversationAsOpenWindow = '[ON_START_FROM_CENTER_POSITION_AS_INTRODUCTORY_CONVERSATION_AS_OPEN_WINDOW]';
+
+  /// TODO:
+  static const String onFinishFromCenterPositionAsIntroductoryConversationAsCloseWindow = '[ON_FINISH_FROM_CENTER_POSITION_AS_INTRODUCTORY_CONVERSATION_AS_CLOSE_WINDOW]';
+
+  ///
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: From Bottom End Position As One Character Conversation
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+  /// TODO:
+  static const String onStartFromBottomEndPositionAsOneCharacterConversationAsOpenWindow = '[ON_START_FROM_BOTTOM_END_POSITION_AS_ONE_CHARACTER_CONVERSATION_AS_OPEN_WINDOW]';
+
+  /// TODO:
+  static const String onFinishFromBottomEndPositionAsOneCharacterConversationAsCloseWindow = '[ON_FINISH_FROM_BOTTOM_END_POSITION_AS_ONE_CHARACTER_CONVERSATION_AS_CLOSE_WINDOW]';
+
+  ///
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: From Center Start Position As One Character Conversation
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+  /// TODO:
+  static const String onStartFromCenterStartPositionAsOneCharacterConversationAsOpenWindow = '[ON_START_FROM_CENTER_START_POSITION_AS_ONE_CHARACTER_CONVERSATION_AS_OPEN_WINDOW]';
+
+  /// TODO:
+  static const String onFinishFromCenterStartPositionAsOneCharacterConversationAsCloseWindow = '[ON_FINISH_FROM_CENTER_START_POSITION_AS_ONE_CHARACTER_CONVERSATION_AS_CLOSE_WINDOW]';
+
+  ///
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: From Center Start Position As Two Character Conversation
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 
@@ -67,7 +123,21 @@ class SystemSequentialExecutionScript with ExecutionCore {
 
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-  /// TODO: Two Character Conversation
+  /// TODO: From Center Start Position As Two Character Playing Chess
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+  /// TODO:
+  static const String onStartFromCenterStartPositionAsTwoCharacterPlayingChessAsOpenWindow = '[ON_START_FROM_CENTER_START_POSITION_AS_TWO_CHARACTER_PLAYING_CHESS_AS_OPEN_WINDOW]';
+
+  /// TODO:
+  static const String onFinishFromCenterStartPositionAsTwoCharacterPlayingChessAsCloseWindow = '[ON_FINISH_FROM_CENTER_START_POSITION_AS_TWO_CHARACTER_PLAYING_CHESS_AS_CLOSE_WINDOW]';
+
+  ///
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: From Top End Position As One Character Conversation
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 
@@ -122,12 +192,12 @@ class SystemSequentialExecutionScript with ExecutionCore {
     switch (executionId) {
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-      /// TODO: Introductory Conversation
+      /// TODO: From Bottom End Position As Pomodoro Cycle
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 
       ///
-      case SystemSequentialExecutionScript.onStartIntroductoryConversationAsOpenWindow:
+      case SystemSequentialExecutionScript.onStartFromBottomEndPositionAsPomodoroCycleAsOpenWindow:
         {
           contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
             FunctionalSequentialExecutionStepItemState(
@@ -137,14 +207,14 @@ class SystemSequentialExecutionScript with ExecutionCore {
                 ..onInitRoot()
                 ..onStart = () {
                   if (kDebugMode) {
-                    print('__________[${SystemSequentialExecutionScript.onStartIntroductoryConversationAsOpenWindow}]');
+                    print('__________[${SystemSequentialExecutionScript.onStartFromBottomEndPositionAsPomodoroCycleAsOpenWindow}]');
                   }
 
                   ///
                 }
                 ..onPerform = () {
                   ///
-                  getSequentialExecutionController?.getSystemFeatureManagement?.getIntroductoryConversationSystemFeature?.onActivateWindow();
+                  getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.onActivateWindow();
 
                   ///
                 },
@@ -156,7 +226,7 @@ class SystemSequentialExecutionScript with ExecutionCore {
         break;
 
       ///
-      case SystemSequentialExecutionScript.onFinishIntroductoryConversationAsCloseWindow:
+      case SystemSequentialExecutionScript.onFinishFromBottomEndPositionAsPomodoroCycleAsCloseWindow:
         {
           contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
             FunctionalSequentialExecutionStepItemState(
@@ -166,14 +236,270 @@ class SystemSequentialExecutionScript with ExecutionCore {
                 ..onInitRoot()
                 ..onStart = () {
                   if (kDebugMode) {
-                    print('__________[${SystemSequentialExecutionScript.onFinishIntroductoryConversationAsCloseWindow}]');
+                    print('__________[${SystemSequentialExecutionScript.onFinishFromBottomEndPositionAsPomodoroCycleAsCloseWindow}]');
                   }
 
                   ///
                 }
                 ..onPerform = () {
                   ///
-                  getSequentialExecutionController?.getSystemFeatureManagement?.getIntroductoryConversationSystemFeature?.onDeactivateWindow();
+                  getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.onDeactivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From Center End Position As Countdown Time Cycle
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      ///
+      case SystemSequentialExecutionScript.onStartFromCenterEndPositionAsCountdownTimeCycleAsOpenWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[${SystemSequentialExecutionScript.onStartFromCenterEndPositionAsCountdownTimeCycleAsOpenWindow}]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getSystemFeatureManagement?.getFromCenterEndPositionAsCountdownTimeCycleSystemFeature?.onActivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+      ///
+      case SystemSequentialExecutionScript.onFinishFromCenterEndPositionAsCountdownTimeCycleAsCloseWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[${SystemSequentialExecutionScript.onFinishFromCenterEndPositionAsCountdownTimeCycleAsCloseWindow}]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getSystemFeatureManagement?.getFromCenterEndPositionAsCountdownTimeCycleSystemFeature?.onDeactivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From Center Position As Introductory Conversation
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      ///
+      case SystemSequentialExecutionScript.onStartFromCenterPositionAsIntroductoryConversationAsOpenWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[${SystemSequentialExecutionScript.onStartFromCenterPositionAsIntroductoryConversationAsOpenWindow}]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getSystemFeatureManagement?.getFromCenterPositionAsIntroductoryConversationSystemFeature?.onActivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+      ///
+      case SystemSequentialExecutionScript.onFinishFromCenterPositionAsIntroductoryConversationAsCloseWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[${SystemSequentialExecutionScript.onFinishFromCenterPositionAsIntroductoryConversationAsCloseWindow}]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getSystemFeatureManagement?.getFromCenterPositionAsIntroductoryConversationSystemFeature?.onDeactivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From Bottom End Position As One Character Conversation
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      ///
+      case SystemSequentialExecutionScript.onStartFromBottomEndPositionAsOneCharacterConversationAsOpenWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[${SystemSequentialExecutionScript.onStartFromBottomEndPositionAsOneCharacterConversationAsOpenWindow}]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getFunctionalFeatureManagement?.getFromBottomEndPositionAsOneCharacterConversationFunctionalFeature?.onActivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+      ///
+      case SystemSequentialExecutionScript.onFinishFromBottomEndPositionAsOneCharacterConversationAsCloseWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[${SystemSequentialExecutionScript.onFinishFromBottomEndPositionAsOneCharacterConversationAsCloseWindow}]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getFunctionalFeatureManagement?.getFromBottomEndPositionAsOneCharacterConversationFunctionalFeature?.onDeactivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From Center Start Position As One Character Conversation
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      ///
+      case SystemSequentialExecutionScript.onStartFromCenterStartPositionAsOneCharacterConversationAsOpenWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[${SystemSequentialExecutionScript.onStartFromCenterStartPositionAsOneCharacterConversationAsOpenWindow}]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsOneCharacterConversationFunctionalFeature?.onActivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+      ///
+      case SystemSequentialExecutionScript.onFinishFromCenterStartPositionAsOneCharacterConversationAsCloseWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[${SystemSequentialExecutionScript.onFinishFromCenterStartPositionAsOneCharacterConversationAsCloseWindow}]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsOneCharacterConversationFunctionalFeature?.onDeactivateWindow();
 
                   ///
                 },
@@ -238,6 +564,70 @@ class SystemSequentialExecutionScript with ExecutionCore {
                 ..onPerform = () {
                   ///
                   getSequentialExecutionController?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.onDeactivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: From Center Start Position As Two Character Playing Chess
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+    ///
+      case SystemSequentialExecutionScript.onStartFromCenterStartPositionAsTwoCharacterPlayingChessAsOpenWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[${SystemSequentialExecutionScript.onStartFromCenterStartPositionAsTwoCharacterPlayingChessAsOpenWindow}]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.onActivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+    ///
+      case SystemSequentialExecutionScript.onFinishFromCenterStartPositionAsTwoCharacterPlayingChessAsCloseWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[${SystemSequentialExecutionScript.onFinishFromCenterStartPositionAsTwoCharacterPlayingChessAsCloseWindow}]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.onDeactivateWindow();
 
                   ///
                 },

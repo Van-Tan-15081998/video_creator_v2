@@ -1,6 +1,7 @@
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/basic_character_flow_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/character_flow_controller.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/image_slide_flow_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/message_flow_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/window_flow_controller.dart';
 
@@ -35,6 +36,21 @@ class FlowController with ExecutionCore {
       _characterFlowController = value;
     } else {
       _characterFlowController ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  ImageSlideFlowController? _imageSlideFlowController;
+  ImageSlideFlowController? get getImageSlideFlowController => _imageSlideFlowController;
+  void setImageSlideFlowController({required ImageSlideFlowController? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _imageSlideFlowController = value;
+    } else {
+      _imageSlideFlowController ??= value;
     }
 
     return;
@@ -129,6 +145,7 @@ class FlowController with ExecutionCore {
       /// -----
 
       setCharacterFlowController(value: CharacterFlowController(), isPriorityOverride: true);
+      setImageSlideFlowController(value: ImageSlideFlowController(), isPriorityOverride: true);
       setMessageFlowController(value: MessageFlowController(), isPriorityOverride: true);
       setWindowFlowController(value: WindowFlowController(), isPriorityOverride: true);
 
@@ -198,6 +215,7 @@ class FlowController with ExecutionCore {
       /// -----
 
       await getCharacterFlowController?.onSetupRoot();
+      await getImageSlideFlowController?.onSetupRoot();
       await getMessageFlowController?.onSetupRoot();
       await getWindowFlowController?.onSetupRoot();
     } catch (e) {
@@ -219,6 +237,7 @@ class FlowController with ExecutionCore {
       /// -----
 
       await getCharacterFlowController?.onInitRoot();
+      await getImageSlideFlowController?.onInitRoot();
       await getMessageFlowController?.onInitRoot();
       await getWindowFlowController?.onInitRoot();
     } catch (e) {

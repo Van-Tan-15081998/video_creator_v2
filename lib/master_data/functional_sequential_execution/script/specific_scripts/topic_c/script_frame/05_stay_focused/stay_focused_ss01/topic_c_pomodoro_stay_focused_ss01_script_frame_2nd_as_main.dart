@@ -32,8 +32,56 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
     /// -----
     /// TODO: [OPEN TWO CHARACTER CONVERSATION WINDOW]
     /// -----
-    getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onStartFromCenterStartPositionAsTwoCharacterConversationAsOpenWindow, contentItemUnit: contentItemUnit);
-    getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onStartFromTopEndPositionAsOneCharacterConversationAsOpenWindow, contentItemUnit: contentItemUnit); // TEST
+    // getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onStartFromCenterStartPositionAsTwoCharacterConversationAsOpenWindow, contentItemUnit: contentItemUnit);
+    // getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onStartFromTopEndPositionAsOneCharacterConversationAsOpenWindow, contentItemUnit: contentItemUnit); // TEST
+
+    // getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onStartFromCenterStartPositionAsOneCharacterConversationAsOpenWindow, contentItemUnit: contentItemUnit); // TEST
+
+    // getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onFinishFromBottomEndPositionAsPomodoroCycleAsCloseWindow, contentItemUnit: contentItemUnit); // TEST
+
+    // getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onStartFromBottomEndPositionAsOneCharacterConversationAsOpenWindow, contentItemUnit: contentItemUnit); // TEST
+
+    getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onStartFromCenterStartPositionAsTwoCharacterPlayingChessAsOpenWindow, contentItemUnit: contentItemUnit); // TEST
+
+    /// ----- | ----- | -----
+    /// TODO: Step [MAIN]
+    /// ----- | ----- | -----
+    contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asImageSlideFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_____[POMODORO_STAY_FOCUSED_SS01_AS_MAIN]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]_____[POMODORO_STAY_FOCUSED_SS01_AS_MAIN]');
+              }
+            }
+            ..setStepItemContent(
+              value: StepItemContentAsNewMessageConversation(
+                message: null,
+                imageSource: 'assets/images/interesting_knowledge/knowledge_01.jpg', //
+                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsOneCharacterConversationWindow,
+                characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
+              ),
+              isPriorityOverride: true,
+            ),
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 5);
+
+    ///
+    getSystemSequentialExecutionScript?.getSystemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getLegalMoves(
+      chessSquareStateItem: getSystemSequentialExecutionScript?.getSystemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessSquareStateItemA2,
+    );
 
     /// ----- | ----- | -----
     /// TODO: Step [GAP]
@@ -86,7 +134,7 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
               value: StepItemContentAsNewMessageConversation(
                 message: '1234567890 _10',
                 imageSource: null, //
-                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsOneCharacterConversationWindow,
                 characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
               ),
               isPriorityOverride: true,
@@ -121,7 +169,7 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
               value: StepItemContentAsNewMessageConversation(
                 message: '1234567890 1234567890 _20',
                 imageSource: null, //
-                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsOneCharacterConversationWindow,
                 characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA02Id,
               ),
               isPriorityOverride: true,
@@ -156,7 +204,7 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
               value: StepItemContentAsNewMessageConversation(
                 message: '1234567890 1234567890 1234567890 _30',
                 imageSource: null, //
-                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsOneCharacterConversationWindow,
                 characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
               ),
               isPriorityOverride: true,
@@ -191,7 +239,7 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
               value: StepItemContentAsNewMessageConversation(
                 message: '1234567890 1234567890 1234567890 1234567890 _40',
                 imageSource: null, //
-                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsOneCharacterConversationWindow,
                 characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
               ),
               isPriorityOverride: true,
@@ -226,7 +274,7 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
               value: StepItemContentAsNewMessageConversation(
                 message: '1234567890 1234567890 1234567890 1234567890 1234567890 _50',
                 imageSource: null, //
-                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsOneCharacterConversationWindow,
                 characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
               ),
               isPriorityOverride: true,
@@ -261,7 +309,7 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
               value: StepItemContentAsNewMessageConversation(
                 message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _60',
                 imageSource: null, //
-                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsOneCharacterConversationWindow,
                 characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
               ),
               isPriorityOverride: true,
@@ -296,7 +344,7 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
               value: StepItemContentAsNewMessageConversation(
                 message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _70',
                 imageSource: null, //
-                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsOneCharacterConversationWindow,
                 characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
               ),
               isPriorityOverride: true,
@@ -331,7 +379,7 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
               value: StepItemContentAsNewMessageConversation(
                 message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _80',
                 imageSource: null, //
-                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsOneCharacterConversationWindow,
                 characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
               ),
               isPriorityOverride: true,
@@ -366,7 +414,7 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
               value: StepItemContentAsNewMessageConversation(
                 message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _90',
                 imageSource: null, //
-                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsOneCharacterConversationWindow,
                 characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
               ),
               isPriorityOverride: true,
@@ -401,7 +449,7 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
               value: StepItemContentAsNewMessageConversation(
                 message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _100',
                 imageSource: null, //
-                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsOneCharacterConversationWindow,
                 characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
               ),
               isPriorityOverride: true,
@@ -436,7 +484,7 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
               value: StepItemContentAsNewMessageConversation(
                 message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _110',
                 imageSource: null, //
-                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsOneCharacterConversationWindow,
                 characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
               ),
               isPriorityOverride: true,
@@ -471,7 +519,7 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
               value: StepItemContentAsNewMessageConversation(
                 message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _120',
                 imageSource: null, //
-                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsOneCharacterConversationWindow,
                 characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
               ),
               isPriorityOverride: true,
@@ -506,7 +554,7 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
               value: StepItemContentAsNewMessageConversation(
                 message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _130',
                 imageSource: null, //
-                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsOneCharacterConversationWindow,
                 characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
               ),
               isPriorityOverride: true,
@@ -541,7 +589,7 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
               value: StepItemContentAsNewMessageConversation(
                 message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _140',
                 imageSource: null, //
-                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsOneCharacterConversationWindow,
                 characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
               ),
               isPriorityOverride: true,
@@ -576,7 +624,7 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
               value: StepItemContentAsNewMessageConversation(
                 message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _150',
                 imageSource: null, //
-                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsOneCharacterConversationWindow,
                 characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
               ),
               isPriorityOverride: true,
@@ -611,7 +659,7 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
               value: StepItemContentAsNewMessageConversation(
                 message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _160',
                 imageSource: null, //
-                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsOneCharacterConversationWindow,
                 characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
               ),
               isPriorityOverride: true,
@@ -646,7 +694,42 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
               value: StepItemContentAsNewMessageConversation(
                 message: null,
                 imageSource: 'assets/images/interesting_knowledge/knowledge_01.jpg', //
-                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsOneCharacterConversationWindow,
+                characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
+              ),
+              isPriorityOverride: true,
+            ),
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 5);
+
+    /// ----- | ----- | -----
+    /// TODO: Step [MAIN]
+    /// ----- | ----- | -----
+    contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asImageSlideFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_____[POMODORO_STAY_FOCUSED_SS01_AS_MAIN]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]_____[POMODORO_STAY_FOCUSED_SS01_AS_MAIN]');
+              }
+            }
+            ..setStepItemContent(
+              value: StepItemContentAsNewMessageConversation(
+                message: null,
+                imageSource: 'assets/images/interesting_knowledge/knowledge_01.jpg', //
+                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsOneCharacterConversationWindow,
                 characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
               ),
               isPriorityOverride: true,
@@ -681,7 +764,42 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
               value: StepItemContentAsNewMessageConversation(
                 message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _170',
                 imageSource: null, //
-                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id,
+                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsOneCharacterConversationWindow,
+                characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
+              ),
+              isPriorityOverride: true,
+            ),
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 5);
+
+    /// ----- | ----- | -----
+    /// TODO: Step [MAIN]
+    /// ----- | ----- | -----
+    contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asImageSlideFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_____[POMODORO_STAY_FOCUSED_SS01_AS_MAIN]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]_____[POMODORO_STAY_FOCUSED_SS01_AS_MAIN]');
+              }
+            }
+            ..setStepItemContent(
+              value: StepItemContentAsNewMessageConversation(
+                message: null,
+                imageSource: 'assets/images/interesting_knowledge/knowledge_01.jpg', //
+                windowId: getSystemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsOneCharacterConversationWindow,
                 characterId: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id,
               ),
               isPriorityOverride: true,
@@ -695,6 +813,10 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
     /// -----
     getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onFinishFromCenterStartPositionAsTwoCharacterConversationAsCloseWindow, contentItemUnit: contentItemUnit);
     getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onFinishFromTopEndPositionAsOneCharacterConversationAsCloseWindow, contentItemUnit: contentItemUnit); // TEST
+
+    contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 5);
+
+    // getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onStartFromCenterStartPositionAsOneCharacterConversationAsOpenWindow, contentItemUnit: contentItemUnit); // TEST
 
     return;
   }

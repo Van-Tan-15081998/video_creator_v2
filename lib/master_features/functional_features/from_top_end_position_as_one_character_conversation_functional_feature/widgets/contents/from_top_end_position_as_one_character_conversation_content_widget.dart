@@ -115,7 +115,7 @@ class _FromTopEndPositionAsOneCharacterConversationContentWidgetState extends St
     /// -----
     /// TODO: Set Mã Định Danh Màn Hình
     /// -----
-    setWindowId(value: widget.systemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id, isPriorityOverride: true);
+    setWindowId(value: widget.systemStateManagement?.getSystemConstantData?.getSystemWindow?.fromTopEndPositionAsOneCharacterConversationWindow, isPriorityOverride: true);
 
     ///
 

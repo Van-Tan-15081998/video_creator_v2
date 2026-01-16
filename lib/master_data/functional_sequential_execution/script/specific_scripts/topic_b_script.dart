@@ -5485,7 +5485,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     /// -----
     /// TODO: [OPEN INTRODUCTORY CONVERSATION WINDOW]
     /// -----
-    getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onStartIntroductoryConversationAsOpenWindow, contentItemUnit: contentItemUnit);
+    getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onStartFromCenterPositionAsIntroductoryConversationAsOpenWindow, contentItemUnit: contentItemUnit);
 
     /// ----- | ----- | -----
     /// TODO: Step GAP
@@ -5558,7 +5558,7 @@ class TopicBScript extends FunctionalSequentialExecutionScript {
     /// -----
     /// TODO: [CLOSE INTRODUCTORY CONVERSATION WINDOW]
     /// -----
-    getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onFinishIntroductoryConversationAsCloseWindow, contentItemUnit: contentItemUnit);
+    getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onFinishFromCenterPositionAsIntroductoryConversationAsCloseWindow, contentItemUnit: contentItemUnit);
 
     /// ----- | ----- | -----
     /// TODO: Step End

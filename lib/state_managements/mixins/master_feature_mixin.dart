@@ -1,9 +1,13 @@
+import 'package:frame_creator_v2/master_features/functional_features/from_bottom_end_position_as_one_character_conversation_functional_feature/models/from_bottom_end_position_as_one_character_conversation_functional_feature.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_conversation_functional_feature/models/from_center_start_position_as_one_character_conversation_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_conversation_functional_feature/models/from_center_start_position_as_two_character_conversation_functional_feature.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/from_center_start_position_as_two_character_playing_chess_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_top_end_position_as_one_character_conversation_functional_feature/models/from_top_end_position_as_one_character_conversation_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/functional_feature_management.dart';
-import 'package:frame_creator_v2/master_features/system_features/countdown_timer/models/countdown_time_cycle_system_feature.dart';
-import 'package:frame_creator_v2/master_features/system_features/introductory_conversation/models/introductory_conversation_system_feature.dart';
-import 'package:frame_creator_v2/master_features/system_features/pomodoro_cycle/models/pomodoro_cycle_system_feature.dart';
+import 'package:frame_creator_v2/master_features/system_features/from_bottom_end_position_as_pomodoro_cycle/models/from_bottom_end_position_as_pomodoro_cycle_system_feature.dart';
+import 'package:frame_creator_v2/master_features/system_features/from_center_end_position_as_countdown_timer/models/from_center_end_position_as_countdown_time_cycle_system_feature.dart';
+import 'package:frame_creator_v2/master_features/system_features/from_center_end_position_as_countdown_timer/widgets/from_center_end_position_as_countdown_time_cycle_widget.dart';
+import 'package:frame_creator_v2/master_features/system_features/from_center_position_as_introductory_conversation/models/from_center_position_as_introductory_conversation_system_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/system_feature_management.dart';
 
 mixin MasterFeatureMixin {
@@ -45,6 +49,41 @@ mixin MasterFeatureMixin {
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 
+  /// -----
+  /// TODO:
+  /// -----
+  FromBottomEndPositionAsOneCharacterConversationFunctionalFeature? _fromBottomEndPositionAsOneCharacterConversationFunctionalFeature;
+  FromBottomEndPositionAsOneCharacterConversationFunctionalFeature? get getFromBottomEndPositionAsOneCharacterConversationFunctionalFeature => _fromBottomEndPositionAsOneCharacterConversationFunctionalFeature;
+  void setFromBottomEndPositionAsOneCharacterConversationFunctionalFeature({required FromBottomEndPositionAsOneCharacterConversationFunctionalFeature? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _fromBottomEndPositionAsOneCharacterConversationFunctionalFeature = value;
+    } else {
+      _fromBottomEndPositionAsOneCharacterConversationFunctionalFeature ??= value;
+    }
+
+    ///
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  FromCenterStartPositionAsOneCharacterConversationFunctionalFeature? _fromCenterStartPositionAsOneCharacterConversationFunctionalFeature;
+  FromCenterStartPositionAsOneCharacterConversationFunctionalFeature? get getFromCenterStartPositionAsOneCharacterConversationFunctionalFeature => _fromCenterStartPositionAsOneCharacterConversationFunctionalFeature;
+  void setFromCenterStartPositionAsOneCharacterConversationFunctionalFeature({required FromCenterStartPositionAsOneCharacterConversationFunctionalFeature? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _fromCenterStartPositionAsOneCharacterConversationFunctionalFeature = value;
+    } else {
+      _fromCenterStartPositionAsOneCharacterConversationFunctionalFeature ??= value;
+    }
+
+    ///
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
   FromCenterStartPositionAsTwoCharacterConversationFunctionalFeature? _fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature;
   FromCenterStartPositionAsTwoCharacterConversationFunctionalFeature? get getFromCenterStartPositionAsTwoCharacterConversationFunctionalFeature => _fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature;
   void setFromCenterStartPositionAsTwoCharacterConversationFunctionalFeature({required FromCenterStartPositionAsTwoCharacterConversationFunctionalFeature? value, bool? isPriorityOverride}) {
@@ -52,6 +91,22 @@ mixin MasterFeatureMixin {
       _fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature = value;
     } else {
       _fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature ??= value;
+    }
+
+    ///
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  FromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature? _fromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature;
+  FromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature? get getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature => _fromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature;
+  void setFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature({required FromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _fromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature = value;
+    } else {
+      _fromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature ??= value;
     }
 
     ///
@@ -80,13 +135,16 @@ mixin MasterFeatureMixin {
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 
-  PomodoroCycleSystemFeature? _pomodoroCycleSystemFeature;
-  PomodoroCycleSystemFeature? get getPomodoroCycleSystemFeature => _pomodoroCycleSystemFeature;
-  void setPomodoroCycleSystemFeature({required PomodoroCycleSystemFeature? value, bool? isPriorityOverride}) {
+  /// -----
+  /// TODO:
+  /// -----
+  FromBottomEndPositionAsPomodoroCycleSystemFeature? _fromBottomEndPositionAsPomodoroCycleSystemFeature;
+  FromBottomEndPositionAsPomodoroCycleSystemFeature? get getFromBottomEndPositionAsPomodoroCycleSystemFeature => _fromBottomEndPositionAsPomodoroCycleSystemFeature;
+  void setFromBottomEndPositionAsPomodoroCycleSystemFeature({required FromBottomEndPositionAsPomodoroCycleSystemFeature? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
-      _pomodoroCycleSystemFeature = value;
+      _fromBottomEndPositionAsPomodoroCycleSystemFeature = value;
     } else {
-      _pomodoroCycleSystemFeature ??= value;
+      _fromBottomEndPositionAsPomodoroCycleSystemFeature ??= value;
     }
 
     ///
@@ -96,13 +154,13 @@ mixin MasterFeatureMixin {
   /// -----
   /// TODO:
   /// -----
-  CountdownTimeCycleSystemFeature? _countdownTimeCycleSystemFeature;
-  CountdownTimeCycleSystemFeature? get getCountdownTimeCycleSystemFeature => _countdownTimeCycleSystemFeature;
-  void setCountdownTimeCycleSystemFeature({required CountdownTimeCycleSystemFeature? value, bool? isPriorityOverride}) {
+  FromCenterEndPositionAsCountdownTimeCycleSystemFeature? _fromCenterEndPositionAsCountdownTimeCycleSystemFeature;
+  FromCenterEndPositionAsCountdownTimeCycleSystemFeature? get getFromCenterEndPositionAsCountdownTimeCycleSystemFeature => _fromCenterEndPositionAsCountdownTimeCycleSystemFeature;
+  void setFromCenterEndPositionAsCountdownTimeCycleSystemFeature({required FromCenterEndPositionAsCountdownTimeCycleSystemFeature? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
-      _countdownTimeCycleSystemFeature = value;
+      _fromCenterEndPositionAsCountdownTimeCycleSystemFeature = value;
     } else {
-      _countdownTimeCycleSystemFeature ??= value;
+      _fromCenterEndPositionAsCountdownTimeCycleSystemFeature ??= value;
     }
 
     ///
@@ -112,13 +170,13 @@ mixin MasterFeatureMixin {
   /// -----
   /// TODO:
   /// -----
-  IntroductoryConversationSystemFeature? _introductoryConversationSystemFeature;
-  IntroductoryConversationSystemFeature? get getIntroductoryConversationSystemFeature => _introductoryConversationSystemFeature;
-  void setIntroductoryConversationSystemFeature({required IntroductoryConversationSystemFeature? value, bool? isPriorityOverride}) {
+  FromCenterPositionAsIntroductoryConversationSystemFeature? _fromCenterPositionAsIntroductoryConversationSystemFeature;
+  FromCenterPositionAsIntroductoryConversationSystemFeature? get getFromCenterPositionAsIntroductoryConversationSystemFeature => _fromCenterPositionAsIntroductoryConversationSystemFeature;
+  void setFromCenterPositionAsIntroductoryConversationSystemFeature({required FromCenterPositionAsIntroductoryConversationSystemFeature? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
-      _introductoryConversationSystemFeature = value;
+      _fromCenterPositionAsIntroductoryConversationSystemFeature = value;
     } else {
-      _introductoryConversationSystemFeature ??= value;
+      _fromCenterPositionAsIntroductoryConversationSystemFeature ??= value;
     }
 
     ///

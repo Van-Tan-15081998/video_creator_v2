@@ -115,7 +115,7 @@ class _FromCenterStartPositionAsTwoCharacterConversationContentWidgetState exten
     /// -----
     /// TODO: Set Mã Định Danh Màn Hình
     /// -----
-    setWindowId(value: widget.systemStateManagement?.getSystemConstantData?.getSystemWindow?.windowA01Id, isPriorityOverride: true);
+    setWindowId(value: widget.systemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsTwoCharacterConversationWindow, isPriorityOverride: true);
 
     ///
 
@@ -147,7 +147,7 @@ class _FromCenterStartPositionAsTwoCharacterConversationContentWidgetState exten
     ];
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      // return;
+
       _ticker = createTicker((Duration elapsed) {
         if (getFunctionalSequentialExecutionController?.getFlowController?.getMessageFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.isNotEmpty == true) {
           /// -----

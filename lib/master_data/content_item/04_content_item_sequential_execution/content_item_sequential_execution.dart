@@ -1507,7 +1507,7 @@ class ContentItemSequentialExecution with ExecutionCore {
       /// -----
       /// TODO:
       /// -----
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.onUpdateBaseOnContentStage();
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.onUpdateBaseOnContentStage();
 
       /// -----
       /// TODO:
@@ -2799,21 +2799,21 @@ class ContentItemSequentialExecution with ExecutionCore {
       /// TODO: BreakTime (MAIN DETAIL & GO & DONE) [ContentStage]
       /// -----
 
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS01?.setPomodoroContentStage(value: getMainPomodoroBreakTimeContentStageSS01, isPriorityOverride: true);
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS01?.setGoPomodoroContentStage(value: getGoPomodoroBreakTimeContentStageSS01, isPriorityOverride: true);
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS01?.setDonePomodoroContentStage(value: getDonePomodoroBreakTimeContentStageSS01, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS01?.setPomodoroContentStage(value: getMainPomodoroBreakTimeContentStageSS01, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS01?.setGoPomodoroContentStage(value: getGoPomodoroBreakTimeContentStageSS01, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS01?.setDonePomodoroContentStage(value: getDonePomodoroBreakTimeContentStageSS01, isPriorityOverride: true);
 
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS02?.setPomodoroContentStage(value: getMainPomodoroBreakTimeContentStageSS02, isPriorityOverride: true);
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS02?.setGoPomodoroContentStage(value: getGoPomodoroBreakTimeContentStageSS02, isPriorityOverride: true);
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS02?.setDonePomodoroContentStage(value: getDonePomodoroBreakTimeContentStageSS02, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS02?.setPomodoroContentStage(value: getMainPomodoroBreakTimeContentStageSS02, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS02?.setGoPomodoroContentStage(value: getGoPomodoroBreakTimeContentStageSS02, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS02?.setDonePomodoroContentStage(value: getDonePomodoroBreakTimeContentStageSS02, isPriorityOverride: true);
 
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS03?.setPomodoroContentStage(value: getMainPomodoroBreakTimeContentStageSS03, isPriorityOverride: true);
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS03?.setGoPomodoroContentStage(value: getGoPomodoroBreakTimeContentStageSS03, isPriorityOverride: true);
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS03?.setDonePomodoroContentStage(value: getDonePomodoroBreakTimeContentStageSS03, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS03?.setPomodoroContentStage(value: getMainPomodoroBreakTimeContentStageSS03, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS03?.setGoPomodoroContentStage(value: getGoPomodoroBreakTimeContentStageSS03, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS03?.setDonePomodoroContentStage(value: getDonePomodoroBreakTimeContentStageSS03, isPriorityOverride: true);
 
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS04?.setPomodoroContentStage(value: getMainPomodoroBreakTimeContentStageSS04, isPriorityOverride: true);
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS04?.setGoPomodoroContentStage(value: getGoPomodoroBreakTimeContentStageSS04, isPriorityOverride: true);
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS04?.setDonePomodoroContentStage(value: getDonePomodoroBreakTimeContentStageSS04, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS04?.setPomodoroContentStage(value: getMainPomodoroBreakTimeContentStageSS04, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS04?.setGoPomodoroContentStage(value: getGoPomodoroBreakTimeContentStageSS04, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getBreakTimeSS04?.setDonePomodoroContentStage(value: getDonePomodoroBreakTimeContentStageSS04, isPriorityOverride: true);
 
       /// -----
       /// TODO: Bridge From - To [ContentStage]
@@ -2837,21 +2837,21 @@ class ContentItemSequentialExecution with ExecutionCore {
       /// TODO: Pomodoro StayFocused (MAIN DETAIL & GO & DONE) [ContentStage]
       /// -----
 
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS01?.setPomodoroContentStage(value: getMainPomodoroStayFocusedContentStageSS01, isPriorityOverride: true);
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS01?.setGoPomodoroContentStage(value: getGoPomodoroStayFocusedContentStageSS01, isPriorityOverride: true);
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS01?.setDonePomodoroContentStage(value: getDonePomodoroStayFocusedContentStageSS01, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS01?.setPomodoroContentStage(value: getMainPomodoroStayFocusedContentStageSS01, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS01?.setGoPomodoroContentStage(value: getGoPomodoroStayFocusedContentStageSS01, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS01?.setDonePomodoroContentStage(value: getDonePomodoroStayFocusedContentStageSS01, isPriorityOverride: true);
 
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS02?.setPomodoroContentStage(value: getMainPomodoroStayFocusedContentStageSS02, isPriorityOverride: true);
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS02?.setGoPomodoroContentStage(value: getGoPomodoroStayFocusedContentStageSS02, isPriorityOverride: true);
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS02?.setDonePomodoroContentStage(value: getDonePomodoroStayFocusedContentStageSS02, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS02?.setPomodoroContentStage(value: getMainPomodoroStayFocusedContentStageSS02, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS02?.setGoPomodoroContentStage(value: getGoPomodoroStayFocusedContentStageSS02, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS02?.setDonePomodoroContentStage(value: getDonePomodoroStayFocusedContentStageSS02, isPriorityOverride: true);
 
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS03?.setPomodoroContentStage(value: getMainPomodoroStayFocusedContentStageSS03, isPriorityOverride: true);
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS03?.setGoPomodoroContentStage(value: getGoPomodoroStayFocusedContentStageSS03, isPriorityOverride: true);
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS03?.setDonePomodoroContentStage(value: getDonePomodoroStayFocusedContentStageSS03, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS03?.setPomodoroContentStage(value: getMainPomodoroStayFocusedContentStageSS03, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS03?.setGoPomodoroContentStage(value: getGoPomodoroStayFocusedContentStageSS03, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS03?.setDonePomodoroContentStage(value: getDonePomodoroStayFocusedContentStageSS03, isPriorityOverride: true);
 
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS04?.setPomodoroContentStage(value: getMainPomodoroStayFocusedContentStageSS04, isPriorityOverride: true);
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS04?.setGoPomodoroContentStage(value: getGoPomodoroStayFocusedContentStageSS04, isPriorityOverride: true);
-      getSequentialExecutionController?.getSystemFeatureManagement?.getPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS04?.setDonePomodoroContentStage(value: getDonePomodoroStayFocusedContentStageSS04, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS04?.setPomodoroContentStage(value: getMainPomodoroStayFocusedContentStageSS04, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS04?.setGoPomodoroContentStage(value: getGoPomodoroStayFocusedContentStageSS04, isPriorityOverride: true);
+      getSequentialExecutionController?.getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getPomodoroCycleTimer?.getStayFocusedSS04?.setDonePomodoroContentStage(value: getDonePomodoroStayFocusedContentStageSS04, isPriorityOverride: true);
 
       ///
       /// TODO: Cài Đặt Kịch Bản
