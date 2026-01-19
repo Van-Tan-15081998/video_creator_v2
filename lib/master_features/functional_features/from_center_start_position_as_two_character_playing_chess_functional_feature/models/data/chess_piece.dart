@@ -392,7 +392,35 @@ class ChessPiece with ExecutionCore {
     return false;
   }
 
+  /// -----
+  /// TODO:
+  /// -----
+  double? _topPosition;
+  double get getTopPosition => _topPosition ?? 0;
+  void setTopPosition({required double? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _topPosition = value;
+    } else {
+      _topPosition ??= value;
+    }
 
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  double? _leftPosition;
+  double get getLeftPosition => _leftPosition ?? 0;
+  void setLeftPosition({required double? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _leftPosition = value;
+    } else {
+      _leftPosition ??= value;
+    }
+
+    return;
+  }
 
   /// -----
   /// TODO: Attach Root

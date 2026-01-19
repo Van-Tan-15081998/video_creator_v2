@@ -911,84 +911,404 @@ class SquareChessBoardManagement with ExecutionCore {
       /// TODO:
       /// -----
 
-      setChessSquareStateItemA1(value: ChessSquareStateItem(stateModel: ChessSquare.a1()), isPriorityOverride: true);
-      setChessSquareStateItemB1(value: ChessSquareStateItem(stateModel: ChessSquare.b1()), isPriorityOverride: true);
-      setChessSquareStateItemC1(value: ChessSquareStateItem(stateModel: ChessSquare.c1()), isPriorityOverride: true);
-      setChessSquareStateItemD1(value: ChessSquareStateItem(stateModel: ChessSquare.d1()), isPriorityOverride: true);
-      setChessSquareStateItemE1(value: ChessSquareStateItem(stateModel: ChessSquare.e1()), isPriorityOverride: true);
-      setChessSquareStateItemF1(value: ChessSquareStateItem(stateModel: ChessSquare.f1()), isPriorityOverride: true);
-      setChessSquareStateItemG1(value: ChessSquareStateItem(stateModel: ChessSquare.g1()), isPriorityOverride: true);
-      setChessSquareStateItemH1(value: ChessSquareStateItem(stateModel: ChessSquare.h1()), isPriorityOverride: true);
+      setChessSquareStateItemA1(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.a1(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemB1(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.b1(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemC1(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.c1(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemD1(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.d1(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemE1(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.e1(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemF1(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.f1(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemG1(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.g1(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemH1(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.h1(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
 
       ///
-      setChessSquareStateItemA2(value: ChessSquareStateItem(stateModel: ChessSquare.a2()), isPriorityOverride: true);
-      setChessSquareStateItemB2(value: ChessSquareStateItem(stateModel: ChessSquare.b2()), isPriorityOverride: true);
-      setChessSquareStateItemC2(value: ChessSquareStateItem(stateModel: ChessSquare.c2()), isPriorityOverride: true);
-      setChessSquareStateItemD2(value: ChessSquareStateItem(stateModel: ChessSquare.d2()), isPriorityOverride: true);
-      setChessSquareStateItemE2(value: ChessSquareStateItem(stateModel: ChessSquare.e2()), isPriorityOverride: true);
-      setChessSquareStateItemF2(value: ChessSquareStateItem(stateModel: ChessSquare.f2()), isPriorityOverride: true);
-      setChessSquareStateItemG2(value: ChessSquareStateItem(stateModel: ChessSquare.g2()), isPriorityOverride: true);
-      setChessSquareStateItemH2(value: ChessSquareStateItem(stateModel: ChessSquare.h2()), isPriorityOverride: true);
+      setChessSquareStateItemA2(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.a2(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemB2(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.b2(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemC2(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.c2(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemD2(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.d2(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemE2(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.e2(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemF2(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.f2(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemG2(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.g2(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemH2(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.h2(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
 
       ///
-      setChessSquareStateItemA3(value: ChessSquareStateItem(stateModel: ChessSquare.a3()), isPriorityOverride: true);
-      setChessSquareStateItemB3(value: ChessSquareStateItem(stateModel: ChessSquare.b3()), isPriorityOverride: true);
-      setChessSquareStateItemC3(value: ChessSquareStateItem(stateModel: ChessSquare.c3()), isPriorityOverride: true);
-      setChessSquareStateItemD3(value: ChessSquareStateItem(stateModel: ChessSquare.d3()), isPriorityOverride: true);
-      setChessSquareStateItemE3(value: ChessSquareStateItem(stateModel: ChessSquare.e3()), isPriorityOverride: true);
-      setChessSquareStateItemF3(value: ChessSquareStateItem(stateModel: ChessSquare.f3()), isPriorityOverride: true);
-      setChessSquareStateItemG3(value: ChessSquareStateItem(stateModel: ChessSquare.g3()), isPriorityOverride: true);
-      setChessSquareStateItemH3(value: ChessSquareStateItem(stateModel: ChessSquare.h3()), isPriorityOverride: true);
+      setChessSquareStateItemA3(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.a3(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemB3(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.b3(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemC3(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.c3(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemD3(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.d3(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemE3(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.e3(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemF3(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.f3(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemG3(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.g3(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemH3(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.h3(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
 
       ///
-      setChessSquareStateItemA4(value: ChessSquareStateItem(stateModel: ChessSquare.a4()), isPriorityOverride: true);
-      setChessSquareStateItemB4(value: ChessSquareStateItem(stateModel: ChessSquare.b4()), isPriorityOverride: true);
-      setChessSquareStateItemC4(value: ChessSquareStateItem(stateModel: ChessSquare.c4()), isPriorityOverride: true);
-      setChessSquareStateItemD4(value: ChessSquareStateItem(stateModel: ChessSquare.d4()), isPriorityOverride: true);
-      setChessSquareStateItemE4(value: ChessSquareStateItem(stateModel: ChessSquare.e4()), isPriorityOverride: true);
-      setChessSquareStateItemF4(value: ChessSquareStateItem(stateModel: ChessSquare.f4()), isPriorityOverride: true);
-      setChessSquareStateItemG4(value: ChessSquareStateItem(stateModel: ChessSquare.g4()), isPriorityOverride: true);
-      setChessSquareStateItemH4(value: ChessSquareStateItem(stateModel: ChessSquare.h4()), isPriorityOverride: true);
+      setChessSquareStateItemA4(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.a4(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemB4(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.b4(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemC4(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.c4(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemD4(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.d4(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemE4(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.e4(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemF4(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.f4(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemG4(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.g4(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemH4(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.h4(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
 
       ///
-      setChessSquareStateItemA5(value: ChessSquareStateItem(stateModel: ChessSquare.a5()), isPriorityOverride: true);
-      setChessSquareStateItemB5(value: ChessSquareStateItem(stateModel: ChessSquare.b5()), isPriorityOverride: true);
-      setChessSquareStateItemC5(value: ChessSquareStateItem(stateModel: ChessSquare.c5()), isPriorityOverride: true);
-      setChessSquareStateItemD5(value: ChessSquareStateItem(stateModel: ChessSquare.d5()), isPriorityOverride: true);
-      setChessSquareStateItemE5(value: ChessSquareStateItem(stateModel: ChessSquare.e5()), isPriorityOverride: true);
-      setChessSquareStateItemF5(value: ChessSquareStateItem(stateModel: ChessSquare.f5()), isPriorityOverride: true);
-      setChessSquareStateItemG5(value: ChessSquareStateItem(stateModel: ChessSquare.g5()), isPriorityOverride: true);
-      setChessSquareStateItemH5(value: ChessSquareStateItem(stateModel: ChessSquare.h5()), isPriorityOverride: true);
+      setChessSquareStateItemA5(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.a5(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemB5(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.b5(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemC5(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.c5(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemD5(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.d5(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemE5(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.e5(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemF5(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.f5(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemG5(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.g5(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemH5(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.h5(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
 
       ///
-      setChessSquareStateItemA6(value: ChessSquareStateItem(stateModel: ChessSquare.a6()), isPriorityOverride: true);
-      setChessSquareStateItemB6(value: ChessSquareStateItem(stateModel: ChessSquare.b6()), isPriorityOverride: true);
-      setChessSquareStateItemC6(value: ChessSquareStateItem(stateModel: ChessSquare.c6()), isPriorityOverride: true);
-      setChessSquareStateItemD6(value: ChessSquareStateItem(stateModel: ChessSquare.d6()), isPriorityOverride: true);
-      setChessSquareStateItemE6(value: ChessSquareStateItem(stateModel: ChessSquare.e6()), isPriorityOverride: true);
-      setChessSquareStateItemF6(value: ChessSquareStateItem(stateModel: ChessSquare.f6()), isPriorityOverride: true);
-      setChessSquareStateItemG6(value: ChessSquareStateItem(stateModel: ChessSquare.g6()), isPriorityOverride: true);
-      setChessSquareStateItemH6(value: ChessSquareStateItem(stateModel: ChessSquare.h6()), isPriorityOverride: true);
+      setChessSquareStateItemA6(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.a6(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemB6(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.b6(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemC6(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.c6(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemD6(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.d6(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemE6(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.e6(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemF6(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.f6(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemG6(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.g6(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemH6(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.h6(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
 
       ///
-      setChessSquareStateItemA7(value: ChessSquareStateItem(stateModel: ChessSquare.a7()), isPriorityOverride: true);
-      setChessSquareStateItemB7(value: ChessSquareStateItem(stateModel: ChessSquare.b7()), isPriorityOverride: true);
-      setChessSquareStateItemC7(value: ChessSquareStateItem(stateModel: ChessSquare.c7()), isPriorityOverride: true);
-      setChessSquareStateItemD7(value: ChessSquareStateItem(stateModel: ChessSquare.d7()), isPriorityOverride: true);
-      setChessSquareStateItemE7(value: ChessSquareStateItem(stateModel: ChessSquare.e7()), isPriorityOverride: true);
-      setChessSquareStateItemF7(value: ChessSquareStateItem(stateModel: ChessSquare.f7()), isPriorityOverride: true);
-      setChessSquareStateItemG7(value: ChessSquareStateItem(stateModel: ChessSquare.g7()), isPriorityOverride: true);
-      setChessSquareStateItemH7(value: ChessSquareStateItem(stateModel: ChessSquare.h7()), isPriorityOverride: true);
+      setChessSquareStateItemA7(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.a7(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemB7(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.b7(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemC7(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.c7(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemD7(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.d7(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemE7(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.e7(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemF7(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.f7(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemG7(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.g7(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemH7(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.h7(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
 
       ///
-      setChessSquareStateItemA8(value: ChessSquareStateItem(stateModel: ChessSquare.a8()), isPriorityOverride: true);
-      setChessSquareStateItemB8(value: ChessSquareStateItem(stateModel: ChessSquare.b8()), isPriorityOverride: true);
-      setChessSquareStateItemC8(value: ChessSquareStateItem(stateModel: ChessSquare.c8()), isPriorityOverride: true);
-      setChessSquareStateItemD8(value: ChessSquareStateItem(stateModel: ChessSquare.d8()), isPriorityOverride: true);
-      setChessSquareStateItemE8(value: ChessSquareStateItem(stateModel: ChessSquare.e8()), isPriorityOverride: true);
-      setChessSquareStateItemF8(value: ChessSquareStateItem(stateModel: ChessSquare.f8()), isPriorityOverride: true);
-      setChessSquareStateItemG8(value: ChessSquareStateItem(stateModel: ChessSquare.g8()), isPriorityOverride: true);
-      setChessSquareStateItemH8(value: ChessSquareStateItem(stateModel: ChessSquare.h8()), isPriorityOverride: true);
+      setChessSquareStateItemA8(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.a8(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemB8(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.b8(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemC8(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.c8(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemD8(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.d8(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemE8(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.e8(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemF8(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.f8(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemG8(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.g8(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
+      setChessSquareStateItemH8(
+        value: ChessSquareStateItem(
+          stateModel: ChessSquare.h8(systemStateManagement: getSystemStateManagement, squareChessBoardManagement: this),
+        ),
+        isPriorityOverride: true,
+      );
 
       setChessSquareStateItemAsList(
         value: [
@@ -1403,5 +1723,230 @@ class SquareChessBoardManagement with ExecutionCore {
         }
       }
     }
+
+    /// -----
+    /// TODO: ROOK
+    /// -----
+    if (chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.isRook() == true) {
+      /// -----
+      /// TODO: ⬆️ center-top [center-topCenter]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopCenterList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      }
+
+      /// -----
+      /// TODO: ⬇️ center-bottom [center-bottomCenter]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomCenterList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      }
+
+      /// -----
+      /// TODO: ⬅️ center-left [center-centerStart]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToCenterStartList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      }
+
+      /// -----
+      /// TODO: ➡️ center-right [center-centerEnd]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToCenterEndList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      }
+    }
+
+    /// -----
+    /// TODO: KNIGHT
+    /// -----
+    if (chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.isKnight() == true) {
+      /// -----
+      /// TODO:
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToLKnightList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      }
+    }
+
+    /// -----
+    /// TODO: BISHOP
+    /// -----
+    if (chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.isBishop() == true) {
+      /// -----
+      /// TODO: ↖️ center-topLeft [center-topStart]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopStartList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      }
+
+      /// -----
+      /// TODO: ↗️ center-topRight [center-topEnd]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopEndList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      }
+
+      /// -----
+      /// TODO: ↙️ center-bottomLeft [center-bottomStart]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomStartList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      }
+
+      /// -----
+      /// TODO: ↘️ center-bottomRight [center-bottomEnd]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomEndList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      }
+    }
+
+    /// -----
+    /// TODO: QUEEN
+    /// -----
+    if (chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.isQueen() == true) {
+      /// -----
+      /// TODO: ⬆️ center-top [center-topCenter]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopCenterList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      }
+
+      /// -----
+      /// TODO: ⬇️ center-bottom [center-bottomCenter]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomCenterList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      }
+
+      /// -----
+      /// TODO: ⬅️ center-left [center-centerStart]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToCenterStartList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      }
+
+      /// -----
+      /// TODO: ➡️ center-right [center-centerEnd]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToCenterEndList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      }
+
+      /// -----
+      /// TODO: ↖️ center-topLeft [center-topStart]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopStartList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      }
+
+      /// -----
+      /// TODO: ↗️ center-topRight [center-topEnd]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopEndList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      }
+
+      /// -----
+      /// TODO: ↙️ center-bottomLeft [center-bottomStart]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomStartList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      }
+
+      /// -----
+      /// TODO: ↘️ center-bottomRight [center-bottomEnd]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomEndList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      }
+    }
+
+    /// -----
+    /// TODO: KING
+    /// -----
+    if (chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.isKing() == true) {
+      /// -----
+      /// TODO: ⬆️ center-top [center-topCenter]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopCenterList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        break;
+      }
+
+      /// -----
+      /// TODO: ⬇️ center-bottom [center-bottomCenter]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomCenterList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        break;
+      }
+
+      /// -----
+      /// TODO: ⬅️ center-left [center-centerStart]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToCenterStartList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        break;
+      }
+
+      /// -----
+      /// TODO: ➡️ center-right [center-centerEnd]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToCenterEndList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        break;
+      }
+
+      /// -----
+      /// TODO: ↖️ center-topLeft [center-topStart]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopStartList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        break;
+      }
+
+      /// -----
+      /// TODO: ↗️ center-topRight [center-topEnd]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopEndList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        break;
+      }
+
+      /// -----
+      /// TODO: ↙️ center-bottomLeft [center-bottomStart]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomStartList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        break;
+      }
+
+      /// -----
+      /// TODO: ↘️ center-bottomRight [center-bottomEnd]
+      /// -----
+      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomEndList ?? [])) {
+        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        break;
+      }
+    }
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  onMoveChessPiece({required ChessSquareStateItem? origin, required ChessSquareStateItem? destination}) {
+    destination?.getStateModel?.setChessPieceStateItem(value: origin?.getStateModel?.getChessPieceStateItem, isPriorityOverride: true);
+    origin?.getStateModel?.setChessPieceStateItem(value: null, isPriorityOverride: true);
+
+    /// -----
+    /// TODO: Đồng Bộ Hóa Vị Trí Quân Cờ Và Ô Cờ
+    /// -----
+    destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setTopPosition(value: destination.getStateModel?.getTopPosition, isPriorityOverride: true);
+    destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setLeftPosition(value: destination.getStateModel?.getLeftPosition, isPriorityOverride: true);
+
+
+    return;
   }
 }
