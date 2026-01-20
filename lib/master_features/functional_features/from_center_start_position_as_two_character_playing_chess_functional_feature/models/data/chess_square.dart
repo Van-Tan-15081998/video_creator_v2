@@ -25,6 +25,30 @@ class ChessSquare with ExecutionCore {
     return;
   }
 
+  bool isDoubleMovement() {
+    if (getId == '[CHESS_SQUARE_A2]' ||
+        getId == '[CHESS_SQUARE_B2]' ||
+        getId == '[CHESS_SQUARE_C2]' ||
+        getId == '[CHESS_SQUARE_D2]' ||
+        getId == '[CHESS_SQUARE_E2]' ||
+        getId == '[CHESS_SQUARE_F2]' ||
+        getId == '[CHESS_SQUARE_G2]' ||
+        getId == '[CHESS_SQUARE_H2]' ||
+        //
+        getId == '[CHESS_SQUARE_A7]' ||
+        getId == '[CHESS_SQUARE_B7]' ||
+        getId == '[CHESS_SQUARE_C7]' ||
+        getId == '[CHESS_SQUARE_D7]' ||
+        getId == '[CHESS_SQUARE_E7]' ||
+        getId == '[CHESS_SQUARE_F7]' ||
+        getId == '[CHESS_SQUARE_G7]' ||
+        getId == '[CHESS_SQUARE_H7]') {
+      return true;
+    }
+
+    return false;
+  }
+
   /// -----
   /// TODO: ROW A1-H1
   /// -----
@@ -5217,6 +5241,21 @@ class ChessSquare with ExecutionCore {
   }
 
   /// -----
+  /// TODO: Bóng Của Quân Cờ Tại Ô Cờ
+  /// -----
+  ChessPieceStateItem? _chessPieceStateItemAsShadow;
+  ChessPieceStateItem? get getChessPieceStateItemAsShadow => _chessPieceStateItemAsShadow;
+  void setChessPieceStateItemAsShadow({required ChessPieceStateItem? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _chessPieceStateItemAsShadow = value;
+    } else {
+      _chessPieceStateItemAsShadow ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
   /// TODO:
   /// -----
   bool isEmptyChessPiece() {
@@ -5236,6 +5275,36 @@ class ChessSquare with ExecutionCore {
       isHighlightCanMoveByChessPiece = value;
     } else {
       isHighlightCanMoveByChessPiece ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  bool? isHighlightCheckLegalMovementByChessPiece;
+  bool? get getIsHighlightCheckLegalMovementByChessPiece => isHighlightCheckLegalMovementByChessPiece;
+  void setIsHighlightCheckLegalMovementByChessPiece({required bool? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      isHighlightCheckLegalMovementByChessPiece = value;
+    } else {
+      isHighlightCheckLegalMovementByChessPiece ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  bool? isHighlightCanCaptureByChessPiece;
+  bool? get getIsHighlightCanCaptureByChessPiece => isHighlightCanCaptureByChessPiece;
+  void setIsHighlightCanCaptureByChessPiece({required bool? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      isHighlightCanCaptureByChessPiece = value;
+    } else {
+      isHighlightCanCaptureByChessPiece ??= value;
     }
 
     return;
@@ -5564,7 +5633,6 @@ class ChessSquare with ExecutionCore {
       }
 
       setChessSquareStateItemAsList();
-
     } catch (e) {
       await onReportRootIssue(nameFunction: '[onInitRoot');
     }
@@ -5718,6 +5786,8 @@ class ChessSquare with ExecutionCore {
       /// -----
       /// TODO:
       /// -----
+      setChessPieceStateItem(value: ChessPieceStateItem(stateModel: null), isPriorityOverride: true);
+      setChessPieceStateItemAsShadow(value: ChessPieceStateItem(stateModel: null), isPriorityOverride: true);
 
       /// -----
       /// TODO: Setup Root For SubCom

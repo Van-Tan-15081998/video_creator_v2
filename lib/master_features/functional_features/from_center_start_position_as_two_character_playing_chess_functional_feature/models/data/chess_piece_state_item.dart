@@ -17,6 +17,13 @@ class ChessPieceStateItem {
   }
 
   /// -----
+  /// TODO: Get Shadow
+  /// -----
+  ChessPieceStateItem? getChessPieceStateItemAsShadow() {
+    return getStateModel?.getChessPieceManagement?.getChessPieceStateItemAsShadow(chessPieceStateItem: this);
+  }
+
+  /// -----
   /// TODO:
   /// -----
   ChessPieceStateItem({required ChessPiece? stateModel}) {

@@ -1,4 +1,7 @@
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_piece_management.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_piece_state_item.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_square_state_item.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 
 class ChessPiece with ExecutionCore {
@@ -6,17 +9,33 @@ class ChessPiece with ExecutionCore {
     setSystemStateManagement(value: systemStateManagement);
   }
 
+  ChessPieceManagement? _chessPieceManagement;
+  ChessPieceManagement? get getChessPieceManagement => _chessPieceManagement;
+  void setChessPieceManagement({required ChessPieceManagement? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _chessPieceManagement = value;
+    } else {
+      _chessPieceManagement ??= value;
+    }
+
+    return;
+  }
+
   /// -----
   /// TODO: King
   /// -----
-  ChessPiece.kingE1() {
+  ChessPiece.kingE1({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[KING_E1]', isPriorityOverride: true);
     setTypeColor(value: '[WHITE]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/White_King.png', isPriorityOverride: true);
 
     ///
   }
-  ChessPiece.kingE8() {
+  ChessPiece.kingE8({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[KING_E8]', isPriorityOverride: true);
     setTypeColor(value: '[BLACK]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/Black_King.png', isPriorityOverride: true);
@@ -27,14 +46,18 @@ class ChessPiece with ExecutionCore {
   /// -----
   /// TODO: Queen
   /// -----
-  ChessPiece.queenD1() {
+  ChessPiece.queenD1({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[QUEEN_D1]', isPriorityOverride: true);
     setTypeColor(value: '[WHITE]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/White_Queen.png', isPriorityOverride: true);
 
     ///
   }
-  ChessPiece.queenD8() {
+  ChessPiece.queenD8({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[QUEEN_D8]', isPriorityOverride: true);
     setTypeColor(value: '[BLACK]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/Black_Queen.png', isPriorityOverride: true);
@@ -45,14 +68,18 @@ class ChessPiece with ExecutionCore {
   /// -----
   /// TODO: Rook
   /// -----
-  ChessPiece.rookA1() {
+  ChessPiece.rookA1({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[ROOK_A1]', isPriorityOverride: true);
     setTypeColor(value: '[WHITE]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/White_Rook.png', isPriorityOverride: true);
 
     ///
   }
-  ChessPiece.rookH1() {
+  ChessPiece.rookH1({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[ROOK_H1]', isPriorityOverride: true);
     setTypeColor(value: '[WHITE]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/White_Rook.png', isPriorityOverride: true);
@@ -61,14 +88,18 @@ class ChessPiece with ExecutionCore {
   }
 
   ///
-  ChessPiece.rookA8() {
+  ChessPiece.rookA8({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[ROOK_A8]', isPriorityOverride: true);
     setTypeColor(value: '[BLACK]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/Black_Rook.png', isPriorityOverride: true);
 
     ///
   }
-  ChessPiece.rookH8() {
+  ChessPiece.rookH8({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[ROOK_H8]', isPriorityOverride: true);
     setTypeColor(value: '[BLACK]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/Black_Rook.png', isPriorityOverride: true);
@@ -79,14 +110,18 @@ class ChessPiece with ExecutionCore {
   /// -----
   /// TODO: Bishop []
   /// -----
-  ChessPiece.bishopC1() {
+  ChessPiece.bishopC1({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[BISHOP_C1]', isPriorityOverride: true);
     setTypeColor(value: '[WHITE]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/White_Bishop.png', isPriorityOverride: true);
 
     ///
   }
-  ChessPiece.bishopF1() {
+  ChessPiece.bishopF1({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[BISHOP_F1]', isPriorityOverride: true);
     setTypeColor(value: '[WHITE]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/White_Bishop.png', isPriorityOverride: true);
@@ -95,14 +130,18 @@ class ChessPiece with ExecutionCore {
   }
 
   ///
-  ChessPiece.bishopC8() {
+  ChessPiece.bishopC8({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[BISHOP_C8]', isPriorityOverride: true);
     setTypeColor(value: '[BLACK]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/Black_Bishop.png', isPriorityOverride: true);
 
     ///
   }
-  ChessPiece.bishopF8() {
+  ChessPiece.bishopF8({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[BISHOP_F8]', isPriorityOverride: true);
     setTypeColor(value: '[BLACK]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/Black_Bishop.png', isPriorityOverride: true);
@@ -113,14 +152,18 @@ class ChessPiece with ExecutionCore {
   /// -----
   /// TODO: Knight []
   /// -----
-  ChessPiece.knightB1() {
+  ChessPiece.knightB1({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[KNIGHT_B1]', isPriorityOverride: true);
     setTypeColor(value: '[WHITE]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/White_Knight.png', isPriorityOverride: true);
 
     ///
   }
-  ChessPiece.knightG1() {
+  ChessPiece.knightG1({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[KNIGHT_G1]', isPriorityOverride: true);
     setTypeColor(value: '[WHITE]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/White_Knight.png', isPriorityOverride: true);
@@ -129,14 +172,18 @@ class ChessPiece with ExecutionCore {
   }
 
   ///
-  ChessPiece.knightB8() {
+  ChessPiece.knightB8({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[KNIGHT_B8]', isPriorityOverride: true);
     setTypeColor(value: '[BLACK]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/Black_Knight.png', isPriorityOverride: true);
 
     ///
   }
-  ChessPiece.knightG8() {
+  ChessPiece.knightG8({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[KNIGHT_G8]', isPriorityOverride: true);
     setTypeColor(value: '[BLACK]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/Black_Knight.png', isPriorityOverride: true);
@@ -147,56 +194,72 @@ class ChessPiece with ExecutionCore {
   /// -----
   /// TODO: Pawn []
   /// -----
-  ChessPiece.pawnA2() {
+  ChessPiece.pawnA2({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[PAWN_A2]', isPriorityOverride: true);
     setTypeColor(value: '[WHITE]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/White_Pawn.png', isPriorityOverride: true);
 
     ///
   }
-  ChessPiece.pawnB2() {
+  ChessPiece.pawnB2({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[PAWN_B2]', isPriorityOverride: true);
     setTypeColor(value: '[WHITE]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/White_Pawn.png', isPriorityOverride: true);
 
     ///
   }
-  ChessPiece.pawnC2() {
+  ChessPiece.pawnC2({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[PAWN_C2]', isPriorityOverride: true);
     setTypeColor(value: '[WHITE]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/White_Pawn.png', isPriorityOverride: true);
 
     ///
   }
-  ChessPiece.pawnD2() {
+  ChessPiece.pawnD2({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[PAWN_D2]', isPriorityOverride: true);
     setTypeColor(value: '[WHITE]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/White_Pawn.png', isPriorityOverride: true);
 
     ///
   }
-  ChessPiece.pawnE2() {
+  ChessPiece.pawnE2({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[PAWN_E2]', isPriorityOverride: true);
     setTypeColor(value: '[WHITE]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/White_Pawn.png', isPriorityOverride: true);
 
     ///
   }
-  ChessPiece.pawnF2() {
+  ChessPiece.pawnF2({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[PAWN_F2]', isPriorityOverride: true);
     setTypeColor(value: '[WHITE]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/White_Pawn.png', isPriorityOverride: true);
 
     ///
   }
-  ChessPiece.pawnG2() {
+  ChessPiece.pawnG2({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[PAWN_G2]', isPriorityOverride: true);
     setTypeColor(value: '[WHITE]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/White_Pawn.png', isPriorityOverride: true);
 
     ///
   }
-  ChessPiece.pawnH2() {
+  ChessPiece.pawnH2({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[PAWN_H2]', isPriorityOverride: true);
     setTypeColor(value: '[WHITE]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/White_Pawn.png', isPriorityOverride: true);
@@ -204,56 +267,72 @@ class ChessPiece with ExecutionCore {
     ///
   }
 
-  ChessPiece.pawnA7() {
+  ChessPiece.pawnA7({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[PAWN_A7]', isPriorityOverride: true);
     setTypeColor(value: '[BLACK]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/Black_Pawn.png', isPriorityOverride: true);
 
     ///
   }
-  ChessPiece.pawnB7() {
+  ChessPiece.pawnB7({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[PAWN_B7]', isPriorityOverride: true);
     setTypeColor(value: '[BLACK]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/Black_Pawn.png', isPriorityOverride: true);
 
     ///
   }
-  ChessPiece.pawnC7() {
+  ChessPiece.pawnC7({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[PAWN_C7]', isPriorityOverride: true);
     setTypeColor(value: '[BLACK]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/Black_Pawn.png', isPriorityOverride: true);
 
     ///
   }
-  ChessPiece.pawnD7() {
+  ChessPiece.pawnD7({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[PAWN_D7]', isPriorityOverride: true);
     setTypeColor(value: '[BLACK]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/Black_Pawn.png', isPriorityOverride: true);
 
     ///
   }
-  ChessPiece.pawnE7() {
+  ChessPiece.pawnE7({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[PAWN_E7]', isPriorityOverride: true);
     setTypeColor(value: '[BLACK]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/Black_Pawn.png', isPriorityOverride: true);
 
     ///
   }
-  ChessPiece.pawnF7() {
+  ChessPiece.pawnF7({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[PAWN_F7]', isPriorityOverride: true);
     setTypeColor(value: '[BLACK]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/Black_Pawn.png', isPriorityOverride: true);
 
     ///
   }
-  ChessPiece.pawnG7() {
+  ChessPiece.pawnG7({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[PAWN_G7]', isPriorityOverride: true);
     setTypeColor(value: '[BLACK]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/Black_Pawn.png', isPriorityOverride: true);
 
     ///
   }
-  ChessPiece.pawnH7() {
+  ChessPiece.pawnH7({required ChessPieceManagement? chessPieceManagement}) {
+    setChessPieceManagement(value: chessPieceManagement, isPriorityOverride: true);
+
     setId(value: '[PAWN_H7]', isPriorityOverride: true);
     setTypeColor(value: '[BLACK]', isPriorityOverride: true);
     setImageSource(value: 'assets/images/games/chess/pieces/Black_Pawn.png', isPriorityOverride: true);
@@ -417,6 +496,21 @@ class ChessPiece with ExecutionCore {
       _leftPosition = value;
     } else {
       _leftPosition ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  ChessSquareStateItem? _currentChessSquareStateItem;
+  ChessSquareStateItem? get getCurrentChessSquareStateItem => _currentChessSquareStateItem;
+  void setCurrentChessSquareStateItem({required ChessSquareStateItem? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _currentChessSquareStateItem = value;
+    } else {
+      _currentChessSquareStateItem ??= value;
     }
 
     return;

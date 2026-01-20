@@ -7,6 +7,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:frame_creator_v2/components/transparent_effect_wall/transparent_effect_wall_widget_light.dart';
 import 'package:frame_creator_v2/features/01_feature_formats/01_memory_game_feature/memory_game_board/models/data/memory_data_model.dart';
 import 'package:frame_creator_v2/features/01_feature_formats/01_memory_game_feature/memory_game_board/models/data/memory_time.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_piece.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_piece_state_item.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_square_state_item.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
@@ -1886,9 +1887,6 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
         ///
         /// TODO: DANH SÁCH QUÂN CỜ
         ///
-        ///
-        /// TODO: DANH SÁCH QUÂN CỜ
-        ///
         Stack(
           alignment: AlignmentDirectional.center,
 
@@ -1913,7 +1911,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                     /// TODO: King
                     /// -----
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemKingE1?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemKingE1?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -1943,7 +1941,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemKingE8?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemKingE8?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -1978,7 +1976,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                     /// TODO: Queen
                     /// -----
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemQueenD1?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemQueenD1?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2009,7 +2007,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemQueenD8?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemQueenD8?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2044,7 +2042,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                     /// TODO: Rook
                     /// -----
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemRookA1?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemRookA1?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2075,7 +2073,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemRookH1?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemRookH1?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2106,7 +2104,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemRookA8?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemRookA8?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2137,7 +2135,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemRookH8?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemRookH8?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2172,7 +2170,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                     /// TODO: Bishop
                     /// -----
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemBishopC1?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemBishopC1?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2203,7 +2201,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemBishopF1?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemBishopF1?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2234,7 +2232,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemBishopC8?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemBishopC8?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2265,7 +2263,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemBishopF8?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemBishopF8?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2300,7 +2298,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                     /// TODO: Knight
                     /// -----
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemKnightB1?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemKnightB1?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2331,7 +2329,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemKnightG1?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemKnightG1?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2362,7 +2360,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemKnightB8?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemKnightB8?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2393,7 +2391,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemKnightG8?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemKnightG8?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2428,7 +2426,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                     /// TODO: Pawn
                     /// -----
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnA2?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnA2?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2459,7 +2457,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnB2?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnB2?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2490,7 +2488,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnC2?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnC2?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2521,7 +2519,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnD2?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnD2?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2552,7 +2550,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnE2?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnE2?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2583,7 +2581,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnF2?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnF2?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2614,7 +2612,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnG2?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnG2?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2645,7 +2643,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnH2?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnH2?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2677,7 +2675,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                     ),
 
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnA7?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnA7?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2708,7 +2706,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnB7?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnB7?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2739,7 +2737,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnC7?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnC7?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2770,7 +2768,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnD7?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnD7?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2801,7 +2799,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnE7?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnE7?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2832,7 +2830,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnF7?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnF7?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2863,7 +2861,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnG7?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnG7?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2894,7 +2892,7 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
                       ),
                     ),
                     AnimatedPositioned(
-                      duration: const Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 800),
                       top: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnH7?.getStateModel?.getTopPosition,
                       left: widget.systemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessPieceManagement?.getChessPieceStateItemPawnH7?.getStateModel?.getLeftPosition,
                       width: sizeUnit,
@@ -2966,14 +2964,27 @@ class _ChessSquareWidgetState extends State<ChessSquareWidget> with TickerProvid
   /// TODO:
   /// -----
   ChessSquareStateItem? _chessSquareStateItem;
-
   ChessSquareStateItem? get getChessSquareStateItem => _chessSquareStateItem;
-
   void setChessSquareStateItem({required ChessSquareStateItem? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
       _chessSquareStateItem = value;
     } else {
       _chessSquareStateItem ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO: Bóng Của Quân Cờ Tại Ô Cờ
+  /// -----
+  ChessPiece? _chessPieceAsShadow;
+  ChessPiece? get getChessPieceAsShadow => _chessPieceAsShadow;
+  void setChessPieceAsShadow({required ChessPiece? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _chessPieceAsShadow = value;
+    } else {
+      _chessPieceAsShadow ??= value;
     }
 
     return;
@@ -2996,23 +3007,59 @@ class _ChessSquareWidgetState extends State<ChessSquareWidget> with TickerProvid
     getChessSquareStateItem?.getStateModel?.onPositionSynchronize();
 
     _ticker = createTicker((Duration elapsed) {
-      if (true) {
-        if (getChessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getImageSource?.isNotEmpty == true) {
-          if (isHasPiece == false) {
-            setState(() {
-              isHasPiece = true;
-              imageSource = getChessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getImageSource ?? '';
-            });
-          }
-        } else {
+      if (getChessSquareStateItem?.getStateModel?.getIsHighlightCanMoveByChessPiece == true) {
+        if (getIsHighlightCanMoveByChessPiece != true) {
           setState(() {
-            isHasPiece = false;
-            imageSource = '';
+            setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
           });
         }
+      } else {
+        if (getIsHighlightCanMoveByChessPiece == true) {
+          setState(() {
+            setIsHighlightCanMoveByChessPiece(value: false, isPriorityOverride: true);
+          });
+        }
+      }
 
-        if (kDebugMode) {
-          // print('a');
+      if (getChessSquareStateItem?.getStateModel?.getIsHighlightCanCaptureByChessPiece == true) {
+        if (getIsHighlightCanCaptureByChessPiece != true) {
+          setState(() {
+            setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          });
+        }
+      } else {
+        if (getIsHighlightCanCaptureByChessPiece == true) {
+          setState(() {
+            setIsHighlightCanCaptureByChessPiece(value: false, isPriorityOverride: true);
+          });
+        }
+      }
+
+      if (getChessSquareStateItem?.getStateModel?.getIsHighlightCheckLegalMovementByChessPiece == true) {
+        if (getIsHighlightCheckLegalMovementByChessPiece != true) {
+          setState(() {
+            setIsHighlightCheckLegalMovementByChessPiece(value: true, isPriorityOverride: true);
+          });
+        }
+      } else {
+        if (getIsHighlightCheckLegalMovementByChessPiece == true) {
+          setState(() {
+            setIsHighlightCheckLegalMovementByChessPiece(value: false, isPriorityOverride: true);
+          });
+        }
+      }
+
+      if (getChessSquareStateItem?.getStateModel?.getChessPieceStateItemAsShadow?.getStateModel?.getId != getChessPieceAsShadow?.getId) {
+        setChessPieceAsShadow(value: getChessSquareStateItem?.getStateModel?.getChessPieceStateItemAsShadow?.getStateModel, isPriorityOverride: true);
+
+        if (getChessPieceAsShadow?.getImageSource?.isNotEmpty == true) {
+          setState(() {
+            imageSource = getChessPieceAsShadow?.getImageSource ?? '';
+          });
+        } else {
+          setState(() {
+            imageSource = '';
+          });
         }
       }
     })..start();
@@ -3022,14 +3069,6 @@ class _ChessSquareWidgetState extends State<ChessSquareWidget> with TickerProvid
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _timer = Timer.periodic(const Duration(seconds: 5), (timer) {
         // flipBack();
-
-        if (getChessSquareStateItem?.getStateModel?.getIsHighlightCanMoveByChessPiece == true) {
-          if (getIsHighlightCanMoveByChessPiece != true) {
-            setState(() {
-              setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
-            });
-          }
-        }
       });
     });
   }
@@ -3038,14 +3077,42 @@ class _ChessSquareWidgetState extends State<ChessSquareWidget> with TickerProvid
   /// TODO:
   /// -----
   bool? isHighlightCanMoveByChessPiece;
-
   bool? get getIsHighlightCanMoveByChessPiece => isHighlightCanMoveByChessPiece;
-
   void setIsHighlightCanMoveByChessPiece({required bool? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
       isHighlightCanMoveByChessPiece = value;
     } else {
       isHighlightCanMoveByChessPiece ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  bool? isHighlightCanCaptureByChessPiece;
+  bool? get getIsHighlightCanCaptureByChessPiece => isHighlightCanCaptureByChessPiece;
+  void setIsHighlightCanCaptureByChessPiece({required bool? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      isHighlightCanCaptureByChessPiece = value;
+    } else {
+      isHighlightCanCaptureByChessPiece ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  bool? isHighlightCheckLegalMovementByChessPiece;
+  bool? get getIsHighlightCheckLegalMovementByChessPiece => isHighlightCheckLegalMovementByChessPiece;
+  void setIsHighlightCheckLegalMovementByChessPiece({required bool? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      isHighlightCheckLegalMovementByChessPiece = value;
+    } else {
+      isHighlightCheckLegalMovementByChessPiece ??= value;
     }
 
     return;
@@ -3067,7 +3134,7 @@ class _ChessSquareWidgetState extends State<ChessSquareWidget> with TickerProvid
         alignment: AlignmentDirectional.center,
         children: [
           AnimatedPositioned(
-            duration: const Duration(milliseconds: 500),
+            duration: const Duration(milliseconds: 800),
             width: widget.sizeDx,
             height: widget.sizeDy,
             child: Container(
@@ -3076,32 +3143,70 @@ class _ChessSquareWidgetState extends State<ChessSquareWidget> with TickerProvid
               decoration: BoxDecoration(color: backgroundColor),
             ),
           ),
-          getIsHighlightCanMoveByChessPiece == true
+
+          getIsHighlightCheckLegalMovementByChessPiece == true
               ? AnimatedPositioned(
-                  top: 5.0,
-                  right: 5.0,
-                  duration: const Duration(milliseconds: 500),
-                  width: 20.0,
-                  height: 20.0,
-                  child: Container(width: 20.0, height: 20.0, decoration: BoxDecoration(color: Colors.blue)),
+                  duration: const Duration(milliseconds: 800),
+                  width: widget.sizeDx,
+                  height: widget.sizeDy,
+                  child: Container(
+                    width: widget.sizeDx,
+                    height: widget.sizeDy,
+                    decoration: BoxDecoration(color: Color(0xFFFFFF00).withValues(alpha: 0.5)),
+                  ),
                 )
               : Container(),
-          // AnimatedPositioned(
-          //   bottom: 15.0,
-          //   duration: const Duration(milliseconds: 500),
-          //   width: widget.sizeDx - 40.0,
-          //   height: widget.sizeDy - 40.0,
-          //   child: Container(
-          //     width: widget.sizeDx - 40.0,
-          //     height: widget.sizeDy - 40.0,
-          //     decoration: BoxDecoration(
-          //       image: imageSource.isNotEmpty == true ? DecorationImage(image: AssetImage(imageSource), fit: BoxFit.fitHeight) : null,
-          //     ),
-          //     child: Center(
-          //       child: Text(widget.idPiece, style: TextStyle(color: Colors.white)),
-          //     ),
-          //   ),
-          // ),
+
+          getIsHighlightCanMoveByChessPiece == true
+              ? AnimatedPositioned(
+                  duration: const Duration(milliseconds: 800),
+                  width: 50.0,
+                  height: 50.0,
+                  child: Container(
+                    width: 20.0,
+                    height: 20.0,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFFFFFFF).withValues(alpha: 0.5),
+                      borderRadius: BorderRadius.circular(30.0),
+                      boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.5), blurRadius: 15.0, spreadRadius: 1.0, offset: Offset(0, 0))],
+                    ),
+                  ),
+                )
+              : Container(),
+
+          getIsHighlightCanCaptureByChessPiece == true
+              ? AnimatedPositioned(
+                  duration: const Duration(milliseconds: 800),
+                  width: 80.0,
+                  height: 80.0,
+                  child: Container(
+                    width: 20.0,
+                    height: 20.0,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFFF4040).withValues(alpha: 0.5),
+                      borderRadius: BorderRadius.circular(40.0),
+                      boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.5), blurRadius: 15.0, spreadRadius: 1.0, offset: Offset(0, 0))],
+                    ),
+                  ),
+                )
+              : Container(),
+
+          AnimatedPositioned(
+            bottom: 15.0,
+            duration: const Duration(milliseconds: 800),
+            width: widget.sizeDx - 40.0,
+            height: widget.sizeDy - 40.0,
+            child: Opacity(
+              opacity: 0.3,
+              child: Container(
+                width: widget.sizeDx - 40.0,
+                height: widget.sizeDy - 40.0,
+                decoration: BoxDecoration(
+                  image: imageSource.isNotEmpty == true ? DecorationImage(image: AssetImage(imageSource), fit: BoxFit.fitHeight) : null,
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
@@ -3506,9 +3611,23 @@ class _ChessPieceWidgetState extends State<ChessPieceWidget> with TickerProvider
     _controller = AnimationController(vsync: this, duration: const Duration(milliseconds: 600));
 
     setChessPieceStateItem(value: widget.chessPieceStateItem, isPriorityOverride: true);
-    imageSource = getChessPieceStateItem?.getStateModel?.getImageSource ?? '';
 
     _ticker = createTicker((Duration elapsed) {
+      if (getChessPieceStateItem?.getStateModel?.getCurrentChessSquareStateItem != null) {
+        if (imageSource == '') {
+          setState(() {
+            imageSource = getChessPieceStateItem?.getStateModel?.getImageSource ?? '';
+          });
+        }
+      } else if (getChessPieceStateItem?.getStateModel?.getCurrentChessSquareStateItem == null) {
+        if (imageSource != '') {
+          setState(() {
+            setChessPieceStateItem(value: null, isPriorityOverride: true);
+            imageSource = '';
+          });
+        }
+      }
+
       if (getChessPieceStateItem?.getStateModel?.getTopPosition != topPosition || getChessPieceStateItem?.getStateModel?.getLeftPosition != leftPosition) {
         widget.onUpdateMove?.call();
         topPosition = getChessPieceStateItem?.getStateModel?.getTopPosition ?? 0;
@@ -3555,7 +3674,7 @@ class _ChessPieceWidgetState extends State<ChessPieceWidget> with TickerProvider
         children: [
           AnimatedPositioned(
             bottom: 15.0,
-            duration: const Duration(milliseconds: 500),
+            duration: const Duration(milliseconds: 800),
             width: widget.sizeDx - 40.0,
             height: widget.sizeDy - 40.0,
             child: Container(

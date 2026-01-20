@@ -1,5 +1,7 @@
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_piece.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_piece_management.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_piece_state_item.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_square.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_square_state_item.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
@@ -1654,50 +1656,174 @@ class SquareChessBoardManagement with ExecutionCore {
     /// -----
     /// TODO: ROW A1-H1
     /// -----
-    getChessSquareStateItemA1?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemRookA1);
-    getChessSquareStateItemB1?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKnightB1);
-    getChessSquareStateItemC1?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemBishopC1);
-    getChessSquareStateItemD1?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemQueenD1);
-    getChessSquareStateItemE1?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKingE1);
-    getChessSquareStateItemF1?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemBishopF1);
-    getChessSquareStateItemG1?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKnightG1);
-    getChessSquareStateItemH1?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemRookH1);
+    getChessSquareStateItemA1?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemRookA1, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemRookA1AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemA1);
+
+    getChessSquareStateItemB1?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKnightB1, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemKnightB1AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemB1);
+
+    getChessSquareStateItemC1?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemBishopC1, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemBishopC1AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemC1);
+
+    getChessSquareStateItemD1?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemQueenD1, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemQueenD1AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemD1);
+
+    getChessSquareStateItemE1?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKingE1, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemKingE1AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemE1);
+
+    getChessSquareStateItemF1?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemBishopF1, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemBishopF1AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemF1);
+
+    getChessSquareStateItemG1?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKnightG1, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemKnightG1AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemG1);
+
+    getChessSquareStateItemH1?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemRookH1, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemRookH1AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemH1);
 
     /// -----
     /// TODO: ROW A2-H2
     /// -----
-    getChessSquareStateItemA2?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnA2);
-    getChessSquareStateItemB2?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnB2);
-    getChessSquareStateItemC2?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnC2);
-    getChessSquareStateItemD2?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnD2);
-    getChessSquareStateItemE2?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnE2);
-    getChessSquareStateItemF2?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnF2);
-    getChessSquareStateItemG2?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnG2);
-    getChessSquareStateItemH2?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnH2);
+    getChessSquareStateItemA2?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnA2, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnA2AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemA2);
+
+    getChessSquareStateItemB2?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnB2, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnB2AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemB2);
+
+    getChessSquareStateItemC2?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnC2, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnC2AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemC2);
+
+    getChessSquareStateItemD2?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnD2, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnD2AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemD2);
+
+    getChessSquareStateItemE2?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnE2, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnE2AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemE2);
+
+    getChessSquareStateItemF2?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnF2, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnF2AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemF2);
+
+    getChessSquareStateItemG2?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnG2, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnG2AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemG2);
+
+    getChessSquareStateItemH2?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnH2, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnH2AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemH2);
 
     /// -----
     /// TODO: ROW A7-H7
     /// -----
-    getChessSquareStateItemA7?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnA7);
-    getChessSquareStateItemB7?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnB7);
-    getChessSquareStateItemC7?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnC7);
-    getChessSquareStateItemD7?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnD7);
-    getChessSquareStateItemE7?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnE7);
-    getChessSquareStateItemG7?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnF7);
-    getChessSquareStateItemF7?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnG7);
-    getChessSquareStateItemH7?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnH7);
+    getChessSquareStateItemA7?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnA7, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnA7AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemA7);
+
+    getChessSquareStateItemB7?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnB7, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnB7AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemB7);
+
+    getChessSquareStateItemC7?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnC7, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnC7AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemC7);
+
+    getChessSquareStateItemD7?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnD7, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnD7AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemD7);
+
+    getChessSquareStateItemE7?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnE7, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnE7AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemE7);
+
+    getChessSquareStateItemG7?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnF7, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnF7AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemG7);
+
+    getChessSquareStateItemF7?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnG7, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnG7AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemF7);
+
+    getChessSquareStateItemH7?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnH7, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnH7AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemH7);
 
     /// -----
     /// TODO: ROW A8-H8
     /// -----
-    getChessSquareStateItemA8?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemRookA8);
-    getChessSquareStateItemB8?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKnightB8);
-    getChessSquareStateItemC8?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemBishopC8);
-    getChessSquareStateItemD8?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemQueenD8);
-    getChessSquareStateItemE8?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKingE8);
-    getChessSquareStateItemF8?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemBishopF8);
-    getChessSquareStateItemG8?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKnightG8);
-    getChessSquareStateItemH8?.getStateModel?.setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemRookH8);
+    getChessSquareStateItemA8?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemRookA8, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemRookA8AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemA8);
+
+    getChessSquareStateItemB8?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKnightB8, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemKnightB8AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemB8);
+
+    getChessSquareStateItemC8?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemBishopC8, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemBishopC8AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemC8);
+
+    getChessSquareStateItemD8?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemQueenD8, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemQueenD8AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemD8);
+
+    getChessSquareStateItemE8?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKingE8, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemKingE8AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemE8);
+
+    getChessSquareStateItemF8?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemBishopF8, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemBishopF8AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemF8);
+
+    getChessSquareStateItemG8?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKnightG8, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemKnightG8AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemG8);
+
+    getChessSquareStateItemH8?.getStateModel
+      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemRookH8, isPriorityOverride: true)
+      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemRookH8AsShadow, isPriorityOverride: true)
+      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemH8);
 
     return;
   }
@@ -1716,13 +1842,7 @@ class SquareChessBoardManagement with ExecutionCore {
   }
 
   void getLegalMoves({ChessSquareStateItem? chessSquareStateItem}) {
-    if (chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.isPawn() == true) {
-      if (chessSquareStateItem?.getStateModel?.getId == '[CHESS_SQUARE_A2]') {
-        if (getChessSquareStateItemById(id: '[CHESS_SQUARE_A3]')?.getStateModel?.isEmptyChessPiece() == true) {
-          getChessSquareStateItemById(id: '[CHESS_SQUARE_A3]')?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
-        }
-      }
-    }
+    chessSquareStateItem?.getStateModel?.setIsHighlightCheckLegalMovementByChessPiece(value: true, isPriorityOverride: true);
 
     /// -----
     /// TODO: ROOK
@@ -1731,29 +1851,77 @@ class SquareChessBoardManagement with ExecutionCore {
       /// -----
       /// TODO: ⬆️ center-top [center-topCenter]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopCenterList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopCenterList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        }
       }
 
       /// -----
       /// TODO: ⬇️ center-bottom [center-bottomCenter]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomCenterList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomCenterList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        }
       }
 
       /// -----
       /// TODO: ⬅️ center-left [center-centerStart]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToCenterStartList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToCenterStartList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        }
       }
 
       /// -----
       /// TODO: ➡️ center-right [center-centerEnd]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToCenterEndList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToCenterEndList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        }
       }
     }
 
@@ -1764,8 +1932,20 @@ class SquareChessBoardManagement with ExecutionCore {
       /// -----
       /// TODO:
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToLKnightList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToLKnightList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          // break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        }
       }
     }
 
@@ -1776,29 +1956,77 @@ class SquareChessBoardManagement with ExecutionCore {
       /// -----
       /// TODO: ↖️ center-topLeft [center-topStart]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopStartList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopStartList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        }
       }
 
       /// -----
       /// TODO: ↗️ center-topRight [center-topEnd]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopEndList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopEndList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        }
       }
 
       /// -----
       /// TODO: ↙️ center-bottomLeft [center-bottomStart]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomStartList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomStartList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        }
       }
 
       /// -----
       /// TODO: ↘️ center-bottomRight [center-bottomEnd]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomEndList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomEndList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        }
       }
     }
 
@@ -1809,57 +2037,153 @@ class SquareChessBoardManagement with ExecutionCore {
       /// -----
       /// TODO: ⬆️ center-top [center-topCenter]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopCenterList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopCenterList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        }
       }
 
       /// -----
       /// TODO: ⬇️ center-bottom [center-bottomCenter]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomCenterList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomCenterList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        }
       }
 
       /// -----
       /// TODO: ⬅️ center-left [center-centerStart]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToCenterStartList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToCenterStartList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        }
       }
 
       /// -----
       /// TODO: ➡️ center-right [center-centerEnd]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToCenterEndList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToCenterEndList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        }
       }
 
       /// -----
       /// TODO: ↖️ center-topLeft [center-topStart]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopStartList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopStartList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        }
       }
 
       /// -----
       /// TODO: ↗️ center-topRight [center-topEnd]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopEndList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopEndList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        }
       }
 
       /// -----
       /// TODO: ↙️ center-bottomLeft [center-bottomStart]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomStartList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomStartList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        }
       }
 
       /// -----
       /// TODO: ↘️ center-bottomRight [center-bottomEnd]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomEndList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomEndList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+        }
       }
     }
 
@@ -1870,65 +2194,278 @@ class SquareChessBoardManagement with ExecutionCore {
       /// -----
       /// TODO: ⬆️ center-top [center-topCenter]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopCenterList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
-        break;
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopCenterList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
       }
 
       /// -----
       /// TODO: ⬇️ center-bottom [center-bottomCenter]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomCenterList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
-        break;
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomCenterList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
       }
 
       /// -----
       /// TODO: ⬅️ center-left [center-centerStart]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToCenterStartList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
-        break;
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToCenterStartList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
       }
 
       /// -----
       /// TODO: ➡️ center-right [center-centerEnd]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToCenterEndList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
-        break;
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToCenterEndList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
       }
 
       /// -----
       /// TODO: ↖️ center-topLeft [center-topStart]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopStartList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
-        break;
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopStartList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
       }
 
       /// -----
       /// TODO: ↗️ center-topRight [center-topEnd]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopEndList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
-        break;
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopEndList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
       }
 
       /// -----
       /// TODO: ↙️ center-bottomLeft [center-bottomStart]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomStartList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
-        break;
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomStartList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
       }
 
       /// -----
       /// TODO: ↘️ center-bottomRight [center-bottomEnd]
       /// -----
-      for (ChessSquareStateItem? chessSquareStateItem in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomEndList ?? [])) {
-        chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
-        break;
+      for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomEndList ?? [])) {
+        /// Check Enemy = False
+        if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == false) {
+          break;
+        }
+        /// Check Enemy = True
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+          item?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+        /// Check Empty
+        else if (item?.getStateModel?.getChessPieceStateItem?.getStateModel == null) {
+          item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+          break;
+        }
+      }
+    }
+
+    /// -----
+    /// TODO: PAWN
+    /// -----
+    if (chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.isPawn() == true) {
+      int stepMovement = 2;
+
+      ///
+      /// TODO: Pawn From Bottom To Top
+      ///
+      if (chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[PAWN_A2]' ||
+          chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[PAWN_B2]' ||
+          chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[PAWN_C2]' ||
+          chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[PAWN_D2]' ||
+          chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[PAWN_E2]' ||
+          chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[PAWN_F2]' ||
+          chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[PAWN_G2]' ||
+          chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[PAWN_H2]') {
+        /// -----
+        /// TODO: ⬆️ center-top [center-topCenter]
+        /// -----
+        if (chessSquareStateItem?.getStateModel?.isDoubleMovement() == true) {
+          for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopCenterList ?? [])) {
+            if (stepMovement > 0) {
+              item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+              stepMovement--;
+            }
+          }
+        } else {
+          for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopCenterList ?? [])) {
+            item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+            break;
+          }
+        }
+
+        /// -----
+        /// TODO: Nước Đi Ăn Cờ [Nếu Ô Cờ Dưới Đây Có Mặt Quân Cờ Địch => Được Phép Đi]
+        /// -----
+
+        /// -----
+        /// TODO: ↖️ center-topLeft [center-topStart]
+        /// -----
+        for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopStartList ?? [])) {
+          if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+            item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+            break;
+          }
+        }
+
+        /// -----
+        /// TODO: ↗️ center-topRight [center-topEnd]
+        /// -----
+        for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopEndList ?? [])) {
+          if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+            item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+            break;
+          }
+        }
+
+        ///
+      }
+
+      ///
+      /// TODO: Pawn From Top To Bottom
+      ///
+      if (chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[PAWN_A7]' ||
+          chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[PAWN_B7]' ||
+          chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[PAWN_C7]' ||
+          chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[PAWN_D7]' ||
+          chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[PAWN_E7]' ||
+          chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[PAWN_F7]' ||
+          chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[PAWN_G7]' ||
+          chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[PAWN_H7]') {
+        /// -----
+        /// TODO: ⬇️ center-bottom [center-bottomCenter]
+        /// -----
+        if (chessSquareStateItem?.getStateModel?.isDoubleMovement() == true) {
+          for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomCenterList ?? [])) {
+            if (stepMovement > 0) {
+              item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+              stepMovement--;
+            }
+          }
+        } else {
+          for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomCenterList ?? [])) {
+            item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+            break;
+          }
+        }
+
+        /// -----
+        /// TODO: Nước Đi Ăn Cờ [Nếu Ô Cờ Dưới Đây Có Mặt Quân Cờ Địch => Được Phép Đi]
+        /// -----
+
+        /// -----
+        /// TODO: ↙️ center-bottomLeft [center-bottomStart]
+        /// -----
+        for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomStartList ?? [])) {
+          if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+            item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+            break;
+          }
+        }
+
+        /// -----
+        /// TODO: ↘️ center-bottomRight [center-bottomEnd]
+        /// -----
+        for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomEndList ?? [])) {
+          if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+            item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+            break;
+          }
+        }
+
+        ///
       }
     }
   }
@@ -1937,16 +2474,120 @@ class SquareChessBoardManagement with ExecutionCore {
   /// TODO:
   /// -----
   onMoveChessPiece({required ChessSquareStateItem? origin, required ChessSquareStateItem? destination}) {
-    destination?.getStateModel?.setChessPieceStateItem(value: origin?.getStateModel?.getChessPieceStateItem, isPriorityOverride: true);
+    ChessPieceStateItem? originChessPieceStateItem = getChessPieceManagement?.getChessPieceStateItemById(id: origin?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId);
+
+    /// TODO: Clear destination & origin
+    /// Trước khi xóa => thay đổi CurrentChessSquareStateItem của Quân cờ Hiện tại ở Destination => View sẽ nhận biết và xóa quân cờ chính thức đó khỏi bàn cờ (Vẫn để lại bóng)
+    destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: null, isPriorityOverride: true);
+
+    /// Xóa quân chính thức và để lại bóng
+    destination?.getStateModel?.setChessPieceStateItem(value: null, isPriorityOverride: true);
     origin?.getStateModel?.setChessPieceStateItem(value: null, isPriorityOverride: true);
 
-    /// -----
-    /// TODO: Đồng Bộ Hóa Vị Trí Quân Cờ Và Ô Cờ
-    /// -----
-    destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setTopPosition(value: destination.getStateModel?.getTopPosition, isPriorityOverride: true);
-    destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setLeftPosition(value: destination.getStateModel?.getLeftPosition, isPriorityOverride: true);
+    Future.delayed(Duration(milliseconds: 200), () {
+      destination?.getStateModel?.setChessPieceStateItem(value: originChessPieceStateItem, isPriorityOverride: true);
 
+      /// -----
+      /// TODO: Đồng Bộ Hóa Vị Trí Quân Cờ Và Ô Cờ
+      /// -----
+      Future.delayed(Duration(milliseconds: 400), () {
+        destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setTopPosition(value: destination.getStateModel?.getTopPosition, isPriorityOverride: true);
+        destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setLeftPosition(value: destination.getStateModel?.getLeftPosition, isPriorityOverride: true);
 
-    return;
+        onRemoveAllHighlightCheckLegalMovement();
+
+        /// -----
+        /// TODO:
+        /// -----
+        Future.delayed(Duration(milliseconds: 700), () {
+          destination?.getStateModel?.setChessPieceStateItemAsShadow(value: null, isPriorityOverride: true);
+          origin?.getStateModel?.setChessPieceStateItemAsShadow(value: null, isPriorityOverride: true);
+          onRemoveAllHighlightMovement();
+          onRemoveAllHighlightCapture();
+
+          /// -----
+          /// TODO:
+          /// -----
+          Future.delayed(Duration(milliseconds: 800), () {
+            destination?.getStateModel?.setChessPieceStateItemAsShadow(value: destination.getStateModel?.getChessPieceStateItem?.getChessPieceStateItemAsShadow(), isPriorityOverride: true);
+            destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: destination, isPriorityOverride: true);
+          });
+        });
+      });
+    });
+  }
+
+  /// -----
+  /// TODO: Capture (ăn quân)
+  /// -----
+  onCapture({required ChessSquareStateItem? origin, required ChessSquareStateItem? destination}) {
+    ChessPieceStateItem? originChessPieceStateItem = getChessPieceManagement?.getChessPieceStateItemById(id: origin?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId);
+
+    /// TODO: Clear destination & origin
+    /// Trước khi xóa => thay đổi CurrentChessSquareStateItem của Quân cờ Hiện tại ở Destination => View sẽ nhận biết và xóa quân cờ chính thức đó khỏi bàn cờ (Vẫn để lại bóng)
+    destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: null, isPriorityOverride: true);
+
+    /// Xóa quân chính thức và để lại bóng
+    destination?.getStateModel?.setChessPieceStateItem(value: null, isPriorityOverride: true);
+    origin?.getStateModel?.setChessPieceStateItem(value: null, isPriorityOverride: true);
+
+    Future.delayed(Duration(milliseconds: 200), () {
+      destination?.getStateModel?.setChessPieceStateItem(value: originChessPieceStateItem, isPriorityOverride: true);
+
+      /// -----
+      /// TODO: Đồng Bộ Hóa Vị Trí Quân Cờ Và Ô Cờ
+      /// -----
+      Future.delayed(Duration(milliseconds: 400), () {
+        destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setTopPosition(value: destination.getStateModel?.getTopPosition, isPriorityOverride: true);
+        destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setLeftPosition(value: destination.getStateModel?.getLeftPosition, isPriorityOverride: true);
+
+        onRemoveAllHighlightCheckLegalMovement();
+
+        /// -----
+        /// TODO:
+        /// -----
+        Future.delayed(Duration(milliseconds: 700), () {
+          destination?.getStateModel?.setChessPieceStateItemAsShadow(value: null, isPriorityOverride: true);
+          origin?.getStateModel?.setChessPieceStateItemAsShadow(value: null, isPriorityOverride: true);
+          onRemoveAllHighlightMovement();
+          onRemoveAllHighlightCapture();
+
+          /// -----
+          /// TODO:
+          /// -----
+          Future.delayed(Duration(milliseconds: 800), () {
+            destination?.getStateModel?.setChessPieceStateItemAsShadow(value: destination.getStateModel?.getChessPieceStateItem?.getChessPieceStateItemAsShadow(), isPriorityOverride: true);
+            destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: destination, isPriorityOverride: true);
+          });
+        });
+      });
+    });
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  void onRemoveAllHighlightMovement() {
+    for (ChessSquareStateItem? chessSquareStateItem in (getChessSquareStateItemAsList ?? [])) {
+      chessSquareStateItem?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: false, isPriorityOverride: true);
+    }
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  void onRemoveAllHighlightCapture() {
+    for (ChessSquareStateItem? chessSquareStateItem in (getChessSquareStateItemAsList ?? [])) {
+      chessSquareStateItem?.getStateModel?.setIsHighlightCanCaptureByChessPiece(value: false, isPriorityOverride: true);
+    }
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  void onRemoveAllHighlightCheckLegalMovement() {
+    for (ChessSquareStateItem? chessSquareStateItem in (getChessSquareStateItemAsList ?? [])) {
+      chessSquareStateItem?.getStateModel?.setIsHighlightCheckLegalMovementByChessPiece(value: false, isPriorityOverride: true);
+    }
   }
 }
