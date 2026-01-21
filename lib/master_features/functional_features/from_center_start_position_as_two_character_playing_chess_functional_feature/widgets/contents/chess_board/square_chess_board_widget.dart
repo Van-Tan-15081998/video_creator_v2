@@ -80,6 +80,45 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
   Widget build(BuildContext context) {
     return Stack(
       children: [
+        ChessSquareListWidget(systemStateManagement: widget.systemStateManagement, sizeDx: widget.sizeDx, sizeDy: widget.sizeDy),
+        ChessPieceListWidget(systemStateManagement: widget.systemStateManagement, sizeDx: widget.sizeDx, sizeDy: widget.sizeDy),
+      ],
+    );
+  }
+}
+
+/// -----
+/// TODO: DANH SÁCH Ô CỜ
+/// -----
+class ChessSquareListWidget extends StatefulWidget {
+  const ChessSquareListWidget({super.key, required this.systemStateManagement, required this.sizeDx, required this.sizeDy});
+
+  /// -----
+  /// TODO:
+  /// -----
+  final SystemStateManagement? systemStateManagement;
+
+  final double sizeDx;
+  final double sizeDy;
+
+  @override
+  State<ChessSquareListWidget> createState() => _ChessSquareListWidgetState();
+}
+
+class _ChessSquareListWidgetState extends State<ChessSquareListWidget> with TickerProviderStateMixin {
+  @override
+  void initState() {
+    super.initState();
+
+    sizeUnit = 1200 / 8;
+  }
+
+  double sizeUnit = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
         ///
         /// TODO: DANH SÁCH Ô CỜ
         ///
@@ -1883,7 +1922,43 @@ class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with Ti
             ),
           ],
         ),
+      ],
+    );
+  }
+}
 
+/// -----
+/// TODO: DANH SÁCH QUÂN CỜ
+/// -----
+class ChessPieceListWidget extends StatefulWidget {
+  const ChessPieceListWidget({super.key, required this.systemStateManagement, required this.sizeDx, required this.sizeDy});
+
+  /// -----
+  /// TODO:
+  /// -----
+  final SystemStateManagement? systemStateManagement;
+
+  final double sizeDx;
+  final double sizeDy;
+
+  @override
+  State<ChessPieceListWidget> createState() => _ChessPieceListWidgetState();
+}
+
+class _ChessPieceListWidgetState extends State<ChessPieceListWidget> with TickerProviderStateMixin {
+  @override
+  void initState() {
+    super.initState();
+
+    sizeUnit = 1200 / 8;
+  }
+
+  double sizeUnit = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
         ///
         /// TODO: DANH SÁCH QUÂN CỜ
         ///
@@ -3006,6 +3081,42 @@ class _ChessSquareWidgetState extends State<ChessSquareWidget> with TickerProvid
 
     getChessSquareStateItem?.getStateModel?.onPositionSynchronize();
 
+    if (getChessSquareStateItem?.getStateModel?.getId == '[CHESS_SQUARE_A1]') {
+      squareTitle = 'a';
+    } else if (getChessSquareStateItem?.getStateModel?.getId == '[CHESS_SQUARE_B1]') {
+      squareTitle = 'b';
+    } else if (getChessSquareStateItem?.getStateModel?.getId == '[CHESS_SQUARE_C1]') {
+      squareTitle = 'c';
+    } else if (getChessSquareStateItem?.getStateModel?.getId == '[CHESS_SQUARE_D1]') {
+      squareTitle = 'd';
+    } else if (getChessSquareStateItem?.getStateModel?.getId == '[CHESS_SQUARE_E1]') {
+      squareTitle = 'e';
+    } else if (getChessSquareStateItem?.getStateModel?.getId == '[CHESS_SQUARE_F1]') {
+      squareTitle = 'f';
+    } else if (getChessSquareStateItem?.getStateModel?.getId == '[CHESS_SQUARE_G1]') {
+      squareTitle = 'g';
+    } else if (getChessSquareStateItem?.getStateModel?.getId == '[CHESS_SQUARE_H1]') {
+      squareTitle = 'h';
+    }
+
+    if (getChessSquareStateItem?.getStateModel?.getId == '[CHESS_SQUARE_A1]') {
+      squareIndex = '1';
+    } else if (getChessSquareStateItem?.getStateModel?.getId == '[CHESS_SQUARE_A2]') {
+      squareIndex = '2';
+    } else if (getChessSquareStateItem?.getStateModel?.getId == '[CHESS_SQUARE_A3]') {
+      squareIndex = '3';
+    } else if (getChessSquareStateItem?.getStateModel?.getId == '[CHESS_SQUARE_A4]') {
+      squareIndex = '4';
+    } else if (getChessSquareStateItem?.getStateModel?.getId == '[CHESS_SQUARE_A5]') {
+      squareIndex = '5';
+    } else if (getChessSquareStateItem?.getStateModel?.getId == '[CHESS_SQUARE_A6]') {
+      squareIndex = '6';
+    } else if (getChessSquareStateItem?.getStateModel?.getId == '[CHESS_SQUARE_A7]') {
+      squareIndex = '7';
+    } else if (getChessSquareStateItem?.getStateModel?.getId == '[CHESS_SQUARE_A8]') {
+      squareIndex = '8';
+    }
+
     _ticker = createTicker((Duration elapsed) {
       if (getChessSquareStateItem?.getStateModel?.getIsHighlightCanMoveByChessPiece == true) {
         if (getIsHighlightCanMoveByChessPiece != true) {
@@ -3126,6 +3237,9 @@ class _ChessSquareWidgetState extends State<ChessSquareWidget> with TickerProvid
     super.dispose();
   }
 
+  String squareTitle = '';
+  String squareIndex = '';
+
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
@@ -3177,19 +3291,57 @@ class _ChessSquareWidgetState extends State<ChessSquareWidget> with TickerProvid
           getIsHighlightCanCaptureByChessPiece == true
               ? AnimatedPositioned(
                   duration: const Duration(milliseconds: 800),
-                  width: 80.0,
-                  height: 80.0,
+                  width: 90.0,
+                  height: 90.0,
                   child: Container(
-                    width: 20.0,
-                    height: 20.0,
+                    width: 90.0,
+                    height: 90.0,
                     decoration: BoxDecoration(
                       color: Color(0xFFFF4040).withValues(alpha: 0.5),
-                      borderRadius: BorderRadius.circular(40.0),
-                      boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.5), blurRadius: 15.0, spreadRadius: 1.0, offset: Offset(0, 0))],
+                      borderRadius: BorderRadius.circular(50.0),
+                      boxShadow: [BoxShadow(color: Color(0xFFFF4040).withValues(alpha: 0.5), blurRadius: 15.0, spreadRadius: 1.0, offset: Offset(0, 0))],
                     ),
                   ),
                 )
               : Container(),
+
+          AnimatedPositioned(
+            duration: const Duration(milliseconds: 800),
+            top: 5.0,
+            left: 5.0,
+            width: 35.0,
+            height: 35.0,
+            child: Container(
+              width: 35.0,
+              height: 35.0,
+              color: Color(0xFFFF4040).withValues(alpha: 0),
+              child: Text(
+                squareIndex,
+                style: GoogleFonts.concertOne(
+                  textStyle: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w800, fontStyle: FontStyle.normal, color: Color(0xFF1C1C1C), letterSpacing: 1.0),
+                ),
+              ),
+            ),
+          ),
+          AnimatedPositioned(
+            duration: const Duration(milliseconds: 800),
+            bottom: 5.0,
+            right: 5.0,
+            width: 35.0,
+            height: 40.0,
+            child: Container(
+              width: 35.0,
+              height: 40.0,
+              color: Color(0xFFFF4040).withValues(alpha: 0),
+              child: Text(
+                squareTitle,
+                style: GoogleFonts.concertOne(
+                  textStyle: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w800, fontStyle: FontStyle.normal, color: Color(0xFF1C1C1C), letterSpacing: 1.0),
+                ),
+                textAlign: TextAlign.end,
+              ),
+            ),
+          ),
 
           AnimatedPositioned(
             bottom: 15.0,
@@ -3613,25 +3765,26 @@ class _ChessPieceWidgetState extends State<ChessPieceWidget> with TickerProvider
     setChessPieceStateItem(value: widget.chessPieceStateItem, isPriorityOverride: true);
 
     _ticker = createTicker((Duration elapsed) {
-      if (getChessPieceStateItem?.getStateModel?.getCurrentChessSquareStateItem != null) {
-        if (imageSource == '') {
-          setState(() {
-            imageSource = getChessPieceStateItem?.getStateModel?.getImageSource ?? '';
-          });
+      if (getChessPieceStateItem?.getStateModel != null) {
+        if (getChessPieceStateItem?.getStateModel?.getCurrentChessSquareStateItem != null) {
+          if (imageSource == '') {
+            setState(() {
+              imageSource = getChessPieceStateItem?.getStateModel?.getImageSource ?? '';
+            });
+          }
+        } else if (getChessPieceStateItem?.getStateModel?.getCurrentChessSquareStateItem == null) {
+          if (imageSource != '') {
+            setState(() {
+              imageSource = '';
+            });
+          }
         }
-      } else if (getChessPieceStateItem?.getStateModel?.getCurrentChessSquareStateItem == null) {
-        if (imageSource != '') {
-          setState(() {
-            setChessPieceStateItem(value: null, isPriorityOverride: true);
-            imageSource = '';
-          });
-        }
-      }
 
-      if (getChessPieceStateItem?.getStateModel?.getTopPosition != topPosition || getChessPieceStateItem?.getStateModel?.getLeftPosition != leftPosition) {
-        widget.onUpdateMove?.call();
-        topPosition = getChessPieceStateItem?.getStateModel?.getTopPosition ?? 0;
-        leftPosition = getChessPieceStateItem?.getStateModel?.getLeftPosition ?? 0;
+        if (getChessPieceStateItem?.getStateModel?.getTopPosition != topPosition || getChessPieceStateItem?.getStateModel?.getLeftPosition != leftPosition) {
+          widget.onUpdateMove?.call();
+          topPosition = getChessPieceStateItem?.getStateModel?.getTopPosition ?? 0;
+          leftPosition = getChessPieceStateItem?.getStateModel?.getLeftPosition ?? 0;
+        }
       }
     })..start();
 

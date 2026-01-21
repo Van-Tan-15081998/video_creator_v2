@@ -129,7 +129,7 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
               print('[ON_PERFORM]_____[POMODORO_STAY_FOCUSED_SS01_AS_MAIN]');
             }
 
-            getSystemSequentialExecutionScript?.getSystemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.onMoveChessPiece(
+            getSystemSequentialExecutionScript?.getSystemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.onMove(
               origin: getSystemSequentialExecutionScript?.getSystemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessSquareStateItemB1,
               destination: getSystemSequentialExecutionScript?.getSystemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessSquareStateItemC3,
             );
@@ -249,7 +249,67 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
 
             getSystemSequentialExecutionScript?.getSystemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.onCapture(
               origin: getSystemSequentialExecutionScript?.getSystemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessSquareStateItemD7,
-              destination: getSystemSequentialExecutionScript?.getSystemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessSquareStateItemC7,
+              destination: getSystemSequentialExecutionScript?.getSystemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessSquareStateItemD8,
+            );
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step [CUSTOM]
+    /// ----- | ----- | -----
+    contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[ON_START]_____[POMODORO_STAY_FOCUSED_SS01_AS_MAIN]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            if (kDebugMode) {
+              print('[ON_PERFORM]_____[POMODORO_STAY_FOCUSED_SS01_AS_MAIN]');
+            }
+
+            getSystemSequentialExecutionScript?.getSystemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getLegalMoves(
+              chessSquareStateItem: getSystemSequentialExecutionScript?.getSystemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessSquareStateItemA7,
+            );
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step [CUSTOM]
+    /// ----- | ----- | -----
+    contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[ON_START]_____[POMODORO_STAY_FOCUSED_SS01_AS_MAIN]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            if (kDebugMode) {
+              print('[ON_PERFORM]_____[POMODORO_STAY_FOCUSED_SS01_AS_MAIN]');
+            }
+
+            getSystemSequentialExecutionScript?.getSystemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.onPawnPromotion(
+              isPromoteToQueen: true,
+              origin: getSystemSequentialExecutionScript?.getSystemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessSquareStateItemA7,
+              destination: getSystemSequentialExecutionScript?.getSystemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessSquareStateItemA2,
             );
           }
           ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
@@ -306,9 +366,65 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
               print('[ON_PERFORM]_____[POMODORO_STAY_FOCUSED_SS01_AS_MAIN]');
             }
 
-            getSystemSequentialExecutionScript?.getSystemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.onMoveChessPiece(
+            getSystemSequentialExecutionScript?.getSystemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.onMove(
               origin: getSystemSequentialExecutionScript?.getSystemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessSquareStateItemC3,
               destination: getSystemSequentialExecutionScript?.getSystemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessSquareStateItemB5,
+            );
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// ----- | ----- | -----
+    /// TODO: Step [GAP]
+    /// ----- | ----- | -----
+    contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[ON_START]_____[POMODORO_STAY_FOCUSED_SS01_AS_MAIN]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            if (kDebugMode) {
+              print('[ON_PERFORM]_____[POMODORO_STAY_FOCUSED_SS01_AS_MAIN]');
+            }
+          }
+          ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),
+      ),
+    );
+
+    /// NHAP THANH
+    /// ----- | ----- | -----
+    /// TODO: Step [CUSTOM]
+    /// ----- | ----- | -----
+    contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+      FunctionalSequentialExecutionStepItemState(
+        stateModel: FunctionalSequentialExecutionStepItem.asGapFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+          ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+          ..onSetupRoot()
+          ..onInitRoot()
+          ..onStart = () {
+            if (kDebugMode) {
+              print('[ON_START]_____[POMODORO_STAY_FOCUSED_SS01_AS_MAIN]');
+            }
+
+            ///
+          }
+          ..onPerform = () {
+            if (kDebugMode) {
+              print('[ON_PERFORM]_____[POMODORO_STAY_FOCUSED_SS01_AS_MAIN]');
+            }
+
+            getSystemSequentialExecutionScript?.getSystemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.onCastling(
+              king: getSystemSequentialExecutionScript?.getSystemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessSquareStateItemE8,
+              rook: getSystemSequentialExecutionScript?.getSystemStateManagement?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getSquareChessBoardManagement?.getChessSquareStateItemA8,
             );
           }
           ..getGapTime?.setSeconds(value: 5, isPriorityOverride: true),

@@ -504,6 +504,21 @@ class ChessPiece with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
+  bool? _wasCaptured;
+  bool? get getWasCaptured => _wasCaptured;
+  void setWasCaptured({required bool? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _wasCaptured = value;
+    } else {
+      _wasCaptured ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
   ChessSquareStateItem? _currentChessSquareStateItem;
   ChessSquareStateItem? get getCurrentChessSquareStateItem => _currentChessSquareStateItem;
   void setCurrentChessSquareStateItem({required ChessSquareStateItem? value, bool? isPriorityOverride}) {

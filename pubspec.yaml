@@ -93,6 +93,7 @@ flutter:
   - assets/audio/sfx/monster_message/
   - assets/audio/sfx/new_vocabulary/
   - assets/audio/sfx/swing_whoosh/
+  - assets/audio/sfx/chess/
   - default_assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see

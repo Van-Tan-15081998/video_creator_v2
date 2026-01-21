@@ -124,6 +124,66 @@ class MusicAndSound with ExecutionCore {
     'sfx/swing_whoosh/floraphonic_swing_whoosh_11.mp3', //
   ];
 
+  ///
+  ///
+  ///
+
+  void onPlaySFXMoveChessPiece() {
+    String nextSFX;
+    nextSFX = sFXMoveChessPiece[_random.nextInt(sFXMoveChessPiece.length)];
+    FlameAudio.play(nextSFX, volume: 0.45);
+  }
+
+  final List<String> sFXMoveChessPiece = [
+    'sfx/chess/on_move_chess_piece.mp3', //
+    'sfx/chess/on_move_chess_piece.mp3', //
+  ];
+
+  ///
+  ///
+  ///
+
+  void onPlaySFXCaptureChessPiece() {
+    String nextSFX;
+    nextSFX = sFXCaptureChessPiece[_random.nextInt(sFXCaptureChessPiece.length)];
+    FlameAudio.play(nextSFX, volume: 0.45);
+  }
+
+  final List<String> sFXCaptureChessPiece = [
+    'sfx/chess/on_capture_chess_piece.mp3', //
+    'sfx/chess/on_capture_chess_piece.mp3', //
+  ];
+
+  ///
+  ///
+  ///
+
+  void onPlaySFXGetLegalMovementStep() {
+    String nextSFX;
+    nextSFX = sFXGetLegalMovementStep[_random.nextInt(sFXGetLegalMovementStep.length)];
+    FlameAudio.play(nextSFX, volume: 0.45);
+  }
+
+  final List<String> sFXGetLegalMovementStep = [
+    'sfx/chess/on_get_legal_movement_step_.mp3', //
+    'sfx/chess/on_get_legal_movement_step_.mp3', //
+  ];
+
+  ///
+  ///
+  ///
+
+  void onPlaySFXPawnPromotion() {
+    String nextSFX;
+    nextSFX = sFXPawnPromotion[_random.nextInt(sFXPawnPromotion.length)];
+    FlameAudio.play(nextSFX, volume: 0.45);
+  }
+
+  final List<String> sFXPawnPromotion = [
+    'sfx/chess/on_pawn_promotion.mp3', //
+    'sfx/chess/on_pawn_promotion.mp3', //
+  ];
+
   /// -----
   /// TODO: Attach Root
   /// -----

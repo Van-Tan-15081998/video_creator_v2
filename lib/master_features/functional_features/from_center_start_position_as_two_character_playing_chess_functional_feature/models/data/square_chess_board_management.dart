@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_piece.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_piece_management.dart';
@@ -1661,15 +1662,15 @@ class SquareChessBoardManagement with ExecutionCore {
       ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemRookA1AsShadow, isPriorityOverride: true)
       ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemA1);
 
-    getChessSquareStateItemB1?.getStateModel
-      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKnightB1, isPriorityOverride: true)
-      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemKnightB1AsShadow, isPriorityOverride: true)
-      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemB1);
-
-    getChessSquareStateItemC1?.getStateModel
-      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemBishopC1, isPriorityOverride: true)
-      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemBishopC1AsShadow, isPriorityOverride: true)
-      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemC1);
+    // getChessSquareStateItemB1?.getStateModel
+    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKnightB1, isPriorityOverride: true)
+    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemKnightB1AsShadow, isPriorityOverride: true)
+    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemB1);
+    //
+    // getChessSquareStateItemC1?.getStateModel
+    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemBishopC1, isPriorityOverride: true)
+    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemBishopC1AsShadow, isPriorityOverride: true)
+    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemC1);
 
     getChessSquareStateItemD1?.getStateModel
       ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemQueenD1, isPriorityOverride: true)
@@ -1681,15 +1682,15 @@ class SquareChessBoardManagement with ExecutionCore {
       ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemKingE1AsShadow, isPriorityOverride: true)
       ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemE1);
 
-    getChessSquareStateItemF1?.getStateModel
-      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemBishopF1, isPriorityOverride: true)
-      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemBishopF1AsShadow, isPriorityOverride: true)
-      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemF1);
-
-    getChessSquareStateItemG1?.getStateModel
-      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKnightG1, isPriorityOverride: true)
-      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemKnightG1AsShadow, isPriorityOverride: true)
-      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemG1);
+    // getChessSquareStateItemF1?.getStateModel
+    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemBishopF1, isPriorityOverride: true)
+    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemBishopF1AsShadow, isPriorityOverride: true)
+    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemF1);
+    //
+    // getChessSquareStateItemG1?.getStateModel
+    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKnightG1, isPriorityOverride: true)
+    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemKnightG1AsShadow, isPriorityOverride: true)
+    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemG1);
 
     getChessSquareStateItemH1?.getStateModel
       ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemRookH1, isPriorityOverride: true)
@@ -1790,15 +1791,15 @@ class SquareChessBoardManagement with ExecutionCore {
       ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemRookA8AsShadow, isPriorityOverride: true)
       ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemA8);
 
-    getChessSquareStateItemB8?.getStateModel
-      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKnightB8, isPriorityOverride: true)
-      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemKnightB8AsShadow, isPriorityOverride: true)
-      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemB8);
-
-    getChessSquareStateItemC8?.getStateModel
-      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemBishopC8, isPriorityOverride: true)
-      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemBishopC8AsShadow, isPriorityOverride: true)
-      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemC8);
+    // getChessSquareStateItemB8?.getStateModel
+    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKnightB8, isPriorityOverride: true)
+    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemKnightB8AsShadow, isPriorityOverride: true)
+    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemB8);
+    //
+    // getChessSquareStateItemC8?.getStateModel
+    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemBishopC8, isPriorityOverride: true)
+    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemBishopC8AsShadow, isPriorityOverride: true)
+    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemC8);
 
     getChessSquareStateItemD8?.getStateModel
       ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemQueenD8, isPriorityOverride: true)
@@ -1810,15 +1811,15 @@ class SquareChessBoardManagement with ExecutionCore {
       ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemKingE8AsShadow, isPriorityOverride: true)
       ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemE8);
 
-    getChessSquareStateItemF8?.getStateModel
-      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemBishopF8, isPriorityOverride: true)
-      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemBishopF8AsShadow, isPriorityOverride: true)
-      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemF8);
-
-    getChessSquareStateItemG8?.getStateModel
-      ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKnightG8, isPriorityOverride: true)
-      ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemKnightG8AsShadow, isPriorityOverride: true)
-      ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemG8);
+    // getChessSquareStateItemF8?.getStateModel
+    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemBishopF8, isPriorityOverride: true)
+    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemBishopF8AsShadow, isPriorityOverride: true)
+    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemF8);
+    //
+    // getChessSquareStateItemG8?.getStateModel
+    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKnightG8, isPriorityOverride: true)
+    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemKnightG8AsShadow, isPriorityOverride: true)
+    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemG8);
 
     getChessSquareStateItemH8?.getStateModel
       ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemRookH8, isPriorityOverride: true)
@@ -1843,6 +1844,11 @@ class SquareChessBoardManagement with ExecutionCore {
 
   void getLegalMoves({ChessSquareStateItem? chessSquareStateItem}) {
     chessSquareStateItem?.getStateModel?.setIsHighlightCheckLegalMovementByChessPiece(value: true, isPriorityOverride: true);
+
+    /// -----
+    /// TODO: PLAY SOUND
+    /// -----
+    getSystemStateManagement?.getMusicAndSound?.onPlaySFXGetLegalMovementStep();
 
     /// -----
     /// TODO: ROOK
@@ -2393,21 +2399,25 @@ class SquareChessBoardManagement with ExecutionCore {
         /// -----
         /// TODO: ↖️ center-topLeft [center-topStart]
         /// -----
-        for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopStartList ?? [])) {
-          if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
-            item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
-            break;
+        if (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopStartList?.isNotEmpty == true) {
+          // for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopStartList ?? [])) {
+          if (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopStartList?.first?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+            chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopStartList?.first?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+            // break;
           }
+          // }
         }
 
         /// -----
         /// TODO: ↗️ center-topRight [center-topEnd]
         /// -----
-        for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopEndList ?? [])) {
-          if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
-            item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
-            break;
+        if (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopEndList?.isNotEmpty == true) {
+          // for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopEndList ?? [])) {
+          if (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopEndList?.first?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+            chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToTopEndList?.first?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+            // break;
           }
+          // }
         }
 
         ///
@@ -2448,21 +2458,25 @@ class SquareChessBoardManagement with ExecutionCore {
         /// -----
         /// TODO: ↙️ center-bottomLeft [center-bottomStart]
         /// -----
-        for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomStartList ?? [])) {
-          if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
-            item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
-            break;
+        if (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomStartList?.isNotEmpty == true) {
+          // for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomStartList ?? [])) {
+          if (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomStartList?.first?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+            chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomStartList?.first?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+            // break;
           }
+          // }
         }
 
         /// -----
         /// TODO: ↘️ center-bottomRight [center-bottomEnd]
         /// -----
-        for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomEndList ?? [])) {
-          if (item?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
-            item?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
-            break;
+        if (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomEndList?.isNotEmpty == true) {
+          // for (ChessSquareStateItem? item in (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomEndList ?? [])) {
+          if (chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomEndList?.first?.getStateModel?.getChessPieceStateItem?.getStateModel?.isEnemy(type: chessSquareStateItem?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor) == true) {
+            chessSquareStateItem?.getStateModel?.getChessSquareStateItemAsCenterToBottomEndList?.first?.getStateModel?.setIsHighlightCanMoveByChessPiece(value: true, isPriorityOverride: true);
+            // break;
           }
+          // }
         }
 
         ///
@@ -2473,7 +2487,7 @@ class SquareChessBoardManagement with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
-  onMoveChessPiece({required ChessSquareStateItem? origin, required ChessSquareStateItem? destination}) {
+  onMove({required ChessSquareStateItem? origin, required ChessSquareStateItem? destination, VoidCallback? onComplete}) {
     ChessPieceStateItem? originChessPieceStateItem = getChessPieceManagement?.getChessPieceStateItemById(id: origin?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId);
 
     /// TODO: Clear destination & origin
@@ -2496,6 +2510,13 @@ class SquareChessBoardManagement with ExecutionCore {
 
         onRemoveAllHighlightCheckLegalMovement();
 
+        Future.delayed(Duration(milliseconds: 800), () {
+          /// -----
+          /// TODO: PLAY SOUND
+          /// -----
+          getSystemStateManagement?.getMusicAndSound?.onPlaySFXMoveChessPiece();
+        });
+
         /// -----
         /// TODO:
         /// -----
@@ -2511,6 +2532,9 @@ class SquareChessBoardManagement with ExecutionCore {
           Future.delayed(Duration(milliseconds: 800), () {
             destination?.getStateModel?.setChessPieceStateItemAsShadow(value: destination.getStateModel?.getChessPieceStateItem?.getChessPieceStateItemAsShadow(), isPriorityOverride: true);
             destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: destination, isPriorityOverride: true);
+
+            ///
+            onComplete?.call();
           });
         });
       });
@@ -2520,12 +2544,14 @@ class SquareChessBoardManagement with ExecutionCore {
   /// -----
   /// TODO: Capture (ăn quân)
   /// -----
-  onCapture({required ChessSquareStateItem? origin, required ChessSquareStateItem? destination}) {
+  onCapture({required ChessSquareStateItem? origin, required ChessSquareStateItem? destination, VoidCallback? onComplete}) {
     ChessPieceStateItem? originChessPieceStateItem = getChessPieceManagement?.getChessPieceStateItemById(id: origin?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId);
+    ChessPieceStateItem? destinationChessPieceStateItem = getChessPieceManagement?.getChessPieceStateItemById(id: destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId);
 
     /// TODO: Clear destination & origin
     /// Trước khi xóa => thay đổi CurrentChessSquareStateItem của Quân cờ Hiện tại ở Destination => View sẽ nhận biết và xóa quân cờ chính thức đó khỏi bàn cờ (Vẫn để lại bóng)
     destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: null, isPriorityOverride: true);
+    destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setWasCaptured(value: true, isPriorityOverride: true);
 
     /// Xóa quân chính thức và để lại bóng
     destination?.getStateModel?.setChessPieceStateItem(value: null, isPriorityOverride: true);
@@ -2543,6 +2569,13 @@ class SquareChessBoardManagement with ExecutionCore {
 
         onRemoveAllHighlightCheckLegalMovement();
 
+        Future.delayed(Duration(milliseconds: 800), () {
+          /// -----
+          /// TODO: PLAY SOUND
+          /// -----
+          getSystemStateManagement?.getMusicAndSound?.onPlaySFXCaptureChessPiece();
+        });
+
         /// -----
         /// TODO:
         /// -----
@@ -2558,10 +2591,242 @@ class SquareChessBoardManagement with ExecutionCore {
           Future.delayed(Duration(milliseconds: 800), () {
             destination?.getStateModel?.setChessPieceStateItemAsShadow(value: destination.getStateModel?.getChessPieceStateItem?.getChessPieceStateItemAsShadow(), isPriorityOverride: true);
             destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: destination, isPriorityOverride: true);
+
+            /// Đưa Quân Cờ Bị Ăn Ra Khỏi Bàn Cờ
+            destinationChessPieceStateItem?.getStateModel?.setTopPosition(value: 500.0, isPriorityOverride: true);
+            destinationChessPieceStateItem?.getStateModel?.setLeftPosition(value: -100.0, isPriorityOverride: true);
+
+            ///
+            onComplete?.call();
           });
         });
       });
     });
+  }
+
+  /// -----
+  /// TODO: Phong Tốt
+  /// -----
+  onPawnPromotion({
+    bool? isPromoteToQueen, //
+    bool? isPromoteToRook, //
+    bool? isPromoteToBishop, //
+    bool? isPromoteToKnight, //
+    required ChessSquareStateItem? origin, //
+    required ChessSquareStateItem? destination,
+  }) {
+    ChessPieceStateItem? targetChessPieceStateItem;
+
+    /// TODO:
+    if (isPromoteToQueen == true) {
+      ///
+      if (origin?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor == '[WHITE]') {
+        ///
+        if (getChessPieceManagement?.getChessPieceStateItemQueenD1?.getStateModel?.getWasCaptured == true) {
+          targetChessPieceStateItem = getChessPieceManagement?.getChessPieceStateItemQueenD1;
+        }
+      } else if (origin?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor == '[BLACK]') {
+        ///
+        if (getChessPieceManagement?.getChessPieceStateItemQueenD8?.getStateModel?.getWasCaptured == true) {
+          targetChessPieceStateItem = getChessPieceManagement?.getChessPieceStateItemQueenD8;
+        }
+      }
+    }
+
+    /// TODO:
+    if (isPromoteToRook == true) {
+      ///
+      if (origin?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor == '[WHITE]') {
+        ///
+        if (getChessPieceManagement?.getChessPieceStateItemRookA1?.getStateModel?.getWasCaptured == true) {
+          targetChessPieceStateItem = getChessPieceManagement?.getChessPieceStateItemRookA1;
+        } else if (getChessPieceManagement?.getChessPieceStateItemRookH1?.getStateModel?.getWasCaptured == true) {
+          targetChessPieceStateItem = getChessPieceManagement?.getChessPieceStateItemRookH1;
+        }
+      } else if (origin?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor == '[BLACK]') {
+        ///
+        if (getChessPieceManagement?.getChessPieceStateItemRookA8?.getStateModel?.getWasCaptured == true) {
+          targetChessPieceStateItem = getChessPieceManagement?.getChessPieceStateItemRookA8;
+        } else if (getChessPieceManagement?.getChessPieceStateItemRookH8?.getStateModel?.getWasCaptured == true) {
+          targetChessPieceStateItem = getChessPieceManagement?.getChessPieceStateItemRookH8;
+        }
+      }
+    }
+
+    /// TODO:
+    if (isPromoteToBishop == true) {
+      ///
+      if (origin?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor == '[WHITE]') {
+        ///
+        if (getChessPieceManagement?.getChessPieceStateItemBishopC1?.getStateModel?.getWasCaptured == true) {
+          targetChessPieceStateItem = getChessPieceManagement?.getChessPieceStateItemBishopC1;
+        } else if (getChessPieceManagement?.getChessPieceStateItemBishopF1?.getStateModel?.getWasCaptured == true) {
+          targetChessPieceStateItem = getChessPieceManagement?.getChessPieceStateItemBishopF1;
+        }
+      } else if (origin?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor == '[BLACK]') {
+        ///
+        if (getChessPieceManagement?.getChessPieceStateItemBishopC8?.getStateModel?.getWasCaptured == true) {
+          targetChessPieceStateItem = getChessPieceManagement?.getChessPieceStateItemBishopC8;
+        } else if (getChessPieceManagement?.getChessPieceStateItemBishopF8?.getStateModel?.getWasCaptured == true) {
+          targetChessPieceStateItem = getChessPieceManagement?.getChessPieceStateItemBishopF8;
+        }
+      }
+    }
+
+    /// TODO:
+    if (isPromoteToKnight == true) {
+      ///
+      if (origin?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor == '[WHITE]') {
+        ///
+        if (getChessPieceManagement?.getChessPieceStateItemKnightB1?.getStateModel?.getWasCaptured == true) {
+          targetChessPieceStateItem = getChessPieceManagement?.getChessPieceStateItemKnightB1;
+        } else if (getChessPieceManagement?.getChessPieceStateItemKnightG1?.getStateModel?.getWasCaptured == true) {
+          targetChessPieceStateItem = getChessPieceManagement?.getChessPieceStateItemKnightG1;
+        }
+      } else if (origin?.getStateModel?.getChessPieceStateItem?.getStateModel?.getTypeColor == '[BLACK]') {
+        ///
+        if (getChessPieceManagement?.getChessPieceStateItemKnightB8?.getStateModel?.getWasCaptured == true) {
+          targetChessPieceStateItem = getChessPieceManagement?.getChessPieceStateItemKnightB8;
+        } else if (getChessPieceManagement?.getChessPieceStateItemKnightG8?.getStateModel?.getWasCaptured == true) {
+          targetChessPieceStateItem = getChessPieceManagement?.getChessPieceStateItemKnightG8;
+        }
+      }
+    }
+
+    ///
+    if (targetChessPieceStateItem != null) {
+      /// TODO: Hủy Kết Quả Bị Ăn Trước Đó Của Quân Cờ Sẽ Được Thay Thế Tốt Vào Lại Bàn Cờ
+      targetChessPieceStateItem.getStateModel?.setWasCaptured(value: false, isPriorityOverride: true);
+
+      /// -----
+      /// TODO: Trường Hợp 1 => Di Chuyển Thẳng Không Ăn Quân
+      /// -----
+      if (destination?.getStateModel?.getChessPieceStateItem == null) {
+        onMove(
+          origin: origin,
+          destination: destination,
+          onComplete: () {
+            String? currentPawnChessPieceId = destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId;
+            ChessPiece? currentPawnChessPiece = getChessPieceManagement?.getChessPieceStateItemById(id: currentPawnChessPieceId)?.getStateModel;
+
+            /// -----
+            /// TODO: Phong Tốt
+            /// -----
+            Future.delayed(Duration(milliseconds: 100), () {
+              destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: null, isPriorityOverride: true);
+              destination?.getStateModel?.setChessPieceStateItem(value: null, isPriorityOverride: true);
+
+              Future.delayed(Duration(milliseconds: 100), () {
+                ///
+                destination?.getStateModel?.setChessPieceStateItem(value: targetChessPieceStateItem, isPriorityOverride: true);
+                destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setTopPosition(value: currentPawnChessPiece?.getTopPosition, isPriorityOverride: true);
+                destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setLeftPosition(value: currentPawnChessPiece?.getLeftPosition, isPriorityOverride: true);
+                destination?.getStateModel?.setChessPieceStateItemAsShadow(value: destination.getStateModel?.getChessPieceStateItem?.getChessPieceStateItemAsShadow(), isPriorityOverride: true);
+                destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: destination, isPriorityOverride: true);
+
+                /// -----
+                /// TODO: PLAY SOUND
+                /// -----
+                Future.delayed(Duration(milliseconds: 800), () {
+                  getSystemStateManagement?.getMusicAndSound?.onPlaySFXPawnPromotion();
+                });
+              });
+            });
+          },
+        );
+      }
+
+      /// -----
+      /// TODO: Trường Hợp 2 => Di Chuyển Chéo Ăn Quân
+      /// -----
+      if (destination?.getStateModel?.getChessPieceStateItem != null) {
+        onCapture(
+          origin: origin,
+          destination: destination,
+          onComplete: () {
+            String? currentPawnChessPieceId = destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId;
+            ChessPiece? currentPawnChessPiece = getChessPieceManagement?.getChessPieceStateItemById(id: currentPawnChessPieceId)?.getStateModel;
+
+            /// -----
+            /// TODO: Phong Tốt
+            /// -----
+            Future.delayed(Duration(milliseconds: 100), () {
+              destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: null, isPriorityOverride: true);
+              destination?.getStateModel?.setChessPieceStateItem(value: null, isPriorityOverride: true);
+
+              Future.delayed(Duration(milliseconds: 100), () {
+                ///
+                destination?.getStateModel?.setChessPieceStateItem(value: targetChessPieceStateItem, isPriorityOverride: true);
+                destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setTopPosition(value: currentPawnChessPiece?.getTopPosition, isPriorityOverride: true);
+                destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setLeftPosition(value: currentPawnChessPiece?.getLeftPosition, isPriorityOverride: true);
+                destination?.getStateModel?.setChessPieceStateItemAsShadow(value: destination.getStateModel?.getChessPieceStateItem?.getChessPieceStateItemAsShadow(), isPriorityOverride: true);
+                destination?.getStateModel?.getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: destination, isPriorityOverride: true);
+
+                /// -----
+                /// TODO: PLAY SOUND
+                /// -----
+                Future.delayed(Duration(milliseconds: 100), () {
+                  getSystemStateManagement?.getMusicAndSound?.onPlaySFXPawnPromotion();
+                });
+
+                return;
+              });
+            });
+          },
+        );
+      }
+    }
+
+    ///
+    return;
+  }
+
+  /// -----
+  /// TODO: Nhập Thành
+  /// -----
+  onCastling({
+    required ChessSquareStateItem? king, //
+    required ChessSquareStateItem? rook,
+  }) {
+    /// ----- | ----- | ----- | ----- |  ----- | ----- | ----- | ----- |  -----
+    /// TODO: Nhập thành cánh Vua (nhập thành ngắn)
+    /// ----- | ----- | ----- | ----- |  ----- | ----- | ----- | ----- |  -----
+
+    /// TODO: Trắng: Vua e1 → g1, Xe h1 → f1
+
+    if (king?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[KING_E1]' && rook?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[ROOK_H1]') {
+      ///
+      onMove(origin: king, destination: getChessSquareStateItemG1);
+      onMove(origin: rook, destination: getChessSquareStateItemF1);
+    }
+
+    /// TODO: Đen: Vua e8 → g8, Xe h8 → f8
+    if (king?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[KING_E8]' && rook?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[ROOK_H8]') {
+      ///
+      onMove(origin: king, destination: getChessSquareStateItemG8);
+      onMove(origin: rook, destination: getChessSquareStateItemF8);
+    }
+
+    /// ----- | ----- | ----- | ----- |  ----- | ----- | ----- | ----- |  -----
+    /// TODO: Nhập thành cánh Hậu (nhập thành dài)
+    /// ----- | ----- | ----- | ----- |  ----- | ----- | ----- | ----- |  -----
+
+    /// TODO: Trắng: Vua e1 → c1, Xe a1 → d1
+    if (king?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[KING_E1]' && rook?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[ROOK_A1]') {
+      ///
+      onMove(origin: king, destination: getChessSquareStateItemC1);
+      onMove(origin: rook, destination: getChessSquareStateItemD1);
+    }
+
+    /// TODO: Đen: Vua e8 → c8, Xe a8 → d8
+    if (king?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[KING_E8]' && rook?.getStateModel?.getChessPieceStateItem?.getStateModel?.getId == '[ROOK_A8]') {
+      ///
+      onMove(origin: king, destination: getChessSquareStateItemC8);
+      onMove(origin: rook, destination: getChessSquareStateItemD8);
+    }
+
+    ///
+    return;
   }
 
   /// -----
