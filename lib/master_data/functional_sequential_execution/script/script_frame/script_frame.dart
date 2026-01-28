@@ -3,6 +3,7 @@ import 'package:frame_creator_v2/master_data/content_item/01_content_item_unit/c
 import 'package:frame_creator_v2/master_data/content_item/04_content_item_sequential_execution/content_item_sequential_execution.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/controller/functional_sequential_execution_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/system_sequential_execution_script.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_models.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 import 'package:frame_creator_v2/system/sequential_execution_controller/models/sequential_execution_controller.dart';
 
@@ -31,6 +32,11 @@ class ScriptFrame with ExecutionCore {
 
     ///
     setFunctionalSequentialExecutionController(value: functionalSequentialExecutionController, isPriorityOverride: true);
+
+    ///
+    setChessAction(
+      value: ChessActionModel(systemSequentialExecutionScript: getSystemSequentialExecutionScript, functionalSequentialExecutionController: getFunctionalSequentialExecutionController),
+    );
   }
 
   ///
@@ -73,6 +79,21 @@ class ScriptFrame with ExecutionCore {
       _systemSequentialExecutionScript = value;
     } else {
       _systemSequentialExecutionScript ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  ChessActionModel? _chessAction;
+  ChessActionModel? get getChessAction => _chessAction;
+  void setChessAction({required ChessActionModel? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _chessAction = value;
+    } else {
+      _chessAction ??= value;
     }
 
     return;

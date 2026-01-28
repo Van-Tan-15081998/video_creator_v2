@@ -88,6 +88,17 @@ class FunctionalSequentialExecutionStepItem with ExecutionCore {
   }
 
   ///
+  /// TODO: as ChessFlow
+  ///
+  FunctionalSequentialExecutionStepItem.asChessFlow({required FlowController? flowController}) {
+    setGapTime(value: GapTime.asDefault(), isPriorityOverride: true);
+    setFlowController(value: flowController, isPriorityOverride: true);
+    setFlowType(value: FlowType.asChessFlow(), isPriorityOverride: true);
+    setContentExistenceStatus(value: ContentExistenceStatus.asExistingContent(), isPriorityOverride: true);
+    setActiveStatus(value: ActiveStatus.asActive(), isPriorityOverride: true);
+  }
+
+  ///
   /// TODO:
   ///
   GapTime? _gapTime;

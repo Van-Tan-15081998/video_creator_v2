@@ -1,6 +1,7 @@
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/basic_character_flow_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/character_flow_controller.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/chess_flow_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/image_slide_flow_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/message_flow_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/window_flow_controller.dart';
@@ -66,6 +67,21 @@ class FlowController with ExecutionCore {
       _messageFlowController = value;
     } else {
       _messageFlowController ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  ChessFlowController? _chessFlowController;
+  ChessFlowController? get getChessFlowController => _chessFlowController;
+  void setChessFlowController({required ChessFlowController? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _chessFlowController = value;
+    } else {
+      _chessFlowController ??= value;
     }
 
     return;

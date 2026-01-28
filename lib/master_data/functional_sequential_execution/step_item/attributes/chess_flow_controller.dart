@@ -1,195 +1,19 @@
-import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/basic_message_flow_controller.dart';
 
-class FlowType with ExecutionCore {
+class ChessFlowController extends BasicMessageFlowController {
   ///
   /// TODO:
   ///
-  FlowType.asDefault() {
-    setTypeAsDefault();
-  }
-
-  ///
-  /// TODO: as GapFlow
-  ///
-  FlowType.asGapFlow() {
-    setTypeAsGapFlow();
-  }
-
-  ///
-  /// TODO: as Stop Point Flow
-  ///
-  FlowType.asStopPointFlow() {
-    setTypeAsStopPointFlow();
-  }
-
-  ///
-  /// TODO: as CharacterFlow
-  ///
-  FlowType.asCharacterFlow() {
-    setTypeAsCharacterFlow();
-  }
-
-  ///
-  /// TODO: as MessageFlow
-  ///
-  FlowType.asMessageFlow() {
-    setTypeAsMessageFlow();
-  }
-
-  ///
-  /// TODO: as ImageSlideFlow
-  ///
-  FlowType.asImageSlideFlow() {
-    setTypeAsImageSlideFlow();
-  }
-
-  ///
-  /// TODO: as WindowFlow
-  ///
-  FlowType.asWindowFlow() {
-    setTypeAsWindowFlow();
-  }
-
-  ///
-  /// TODO: as ChessFlow
-  ///
-  FlowType.asChessFlow() {
-    setTypeAsChessFlow();
-  }
-
-  ///
-  /// TODO: Trạng thái tồn tại nội dung
-  ///
-  String? _type;
-  String? get getType => _type;
-  void setType({required String? value, bool? isPriorityOverride}) {
+  int? _seconds;
+  int get getSeconds => _seconds ?? 0;
+  void setSeconds({required int? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
-      _type = value;
+      _seconds = value;
     } else {
-      _type ??= value;
+      _seconds ??= value;
     }
 
     return;
-  }
-
-  ///
-  /// TODO: Trạng thái tồn tại nội dung => Mặc định
-  ///
-  void setTypeAsDefault() {
-    setType(value: '[DEFAULT]', isPriorityOverride: true);
-  }
-
-  bool isTypeAsDefault() {
-    if (getType == '[DEFAULT]') {
-      return true;
-    }
-
-    return false;
-  }
-
-  ///
-  /// TODO: Loại => Gap Flow
-  ///
-  void setTypeAsGapFlow() {
-    setType(value: '[GAP_FLOW]', isPriorityOverride: true);
-  }
-
-  bool isTypeAsGapFlow() {
-    if (getType == '[GAP_FLOW]') {
-      return true;
-    }
-
-    return false;
-  }
-
-  ///
-  /// TODO: Loại => Stop Point Flow
-  ///
-  void setTypeAsStopPointFlow() {
-    setType(value: '[STOP_POINT_FLOW]', isPriorityOverride: true);
-  }
-
-  bool isTypeAsStopPointFlow() {
-    if (getType == '[STOP_POINT_FLOW]') {
-      return true;
-    }
-
-    return false;
-  }
-
-  ///
-  /// TODO: Loại => Character Flow
-  ///
-  void setTypeAsCharacterFlow() {
-    setType(value: '[CHARACTER_FLOW]', isPriorityOverride: true);
-  }
-
-  bool isTypeAsCharacterFlow() {
-    if (getType == '[CHARACTER_FLOW]') {
-      return true;
-    }
-
-    return false;
-  }
-
-  ///
-  /// TODO: Loại => Window Flow
-  ///
-  void setTypeAsWindowFlow() {
-    setType(value: '[WINDOW_FLOW]', isPriorityOverride: true);
-  }
-
-  bool isTypeAsWindowFlow() {
-    if (getType == '[WINDOW_FLOW]') {
-      return true;
-    }
-
-    return false;
-  }
-
-  ///
-  /// TODO: Loại => Message Flow
-  ///
-  void setTypeAsMessageFlow() {
-    setType(value: '[MESSAGE_FLOW]', isPriorityOverride: true);
-  }
-
-  bool isTypeAsMessageFlow() {
-    if (getType == '[MESSAGE_FLOW]') {
-      return true;
-    }
-
-    return false;
-  }
-
-  ///
-  /// TODO: Loại => Image Slide Flow
-  ///
-  void setTypeAsImageSlideFlow() {
-    setType(value: '[IMAGE_SLIDE_FLOW]', isPriorityOverride: true);
-  }
-
-  bool isTypeAsImageSlideFlow() {
-    if (getType == '[IMAGE_SLIDE_FLOW]') {
-      return true;
-    }
-
-    return false;
-  }
-
-  ///
-  /// TODO: Loại => Chess Flow
-  ///
-  void setTypeAsChessFlow() {
-    setType(value: '[CHESS_FLOW]', isPriorityOverride: true);
-  }
-
-  bool isTypeAsChessFlow() {
-    if (getType == '[CHESS_FLOW]') {
-      return true;
-    }
-
-    return false;
   }
 
   /// -----
@@ -249,6 +73,7 @@ class FlowType with ExecutionCore {
       /// -----
       /// TODO:
       /// -----
+      setFunctionalSequentialExecutionStepItemStateListAsStack(value: [], isPriorityOverride: true);
 
       /// -----
       /// TODO: Setup Root For SubCom

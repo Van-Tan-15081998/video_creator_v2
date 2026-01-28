@@ -3160,6 +3160,62 @@ class _ChessSquareWidgetState extends State<ChessSquareWidget> with TickerProvid
         }
       }
 
+      if (getChessSquareStateItem?.getStateModel?.getIsHighlightOriginByChessPiece == true) {
+        if (getIsHighlightOriginByChessPiece != true) {
+          setState(() {
+            setIsHighlightOriginByChessPiece(value: true, isPriorityOverride: true);
+          });
+        }
+      } else {
+        if (getIsHighlightOriginByChessPiece == true) {
+          setState(() {
+            setIsHighlightOriginByChessPiece(value: false, isPriorityOverride: true);
+          });
+        }
+      }
+
+      if (getChessSquareStateItem?.getStateModel?.getIsHighlightDestinationByChessPiece == true) {
+        if (getIsHighlightDestinationByChessPiece != true) {
+          setState(() {
+            setIsHighlightDestinationByChessPiece(value: true, isPriorityOverride: true);
+          });
+        }
+      } else {
+        if (getIsHighlightDestinationByChessPiece == true) {
+          setState(() {
+            setIsHighlightDestinationByChessPiece(value: false, isPriorityOverride: true);
+          });
+        }
+      }
+
+      if (getChessSquareStateItem?.getStateModel?.getIsHighlightSpecifyDisplayByChessPiece == true) {
+        if (getIsHighlightSpecifyDisplayByChessPiece != true) {
+          setState(() {
+            setIsHighlightSpecifyDisplayByChessPiece(value: true, isPriorityOverride: true);
+          });
+        }
+      } else {
+        if (getIsHighlightSpecifyDisplayByChessPiece == true) {
+          setState(() {
+            setIsHighlightSpecifyDisplayByChessPiece(value: false, isPriorityOverride: true);
+          });
+        }
+      }
+
+      if (getChessSquareStateItem?.getStateModel?.getIsHighlightCheckmateByChessPiece == true) {
+        if (getIsHighlightCheckmateByChessPiece != true) {
+          setState(() {
+            setIsHighlightCheckmateByChessPiece(value: true, isPriorityOverride: true);
+          });
+        }
+      } else {
+        if (getIsHighlightCheckmateByChessPiece == true) {
+          setState(() {
+            setIsHighlightCheckmateByChessPiece(value: false, isPriorityOverride: true);
+          });
+        }
+      }
+
       if (getChessSquareStateItem?.getStateModel?.getChessPieceStateItemAsShadow?.getStateModel?.getId != getChessPieceAsShadow?.getId) {
         setChessPieceAsShadow(value: getChessSquareStateItem?.getStateModel?.getChessPieceStateItemAsShadow?.getStateModel, isPriorityOverride: true);
 
@@ -3229,6 +3285,66 @@ class _ChessSquareWidgetState extends State<ChessSquareWidget> with TickerProvid
     return;
   }
 
+  /// -----
+  /// TODO:
+  /// -----
+  bool? isHighlightOriginByChessPiece;
+  bool? get getIsHighlightOriginByChessPiece => isHighlightOriginByChessPiece;
+  void setIsHighlightOriginByChessPiece({required bool? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      isHighlightOriginByChessPiece = value;
+    } else {
+      isHighlightOriginByChessPiece ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  bool? isHighlightDestinationByChessPiece;
+  bool? get getIsHighlightDestinationByChessPiece => isHighlightDestinationByChessPiece;
+  void setIsHighlightDestinationByChessPiece({required bool? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      isHighlightDestinationByChessPiece = value;
+    } else {
+      isHighlightDestinationByChessPiece ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  bool? isHighlightSpecifyDisplayByChessPiece;
+  bool? get getIsHighlightSpecifyDisplayByChessPiece => isHighlightSpecifyDisplayByChessPiece;
+  void setIsHighlightSpecifyDisplayByChessPiece({required bool? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      isHighlightSpecifyDisplayByChessPiece = value;
+    } else {
+      isHighlightSpecifyDisplayByChessPiece ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  bool? isHighlightCheckmateByChessPiece;
+  bool? get getIsHighlightCheckmateByChessPiece => isHighlightCheckmateByChessPiece;
+  void setIsHighlightCheckmateByChessPiece({required bool? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      isHighlightCheckmateByChessPiece = value;
+    } else {
+      isHighlightCheckmateByChessPiece ??= value;
+    }
+
+    return;
+  }
+
   @override
   void dispose() {
     _controller.dispose();
@@ -3247,36 +3363,75 @@ class _ChessSquareWidgetState extends State<ChessSquareWidget> with TickerProvid
       child: Stack(
         alignment: AlignmentDirectional.center,
         children: [
-          AnimatedPositioned(
-            duration: const Duration(milliseconds: 800),
+          Positioned(
             width: widget.sizeDx,
             height: widget.sizeDy,
-            child: Container(
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 300),
               width: widget.sizeDx,
               height: widget.sizeDy,
               decoration: BoxDecoration(color: backgroundColor),
             ),
           ),
 
-          getIsHighlightCheckLegalMovementByChessPiece == true
-              ? AnimatedPositioned(
-                  duration: const Duration(milliseconds: 800),
+          getIsHighlightOriginByChessPiece == true
+              ? Positioned(
                   width: widget.sizeDx,
                   height: widget.sizeDy,
-                  child: Container(
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 300),
                     width: widget.sizeDx,
                     height: widget.sizeDy,
-                    decoration: BoxDecoration(color: Color(0xFFFFFF00).withValues(alpha: 0.5)),
+                    decoration: BoxDecoration(color: Color(0xFFFFFF00).withValues(alpha: 1.0)),
+                  ),
+                )
+              : Container(),
+
+          getIsHighlightDestinationByChessPiece == true
+              ? Positioned(
+                  width: widget.sizeDx,
+                  height: widget.sizeDy,
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 300),
+                    width: widget.sizeDx,
+                    height: widget.sizeDy,
+                    decoration: BoxDecoration(color: Color(0xFFFFD700).withValues(alpha: 1.0)),
+                  ),
+                )
+              : Container(),
+
+          getIsHighlightSpecifyDisplayByChessPiece == true
+              ? Positioned(
+                  width: widget.sizeDx,
+                  height: widget.sizeDy,
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 300),
+                    width: widget.sizeDx,
+                    height: widget.sizeDy,
+                    decoration: BoxDecoration(color: Color(0xFF00BFFF).withValues(alpha: 1.0)),
+                  ),
+                )
+              : Container(),
+
+          getIsHighlightCheckLegalMovementByChessPiece == true
+              ? Positioned(
+                  width: widget.sizeDx,
+                  height: widget.sizeDy,
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 300),
+                    width: widget.sizeDx,
+                    height: widget.sizeDy,
+                    decoration: BoxDecoration(color: Color(0xFFFFFF00).withValues(alpha: 1.0)),
                   ),
                 )
               : Container(),
 
           getIsHighlightCanMoveByChessPiece == true
-              ? AnimatedPositioned(
-                  duration: const Duration(milliseconds: 800),
+              ? Positioned(
                   width: 50.0,
                   height: 50.0,
-                  child: Container(
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 300),
                     width: 20.0,
                     height: 20.0,
                     decoration: BoxDecoration(
@@ -3289,11 +3444,11 @@ class _ChessSquareWidgetState extends State<ChessSquareWidget> with TickerProvid
               : Container(),
 
           getIsHighlightCanCaptureByChessPiece == true
-              ? AnimatedPositioned(
-                  duration: const Duration(milliseconds: 800),
+              ? Positioned(
                   width: 90.0,
                   height: 90.0,
-                  child: Container(
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 300),
                     width: 90.0,
                     height: 90.0,
                     decoration: BoxDecoration(
@@ -3305,8 +3460,20 @@ class _ChessSquareWidgetState extends State<ChessSquareWidget> with TickerProvid
                 )
               : Container(),
 
-          AnimatedPositioned(
-            duration: const Duration(milliseconds: 800),
+          getIsHighlightCheckmateByChessPiece == true
+              ? Positioned(
+                  width: widget.sizeDx,
+                  height: widget.sizeDy,
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 300),
+                    width: widget.sizeDx,
+                    height: widget.sizeDy,
+                    decoration: BoxDecoration(color: Color(0xFFFF4040).withValues(alpha: 1.0)),
+                  ),
+                )
+              : Container(),
+
+          Positioned(
             top: 5.0,
             left: 5.0,
             width: 35.0,
@@ -3323,8 +3490,7 @@ class _ChessSquareWidgetState extends State<ChessSquareWidget> with TickerProvid
               ),
             ),
           ),
-          AnimatedPositioned(
-            duration: const Duration(milliseconds: 800),
+          Positioned(
             bottom: 5.0,
             right: 5.0,
             width: 35.0,
@@ -3343,9 +3509,8 @@ class _ChessSquareWidgetState extends State<ChessSquareWidget> with TickerProvid
             ),
           ),
 
-          AnimatedPositioned(
+          Positioned(
             bottom: 15.0,
-            duration: const Duration(milliseconds: 800),
             width: widget.sizeDx - 40.0,
             height: widget.sizeDy - 40.0,
             child: Opacity(

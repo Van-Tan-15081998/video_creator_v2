@@ -5313,6 +5313,66 @@ class ChessSquare with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
+  bool? isHighlightOriginByChessPiece;
+  bool? get getIsHighlightOriginByChessPiece => isHighlightOriginByChessPiece;
+  void setIsHighlightOriginByChessPiece({required bool? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      isHighlightOriginByChessPiece = value;
+    } else {
+      isHighlightOriginByChessPiece ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  bool? isHighlightDestinationByChessPiece;
+  bool? get getIsHighlightDestinationByChessPiece => isHighlightDestinationByChessPiece;
+  void setIsHighlightDestinationByChessPiece({required bool? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      isHighlightDestinationByChessPiece = value;
+    } else {
+      isHighlightDestinationByChessPiece ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  bool? isHighlightSpecifyDisplayByChessPiece;
+  bool? get getIsHighlightSpecifyDisplayByChessPiece => isHighlightSpecifyDisplayByChessPiece;
+  void setIsHighlightSpecifyDisplayByChessPiece({required bool? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      isHighlightSpecifyDisplayByChessPiece = value;
+    } else {
+      isHighlightSpecifyDisplayByChessPiece ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  bool? isHighlightCheckmateByChessPiece;
+  bool? get getIsHighlightCheckmateByChessPiece => isHighlightCheckmateByChessPiece;
+  void setIsHighlightCheckmateByChessPiece({required bool? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      isHighlightCheckmateByChessPiece = value;
+    } else {
+      isHighlightCheckmateByChessPiece ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
   double? _topPosition;
   double get getTopPosition => _topPosition ?? 0;
   void setTopPosition({required double? value, bool? isPriorityOverride}) {
