@@ -138,7 +138,7 @@ class _FromTopEndPositionAsOneCharacterConversationWidgetState extends State<Fro
                   children: [
                     isActivatedWindow
                         ? ClipRRect(
-                            borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(15.0), bottomRight: Radius.circular(15.0), bottomLeft: Radius.circular(30.0)),
+                            borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(15.0), bottomLeft: Radius.circular(15.0)),
                             child: TransparentEffectWallWidget(sizeDx: sizeDx, sizeDy: sizeDy),
                           )
                         : Container(),

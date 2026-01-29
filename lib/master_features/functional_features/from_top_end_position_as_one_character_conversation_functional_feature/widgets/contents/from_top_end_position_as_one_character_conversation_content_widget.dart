@@ -9,6 +9,8 @@ import 'package:frame_creator_v2/core/window_mixin.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/controller/functional_sequential_execution_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/contents/details/step_item_content_as_new_message_conversation.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item_state.dart';
+import 'package:frame_creator_v2/master_features/constant_data/details/system_character.dart';
+import 'package:frame_creator_v2/master_features/constant_data/details/system_window.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -115,15 +117,15 @@ class _FromTopEndPositionAsOneCharacterConversationContentWidgetState extends St
     /// -----
     /// TODO: Set Mã Định Danh Màn Hình
     /// -----
-    setWindowId(value: widget.systemStateManagement?.getSystemConstantData?.getSystemWindow?.fromTopEndPositionAsOneCharacterConversationWindow, isPriorityOverride: true);
+    setWindowId(value: SystemWindow.fromTopEndPositionAsOneCharacterConversationWindow, isPriorityOverride: true);
 
     ///
 
     /// -----
     /// TODO: Set Mã Định Danh Nhân Vật
     /// -----
-    setBottomLeftCharacterId(value: widget.systemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id, isPriorityOverride: true);
-    setBottomRightCharacterId(value: widget.systemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA02Id, isPriorityOverride: true);
+    setBottomLeftCharacterId(value: SystemCharacter.characterA01Id, isPriorityOverride: true);
+    setBottomRightCharacterId(value: SystemCharacter.characterA02Id, isPriorityOverride: true);
 
     ///
 
@@ -139,11 +141,11 @@ class _FromTopEndPositionAsOneCharacterConversationContentWidgetState extends St
     setStepItemContentAsNewMessageConversationAsList(value: [], isPriorityOverride: true);
 
     messageList = [
-      Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 300.0, color: Colors.transparent),
-      Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 300.0, color: Colors.transparent),
-      Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 300.0, color: Colors.transparent),
-      Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 300.0, color: Colors.transparent),
-      Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 300.0, color: Colors.transparent),
+      Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 450.0, color: Colors.transparent),
+      Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 450.0, color: Colors.transparent),
+      Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 450.0, color: Colors.transparent),
+      Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 450.0, color: Colors.transparent),
+      Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 450.0, color: Colors.transparent),
     ];
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -177,9 +179,11 @@ class _FromTopEndPositionAsOneCharacterConversationContentWidgetState extends St
 
             setState(() {
               if (getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getMessage?.isNotEmpty == true) {
-                messageList.add(messageByWordWidget(isLeftSide: true, isRightSide: false, engSentence: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getMessage ?? ''));
+                messageList.add(messageByWordWidget(isLeftSide: false, isRightSide: true, engSentence: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getMessage ?? ''));
               } else if (getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getImageSource?.isNotEmpty == true) {
-                messageList.add(pictureMessageByWordWidget(isLeftSide: true, isRightSide: false, imageSource: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getImageSource ?? ''));
+                messageList.add(pictureMessageByWordWidget(isLeftSide: false, isRightSide: true, imageSource: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getImageSource ?? ''));
+              } else {
+                messageList.clear();
               }
             });
 
@@ -193,6 +197,8 @@ class _FromTopEndPositionAsOneCharacterConversationContentWidgetState extends St
                 messageList.add(messageByWordWidget(isLeftSide: false, isRightSide: true, engSentence: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getMessage ?? ''));
               } else if (getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getImageSource?.isNotEmpty == true) {
                 messageList.add(pictureMessageByWordWidget(isLeftSide: false, isRightSide: true, imageSource: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getImageSource ?? ''));
+              } else {
+                messageList.clear();
               }
             });
 
@@ -291,7 +297,7 @@ class _FromTopEndPositionAsOneCharacterConversationContentWidgetState extends St
               decoration: BoxDecoration(
                 color: Color(0xFF2C2C2C).withValues(alpha: 0.85),
                 border: Border.all(width: 8.0, color: Color(0xFF1C1C1C).withValues(alpha: 0.75)),
-                borderRadius: BorderRadius.only(topLeft: Radius.circular(0), topRight: Radius.circular(15.0), bottomRight: Radius.circular(0), bottomLeft: Radius.circular(30.0)),
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(0), bottomLeft: Radius.circular(30.0)),
               ),
 
               child: Row(
@@ -357,90 +363,49 @@ class _FromTopEndPositionAsOneCharacterConversationContentWidgetState extends St
             ),
           ),
 
-          // AnimatedPositioned(
-          //   duration: const Duration(milliseconds: 100), //
-          //   top: 150.0,
-          //   right: -50.0,
-          //   width: 800.0,
-          //   height: 125.0,
-          //   child: AnimatedVocabularyConversationTitleWidget(sizeDx: 800.0, sizeDy: 125.0), //
-          // ),
           Positioned(
-            top: 50.0,
+            bottom: 0,
             left: 0,
-            width: widget.sizeDx,
-            height: widget.sizeDy - 150.0,
-            child: SizedBox(
-              width: widget.sizeDx,
-              height: widget.sizeDy - 150.0,
+            width: 660.0,
+            height: 450.0,
+            child: Container(
+              color: Colors.transparent,
+              width: 660.0,
+              height: 450.0,
               child: ShaderMask(
                 blendMode: BlendMode.dstIn, // Giữ phần gradient trong text
                 shaderCallback: (Rect bounds) {
-                  // return LinearGradient(
-                  //   begin: Alignment.bottomCenter,
-                  //   end: Alignment.topCenter,
-                  //   colors: [
-                  //     Colors.white,
-                  //     Colors.white.withValues(alpha: 0.9),
-                  //     Colors.white.withValues(alpha: 0.8),
-                  //     Colors.white.withValues(alpha: 0.7),
-                  //     Colors.white.withValues(alpha: 0.6),
-                  //     Colors.white.withValues(alpha: 0.5),
-                  //     Colors.white.withValues(alpha: 0.4),
-                  //     Colors.white.withValues(alpha: 0.3),
-                  //     Colors.white.withValues(alpha: 0.2),
-                  //     Colors.white.withValues(alpha: 0.1),
-                  //     Colors.white.withValues(alpha: 0.05),
-                  //     Colors.transparent,
-                  //     Colors.transparent, // Hoàn toàn biến mất bên phải
-                  //   ],
-                  //   stops: [0.64, 0.67, 0.70, 0.73, 0.76, 0.79, 0.82, 0.85, 0.88, 0.81, 0.94, 0.97, 1.0],
-                  // ).createShader(bounds);
                   return LinearGradient(
                     begin: Alignment.bottomCenter,
                     end: Alignment.topCenter,
                     colors: [
                       // Colors.white,
-                      Colors.white.withValues(alpha: 0.9),
-                      Colors.white.withValues(alpha: 0.8),
-                      Colors.white.withValues(alpha: 0.7),
-                      Colors.white.withValues(alpha: 0.6),
-                      Colors.white.withValues(alpha: 0.5),
-                      Colors.white.withValues(alpha: 0.4),
-                      Colors.white.withValues(alpha: 0.3),
-                      Colors.white.withValues(alpha: 0.2),
-                      Colors.white.withValues(alpha: 0.1),
-                      Colors.white.withValues(alpha: 0.05),
+                      Colors.white.withValues(alpha: 0.99),
+                      Colors.white.withValues(alpha: 0.98),
+                      Colors.white.withValues(alpha: 0.97),
+                      Colors.white.withValues(alpha: 0.96),
+                      Colors.white.withValues(alpha: 0.95),
+                      Colors.white.withValues(alpha: 0.94),
+                      Colors.white.withValues(alpha: 0.93),
+                      Colors.white.withValues(alpha: 0.92),
+                      Colors.white.withValues(alpha: 0.91),
+                      Colors.white.withValues(alpha: 0.90),
                       Colors.transparent,
                       Colors.transparent,
                       Colors.transparent,
                     ],
-                    stops: [0.76, 0.78, 0.80, 0.82, 0.84, 0.86, 0.88, 0.90, 0.92, 0.94, 0.96, 0.98, 1.0],
+                    stops: [0.88, 0.89, 0.90, 0.91, 0.92, 0.93, 0.94, 0.95, 0.96, 0.97, 0.98, 0.99, 1.0],
                   ).createShader(bounds);
                 },
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom: 250.0),
-                  // child: SingleChildScrollView(
-                  //   controller: _scrollController,
-                  //   child: Column(children: messageList),
-                  // ),
-                  child: SingleChildScrollView(
-                    controller: _scrollController,
+                child: SingleChildScrollView(
+                  controller: _scrollController,
 
-                    child: Column(children: messageList),
-                  ),
+                  child: Column(children: messageList),
                 ),
               ),
             ),
           ),
 
-          // Positioned(
-          //   top: 0,
-          //   left: 0,
-          //   width: widget.sizeDx,
-          //   height: widget.sizeDy,
-          //   child: VocabularyConversationCharacterWidget(sizeDx: widget.sizeDx, sizeDy: widget.sizeDy),
-          // ),
           Positioned(
             top: 0,
             left: 0,
@@ -452,7 +417,7 @@ class _FromTopEndPositionAsOneCharacterConversationContentWidgetState extends St
               decoration: BoxDecoration(
                 color: Colors.transparent,
                 border: Border.all(width: 5.0, color: Colors.black),
-                borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(15.0), bottomRight: Radius.circular(15.0), bottomLeft: Radius.circular(30.0)),
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(15.0), bottomLeft: Radius.circular(15.0)),
               ),
             ),
           ),
@@ -490,7 +455,7 @@ class _FromTopEndPositionAsOneCharacterConversationContentWidgetState extends St
     }
 
     /// max width
-    double maxWidth = widget.sizeDx * 0.75;
+    double maxWidth = 630.0;
 
     double totalHeight = 0;
 
@@ -636,14 +601,13 @@ class _FromTopEndPositionAsOneCharacterConversationContentWidgetState extends St
       margin: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
       duration: const Duration(milliseconds: 100),
       width: widget.sizeDx,
-      height: totalHeight,
+      height: 450.0,
       decoration: BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.all(Radius.circular(10.0))),
       child: Stack(
         alignment: AlignmentDirectional.center,
         children: [
           AnimatedPositioned(
             duration: const Duration(milliseconds: 100),
-            top: 0,
             right: isRightSide ? distanceToBorder : null,
             left: isLeftSide ? distanceToBorder : null,
             width: engSentenceWidth,
@@ -685,23 +649,22 @@ class _FromTopEndPositionAsOneCharacterConversationContentWidgetState extends St
     double distanceToBorder = 5.0;
 
     /// max width
-    double maxWidth = widget.sizeDx * 0.75;
+    double maxWidth = 630.0;
 
-    double imageHeight = 500.0;
-    double imageWidth = maxWidth * 1.0 + 50;
+    double imageHeight = 350.0;
+    double imageWidth = maxWidth;
 
     return AnimatedContainer(
       margin: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
       duration: const Duration(milliseconds: 100),
       width: widget.sizeDx,
-      height: imageHeight + 20.0,
+      height: 450.0,
 
       child: Stack(
         alignment: AlignmentDirectional.center,
         children: [
           AnimatedPositioned(
             duration: const Duration(milliseconds: 100),
-            top: 0,
             right: isRightSide ? distanceToBorder : null,
             left: isLeftSide ? distanceToBorder : null,
             width: imageWidth,

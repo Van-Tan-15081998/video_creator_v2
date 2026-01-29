@@ -3,8 +3,8 @@ import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class FromTopEndPositionAsOneCharacterConversationCharacterFlameWidget extends FlameGame {
-  FromTopEndPositionAsOneCharacterConversationCharacterFlameWidget({required this.sizeDx, required this.sizeDy});
+class FromBottomEndPositionAsOneCharacterConversationCharacterFlameWidget extends FlameGame {
+  FromBottomEndPositionAsOneCharacterConversationCharacterFlameWidget({required this.sizeDx, required this.sizeDy});
 
   final double sizeDx;
   final double sizeDy;
@@ -41,11 +41,11 @@ class FromTopEndPositionAsOneCharacterConversationCharacterFlameWidget extends F
       ),
     );
 
-    double sizeDxCharacterSS01 = 269.0 * 1.2;
-    double sizeDyCharacterSS01 = 230.0 * 1.2;
+    double sizeDxCharacterSS01 = 269.0 * 1.0;
+    double sizeDyCharacterSS01 = 230.0 * 1.0;
 
-    double sizeDxCharacterSS02 = 260.0 * 1.2;
-    double sizeDyCharacterSS02 = 250.0 * 1.2;
+    double sizeDxCharacterSS02 = 260.0 * 1.0;
+    double sizeDyCharacterSS02 = 250.0 * 1.0;
 
     spriteComponentSS01 = SpriteAnimationComponent()
       ..animation = spriteAnimationSS01
@@ -68,7 +68,7 @@ class FromTopEndPositionAsOneCharacterConversationCharacterFlameWidget extends F
         style: GoogleFonts.sriracha(
           // color: Color(0xFF838B83),
           fontWeight: FontWeight.bold,
-          fontSize: 50.0,
+          fontSize: 35.0,
           foreground: Paint()
             ..style = PaintingStyle.stroke
             ..strokeWidth = 10
@@ -83,7 +83,7 @@ class FromTopEndPositionAsOneCharacterConversationCharacterFlameWidget extends F
       text: 'Tommy',
       position: Vector2(spriteComponentSS01.x, spriteComponentSS01.y + (sizeDyCharacterSS01 / 2) + 10.0), // vị trí trên màn hình
       textRenderer: TextPaint(
-        style: GoogleFonts.sriracha(color: Color(0xFFFFE7BA).withValues(alpha: 0.8), fontWeight: FontWeight.bold, fontSize: 50.0, letterSpacing: 5.0),
+        style: GoogleFonts.sriracha(color: Color(0xFFFFE7BA).withValues(alpha: 0.8), fontWeight: FontWeight.bold, fontSize: 35.0, letterSpacing: 5.0),
       ),
     );
 
@@ -95,7 +95,7 @@ class FromTopEndPositionAsOneCharacterConversationCharacterFlameWidget extends F
         style: GoogleFonts.sriracha(
           // color: Color(0xFF838B83),
           fontWeight: FontWeight.bold,
-          fontSize: 50.0,
+          fontSize: 35.0,
           foreground: Paint()
             ..style = PaintingStyle.stroke
             ..strokeWidth = 10
@@ -110,7 +110,7 @@ class FromTopEndPositionAsOneCharacterConversationCharacterFlameWidget extends F
       text: 'Nathan',
       position: Vector2(spriteComponentSS02.x, spriteComponentSS02.y + (sizeDyCharacterSS02 / 2) + 10.0), // vị trí trên màn hình
       textRenderer: TextPaint(
-        style: GoogleFonts.sriracha(color: Color(0xFFFFE7BA).withValues(alpha: 0.8), fontWeight: FontWeight.bold, fontSize: 50.0, letterSpacing: 5.0),
+        style: GoogleFonts.sriracha(color: Color(0xFFFFE7BA).withValues(alpha: 0.8), fontWeight: FontWeight.bold, fontSize: 35.0, letterSpacing: 5.0),
       ),
     );
 
@@ -119,12 +119,12 @@ class FromTopEndPositionAsOneCharacterConversationCharacterFlameWidget extends F
     nameSpriteComponentSS01.anchor = Anchor.center;
     nameSpriteComponentSS02.anchor = Anchor.center;
 
-    add(spriteComponentSS01);
+    // add(spriteComponentSS01);
     add(spriteComponentSS02);
 
-    add(borderNameSpriteComponentSS01);
+    // add(borderNameSpriteComponentSS01);
     add(borderNameSpriteComponentSS02);
-    add(nameSpriteComponentSS01);
+    // add(nameSpriteComponentSS01);
     add(nameSpriteComponentSS02);
   }
 

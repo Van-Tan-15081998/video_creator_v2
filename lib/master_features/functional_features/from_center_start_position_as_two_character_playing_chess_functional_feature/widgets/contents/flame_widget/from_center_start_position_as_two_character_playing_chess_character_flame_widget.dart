@@ -68,7 +68,7 @@ class FromCenterStartPositionAsTwoCharacterPlayingChessCharacterFlameWidget exte
         style: GoogleFonts.sriracha(
           // color: Color(0xFF838B83),
           fontWeight: FontWeight.bold,
-          fontSize: 30.0,
+          fontSize: 35.0,
           foreground: Paint()
             ..style = PaintingStyle.stroke
             ..strokeWidth = 10
@@ -83,7 +83,7 @@ class FromCenterStartPositionAsTwoCharacterPlayingChessCharacterFlameWidget exte
       text: 'Tommy',
       position: Vector2(spriteComponentSS01.x, spriteComponentSS01.y + (sizeDyCharacterSS01 / 2) + 5.0), // vị trí trên màn hình
       textRenderer: TextPaint(
-        style: GoogleFonts.sriracha(color: Color(0xFFFFE7BA).withValues(alpha: 0.8), fontWeight: FontWeight.bold, fontSize: 30.0, letterSpacing: 5.0),
+        style: GoogleFonts.sriracha(color: Color(0xFFFFE7BA).withValues(alpha: 0.8), fontWeight: FontWeight.bold, fontSize: 35.0, letterSpacing: 5.0),
       ),
     );
 
@@ -95,7 +95,7 @@ class FromCenterStartPositionAsTwoCharacterPlayingChessCharacterFlameWidget exte
         style: GoogleFonts.sriracha(
           // color: Color(0xFF838B83),
           fontWeight: FontWeight.bold,
-          fontSize: 30.0,
+          fontSize: 35.0,
           foreground: Paint()
             ..style = PaintingStyle.stroke
             ..strokeWidth = 10
@@ -110,7 +110,7 @@ class FromCenterStartPositionAsTwoCharacterPlayingChessCharacterFlameWidget exte
       text: 'Nathan',
       position: Vector2(spriteComponentSS02.x, spriteComponentSS02.y + (sizeDyCharacterSS02 / 2) + 5.0), // vị trí trên màn hình
       textRenderer: TextPaint(
-        style: GoogleFonts.sriracha(color: Color(0xFFFFE7BA).withValues(alpha: 0.8), fontWeight: FontWeight.bold, fontSize: 30.0, letterSpacing: 5.0),
+        style: GoogleFonts.sriracha(color: Color(0xFFFFE7BA).withValues(alpha: 0.8), fontWeight: FontWeight.bold, fontSize: 35.0, letterSpacing: 5.0),
       ),
     );
 

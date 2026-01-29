@@ -2,6 +2,7 @@ import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/master_data/content_item/01_content_item_unit/content_item_unit.dart';
 import 'package:frame_creator_v2/master_data/content_item/04_content_item_sequential_execution/content_item_sequential_execution.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/controller/functional_sequential_execution_controller.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/models/common_action_model.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/system_sequential_execution_script.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_models.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
@@ -36,6 +37,10 @@ class ScriptFrame with ExecutionCore {
     ///
     setChessAction(
       value: ChessActionModel(systemSequentialExecutionScript: getSystemSequentialExecutionScript, functionalSequentialExecutionController: getFunctionalSequentialExecutionController),
+    );
+    ///
+    setCommonAction(
+      value: CommonActionModel(systemSequentialExecutionScript: getSystemSequentialExecutionScript, functionalSequentialExecutionController: getFunctionalSequentialExecutionController),
     );
   }
 
@@ -94,6 +99,21 @@ class ScriptFrame with ExecutionCore {
       _chessAction = value;
     } else {
       _chessAction ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  CommonActionModel? _commonAction;
+  CommonActionModel? get getCommonAction => _commonAction;
+  void setCommonAction({required CommonActionModel? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _commonAction = value;
+    } else {
+      _commonAction ??= value;
     }
 
     return;

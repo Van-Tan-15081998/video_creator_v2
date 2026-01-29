@@ -280,7 +280,7 @@ class _CrosswordPuzzleGameBoardContentWidgetState extends State<CrosswordPuzzleG
             left: 40.0,
             width: widget.sizeDx - 40.0,
             height: widget.sizeDy - 40.0,
-            child: CrosswordPuzzleSentenceWidget(systemStateManagement: widget.systemStateManagement, sizeDx: widget.sizeDx - 40.0, sizeDy: widget.sizeDy - 40.0),
+            child: CrosswordPuzzleSentenceWidget0(systemStateManagement: widget.systemStateManagement, sizeDx: widget.sizeDx - 40.0, sizeDy: widget.sizeDy - 40.0),
           ),
 
           Positioned(

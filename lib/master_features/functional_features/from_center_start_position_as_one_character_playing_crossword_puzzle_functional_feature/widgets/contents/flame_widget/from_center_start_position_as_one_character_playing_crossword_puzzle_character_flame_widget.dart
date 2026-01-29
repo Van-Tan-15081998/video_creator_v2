@@ -3,8 +3,8 @@ import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class FromTopEndPositionAsOneCharacterConversationCharacterFlameWidget extends FlameGame {
-  FromTopEndPositionAsOneCharacterConversationCharacterFlameWidget({required this.sizeDx, required this.sizeDy});
+class FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleCharacterFlameWidget extends FlameGame {
+  FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleCharacterFlameWidget({required this.sizeDx, required this.sizeDy});
 
   final double sizeDx;
   final double sizeDy;
@@ -50,12 +50,12 @@ class FromTopEndPositionAsOneCharacterConversationCharacterFlameWidget extends F
     spriteComponentSS01 = SpriteAnimationComponent()
       ..animation = spriteAnimationSS01
       ..size = Vector2(sizeDxCharacterSS01, sizeDyCharacterSS01)
-      ..position = Vector2(sizeDxCharacterSS01 / 2 + 25.0, sizeDy - (sizeDyCharacterSS01 / 2 + 50));
+      ..position = Vector2(sizeDxCharacterSS01 / 2 + 25.0, sizeDy - (sizeDyCharacterSS01 / 2 + 25));
 
     spriteComponentSS02 = SpriteAnimationComponent()
       ..animation = spriteAnimationSS02
       ..size = Vector2(sizeDxCharacterSS02, sizeDyCharacterSS02)
-      ..position = Vector2(sizeDx - (sizeDxCharacterSS02 / 2 + 25.0), sizeDy - (sizeDyCharacterSS02 / 2 + 50));
+      ..position = Vector2(sizeDxCharacterSS02 / 2 + 25.0, sizeDyCharacterSS02 / 2 + 125);
 
     spriteComponentSS01.anchor = Anchor.center;
     spriteComponentSS02.anchor = Anchor.center;
@@ -63,7 +63,7 @@ class FromTopEndPositionAsOneCharacterConversationCharacterFlameWidget extends F
     /// Viền Tên Nhân Vật 1
     final borderNameSpriteComponentSS01 = TextComponent(
       text: 'Tommy',
-      position: Vector2(spriteComponentSS01.x, spriteComponentSS01.y + (sizeDyCharacterSS01 / 2) + 10.0), // vị trí trên màn hình
+      position: Vector2(spriteComponentSS01.x, spriteComponentSS01.y + (sizeDyCharacterSS01 / 2) + 5.0), // vị trí trên màn hình
       textRenderer: TextPaint(
         style: GoogleFonts.sriracha(
           // color: Color(0xFF838B83),
@@ -81,7 +81,7 @@ class FromTopEndPositionAsOneCharacterConversationCharacterFlameWidget extends F
     /// Tên Nhân Vật 1
     final nameSpriteComponentSS01 = TextComponent(
       text: 'Tommy',
-      position: Vector2(spriteComponentSS01.x, spriteComponentSS01.y + (sizeDyCharacterSS01 / 2) + 10.0), // vị trí trên màn hình
+      position: Vector2(spriteComponentSS01.x, spriteComponentSS01.y + (sizeDyCharacterSS01 / 2) + 5.0), // vị trí trên màn hình
       textRenderer: TextPaint(
         style: GoogleFonts.sriracha(color: Color(0xFFFFE7BA).withValues(alpha: 0.8), fontWeight: FontWeight.bold, fontSize: 35.0, letterSpacing: 5.0),
       ),
@@ -90,7 +90,7 @@ class FromTopEndPositionAsOneCharacterConversationCharacterFlameWidget extends F
     /// Viền Tên Nhân Vật 2
     final borderNameSpriteComponentSS02 = TextComponent(
       text: 'Nathan',
-      position: Vector2(spriteComponentSS02.x, spriteComponentSS02.y + (sizeDyCharacterSS02 / 2) + 10.0), // vị trí trên màn hình
+      position: Vector2(spriteComponentSS02.x, spriteComponentSS02.y + (sizeDyCharacterSS02 / 2) + 5.0), // vị trí trên màn hình
       textRenderer: TextPaint(
         style: GoogleFonts.sriracha(
           // color: Color(0xFF838B83),
@@ -108,7 +108,7 @@ class FromTopEndPositionAsOneCharacterConversationCharacterFlameWidget extends F
     /// Tên Nhân Vật 2
     final nameSpriteComponentSS02 = TextComponent(
       text: 'Nathan',
-      position: Vector2(spriteComponentSS02.x, spriteComponentSS02.y + (sizeDyCharacterSS02 / 2) + 10.0), // vị trí trên màn hình
+      position: Vector2(spriteComponentSS02.x, spriteComponentSS02.y + (sizeDyCharacterSS02 / 2) + 5.0), // vị trí trên màn hình
       textRenderer: TextPaint(
         style: GoogleFonts.sriracha(color: Color(0xFFFFE7BA).withValues(alpha: 0.8), fontWeight: FontWeight.bold, fontSize: 35.0, letterSpacing: 5.0),
       ),
@@ -119,13 +119,13 @@ class FromTopEndPositionAsOneCharacterConversationCharacterFlameWidget extends F
     nameSpriteComponentSS01.anchor = Anchor.center;
     nameSpriteComponentSS02.anchor = Anchor.center;
 
-    // add(spriteComponentSS01);
-    add(spriteComponentSS02);
+    add(spriteComponentSS01);
+    // add(spriteComponentSS02);
 
-    // add(borderNameSpriteComponentSS01);
-    add(borderNameSpriteComponentSS02);
-    // add(nameSpriteComponentSS01);
-    add(nameSpriteComponentSS02);
+    add(borderNameSpriteComponentSS01);
+    // add(borderNameSpriteComponentSS02);
+    add(nameSpriteComponentSS01);
+    // add(nameSpriteComponentSS02);
   }
 
   @override

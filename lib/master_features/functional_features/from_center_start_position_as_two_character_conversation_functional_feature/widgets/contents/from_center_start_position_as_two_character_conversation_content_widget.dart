@@ -9,6 +9,8 @@ import 'package:frame_creator_v2/core/window_mixin.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/controller/functional_sequential_execution_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/contents/details/step_item_content_as_new_message_conversation.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item_state.dart';
+import 'package:frame_creator_v2/master_features/constant_data/details/system_character.dart';
+import 'package:frame_creator_v2/master_features/constant_data/details/system_window.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -115,15 +117,15 @@ class _FromCenterStartPositionAsTwoCharacterConversationContentWidgetState exten
     /// -----
     /// TODO: Set Mã Định Danh Màn Hình
     /// -----
-    setWindowId(value: widget.systemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsTwoCharacterConversationWindow, isPriorityOverride: true);
+    setWindowId(value: SystemWindow.fromCenterStartPositionAsTwoCharacterConversationWindow, isPriorityOverride: true);
 
     ///
 
     /// -----
     /// TODO: Set Mã Định Danh Nhân Vật
     /// -----
-    setBottomLeftCharacterId(value: widget.systemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id, isPriorityOverride: true);
-    setBottomRightCharacterId(value: widget.systemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA02Id, isPriorityOverride: true);
+    setBottomLeftCharacterId(value: SystemCharacter.characterA01Id, isPriorityOverride: true);
+    setBottomRightCharacterId(value: SystemCharacter.characterA02Id, isPriorityOverride: true);
 
     ///
 

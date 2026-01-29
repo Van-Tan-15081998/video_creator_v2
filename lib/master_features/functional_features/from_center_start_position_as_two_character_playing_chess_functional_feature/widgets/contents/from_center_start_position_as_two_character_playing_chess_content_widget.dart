@@ -9,6 +9,8 @@ import 'package:frame_creator_v2/core/window_mixin.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/controller/functional_sequential_execution_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/contents/details/step_item_content_as_new_message_conversation.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item_state.dart';
+import 'package:frame_creator_v2/master_features/constant_data/details/system_character.dart';
+import 'package:frame_creator_v2/master_features/constant_data/details/system_window.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/widgets/contents/chess_board/square_chess_board_widget.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -118,15 +120,15 @@ class _FromCenterStartPositionAsTwoCharacterPlayingChessContentWidgetState exten
     /// -----
     /// TODO: Set Mã Định Danh Màn Hình
     /// -----
-    setWindowId(value: widget.systemStateManagement?.getSystemConstantData?.getSystemWindow?.fromCenterStartPositionAsTwoCharacterPlayingChessWindow, isPriorityOverride: true);
+    setWindowId(value: SystemWindow.fromCenterStartPositionAsTwoCharacterPlayingChessWindow, isPriorityOverride: true);
 
     ///
 
     /// -----
     /// TODO: Set Mã Định Danh Nhân Vật
     /// -----
-    setTopStartCharacterId(value: widget.systemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA01Id, isPriorityOverride: true);
-    setBottomStartCharacterId(value: widget.systemStateManagement?.getSystemConstantData?.getSystemCharacter?.characterA02Id, isPriorityOverride: true);
+    setTopStartCharacterId(value: SystemCharacter.characterA01Id, isPriorityOverride: true);
+    setBottomStartCharacterId(value: SystemCharacter.characterA02Id, isPriorityOverride: true);
 
     ///
 

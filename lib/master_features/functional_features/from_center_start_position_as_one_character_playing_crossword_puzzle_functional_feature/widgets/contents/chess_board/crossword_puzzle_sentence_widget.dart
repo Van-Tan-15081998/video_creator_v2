@@ -8,8 +8,8 @@ import 'package:frame_creator_v2/features/01_feature_formats/02_crossword_puzzle
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CrosswordPuzzleSentenceWidget0 extends StatefulWidget {
-  const CrosswordPuzzleSentenceWidget0({super.key, required this.systemStateManagement, required this.sizeDx, required this.sizeDy});
+class CrosswordPuzzleSentenceWidget extends StatefulWidget {
+  const CrosswordPuzzleSentenceWidget({super.key, required this.systemStateManagement, required this.sizeDx, required this.sizeDy});
 
   /// -----
   /// TODO:
@@ -20,10 +20,10 @@ class CrosswordPuzzleSentenceWidget0 extends StatefulWidget {
   final double sizeDy;
 
   @override
-  State<CrosswordPuzzleSentenceWidget0> createState() => _CrosswordPuzzleSentenceWidget0State();
+  State<CrosswordPuzzleSentenceWidget> createState() => _CrosswordPuzzleSentenceWidgetState();
 }
 
-class _CrosswordPuzzleSentenceWidget0State extends State<CrosswordPuzzleSentenceWidget0> with TickerProviderStateMixin {
+class _CrosswordPuzzleSentenceWidgetState extends State<CrosswordPuzzleSentenceWidget> with TickerProviderStateMixin {
   late final Ticker _ticker;
 
   final ScrollController _scrollController = ScrollController();

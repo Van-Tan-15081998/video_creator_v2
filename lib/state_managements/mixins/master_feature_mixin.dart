@@ -1,5 +1,6 @@
 import 'package:frame_creator_v2/master_features/functional_features/from_bottom_end_position_as_one_character_conversation_functional_feature/models/from_bottom_end_position_as_one_character_conversation_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_conversation_functional_feature/models/from_center_start_position_as_one_character_conversation_functional_feature.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_playing_crossword_puzzle_functional_feature/models/from_center_start_position_as_one_character_playing_crossword_puzzle_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_conversation_functional_feature/models/from_center_start_position_as_two_character_conversation_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/from_center_start_position_as_two_character_playing_chess_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_top_end_position_as_one_character_conversation_functional_feature/models/from_top_end_position_as_one_character_conversation_functional_feature.dart';
@@ -107,6 +108,22 @@ mixin MasterFeatureMixin {
       _fromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature = value;
     } else {
       _fromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature ??= value;
+    }
+
+    ///
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature? _fromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature;
+  FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature? get getFromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature => _fromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature;
+  void setFromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature({required FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _fromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature = value;
+    } else {
+      _fromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature ??= value;
     }
 
     ///

@@ -13,8 +13,8 @@ import 'package:frame_creator_v2/master_features/functional_features/from_center
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class SquareChessBoardWidget extends StatefulWidget {
-  const SquareChessBoardWidget({super.key, required this.systemStateManagement, required this.sizeDx, required this.sizeDy});
+class CrosswordPuzzleBoardWidget0 extends StatefulWidget {
+  const CrosswordPuzzleBoardWidget0({super.key, required this.systemStateManagement, required this.sizeDx, required this.sizeDy});
 
   /// -----
   /// TODO:
@@ -25,10 +25,10 @@ class SquareChessBoardWidget extends StatefulWidget {
   final double sizeDy;
 
   @override
-  State<SquareChessBoardWidget> createState() => _SquareChessBoardWidgetState();
+  State<CrosswordPuzzleBoardWidget0> createState() => _CrosswordPuzzleBoardWidget0State();
 }
 
-class _SquareChessBoardWidgetState extends State<SquareChessBoardWidget> with TickerProviderStateMixin {
+class _CrosswordPuzzleBoardWidget0State extends State<CrosswordPuzzleBoardWidget0> with TickerProviderStateMixin {
   late final Ticker _ticker;
 
   /// -----

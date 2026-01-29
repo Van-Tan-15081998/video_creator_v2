@@ -40,6 +40,7 @@ import 'package:frame_creator_v2/features/vocabulary_title/models/vocabulary_tit
 import 'package:frame_creator_v2/master_data/content_item/04_content_item_sequential_execution/content_item_sequential_execution.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_bottom_end_position_as_one_character_conversation_functional_feature/models/from_bottom_end_position_as_one_character_conversation_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_conversation_functional_feature/models/from_center_start_position_as_one_character_conversation_functional_feature.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_playing_crossword_puzzle_functional_feature/models/from_center_start_position_as_one_character_playing_crossword_puzzle_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_conversation_functional_feature/models/from_center_start_position_as_two_character_conversation_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/from_center_start_position_as_two_character_playing_chess_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_top_end_position_as_one_character_conversation_functional_feature/models/from_top_end_position_as_one_character_conversation_functional_feature.dart';
@@ -287,6 +288,12 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.setTopPosition(value: 15.0, isPriorityOverride: true, isSetActiveTopPosition: true);
       getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.setLeftPosition(value: 15.0, isPriorityOverride: true, isSetActiveLeftPosition: true);
 
+      setFromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature(value: FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature(systemStateManagement: getSystemStateManagement, sizeDx: null, sizeDy: null), isPriorityOverride: true);
+      getFromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature?.setSizeDx(value: getSizeDx * 0.6, isPriorityOverride: true, isSetActiveSizeDx: true);
+      getFromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature?.setSizeDy(value: getSizeDy * 1.0 - 30.0, isPriorityOverride: true, isSetActiveSizeDy: true);
+      getFromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature?.setTopPosition(value: 15.0, isPriorityOverride: true, isSetActiveTopPosition: true);
+      getFromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature?.setLeftPosition(value: 15.0, isPriorityOverride: true, isSetActiveLeftPosition: true);
+
       setFromTopEndPositionAsOneCharacterConversationFunctionalFeature(value: FromTopEndPositionAsOneCharacterConversationFunctionalFeature(systemStateManagement: getSystemStateManagement, sizeDx: null, sizeDy: null), isPriorityOverride: true);
       getFromTopEndPositionAsOneCharacterConversationFunctionalFeature?.setSizeDx(value: getSizeDx - (getSizeDx * 0.6 + 45), isPriorityOverride: true, isSetActiveSizeDx: true);
       getFromTopEndPositionAsOneCharacterConversationFunctionalFeature?.setSizeDy(value: getSizeDy * 0.4, isPriorityOverride: true, isSetActiveSizeDy: true);
@@ -300,6 +307,7 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       getFunctionalFeatureManagement?.setFromCenterStartPositionAsOneCharacterConversationFunctionalFeature(value: getFromCenterStartPositionAsOneCharacterConversationFunctionalFeature, isPriorityOverride: true);
       getFunctionalFeatureManagement?.setFromCenterStartPositionAsTwoCharacterConversationFunctionalFeature(value: getFromCenterStartPositionAsTwoCharacterConversationFunctionalFeature, isPriorityOverride: true);
       getFunctionalFeatureManagement?.setFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature(value: getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature, isPriorityOverride: true);
+      getFunctionalFeatureManagement?.setFromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature(value: getFromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature, isPriorityOverride: true);
       getFunctionalFeatureManagement?.setFromTopEndPositionAsOneCharacterConversationFunctionalFeature(value: getFromTopEndPositionAsOneCharacterConversationFunctionalFeature, isPriorityOverride: true);
 
       /// ----- | ----- | ----- | ----- | ----- |
@@ -772,6 +780,7 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
                 AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromCenterStartPositionAsOneCharacterConversationFunctionalFeature?.getWindowWidget ?? Container()),
                 AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.getWindowWidget ?? Container()),
                 AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.getWindowWidget ?? Container()),
+                AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature?.getWindowWidget ?? Container()),
                 AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromTopEndPositionAsOneCharacterConversationFunctionalFeature?.getWindowWidget ?? Container()),
 
                 /// ----- | ----- | ----- | ----- | ----- |
@@ -880,6 +889,7 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       await getFromCenterStartPositionAsOneCharacterConversationFunctionalFeature?.onSetupRoot();
       await getFromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.onSetupRoot();
       await getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.onSetupRoot();
+      await getFromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature?.onSetupRoot();
       await getFromTopEndPositionAsOneCharacterConversationFunctionalFeature?.onSetupRoot();
 
       /// ----- | ----- | ----- | ----- | ----- |
@@ -977,6 +987,11 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
 
       /// TODO:
       getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature
+        ?..setConditionActiveByLeftDirection()
+        ..onDeactivateWindow();
+
+      /// TODO:
+      getFromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature
         ?..setConditionActiveByLeftDirection()
         ..onDeactivateWindow();
 
@@ -1159,6 +1174,7 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       await getFromCenterStartPositionAsOneCharacterConversationFunctionalFeature?.onInitRoot();
       await getFromCenterStartPositionAsTwoCharacterConversationFunctionalFeature?.onInitRoot();
       await getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.onInitRoot();
+      await getFromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature?.onInitRoot();
       await getFromTopEndPositionAsOneCharacterConversationFunctionalFeature?.onInitRoot();
 
       /// ----- | ----- | ----- | ----- | ----- |
