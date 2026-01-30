@@ -7,6 +7,7 @@ import 'package:frame_creator_v2/master_data/functional_sequential_execution/ste
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item_state.dart';
 import 'package:frame_creator_v2/master_features/constant_data/details/system_character.dart';
 import 'package:frame_creator_v2/master_features/constant_data/details/system_window.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_playing_crossword_puzzle_functional_feature/models/data/crossword_puzzle_models.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_models.dart';
 
 /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -45,6 +46,36 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
     // getCommonAction?.onStartWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterStartPositionAsTwoCharacterPlayingChessWindow, gapTime: 2);
     getCommonAction?.onStartWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleWindow, gapTime: 2);
 
+    ///
+    getCrosswordPuzzleAction?.onOpenSolvingRowA2J2(contentItemUnit: contentItemUnit, gapTime: 10);
+    getCrosswordPuzzleAction?.onOpenSolvedRowA2J2(contentItemUnit: contentItemUnit, gapTime: 10);
+
+    ///
+    getCrosswordPuzzleAction?.onOpenSolvingRowA3J3(contentItemUnit: contentItemUnit, gapTime: 10);
+    getCrosswordPuzzleAction?.onOpenSolvedRowA3J3(contentItemUnit: contentItemUnit, gapTime: 10);
+
+    ///
+    getCrosswordPuzzleAction?.onOpenSolvingRowA4J4(contentItemUnit: contentItemUnit, gapTime: 10);
+    getCrosswordPuzzleAction?.onOpenSolvedRowA4J4(contentItemUnit: contentItemUnit, gapTime: 10);
+
+    ///
+    getCrosswordPuzzleAction?.onOpenSolvingRowA5J5(contentItemUnit: contentItemUnit, gapTime: 10);
+    getCrosswordPuzzleAction?.onOpenSolvedRowA5J5(contentItemUnit: contentItemUnit, gapTime: 10);
+
+    ///
+    getCrosswordPuzzleAction?.onOpenSolvingRowA6J6(contentItemUnit: contentItemUnit, gapTime: 10);
+    getCrosswordPuzzleAction?.onOpenSolvedSquare(
+      contentItemUnit: contentItemUnit,
+      openSolvedData: OpenSolvedModel(square: CrosswordPuzzleSquareEnum.sqrE6),
+      gapTime: 10,
+    );
+    getCrosswordPuzzleAction?.onOpenSolvedSquare(
+      contentItemUnit: contentItemUnit,
+      openSolvedData: OpenSolvedModel(square: CrosswordPuzzleSquareEnum.sqrG6),
+      gapTime: 10,
+    );
+    getCrosswordPuzzleAction?.onOpenSolvedRowA6J6(contentItemUnit: contentItemUnit, gapTime: 10);
+
     /// ----- | ----- | -----
     /// TODO: Step [MAIN]
     /// ----- | ----- | -----
@@ -53,8 +84,8 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
       messageData: StepItemContentAsNewMessageConversation(
         message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 _150',
         imageSource: null, //
-        windowId: SystemWindow.fromBottomEndPositionAsOneCharacterConversationWindow,
-        characterId: SystemCharacter.characterA01Id,
+        windowId: SystemWindow.fromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleWindow,
+        characterId: SystemCharacter.characterA02Id,
       ),
       gapTime: 5,
     );
@@ -67,8 +98,8 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
       messageData: StepItemContentAsNewMessageConversation(
         message: null,
         imageSource: 'assets/images/interesting_knowledge/knowledge_01.jpg', //
-        windowId: SystemWindow.fromBottomEndPositionAsOneCharacterConversationWindow,
-        characterId: SystemCharacter.characterA01Id,
+        windowId: SystemWindow.fromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleWindow,
+        characterId: SystemCharacter.characterA02Id,
       ),
       gapTime: 5,
     );
@@ -81,8 +112,8 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
       messageData: StepItemContentAsNewMessageConversation(
         message: null,
         imageSource: null, //
-        windowId: SystemWindow.fromBottomEndPositionAsOneCharacterConversationWindow,
-        characterId: SystemCharacter.characterA01Id,
+        windowId: SystemWindow.fromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleWindow,
+        characterId: SystemCharacter.characterA02Id,
       ),
       gapTime: 5,
     );

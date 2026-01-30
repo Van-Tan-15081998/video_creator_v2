@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/core/window_feature.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_playing_crossword_puzzle_functional_feature/models/data/square_crossword_puzzle_board_management.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_playing_crossword_puzzle_functional_feature/widgets/from_center_start_position_as_one_character_playing_crossword_puzzle_widget.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/square_chess_board_management.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/widgets/from_center_start_position_as_two_character_playing_chess_widget.dart';
@@ -16,13 +17,13 @@ class FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeatu
   /// -----
   /// TODO:
   /// -----
-  SquareChessBoardManagement? _squareChessBoardManagement;
-  SquareChessBoardManagement? get getSquareChessBoardManagement => _squareChessBoardManagement;
-  void setSquareChessBoardManagement({required SquareChessBoardManagement? value, bool? isPriorityOverride}) {
+  SquareCrosswordPuzzleBoardManagement? _squareCrosswordPuzzleBoardManagement;
+  SquareCrosswordPuzzleBoardManagement? get getSquareCrosswordPuzzleBoardManagement => _squareCrosswordPuzzleBoardManagement;
+  void setSquareCrosswordPuzzleBoardManagement({required SquareCrosswordPuzzleBoardManagement? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
-      _squareChessBoardManagement = value;
+      _squareCrosswordPuzzleBoardManagement = value;
     } else {
-      _squareChessBoardManagement ??= value;
+      _squareCrosswordPuzzleBoardManagement ??= value;
     }
 
     return;
@@ -86,7 +87,7 @@ class FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeatu
       /// TODO:
       /// -----
 
-      setSquareChessBoardManagement(value: SquareChessBoardManagement(systemStateManagement: getSystemStateManagement), isPriorityOverride: true);
+      setSquareCrosswordPuzzleBoardManagement(value: SquareCrosswordPuzzleBoardManagement(systemStateManagement: getSystemStateManagement), isPriorityOverride: true);
 
       /// -----
       /// TODO:
@@ -167,7 +168,7 @@ class FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeatu
       /// -----
       /// TODO:
       /// -----
-      await getSquareChessBoardManagement?.onSetupRoot();
+      await getSquareCrosswordPuzzleBoardManagement?.onSetupRoot();
     } catch (e) {
       await onReportRootIssue(nameFunction: '[onSetupRootForSubCom]');
     }
@@ -185,7 +186,7 @@ class FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeatu
       /// -----
       /// TODO:
       /// -----
-      await getSquareChessBoardManagement?.onInitRoot();
+      await getSquareCrosswordPuzzleBoardManagement?.onInitRoot();
     } catch (e) {
       await onReportRootIssue(nameFunction: '[onInitRootForSubCom]');
     }

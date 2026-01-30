@@ -58,6 +58,13 @@ class FlowType with ExecutionCore {
   }
 
   ///
+  /// TODO: as CrosswordPuzzleFlow
+  ///
+  FlowType.asCrosswordPuzzleFlow() {
+    setTypeAsCrosswordPuzzleFlow();
+  }
+
+  ///
   /// TODO: Trạng thái tồn tại nội dung
   ///
   String? _type;
@@ -186,6 +193,21 @@ class FlowType with ExecutionCore {
 
   bool isTypeAsChessFlow() {
     if (getType == '[CHESS_FLOW]') {
+      return true;
+    }
+
+    return false;
+  }
+
+  ///
+  /// TODO: Loại => Crossword Puzzle Flow
+  ///
+  void setTypeAsCrosswordPuzzleFlow() {
+    setType(value: '[CROSSWORD_PUZZLE_FLOW]', isPriorityOverride: true);
+  }
+
+  bool isTypeAsCrosswordPuzzleFlow() {
+    if (getType == '[CROSSWORD_PUZZLE_FLOW]') {
       return true;
     }
 

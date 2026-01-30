@@ -1,55 +1,18 @@
-import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
-import 'package:frame_creator_v2/master_features/system_features/from_bottom_end_position_as_pomodoro_cycle/models/from_bottom_end_position_as_pomodoro_cycle_system_feature.dart';
-import 'package:frame_creator_v2/master_features/system_features/from_center_end_position_as_countdown_timer/models/from_center_end_position_as_countdown_time_cycle_system_feature.dart';
-import 'package:frame_creator_v2/master_features/system_features/from_center_position_as_introductory_conversation/models/from_center_position_as_introductory_conversation_system_feature.dart';
-import 'package:frame_creator_v2/state_managements/mixins/feature_mixin.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/basic_message_flow_controller.dart';
 
-class SystemFeatureManagement with ExecutionCore, FeatureMixin {
-  /// -----
+class CrosswordPuzzleFlowController extends BasicMessageFlowController {
+  ///
   /// TODO:
-  /// -----
-  FromBottomEndPositionAsPomodoroCycleSystemFeature? _fromBottomEndPositionAsPomodoroCycleSystemFeature;
-  FromBottomEndPositionAsPomodoroCycleSystemFeature? get getFromBottomEndPositionAsPomodoroCycleSystemFeature => _fromBottomEndPositionAsPomodoroCycleSystemFeature;
-  void setFromBottomEndPositionAsPomodoroCycleSystemFeature({required FromBottomEndPositionAsPomodoroCycleSystemFeature? value, bool? isPriorityOverride}) {
+  ///
+  int? _seconds;
+  int get getSeconds => _seconds ?? 0;
+  void setSeconds({required int? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
-      _fromBottomEndPositionAsPomodoroCycleSystemFeature = value;
+      _seconds = value;
     } else {
-      _fromBottomEndPositionAsPomodoroCycleSystemFeature ??= value;
+      _seconds ??= value;
     }
 
-    ///
-    return;
-  }
-
-  /// -----
-  /// TODO:
-  /// -----
-  FromCenterEndPositionAsCountdownTimeCycleSystemFeature? _fromCenterEndPositionAsCountdownTimeCycleSystemFeature;
-  FromCenterEndPositionAsCountdownTimeCycleSystemFeature? get getFromCenterEndPositionAsCountdownTimeCycleSystemFeature => _fromCenterEndPositionAsCountdownTimeCycleSystemFeature;
-  void setFromCenterEndPositionAsCountdownTimeCycleSystemFeature({required FromCenterEndPositionAsCountdownTimeCycleSystemFeature? value, bool? isPriorityOverride}) {
-    if (isPriorityOverride == true) {
-      _fromCenterEndPositionAsCountdownTimeCycleSystemFeature = value;
-    } else {
-      _fromCenterEndPositionAsCountdownTimeCycleSystemFeature ??= value;
-    }
-
-    ///
-    return;
-  }
-
-  /// -----
-  /// TODO:
-  /// -----
-  FromCenterPositionAsIntroductoryConversationSystemFeature? _fromCenterPositionAsIntroductoryConversationSystemFeature;
-  FromCenterPositionAsIntroductoryConversationSystemFeature? get getFromCenterPositionAsIntroductoryConversationSystemFeature => _fromCenterPositionAsIntroductoryConversationSystemFeature;
-  void setFromCenterPositionAsIntroductoryConversationSystemFeature({required FromCenterPositionAsIntroductoryConversationSystemFeature? value, bool? isPriorityOverride}) {
-    if (isPriorityOverride == true) {
-      _fromCenterPositionAsIntroductoryConversationSystemFeature = value;
-    } else {
-      _fromCenterPositionAsIntroductoryConversationSystemFeature ??= value;
-    }
-
-    ///
     return;
   }
 
@@ -110,6 +73,7 @@ class SystemFeatureManagement with ExecutionCore, FeatureMixin {
       /// -----
       /// TODO:
       /// -----
+      setFunctionalSequentialExecutionStepItemStateListAsStack(value: [], isPriorityOverride: true);
 
       /// -----
       /// TODO: Setup Root For SubCom

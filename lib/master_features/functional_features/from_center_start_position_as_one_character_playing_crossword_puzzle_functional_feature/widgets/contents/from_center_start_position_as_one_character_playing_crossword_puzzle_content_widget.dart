@@ -11,9 +11,7 @@ import 'package:frame_creator_v2/master_data/functional_sequential_execution/ste
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item_state.dart';
 import 'package:frame_creator_v2/master_features/constant_data/details/system_character.dart';
 import 'package:frame_creator_v2/master_features/constant_data/details/system_window.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_playing_crossword_puzzle_functional_feature/widgets/contents/chess_board/crossword_puzzle_board_widgeta.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_playing_crossword_puzzle_functional_feature/widgets/contents/chess_board/crossword_puzzle_sentence_widget.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/widgets/contents/chess_board/square_chess_board_widget.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_playing_crossword_puzzle_functional_feature/widgets/contents/chess_board/crossword_puzzle_board_widget.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -122,7 +120,7 @@ class _FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleContentWidgetS
     /// -----
     /// TODO: Set Mã Định Danh Màn Hình
     /// -----
-    setWindowId(value: SystemWindow.fromCenterStartPositionAsTwoCharacterPlayingChessWindow, isPriorityOverride: true);
+    setWindowId(value: SystemWindow.fromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleWindow, isPriorityOverride: true);
 
     ///
 
@@ -345,7 +343,7 @@ class _FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleContentWidgetS
             top: 15.0,
             height: 100.0,
             child: Container(
-              width: 500.0,
+              width: 620.0,
               height: 100.0,
               decoration: BoxDecoration(
                 color: Color(0xFF2C2C2C).withValues(alpha: 0.85),
@@ -368,7 +366,7 @@ class _FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleContentWidgetS
                               children: [
                                 Flexible(
                                   child: Text(
-                                    'PLAY CHESS',
+                                    'CROSSWORD PUZZLE',
                                     style: GoogleFonts.poetsenOne(
                                       textStyle: TextStyle(
                                         fontSize: 35.0,
@@ -395,7 +393,7 @@ class _FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleContentWidgetS
                               children: [
                                 Flexible(
                                   child: Text(
-                                    'PLAY CHESS',
+                                    'CROSSWORD PUZZLE',
                                     style: GoogleFonts.poetsenOne(
                                       textStyle: TextStyle(fontSize: 35.0, fontWeight: FontWeight.w600, fontStyle: FontStyle.normal, color: Color(0xFFFFFFFF), letterSpacing: 5.0),
                                     ),
@@ -423,7 +421,6 @@ class _FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleContentWidgetS
           //   height: widget.sizeDy - 80.0,
           //   child: SquareChessBoardWidget(systemStateManagement: widget.systemStateManagement, sizeDx: widget.sizeDx - 80.0, sizeDy: widget.sizeDy - 80.0),
           // ),
-
           AnimatedPositioned(
             duration: const Duration(milliseconds: 100),
             top: 40.0,
@@ -441,14 +438,13 @@ class _FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleContentWidgetS
           //   height: widget.sizeDy - 40.0,
           //   child: CrosswordPuzzleSentenceWidget(systemStateManagement: widget.systemStateManagement, sizeDx: widget.sizeDx - 40.0, sizeDy: widget.sizeDy - 40.0),
           // ),
-
           Positioned(
             top: 60.0,
             left: 60.0,
             width: 1200.0,
             height: 260.0,
             child: Container(
-              color: Colors.red,
+              color: Color(0xFFFFFFFF).withValues(alpha: 0.2),
               width: 1200.0,
               height: 260.0,
               child: ShaderMask(
@@ -459,21 +455,21 @@ class _FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleContentWidgetS
                     end: Alignment.centerRight,
                     colors: [
                       // Colors.white,
-                      Colors.white.withValues(alpha: 0.9),
-                      Colors.white.withValues(alpha: 0.8),
-                      Colors.white.withValues(alpha: 0.7),
-                      Colors.white.withValues(alpha: 0.6),
-                      Colors.white.withValues(alpha: 0.5),
-                      Colors.white.withValues(alpha: 0.4),
-                      Colors.white.withValues(alpha: 0.3),
-                      Colors.white.withValues(alpha: 0.2),
-                      Colors.white.withValues(alpha: 0.1),
-                      Colors.white.withValues(alpha: 0.05),
+                      Colors.white.withValues(alpha: 0.99),
+                      Colors.white.withValues(alpha: 0.98),
+                      Colors.white.withValues(alpha: 0.97),
+                      Colors.white.withValues(alpha: 0.96),
+                      Colors.white.withValues(alpha: 0.95),
+                      Colors.white.withValues(alpha: 0.94),
+                      Colors.white.withValues(alpha: 0.93),
+                      Colors.white.withValues(alpha: 0.92),
+                      Colors.white.withValues(alpha: 0.91),
+                      Colors.white.withValues(alpha: 0.90),
                       Colors.transparent,
                       Colors.transparent,
                       Colors.transparent,
                     ],
-                    stops: [0.76, 0.78, 0.80, 0.82, 0.84, 0.86, 0.88, 0.90, 0.92, 0.94, 0.96, 0.98, 1.0],
+                    stops: [0.88, 0.89, 0.90, 0.91, 0.92, 0.93, 0.94, 0.95, 0.96, 0.97, 0.98, 0.99, 1.0],
                   ).createShader(bounds);
                 },
                 child: Padding(
@@ -493,14 +489,14 @@ class _FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleContentWidgetS
           ),
 
           Positioned(
-            bottom: 70.0,
+            bottom: 10.0,
             left: 320.0,
             width: 1200.0,
-            height: 260.0,
+            height: 250.0,
             child: Container(
-              color: Colors.red,
+              color: Color(0xFFFFFFFF).withValues(alpha: 0.2),
               width: 1200.0,
-              height: 260.0,
+              height: 250.0,
               child: ShaderMask(
                 blendMode: BlendMode.dstIn, // Giữ phần gradient trong text
                 shaderCallback: (Rect bounds) {
@@ -509,21 +505,21 @@ class _FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleContentWidgetS
                     end: Alignment.centerRight,
                     colors: [
                       // Colors.white,
-                      Colors.white.withValues(alpha: 0.9),
-                      Colors.white.withValues(alpha: 0.8),
-                      Colors.white.withValues(alpha: 0.7),
-                      Colors.white.withValues(alpha: 0.6),
-                      Colors.white.withValues(alpha: 0.5),
-                      Colors.white.withValues(alpha: 0.4),
-                      Colors.white.withValues(alpha: 0.3),
-                      Colors.white.withValues(alpha: 0.2),
-                      Colors.white.withValues(alpha: 0.1),
-                      Colors.white.withValues(alpha: 0.05),
+                      Colors.white.withValues(alpha: 0.99),
+                      Colors.white.withValues(alpha: 0.98),
+                      Colors.white.withValues(alpha: 0.97),
+                      Colors.white.withValues(alpha: 0.96),
+                      Colors.white.withValues(alpha: 0.95),
+                      Colors.white.withValues(alpha: 0.94),
+                      Colors.white.withValues(alpha: 0.93),
+                      Colors.white.withValues(alpha: 0.92),
+                      Colors.white.withValues(alpha: 0.91),
+                      Colors.white.withValues(alpha: 0.90),
                       Colors.transparent,
                       Colors.transparent,
                       Colors.transparent,
                     ],
-                    stops: [0.76, 0.78, 0.80, 0.82, 0.84, 0.86, 0.88, 0.90, 0.92, 0.94, 0.96, 0.98, 1.0],
+                    stops: [0.88, 0.89, 0.90, 0.91, 0.92, 0.93, 0.94, 0.95, 0.96, 0.97, 0.98, 0.99, 1.0],
                   ).createShader(bounds);
                 },
                 child: Padding(
@@ -591,7 +587,7 @@ class _FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleContentWidgetS
     }
 
     /// max width
-    double maxWidth = 1000.0;
+    double maxWidth = 1150.0;
 
     double totalHeight = 0;
 
@@ -786,10 +782,10 @@ class _FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleContentWidgetS
     double distanceToBorder = 5.0;
 
     /// max width
-    double maxWidth = 1000.0;
+    double maxWidth = 1150.0;
 
-    double imageHeight = 500.0;
-    double imageWidth = maxWidth * 1.0 + 50;
+    double imageHeight = 240.0;
+    double imageWidth = maxWidth * 1.0;
 
     return AnimatedContainer(
       margin: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),

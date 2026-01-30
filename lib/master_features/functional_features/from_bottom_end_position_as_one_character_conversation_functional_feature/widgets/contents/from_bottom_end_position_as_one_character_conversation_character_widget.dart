@@ -1,8 +1,6 @@
 import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
-import 'package:frame_creator_v2/components/flame/communication_flame_widget.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_bottom_end_position_as_one_character_conversation_functional_feature/widgets/contents/flame_widget/from_bottom_end_position_as_one_character_conversation_character_flame_widget.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_top_end_position_as_one_character_conversation_functional_feature/widgets/contents/flame_widget/from_top_end_position_as_one_character_conversation_character_flame_widget.dart';
 
 class FromBottomEndPositionAsOneCharacterConversationCharacterWidget extends StatefulWidget {
   const FromBottomEndPositionAsOneCharacterConversationCharacterWidget({super.key, required this.sizeDx, required this.sizeDy});

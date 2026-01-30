@@ -1,13 +1,13 @@
 import 'dart:async';
+
+import 'package:flame/components.dart';
 import 'package:flame/text.dart';
 import 'package:flutter/material.dart';
-import 'package:flame/components.dart';
 import 'package:frame_creator_v2/components/animated_background/models/animated_background_state_management.dart';
 import 'package:frame_creator_v2/components/animated_background/models/animated_icon_status.dart';
 import 'package:frame_creator_v2/components/animated_background/models/basic_movement_direction.dart';
 import 'package:frame_creator_v2/components/animated_background/models/basic_movement_object.dart';
 import 'package:frame_creator_v2/components/animated_background/widgets/movement_objects/basic_animated_symbol_sprite.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 /// -----
 /// TODO:

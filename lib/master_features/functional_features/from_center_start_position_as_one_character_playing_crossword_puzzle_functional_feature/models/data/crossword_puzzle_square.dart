@@ -1,6 +1,6 @@
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_playing_crossword_puzzle_functional_feature/models/data/crossword_puzzle_piece_state_item.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_playing_crossword_puzzle_functional_feature/models/data/square_crossword_puzzle_board_management.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_piece_state_item.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 
 class CrosswordPuzzleSquare with ExecutionCore {
@@ -700,28 +700,13 @@ class CrosswordPuzzleSquare with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
-  ChessPieceStateItem? _chessPieceStateItem;
-  ChessPieceStateItem? get getChessPieceStateItem => _chessPieceStateItem;
-  void setChessPieceStateItem({required ChessPieceStateItem? value, bool? isPriorityOverride}) {
+  CrosswordPuzzlePieceStateItem? _crosswordPuzzlePieceStateItem;
+  CrosswordPuzzlePieceStateItem? get getCrosswordPuzzlePieceStateItem => _crosswordPuzzlePieceStateItem;
+  void setCrosswordPuzzlePieceStateItem({required CrosswordPuzzlePieceStateItem? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
-      _chessPieceStateItem = value;
+      _crosswordPuzzlePieceStateItem = value;
     } else {
-      _chessPieceStateItem ??= value;
-    }
-
-    return;
-  }
-
-  /// -----
-  /// TODO: Bóng Của Quân Cờ Tại Ô Cờ
-  /// -----
-  ChessPieceStateItem? _chessPieceStateItemAsShadow;
-  ChessPieceStateItem? get getChessPieceStateItemAsShadow => _chessPieceStateItemAsShadow;
-  void setChessPieceStateItemAsShadow({required ChessPieceStateItem? value, bool? isPriorityOverride}) {
-    if (isPriorityOverride == true) {
-      _chessPieceStateItemAsShadow = value;
-    } else {
-      _chessPieceStateItemAsShadow ??= value;
+      _crosswordPuzzlePieceStateItem ??= value;
     }
 
     return;
@@ -731,7 +716,7 @@ class CrosswordPuzzleSquare with ExecutionCore {
   /// TODO:
   /// -----
   bool isEmptyChessPiece() {
-    if (getChessPieceStateItem == null) {
+    if (getCrosswordPuzzlePieceStateItem == null) {
       return true;
     }
     return false;
@@ -740,13 +725,13 @@ class CrosswordPuzzleSquare with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
-  bool? isHighlightCanMoveByChessPiece;
-  bool? get getIsHighlightCanMoveByChessPiece => isHighlightCanMoveByChessPiece;
-  void setIsHighlightCanMoveByChessPiece({required bool? value, bool? isPriorityOverride}) {
+  bool? _isHighlightBelongToAWord;
+  bool? get getIsHighlightBelongToAWord => _isHighlightBelongToAWord;
+  void setIsHighlightBelongToAWord({required bool? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
-      isHighlightCanMoveByChessPiece = value;
+      _isHighlightBelongToAWord = value;
     } else {
-      isHighlightCanMoveByChessPiece ??= value;
+      _isHighlightBelongToAWord ??= value;
     }
 
     return;
@@ -755,13 +740,13 @@ class CrosswordPuzzleSquare with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
-  bool? isHighlightCheckLegalMovementByChessPiece;
-  bool? get getIsHighlightCheckLegalMovementByChessPiece => isHighlightCheckLegalMovementByChessPiece;
-  void setIsHighlightCheckLegalMovementByChessPiece({required bool? value, bool? isPriorityOverride}) {
+  bool? _isHighlightSolving;
+  bool? get getIsHighlightSolving => _isHighlightSolving;
+  void setIsHighlightSolving({required bool? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
-      isHighlightCheckLegalMovementByChessPiece = value;
+      _isHighlightSolving = value;
     } else {
-      isHighlightCheckLegalMovementByChessPiece ??= value;
+      _isHighlightSolving ??= value;
     }
 
     return;
@@ -770,13 +755,13 @@ class CrosswordPuzzleSquare with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
-  bool? isHighlightCanCaptureByChessPiece;
-  bool? get getIsHighlightCanCaptureByChessPiece => isHighlightCanCaptureByChessPiece;
-  void setIsHighlightCanCaptureByChessPiece({required bool? value, bool? isPriorityOverride}) {
+  bool? _isHighlightSolved;
+  bool? get getIsHighlightSolved => _isHighlightSolved;
+  void setIsHighlightSolved({required bool? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
-      isHighlightCanCaptureByChessPiece = value;
+      _isHighlightSolved = value;
     } else {
-      isHighlightCanCaptureByChessPiece ??= value;
+      _isHighlightSolved ??= value;
     }
 
     return;
@@ -785,61 +770,19 @@ class CrosswordPuzzleSquare with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
-  bool? isHighlightOriginByChessPiece;
-  bool? get getIsHighlightOriginByChessPiece => isHighlightOriginByChessPiece;
-  void setIsHighlightOriginByChessPiece({required bool? value, bool? isPriorityOverride}) {
-    if (isPriorityOverride == true) {
-      isHighlightOriginByChessPiece = value;
-    } else {
-      isHighlightOriginByChessPiece ??= value;
+  void onSolving() {
+    if (getCrosswordPuzzlePieceStateItem?.getStateModel?.getTextValue?.isNotEmpty == true) {
+      setIsHighlightSolving(value: true, isPriorityOverride: true);
     }
-
-    return;
   }
 
   /// -----
   /// TODO:
   /// -----
-  bool? isHighlightDestinationByChessPiece;
-  bool? get getIsHighlightDestinationByChessPiece => isHighlightDestinationByChessPiece;
-  void setIsHighlightDestinationByChessPiece({required bool? value, bool? isPriorityOverride}) {
-    if (isPriorityOverride == true) {
-      isHighlightDestinationByChessPiece = value;
-    } else {
-      isHighlightDestinationByChessPiece ??= value;
+  void onSolved() {
+    if (getCrosswordPuzzlePieceStateItem?.getStateModel?.getTextValue?.isNotEmpty == true) {
+      setIsHighlightSolved(value: true, isPriorityOverride: true);
     }
-
-    return;
-  }
-
-  /// -----
-  /// TODO:
-  /// -----
-  bool? isHighlightSpecifyDisplayByChessPiece;
-  bool? get getIsHighlightSpecifyDisplayByChessPiece => isHighlightSpecifyDisplayByChessPiece;
-  void setIsHighlightSpecifyDisplayByChessPiece({required bool? value, bool? isPriorityOverride}) {
-    if (isPriorityOverride == true) {
-      isHighlightSpecifyDisplayByChessPiece = value;
-    } else {
-      isHighlightSpecifyDisplayByChessPiece ??= value;
-    }
-
-    return;
-  }
-
-  /// -----
-  /// TODO:
-  /// -----
-  bool? isHighlightCheckmateByChessPiece;
-  bool? get getIsHighlightCheckmateByChessPiece => isHighlightCheckmateByChessPiece;
-  void setIsHighlightCheckmateByChessPiece({required bool? value, bool? isPriorityOverride}) {
-    if (isPriorityOverride == true) {
-      isHighlightCheckmateByChessPiece = value;
-    } else {
-      isHighlightCheckmateByChessPiece ??= value;
-    }
-
-    return;
   }
 
   /// -----
@@ -870,14 +813,6 @@ class CrosswordPuzzleSquare with ExecutionCore {
     }
 
     return;
-  }
-
-  onPositionSynchronize() {
-    /// -----
-    /// TODO: Đồng Bộ Hóa Vị Trí Quân Cờ Và Ô Cờ
-    /// -----
-    getChessPieceStateItem?.getStateModel?.setTopPosition(value: getTopPosition, isPriorityOverride: true);
-    getChessPieceStateItem?.getStateModel?.setLeftPosition(value: getLeftPosition, isPriorityOverride: true);
   }
 
   /// -----
@@ -950,8 +885,7 @@ class CrosswordPuzzleSquare with ExecutionCore {
       /// -----
       /// TODO:
       /// -----
-      setChessPieceStateItem(value: ChessPieceStateItem(stateModel: null), isPriorityOverride: true);
-      setChessPieceStateItemAsShadow(value: ChessPieceStateItem(stateModel: null), isPriorityOverride: true);
+      setCrosswordPuzzlePieceStateItem(value: CrosswordPuzzlePieceStateItem(stateModel: null), isPriorityOverride: true);
 
       /// -----
       /// TODO: Setup Root For SubCom

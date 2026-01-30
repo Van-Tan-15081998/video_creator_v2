@@ -161,71 +161,71 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       /// -----
       /// TODO:
       /// -----
-      getSystemStateManagement?.setIntroductionFeature(value: getIntroductionFeature);
+      getSystemStateManagement?.setIntroductionFeature(value: getIntroductionFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setIntroductoryConversationFeature(value: getIntroductoryConversationFeature);
-      getSystemStateManagement?.setEndingConversationFeature(value: getEndingConversationFeature);
+      getSystemStateManagement?.setIntroductoryConversationFeature(value: getIntroductoryConversationFeature, isPriorityOverride: true);
+      getSystemStateManagement?.setEndingConversationFeature(value: getEndingConversationFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setBackgroundImageFeature(value: getBackgroundImageFeature);
+      getSystemStateManagement?.setBackgroundImageFeature(value: getBackgroundImageFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setBreakTimeSpaceFeature(value: getBreakTimeSpaceFeature);
+      getSystemStateManagement?.setBreakTimeSpaceFeature(value: getBreakTimeSpaceFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setCountdownTimerFeature(value: getCountdownTimerFeature);
+      getSystemStateManagement?.setCountdownTimerFeature(value: getCountdownTimerFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setPomodoroFeature(value: getPomodoroFeature);
+      getSystemStateManagement?.setPomodoroFeature(value: getPomodoroFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setPomodoroEndingConversationFeature(value: getPomodoroEndingConversationFeature);
+      getSystemStateManagement?.setPomodoroEndingConversationFeature(value: getPomodoroEndingConversationFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setPomodoroStartingConversationFeature(value: getPomodoroStartingConversationFeature);
+      getSystemStateManagement?.setPomodoroStartingConversationFeature(value: getPomodoroStartingConversationFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setVocabularySubjectFeature(value: getVocabularySubjectFeature);
+      getSystemStateManagement?.setVocabularySubjectFeature(value: getVocabularySubjectFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setConversationFeature(value: getConversationFeature);
+      getSystemStateManagement?.setConversationFeature(value: getConversationFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setVocabularyListFeature(value: getVocabularyListFeature);
+      getSystemStateManagement?.setVocabularyListFeature(value: getVocabularyListFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setVocabularyListOverallFeature(value: getVocabularyListOverallFeature);
+      getSystemStateManagement?.setVocabularyListOverallFeature(value: getVocabularyListOverallFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setVocabularyDefinitionFeature(value: getVocabularyDefinitionFeature);
+      getSystemStateManagement?.setVocabularyDefinitionFeature(value: getVocabularyDefinitionFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setVocabularyEnglishDefinitionFeature(value: getVocabularyEnglishDefinitionFeature);
+      getSystemStateManagement?.setVocabularyEnglishDefinitionFeature(value: getVocabularyEnglishDefinitionFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setHelpfulAdviceFeature(value: getHelpfulAdviceFeature);
-      getSystemStateManagement?.setHelpfulStudyAdviceFeature(value: getHelpfulStudyAdviceFeature);
-      getSystemStateManagement?.setHelpfulStudyAdviceRelatedToTopicFeature(value: getHelpfulStudyAdviceRelatedToTopicFeature);
+      getSystemStateManagement?.setHelpfulAdviceFeature(value: getHelpfulAdviceFeature, isPriorityOverride: true);
+      getSystemStateManagement?.setHelpfulStudyAdviceFeature(value: getHelpfulStudyAdviceFeature, isPriorityOverride: true);
+      getSystemStateManagement?.setHelpfulStudyAdviceRelatedToTopicFeature(value: getHelpfulStudyAdviceRelatedToTopicFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setVocabularyConversationFeature(value: getVocabularyConversationFeature);
+      getSystemStateManagement?.setVocabularyConversationFeature(value: getVocabularyConversationFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setVocabularyParagraphFeature(value: getVocabularyParagraphFeature);
+      getSystemStateManagement?.setVocabularyParagraphFeature(value: getVocabularyParagraphFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setVocabularyTitleFeature(value: getVocabularyTitleFeature);
+      getSystemStateManagement?.setVocabularyTitleFeature(value: getVocabularyTitleFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setInterestingKnowledgeConversationFeature(value: getInterestingKnowledgeConversationFeature);
+      getSystemStateManagement?.setInterestingKnowledgeConversationFeature(value: getInterestingKnowledgeConversationFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setVocabularyScript(value: getVocabularyScript);
-      getSystemStateManagement?.setMemoryScript(value: getMemoryScript);
+      getSystemStateManagement?.setVocabularyScript(value: getVocabularyScript, isPriorityOverride: true);
+      getSystemStateManagement?.setMemoryScript(value: getMemoryScript, isPriorityOverride: true);
 
-      getSystemStateManagement?.setGlobalAnnouncementFeature(value: getGlobalAnnouncementFeature);
+      getSystemStateManagement?.setGlobalAnnouncementFeature(value: getGlobalAnnouncementFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setFlameWorldFeature(value: getFlameWorldFeature);
+      getSystemStateManagement?.setFlameWorldFeature(value: getFlameWorldFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setSceneTransitionFeature(value: getSceneTransitionFeature);
+      getSystemStateManagement?.setSceneTransitionFeature(value: getSceneTransitionFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setVocabularySceneTransitionFeature(value: getVocabularySceneTransitionFeature);
+      getSystemStateManagement?.setVocabularySceneTransitionFeature(value: getVocabularySceneTransitionFeature, isPriorityOverride: true);
 
-      getSystemStateManagement?.setSystemTimelineFeature(value: getSystemTimelineFeature);
-
-      ///
-      ///
-      ///
-      getSystemStateManagement?.setMemoryGameBoardFeature(value: getMemoryGameBoardFeature);
-      getSystemStateManagement?.setMemoryGameBoardSceneTransitionFeature(value: getMemoryGameBoardSceneTransitionFeature);
+      getSystemStateManagement?.setSystemTimelineFeature(value: getSystemTimelineFeature, isPriorityOverride: true);
 
       ///
       ///
       ///
-      getSystemStateManagement?.setCrosswordPuzzleGameBoardFeature(value: getCrosswordPuzzleGameBoardFeature);
-      getSystemStateManagement?.setCrosswordPuzzleGameBoardSceneTransitionFeature(value: getCrosswordPuzzleGameBoardSceneTransitionFeature);
+      getSystemStateManagement?.setMemoryGameBoardFeature(value: getMemoryGameBoardFeature, isPriorityOverride: true);
+      getSystemStateManagement?.setMemoryGameBoardSceneTransitionFeature(value: getMemoryGameBoardSceneTransitionFeature, isPriorityOverride: true);
+
+      ///
+      ///
+      ///
+      getSystemStateManagement?.setCrosswordPuzzleGameBoardFeature(value: getCrosswordPuzzleGameBoardFeature, isPriorityOverride: true);
+      getSystemStateManagement?.setCrosswordPuzzleGameBoardSceneTransitionFeature(value: getCrosswordPuzzleGameBoardSceneTransitionFeature, isPriorityOverride: true);
 
       /// -----
       /// TODO: Init Root For SubCom
@@ -1362,6 +1362,7 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
 
     /// TODO: 00:00:01
     if (getSystemStateManagement?.getMainTimelineStateManagement?.getTimeline?.getTotalMinutes == 0 && getSystemStateManagement?.getMainTimelineStateManagement?.getTimeline?.getSeconds == 1) {
+      getBackgroundImageFeature?.onActivateWindow();
       getSystemFeatureManagement?.getFromBottomEndPositionAsPomodoroCycleSystemFeature?.onActivateWindow();
       getSystemFeatureManagement?.getFromCenterEndPositionAsCountdownTimeCycleSystemFeature?.onActivateWindow();
 

@@ -1,8 +1,6 @@
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_playing_crossword_puzzle_functional_feature/models/data/crossword_puzzle_piece_management.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_piece_management.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_piece_state_item.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_square_state_item.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_playing_crossword_puzzle_functional_feature/models/data/crossword_puzzle_square_state_item.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 
 class CrosswordPuzzlePiece with ExecutionCore {
@@ -995,6 +993,25 @@ class CrosswordPuzzlePiece with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
+  String? _textValue;
+  String? get getTextValue => _textValue;
+  void setTextValue({required String? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _textValue = value;
+    } else {
+      _textValue ??= value;
+    }
+
+    if (getTextValue?.isNotEmpty == true) {
+      getCurrentCrosswordPuzzleSquareStateItemA1?.getStateModel?.setIsHighlightBelongToAWord(value: true, isPriorityOverride: true);
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
   String? _imageSource;
   String? get getImageSource => _imageSource;
   void setImageSource({required String? value, bool? isPriorityOverride}) {
@@ -1020,92 +1037,6 @@ class CrosswordPuzzlePiece with ExecutionCore {
     }
 
     return;
-  }
-
-  /// -----
-  /// TODO:
-  /// -----
-  bool? isEnemy({required String? type}) {
-    if (type != getTypeColor && getTypeColor?.isNotEmpty == true) {
-      return true;
-    }
-    return false;
-  }
-
-  /// -----
-  /// TODO: King
-  /// -----
-  bool isKing() {
-    if (getId == '[KING_E1]' || getId == '[KING_E8]') {
-      return true;
-    }
-    return false;
-  }
-
-  /// -----
-  /// TODO: Queen
-  /// -----
-  bool isQueen() {
-    if (getId == '[QUEEN_D1]' || getId == '[QUEEN_D8]') {
-      return true;
-    }
-    return false;
-  }
-
-  /// -----
-  /// TODO: Rook
-  /// -----
-  bool isRook() {
-    if (getId == '[ROOK_A1]' || getId == '[ROOK_H1]' || getId == '[ROOK_A8]' || getId == '[ROOK_H8]') {
-      return true;
-    }
-    return false;
-  }
-
-  /// -----
-  /// TODO: Bishop
-  /// -----
-  bool isBishop() {
-    if (getId == '[BISHOP_C1]' || getId == '[BISHOP_F1]' || getId == '[BISHOP_C8]' || getId == '[BISHOP_F8]') {
-      return true;
-    }
-    return false;
-  }
-
-  /// -----
-  /// TODO: Knight
-  /// -----
-  bool isKnight() {
-    if (getId == '[KNIGHT_B1]' || getId == '[KNIGHT_G1]' || getId == '[KNIGHT_B8]' || getId == '[KNIGHT_G8]') {
-      return true;
-    }
-    return false;
-  }
-
-  /// -----
-  /// TODO: Pawn
-  /// -----
-  bool isPawn() {
-    if (getId == '[PAWN_A2]' ||
-        getId == '[PAWN_B2]' ||
-        getId == '[PAWN_C2]' ||
-        getId == '[PAWN_D2]' ||
-        getId == '[PAWN_E2]' ||
-        getId == '[PAWN_F2]' ||
-        getId == '[PAWN_G2]' ||
-        ///
-        getId == '[PAWN_H2]' ||
-        getId == '[PAWN_A7]' ||
-        getId == '[PAWN_B7]' ||
-        getId == '[PAWN_C7]' ||
-        getId == '[PAWN_D7]' ||
-        getId == '[PAWN_E7]' ||
-        getId == '[PAWN_F7]' ||
-        getId == '[PAWN_G7]' ||
-        getId == '[PAWN_H7]') {
-      return true;
-    }
-    return false;
   }
 
   /// -----
@@ -1141,28 +1072,13 @@ class CrosswordPuzzlePiece with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
-  bool? _wasCaptured;
-  bool? get getWasCaptured => _wasCaptured;
-  void setWasCaptured({required bool? value, bool? isPriorityOverride}) {
+  CrosswordPuzzleSquareStateItem? _currentCrosswordPuzzleSquareStateItemA1;
+  CrosswordPuzzleSquareStateItem? get getCurrentCrosswordPuzzleSquareStateItemA1 => _currentCrosswordPuzzleSquareStateItemA1;
+  void setCurrentCrosswordPuzzleSquareStateItemA1({required CrosswordPuzzleSquareStateItem? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
-      _wasCaptured = value;
+      _currentCrosswordPuzzleSquareStateItemA1 = value;
     } else {
-      _wasCaptured ??= value;
-    }
-
-    return;
-  }
-
-  /// -----
-  /// TODO:
-  /// -----
-  ChessSquareStateItem? _currentChessSquareStateItem;
-  ChessSquareStateItem? get getCurrentChessSquareStateItem => _currentChessSquareStateItem;
-  void setCurrentChessSquareStateItem({required ChessSquareStateItem? value, bool? isPriorityOverride}) {
-    if (isPriorityOverride == true) {
-      _currentChessSquareStateItem = value;
-    } else {
-      _currentChessSquareStateItem ??= value;
+      _currentCrosswordPuzzleSquareStateItemA1 ??= value;
     }
 
     return;

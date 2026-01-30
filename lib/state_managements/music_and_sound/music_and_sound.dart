@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flame_audio/flame_audio.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_playing_crossword_puzzle_functional_feature/models/data/crossword_puzzle_square_state_item.dart';
 
 class MusicAndSound with ExecutionCore {
   /// -----
@@ -182,6 +183,52 @@ class MusicAndSound with ExecutionCore {
   final List<String> sFXPawnPromotion = [
     'sfx/chess/on_pawn_promotion.mp3', //
     'sfx/chess/on_pawn_promotion.mp3', //
+  ];
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: From _CenterStart Position As _OneCharacterPlayingCrosswordPuzzle
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+  void onPlaySFXSolvingCrosswordPuzzle(CrosswordPuzzleSquareStateItem? crosswordPuzzleSquareStateItem) {
+    if (crosswordPuzzleSquareStateItem?.getStateModel?.getIsHighlightBelongToAWord == true) {
+      String nextSFX;
+      nextSFX = sFXSolvingCrosswordPuzzle[_random.nextInt(sFXSolvingCrosswordPuzzle.length)];
+      FlameAudio.play(nextSFX, volume: 0.45);
+    }
+  }
+
+  final List<String> sFXSolvingCrosswordPuzzle = [
+    'sfx/crossword_puzzle/solving.mp3', //
+    'sfx/crossword_puzzle/solving.mp3', //
+    'sfx/crossword_puzzle/solving.mp3', //
+  ];
+
+  void onPlaySFXSolvedCrosswordPuzzle(CrosswordPuzzleSquareStateItem? crosswordPuzzleSquareStateItem) {
+    if (crosswordPuzzleSquareStateItem?.getStateModel?.getIsHighlightBelongToAWord == true) {
+      String nextSFX;
+      nextSFX = sFXSolvedCrosswordPuzzle[_random.nextInt(sFXSolvedCrosswordPuzzle.length)];
+      FlameAudio.play(nextSFX, volume: 0.45);
+    }
+  }
+
+  final List<String> sFXSolvedCrosswordPuzzle = [
+    'sfx/crossword_puzzle/solved.mp3', //
+    'sfx/crossword_puzzle/solved.mp3', //
+    'sfx/crossword_puzzle/solved.mp3', //
+  ];
+
+  void onPlaySFXCompletelySolvedCrosswordPuzzle() {
+    String nextSFX;
+    nextSFX = sFXCompletelySolvedCrosswordPuzzle[_random.nextInt(sFXCompletelySolvedCrosswordPuzzle.length)];
+    FlameAudio.play(nextSFX, volume: 0.45);
+  }
+
+  final List<String> sFXCompletelySolvedCrosswordPuzzle = [
+    'sfx/crossword_puzzle/completely_solved.mp3', //
+    'sfx/crossword_puzzle/completely_solved.mp3', //
+    'sfx/crossword_puzzle/completely_solved.mp3', //
   ];
 
   /// -----

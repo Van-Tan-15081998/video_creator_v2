@@ -2,6 +2,7 @@ import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/basic_character_flow_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/character_flow_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/chess_flow_controller.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/crossword_puzzle_flow_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/image_slide_flow_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/message_flow_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/window_flow_controller.dart';
@@ -90,6 +91,21 @@ class FlowController with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
+  CrosswordPuzzleFlowController? _crosswordPuzzleFlowController;
+  CrosswordPuzzleFlowController? get getCrosswordPuzzleFlowController => _crosswordPuzzleFlowController;
+  void setCrosswordPuzzleFlowController({required CrosswordPuzzleFlowController? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _crosswordPuzzleFlowController = value;
+    } else {
+      _crosswordPuzzleFlowController ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
   WindowFlowController? _windowFlowController;
   WindowFlowController? get getWindowFlowController => _windowFlowController;
   void setWindowFlowController({required WindowFlowController? value, bool? isPriorityOverride}) {
@@ -164,6 +180,8 @@ class FlowController with ExecutionCore {
       setImageSlideFlowController(value: ImageSlideFlowController(), isPriorityOverride: true);
       setMessageFlowController(value: MessageFlowController(), isPriorityOverride: true);
       setWindowFlowController(value: WindowFlowController(), isPriorityOverride: true);
+      setChessFlowController(value: ChessFlowController(), isPriorityOverride: true);
+      setCrosswordPuzzleFlowController(value: CrosswordPuzzleFlowController(), isPriorityOverride: true);
 
       /// -----
       /// TODO: Setup Root For SubCom
@@ -234,6 +252,8 @@ class FlowController with ExecutionCore {
       await getImageSlideFlowController?.onSetupRoot();
       await getMessageFlowController?.onSetupRoot();
       await getWindowFlowController?.onSetupRoot();
+      await getChessFlowController?.onSetupRoot();
+      await getCrosswordPuzzleFlowController?.onSetupRoot();
     } catch (e) {
       await onReportRootIssue(nameFunction: '[onSetupRootForSubCom]');
     }
@@ -256,6 +276,8 @@ class FlowController with ExecutionCore {
       await getImageSlideFlowController?.onInitRoot();
       await getMessageFlowController?.onInitRoot();
       await getWindowFlowController?.onInitRoot();
+      await getChessFlowController?.onInitRoot();
+      await getCrosswordPuzzleFlowController?.onInitRoot();
     } catch (e) {
       await onReportRootIssue(nameFunction: '[onInitRootForSubCom]');
     }

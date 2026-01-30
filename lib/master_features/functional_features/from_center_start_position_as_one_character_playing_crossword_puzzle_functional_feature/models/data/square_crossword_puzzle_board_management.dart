@@ -1,12 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_playing_crossword_puzzle_functional_feature/models/data/crossword_puzzle_piece_management.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_playing_crossword_puzzle_functional_feature/models/data/crossword_puzzle_square.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_playing_crossword_puzzle_functional_feature/models/data/crossword_puzzle_square_state_item.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_piece.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_piece_management.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_piece_state_item.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_square.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/data/chess_square_state_item.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 
 class SquareCrosswordPuzzleBoardManagement with ExecutionCore {
@@ -32,13 +27,13 @@ class SquareCrosswordPuzzleBoardManagement with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
-  ChessPieceManagement? _chessPieceManagement;
-  ChessPieceManagement? get getChessPieceManagement => _chessPieceManagement;
-  void setChessPieceManagement({required ChessPieceManagement? value, bool? isPriorityOverride}) {
+  CrosswordPuzzlePieceManagement? _crosswordPuzzlePieceManagement;
+  CrosswordPuzzlePieceManagement? get getCrosswordPuzzlePieceManagement => _crosswordPuzzlePieceManagement;
+  void setCrosswordPuzzlePieceManagement({required CrosswordPuzzlePieceManagement? value, bool? isPriorityOverride}) {
     if (isPriorityOverride == true) {
-      _chessPieceManagement = value;
+      _crosswordPuzzlePieceManagement = value;
     } else {
-      _chessPieceManagement ??= value;
+      _crosswordPuzzlePieceManagement ??= value;
     }
 
     return;
@@ -961,7 +956,7 @@ class SquareCrosswordPuzzleBoardManagement with ExecutionCore {
       /// -----
       /// TODO:
       /// -----
-      onSetDefaultChessBoard();
+      onSetDefaultCrosswordPuzzleBoard();
     } catch (e) {
       await onReportRootIssue(nameFunction: '[onInitRoot]');
     }
@@ -979,7 +974,7 @@ class SquareCrosswordPuzzleBoardManagement with ExecutionCore {
       /// -----
       /// TODO:
       /// -----
-      setChessPieceManagement(value: ChessPieceManagement(systemStateManagement: getSystemStateManagement), isPriorityOverride: true);
+      setCrosswordPuzzlePieceManagement(value: CrosswordPuzzlePieceManagement(systemStateManagement: getSystemStateManagement), isPriorityOverride: true);
 
       /// -----
       /// TODO: ROW A1-J1
@@ -1583,7 +1578,7 @@ class SquareCrosswordPuzzleBoardManagement with ExecutionCore {
       /// -----
       /// TODO:
       /// -----
-      await getChessPieceManagement?.onSetupRoot();
+      await getCrosswordPuzzlePieceManagement?.onSetupRoot();
 
       /// -----
       /// TODO:
@@ -1681,7 +1676,7 @@ class SquareCrosswordPuzzleBoardManagement with ExecutionCore {
       /// -----
       /// TODO:
       /// -----
-      await getChessPieceManagement?.onInitRoot();
+      await getCrosswordPuzzlePieceManagement?.onInitRoot();
 
       /// -----
       /// TODO:
@@ -1791,178 +1786,430 @@ class SquareCrosswordPuzzleBoardManagement with ExecutionCore {
   /// -----
   /// TODO:
   /// -----
-  void onSetDefaultChessBoard() {
-    // /// -----
-    // /// TODO: ROW A1-H1
-    // /// -----
-    // getChessSquareStateItemA1?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemRookA1, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemRookA1AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemA1);
+  void onSetDefaultCrosswordPuzzleBoard() {
+    /// -----
+    /// TODO: ROW 1
+    /// -----
+    getCrosswordPuzzleSquareStateItemA1?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemA1, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemA1);
+    getCrosswordPuzzleSquareStateItemB1?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemB1, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemB1);
+    getCrosswordPuzzleSquareStateItemC1?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemC1, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemC1);
+    getCrosswordPuzzleSquareStateItemD1?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemD1, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemD1);
+    getCrosswordPuzzleSquareStateItemE1?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemE1, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemE1);
+    getCrosswordPuzzleSquareStateItemF1?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemF1, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemF1);
+    getCrosswordPuzzleSquareStateItemG1?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemG1, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemG1);
+    getCrosswordPuzzleSquareStateItemH1?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemH1, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemH1);
+    getCrosswordPuzzleSquareStateItemI1?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemI1, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemI1);
+    getCrosswordPuzzleSquareStateItemJ1?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemJ1, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemJ1);
+
+    /// -----
+    /// TODO: ROW 2
+    /// -----
+    getCrosswordPuzzleSquareStateItemA2?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemA2, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemA2);
+    getCrosswordPuzzleSquareStateItemB2?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemB2, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemB2);
+    getCrosswordPuzzleSquareStateItemC2?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemC2, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemC2);
+    getCrosswordPuzzleSquareStateItemD2?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemD2, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemD2);
+    getCrosswordPuzzleSquareStateItemE2?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemE2, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemE2);
+    getCrosswordPuzzleSquareStateItemF2?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemF2, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemF2);
+    getCrosswordPuzzleSquareStateItemG2?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemG2, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemG2);
+    getCrosswordPuzzleSquareStateItemH2?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemH2, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemH2);
+    getCrosswordPuzzleSquareStateItemI2?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemI2, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemI2);
+    getCrosswordPuzzleSquareStateItemJ2?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemJ2, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemJ2);
+
+    /// -----
+    /// TODO: ROW 3
+    /// -----
+    getCrosswordPuzzleSquareStateItemA3?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemA3, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemA3);
+    getCrosswordPuzzleSquareStateItemB3?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemB3, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemB3);
+    getCrosswordPuzzleSquareStateItemC3?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemC3, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemC3);
+    getCrosswordPuzzleSquareStateItemD3?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemD3, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemD3);
+    getCrosswordPuzzleSquareStateItemE3?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemE3, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemE3);
+    getCrosswordPuzzleSquareStateItemF3?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemF3, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemF3);
+    getCrosswordPuzzleSquareStateItemG3?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemG3, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemG3);
+    getCrosswordPuzzleSquareStateItemH3?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemH3, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemH3);
+    getCrosswordPuzzleSquareStateItemI3?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemI3, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemI3);
+    getCrosswordPuzzleSquareStateItemJ3?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemJ3, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemJ3);
+
+    /// -----
+    /// TODO: ROW 4
+    /// -----
+    getCrosswordPuzzleSquareStateItemA4?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemA4, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemA4);
+    getCrosswordPuzzleSquareStateItemB4?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemB4, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemB4);
+    getCrosswordPuzzleSquareStateItemC4?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemC4, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemC4);
+    getCrosswordPuzzleSquareStateItemD4?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemD4, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemD4);
+    getCrosswordPuzzleSquareStateItemE4?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemE4, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemE4);
+    getCrosswordPuzzleSquareStateItemF4?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemF4, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemF4);
+    getCrosswordPuzzleSquareStateItemG4?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemG4, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemG4);
+    getCrosswordPuzzleSquareStateItemH4?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemH4, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemH4);
+    getCrosswordPuzzleSquareStateItemI4?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemI4, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemI4);
+    getCrosswordPuzzleSquareStateItemJ4?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemJ4, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemJ4);
+
+    /// -----
+    /// TODO: ROW 5
+    /// -----
+    getCrosswordPuzzleSquareStateItemA5?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemA5, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemA5);
+    getCrosswordPuzzleSquareStateItemB5?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemB5, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemB5);
+    getCrosswordPuzzleSquareStateItemC5?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemC5, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemC5);
+    getCrosswordPuzzleSquareStateItemD5?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemD5, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemD5);
+    getCrosswordPuzzleSquareStateItemE5?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemE5, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemE5);
+    getCrosswordPuzzleSquareStateItemF5?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemF5, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemF5);
+    getCrosswordPuzzleSquareStateItemG5?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemG5, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemG5);
+    getCrosswordPuzzleSquareStateItemH5?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemH5, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemH5);
+    getCrosswordPuzzleSquareStateItemI5?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemI5, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemI5);
+    getCrosswordPuzzleSquareStateItemJ5?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemJ5, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemJ5);
+
+    /// -----
+    /// TODO: ROW 6
+    /// -----
+    getCrosswordPuzzleSquareStateItemA6?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemA6, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemA6);
+    getCrosswordPuzzleSquareStateItemB6?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemB6, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemB6);
+    getCrosswordPuzzleSquareStateItemC6?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemC6, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemC6);
+    getCrosswordPuzzleSquareStateItemD6?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemD6, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemD6);
+    getCrosswordPuzzleSquareStateItemE6?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemE6, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemE6);
+    getCrosswordPuzzleSquareStateItemF6?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemF6, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemF6);
+    getCrosswordPuzzleSquareStateItemG6?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemG6, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemG6);
+    getCrosswordPuzzleSquareStateItemH6?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemH6, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemH6);
+    getCrosswordPuzzleSquareStateItemI6?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemI6, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemI6);
+    getCrosswordPuzzleSquareStateItemJ6?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemJ6, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemJ6);
+
+    /// -----
+    /// TODO: ROW 7
+    /// -----
+    getCrosswordPuzzleSquareStateItemA7?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemA7, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemA7);
+    getCrosswordPuzzleSquareStateItemB7?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemB7, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemB7);
+    getCrosswordPuzzleSquareStateItemC7?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemC7, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemC7);
+    getCrosswordPuzzleSquareStateItemD7?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemD7, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemD7);
+    getCrosswordPuzzleSquareStateItemE7?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemE7, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemE7);
+    getCrosswordPuzzleSquareStateItemF7?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemF7, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemF7);
+    getCrosswordPuzzleSquareStateItemG7?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemG7, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemG7);
+    getCrosswordPuzzleSquareStateItemH7?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemH7, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemH7);
+    getCrosswordPuzzleSquareStateItemI7?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemI7, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemI7);
+    getCrosswordPuzzleSquareStateItemJ7?.getStateModel
+      ?..setCrosswordPuzzlePieceStateItem(value: getCrosswordPuzzlePieceManagement?.getCrosswordPuzzlePieceStateItemJ7, isPriorityOverride: true)
+      ..getCrosswordPuzzlePieceStateItem?.getStateModel?.setCurrentCrosswordPuzzleSquareStateItemA1(value: getCrosswordPuzzleSquareStateItemJ7);
+
+    onTest();
+
+    return;
+  }
+
+  onTest() {
+    /// TODO: ROW 1
+    getCrosswordPuzzleSquareStateItemA1?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemB1?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemC1?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemD1?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemE1?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemF1?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemG1?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemH1?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemI1?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemJ1?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+
+    /// TODO: ROW 2
+    getCrosswordPuzzleSquareStateItemA2?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemB2?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'Y', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemC2?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'O', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemD2?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'U', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemE2?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'T', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemF2?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'U', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemG2?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'B', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemH2?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'E', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemI2?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemJ2?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+
+    /// TODO: ROW 3
+    getCrosswordPuzzleSquareStateItemA3?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemB3?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemC3?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemD3?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemE3?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'G', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemF3?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'O', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemG3?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'O', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemH3?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'G', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemI3?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'L', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemJ3?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'E', isPriorityOverride: true);
+
+    /// TODO: ROW 4
+    getCrosswordPuzzleSquareStateItemA4?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemB4?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'T', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemC4?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'I', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemD4?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'K', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemE4?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'T', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemF4?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'O', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemG4?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'K', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemH4?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemI4?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemJ4?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+
+    /// TODO: ROW 5
+    getCrosswordPuzzleSquareStateItemA5?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'F', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemB5?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'A', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemC5?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'C', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemD5?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'E', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemE5?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'B', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemF5?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'O', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemG5?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'O', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemH5?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'K', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemI5?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemJ5?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+
+    /// TODO: ROW 6
+    getCrosswordPuzzleSquareStateItemA6?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemB6?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemC6?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemD6?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'V', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemE6?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'I', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemF6?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'E', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemG6?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'T', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemH6?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'N', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemI6?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'A', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemJ6?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: 'M', isPriorityOverride: true);
+
+    /// TODO: ROW 7
+    getCrosswordPuzzleSquareStateItemA7?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemB7?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemC7?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemD7?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemE7?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemF7?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemG7?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemH7?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemI7?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+    getCrosswordPuzzleSquareStateItemJ7?.getStateModel?.getCrosswordPuzzlePieceStateItem?.getStateModel?.setTextValue(value: '', isPriorityOverride: true);
+
+    ///
+    ///
+    ///
+    ///
+    ///
+    /// TODO: ROW 2
+    // Future.delayed(Duration(seconds: 50), () {
+    //   Future.delayed(Duration(milliseconds: 100), () {
+    //     getCrosswordPuzzleSquareStateItemA2?.getStateModel?.onSolving();
+    //     getSystemStateManagement?.getMusicAndSound?.onPlaySFXSolvingCrosswordPuzzle();
+    //     Future.delayed(Duration(milliseconds: 100), () {
+    //       getCrosswordPuzzleSquareStateItemB2?.getStateModel?.onSolving();
+    //       getSystemStateManagement?.getMusicAndSound?.onPlaySFXSolvingCrosswordPuzzle();
+    //       Future.delayed(Duration(milliseconds: 100), () {
+    //         getCrosswordPuzzleSquareStateItemC2?.getStateModel?.onSolving();
+    //         getSystemStateManagement?.getMusicAndSound?.onPlaySFXSolvingCrosswordPuzzle();
+    //         Future.delayed(Duration(milliseconds: 100), () {
+    //           getCrosswordPuzzleSquareStateItemD2?.getStateModel?.onSolving();
+    //           getSystemStateManagement?.getMusicAndSound?.onPlaySFXSolvingCrosswordPuzzle();
+    //           Future.delayed(Duration(milliseconds: 100), () {
+    //             getCrosswordPuzzleSquareStateItemE2?.getStateModel?.onSolving();
+    //             getSystemStateManagement?.getMusicAndSound?.onPlaySFXSolvingCrosswordPuzzle();
+    //             Future.delayed(Duration(milliseconds: 100), () {
+    //               getCrosswordPuzzleSquareStateItemF2?.getStateModel?.onSolving();
+    //               getSystemStateManagement?.getMusicAndSound?.onPlaySFXSolvingCrosswordPuzzle();
+    //               Future.delayed(Duration(milliseconds: 100), () {
+    //                 getCrosswordPuzzleSquareStateItemG2?.getStateModel?.onSolving();
+    //                 getSystemStateManagement?.getMusicAndSound?.onPlaySFXSolvingCrosswordPuzzle();
+    //                 Future.delayed(Duration(milliseconds: 100), () {
+    //                   getCrosswordPuzzleSquareStateItemH2?.getStateModel?.onSolving();
+    //                   getSystemStateManagement?.getMusicAndSound?.onPlaySFXSolvingCrosswordPuzzle();
+    //                   Future.delayed(Duration(milliseconds: 100), () {
+    //                     getCrosswordPuzzleSquareStateItemI2?.getStateModel?.onSolving();
+    //                     getSystemStateManagement?.getMusicAndSound?.onPlaySFXSolvingCrosswordPuzzle();
+    //                     Future.delayed(Duration(milliseconds: 100), () {
+    //                       getCrosswordPuzzleSquareStateItemJ2?.getStateModel?.onSolving();
+    //                       getSystemStateManagement?.getMusicAndSound?.onPlaySFXSolvingCrosswordPuzzle();
+    //                     });
+    //                   });
+    //                 });
+    //               });
+    //             });
+    //           });
+    //         });
+    //       });
+    //     });
+    //   });
+    // });
     //
-    // getChessSquareStateItemB1?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKnightB1, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemKnightB1AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemB1);
-    //
-    // getChessSquareStateItemC1?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemBishopC1, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemBishopC1AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemC1);
-    //
-    // getChessSquareStateItemD1?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemQueenD1, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemQueenD1AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemD1);
-    //
-    // getChessSquareStateItemE1?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKingE1, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemKingE1AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemE1);
-    //
-    // getChessSquareStateItemF1?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemBishopF1, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemBishopF1AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemF1);
-    //
-    // getChessSquareStateItemG1?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKnightG1, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemKnightG1AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemG1);
-    //
-    // getChessSquareStateItemH1?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemRookH1, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemRookH1AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemH1);
-    //
-    // /// -----
-    // /// TODO: ROW A2-H2
-    // /// -----
-    // getChessSquareStateItemA2?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnA2, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnA2AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemA2);
-    //
-    // getChessSquareStateItemB2?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnB2, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnB2AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemB2);
-    //
-    // getChessSquareStateItemC2?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnC2, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnC2AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemC2);
-    //
-    // // getChessSquareStateItemD2?.getStateModel
-    // //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnD2, isPriorityOverride: true)
-    // //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnD2AsShadow, isPriorityOverride: true)
-    // //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemD2);
-    //
-    // getChessSquareStateItemE2?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnE2, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnE2AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemE2);
-    //
-    // getChessSquareStateItemF2?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnF2, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnF2AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemF2);
-    //
-    // getChessSquareStateItemG2?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnG2, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnG2AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemG2);
-    //
-    // getChessSquareStateItemH2?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnH2, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnH2AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemH2);
-    //
-    // /// -----
-    // /// TODO: ROW A7-H7
-    // /// -----
-    // getChessSquareStateItemA7?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnA7, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnA7AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemA7);
-    //
-    // getChessSquareStateItemB7?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnB7, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnB7AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemB7);
-    //
-    // getChessSquareStateItemC7?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnC7, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnC7AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemC7);
-    //
-    // getChessSquareStateItemD7?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnD7, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnD7AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemD7);
-    //
-    // getChessSquareStateItemE7?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnE7, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnE7AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemE7);
-    //
-    // getChessSquareStateItemG7?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnF7, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnF7AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemG7);
-    //
-    // getChessSquareStateItemF7?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnG7, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnG7AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemF7);
-    //
-    // getChessSquareStateItemH7?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemPawnH7, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemPawnH7AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemH7);
-    //
-    // /// -----
-    // /// TODO: ROW A8-H8
-    // /// -----
-    // getChessSquareStateItemA8?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemRookA8, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemRookA8AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemA8);
-    //
-    // getChessSquareStateItemB8?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKnightB8, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemKnightB8AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemB8);
-    //
-    // getChessSquareStateItemC8?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemBishopC8, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemBishopC8AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemC8);
-    //
-    // getChessSquareStateItemD8?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemQueenD8, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemQueenD8AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemD8);
-    //
-    // getChessSquareStateItemE8?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKingE8, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemKingE8AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemE8);
-    //
-    // getChessSquareStateItemF8?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemBishopF8, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemBishopF8AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemF8);
-    //
-    // getChessSquareStateItemG8?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemKnightG8, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemKnightG8AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemG8);
-    //
-    // getChessSquareStateItemH8?.getStateModel
-    //   ?..setChessPieceStateItem(value: getChessPieceManagement?.getChessPieceStateItemRookH8, isPriorityOverride: true)
-    //   ..setChessPieceStateItemAsShadow(value: getChessPieceManagement?.getChessPieceStateItemRookH8AsShadow, isPriorityOverride: true)
-    //   ..getChessPieceStateItem?.getStateModel?.setCurrentChessSquareStateItem(value: getChessSquareStateItemH8);
+    // Future.delayed(Duration(seconds: 70), () {
+    //   /// TODO: ROW 2
+    //   Future.delayed(Duration(milliseconds: 200), () {
+    //     getCrosswordPuzzleSquareStateItemA2?.getStateModel?.onSolved();
+    //     getSystemStateManagement?.getMusicAndSound?.onPlaySFXSolvedCrosswordPuzzle();
+    //     Future.delayed(Duration(milliseconds: 200), () {
+    //       getCrosswordPuzzleSquareStateItemB2?.getStateModel?.onSolved();
+    //       getSystemStateManagement?.getMusicAndSound?.onPlaySFXSolvedCrosswordPuzzle();
+    //       Future.delayed(Duration(milliseconds: 200), () {
+    //         getCrosswordPuzzleSquareStateItemC2?.getStateModel?.onSolved();
+    //         getSystemStateManagement?.getMusicAndSound?.onPlaySFXSolvedCrosswordPuzzle();
+    //         Future.delayed(Duration(milliseconds: 200), () {
+    //           getCrosswordPuzzleSquareStateItemD2?.getStateModel?.onSolved();
+    //           getSystemStateManagement?.getMusicAndSound?.onPlaySFXSolvedCrosswordPuzzle();
+    //           Future.delayed(Duration(milliseconds: 200), () {
+    //             getCrosswordPuzzleSquareStateItemE2?.getStateModel?.onSolved();
+    //             getSystemStateManagement?.getMusicAndSound?.onPlaySFXSolvedCrosswordPuzzle();
+    //             Future.delayed(Duration(milliseconds: 200), () {
+    //               getCrosswordPuzzleSquareStateItemF2?.getStateModel?.onSolved();
+    //               getSystemStateManagement?.getMusicAndSound?.onPlaySFXSolvedCrosswordPuzzle();
+    //               Future.delayed(Duration(milliseconds: 200), () {
+    //                 getCrosswordPuzzleSquareStateItemG2?.getStateModel?.onSolved();
+    //                 getSystemStateManagement?.getMusicAndSound?.onPlaySFXSolvedCrosswordPuzzle();
+    //                 Future.delayed(Duration(milliseconds: 200), () {
+    //                   getCrosswordPuzzleSquareStateItemH2?.getStateModel?.onSolved();
+    //                   getSystemStateManagement?.getMusicAndSound?.onPlaySFXSolvedCrosswordPuzzle();
+    //                   Future.delayed(Duration(milliseconds: 200), () {
+    //                     getCrosswordPuzzleSquareStateItemI2?.getStateModel?.onSolved();
+    //                     getSystemStateManagement?.getMusicAndSound?.onPlaySFXSolvedCrosswordPuzzle();
+    //                     Future.delayed(Duration(milliseconds: 200), () {
+    //                       getCrosswordPuzzleSquareStateItemJ2?.getStateModel?.onSolved();
+    //                       getSystemStateManagement?.getMusicAndSound?.onPlaySFXSolvedCrosswordPuzzle();
+    //                       Future.delayed(Duration(milliseconds: 200), () {
+    //                         getSystemStateManagement?.getMusicAndSound?.onPlaySFXCompletelySolvedCrosswordPuzzle();
+    //                       });
+    //                     });
+    //                   });
+    //                 });
+    //               });
+    //             });
+    //           });
+    //         });
+    //       });
+    //     });
+    //   });
+    // });
 
     return;
   }
