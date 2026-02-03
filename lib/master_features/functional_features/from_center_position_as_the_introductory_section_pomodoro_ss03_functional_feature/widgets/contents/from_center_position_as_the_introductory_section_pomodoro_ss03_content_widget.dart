@@ -14,8 +14,8 @@ import 'package:frame_creator_v2/master_features/constant_data/details/system_wi
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class FromCenterStartPositionAsOneCharacterConversationContentWidget extends StatefulWidget {
-  const FromCenterStartPositionAsOneCharacterConversationContentWidget({super.key, required this.systemStateManagement, required this.sizeDx, required this.sizeDy});
+class FromCenterPositionAsTheIntroductorySectionPomodoroSS03ContentWidget extends StatefulWidget {
+  const FromCenterPositionAsTheIntroductorySectionPomodoroSS03ContentWidget({super.key, required this.systemStateManagement, required this.sizeDx, required this.sizeDy});
 
   /// -----
   /// TODO:
@@ -26,10 +26,10 @@ class FromCenterStartPositionAsOneCharacterConversationContentWidget extends Sta
   final double sizeDy;
 
   @override
-  State<FromCenterStartPositionAsOneCharacterConversationContentWidget> createState() => _FromCenterStartPositionAsOneCharacterConversationContentWidgetState();
+  State<FromCenterPositionAsTheIntroductorySectionPomodoroSS03ContentWidget> createState() => _FromCenterPositionAsTheIntroductorySectionPomodoroSS03ContentWidgetState();
 }
 
-class _FromCenterStartPositionAsOneCharacterConversationContentWidgetState extends State<FromCenterStartPositionAsOneCharacterConversationContentWidget> with SingleTickerProviderStateMixin, CharacterMixin, WindowMixin {
+class _FromCenterPositionAsTheIntroductorySectionPomodoroSS03ContentWidgetState extends State<FromCenterPositionAsTheIntroductorySectionPomodoroSS03ContentWidget> with SingleTickerProviderStateMixin, CharacterMixin, WindowMixin {
   late final Ticker _ticker;
   Timer? _timer;
 
@@ -112,6 +112,8 @@ class _FromCenterStartPositionAsOneCharacterConversationContentWidgetState exten
     return;
   }
 
+  double leftValue = 0;
+
   @override
   void initState() {
     super.initState();
@@ -119,7 +121,7 @@ class _FromCenterStartPositionAsOneCharacterConversationContentWidgetState exten
     /// -----
     /// TODO: Set Mã Định Danh Màn Hình
     /// -----
-    setWindowId(value: SystemWindow.fromCenterStartPositionAsOneCharacterConversationWindow, isPriorityOverride: true);
+    setWindowId(value: SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS03Window, isPriorityOverride: true);
 
     ///
 
@@ -134,6 +136,8 @@ class _FromCenterStartPositionAsOneCharacterConversationContentWidgetState exten
     setFunctionalSequentialExecutionController(value: widget.systemStateManagement?.getContentItemSequentialExecution?.getFunctionalSequentialExecutionController, isPriorityOverride: true);
 
     ///
+
+    leftValue = -widget.sizeDx;
 
     totalSeconds = 60 * totalMinutes;
 
@@ -155,6 +159,8 @@ class _FromCenterStartPositionAsOneCharacterConversationContentWidgetState exten
     WidgetsBinding.instance.addPostFrameCallback((_) {
       // return;
       _ticker = createTicker((Duration elapsed) {
+
+
         if (getFunctionalSequentialExecutionController?.getFlowController?.getMessageFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.isNotEmpty == true) {
           /// -----
           /// TODO: Kiểm Tra Loại Flow
@@ -221,8 +227,10 @@ class _FromCenterStartPositionAsOneCharacterConversationContentWidgetState exten
 
               setState(() {
                 if (getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getMessage?.isNotEmpty == true) {
+                  messageList.add(Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 300.0, color: Colors.transparent));
                   messageList.add(messageByWordWidget(isLeftSide: true, isRightSide: false, engSentence: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getMessage ?? ''));
                 } else if (getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getImageSource?.isNotEmpty == true) {
+                  messageList.add(Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 300.0, color: Colors.transparent));
                   messageList.add(pictureMessageByWordWidget(isLeftSide: true, isRightSide: false, imageSource: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getImageSource ?? ''));
                 } else {
                   messageList.clear();
@@ -236,9 +244,11 @@ class _FromCenterStartPositionAsOneCharacterConversationContentWidgetState exten
 
               setState(() {
                 if (getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getMessage?.isNotEmpty == true) {
-                  messageList.add(messageByWordWidget(isLeftSide: false, isRightSide: true, engSentence: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getMessage ?? ''));
+                  messageList.add(Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 300.0, color: Colors.transparent));
+                  messageList.add(messageByWordWidget(isLeftSide: true, isRightSide: false, engSentence: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getMessage ?? ''));
                 } else if (getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getImageSource?.isNotEmpty == true) {
-                  messageList.add(pictureMessageByWordWidget(isLeftSide: false, isRightSide: true, imageSource: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getImageSource ?? ''));
+                  messageList.add(Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 300.0, color: Colors.transparent));
+                  messageList.add(pictureMessageByWordWidget(isLeftSide: true, isRightSide: false, imageSource: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getImageSource ?? ''));
                 } else {
                   messageList.clear();
                 }
@@ -256,10 +266,10 @@ class _FromCenterStartPositionAsOneCharacterConversationContentWidgetState exten
 
           WidgetsBinding.instance.addPostFrameCallback((_) {
             if (_scrollController.hasClients) {
-              _scrollController.animateTo(_scrollController.position.maxScrollExtent, duration: Duration(milliseconds: 500), curve: Curves.easeOut);
+              _scrollController.animateTo(_scrollController.position.maxScrollExtent, duration: Duration(milliseconds: 600), curve: Curves.easeOut);
             }
             if (_imageSlideScrollController.hasClients) {
-              _imageSlideScrollController.animateTo(_imageSlideScrollController.position.maxScrollExtent, duration: Duration(milliseconds: 500), curve: Curves.easeOut);
+              _imageSlideScrollController.animateTo(_imageSlideScrollController.position.maxScrollExtent, duration: Duration(milliseconds: 600), curve: Curves.easeOut);
             }
           });
         }
@@ -326,7 +336,7 @@ class _FromCenterStartPositionAsOneCharacterConversationContentWidgetState exten
       width: widget.sizeDx,
       height: widget.sizeDy,
       child: Stack(
-        alignment: AlignmentDirectional.bottomCenter,
+        alignment: AlignmentDirectional.center,
         children: [
           // ClipRRect(
           //   borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(15.0), bottomRight: Radius.circular(15.0), bottomLeft: Radius.circular(30.0)),
@@ -361,7 +371,7 @@ class _FromCenterStartPositionAsOneCharacterConversationContentWidgetState exten
                               children: [
                                 Flexible(
                                   child: Text(
-                                    'Conversation',
+                                    'Pomodoro #3',
                                     style: GoogleFonts.poetsenOne(
                                       textStyle: TextStyle(
                                         fontSize: 35.0,
@@ -388,7 +398,7 @@ class _FromCenterStartPositionAsOneCharacterConversationContentWidgetState exten
                               children: [
                                 Flexible(
                                   child: Text(
-                                    'Conversation',
+                                    'Pomodoro #3',
                                     style: GoogleFonts.poetsenOne(
                                       textStyle: TextStyle(fontSize: 35.0, fontWeight: FontWeight.w600, fontStyle: FontStyle.normal, color: Color(0xFFFFFFFF), letterSpacing: 5.0),
                                     ),
@@ -405,6 +415,25 @@ class _FromCenterStartPositionAsOneCharacterConversationContentWidgetState exten
                     ),
                   ),
                 ],
+              ),
+            ),
+          ),
+
+          ///
+          /// TODO: Title Background
+          ///
+          AnimatedPositioned(
+            duration: const Duration(milliseconds: 100),
+            left: 10.0,
+            width: widget.sizeDx - 20.0,
+            height: 350.0,
+            child: Container(
+              width: widget.sizeDx,
+              height: 350.0,
+              decoration: BoxDecoration(
+                color: Color(0xFF1C1C1C).withValues(alpha: 1.0),
+                border: Border.all(width: 5.0, color: Colors.transparent),
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(30.0), bottomLeft: Radius.circular(30.0)),
               ),
             ),
           ),
@@ -426,21 +455,21 @@ class _FromCenterStartPositionAsOneCharacterConversationContentWidgetState exten
                     end: Alignment.topCenter,
                     colors: [
                       // Colors.white,
-                      Colors.white.withValues(alpha: 0.9),
-                      Colors.white.withValues(alpha: 0.8),
-                      Colors.white.withValues(alpha: 0.7),
-                      Colors.white.withValues(alpha: 0.6),
-                      Colors.white.withValues(alpha: 0.5),
-                      Colors.white.withValues(alpha: 0.4),
-                      Colors.white.withValues(alpha: 0.3),
-                      Colors.white.withValues(alpha: 0.2),
-                      Colors.white.withValues(alpha: 0.1),
-                      Colors.white.withValues(alpha: 0.05),
+                      Colors.white.withValues(alpha: 0.99),
+                      Colors.white.withValues(alpha: 0.98),
+                      Colors.white.withValues(alpha: 0.97),
+                      Colors.white.withValues(alpha: 0.96),
+                      Colors.white.withValues(alpha: 0.95),
+                      Colors.white.withValues(alpha: 0.94),
+                      Colors.white.withValues(alpha: 0.93),
+                      Colors.white.withValues(alpha: 0.92),
+                      Colors.white.withValues(alpha: 0.90),
+                      Colors.white.withValues(alpha: 0.80),
                       Colors.transparent,
                       Colors.transparent,
                       Colors.transparent,
                     ],
-                    stops: [0.76, 0.78, 0.80, 0.82, 0.84, 0.86, 0.88, 0.90, 0.92, 0.94, 0.96, 0.98, 1.0],
+                    stops: [0.88, 0.89, 0.90, 0.91, 0.92, 0.93, 0.94, 0.95, 0.96, 0.97, 0.98, 0.99, 1.0],
                   ).createShader(bounds);
                 },
                 child: Padding(
@@ -483,6 +512,8 @@ class _FromCenterStartPositionAsOneCharacterConversationContentWidgetState exten
             ),
           ),
 
+
+
           Positioned(
             top: 0,
             left: 0,
@@ -494,7 +525,7 @@ class _FromCenterStartPositionAsOneCharacterConversationContentWidgetState exten
               decoration: BoxDecoration(
                 color: Colors.transparent,
                 border: Border.all(width: 5.0, color: Colors.black),
-                borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(15.0), bottomRight: Radius.circular(15.0), bottomLeft: Radius.circular(30.0)),
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(30.0), bottomLeft: Radius.circular(30.0)),
               ),
             ),
           ),
@@ -532,7 +563,7 @@ class _FromCenterStartPositionAsOneCharacterConversationContentWidgetState exten
     }
 
     /// max width
-    double maxWidth = widget.sizeDx * 0.75;
+    double maxWidth = widget.sizeDx * 0.60;
 
     double totalHeight = 0;
 
@@ -727,7 +758,7 @@ class _FromCenterStartPositionAsOneCharacterConversationContentWidgetState exten
     double distanceToBorder = 5.0;
 
     /// max width
-    double maxWidth = widget.sizeDx * 0.75;
+    double maxWidth = widget.sizeDx * 0.60;
 
     double imageHeight = 500.0;
     double imageWidth = maxWidth * 1.0 + 50;

@@ -3,14 +3,22 @@ import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class FromCenterStartPositionAsOneCharacterConversationCharacterFlameWidget extends FlameGame {
-  FromCenterStartPositionAsOneCharacterConversationCharacterFlameWidget({required this.sizeDx, required this.sizeDy});
+class FromCenterPositionAsTheIntroductorySectionPomodoroSS03CharacterFlameWidget extends FlameGame {
+  FromCenterPositionAsTheIntroductorySectionPomodoroSS03CharacterFlameWidget({required this.sizeDx, required this.sizeDy});
 
   final double sizeDx;
   final double sizeDy;
 
   late SpriteAnimationComponent spriteComponentSS01;
   late SpriteAnimationComponent spriteComponentSS02;
+
+  late TextComponent nameSpriteComponentSS01;
+  late TextComponent borderNameSpriteComponentSS01;
+
+  late TextComponent nameSpriteComponentSS02;
+  late TextComponent borderNameSpriteComponentSS02;
+
+  late TextComponent pomodoroTitle;
 
   @override
   Color backgroundColor() => Colors.transparent; // ví dụ: tím đậm
@@ -19,7 +27,7 @@ class FromCenterStartPositionAsOneCharacterConversationCharacterFlameWidget exte
   Future<void> onLoad() async {
     // Load sprite sheet
     final imageSS01 = await images.load('sprite_sheet/12C/monster12C.png');
-    final imageSS02 = await images.load('sprite_sheet/20A/monster20A.png');
+    final imageSS02 = await images.load('sprite_sheet/07C/monster07C.png');
 
     SpriteAnimation spriteAnimationSS01 = SpriteAnimation.fromFrameData(
       imageSS01,
@@ -35,7 +43,7 @@ class FromCenterStartPositionAsOneCharacterConversationCharacterFlameWidget exte
       imageSS02,
       SpriteAnimationData.sequenced(
         amount: 91, // Số frame trong spriteSheet
-        textureSize: Vector2(260, 250), // Kích thước mỗi frame
+        textureSize: Vector2(250, 250), // Kích thước mỗi frame
         amountPerRow: 13,
         stepTime: 0.03, // Tốc độ animation
       ),
@@ -55,13 +63,14 @@ class FromCenterStartPositionAsOneCharacterConversationCharacterFlameWidget exte
     spriteComponentSS02 = SpriteAnimationComponent()
       ..animation = spriteAnimationSS02
       ..size = Vector2(sizeDxCharacterSS02, sizeDyCharacterSS02)
-      ..position = Vector2(sizeDx - (sizeDxCharacterSS02 / 2 + 25.0), sizeDy - (sizeDyCharacterSS02 / 2 + 50));
+      // ..position = Vector2(sizeDx - (sizeDxCharacterSS02 / 2 + 25.0), sizeDy - (sizeDyCharacterSS02 / 2 + 50));
+      ..position = Vector2(250.0, sizeDy / 2);
 
     spriteComponentSS01.anchor = Anchor.center;
     spriteComponentSS02.anchor = Anchor.center;
 
     /// Viền Tên Nhân Vật 1
-    final borderNameSpriteComponentSS01 = TextComponent(
+    borderNameSpriteComponentSS01 = TextComponent(
       text: 'Tommy',
       position: Vector2(spriteComponentSS01.x, spriteComponentSS01.y + (sizeDyCharacterSS01 / 2) + 10.0), // vị trí trên màn hình
       textRenderer: TextPaint(
@@ -79,7 +88,7 @@ class FromCenterStartPositionAsOneCharacterConversationCharacterFlameWidget exte
     );
 
     /// Tên Nhân Vật 1
-    final nameSpriteComponentSS01 = TextComponent(
+    nameSpriteComponentSS01 = TextComponent(
       text: 'Tommy',
       position: Vector2(spriteComponentSS01.x, spriteComponentSS01.y + (sizeDyCharacterSS01 / 2) + 10.0), // vị trí trên màn hình
       textRenderer: TextPaint(
@@ -88,9 +97,9 @@ class FromCenterStartPositionAsOneCharacterConversationCharacterFlameWidget exte
     );
 
     /// Viền Tên Nhân Vật 2
-    final borderNameSpriteComponentSS02 = TextComponent(
+    borderNameSpriteComponentSS02 = TextComponent(
       text: 'Nathan',
-      position: Vector2(spriteComponentSS02.x, spriteComponentSS02.y + (sizeDyCharacterSS02 / 2) + 10.0), // vị trí trên màn hình
+      position: Vector2(spriteComponentSS02.x, spriteComponentSS02.y + (sizeDyCharacterSS02 / 2) + 25.0), // vị trí trên màn hình
       textRenderer: TextPaint(
         style: GoogleFonts.sriracha(
           // color: Color(0xFF838B83),
@@ -106,11 +115,21 @@ class FromCenterStartPositionAsOneCharacterConversationCharacterFlameWidget exte
     );
 
     /// Tên Nhân Vật 2
-    final nameSpriteComponentSS02 = TextComponent(
+    nameSpriteComponentSS02 = TextComponent(
       text: 'Nathan',
-      position: Vector2(spriteComponentSS02.x, spriteComponentSS02.y + (sizeDyCharacterSS02 / 2) + 10.0), // vị trí trên màn hình
+      position: Vector2(spriteComponentSS02.x, spriteComponentSS02.y + (sizeDyCharacterSS02 / 2) + 25.0), // vị trí trên màn hình
       textRenderer: TextPaint(
         style: GoogleFonts.sriracha(color: Color(0xFFFFE7BA).withValues(alpha: 0.8), fontWeight: FontWeight.bold, fontSize: 50.0, letterSpacing: 5.0),
+      ),
+    );
+
+    /// Tên Nhân Vật 2
+    pomodoroTitle = TextComponent(
+      text: 'PLAY CHESS',
+      position: Vector2(-sizeDx / 2, sizeDy / 2), // vị trí trên màn hình
+      textRenderer: TextPaint(
+        // style: GoogleFonts.sriracha(color: Color(0xFFFFE7BA).withValues(alpha: 0.8), fontWeight: FontWeight.bold, fontSize: 50.0, letterSpacing: 5.0),
+        style: GoogleFonts.blackOpsOne(color: Color(0xFFD3D3D3), fontWeight: FontWeight.bold, fontSize: 80.0),
       ),
     );
 
@@ -118,13 +137,35 @@ class FromCenterStartPositionAsOneCharacterConversationCharacterFlameWidget exte
     borderNameSpriteComponentSS02.anchor = Anchor.center;
     nameSpriteComponentSS01.anchor = Anchor.center;
     nameSpriteComponentSS02.anchor = Anchor.center;
+    pomodoroTitle.anchor = Anchor.center;
 
     add(spriteComponentSS01);
-    // add(spriteComponentSS02);
+    add(spriteComponentSS02);
 
     add(borderNameSpriteComponentSS01);
-    // add(borderNameSpriteComponentSS02);
+    add(borderNameSpriteComponentSS02);
     add(nameSpriteComponentSS01);
-    // add(nameSpriteComponentSS02);
+    add(nameSpriteComponentSS02);
+
+    add(pomodoroTitle);
+  }
+
+  @override
+  void update(double dt) {
+    super.update(dt);
+    // logic game mỗi frame ở đây
+    double newValueXCharacter = spriteComponentSS02.position.x + 10.0;
+    spriteComponentSS02.position.setValues(newValueXCharacter, spriteComponentSS02.position.y);
+
+    double newValueXCharacterName = nameSpriteComponentSS02.position.x + 10.0;
+    nameSpriteComponentSS02.position.setValues(newValueXCharacterName, nameSpriteComponentSS02.position.y);
+
+    double newValueXCharacterNameBorder = borderNameSpriteComponentSS02.position.x + 10.0;
+    borderNameSpriteComponentSS02.position.setValues(newValueXCharacterNameBorder, borderNameSpriteComponentSS02.position.y);
+
+    if (pomodoroTitle.position.x < (sizeDx * 0.8)) {
+      double newValueXPomodoroTitle = pomodoroTitle.position.x + 10.0;
+      pomodoroTitle.position.setValues(newValueXPomodoroTitle, pomodoroTitle.position.y);
+    }
   }
 }

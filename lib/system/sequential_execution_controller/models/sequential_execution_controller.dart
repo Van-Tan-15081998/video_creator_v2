@@ -39,6 +39,10 @@ import 'package:frame_creator_v2/features/vocabulary_subject/models/vocabulary_s
 import 'package:frame_creator_v2/features/vocabulary_title/models/vocabulary_title_feature.dart';
 import 'package:frame_creator_v2/master_data/content_item/04_content_item_sequential_execution/content_item_sequential_execution.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_bottom_end_position_as_one_character_conversation_functional_feature/models/from_bottom_end_position_as_one_character_conversation_functional_feature.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_introductory_section_pomodoro_ss01_functional_feature/models/from_center_position_as_the_introductory_section_pomodoro_ss01_functional_feature.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_introductory_section_pomodoro_ss02_functional_feature/models/from_center_position_as_the_introductory_section_pomodoro_ss02_functional_feature.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_introductory_section_pomodoro_ss03_functional_feature/models/from_center_position_as_the_introductory_section_pomodoro_ss03_functional_feature.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_introductory_section_pomodoro_ss04_functional_feature/models/from_center_position_as_the_introductory_section_pomodoro_ss04_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_conversation_functional_feature/models/from_center_start_position_as_one_character_conversation_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_playing_crossword_puzzle_functional_feature/models/from_center_start_position_as_one_character_playing_crossword_puzzle_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_conversation_functional_feature/models/from_center_start_position_as_two_character_conversation_functional_feature.dart';
@@ -301,6 +305,31 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       getFromTopEndPositionAsOneCharacterConversationFunctionalFeature?.setRightPosition(value: 15.0, isPriorityOverride: true, isSetActiveRightPosition: true);
 
       ///
+      setFromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature(value: FromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature(systemStateManagement: getSystemStateManagement, sizeDx: null, sizeDy: null), isPriorityOverride: true);
+      getFromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature?.setSizeDx(value: getSizeDx - 30.0, isPriorityOverride: true, isSetActiveSizeDx: true);
+      getFromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature?.setSizeDy(value: getSizeDy - 30.0, isPriorityOverride: true, isSetActiveSizeDy: true);
+      getFromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature?.setTopPosition(value: 15.0, isPriorityOverride: true, isSetActiveTopPosition: true);
+      getFromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature?.setLeftPosition(value: 15.0, isPriorityOverride: true, isSetActiveLeftPosition: true);
+
+      setFromCenterPositionAsTheIntroductorySectionPomodoroSS02FunctionalFeature(value: FromCenterPositionAsTheIntroductorySectionPomodoroSS02FunctionalFeature(systemStateManagement: getSystemStateManagement, sizeDx: null, sizeDy: null), isPriorityOverride: true);
+      getFromCenterPositionAsTheIntroductorySectionPomodoroSS02FunctionalFeature?.setSizeDx(value: getSizeDx - 30.0, isPriorityOverride: true, isSetActiveSizeDx: true);
+      getFromCenterPositionAsTheIntroductorySectionPomodoroSS02FunctionalFeature?.setSizeDy(value: getSizeDy - 30.0, isPriorityOverride: true, isSetActiveSizeDy: true);
+      getFromCenterPositionAsTheIntroductorySectionPomodoroSS02FunctionalFeature?.setTopPosition(value: 15.0, isPriorityOverride: true, isSetActiveTopPosition: true);
+      getFromCenterPositionAsTheIntroductorySectionPomodoroSS02FunctionalFeature?.setLeftPosition(value: 15.0, isPriorityOverride: true, isSetActiveLeftPosition: true);
+
+      setFromCenterPositionAsTheIntroductorySectionPomodoroSS03FunctionalFeature(value: FromCenterPositionAsTheIntroductorySectionPomodoroSS03FunctionalFeature(systemStateManagement: getSystemStateManagement, sizeDx: null, sizeDy: null), isPriorityOverride: true);
+      getFromCenterPositionAsTheIntroductorySectionPomodoroSS03FunctionalFeature?.setSizeDx(value: getSizeDx - 30.0, isPriorityOverride: true, isSetActiveSizeDx: true);
+      getFromCenterPositionAsTheIntroductorySectionPomodoroSS03FunctionalFeature?.setSizeDy(value: getSizeDy - 30.0, isPriorityOverride: true, isSetActiveSizeDy: true);
+      getFromCenterPositionAsTheIntroductorySectionPomodoroSS03FunctionalFeature?.setTopPosition(value: 15.0, isPriorityOverride: true, isSetActiveTopPosition: true);
+      getFromCenterPositionAsTheIntroductorySectionPomodoroSS03FunctionalFeature?.setLeftPosition(value: 15.0, isPriorityOverride: true, isSetActiveLeftPosition: true);
+
+      setFromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature(value: FromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature(systemStateManagement: getSystemStateManagement, sizeDx: null, sizeDy: null), isPriorityOverride: true);
+      getFromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature?.setSizeDx(value: getSizeDx - 30.0, isPriorityOverride: true, isSetActiveSizeDx: true);
+      getFromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature?.setSizeDy(value: getSizeDy - 30.0, isPriorityOverride: true, isSetActiveSizeDy: true);
+      getFromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature?.setTopPosition(value: 15.0, isPriorityOverride: true, isSetActiveTopPosition: true);
+      getFromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature?.setLeftPosition(value: 15.0, isPriorityOverride: true, isSetActiveLeftPosition: true);
+
+      ///
       ///
       ///
       getFunctionalFeatureManagement?.setFromBottomEndPositionAsOneCharacterConversationFunctionalFeature(value: getFromBottomEndPositionAsOneCharacterConversationFunctionalFeature, isPriorityOverride: true);
@@ -309,6 +338,10 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       getFunctionalFeatureManagement?.setFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature(value: getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature, isPriorityOverride: true);
       getFunctionalFeatureManagement?.setFromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature(value: getFromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature, isPriorityOverride: true);
       getFunctionalFeatureManagement?.setFromTopEndPositionAsOneCharacterConversationFunctionalFeature(value: getFromTopEndPositionAsOneCharacterConversationFunctionalFeature, isPriorityOverride: true);
+      getFunctionalFeatureManagement?.setFromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature(value: getFromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature, isPriorityOverride: true);
+      getFunctionalFeatureManagement?.setFromCenterPositionAsTheIntroductorySectionPomodoroSS02FunctionalFeature(value: getFromCenterPositionAsTheIntroductorySectionPomodoroSS02FunctionalFeature, isPriorityOverride: true);
+      getFunctionalFeatureManagement?.setFromCenterPositionAsTheIntroductorySectionPomodoroSS03FunctionalFeature(value: getFromCenterPositionAsTheIntroductorySectionPomodoroSS03FunctionalFeature, isPriorityOverride: true);
+      getFunctionalFeatureManagement?.setFromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature(value: getFromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature, isPriorityOverride: true);
 
       /// ----- | ----- | ----- | ----- | ----- |
       /// TODO: System Feature Management
@@ -792,6 +825,12 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
                 AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromCenterEndPositionAsCountdownTimeCycleSystemFeature?.getWindowWidget ?? Container()),
                 AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromCenterPositionAsIntroductoryConversationSystemFeature?.getWindowWidget ?? Container()),
 
+                /// TODO:
+                AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature?.getWindowWidget ?? Container()),
+                AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromCenterPositionAsTheIntroductorySectionPomodoroSS02FunctionalFeature?.getWindowWidget ?? Container()),
+                AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromCenterPositionAsTheIntroductorySectionPomodoroSS03FunctionalFeature?.getWindowWidget ?? Container()),
+                AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature?.getWindowWidget ?? Container()),
+
                 /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
                 /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
                 /// TODO: Feature Management Details [END]
@@ -891,6 +930,10 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       await getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.onSetupRoot();
       await getFromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature?.onSetupRoot();
       await getFromTopEndPositionAsOneCharacterConversationFunctionalFeature?.onSetupRoot();
+      await getFromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature?.onSetupRoot();
+      await getFromCenterPositionAsTheIntroductorySectionPomodoroSS02FunctionalFeature?.onSetupRoot();
+      await getFromCenterPositionAsTheIntroductorySectionPomodoroSS03FunctionalFeature?.onSetupRoot();
+      await getFromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature?.onSetupRoot();
 
       /// ----- | ----- | ----- | ----- | ----- |
       /// TODO: System Feature Management
@@ -998,6 +1041,23 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       /// TODO:
       getFromTopEndPositionAsOneCharacterConversationFunctionalFeature
         ?..setConditionActiveByRightDirection()
+        ..onDeactivateWindow();
+
+      /// TODO:
+      getFromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature
+        ?..setConditionActiveByTopDirection()
+        ..onDeactivateWindow();
+      /// TODO:
+      getFromCenterPositionAsTheIntroductorySectionPomodoroSS02FunctionalFeature
+        ?..setConditionActiveByTopDirection()
+        ..onDeactivateWindow();
+      /// TODO:
+      getFromCenterPositionAsTheIntroductorySectionPomodoroSS03FunctionalFeature
+        ?..setConditionActiveByTopDirection()
+        ..onDeactivateWindow();
+      /// TODO:
+      getFromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature
+        ?..setConditionActiveByTopDirection()
         ..onDeactivateWindow();
 
       /// ----- | ----- | ----- | ----- | ----- |
@@ -1176,6 +1236,10 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       await getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.onInitRoot();
       await getFromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature?.onInitRoot();
       await getFromTopEndPositionAsOneCharacterConversationFunctionalFeature?.onInitRoot();
+      await getFromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature?.onInitRoot();
+      await getFromCenterPositionAsTheIntroductorySectionPomodoroSS02FunctionalFeature?.onInitRoot();
+      await getFromCenterPositionAsTheIntroductorySectionPomodoroSS03FunctionalFeature?.onInitRoot();
+      await getFromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature?.onInitRoot();
 
       /// ----- | ----- | ----- | ----- | ----- |
       /// TODO: System Feature Management

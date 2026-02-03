@@ -65,6 +65,34 @@ class SystemWindow with ExecutionCore {
 
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: From _Center Position As _TheIntroductorySectionPomodoroSS01
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  static const fromCenterPositionAsTheIntroductorySectionPomodoroSS01Window = '[FROM_CENTER_POSITION_AS_THE_INTRODUCTORY_SECTION_POMODORO_SS01]';
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: From _Center Position As _TheIntroductorySectionPomodoroSS02
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  static const fromCenterPositionAsTheIntroductorySectionPomodoroSS02Window = '[FROM_CENTER_POSITION_AS_THE_INTRODUCTORY_SECTION_POMODORO_SS02]';
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: From _Center Position As _TheIntroductorySectionPomodoroSS03
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  static const fromCenterPositionAsTheIntroductorySectionPomodoroSS03Window = '[FROM_CENTER_POSITION_AS_THE_INTRODUCTORY_SECTION_POMODORO_SS03]';
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: From _Center Position As _TheIntroductorySectionPomodoroSS04
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  static const fromCenterPositionAsTheIntroductorySectionPomodoroSS04Window = '[FROM_CENTER_POSITION_AS_THE_INTRODUCTORY_SECTION_POMODORO_SS04]';
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// TODO: From _TopEnd Position As _OneCharacterConversation
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |

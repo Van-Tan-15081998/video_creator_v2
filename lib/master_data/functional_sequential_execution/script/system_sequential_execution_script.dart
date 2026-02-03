@@ -149,6 +149,62 @@ class SystemSequentialExecutionScript with ExecutionCore {
 
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: From _Center Position As _TheIntroductorySectionPomodoroSS01
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+  /// TODO:
+  static const String onStartFromCenterPositionAsTheIntroductorySectionPomodoroSS01AsOpenWindow = '[ON_START_FROM_CENTER_POSITION_AS_THE_INTRODUCTORY_SECTION_POMODORO_SS01_AS_OPEN_WINDOW]';
+
+  /// TODO:
+  static const String onFinishFromCenterPositionAsTheIntroductorySectionPomodoroSS01AsCloseWindow = '[ON_FINISH_FROM_CENTER_POSITION_AS_THE_INTRODUCTORY_SECTION_POMODORO_SS01_AS_CLOSE_WINDOW]';
+
+  ///
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: From _Center Position As _TheIntroductorySectionPomodoroSS02
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+  /// TODO:
+  static const String onStartFromCenterPositionAsTheIntroductorySectionPomodoroSS02AsOpenWindow = '[ON_START_FROM_CENTER_POSITION_AS_THE_INTRODUCTORY_SECTION_POMODORO_SS02_AS_OPEN_WINDOW]';
+
+  /// TODO:
+  static const String onFinishFromCenterPositionAsTheIntroductorySectionPomodoroSS02AsCloseWindow = '[ON_FINISH_FROM_CENTER_POSITION_AS_THE_INTRODUCTORY_SECTION_POMODORO_SS02_AS_CLOSE_WINDOW]';
+
+  ///
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: From _Center Position As _TheIntroductorySectionPomodoroSS03
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+  /// TODO:
+  static const String onStartFromCenterPositionAsTheIntroductorySectionPomodoroSS03AsOpenWindow = '[ON_START_FROM_CENTER_POSITION_AS_THE_INTRODUCTORY_SECTION_POMODORO_SS03_AS_OPEN_WINDOW]';
+
+  /// TODO:
+  static const String onFinishFromCenterPositionAsTheIntroductorySectionPomodoroSS03AsCloseWindow = '[ON_FINISH_FROM_CENTER_POSITION_AS_THE_INTRODUCTORY_SECTION_POMODORO_SS03_AS_CLOSE_WINDOW]';
+
+  ///
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: From _Center Position As _TheIntroductorySectionPomodoroSS04
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+  /// TODO:
+  static const String onStartFromCenterPositionAsTheIntroductorySectionPomodoroSS04AsOpenWindow = '[ON_START_FROM_CENTER_POSITION_AS_THE_INTRODUCTORY_SECTION_POMODORO_SS04_AS_OPEN_WINDOW]';
+
+  /// TODO:
+  static const String onFinishFromCenterPositionAsTheIntroductorySectionPomodoroSS04AsCloseWindow = '[ON_FINISH_FROM_CENTER_POSITION_AS_THE_INTRODUCTORY_SECTION_POMODORO_SS04_AS_CLOSE_WINDOW]';
+
+  ///
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// TODO: From _TopEnd Position As _OneCharacterConversation
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -704,6 +760,262 @@ class SystemSequentialExecutionScript with ExecutionCore {
                 ..onPerform = () {
                   ///
                   getSequentialExecutionController?.getSystemFeatureManagement?.getFromCenterPositionAsIntroductoryConversationSystemFeature?.onDeactivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From _Center Position As _TheIntroductorySectionPomodoroSS01
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      ///
+      case SystemSequentialExecutionScript.onStartFromCenterPositionAsTheIntroductorySectionPomodoroSS01AsOpenWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[_]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getFunctionalFeatureManagement?.getFromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature?.onActivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+      ///
+      case SystemSequentialExecutionScript.onFinishFromCenterPositionAsTheIntroductorySectionPomodoroSS01AsCloseWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[_]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getFunctionalFeatureManagement?.getFromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature?.onDeactivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From _Center Position As _TheIntroductorySectionPomodoroSS02
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      ///
+      case SystemSequentialExecutionScript.onStartFromCenterPositionAsTheIntroductorySectionPomodoroSS02AsOpenWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[_]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getFunctionalFeatureManagement?.getFromCenterPositionAsTheIntroductorySectionPomodoroSS02FunctionalFeature?.onActivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+      ///
+      case SystemSequentialExecutionScript.onFinishFromCenterPositionAsTheIntroductorySectionPomodoroSS02AsCloseWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[_]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getFunctionalFeatureManagement?.getFromCenterPositionAsTheIntroductorySectionPomodoroSS02FunctionalFeature?.onDeactivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From _Center Position As _TheIntroductorySectionPomodoroSS03
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      ///
+      case SystemSequentialExecutionScript.onStartFromCenterPositionAsTheIntroductorySectionPomodoroSS03AsOpenWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[_]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getFunctionalFeatureManagement?.getFromCenterPositionAsTheIntroductorySectionPomodoroSS03FunctionalFeature?.onActivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+      ///
+      case SystemSequentialExecutionScript.onFinishFromCenterPositionAsTheIntroductorySectionPomodoroSS03AsCloseWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[_]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getFunctionalFeatureManagement?.getFromCenterPositionAsTheIntroductorySectionPomodoroSS03FunctionalFeature?.onDeactivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From _Center Position As _TheIntroductorySectionPomodoroSS04
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      ///
+      case SystemSequentialExecutionScript.onStartFromCenterPositionAsTheIntroductorySectionPomodoroSS04AsOpenWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[_]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getFunctionalFeatureManagement?.getFromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature?.onActivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+      ///
+      case SystemSequentialExecutionScript.onFinishFromCenterPositionAsTheIntroductorySectionPomodoroSS04AsCloseWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[_]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getFunctionalFeatureManagement?.getFromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature?.onDeactivateWindow();
 
                   ///
                 },

@@ -78,6 +78,38 @@ class CommonActionModel {
   /// -----
   /// TODO:
   /// -----
+  onCreateNewImageSlide({required ContentItemUnit? contentItemUnit, required StepItemContentAsNewMessageConversation? messageData, required int? gapTime}) {
+    //
+    contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asImageSlideFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_____[POMODORO_STAY_FOCUSED_SS01_AS_MAIN]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]_____[POMODORO_STAY_FOCUSED_SS01_AS_MAIN]');
+              }
+            }
+            ..setStepItemContent(value: messageData, isPriorityOverride: true),
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: gapTime);
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
   onFinishWindow({required ContentItemUnit? contentItemUnit, required String windowId, required int? gapTime}) {
     switch (windowId) {
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -195,6 +227,66 @@ class CommonActionModel {
           getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(
             // executionId: SystemSequentialExecutionScript.onFinishFrom_PositionAs_AsCloseWindow,
             executionId: SystemSequentialExecutionScript.onFinishFromCenterPositionAsIntroductoryConversationAsCloseWindow,
+            contentItemUnit: contentItemUnit,
+          );
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From _Center Position As _TheIntroductorySectionPomodoroSS01
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      case SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS01Window:
+        {
+          getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(
+            // executionId: SystemSequentialExecutionScript.onStartFrom_PositionAs_AsOpenWindow,
+            executionId: SystemSequentialExecutionScript.onFinishFromCenterPositionAsTheIntroductorySectionPomodoroSS01AsCloseWindow,
+            contentItemUnit: contentItemUnit,
+          );
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From _Center Position As _TheIntroductorySectionPomodoroSS02
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      case SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS02Window:
+        {
+          getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(
+            // executionId: SystemSequentialExecutionScript.onStartFrom_PositionAs_AsOpenWindow,
+            executionId: SystemSequentialExecutionScript.onFinishFromCenterPositionAsTheIntroductorySectionPomodoroSS02AsCloseWindow,
+            contentItemUnit: contentItemUnit,
+          );
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From _Center Position As _TheIntroductorySectionPomodoroSS03
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      case SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS03Window:
+        {
+          getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(
+            // executionId: SystemSequentialExecutionScript.onStartFrom_PositionAs_AsOpenWindow,
+            executionId: SystemSequentialExecutionScript.onFinishFromCenterPositionAsTheIntroductorySectionPomodoroSS03AsCloseWindow,
+            contentItemUnit: contentItemUnit,
+          );
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From _Center Position As _TheIntroductorySectionPomodoroSS04
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      case SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS04Window:
+        {
+          getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(
+            // executionId: SystemSequentialExecutionScript.onStartFrom_PositionAs_AsOpenWindow,
+            executionId: SystemSequentialExecutionScript.onFinishFromCenterPositionAsTheIntroductorySectionPomodoroSS04AsCloseWindow,
             contentItemUnit: contentItemUnit,
           );
         }
@@ -341,6 +433,66 @@ class CommonActionModel {
           getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(
             // executionId: SystemSequentialExecutionScript.onStartFrom_PositionAs_AsOpenWindow,
             executionId: SystemSequentialExecutionScript.onStartFromCenterPositionAsIntroductoryConversationAsOpenWindow,
+            contentItemUnit: contentItemUnit,
+          );
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From _Center Position As _TheIntroductorySectionPomodoroSS01
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      case SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS01Window:
+        {
+          getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(
+            // executionId: SystemSequentialExecutionScript.onStartFrom_PositionAs_AsOpenWindow,
+            executionId: SystemSequentialExecutionScript.onStartFromCenterPositionAsTheIntroductorySectionPomodoroSS01AsOpenWindow,
+            contentItemUnit: contentItemUnit,
+          );
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From _Center Position As _TheIntroductorySectionPomodoroSS02
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      case SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS02Window:
+        {
+          getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(
+            // executionId: SystemSequentialExecutionScript.onStartFrom_PositionAs_AsOpenWindow,
+            executionId: SystemSequentialExecutionScript.onStartFromCenterPositionAsTheIntroductorySectionPomodoroSS02AsOpenWindow,
+            contentItemUnit: contentItemUnit,
+          );
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From _Center Position As _TheIntroductorySectionPomodoroSS03
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      case SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS03Window:
+        {
+          getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(
+            // executionId: SystemSequentialExecutionScript.onStartFrom_PositionAs_AsOpenWindow,
+            executionId: SystemSequentialExecutionScript.onStartFromCenterPositionAsTheIntroductorySectionPomodoroSS03AsOpenWindow,
+            contentItemUnit: contentItemUnit,
+          );
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From _Center Position As _TheIntroductorySectionPomodoroSS04
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      case SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS04Window:
+        {
+          getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(
+            // executionId: SystemSequentialExecutionScript.onStartFrom_PositionAs_AsOpenWindow,
+            executionId: SystemSequentialExecutionScript.onStartFromCenterPositionAsTheIntroductorySectionPomodoroSS04AsOpenWindow,
             contentItemUnit: contentItemUnit,
           );
         }

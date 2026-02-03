@@ -1,4 +1,5 @@
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_introductory_section_pomodoro_ss01_functional_feature/models/from_center_position_as_the_introductory_section_pomodoro_ss01_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/from_bottom_end_position_as_pomodoro_cycle/models/from_bottom_end_position_as_pomodoro_cycle_system_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/from_center_end_position_as_countdown_timer/models/from_center_end_position_as_countdown_time_cycle_system_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/from_center_position_as_introductory_conversation/models/from_center_position_as_introductory_conversation_system_feature.dart';
@@ -47,6 +48,22 @@ class SystemFeatureManagement with ExecutionCore, FeatureMixin {
       _fromCenterPositionAsIntroductoryConversationSystemFeature = value;
     } else {
       _fromCenterPositionAsIntroductoryConversationSystemFeature ??= value;
+    }
+
+    ///
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  FromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature? _fromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature;
+  FromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature? get getFromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature => _fromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature;
+  void setFromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature({required FromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _fromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature = value;
+    } else {
+      _fromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature ??= value;
     }
 
     ///

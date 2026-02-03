@@ -51,6 +51,18 @@ class _AnimatedBlocksBackgroundState extends State<AnimatedBlocksBackground> wit
   }
 
   _BlockData _createBlock(double now, {bool initial = false}) {
+    final random = Random();
+    int number = random.nextInt(3) + 1;
+    Color borderColor = Color(0xFF4C4C4C);
+
+    if (number == 1) {
+      borderColor = Color(0xFF1C1C1C);
+    } else if (number == 2) {
+      borderColor = Color(0xFF2C2C2C);
+    } else if (number == 3) {
+      borderColor = Color(0xFF3C3C3C);
+    }
+
     return _BlockData(
       birthTime: now,
       lifeSpan: minLife + _random.nextDouble() * (maxLife - minLife),
@@ -60,6 +72,7 @@ class _AnimatedBlocksBackgroundState extends State<AnimatedBlocksBackground> wit
       dy: (_random.nextDouble() - 0.5) * 0.3,
       size: 40 + _random.nextDouble() * 60,
       color: Colors.primaries[_random.nextInt(Colors.primaries.length)],
+      borderColor: borderColor,
       age: initial ? _random.nextDouble() * 4 : 0.0,
     );
   }
@@ -89,9 +102,10 @@ class _BlockData {
   double dx, dy;
   double size;
   Color color;
+  Color borderColor;
   double age;
 
-  _BlockData({required this.birthTime, required this.lifeSpan, required this.x, required this.y, required this.dx, required this.dy, required this.size, required this.color, required this.age});
+  _BlockData({required this.birthTime, required this.lifeSpan, required this.x, required this.y, required this.dx, required this.dy, required this.size, required this.color, required this.borderColor, required this.age});
 }
 
 class _BlocksPainter extends CustomPainter {
@@ -131,6 +145,15 @@ class _BlocksPainter extends CustomPainter {
         ..strokeWidth = 5.0;
 
       canvas.drawRRect(RRect.fromRectAndRadius(Rect.fromLTWH(0, 0, b.size, b.size), const Radius.circular(12)), borderPaint);
+
+      // Viền khối (Viền ngoài)
+      final borderPaint2 = Paint()
+        // ..color = Color.alphaBlend(b.color.withValues(alpha: opacity * 0.9), Colors.white)
+        ..color = b.borderColor
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 8.0;
+
+      canvas.drawRRect(RRect.fromRectAndRadius(Rect.fromLTWH(-12.0, -12.0, b.size + 24, b.size + 24), const Radius.circular(12)), borderPaint2);
 
       canvas.restore();
     }

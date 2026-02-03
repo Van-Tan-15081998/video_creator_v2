@@ -37,6 +37,71 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
     /// TODO: [OPEN TWO CHARACTER CONVERSATION WINDOW]
     /// -----
 
+    getCommonAction?.onStartWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS04Window, gapTime: 10);
+    getCommonAction?.onCreateNewImageSlide(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: null,
+        imageSource: 'assets/images/interesting_knowledge/demo4.webp', //
+        windowId: SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS04Window,
+        characterId: SystemCharacter.characterA01Id,
+      ),
+      gapTime: 5,
+    );
+    getCommonAction?.onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 😮😮😮😮😮 _20',
+        imageSource: null, //
+        windowId: SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS04Window,
+        characterId: SystemCharacter.characterA01Id,
+      ),
+      gapTime: 5,
+    );
+    getCommonAction?.onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 😮😮😮😮😮 _70',
+        imageSource: null, //
+        windowId: SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS04Window,
+        characterId: SystemCharacter.characterA01Id,
+      ),
+      gapTime: 5,
+    );
+    getCommonAction?.onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 😮😮😮😮😮 _100',
+        imageSource: null, //
+        windowId: SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS04Window,
+        characterId: SystemCharacter.characterA01Id,
+      ),
+      gapTime: 5,
+    );
+    getCommonAction?.onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 😮😮😮😮😮 _150',
+        imageSource: null, //
+        windowId: SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS04Window,
+        characterId: SystemCharacter.characterA01Id,
+      ),
+      gapTime: 5,
+    );
+    return;
+    getCommonAction?.onFinishWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS01Window, gapTime: 2);
+
+    getCommonAction?.onStartWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS02Window, gapTime: 30);
+    getCommonAction?.onFinishWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS02Window, gapTime: 2);
+
+    getCommonAction?.onStartWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS03Window, gapTime: 30);
+    getCommonAction?.onFinishWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS03Window, gapTime: 2);
+
+    getCommonAction?.onStartWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS04Window, gapTime: 30);
+    getCommonAction?.onFinishWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS04Window, gapTime: 2);
+
+    return;
+
     getCommonAction?.onStartWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromTopEndPositionAsOneCharacterConversationWindow, gapTime: 2);
 
     getCommonAction?.onFinishWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromBottomEndPositionAsPomodoroCycleWindow, gapTime: 2);
@@ -44,6 +109,106 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
     getCommonAction?.onStartWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromBottomEndPositionAsOneCharacterConversationWindow, gapTime: 2);
 
     // getCommonAction?.onStartWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterStartPositionAsTwoCharacterPlayingChessWindow, gapTime: 2);
+
+
+    getCommonAction?.onStartWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterStartPositionAsOneCharacterConversationWindow, gapTime: 2);
+
+    getCommonAction?.onCreateNewImageSlide(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: null,
+        imageSource: 'assets/images/interesting_knowledge/demo.png', //
+        windowId: SystemWindow.fromCenterStartPositionAsOneCharacterConversationWindow,
+        characterId: SystemCharacter.characterA01Id,
+      ),
+      gapTime: 5,
+    );
+    getCommonAction?.onCreateNewImageSlide(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: null,
+        imageSource: 'assets/images/interesting_knowledge/demo2.png', //
+        windowId: SystemWindow.fromCenterStartPositionAsOneCharacterConversationWindow,
+        characterId: SystemCharacter.characterA01Id,
+      ),
+      gapTime: 5,
+    );
+    getCommonAction?.onCreateNewImageSlide(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: null,
+        imageSource: 'assets/images/interesting_knowledge/demo3.png', //
+        windowId: SystemWindow.fromCenterStartPositionAsOneCharacterConversationWindow,
+        characterId: SystemCharacter.characterA01Id,
+      ),
+      gapTime: 5,
+    );
+    getCommonAction?.onCreateNewImageSlide(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: null,
+        imageSource: 'assets/images/interesting_knowledge/demo4.webp', //
+        windowId: SystemWindow.fromCenterStartPositionAsOneCharacterConversationWindow,
+        characterId: SystemCharacter.characterA01Id,
+      ),
+      gapTime: 5,
+    );
+    getCommonAction?.onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 😮😮😮😮😮 _20',
+        imageSource: null, //
+        windowId: SystemWindow.fromCenterStartPositionAsOneCharacterConversationWindow,
+        characterId: SystemCharacter.characterA01Id,
+      ),
+      gapTime: 5,
+    );
+    getCommonAction?.onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 😮😮😮😮😮 _70',
+        imageSource: null, //
+        windowId: SystemWindow.fromCenterStartPositionAsOneCharacterConversationWindow,
+        characterId: SystemCharacter.characterA01Id,
+      ),
+      gapTime: 5,
+    );
+    getCommonAction?.onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 😮😮😮😮😮 _100',
+        imageSource: null, //
+        windowId: SystemWindow.fromCenterStartPositionAsOneCharacterConversationWindow,
+        characterId: SystemCharacter.characterA01Id,
+      ),
+      gapTime: 5,
+    );
+    getCommonAction?.onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 😮😮😮😮😮 _150',
+        imageSource: null, //
+        windowId: SystemWindow.fromCenterStartPositionAsOneCharacterConversationWindow,
+        characterId: SystemCharacter.characterA01Id,
+      ),
+      gapTime: 5,
+    );
+    getCommonAction?.onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: null,
+        imageSource: null, //
+        windowId: SystemWindow.fromCenterStartPositionAsOneCharacterConversationWindow,
+        characterId: SystemCharacter.characterA01Id,
+      ),
+      gapTime: 5,
+    );
+
+    return;
+
+    getCommonAction?.onFinishWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterStartPositionAsOneCharacterConversationWindow, gapTime: 2);
+
+    ///
     getCommonAction?.onStartWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleWindow, gapTime: 2);
 
     ///
