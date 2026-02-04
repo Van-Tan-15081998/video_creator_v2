@@ -39,6 +39,7 @@ import 'package:frame_creator_v2/features/vocabulary_subject/models/vocabulary_s
 import 'package:frame_creator_v2/features/vocabulary_title/models/vocabulary_title_feature.dart';
 import 'package:frame_creator_v2/master_data/content_item/04_content_item_sequential_execution/content_item_sequential_execution.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_bottom_end_position_as_one_character_conversation_functional_feature/models/from_bottom_end_position_as_one_character_conversation_functional_feature.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_corner_message_notification_functional_feature/models/from_center_position_as_the_corner_message_notification_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_introductory_section_pomodoro_ss01_functional_feature/models/from_center_position_as_the_introductory_section_pomodoro_ss01_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_introductory_section_pomodoro_ss02_functional_feature/models/from_center_position_as_the_introductory_section_pomodoro_ss02_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_introductory_section_pomodoro_ss03_functional_feature/models/from_center_position_as_the_introductory_section_pomodoro_ss03_functional_feature.dart';
@@ -330,6 +331,13 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       getFromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature?.setLeftPosition(value: 15.0, isPriorityOverride: true, isSetActiveLeftPosition: true);
 
       ///
+      setFromCenterPositionAsTheCornerMessageNotificationFunctionalFeature(value: FromCenterPositionAsTheCornerMessageNotificationFunctionalFeature(systemStateManagement: getSystemStateManagement, sizeDx: null, sizeDy: null), isPriorityOverride: true);
+      getFromCenterPositionAsTheCornerMessageNotificationFunctionalFeature?.setSizeDx(value: getSizeDx - 30.0, isPriorityOverride: true, isSetActiveSizeDx: true);
+      getFromCenterPositionAsTheCornerMessageNotificationFunctionalFeature?.setSizeDy(value: getSizeDy - 30.0, isPriorityOverride: true, isSetActiveSizeDy: true);
+      getFromCenterPositionAsTheCornerMessageNotificationFunctionalFeature?.setTopPosition(value: 15.0, isPriorityOverride: true, isSetActiveTopPosition: true);
+      getFromCenterPositionAsTheCornerMessageNotificationFunctionalFeature?.setLeftPosition(value: 15.0, isPriorityOverride: true, isSetActiveLeftPosition: true);
+
+      ///
       ///
       ///
       getFunctionalFeatureManagement?.setFromBottomEndPositionAsOneCharacterConversationFunctionalFeature(value: getFromBottomEndPositionAsOneCharacterConversationFunctionalFeature, isPriorityOverride: true);
@@ -342,6 +350,7 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       getFunctionalFeatureManagement?.setFromCenterPositionAsTheIntroductorySectionPomodoroSS02FunctionalFeature(value: getFromCenterPositionAsTheIntroductorySectionPomodoroSS02FunctionalFeature, isPriorityOverride: true);
       getFunctionalFeatureManagement?.setFromCenterPositionAsTheIntroductorySectionPomodoroSS03FunctionalFeature(value: getFromCenterPositionAsTheIntroductorySectionPomodoroSS03FunctionalFeature, isPriorityOverride: true);
       getFunctionalFeatureManagement?.setFromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature(value: getFromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature, isPriorityOverride: true);
+      getFunctionalFeatureManagement?.setFromCenterPositionAsTheCornerMessageNotificationFunctionalFeature(value: getFromCenterPositionAsTheCornerMessageNotificationFunctionalFeature, isPriorityOverride: true);
 
       /// ----- | ----- | ----- | ----- | ----- |
       /// TODO: System Feature Management
@@ -830,6 +839,7 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
                 AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromCenterPositionAsTheIntroductorySectionPomodoroSS02FunctionalFeature?.getWindowWidget ?? Container()),
                 AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromCenterPositionAsTheIntroductorySectionPomodoroSS03FunctionalFeature?.getWindowWidget ?? Container()),
                 AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature?.getWindowWidget ?? Container()),
+                AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromCenterPositionAsTheCornerMessageNotificationFunctionalFeature?.getWindowWidget ?? Container()),
 
                 /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
                 /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -934,6 +944,7 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       await getFromCenterPositionAsTheIntroductorySectionPomodoroSS02FunctionalFeature?.onSetupRoot();
       await getFromCenterPositionAsTheIntroductorySectionPomodoroSS03FunctionalFeature?.onSetupRoot();
       await getFromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature?.onSetupRoot();
+      await getFromCenterPositionAsTheCornerMessageNotificationFunctionalFeature?.onSetupRoot();
 
       /// ----- | ----- | ----- | ----- | ----- |
       /// TODO: System Feature Management
@@ -1057,6 +1068,10 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
         ..onDeactivateWindow();
       /// TODO:
       getFromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature
+        ?..setConditionActiveByTopDirection()
+        ..onDeactivateWindow();
+      /// TODO:
+      getFromCenterPositionAsTheCornerMessageNotificationFunctionalFeature
         ?..setConditionActiveByTopDirection()
         ..onDeactivateWindow();
 
@@ -1240,6 +1255,7 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       await getFromCenterPositionAsTheIntroductorySectionPomodoroSS02FunctionalFeature?.onInitRoot();
       await getFromCenterPositionAsTheIntroductorySectionPomodoroSS03FunctionalFeature?.onInitRoot();
       await getFromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature?.onInitRoot();
+      await getFromCenterPositionAsTheCornerMessageNotificationFunctionalFeature?.onInitRoot();
 
       /// ----- | ----- | ----- | ----- | ----- |
       /// TODO: System Feature Management

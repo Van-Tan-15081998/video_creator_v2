@@ -1,5 +1,6 @@
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_bottom_end_position_as_one_character_conversation_functional_feature/models/from_bottom_end_position_as_one_character_conversation_functional_feature.dart';
+import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_corner_message_notification_functional_feature/models/from_center_position_as_the_corner_message_notification_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_introductory_section_pomodoro_ss01_functional_feature/models/from_center_position_as_the_introductory_section_pomodoro_ss01_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_introductory_section_pomodoro_ss02_functional_feature/models/from_center_position_as_the_introductory_section_pomodoro_ss02_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_introductory_section_pomodoro_ss03_functional_feature/models/from_center_position_as_the_introductory_section_pomodoro_ss03_functional_feature.dart';
@@ -168,6 +169,22 @@ class FunctionalFeatureManagement with ExecutionCore, FeatureMixin {
       _fromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature = value;
     } else {
       _fromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature ??= value;
+    }
+
+    ///
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  FromCenterPositionAsTheCornerMessageNotificationFunctionalFeature? _fromCenterPositionAsTheCornerMessageNotificationFunctionalFeature;
+  FromCenterPositionAsTheCornerMessageNotificationFunctionalFeature? get getFromCenterPositionAsTheCornerMessageNotificationFunctionalFeature => _fromCenterPositionAsTheCornerMessageNotificationFunctionalFeature;
+  void setFromCenterPositionAsTheCornerMessageNotificationFunctionalFeature({required FromCenterPositionAsTheCornerMessageNotificationFunctionalFeature? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _fromCenterPositionAsTheCornerMessageNotificationFunctionalFeature = value;
+    } else {
+      _fromCenterPositionAsTheCornerMessageNotificationFunctionalFeature ??= value;
     }
 
     ///

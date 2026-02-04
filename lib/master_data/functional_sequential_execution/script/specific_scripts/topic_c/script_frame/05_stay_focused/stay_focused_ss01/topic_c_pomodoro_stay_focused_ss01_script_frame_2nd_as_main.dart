@@ -37,14 +37,15 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
     /// TODO: [OPEN TWO CHARACTER CONVERSATION WINDOW]
     /// -----
 
-    getCommonAction?.onStartWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS04Window, gapTime: 10);
+    getCommonAction?.onStartWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterPositionAsTheCornerMessageNotificationWindow, gapTime: 2);
+
     getCommonAction?.onCreateNewImageSlide(
       contentItemUnit: contentItemUnit,
       messageData: StepItemContentAsNewMessageConversation(
         message: null,
         imageSource: 'assets/images/interesting_knowledge/demo4.webp', //
-        windowId: SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS04Window,
-        characterId: SystemCharacter.characterA01Id,
+        windowId: SystemWindow.fromCenterPositionAsTheCornerMessageNotificationWindow,
+        characterId: SystemCharacter.characterTopStart,
       ),
       gapTime: 5,
     );
@@ -53,8 +54,8 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
       messageData: StepItemContentAsNewMessageConversation(
         message: '1234567890 1234567890 😮😮😮😮😮 _20',
         imageSource: null, //
-        windowId: SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS04Window,
-        characterId: SystemCharacter.characterA01Id,
+        windowId: SystemWindow.fromCenterPositionAsTheCornerMessageNotificationWindow,
+        characterId: SystemCharacter.characterTopStart,
       ),
       gapTime: 5,
     );
@@ -63,8 +64,8 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
       messageData: StepItemContentAsNewMessageConversation(
         message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 😮😮😮😮😮 _70',
         imageSource: null, //
-        windowId: SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS04Window,
-        characterId: SystemCharacter.characterA01Id,
+        windowId: SystemWindow.fromCenterPositionAsTheCornerMessageNotificationWindow,
+        characterId: SystemCharacter.characterBottomStart,
       ),
       gapTime: 5,
     );
@@ -73,21 +74,14 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
       messageData: StepItemContentAsNewMessageConversation(
         message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 😮😮😮😮😮 _100',
         imageSource: null, //
-        windowId: SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS04Window,
-        characterId: SystemCharacter.characterA01Id,
+        windowId: SystemWindow.fromCenterPositionAsTheCornerMessageNotificationWindow,
+        characterId: SystemCharacter.characterTopEnd,
       ),
       gapTime: 5,
     );
-    getCommonAction?.onCreateNewMessage(
-      contentItemUnit: contentItemUnit,
-      messageData: StepItemContentAsNewMessageConversation(
-        message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 😮😮😮😮😮 _150',
-        imageSource: null, //
-        windowId: SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS04Window,
-        characterId: SystemCharacter.characterA01Id,
-      ),
-      gapTime: 5,
-    );
+
+    getCommonAction?.onCreateNewMessageForTest(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterPositionAsTheCornerMessageNotificationWindow, characterId: SystemCharacter.characterBottomEnd);
+
     return;
     getCommonAction?.onFinishWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterPositionAsTheIntroductorySectionPomodoroSS01Window, gapTime: 2);
 
@@ -109,7 +103,6 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
     getCommonAction?.onStartWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromBottomEndPositionAsOneCharacterConversationWindow, gapTime: 2);
 
     // getCommonAction?.onStartWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterStartPositionAsTwoCharacterPlayingChessWindow, gapTime: 2);
-
 
     getCommonAction?.onStartWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterStartPositionAsOneCharacterConversationWindow, gapTime: 2);
 

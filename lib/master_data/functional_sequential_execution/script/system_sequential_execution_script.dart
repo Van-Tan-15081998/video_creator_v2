@@ -205,6 +205,20 @@ class SystemSequentialExecutionScript with ExecutionCore {
 
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: From _Center Position As _TheCornerMessageNotification
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+  /// TODO:
+  static const String onStartFromCenterPositionAsTheCornerMessageNotificationAsOpenWindow = '[ON_START_FROM_CENTER_POSITION_AS_THE_CORNER_MESSAGE_NOTIFICATION_AS_OPEN_WINDOW]';
+
+  /// TODO:
+  static const String onFinishFromCenterPositionAsTheCornerMessageNotificationAsCloseWindow = '[ON_FINISH_FROM_CENTER_POSITION_AS_THE_CORNER_MESSAGE_NOTIFICATION_AS_CLOSE_WINDOW]';
+
+  ///
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// TODO: From _TopEnd Position As _OneCharacterConversation
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -1016,6 +1030,70 @@ class SystemSequentialExecutionScript with ExecutionCore {
                 ..onPerform = () {
                   ///
                   getSequentialExecutionController?.getFunctionalFeatureManagement?.getFromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature?.onDeactivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From _Center Position As _TheCornerMessageNotification
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      ///
+      case SystemSequentialExecutionScript.onStartFromCenterPositionAsTheCornerMessageNotificationAsOpenWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[_]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getFunctionalFeatureManagement?.getFromCenterPositionAsTheCornerMessageNotificationFunctionalFeature?.onActivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+      ///
+      case SystemSequentialExecutionScript.onFinishFromCenterPositionAsTheCornerMessageNotificationAsCloseWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[_]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getFunctionalFeatureManagement?.getFromCenterPositionAsTheCornerMessageNotificationFunctionalFeature?.onDeactivateWindow();
 
                   ///
                 },

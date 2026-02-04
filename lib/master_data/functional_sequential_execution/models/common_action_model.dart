@@ -5,6 +5,7 @@ import 'package:frame_creator_v2/master_data/functional_sequential_execution/scr
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/contents/details/step_item_content_as_new_message_conversation.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item_state.dart';
+import 'package:frame_creator_v2/master_features/constant_data/details/system_character.dart';
 import 'package:frame_creator_v2/master_features/constant_data/details/system_window.dart';
 
 class CommonActionModel {
@@ -294,6 +295,21 @@ class CommonActionModel {
 
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From _Center Position As _TheCornerMessageNotification
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      case SystemWindow.fromCenterPositionAsTheCornerMessageNotificationWindow:
+        {
+          getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(
+            // executionId: SystemSequentialExecutionScript.onStartFrom_PositionAs_AsOpenWindow,
+            executionId: SystemSequentialExecutionScript.onFinishFromCenterPositionAsTheCornerMessageNotificationAsCloseWindow,
+            contentItemUnit: contentItemUnit,
+          );
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
       /// TODO: From _TopEnd Position As _OneCharacterConversation
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -500,6 +516,21 @@ class CommonActionModel {
 
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From _Center Position As _TheCornerMessageNotification
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      case SystemWindow.fromCenterPositionAsTheCornerMessageNotificationWindow:
+        {
+          getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(
+            // executionId: SystemSequentialExecutionScript.onStartFrom_PositionAs_AsOpenWindow,
+            executionId: SystemSequentialExecutionScript.onStartFromCenterPositionAsTheCornerMessageNotificationAsOpenWindow,
+            contentItemUnit: contentItemUnit,
+          );
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
       /// TODO: From _TopEnd Position As _OneCharacterConversation
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -517,5 +548,212 @@ class CommonActionModel {
     contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: gapTime);
 
     return;
+  }
+
+  onCreateNewMessageForTest({required ContentItemUnit? contentItemUnit, required String? windowId, required String? characterId}) {
+    onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 ..... _10',
+        imageSource: null, //
+        windowId: windowId,
+        characterId: characterId,
+      ),
+      gapTime: 2,
+    );
+    onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 ..... _20',
+        imageSource: null, //
+        windowId: windowId,
+        characterId: characterId,
+      ),
+      gapTime: 2,
+    );
+    onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 ..... _30',
+        imageSource: null, //
+        windowId: windowId,
+        characterId: characterId,
+      ),
+      gapTime: 2,
+    );
+    onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 ..... _40',
+        imageSource: null, //
+        windowId: windowId,
+        characterId: characterId,
+      ),
+      gapTime: 2,
+    );
+    onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 1234567890 ..... _50',
+        imageSource: null, //
+        windowId: windowId,
+        characterId: characterId,
+      ),
+      gapTime: 2,
+    );
+    onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 ..... _60',
+        imageSource: null, //
+        windowId: windowId,
+        characterId: characterId,
+      ),
+      gapTime: 2,
+    );
+    onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 ..... _70',
+        imageSource: null, //
+        windowId: windowId,
+        characterId: characterId,
+      ),
+      gapTime: 2,
+    );
+    onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 ..... _80',
+        imageSource: null, //
+        windowId: windowId,
+        characterId: characterId,
+      ),
+      gapTime: 2,
+    );
+    onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 ..... _90',
+        imageSource: null, //
+        windowId: windowId,
+        characterId: characterId,
+      ),
+      gapTime: 2,
+    );
+    onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 ..... _100',
+        imageSource: null, //
+        windowId: windowId,
+        characterId: characterId,
+      ),
+      gapTime: 2,
+    );
+
+    onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 ..... _110',
+        imageSource: null, //
+        windowId: windowId,
+        characterId: characterId,
+      ),
+      gapTime: 2,
+    );
+
+    onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 ..... _120',
+        imageSource: null, //
+        windowId: windowId,
+        characterId: characterId,
+      ),
+      gapTime: 2,
+    );
+
+    onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 ..... _130',
+        imageSource: null, //
+        windowId: windowId,
+        characterId: characterId,
+      ),
+      gapTime: 2,
+    );
+
+    onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 ..... _140',
+        imageSource: null, //
+        windowId: windowId,
+        characterId: characterId,
+      ),
+      gapTime: 2,
+    );
+    onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 ..... _150',
+        imageSource: null, //
+        windowId: windowId,
+        characterId: characterId,
+      ),
+      gapTime: 2,
+    );
+    onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 ..... _160',
+        imageSource: null, //
+        windowId: windowId,
+        characterId: characterId,
+      ),
+      gapTime: 2,
+    );
+    onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 ..... _170',
+        imageSource: null, //
+        windowId: windowId,
+        characterId: characterId,
+      ),
+      gapTime: 2,
+    );
+    onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 ..... _180',
+        imageSource: null, //
+        windowId: windowId,
+        characterId: characterId,
+      ),
+      gapTime: 2,
+    );
+    onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 ..... _190',
+        imageSource: null, //
+        windowId: windowId,
+        characterId: characterId,
+      ),
+      gapTime: 2,
+    );
+    onCreateNewMessage(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 1234567890 ..... _200',
+        imageSource: null, //
+        windowId: windowId,
+        characterId: characterId,
+      ),
+      gapTime: 2,
+    );
   }
 }
