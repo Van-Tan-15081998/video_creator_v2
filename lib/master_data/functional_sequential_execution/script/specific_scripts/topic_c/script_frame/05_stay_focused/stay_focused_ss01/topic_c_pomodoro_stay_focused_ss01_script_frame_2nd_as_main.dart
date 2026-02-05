@@ -56,6 +56,7 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
         imageSource: null, //
         windowId: SystemWindow.fromCenterPositionAsTheCornerMessageNotificationWindow,
         characterId: SystemCharacter.characterTopStart,
+        character: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.getTommy,
       ),
       gapTime: 5,
     );
@@ -66,6 +67,7 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
         imageSource: null, //
         windowId: SystemWindow.fromCenterPositionAsTheCornerMessageNotificationWindow,
         characterId: SystemCharacter.characterBottomStart,
+        character: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.getTommy,
       ),
       gapTime: 5,
     );
@@ -76,6 +78,7 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
         imageSource: null, //
         windowId: SystemWindow.fromCenterPositionAsTheCornerMessageNotificationWindow,
         characterId: SystemCharacter.characterTopEnd,
+        character: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.getTommy,
       ),
       gapTime: 5,
     );
@@ -1327,7 +1330,7 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
     /// -----
     /// TODO: [CLOSE TWO CHARACTER CONVERSATION WINDOW]
     /// -----
-    getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onFinishFromCenterStartPositionAsTwoCharacterConversationAsCloseWindow, contentItemUnit: contentItemUnit);
+    // getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onFinishFromCenterStartPositionAsTwoCharacterConversationAsCloseWindow, contentItemUnit: contentItemUnit);
     // getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(executionId: SystemSequentialExecutionScript.onFinishFromTopEndPositionAsOneCharacterConversationAsCloseWindow, contentItemUnit: contentItemUnit); // TEST
 
     contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: 5);

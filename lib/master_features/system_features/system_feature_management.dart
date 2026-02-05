@@ -3,6 +3,8 @@ import 'package:frame_creator_v2/master_features/functional_features/from_center
 import 'package:frame_creator_v2/master_features/system_features/from_bottom_end_position_as_pomodoro_cycle/models/from_bottom_end_position_as_pomodoro_cycle_system_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/from_center_end_position_as_countdown_timer/models/from_center_end_position_as_countdown_time_cycle_system_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/from_center_position_as_introductory_conversation/models/from_center_position_as_introductory_conversation_system_feature.dart';
+import 'package:frame_creator_v2/master_features/system_features/from_center_start_position_as_pomodoro_coming_up_system_feature/models/from_center_start_position_as_pomodoro_coming_up_system_feature.dart';
+import 'package:frame_creator_v2/master_features/system_features/from_center_start_position_as_pomodoro_starting_system_feature/models/from_center_start_position_as_pomodoro_starting_system_feature.dart';
 import 'package:frame_creator_v2/state_managements/mixins/feature_mixin.dart';
 
 class SystemFeatureManagement with ExecutionCore, FeatureMixin {
@@ -64,6 +66,38 @@ class SystemFeatureManagement with ExecutionCore, FeatureMixin {
       _fromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature = value;
     } else {
       _fromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature ??= value;
+    }
+
+    ///
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  FromCenterStartPositionAsPomodoroStartingSystemFeature? _fromCenterStartPositionAsPomodoroStartingSystemFeature;
+  FromCenterStartPositionAsPomodoroStartingSystemFeature? get getFromCenterStartPositionAsPomodoroStartingSystemFeature => _fromCenterStartPositionAsPomodoroStartingSystemFeature;
+  void setFromCenterStartPositionAsPomodoroStartingSystemFeature({required FromCenterStartPositionAsPomodoroStartingSystemFeature? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _fromCenterStartPositionAsPomodoroStartingSystemFeature = value;
+    } else {
+      _fromCenterStartPositionAsPomodoroStartingSystemFeature ??= value;
+    }
+
+    ///
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  FromCenterStartPositionAsPomodoroComingUpSystemFeature? _fromCenterStartPositionAsPomodoroComingUpSystemFeature;
+  FromCenterStartPositionAsPomodoroComingUpSystemFeature? get getFromCenterStartPositionAsPomodoroComingUpSystemFeature => _fromCenterStartPositionAsPomodoroComingUpSystemFeature;
+  void setFromCenterStartPositionAsPomodoroComingUpSystemFeature({required FromCenterStartPositionAsPomodoroComingUpSystemFeature? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _fromCenterStartPositionAsPomodoroComingUpSystemFeature = value;
+    } else {
+      _fromCenterStartPositionAsPomodoroComingUpSystemFeature ??= value;
     }
 
     ///

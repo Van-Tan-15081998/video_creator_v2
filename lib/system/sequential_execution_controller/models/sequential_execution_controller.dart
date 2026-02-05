@@ -53,6 +53,8 @@ import 'package:frame_creator_v2/master_features/functional_features/functional_
 import 'package:frame_creator_v2/master_features/system_features/from_bottom_end_position_as_pomodoro_cycle/models/from_bottom_end_position_as_pomodoro_cycle_system_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/from_center_end_position_as_countdown_timer/models/from_center_end_position_as_countdown_time_cycle_system_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/from_center_position_as_introductory_conversation/models/from_center_position_as_introductory_conversation_system_feature.dart';
+import 'package:frame_creator_v2/master_features/system_features/from_center_start_position_as_pomodoro_coming_up_system_feature/models/from_center_start_position_as_pomodoro_coming_up_system_feature.dart';
+import 'package:frame_creator_v2/master_features/system_features/from_center_start_position_as_pomodoro_starting_system_feature/models/from_center_start_position_as_pomodoro_starting_system_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/system_feature_management.dart';
 import 'package:frame_creator_v2/state_managements/mixins/feature_mixin.dart';
 import 'package:frame_creator_v2/state_managements/mixins/master_feature_mixin.dart';
@@ -373,12 +375,28 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       getFromCenterPositionAsIntroductoryConversationSystemFeature?.setBottomPosition(value: 15.0, isPriorityOverride: true, isSetActiveBottomPosition: true);
       getFromCenterPositionAsIntroductoryConversationSystemFeature?.setLeftPosition(value: 15.0, isPriorityOverride: true, isSetActiveLeftPosition: true);
 
+      /// TODO: Pomodoro Starting
+      setFromCenterStartPositionAsPomodoroStartingSystemFeature(value: FromCenterStartPositionAsPomodoroStartingSystemFeature(systemStateManagement: getSystemStateManagement, sizeDx: null, sizeDy: null), isPriorityOverride: true);
+      getFromCenterStartPositionAsPomodoroStartingSystemFeature?.setSizeDx(value: getSizeDx * 0.6, isPriorityOverride: true, isSetActiveSizeDx: true);
+      getFromCenterStartPositionAsPomodoroStartingSystemFeature?.setSizeDy(value: getSizeDy * 1.0 - 30.0, isPriorityOverride: true, isSetActiveSizeDy: true);
+      getFromCenterStartPositionAsPomodoroStartingSystemFeature?.setTopPosition(value: 15.0, isPriorityOverride: true, isSetActiveTopPosition: true);
+      getFromCenterStartPositionAsPomodoroStartingSystemFeature?.setLeftPosition(value: 15.0, isPriorityOverride: true, isSetActiveLeftPosition: true);
+
+      /// TODO: Pomodoro Coming up
+      setFromCenterStartPositionAsPomodoroComingUpSystemFeature(value: FromCenterStartPositionAsPomodoroComingUpSystemFeature(systemStateManagement: getSystemStateManagement, sizeDx: null, sizeDy: null), isPriorityOverride: true);
+      getFromCenterStartPositionAsPomodoroComingUpSystemFeature?.setSizeDx(value: getSizeDx * 0.6, isPriorityOverride: true, isSetActiveSizeDx: true);
+      getFromCenterStartPositionAsPomodoroComingUpSystemFeature?.setSizeDy(value: getSizeDy * 1.0 - 30.0, isPriorityOverride: true, isSetActiveSizeDy: true);
+      getFromCenterStartPositionAsPomodoroComingUpSystemFeature?.setTopPosition(value: 15.0, isPriorityOverride: true, isSetActiveTopPosition: true);
+      getFromCenterStartPositionAsPomodoroComingUpSystemFeature?.setLeftPosition(value: 15.0, isPriorityOverride: true, isSetActiveLeftPosition: true);
+
       ///
       ///
       ///
       getSystemFeatureManagement?.setFromBottomEndPositionAsPomodoroCycleSystemFeature(value: getFromBottomEndPositionAsPomodoroCycleSystemFeature, isPriorityOverride: true);
       getSystemFeatureManagement?.setFromCenterEndPositionAsCountdownTimeCycleSystemFeature(value: getFromCenterEndPositionAsCountdownTimeCycleSystemFeature, isPriorityOverride: true);
       getSystemFeatureManagement?.setFromCenterPositionAsIntroductoryConversationSystemFeature(value: getFromCenterPositionAsIntroductoryConversationSystemFeature, isPriorityOverride: true);
+      getSystemFeatureManagement?.setFromCenterStartPositionAsPomodoroStartingSystemFeature(value: getFromCenterStartPositionAsPomodoroStartingSystemFeature, isPriorityOverride: true);
+      getSystemFeatureManagement?.setFromCenterStartPositionAsPomodoroComingUpSystemFeature(value: getFromCenterStartPositionAsPomodoroComingUpSystemFeature, isPriorityOverride: true);
 
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -833,6 +851,8 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
                 AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromBottomEndPositionAsPomodoroCycleSystemFeature?.getWindowWidget ?? Container()),
                 AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromCenterEndPositionAsCountdownTimeCycleSystemFeature?.getWindowWidget ?? Container()),
                 AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromCenterPositionAsIntroductoryConversationSystemFeature?.getWindowWidget ?? Container()),
+                AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromCenterStartPositionAsPomodoroStartingSystemFeature?.getWindowWidget ?? Container()),
+                AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromCenterStartPositionAsPomodoroComingUpSystemFeature?.getWindowWidget ?? Container()),
 
                 /// TODO:
                 AnimatedPositioned(duration: const Duration(milliseconds: 500), top: 0, left: 0, width: getSizeDx, height: getSizeDy, child: getFromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature?.getWindowWidget ?? Container()),
@@ -954,6 +974,8 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       await getFromBottomEndPositionAsPomodoroCycleSystemFeature?.onSetupRoot();
       await getFromCenterEndPositionAsCountdownTimeCycleSystemFeature?.onSetupRoot();
       await getFromCenterPositionAsIntroductoryConversationSystemFeature?.onSetupRoot();
+      await getFromCenterStartPositionAsPomodoroStartingSystemFeature?.onSetupRoot();
+      await getFromCenterStartPositionAsPomodoroComingUpSystemFeature?.onSetupRoot();
 
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -1058,18 +1080,22 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       getFromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature
         ?..setConditionActiveByTopDirection()
         ..onDeactivateWindow();
+
       /// TODO:
       getFromCenterPositionAsTheIntroductorySectionPomodoroSS02FunctionalFeature
         ?..setConditionActiveByTopDirection()
         ..onDeactivateWindow();
+
       /// TODO:
       getFromCenterPositionAsTheIntroductorySectionPomodoroSS03FunctionalFeature
         ?..setConditionActiveByTopDirection()
         ..onDeactivateWindow();
+
       /// TODO:
       getFromCenterPositionAsTheIntroductorySectionPomodoroSS04FunctionalFeature
         ?..setConditionActiveByTopDirection()
         ..onDeactivateWindow();
+
       /// TODO:
       getFromCenterPositionAsTheCornerMessageNotificationFunctionalFeature
         ?..setConditionActiveByTopDirection()
@@ -1092,6 +1118,16 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       /// TODO:
       getFromCenterPositionAsIntroductoryConversationSystemFeature
         ?..setConditionActiveByBottomDirection()
+        ..onDeactivateWindow();
+
+      /// TODO:
+      getFromCenterStartPositionAsPomodoroStartingSystemFeature
+        ?..setConditionActiveByLeftDirection()
+        ..onDeactivateWindow();
+
+      /// TODO:
+      getFromCenterStartPositionAsPomodoroComingUpSystemFeature
+        ?..setConditionActiveByLeftDirection()
         ..onDeactivateWindow();
 
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -1265,6 +1301,8 @@ class SequentialExecutionController with ExecutionCore, MasterFeatureMixin, Feat
       await getFromBottomEndPositionAsPomodoroCycleSystemFeature?.onInitRoot();
       await getFromCenterEndPositionAsCountdownTimeCycleSystemFeature?.onInitRoot();
       await getFromCenterPositionAsIntroductoryConversationSystemFeature?.onInitRoot();
+      await getFromCenterStartPositionAsPomodoroStartingSystemFeature?.onInitRoot();
+      await getFromCenterStartPositionAsPomodoroComingUpSystemFeature?.onInitRoot();
 
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |

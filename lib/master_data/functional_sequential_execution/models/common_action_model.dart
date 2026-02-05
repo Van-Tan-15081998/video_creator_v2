@@ -205,6 +205,36 @@ class CommonActionModel {
 
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From _CenterStart Position As _PomodoroStarting
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      case SystemWindow.fromCenterStartPositionAsPomodoroStartingWindow:
+        {
+          getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(
+            // executionId: SystemSequentialExecutionScript.onFinishFrom_PositionAs_AsCloseWindow,
+            executionId: SystemSequentialExecutionScript.onFinishFromCenterStartPositionAsPomodoroStartingAsCloseWindow,
+            contentItemUnit: contentItemUnit,
+          );
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From _CenterStart Position As _PomodoroComingUp
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      case SystemWindow.fromCenterStartPositionAsPomodoroComingUpWindow:
+        {
+          getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(
+            // executionId: SystemSequentialExecutionScript.onFinishFrom_PositionAs_AsCloseWindow,
+            executionId: SystemSequentialExecutionScript.onFinishFromCenterStartPositionAsPomodoroComingUpAsCloseWindow,
+            contentItemUnit: contentItemUnit,
+          );
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
       /// TODO: From _CenterEnd Position As _CountdownTimeCycle
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
       /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -419,6 +449,36 @@ class CommonActionModel {
           getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(
             // executionId: SystemSequentialExecutionScript.onStartFrom_PositionAs_AsOpenWindow,
             executionId: SystemSequentialExecutionScript.onStartFromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleAsOpenWindow,
+            contentItemUnit: contentItemUnit,
+          );
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From _CenterStart Position As _PomodoroStarting
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      case SystemWindow.fromCenterStartPositionAsPomodoroStartingWindow:
+        {
+          getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(
+            // executionId: SystemSequentialExecutionScript.onStartFrom_PositionAs_AsOpenWindow,
+            executionId: SystemSequentialExecutionScript.onStartFromCenterStartPositionAsPomodoroStartingAsOpenWindow,
+            contentItemUnit: contentItemUnit,
+          );
+        }
+        break;
+
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// TODO: From _CenterStart Position As _PomodoroComingUp
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+    /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      case SystemWindow.fromCenterStartPositionAsPomodoroComingUpWindow:
+        {
+          getSystemSequentialExecutionScript?.onSystemSequentialExecutionAs(
+            // executionId: SystemSequentialExecutionScript.onStartFrom_PositionAs_AsOpenWindow,
+            executionId: SystemSequentialExecutionScript.onStartFromCenterStartPositionAsPomodoroComingUpAsOpenWindow,
             contentItemUnit: contentItemUnit,
           );
         }

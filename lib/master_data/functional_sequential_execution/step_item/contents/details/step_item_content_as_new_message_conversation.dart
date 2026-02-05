@@ -1,4 +1,6 @@
+import 'package:flutter/material.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/contents/step_item_content_abstract.dart';
+import 'package:frame_creator_v2/master_features/constant_data/details/models/character_model.dart';
 
 /// -----
 /// TODO:
@@ -7,11 +9,20 @@ class StepItemContentAsNewMessageConversation extends StepItemContentAbstract {
   /// -----
   /// TODO:
   /// -----
-  StepItemContentAsNewMessageConversation({required String? message, required String? imageSource, required String? windowId, required String? characterId}) {
+  StepItemContentAsNewMessageConversation({
+    required String? message,
+    required String? imageSource, //
+    required String? windowId, //
+    required String? characterId, //
+    CharacterModel? character, //
+    TextStyle? style, //
+  }) {
     setMessage(value: message, isPriorityOverride: true);
     setImageSource(value: imageSource, isPriorityOverride: true);
     setWindowId(value: windowId, isPriorityOverride: true);
     setCharacterId(value: characterId, isPriorityOverride: true);
+    setCharacter(value: character, isPriorityOverride: true);
+    setStyle(value: style, isPriorityOverride: true);
   }
 
   /// -----
@@ -69,6 +80,36 @@ class StepItemContentAsNewMessageConversation extends StepItemContentAbstract {
       _imageSource = value;
     } else {
       _imageSource ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  CharacterModel? _character;
+  CharacterModel? get getCharacter => _character;
+  void setCharacter({required CharacterModel? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _character = value;
+    } else {
+      _character ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  TextStyle? _style;
+  TextStyle? get getStyle => _style;
+  void setStyle({required TextStyle? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _style = value;
+    } else {
+      _style ??= value;
     }
 
     return;

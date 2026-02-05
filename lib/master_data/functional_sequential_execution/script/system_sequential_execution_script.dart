@@ -121,6 +121,34 @@ class SystemSequentialExecutionScript with ExecutionCore {
 
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: From _CenterStart Position As _PomodoroStarting
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+  /// TODO:
+  static const String onStartFromCenterStartPositionAsPomodoroStartingAsOpenWindow = '[ON_START_FROM_CENTER_START_POSITION_AS_POMODORO_STARTING_AS_OPEN_WINDOW]';
+
+  /// TODO:
+  static const String onFinishFromCenterStartPositionAsPomodoroStartingAsCloseWindow = '[ON_FINISH_FROM_CENTER_START_POSITION_AS_POMODORO_STARTING_AS_CLOSE_WINDOW]';
+
+  ///
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// TODO: From _CenterStart Position As _PomodoroComingUp
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+  /// TODO:
+  static const String onStartFromCenterStartPositionAsPomodoroComingUpAsOpenWindow = '[ON_START_FROM_CENTER_START_POSITION_AS_POMODORO_COMING_UP_AS_OPEN_WINDOW]';
+
+  /// TODO:
+  static const String onFinishFromCenterStartPositionAsPomodoroComingUpAsCloseWindow = '[ON_FINISH_FROM_CENTER_START_POSITION_AS_POMODORO_COMING_UP_AS_CLOSE_WINDOW]';
+
+  ///
+
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+  /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// TODO: From _CenterEnd Position As _CountdownTimeCycle
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
   /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -582,6 +610,134 @@ class SystemSequentialExecutionScript with ExecutionCore {
                 ..onPerform = () {
                   ///
                   getSequentialExecutionController?.getFunctionalFeatureManagement?.getFromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature?.onDeactivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From _CenterStart Position As _PomodoroStarting
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      ///
+      case SystemSequentialExecutionScript.onStartFromCenterStartPositionAsPomodoroStartingAsOpenWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[${SystemSequentialExecutionScript.onStartFromCenterStartPositionAsPomodoroStartingAsOpenWindow}]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getSystemFeatureManagement?.getFromCenterStartPositionAsPomodoroStartingSystemFeature?.onActivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+      ///
+      case SystemSequentialExecutionScript.onFinishFromCenterStartPositionAsPomodoroStartingAsCloseWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[${SystemSequentialExecutionScript.onFinishFromCenterStartPositionAsPomodoroStartingAsCloseWindow}]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getSystemFeatureManagement?.getFromCenterStartPositionAsPomodoroStartingSystemFeature?.onDeactivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// TODO: From _CenterStart Position As _PomodoroComingUp
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+      /// ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+
+      ///
+      case SystemSequentialExecutionScript.onStartFromCenterStartPositionAsPomodoroComingUpAsOpenWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[${SystemSequentialExecutionScript.onStartFromCenterStartPositionAsPomodoroComingUpAsOpenWindow}]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getSystemFeatureManagement?.getFromCenterStartPositionAsPomodoroComingUpSystemFeature?.onActivateWindow();
+
+                  ///
+                },
+            ),
+          );
+
+          ///
+        }
+        break;
+
+      ///
+      case SystemSequentialExecutionScript.onFinishFromCenterStartPositionAsPomodoroComingUpAsCloseWindow:
+        {
+          contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+            FunctionalSequentialExecutionStepItemState(
+              stateModel: FunctionalSequentialExecutionStepItem.asWindowFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+                ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+                ..onSetupRoot()
+                ..onInitRoot()
+                ..onStart = () {
+                  if (kDebugMode) {
+                    print('__________[${SystemSequentialExecutionScript.onFinishFromCenterStartPositionAsPomodoroComingUpAsCloseWindow}]');
+                  }
+
+                  ///
+                }
+                ..onPerform = () {
+                  ///
+                  getSequentialExecutionController?.getSystemFeatureManagement?.getFromCenterStartPositionAsPomodoroComingUpSystemFeature?.onDeactivateWindow();
 
                   ///
                 },
