@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:frame_creator_v2/components/transparent_effect_wall/transparent_effect_wall_widget.dart';
 import 'package:frame_creator_v2/core/simple_position_size.dart';
 import 'package:frame_creator_v2/master_features/system_features/from_center_position_as_introductory_conversation/models/from_center_position_as_introductory_conversation_system_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/from_center_position_as_introductory_conversation/widgets/contents/from_center_position_as_introductory_conversation_character_widget.dart';
@@ -136,6 +137,13 @@ class _FromCenterPositionAsIntroductoryConversationWidgetState extends State<Fro
                 decoration: BoxDecoration(color: Colors.black.withValues(alpha: 0)),
                 child: Stack(
                   children: [
+                    isActivatedWindow
+                        ? ClipRRect(
+                            borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(30.0), bottomLeft: Radius.circular(30.0)),
+                            child: TransparentEffectWallWidget(sizeDx: sizeDx, sizeDy: sizeDy),
+                          )
+                        : Container(),
+
                     isActivatedWindow ? _fromCenterPositionAsIntroductoryConversationContentWidget ?? Container() : Container(),
                     isActivatedWindow
                         ? Positioned(

@@ -1,6 +1,7 @@
 import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
 import 'package:frame_creator_v2/components/flame/communication_flame_widget.dart';
+import 'package:frame_creator_v2/master_features/system_features/from_center_position_as_introductory_conversation/widgets/contents/flame_widget/from_center_start_position_as_introductory_conversation_character_flame_widget.dart';
 
 class FromCenterPositionAsIntroductoryConversationCharacterWidget extends StatefulWidget {
   const FromCenterPositionAsIntroductoryConversationCharacterWidget({super.key, required this.sizeDx, required this.sizeDy});
@@ -42,7 +43,7 @@ class _FromCenterPositionAsIntroductoryConversationCharacterWidgetState extends 
             width: widget.sizeDx,
             height: widget.sizeDy,
             child: GameWidget(
-              game: CommunicationFlameWidget(sizeDx: widget.sizeDx, sizeDy: widget.sizeDy),
+              game: FromCenterStartPositionAsIntroductoryConversationCharacterFlameWidget(sizeDx: widget.sizeDx, sizeDy: widget.sizeDy),
             ),
           ),
         ],

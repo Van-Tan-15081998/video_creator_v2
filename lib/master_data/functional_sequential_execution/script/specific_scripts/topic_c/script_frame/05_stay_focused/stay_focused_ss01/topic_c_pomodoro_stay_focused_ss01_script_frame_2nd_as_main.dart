@@ -33,6 +33,9 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
   /// -----
   @override
   void onGenerateDetailSequentialExecutionScript({required ContentItemUnit? contentItemUnit}) {
+
+    return;
+
     /// -----
     /// TODO: [OPEN TWO CHARACTER CONVERSATION WINDOW]
     /// -----

@@ -434,23 +434,7 @@ class _MemoryGameBoardContentWidgetState extends State<MemoryGameBoardContentWid
     // String engSentence = "Learning daily builds _confidence and long term success.";
     // String vieSentence = "Học mỗi ngày sẽ xây dựng _sự _tự _tin và tạo nên thành công lâu dài.";
 
-    // String engSentence = "0123456789";
-    // String vieSentence = "0123456789";
 
-    // String engSentence = "0123456789 0123456789";
-    // String vieSentence = "0123456789 0123456789";
-
-    // String engSentence = "0123456789 0123456789 0123456789";
-    // String vieSentence = "0123456789 0123456789 0123456789";
-
-    // String engSentence = "0123456789 0123456789 0123456789 0123456789";
-    // String vieSentence = "0123456789 0123456789 0123456789 0123456789";
-
-    // String engSentence = "0123456789 0123456789 0123456789 0123456789 0123456789";
-    // String vieSentence = "0123456789 0123456789 0123456789 0123456789 0123456789";
-
-    // String engSentence = "0123456789 0123456789 _0123456789 0123456789 0123456789 0123456789";
-    // String vieSentence = "0123456789 0123456789 _0123456789 0123456789 0123456789 0123456789";
 
     List<String> engWordList = [];
     List<String> vieWordList = [];
@@ -728,23 +712,7 @@ class _MemoryGameBoardContentWidgetState extends State<MemoryGameBoardContentWid
     // String engSentence = "Learning daily builds _confidence and long term success.";
     // String vieSentence = "Học mỗi ngày sẽ xây dựng _sự _tự _tin và tạo nên thành công lâu dài.";
 
-    // String engSentence = "0123456789";
-    // String vieSentence = "0123456789";
 
-    // String engSentence = "0123456789 0123456789";
-    // String vieSentence = "0123456789 0123456789";
-
-    // String engSentence = "0123456789 0123456789 0123456789";
-    // String vieSentence = "0123456789 0123456789 0123456789";
-
-    // String engSentence = "0123456789 0123456789 0123456789 0123456789";
-    // String vieSentence = "0123456789 0123456789 0123456789 0123456789";
-
-    // String engSentence = "0123456789 0123456789 0123456789 0123456789 0123456789";
-    // String vieSentence = "0123456789 0123456789 0123456789 0123456789 0123456789";
-
-    // String engSentence = "0123456789 0123456789 _0123456789 0123456789 0123456789 0123456789";
-    // String vieSentence = "0123456789 0123456789 _0123456789 0123456789 0123456789 0123456789";
 
     List<String> engWordList = [];
     List<String> vieWordList = [];

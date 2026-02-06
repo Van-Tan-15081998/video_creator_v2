@@ -1,7 +1,18 @@
 import 'dart:async';
+import 'dart:math';
+import 'dart:math' as math;
 
+import 'package:flame_audio/flame_audio.dart';
 import 'package:flutter/material.dart';
-import 'package:frame_creator_v2/components/transparent_effect_wall/transparent_effect_wall_widget.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:frame_creator_v2/animation_components/active_container/active_container_widget.dart';
+import 'package:frame_creator_v2/core/character_mixin.dart';
+import 'package:frame_creator_v2/core/window_mixin.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/controller/functional_sequential_execution_controller.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/contents/details/step_item_content_as_new_message_conversation.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item_state.dart';
+import 'package:frame_creator_v2/master_features/constant_data/details/system_character.dart';
+import 'package:frame_creator_v2/master_features/constant_data/details/system_window.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -20,10 +31,12 @@ class FromCenterPositionAsIntroductoryConversationContentWidget extends Stateful
   State<FromCenterPositionAsIntroductoryConversationContentWidget> createState() => _FromCenterPositionAsIntroductoryConversationContentWidgetState();
 }
 
-class _FromCenterPositionAsIntroductoryConversationContentWidgetState extends State<FromCenterPositionAsIntroductoryConversationContentWidget> {
+class _FromCenterPositionAsIntroductoryConversationContentWidgetState extends State<FromCenterPositionAsIntroductoryConversationContentWidget> with SingleTickerProviderStateMixin, CharacterMixin, WindowMixin {
+  late final Ticker _ticker;
   Timer? _timer;
 
   final ScrollController _scrollController = ScrollController();
+  final ScrollController _imageSlideScrollController = ScrollController();
 
   int totalMinutes = 1;
   int totalSeconds = 0;
@@ -39,17 +52,97 @@ class _FromCenterPositionAsIntroductoryConversationContentWidgetState extends St
   int counterMessage = 0;
 
   List<Widget> messageList = [];
+  List<Widget> imageSlideList = [];
 
-  bool isTotallyCompleted = false;
+  /// -----
+  /// TODO:
+  /// -----
+  FunctionalSequentialExecutionController? _functionalSequentialExecutionController;
+  FunctionalSequentialExecutionController? get getFunctionalSequentialExecutionController => _functionalSequentialExecutionController;
+  void setFunctionalSequentialExecutionController({required FunctionalSequentialExecutionController? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _functionalSequentialExecutionController = value;
+    } else {
+      _functionalSequentialExecutionController ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  FunctionalSequentialExecutionStepItemState? _currentFunctionalSequentialExecutionStepItemState;
+  FunctionalSequentialExecutionStepItemState? get getCurrentFunctionalSequentialExecutionStepItemState => _currentFunctionalSequentialExecutionStepItemState;
+  void setCurrentFunctionalSequentialExecutionStepItemState({required FunctionalSequentialExecutionStepItemState? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _currentFunctionalSequentialExecutionStepItemState = value;
+    } else {
+      _currentFunctionalSequentialExecutionStepItemState ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  StepItemContentAsNewMessageConversation? _stepItemContentAsNewMessageConversation;
+  StepItemContentAsNewMessageConversation? get getStepItemContentAsNewMessageConversation => _stepItemContentAsNewMessageConversation;
+  void setStepItemContentAsNewMessageConversation({required StepItemContentAsNewMessageConversation? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _stepItemContentAsNewMessageConversation = value;
+    } else {
+      _stepItemContentAsNewMessageConversation ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  List<StepItemContentAsNewMessageConversation?>? _stepItemContentAsNewMessageConversationAsList;
+  List<StepItemContentAsNewMessageConversation?>? get getStepItemContentAsNewMessageConversationAsList => _stepItemContentAsNewMessageConversationAsList;
+  void setStepItemContentAsNewMessageConversationAsList({required List<StepItemContentAsNewMessageConversation?>? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _stepItemContentAsNewMessageConversationAsList = value;
+    } else {
+      _stepItemContentAsNewMessageConversationAsList ??= value;
+    }
+
+    return;
+  }
 
   @override
   void initState() {
     super.initState();
 
+    /// -----
+    /// TODO: Set Mã Định Danh Màn Hình
+    /// -----
+    setWindowId(value: SystemWindow.fromCenterPositionAsIntroductoryConversationWindow, isPriorityOverride: true);
+
+    ///
+
+    /// -----
+    /// TODO: Set Mã Định Danh Nhân Vật
+    /// -----
+    setBottomLeftCharacterId(value: SystemCharacter.characterBottomStart, isPriorityOverride: true);
+    setBottomRightCharacterId(value: SystemCharacter.characterBottomEnd, isPriorityOverride: true);
+
+    ///
+
+    setFunctionalSequentialExecutionController(value: widget.systemStateManagement?.getContentItemSequentialExecution?.getFunctionalSequentialExecutionController, isPriorityOverride: true);
+
+    ///
+
     totalSeconds = 60 * totalMinutes;
 
     limitedTimeProgressbarLength = widget.sizeDx * 0.78 - 100.0;
     limitedTimeProgressbar = limitedTimeProgressbarLength;
+
+    setStepItemContentAsNewMessageConversationAsList(value: [], isPriorityOverride: true);
 
     messageList = [
       Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 300.0, color: Colors.transparent),
@@ -59,68 +152,181 @@ class _FromCenterPositionAsIntroductoryConversationContentWidgetState extends St
       Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 300.0, color: Colors.transparent),
     ];
 
+    imageSlideList = [Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 100.0, color: Colors.transparent)];
+
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
-        if (widget.systemStateManagement?.getIntroductoryConversationFeature?.checkConditionActiveByDirection() == true) {
-          if (messageList.length == 10) {
-            if (widget.systemStateManagement?.getIntroductoryConversationFeature?.checkConditionActiveByDirection() == true) {
-              if (isTotallyCompleted == false) {
-                widget.systemStateManagement?.getMainTimelineStateManagement?.getTimeline?.moveToNextExecution(markId: 'IntroductoryConversationContentWidget');
-                isTotallyCompleted = true;
+      // return;
+      _ticker = createTicker((Duration elapsed) {
+        if (getFunctionalSequentialExecutionController?.getFlowController?.getMessageFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.isNotEmpty == true) {
+          /// -----
+          /// TODO: Kiểm Tra Loại Flow
+          /// -----
+          if (getFunctionalSequentialExecutionController?.getFlowController?.getMessageFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.first?.getStateModel?.getFlowType?.isTypeAsMessageFlow() == true) {
+            ///
+            if (getFunctionalSequentialExecutionController?.getFlowController?.getMessageFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.first?.getStateModel?.getStepItemContent?.getStepItemContentAs<StepItemContentAsNewMessageConversation>()?.getWindowId == getWindowId) {
+              ///
+              setCurrentFunctionalSequentialExecutionStepItemState(
+                //
+                value: getFunctionalSequentialExecutionController?.getFlowController?.getMessageFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.first, //
+                isPriorityOverride: true,
+              );
+
+              /// -----
+              /// TODO: Clear Stack
+              /// -----
+              if (getFunctionalSequentialExecutionController?.getFlowController?.getMessageFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.first?.getStateModel?.getFlowType?.isTypeAsMessageFlow() == true) {
+                getFunctionalSequentialExecutionController?.getFlowController?.getMessageFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.removeAt(0);
               }
             }
-          }
-
-          if (totalSeconds > 0) {
-            totalSeconds -= 1;
-
-            limitedTimeProgressbar = (limitedTimeProgressbarLength / (60 * totalMinutes)) * totalSeconds;
-
-            // setState(() {});
-          } else {
-            totalSeconds = 60 * totalMinutes;
-          }
-
-          counterCreateMessage++;
-
-          if (counterCreateMessage > 0 && counterCreateMessage % 5 == 0) {
-            if (counterMessage % 2 == 0) {
-              setState(() {
-                // messageList.add(messageWidget(isLeftSide: true, isRightSide: false));
-                messageList.add(messageByWordWidget(isLeftSide: true, isRightSide: false));
-
-                /// Play Sound
-                widget.systemStateManagement?.getMusicAndSound?.onPlaySFXConversationSentenceAppear();
-              });
-            } else {
-              setState(() {
-                // messageList.add(messageWidget(isLeftSide: false, isRightSide: true));
-                messageList.add(messageByWordWidget(isLeftSide: false, isRightSide: true));
-
-                /// Play Sound
-                widget.systemStateManagement?.getMusicAndSound?.onPlaySFXConversationSentenceAppear();
-              });
-            }
-
-            counterMessage++;
-
-            WidgetsBinding.instance.addPostFrameCallback((_) {
-              if (_scrollController.hasClients) {
-                _scrollController.animateTo(_scrollController.position.maxScrollExtent, duration: Duration(milliseconds: 500), curve: Curves.easeOut);
-              }
-            });
           }
         }
-      });
-      if (_scrollController.hasClients) {
-        _scrollController.animateTo(_scrollController.position.maxScrollExtent, duration: Duration(milliseconds: 500), curve: Curves.easeOut);
-      }
+
+        if (getFunctionalSequentialExecutionController?.getFlowController?.getImageSlideFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.isNotEmpty == true) {
+          /// -----
+          /// TODO: Kiểm Tra Loại Flow
+          /// -----
+          if (getFunctionalSequentialExecutionController?.getFlowController?.getImageSlideFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.first?.getStateModel?.getFlowType?.isTypeAsImageSlideFlow() == true) {
+            ///
+            if (getFunctionalSequentialExecutionController?.getFlowController?.getImageSlideFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.first?.getStateModel?.getStepItemContent?.getStepItemContentAs<StepItemContentAsNewMessageConversation>()?.getWindowId ==
+                getWindowId) {
+              ///
+              setCurrentFunctionalSequentialExecutionStepItemState(
+                //
+                value: getFunctionalSequentialExecutionController?.getFlowController?.getImageSlideFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.first, //
+                isPriorityOverride: true,
+              );
+
+              /// -----
+              /// TODO: Clear Stack
+              /// -----
+              if (getFunctionalSequentialExecutionController?.getFlowController?.getImageSlideFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.first?.getStateModel?.getFlowType?.isTypeAsImageSlideFlow() == true) {
+                getFunctionalSequentialExecutionController?.getFlowController?.getImageSlideFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.removeAt(0);
+              }
+            }
+          }
+        }
+
+        if (getCurrentFunctionalSequentialExecutionStepItemState != null) {
+          /// IF IMAGE SLIDE
+          if (getCurrentFunctionalSequentialExecutionStepItemState?.getStateModel?.getFlowType?.isTypeAsImageSlideFlow() == true) {
+            StepItemContentAsNewMessageConversation? newMessageConversation = getCurrentFunctionalSequentialExecutionStepItemState?.getStateModel?.getStepItemContent?.getStepItemContentAs<StepItemContentAsNewMessageConversation>();
+            getStepItemContentAsNewMessageConversationAsList?.add(newMessageConversation);
+
+            setState(() {
+              imageSlideList.add(
+                imageSlideItemWidget(
+                  imageSource: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getImageSource ?? '', //
+                  id: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getId ?? '',
+                ),
+              );
+            });
+          } else {
+            ///
+            if (getCurrentFunctionalSequentialExecutionStepItemState?.getStateModel?.getStepItemContent?.getStepItemContentAs<StepItemContentAsNewMessageConversation>()?.getCharacterId == getBottomLeftCharacterId) {
+              StepItemContentAsNewMessageConversation? newMessageConversation = getCurrentFunctionalSequentialExecutionStepItemState?.getStateModel?.getStepItemContent?.getStepItemContentAs<StepItemContentAsNewMessageConversation>();
+              getStepItemContentAsNewMessageConversationAsList?.add(newMessageConversation);
+
+              setState(() {
+                if (getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getMessage?.isNotEmpty == true) {
+                  messageList.add(Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 250.0, color: Colors.transparent));
+                  messageList.add(messageByWordWidget(isLeftSide: true, isRightSide: false, engSentence: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getMessage ?? '', style: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getStyle));
+                } else if (getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getImageSource?.isNotEmpty == true) {
+                  messageList.add(Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 250.0, color: Colors.transparent));
+                  messageList.add(pictureMessageByWordWidget(isLeftSide: true, isRightSide: false, imageSource: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getImageSource ?? ''));
+                } else {
+                  messageList.clear();
+                }
+              });
+
+              ///
+            } else if (getCurrentFunctionalSequentialExecutionStepItemState?.getStateModel?.getStepItemContent?.getStepItemContentAs<StepItemContentAsNewMessageConversation>()?.getCharacterId == getBottomRightCharacterId) {
+              StepItemContentAsNewMessageConversation? newMessageConversation = getCurrentFunctionalSequentialExecutionStepItemState?.getStateModel?.getStepItemContent?.getStepItemContentAs<StepItemContentAsNewMessageConversation>();
+              getStepItemContentAsNewMessageConversationAsList?.add(newMessageConversation);
+
+              setState(() {
+                if (getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getMessage?.isNotEmpty == true) {
+                  messageList.add(Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 250.0, color: Colors.transparent));
+                  messageList.add(messageByWordWidget(isLeftSide: false, isRightSide: true, engSentence: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getMessage ?? '', style: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getStyle));
+                } else if (getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getImageSource?.isNotEmpty == true) {
+                  messageList.add(Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 250.0, color: Colors.transparent));
+                  messageList.add(pictureMessageByWordWidget(isLeftSide: false, isRightSide: true, imageSource: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getImageSource ?? ''));
+                } else {
+                  messageList.clear();
+                }
+              });
+
+              ///
+            }
+          }
+
+          getStepItemContentAsNewMessageConversationAsList?.removeAt(0);
+
+          setCurrentFunctionalSequentialExecutionStepItemState(value: null, isPriorityOverride: true);
+
+          onPlaySFXVocabularyConversationSentenceAppear();
+
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            if (_scrollController.hasClients) {
+              _scrollController.animateTo(_scrollController.position.maxScrollExtent, duration: Duration(milliseconds: 500), curve: Curves.easeOut);
+            }
+            if (_imageSlideScrollController.hasClients) {
+              _imageSlideScrollController.animateTo(_imageSlideScrollController.position.maxScrollExtent, duration: Duration(milliseconds: 500), curve: Curves.easeOut);
+            }
+          });
+        }
+      })..start();
+
+      ///
     });
   }
+
+  final Random _random = Random();
+  onPlaySFXVocabularyConversationSentenceAppear() {
+    // FlameAudio.play('sfx/text_appear/vocabulary_conversation_sentence_appear.mp3', volume: 0.25);
+
+    String nextSFX;
+    nextSFX = sfxList2[_random.nextInt(sfxList2.length)];
+    FlameAudio.play(nextSFX, volume: 0.45);
+  }
+
+  final List<String> sfxList = [
+    'sfx/text_appear/vocabulary_conversation_sentence_appear_01.mp3',
+    'sfx/text_appear/vocabulary_conversation_sentence_appear_02.mp3',
+    'sfx/text_appear/vocabulary_conversation_sentence_appear_03.mp3',
+    'sfx/text_appear/vocabulary_conversation_sentence_appear_04.mp3',
+    'sfx/text_appear/vocabulary_conversation_sentence_appear_05.mp3',
+    'sfx/text_appear/vocabulary_conversation_sentence_appear_06.mp3',
+    'sfx/text_appear/vocabulary_conversation_sentence_appear_07.mp3',
+    'sfx/text_appear/vocabulary_conversation_sentence_appear_08.mp3',
+  ];
+
+  final List<String> sfxList2 = [
+    'sfx/monster_message/monster_message_01.mp3',
+    'sfx/monster_message/monster_message_02.mp3',
+    'sfx/monster_message/monster_message_03.mp3',
+    'sfx/monster_message/monster_message_04.mp3',
+    'sfx/monster_message/monster_message_05.mp3',
+    'sfx/monster_message/monster_message_06.mp3',
+    'sfx/monster_message/monster_message_07.mp3',
+    'sfx/monster_message/monster_message_08.mp3',
+    'sfx/monster_message/monster_message_09.mp3',
+    'sfx/monster_message/monster_message_10.mp3',
+    'sfx/monster_message/monster_message_11.mp3',
+    'sfx/monster_message/monster_message_12.mp3',
+    'sfx/monster_message/monster_message_13.mp3',
+    'sfx/monster_message/monster_message_14.mp3',
+    'sfx/monster_message/monster_message_15.mp3',
+    'sfx/monster_message/monster_message_16.mp3',
+    'sfx/monster_message/monster_message_17.mp3',
+    'sfx/monster_message/monster_message_18.mp3',
+    'sfx/monster_message/monster_message_19.mp3',
+    'sfx/monster_message/monster_message_20.mp3',
+  ];
 
   @override
   void dispose() {
     _timer?.cancel();
+    _ticker.dispose();
     super.dispose();
   }
 
@@ -133,66 +339,158 @@ class _FromCenterPositionAsIntroductoryConversationContentWidgetState extends St
       child: Stack(
         alignment: AlignmentDirectional.bottomCenter,
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(30.0), bottomLeft: Radius.circular(30.0)),
-            child: TransparentEffectWallWidget(sizeDx: widget.sizeDx, sizeDy: widget.sizeDy),
+          // ClipRRect(
+          //   borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(15.0), bottomRight: Radius.circular(15.0), bottomLeft: Radius.circular(30.0)),
+          //   child: TransparentEffectWallWidget(sizeDx: widget.sizeDx, sizeDy: widget.sizeDy),
+          // ),
+          AnimatedPositioned(
+            duration: const Duration(milliseconds: 100),
+            right: 15.0,
+            bottom: 15.0,
+            height: 100.0,
+            child: Container(
+              width: 500.0,
+              height: 100.0,
+              decoration: BoxDecoration(
+                color: Color(0xFF2C2C2C).withValues(alpha: 0.85),
+                border: Border.all(width: 8.0, color: Color(0xFF1C1C1C).withValues(alpha: 0.75)),
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(0), bottomRight: Radius.circular(15.0), bottomLeft: Radius.circular(0)),
+              ),
+
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Flexible(
+                    child: Container(
+                      color: Colors.transparent,
+                      child: Stack(
+                        children: [
+                          Positioned(
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Flexible(
+                                  child: Text(
+                                    'Coming Up',
+                                    style: GoogleFonts.poetsenOne(
+                                      textStyle: TextStyle(
+                                        fontSize: 35.0,
+                                        fontWeight: FontWeight.w600,
+                                        fontStyle: FontStyle.normal,
+                                        foreground: Paint()
+                                          ..style = PaintingStyle.stroke
+                                          ..strokeWidth = 2.0
+                                          ..color = Color(0xFF000000), // Màu viền
+                                        letterSpacing: 5.0,
+                                      ),
+                                    ),
+                                    textAlign: TextAlign.center,
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 1,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Positioned(
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Flexible(
+                                  child: Text(
+                                    'Coming Up',
+                                    style: GoogleFonts.poetsenOne(
+                                      textStyle: TextStyle(fontSize: 35.0, fontWeight: FontWeight.w600, fontStyle: FontStyle.normal, color: Color(0xFFFFFFFF), letterSpacing: 5.0),
+                                    ),
+                                    textAlign: TextAlign.center,
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 1,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ),
 
           Positioned(
-            top: 150.0,
+            bottom: 320.0,
             left: 0,
             width: widget.sizeDx,
-            height: widget.sizeDy - 250.0,
-            child: SizedBox(
+            height: 500.0,
+            child: Container(
               width: widget.sizeDx,
-              height: widget.sizeDy - 250.0,
+              height: 500.0,
+              color: Colors.transparent,
               child: ShaderMask(
-                blendMode: BlendMode.dstIn, // Giữ phần gradient trong text
+                blendMode: BlendMode.dstIn,
                 shaderCallback: (Rect bounds) {
                   return LinearGradient(
                     begin: Alignment.bottomCenter,
                     end: Alignment.topCenter,
                     colors: [
-                      Colors.white,
-                      Colors.white.withValues(alpha: 0.9),
-                      Colors.white.withValues(alpha: 0.8),
-                      Colors.white.withValues(alpha: 0.7),
-                      Colors.white.withValues(alpha: 0.6),
-                      Colors.white.withValues(alpha: 0.5),
-                      Colors.white.withValues(alpha: 0.4),
-                      Colors.white.withValues(alpha: 0.3),
-                      Colors.white.withValues(alpha: 0.2),
-                      Colors.white.withValues(alpha: 0.1),
-                      Colors.white.withValues(alpha: 0.05),
+                      // Colors.white,
+                      Colors.white.withValues(alpha: 0.99),
+                      Colors.white.withValues(alpha: 0.98),
+                      Colors.white.withValues(alpha: 0.97),
+                      Colors.white.withValues(alpha: 0.96),
+                      Colors.white.withValues(alpha: 0.95),
+                      Colors.white.withValues(alpha: 0.94),
+                      Colors.white.withValues(alpha: 0.93),
+                      Colors.white.withValues(alpha: 0.92),
+                      Colors.white.withValues(alpha: 0.91),
+                      Colors.white.withValues(alpha: 0.90),
                       Colors.transparent,
-                      Colors.transparent, // Hoàn toàn biến mất bên phải
+                      Colors.transparent,
+                      Colors.transparent,
                     ],
-                    stops: [0.64, 0.67, 0.70, 0.73, 0.76, 0.79, 0.82, 0.85, 0.88, 0.81, 0.94, 0.97, 1.0],
+                    stops: [0.88, 0.89, 0.90, 0.91, 0.92, 0.93, 0.94, 0.95, 0.96, 0.97, 0.98, 0.99, 1.0],
                   ).createShader(bounds);
                 },
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom: 250.0),
-                  // child: SingleChildScrollView(
-                  //   controller: _scrollController,
-                  //   child: Column(children: messageList),
-                  // ),
-                  child: ListView.builder(
-                    controller: _scrollController,
-                    itemCount: messageList.length,
-                    itemBuilder: (_, index) => Container(child: messageList[index]),
-                  ),
+                child: SingleChildScrollView(
+                  controller: _scrollController,
+
+                  child: Column(children: messageList),
                 ),
               ),
             ),
           ),
 
-          // Positioned(
-          //   top: 0,
-          //   left: 0,
-          //   width: widget.sizeDx,
-          //   height: widget.sizeDy,
-          //   child: ConversationCharacterWidget(sizeDx: widget.sizeDx, sizeDy: widget.sizeDy),
-          // ),
+          ///
+          /// TODO: Image Slide
+          ///
+          Positioned(
+            top: 0,
+            left: 0,
+            width: widget.sizeDx,
+            height: widget.sizeDy * 3 / 7,
+            child: Container(
+              width: widget.sizeDx,
+              height: widget.sizeDy * 3 / 7,
+              decoration: BoxDecoration(
+                color: Colors.green.withValues(alpha: 0.1),
+                border: Border.all(width: 5.0, color: Colors.transparent),
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(15.0), bottomLeft: Radius.circular(15.0)),
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(15.0), bottomLeft: Radius.circular(15.0)),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  controller: _imageSlideScrollController,
+
+                  child: Row(crossAxisAlignment: CrossAxisAlignment.center, children: imageSlideList),
+                ),
+              ),
+            ),
+          ),
+
           Positioned(
             top: 0,
             left: 0,
@@ -213,193 +511,12 @@ class _FromCenterPositionAsIntroductoryConversationContentWidgetState extends St
     );
   }
 
-  Widget messageWidget({required bool isLeftSide, required bool isRightSide}) {
-    double distanceToBorder = 15.0;
-
-    return AnimatedContainer(
-      duration: const Duration(milliseconds: 100),
-      width: widget.sizeDx,
-      height: 400.0,
-      decoration: BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.all(Radius.circular(10.0))),
-      child: Stack(
-        alignment: AlignmentDirectional.center,
-        children: [
-          AnimatedPositioned(
-            duration: const Duration(milliseconds: 100),
-            bottom: 20.0,
-            right: isRightSide ? distanceToBorder : null,
-            left: isLeftSide ? distanceToBorder : null,
-            width: widget.sizeDx * 0.75 - 3.0,
-            height: 180.0,
-            child: Container(
-              // width: widget.sizeDx * 0.65,
-              height: widget.sizeDy * 0.15,
-              decoration: BoxDecoration(
-                color: Color(0xFF2C2C2C).withValues(alpha: 0.85),
-                border: Border.all(width: 8.0, color: Color(0xFF1C1C1C).withValues(alpha: 0.75)),
-                borderRadius: isRightSide
-                    ? BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(0), bottomLeft: Radius.circular(30.0))
-                    : BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(30.0), bottomLeft: Radius.circular(0)),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(8.0, 4.0, 8.0, 4.0),
-                    child: RichText(
-                      textAlign: TextAlign.center,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 2,
-
-                      text: TextSpan(
-                        style: GoogleFonts.robotoSlab(textStyle: TextStyle(color: Color(0xFFECECEC).withValues(alpha: 0.5)), fontSize: 40.0),
-                        children: [
-                          TextSpan(
-                            text: '"Cô ấy rất tỉ mỉ trong công việc, kiểm tra từng chi tiết hai lần. Cô ấy rất tỉ mỉ trong công việc, kiểm tra từng chi tiết hai lần."',
-                            style: GoogleFonts.sriracha(color: Color(0xFF838B83), fontWeight: FontWeight.bold, fontSize: 40.0, height: 1.5),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-
-          AnimatedPositioned(
-            duration: const Duration(milliseconds: 100),
-            top: 50.0,
-            right: isRightSide ? distanceToBorder : null,
-            left: isLeftSide ? distanceToBorder : null,
-            width: widget.sizeDx * 0.78 - 3.0,
-            height: 180.0,
-            child: Container(
-              width: widget.sizeDx * 0.7,
-              height: 180.0,
-              decoration: BoxDecoration(
-                color: Color(0xFFFFFFFF).withValues(alpha: 0.95),
-                border: Border.all(width: 8.0, color: Color(0xFFFFFFFF).withValues(alpha: 0.95)),
-                borderRadius: isRightSide
-                    ? BorderRadius.only(topLeft: Radius.circular(45.0), topRight: Radius.circular(45.0), bottomRight: Radius.circular(0), bottomLeft: Radius.circular(45.0))
-                    : BorderRadius.only(topLeft: Radius.circular(45.0), topRight: Radius.circular(45.0), bottomRight: Radius.circular(45.0), bottomLeft: Radius.circular(0)),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  RichText(
-                    // textAlign: TextAlign.start,
-                    textAlign: TextAlign.center,
-                    overflow: TextOverflow.ellipsis,
-
-                    maxLines: 2,
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: 'She is ',
-                          style: GoogleFonts.robotoSlab(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 42),
-                        ),
-                        TextSpan(
-                          text: 'meticulous ',
-                          style: GoogleFonts.robotoSlab(color: Color(0xFF1E90FF), fontWeight: FontWeight.bold, fontSize: 45),
-                        ),
-                        TextSpan(
-                          text: 'in her work, checking every detail twice.',
-                          style: GoogleFonts.robotoSlab(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 42),
-                        ),
-                        TextSpan(
-                          text: 'She is ',
-                          style: GoogleFonts.robotoSlab(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 42),
-                        ),
-                        TextSpan(
-                          text: 'meticulous ',
-                          style: GoogleFonts.robotoSlab(color: Color(0xFF1E90FF), fontWeight: FontWeight.bold, fontSize: 42),
-                        ),
-                        TextSpan(
-                          text: 'in her work, checking every detail twice.',
-                          style: GoogleFonts.robotoSlab(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 42),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-
-          AnimatedPositioned(
-            top: 215.0,
-            left: widget.sizeDx * 0.22 + 45.0,
-            width: widget.sizeDx * 0.78 - 100.0,
-            height: 8.0,
-            duration: const Duration(milliseconds: 100),
-            child: Row(
-              children: [
-                AnimatedContainer(
-                  duration: const Duration(milliseconds: 1000),
-                  width: limitedTimeProgressbar,
-                  height: 12.0,
-                  decoration: BoxDecoration(
-                    color: Color(0xFF54FF9F),
-                    border: Border.all(width: 3.0, color: Colors.transparent),
-                  ),
-                ),
-              ],
-            ),
-          ),
-
-          AnimatedPositioned(
-            bottom: widget.sizeDy * 0.15 + 20.0,
-            right: 10.0,
-            width: 185.0,
-            height: 35.0,
-            duration: const Duration(milliseconds: 100),
-            child: Container(
-              color: Colors.transparent,
-              width: 185.0,
-              height: 35.0,
-              child: Text(
-                '.',
-                style: GoogleFonts.concertOne(color: Color(0xFF54FF9F), fontWeight: FontWeight.w600, fontSize: 20.0, letterSpacing: 1.1),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget messageByWordWidget({required bool isLeftSide, required bool isRightSide}) {
-    double distanceToBorder = 15.0;
-
-    String engSentence = "Learning daily builds _confidence and long term success.";
-    String vieSentence = "Học mỗi ngày sẽ xây dựng _sự _tự _tin và tạo nên thành công lâu dài.";
-
-    // String engSentence = "0123456789";
-    // String vieSentence = "0123456789";
-
-    // String engSentence = "0123456789 0123456789";
-    // String vieSentence = "0123456789 0123456789";
-
-    // String engSentence = "0123456789 0123456789 0123456789";
-    // String vieSentence = "0123456789 0123456789 0123456789";
-
-    // String engSentence = "0123456789 0123456789 0123456789 0123456789";
-    // String vieSentence = "0123456789 0123456789 0123456789 0123456789";
-
-    // String engSentence = "0123456789 0123456789 0123456789 0123456789 0123456789";
-    // String vieSentence = "0123456789 0123456789 0123456789 0123456789 0123456789";
-
-    // String engSentence = "0123456789 0123456789 _0123456789 0123456789 0123456789 0123456789";
-    // String vieSentence = "0123456789 0123456789 _0123456789 0123456789 0123456789 0123456789";
+  Widget messageByWordWidget({required bool isLeftSide, required bool isRightSide, required String engSentence, TextStyle? style}) {
+    double distanceToBorder = 5.0;
 
     List<String> engWordList = [];
-    List<String> vieWordList = [];
 
     List<TextSpan> engWordWidgetSpan = [];
-    List<TextSpan> vieWordWidgetSpan = [];
 
     engWordList = engSentence.split(' ');
     for (String word in engWordList) {
@@ -409,227 +526,191 @@ class _FromCenterPositionAsIntroductoryConversationContentWidgetState extends St
         engWordWidgetSpan.add(
           TextSpan(
             text: '$trueWord ',
-            style: GoogleFonts.robotoSlab(color: Color(0xFF1E90FF), fontWeight: FontWeight.bold, fontSize: 45),
+            style: GoogleFonts.robotoSlab(color: Color(0xFF1E90FF), fontWeight: FontWeight.w800, fontSize: 36, height: 1.6),
           ),
         );
       } else {
         engWordWidgetSpan.add(
           TextSpan(
             text: '$word ',
-            style: GoogleFonts.robotoSlab(color: Color(0xFF000000), fontWeight: FontWeight.bold, fontSize: 42),
+            style: GoogleFonts.robotoSlab(color: Color(0xFF000000), fontWeight: FontWeight.w800, fontSize: 36, height: 1.6),
           ),
         );
       }
     }
 
-    vieWordList = vieSentence.split(' ');
-    for (int index = 0; index < vieWordList.length; index++) {
-      if (vieWordList[index].contains('_')) {
-        String trueWord = vieWordList[index].replaceAll('_', '');
-
-        if (index == 0) {
-          vieWordWidgetSpan.add(
-            TextSpan(
-              text: '"$trueWord ',
-              style: GoogleFonts.sriracha(color: Color(0xFF1E90FF), fontWeight: FontWeight.bold, fontSize: 40.0, height: 1.5),
-            ),
-          );
-        } else if (index == vieWordList.length - 1) {
-          vieWordWidgetSpan.add(
-            TextSpan(
-              text: '$trueWord."',
-              style: GoogleFonts.sriracha(color: Color(0xFF1E90FF), fontWeight: FontWeight.bold, fontSize: 40.0, height: 1.5),
-            ),
-          );
-        } else {
-          vieWordWidgetSpan.add(
-            TextSpan(
-              text: '$trueWord ',
-              style: GoogleFonts.sriracha(color: Color(0xFF1E90FF), fontWeight: FontWeight.bold, fontSize: 40.0, height: 1.5),
-            ),
-          );
-        }
-      } else {
-        if (index == 0) {
-          vieWordWidgetSpan.add(
-            TextSpan(
-              text: '"${vieWordList[index]} ',
-              style: GoogleFonts.sriracha(color: Color(0xFF838B83), fontWeight: FontWeight.bold, fontSize: 40.0, height: 1.5),
-            ),
-          );
-        } else if (index == vieWordList.length - 1) {
-          vieWordWidgetSpan.add(
-            TextSpan(
-              text: '${vieWordList[index]}."',
-              style: GoogleFonts.sriracha(color: Color(0xFF838B83), fontWeight: FontWeight.bold, fontSize: 40.0, height: 1.5),
-            ),
-          );
-        } else {
-          vieWordWidgetSpan.add(
-            TextSpan(
-              text: '${vieWordList[index]} ',
-              style: GoogleFonts.sriracha(color: Color(0xFF838B83), fontWeight: FontWeight.bold, fontSize: 40.0, height: 1.5),
-            ),
-          );
-        }
-      }
-    }
-
     /// max width
-    double maxWidth = widget.sizeDx * 0.75;
+    double maxWidth = widget.sizeDx * 0.60;
 
-    /// totalHeight
     double totalHeight = 0;
 
     double engSentenceHeight = 0;
     double engSentenceWidth = 0;
 
-    double vieSentenceHeight = 0;
-    double vieSentenceWidth = 0;
+    int lineNumber = 1;
+
+    double lineHeight = 60.0;
 
     switch (engSentence.length) {
-      case >= 60:
+      case >= 200:
         {
           /// 2 Lines
-          engSentenceHeight = 180.0;
+          lineNumber = 7;
+          engSentenceHeight = lineHeight * lineNumber;
+          engSentenceWidth = maxWidth * 1.0;
+        }
+        break;
+      case >= 160 && < 200:
+        {
+          /// 2 Lines
+          lineNumber = 6;
+          engSentenceHeight = lineHeight * lineNumber;
+          engSentenceWidth = maxWidth * 1.0;
+        }
+        break;
+      case >= 150 && < 160:
+        {
+          /// 2 Lines
+          lineNumber = 6;
+          engSentenceHeight = lineHeight * lineNumber;
+          engSentenceWidth = maxWidth * 1.0;
+        }
+        break;
+      case >= 140 && < 150:
+        {
+          /// 2 Lines
+          lineNumber = 6;
+          engSentenceHeight = lineHeight * lineNumber;
+          engSentenceWidth = maxWidth * 1.0;
+        }
+        break;
+      case >= 130 && < 140:
+        {
+          /// 2 Lines
+          lineNumber = 6;
+          engSentenceHeight = lineHeight * lineNumber;
+          engSentenceWidth = maxWidth * 1.0;
+        }
+        break;
+      case >= 120 && < 130:
+        {
+          /// 2 Lines
+          lineNumber = 5;
+          engSentenceHeight = lineHeight * lineNumber;
+          engSentenceWidth = maxWidth * 1.0;
+        }
+        break;
+      case >= 110 && < 120:
+        {
+          /// 2 Lines
+          lineNumber = 5;
+          engSentenceHeight = lineHeight * lineNumber;
+          engSentenceWidth = maxWidth * 1.0;
+        }
+        break;
+      case >= 100 && < 110:
+        {
+          /// 2 Lines
+          lineNumber = 5;
+          engSentenceHeight = lineHeight * lineNumber;
+          engSentenceWidth = maxWidth * 1.0;
+        }
+        break;
+      case >= 90 && < 100:
+        {
+          /// 2 Lines
+          lineNumber = 5;
+          engSentenceHeight = lineHeight * lineNumber;
+          engSentenceWidth = maxWidth * 1.0;
+        }
+        break;
+      case >= 80 && < 90:
+        {
+          /// 2 Lines
+          lineNumber = 4;
+          engSentenceHeight = lineHeight * lineNumber;
+          engSentenceWidth = maxWidth * 1.0;
+        }
+        break;
+      case >= 70 && < 80:
+        {
+          /// 2 Lines
+          lineNumber = 4;
+          engSentenceHeight = lineHeight * lineNumber;
+          engSentenceWidth = maxWidth * 1.0;
+        }
+        break;
+      case >= 60 && < 70:
+        {
+          /// 2 Lines
+
+          lineNumber = 4;
+          engSentenceHeight = lineHeight * lineNumber;
           engSentenceWidth = maxWidth * 1.0;
         }
         break;
       case >= 50 && < 60:
         {
           /// 2 Lines
-          engSentenceHeight = 180.0;
+
+          lineNumber = 4;
+          engSentenceHeight = lineHeight * lineNumber;
           engSentenceWidth = maxWidth * 1.0;
         }
         break;
       case >= 40 && < 50:
         {
           /// 2 Lines
-          engSentenceHeight = 120.0;
+
+          lineNumber = 3;
+          engSentenceHeight = lineHeight * lineNumber;
           engSentenceWidth = maxWidth * 0.9;
         }
         break;
       case >= 30 && < 40:
         {
           /// 1 Lines &
-          engSentenceHeight = 120.0;
+
+          lineNumber = 3;
+          engSentenceHeight = lineHeight * lineNumber;
           engSentenceWidth = maxWidth * 0.8;
         }
         break;
       case >= 20 && < 30:
         {
           /// 1 Lines
-          engSentenceHeight = 120.0;
+
+          lineNumber = 3;
+          engSentenceHeight = lineHeight * lineNumber;
           engSentenceWidth = maxWidth * 0.7;
         }
         break;
       case >= 0 && < 20:
         {
           /// 1 Lines
-          engSentenceHeight = 120.0;
+
+          lineNumber = 3;
+          engSentenceHeight = lineHeight * lineNumber;
           engSentenceWidth = maxWidth * 0.6;
         }
         break;
     }
 
-    switch (vieSentence.length) {
-      case >= 60:
-        {
-          /// 2 Lines
-          vieSentenceHeight = 180.0;
-          vieSentenceWidth = maxWidth * 0.95;
-        }
-        break;
-      case >= 50 && < 60:
-        {
-          /// 2 Lines
-          vieSentenceHeight = 180.0;
-          vieSentenceWidth = maxWidth * 0.95;
-        }
-        break;
-      case >= 40 && < 50:
-        {
-          /// 2 Lines
-          vieSentenceHeight = 120.0;
-          vieSentenceWidth = maxWidth * 0.85;
-        }
-        break;
-      case >= 30 && < 40:
-        {
-          /// 1 Lines &
-          vieSentenceHeight = 120.0;
-          vieSentenceWidth = maxWidth * 0.75;
-        }
-        break;
-      case >= 20 && < 30:
-        {
-          /// 1 Lines
-          vieSentenceHeight = 120.0;
-          vieSentenceWidth = maxWidth * 0.65;
-        }
-        break;
-      case >= 0 && < 20:
-        {
-          /// 1 Lines
-          vieSentenceHeight = 120.0;
-          vieSentenceWidth = maxWidth * 0.55;
-        }
-        break;
-    }
-
-    totalHeight = engSentenceHeight + vieSentenceHeight + 10.0;
+    totalHeight = engSentenceHeight + 20.0;
 
     return AnimatedContainer(
-      margin: const EdgeInsets.only(top: 20.0),
+      margin: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
       duration: const Duration(milliseconds: 100),
       width: widget.sizeDx,
-      height: totalHeight,
+      // height: totalHeight,
+      height: 500.0,
       decoration: BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.all(Radius.circular(10.0))),
       child: Stack(
-        alignment: AlignmentDirectional.center,
+        alignment: AlignmentDirectional.bottomStart,
         children: [
           AnimatedPositioned(
+            bottom: 25.0,
             duration: const Duration(milliseconds: 100),
-            bottom: 20.0,
-            right: isRightSide ? distanceToBorder : null,
-            left: isLeftSide ? distanceToBorder : null,
-            width: vieSentenceWidth,
-            height: vieSentenceHeight,
-            child: Container(
-              width: vieSentenceWidth,
-              height: vieSentenceHeight,
-              decoration: BoxDecoration(
-                color: Color(0xFF2C2C2C).withValues(alpha: 0.85),
-                border: Border.all(width: 8.0, color: Color(0xFF1C1C1C).withValues(alpha: 0.75)),
-                borderRadius: isRightSide
-                    ? BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(0), bottomLeft: Radius.circular(30.0))
-                    : BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(30.0), bottomLeft: Radius.circular(0)),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(8.0, 4.0, 8.0, 4.0),
-                    child: RichText(
-                      textAlign: TextAlign.center,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: engSentenceHeight == 180.0 ? 2 : 1,
-
-                      text: TextSpan(
-                        style: GoogleFonts.robotoSlab(textStyle: TextStyle(color: Color(0xFFECECEC).withValues(alpha: 0.5)), fontSize: 40.0),
-                        children: vieWordWidgetSpan,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-
-          AnimatedPositioned(
-            duration: const Duration(milliseconds: 100),
-            top: 20.0,
             right: isRightSide ? distanceToBorder : null,
             left: isLeftSide ? distanceToBorder : null,
             width: engSentenceWidth,
@@ -645,23 +726,469 @@ class _FromCenterPositionAsIntroductoryConversationContentWidgetState extends St
                     : BorderRadius.only(topLeft: Radius.circular(45.0), topRight: Radius.circular(45.0), bottomRight: Radius.circular(45.0), bottomLeft: Radius.circular(0)),
                 boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.5), blurRadius: 8.0, spreadRadius: 1.0, offset: Offset(0, 0))],
               ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  RichText(
-                    // textAlign: TextAlign.start,
-                    textAlign: TextAlign.center,
-                    overflow: TextOverflow.ellipsis,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    RichText(
+                      textAlign: TextAlign.center,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: lineNumber,
+                      text: TextSpan(children: engWordWidgetSpan),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 
-                    maxLines: vieSentenceHeight == 180.0 ? 2 : 1,
-                    text: TextSpan(children: engWordWidgetSpan),
+  Widget pictureMessageByWordWidget({required bool isLeftSide, required bool isRightSide, required String imageSource}) {
+    double distanceToBorder = 5.0;
+
+    /// max width
+    double maxWidth = widget.sizeDx * 0.75;
+
+    double imageHeight = 500.0;
+    double imageWidth = maxWidth * 1.0 + 50;
+
+    return AnimatedContainer(
+      margin: const EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0),
+      duration: const Duration(milliseconds: 100),
+      width: widget.sizeDx,
+      height: imageHeight + 20.0,
+
+      child: Stack(
+        alignment: AlignmentDirectional.center,
+        children: [
+          AnimatedPositioned(
+            duration: const Duration(milliseconds: 100),
+            top: 0,
+            right: isRightSide ? distanceToBorder : null,
+            left: isLeftSide ? distanceToBorder : null,
+            width: imageWidth,
+            height: imageHeight,
+            child: Stack(
+              alignment: AlignmentDirectional.center,
+              children: [
+                isLeftSide
+                    ? Stack(
+                        children: [
+                          Container(
+                            width: imageWidth,
+                            height: imageHeight,
+                            decoration: BoxDecoration(
+                              color: Color(0xFF2C2C2C).withValues(alpha: 0.85),
+                              border: Border.all(width: 8.0, color: Color(0xFF1C1C1C)),
+                              borderRadius: isRightSide
+                                  ? BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(0), bottomLeft: Radius.circular(30.0))
+                                  : BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(30.0), bottomLeft: Radius.circular(0)),
+                              image: DecorationImage(image: AssetImage(imageSource), fit: BoxFit.fitWidth),
+                              boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 1), blurRadius: 5.0, spreadRadius: 1.0, offset: Offset(0, 0))],
+                            ),
+                          ),
+                          Container(
+                            width: imageWidth,
+                            height: imageHeight,
+                            decoration: BoxDecoration(
+                              border: Border.all(width: 16.0, color: Color(0xFF1C1C1C).withValues(alpha: 0.75)),
+                              borderRadius: isRightSide
+                                  ? BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(0), bottomLeft: Radius.circular(30.0))
+                                  : BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(30.0), bottomLeft: Radius.circular(0)),
+                            ),
+                          ),
+                        ],
+                      )
+                    : Container(),
+                isRightSide
+                    ? Stack(
+                        children: [
+                          Container(
+                            width: imageWidth,
+                            height: imageHeight,
+                            decoration: BoxDecoration(
+                              color: Color(0xFF2C2C2C).withValues(alpha: 0.85),
+                              border: Border.all(width: 8.0, color: Color(0xFF1C1C1C)),
+                              borderRadius: isRightSide
+                                  ? BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(0), bottomLeft: Radius.circular(30.0))
+                                  : BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(30.0), bottomLeft: Radius.circular(0)),
+                              image: DecorationImage(image: AssetImage(imageSource), fit: BoxFit.fitWidth),
+                              boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 1), blurRadius: 5.0, spreadRadius: 1.0, offset: Offset(0, 0))],
+                            ),
+                          ),
+                          Container(
+                            width: imageWidth,
+                            height: imageHeight,
+                            decoration: BoxDecoration(
+                              border: Border.all(width: 16.0, color: Color(0xFF1C1C1C).withValues(alpha: 0.75)),
+                              borderRadius: isRightSide
+                                  ? BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(0), bottomLeft: Radius.circular(30.0))
+                                  : BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(30.0), bottomLeft: Radius.circular(0)),
+                            ),
+                          ),
+                        ],
+                      )
+                    : Container(),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget imageSlideItemWidget({required String imageSource, required String id}) {
+    /// max width
+    double imageWidth = widget.sizeDx - 20.0;
+
+    double imageHeight = (widget.sizeDy * 3 / 7) - 20.0;
+
+    String title = '';
+
+    switch (id) {
+      case '[POMODORO_SS01]':
+        {
+          title = 'POMODORO #1';
+        }
+        break;
+      case '[POMODORO_SS02]':
+        {
+          title = 'POMODORO #2';
+        }
+        break;
+      case '[POMODORO_SS03]':
+        {
+          title = 'POMODORO #3';
+        }
+        break;
+      case '[POMODORO_SS04]':
+        {
+          title = 'POMODORO #4';
+        }
+        break;
+    }
+
+    return AnimatedContainer(
+      // margin: const EdgeInsets.only(top: 5.0, left: 5.0, right: 5.0),
+      duration: const Duration(milliseconds: 100),
+      width: widget.sizeDx - 10.0,
+      height: widget.sizeDy * 3 / 7,
+
+      child: Stack(
+        alignment: AlignmentDirectional.center,
+        children: [
+          Positioned(
+            width: imageWidth,
+            height: imageHeight,
+            child: Container(
+              width: imageWidth,
+              height: imageHeight,
+              decoration: BoxDecoration(
+                color: Color(0xFF2C2C2C).withValues(alpha: 0.85),
+                border: Border.all(width: 8.0, color: Color(0xFF1C1C1C)),
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(15.0), bottomLeft: Radius.circular(15.0)),
+              ),
+            ),
+          ),
+
+          Positioned(
+            width: imageWidth - 50.0,
+            height: imageHeight - 50.0,
+
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(5.0),
+              child: FittedBox(
+                fit: BoxFit.fitHeight,
+                alignment: Alignment.center,
+
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    border: Border.all(width: 8.0, color: Color(0xFF1C1C1C)),
+                    borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(30.0), bottomLeft: Radius.circular(30.0)),
+                  ),
+
+                  child: Container(
+                    clipBehavior: Clip.hardEdge,
+                    decoration: BoxDecoration(
+                      color: Color(0xFF2C2C2C).withValues(alpha: 0.85),
+                      border: Border.all(width: 8.0, color: Color(0xFF1C1C1C)),
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(25.0), topRight: Radius.circular(25.0), bottomRight: Radius.circular(25.0), bottomLeft: Radius.circular(25.0)),
+                    ),
+
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20.0),
+                      child: Image.asset(imageSource, fit: BoxFit.fitHeight),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            width: imageWidth,
+            height: imageHeight,
+            child: Container(
+              width: imageWidth,
+              height: imageHeight,
+              decoration: BoxDecoration(
+                border: Border.all(width: 16.0, color: Color(0xFF1C1C1C).withValues(alpha: 0.75)),
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0), bottomRight: Radius.circular(15.0), bottomLeft: Radius.circular(15.0)),
+              ),
+            ),
+          ),
+
+          /// AI-generated
+          // AnimatedPositioned(
+          //   duration: const Duration(milliseconds: 100),
+          //   right: 20.0,
+          //   bottom: 20.0,
+          //   height: 55.0,
+          //   width: 245.0,
+          //   child: Container(
+          //     width: 245.0,
+          //     height: 50.0,
+          //     decoration: BoxDecoration(
+          //       color: Color(0xFF2C2C2C).withValues(alpha: 0.85),
+          //       border: Border.all(width: 4.0, color: Color(0xFF1C1C1C).withValues(alpha: 0.75)),
+          //       borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(0), bottomRight: Radius.circular(5.0), bottomLeft: Radius.circular(0)),
+          //     ),
+          //
+          //     child: Row(
+          //       mainAxisSize: MainAxisSize.max,
+          //       mainAxisAlignment: MainAxisAlignment.center,
+          //       children: [
+          //         Flexible(
+          //           child: Container(
+          //             color: Colors.transparent,
+          //             child: Stack(
+          //               children: [
+          //                 Positioned(
+          //                   child: Row(
+          //                     mainAxisSize: MainAxisSize.min,
+          //                     children: [
+          //                       Flexible(
+          //                         child: Text(
+          //                           'AI-generated',
+          //                           style: GoogleFonts.poetsenOne(
+          //                             textStyle: TextStyle(
+          //                               fontSize: 18.0,
+          //                               fontWeight: FontWeight.w500,
+          //                               fontStyle: FontStyle.normal,
+          //                               foreground: Paint()
+          //                                 ..style = PaintingStyle.stroke
+          //                                 ..strokeWidth = 2.0
+          //                                 ..color = Color(0xFF000000), // Màu viền
+          //                               letterSpacing: 3.0,
+          //                             ),
+          //                           ),
+          //                           textAlign: TextAlign.center,
+          //                           overflow: TextOverflow.ellipsis,
+          //                           maxLines: 1,
+          //                         ),
+          //                       ),
+          //                     ],
+          //                   ),
+          //                 ),
+          //                 Positioned(
+          //                   child: Row(
+          //                     mainAxisSize: MainAxisSize.min,
+          //                     children: [
+          //                       Flexible(
+          //                         child: Text(
+          //                           'AI-generated',
+          //                           style: GoogleFonts.poetsenOne(
+          //                             textStyle: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w500, fontStyle: FontStyle.normal, color: Color(0xFFFFFFFF), letterSpacing: 3.0),
+          //                           ),
+          //                           textAlign: TextAlign.center,
+          //                           overflow: TextOverflow.ellipsis,
+          //                           maxLines: 1,
+          //                         ),
+          //                       ),
+          //                     ],
+          //                   ),
+          //                 ),
+          //               ],
+          //             ),
+          //           ),
+          //         ),
+          //       ],
+          //     ),
+          //   ),
+          // ),
+
+          AnimatedPositioned(
+            duration: const Duration(milliseconds: 100),
+            bottom: 20.0,
+            left: 20.0,
+            child: Container(width: 3000.0, height: 250.0, decoration: BoxDecoration(color: Color(0xFF000000).withValues(alpha: 0.25))),
+          ),
+
+          AnimatedPositioned(
+            duration: const Duration(milliseconds: 100),
+            bottom: 120.0,
+            left: 20.0,
+            width: 450.0,
+            height: 120.0,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(0),
+              child: Stack(
+                alignment: AlignmentDirectional.center,
+                children: [
+                  AnimatedPositioned(
+                    duration: const Duration(milliseconds: 100),
+                    bottom: -10.0,
+                    left: -10.0,
+                    height: 80.0,
+                    width: 700.0,
+                    child: Container(height: 25.0, width: 600.0, decoration: BoxDecoration(color: Color(0xFF1C1C1C))),
+                  ),
+
+                  AnimatedPositioned(
+                    duration: const Duration(milliseconds: 100),
+                    top: 2.0,
+                    left: -20.0,
+                    height: 70.0,
+                    width: 700.0,
+                    child: Container(
+                      height: 100.0,
+                      width: 700.0,
+                      decoration: BoxDecoration(color: Colors.transparent),
+                      child: ActiveContainerWidget(isReverse: false, color: Color(0xFFFF4040), width: 700.0, height: 70.0, numBars: 16, widthBarItem: 35.0, angleBarItem: -math.pi / 12), //
+                    ),
+                  ),
+
+                  AnimatedPositioned(
+                    duration: const Duration(milliseconds: 100),
+                    width: 450.0,
+                    height: 80.0,
+                    child: Container(
+                      padding: const EdgeInsets.only(left: 30.0),
+                      child: Text.rich(
+                        TextSpan(
+                          style: TextStyle(fontSize: 20, height: 1.0),
+                          children: [titleAnimation(word: title, isActive: true, color: Color(0xFFFF4040))],
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),
             ),
           ),
+          AnimatedPositioned(
+            duration: const Duration(milliseconds: 100),
+            bottom: 120.0,
+            left: 20.0,
+            child: Container(
+              width: 450.0,
+              height: 120.0,
+              decoration: BoxDecoration(
+                border: Border.all(width: 8.0, color: Color(0xFF1C1C1C)),
+                borderRadius: BorderRadius.all(Radius.circular(0)),
+              ),
+            ),
+          ),
+
+          AnimatedPositioned(
+            duration: const Duration(milliseconds: 100),
+            bottom: 20.0,
+            left: 20.0,
+            child: Container(
+              padding: const EdgeInsets.only(left: 30.0),
+              width: widget.sizeDx - 50.0,
+              height: 100.0,
+              decoration: BoxDecoration(
+                // color: Color(0xFFFFFF00).withValues(alpha: 0.95),
+                color: Color(0xFF000000).withValues(alpha: 0.65),
+                border: Border.all(width: 8.0, color: Color(0xFF000000).withValues(alpha: 0.65)),
+                borderRadius: BorderRadius.all(Radius.circular(0)),
+              ),
+              child: Text(
+                id,
+                style: GoogleFonts.concertOne(color: Color(0xFFFFFF00), fontWeight: FontWeight.w800, fontSize: 28, height: 2, letterSpacing: 1.8),
+              ),
+            ),
+          ),
         ],
+      ),
+    );
+  }
+
+  WidgetSpan titleAnimation({required String word, required bool isActive, required Color? color}) {
+    return WidgetSpan(
+      alignment: PlaceholderAlignment.middle,
+      child: ClipRRect(
+        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+        child: Stack(
+          alignment: AlignmentDirectional.center,
+          children: [
+            Container(
+              decoration: BoxDecoration(),
+
+              child: Stack(
+                children: [
+                  Positioned(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2.5),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Flexible(
+                            child: Text(
+                              word,
+                              style: GoogleFonts.concertOne(
+                                textStyle: TextStyle(
+                                  fontSize: 30.0,
+                                  fontWeight: FontWeight.w500,
+                                  fontStyle: FontStyle.normal,
+                                  foreground: Paint()
+                                    ..style = PaintingStyle.stroke
+                                    ..strokeWidth = 5.0
+                                    ..color = Color(0xFF000000), // Màu viền
+                                  letterSpacing: 1,
+                                ),
+                              ),
+                              textAlign: TextAlign.start,
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 2,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2.5),
+
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Flexible(
+                            child: Text(
+                              word,
+                              style: GoogleFonts.concertOne(
+                                textStyle: TextStyle(fontSize: 30.0, fontWeight: FontWeight.w500, fontStyle: FontStyle.normal, color: Color(0xFFFFFFFF), letterSpacing: 1),
+                              ),
+                              textAlign: TextAlign.start,
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 2,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
