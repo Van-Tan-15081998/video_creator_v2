@@ -1,15 +1,34 @@
-import 'package:flutter/material.dart';
+import 'package:flame/cache.dart' as cache;
+import 'package:flame/components.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
-import 'package:frame_creator_v2/core/window_feature.dart';
-import 'package:frame_creator_v2/master_features/constant_data/core_feature.dart';
-import 'package:frame_creator_v2/master_features/system_features/from_center_position_as_introductory_conversation/widgets/from_center_position_as_introductory_conversation_widget.dart';
-import 'package:frame_creator_v2/state_managements/system_state_management.dart';
+import 'package:frame_creator_v2/master_features/constant_data/details/models/character_model.dart';
 
-class FromCenterPositionAsIntroductoryConversationSystemFeature extends CoreFeature with ExecutionCore, WindowFeature {
-  FromCenterPositionAsIntroductoryConversationSystemFeature({required SystemStateManagement? systemStateManagement, required double? sizeDx, required double? sizeDy}) {
-    setSystemStateManagement(value: systemStateManagement);
-    setSizeDx(value: sizeDx, isPriorityOverride: true);
-    setSizeDy(value: sizeDy, isPriorityOverride: true);
+class CharacterSpriteAnimationManagement with ExecutionCore {
+  CharacterSpriteAnimationManagement();
+
+  /// -----
+  /// TODO:
+  /// -----
+  Future<void> onGenerateSpriteAnimation({required CharacterModel? stateModel}) async {
+    cache.Images images = cache.Images();
+    images.prefix = '';
+
+    // Load sprite sheet
+    final image = await images.load(stateModel?.getImageSource ?? '');
+
+    SpriteAnimation spriteAnimation = SpriteAnimation.fromFrameData(
+      image,
+      SpriteAnimationData.sequenced(
+        amount: stateModel?.getTotalFrame?.toInt() ?? 91, // Số frame trong spriteSheet
+        textureSize: Vector2(stateModel?.getSizeDx ?? 100.0, stateModel?.getSizeDy ?? 100.0), // Kích thước mỗi frame
+        amountPerRow: stateModel?.getFramePerRow?.toInt() ?? 13,
+        stepTime: 0.03, // Tốc độ animation
+      ),
+    );
+
+    stateModel?.setSpriteAnimation(value: spriteAnimation, isPriorityOverride: true);
+
+    return;
   }
 
   /// -----
@@ -69,17 +88,6 @@ class FromCenterPositionAsIntroductoryConversationSystemFeature extends CoreFeat
       /// -----
       /// TODO:
       /// -----
-      setWindowWidget(
-        value: LayoutBuilder(
-          builder: (context, constraints) {
-            return Stack(
-              alignment: AlignmentDirectional.center, //
-              children: [FromCenterPositionAsIntroductoryConversationWidget(fromCenterPositionAsIntroductoryConversationSystemFeature: this)],
-            );
-          },
-        ),
-        isPriorityOverride: true,
-      );
 
       /// -----
       /// TODO: Setup Root For SubCom

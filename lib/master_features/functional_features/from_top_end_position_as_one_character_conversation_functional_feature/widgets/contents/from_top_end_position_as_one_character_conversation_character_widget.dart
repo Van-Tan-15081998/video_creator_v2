@@ -1,12 +1,14 @@
-import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
+import 'package:frame_creator_v2/basic_importation.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_top_end_position_as_one_character_conversation_functional_feature/widgets/contents/flame_widget/from_top_end_position_as_one_character_conversation_character_flame_widget.dart';
 
 class FromTopEndPositionAsOneCharacterConversationCharacterWidget extends StatefulWidget {
-  const FromTopEndPositionAsOneCharacterConversationCharacterWidget({super.key, required this.sizeDx, required this.sizeDy});
+  const FromTopEndPositionAsOneCharacterConversationCharacterWidget({super.key, required this.sizeDx, required this.sizeDy, required this.coreFeature});
 
   final double sizeDx;
   final double sizeDy;
+
+  final CoreFeature? coreFeature;
 
   @override
   State<FromTopEndPositionAsOneCharacterConversationCharacterWidget> createState() => _FromTopEndPositionAsOneCharacterConversationCharacterWidgetState();
@@ -42,7 +44,7 @@ class _FromTopEndPositionAsOneCharacterConversationCharacterWidgetState extends 
             width: widget.sizeDx,
             height: widget.sizeDy,
             child: GameWidget(
-              game: FromTopEndPositionAsOneCharacterConversationCharacterFlameWidget(sizeDx: widget.sizeDx, sizeDy: widget.sizeDy),
+              game: FromTopEndPositionAsOneCharacterConversationCharacterFlameWidget(sizeDx: widget.sizeDx, sizeDy: widget.sizeDy, coreFeature: widget.coreFeature),
             ),
           ),
         ],

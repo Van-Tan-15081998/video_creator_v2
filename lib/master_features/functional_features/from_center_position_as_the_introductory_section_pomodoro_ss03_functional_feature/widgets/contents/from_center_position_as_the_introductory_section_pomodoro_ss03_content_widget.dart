@@ -159,8 +159,6 @@ class _FromCenterPositionAsTheIntroductorySectionPomodoroSS03ContentWidgetState 
     WidgetsBinding.instance.addPostFrameCallback((_) {
       // return;
       _ticker = createTicker((Duration elapsed) {
-
-
         if (getFunctionalSequentialExecutionController?.getFlowController?.getMessageFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.isNotEmpty == true) {
           /// -----
           /// TODO: Kiểm Tra Loại Flow
@@ -511,8 +509,6 @@ class _FromCenterPositionAsTheIntroductorySectionPomodoroSS03ContentWidgetState 
               ),
             ),
           ),
-
-
 
           Positioned(
             top: 0,

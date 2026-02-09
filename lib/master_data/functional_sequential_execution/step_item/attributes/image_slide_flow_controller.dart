@@ -1,7 +1,6 @@
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/basic_message_flow_controller.dart';
 
 class ImageSlideFlowController extends BasicMessageFlowController {
-
   /// -----
   /// TODO: Attach Root
   /// -----

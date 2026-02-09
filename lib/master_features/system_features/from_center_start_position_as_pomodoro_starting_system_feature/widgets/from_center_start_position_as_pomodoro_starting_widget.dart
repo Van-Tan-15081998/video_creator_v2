@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:frame_creator_v2/components/transparent_effect_wall/transparent_effect_wall_widget.dart';
 import 'package:frame_creator_v2/core/simple_position_size.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_conversation_functional_feature/models/from_center_start_position_as_one_character_conversation_functional_feature.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_conversation_functional_feature/widgets/contents/from_center_start_position_as_one_character_conversation_character_widget.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_conversation_functional_feature/widgets/contents/from_center_start_position_as_one_character_conversation_content_widget.dart';
 import 'package:frame_creator_v2/master_features/system_features/from_center_start_position_as_pomodoro_starting_system_feature/models/from_center_start_position_as_pomodoro_starting_system_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/from_center_start_position_as_pomodoro_starting_system_feature/widgets/contents/from_center_start_position_as_pomodoro_starting_character_widget.dart';
 import 'package:frame_creator_v2/master_features/system_features/from_center_start_position_as_pomodoro_starting_system_feature/widgets/contents/from_center_start_position_as_pomodoro_starting_content_widget.dart';
@@ -154,7 +151,7 @@ class _FromCenterStartPositionAsPomodoroStartingWidgetState extends State<FromCe
                             left: 0,
                             width: sizeDx,
                             height: sizeDy,
-                            child: FromCenterStartPositionAsPomodoroStartingCharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy),
+                            child: FromCenterStartPositionAsPomodoroStartingCharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy, coreFeature: widget.fromCenterStartPositionAsPomodoroStartingSystemFeature),
                           )
                         : Container(),
                   ],

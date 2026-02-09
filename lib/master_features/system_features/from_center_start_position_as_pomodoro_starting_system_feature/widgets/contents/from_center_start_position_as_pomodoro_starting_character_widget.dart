@@ -1,13 +1,14 @@
-import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_conversation_functional_feature/widgets/contents/flame_widget/from_center_start_position_as_one_character_conversation_character_flame_widget.dart';
+import 'package:frame_creator_v2/basic_importation.dart';
 import 'package:frame_creator_v2/master_features/system_features/from_center_start_position_as_pomodoro_starting_system_feature/widgets/contents/flame_widget/from_center_start_position_as_pomodoro_starting_character_flame_widget.dart';
 
 class FromCenterStartPositionAsPomodoroStartingCharacterWidget extends StatefulWidget {
-  const FromCenterStartPositionAsPomodoroStartingCharacterWidget({super.key, required this.sizeDx, required this.sizeDy});
+  const FromCenterStartPositionAsPomodoroStartingCharacterWidget({super.key, required this.sizeDx, required this.sizeDy, required this.coreFeature});
 
   final double sizeDx;
   final double sizeDy;
+
+  final CoreFeature? coreFeature;
 
   @override
   State<FromCenterStartPositionAsPomodoroStartingCharacterWidget> createState() => _FromCenterStartPositionAsPomodoroStartingCharacterWidgetState();
@@ -43,7 +44,7 @@ class _FromCenterStartPositionAsPomodoroStartingCharacterWidgetState extends Sta
             width: widget.sizeDx,
             height: widget.sizeDy,
             child: GameWidget(
-              game: FromCenterStartPositionAsPomodoroStartingCharacterFlameWidget(sizeDx: widget.sizeDx, sizeDy: widget.sizeDy),
+              game: FromCenterStartPositionAsPomodoroStartingCharacterFlameWidget(sizeDx: widget.sizeDx, sizeDy: widget.sizeDy, coreFeature: widget.coreFeature),
             ),
           ),
         ],

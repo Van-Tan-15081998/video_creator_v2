@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/core/window_feature.dart';
+import 'package:frame_creator_v2/master_features/constant_data/core_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/from_center_end_position_as_countdown_timer/widgets/from_center_end_position_as_countdown_time_cycle_widget.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 
-class FromCenterEndPositionAsCountdownTimeCycleSystemFeature with ExecutionCore, WindowFeature {
+class FromCenterEndPositionAsCountdownTimeCycleSystemFeature extends CoreFeature with ExecutionCore, WindowFeature {
   FromCenterEndPositionAsCountdownTimeCycleSystemFeature({required SystemStateManagement? systemStateManagement, required double? sizeDx, required double? sizeDy}) {
     setSystemStateManagement(value: systemStateManagement);
     setSizeDx(value: sizeDx, isPriorityOverride: true);

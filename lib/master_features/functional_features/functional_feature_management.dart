@@ -13,7 +13,6 @@ import 'package:frame_creator_v2/master_features/functional_features/from_top_en
 import 'package:frame_creator_v2/state_managements/mixins/feature_mixin.dart';
 
 class FunctionalFeatureManagement with ExecutionCore, FeatureMixin {
-
   /// -----
   /// TODO:
   /// -----
@@ -29,7 +28,6 @@ class FunctionalFeatureManagement with ExecutionCore, FeatureMixin {
     ///
     return;
   }
-
 
   /// -----
   /// TODO:

@@ -23,7 +23,11 @@ class _FromBottomEndPositionAsPomodoroCycleWidgetState extends State<FromBottomE
   void initState() {
     super.initState();
 
-    _fromBottomEndPositionAsPomodoroCycleContentWidget = FromBottomEndPositionAsPomodoroCycleContentWidget(systemStateManagement: widget.fromBottomEndPositionAsPomodoroCycleSystemFeature?.getSystemStateManagement, sizeDx: widget.fromBottomEndPositionAsPomodoroCycleSystemFeature?.getSizeDx ?? 0, sizeDy: widget.fromBottomEndPositionAsPomodoroCycleSystemFeature?.getSizeDy ?? 0);
+    _fromBottomEndPositionAsPomodoroCycleContentWidget = FromBottomEndPositionAsPomodoroCycleContentWidget(
+      systemStateManagement: widget.fromBottomEndPositionAsPomodoroCycleSystemFeature?.getSystemStateManagement,
+      sizeDx: widget.fromBottomEndPositionAsPomodoroCycleSystemFeature?.getSizeDx ?? 0,
+      sizeDy: widget.fromBottomEndPositionAsPomodoroCycleSystemFeature?.getSizeDy ?? 0,
+    );
 
     topPosition = widget.fromBottomEndPositionAsPomodoroCycleSystemFeature?.getTopPosition;
     rightPosition = widget.fromBottomEndPositionAsPomodoroCycleSystemFeature?.getRightPosition;

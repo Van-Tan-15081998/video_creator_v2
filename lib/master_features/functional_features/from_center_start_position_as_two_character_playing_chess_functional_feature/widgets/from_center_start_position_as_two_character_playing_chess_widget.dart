@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:frame_creator_v2/components/transparent_effect_wall/transparent_effect_wall_widget.dart';
 import 'package:frame_creator_v2/core/simple_position_size.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_conversation_functional_feature/models/from_center_start_position_as_two_character_conversation_functional_feature.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_conversation_functional_feature/widgets/contents/from_center_start_position_as_two_character_conversation_character_widget.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_conversation_functional_feature/widgets/contents/from_center_start_position_as_two_character_conversation_content_widget.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/models/from_center_start_position_as_two_character_playing_chess_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/widgets/contents/from_center_start_position_as_two_character_playing_chess_character_widget.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/widgets/contents/from_center_start_position_as_two_character_playing_chess_content_widget.dart';
@@ -154,7 +151,7 @@ class _FromCenterStartPositionAsTwoCharacterPlayingChessWidgetState extends Stat
                             left: 0,
                             width: sizeDx,
                             height: sizeDy,
-                            child: FromCenterStartPositionAsTwoCharacterPlayingChessCharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy),
+                            child: FromCenterStartPositionAsTwoCharacterPlayingChessCharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy, coreFeature: widget.fromCenterStartPositionAsTwoCharacterPlayingChessFunctionalFeature),
                           )
                         : Container(),
                   ],

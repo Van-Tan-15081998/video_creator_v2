@@ -151,7 +151,7 @@ class _FromTopEndPositionAsOneCharacterConversationWidgetState extends State<Fro
                             left: 0,
                             width: sizeDx,
                             height: sizeDy,
-                            child: FromTopEndPositionAsOneCharacterConversationCharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy),
+                            child: FromTopEndPositionAsOneCharacterConversationCharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy, coreFeature: widget.fromTopEndPositionAsOneCharacterConversationFunctionalFeature),
                           )
                         : Container(),
                   ],

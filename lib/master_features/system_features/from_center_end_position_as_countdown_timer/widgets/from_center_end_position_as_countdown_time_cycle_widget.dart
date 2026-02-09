@@ -23,7 +23,11 @@ class _FromCenterEndPositionAsCountdownTimeCycleWidgetState extends State<FromCe
   void initState() {
     super.initState();
 
-    _fromCenterEndPositionAsCountdownTimeCycleContentWidget = FromCenterEndPositionAsCountdownTimeCycleContentWidget(systemStateManagement: widget.fromCenterEndPositionAsCountdownTimeCycleSystemFeature?.getSystemStateManagement, sizeDx: widget.fromCenterEndPositionAsCountdownTimeCycleSystemFeature?.getSizeDx ?? 0, sizeDy: widget.fromCenterEndPositionAsCountdownTimeCycleSystemFeature?.getSizeDy ?? 0);
+    _fromCenterEndPositionAsCountdownTimeCycleContentWidget = FromCenterEndPositionAsCountdownTimeCycleContentWidget(
+      systemStateManagement: widget.fromCenterEndPositionAsCountdownTimeCycleSystemFeature?.getSystemStateManagement,
+      sizeDx: widget.fromCenterEndPositionAsCountdownTimeCycleSystemFeature?.getSizeDx ?? 0,
+      sizeDy: widget.fromCenterEndPositionAsCountdownTimeCycleSystemFeature?.getSizeDy ?? 0,
+    );
 
     topPosition = widget.fromCenterEndPositionAsCountdownTimeCycleSystemFeature?.getTopPosition;
     rightPosition = widget.fromCenterEndPositionAsCountdownTimeCycleSystemFeature?.getRightPosition;

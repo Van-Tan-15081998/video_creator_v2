@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/core/window_feature.dart';
+import 'package:frame_creator_v2/master_features/constant_data/core_feature.dart';
 import 'package:frame_creator_v2/master_features/system_features/from_bottom_end_position_as_pomodoro_cycle/models/data/pomodoro_cycle_timer.dart';
 import 'package:frame_creator_v2/master_features/system_features/from_bottom_end_position_as_pomodoro_cycle/widgets/from_bottom_end_position_as_pomodoro_cycle_widget.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 
-class FromBottomEndPositionAsPomodoroCycleSystemFeature with ExecutionCore, WindowFeature {
+class FromBottomEndPositionAsPomodoroCycleSystemFeature extends CoreFeature with ExecutionCore, WindowFeature {
   FromBottomEndPositionAsPomodoroCycleSystemFeature({required SystemStateManagement? systemStateManagement, required double? sizeDx, required double? sizeDy}) {
     setSystemStateManagement(value: systemStateManagement);
     setSizeDx(value: sizeDx, isPriorityOverride: true);

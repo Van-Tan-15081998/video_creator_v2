@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/core/window_feature.dart';
+import 'package:frame_creator_v2/master_features/constant_data/core_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_One_character_conversation_functional_feature/widgets/from_center_start_position_as_One_character_conversation_widget.dart';
 import 'package:frame_creator_v2/state_managements/system_state_management.dart';
 
-class FromCenterStartPositionAsOneCharacterConversationFunctionalFeature with ExecutionCore, WindowFeature {
+class FromCenterStartPositionAsOneCharacterConversationFunctionalFeature extends CoreFeature with ExecutionCore, WindowFeature {
   FromCenterStartPositionAsOneCharacterConversationFunctionalFeature({required SystemStateManagement? systemStateManagement, required double? sizeDx, required double? sizeDy}) {
     setSystemStateManagement(value: systemStateManagement);
     setSizeDx(value: sizeDx, isPriorityOverride: true);

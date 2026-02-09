@@ -6,9 +6,6 @@ import 'package:frame_creator_v2/core/simple_position_size.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_introductory_section_pomodoro_ss01_functional_feature/models/from_center_position_as_the_introductory_section_pomodoro_ss01_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_introductory_section_pomodoro_ss01_functional_feature/widgets/contents/from_center_position_as_the_introductory_section_pomodoro_ss01_character_widget.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_introductory_section_pomodoro_ss01_functional_feature/widgets/contents/from_center_position_as_the_introductory_section_pomodoro_ss01_content_widget.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_conversation_functional_feature/models/from_center_start_position_as_one_character_conversation_functional_feature.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_conversation_functional_feature/widgets/contents/from_center_start_position_as_one_character_conversation_character_widget.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_conversation_functional_feature/widgets/contents/from_center_start_position_as_one_character_conversation_content_widget.dart';
 
 class FromCenterPositionAsTheIntroductorySectionPomodoroSS01Widget extends StatefulWidget {
   const FromCenterPositionAsTheIntroductorySectionPomodoroSS01Widget({super.key, required this.fromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature});
@@ -154,7 +151,7 @@ class _FromCenterPositionAsTheIntroductorySectionPomodoroSS01WidgetState extends
                             left: 0,
                             width: sizeDx,
                             height: sizeDy,
-                            child: FromCenterPositionAsTheIntroductorySectionPomodoroSS01CharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy),
+                            child: FromCenterPositionAsTheIntroductorySectionPomodoroSS01CharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy, coreFeature: widget.fromCenterPositionAsTheIntroductorySectionPomodoroSS01FunctionalFeature),
                           )
                         : Container(),
                   ],

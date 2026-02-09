@@ -1,13 +1,13 @@
-import 'package:flame/components.dart';
-import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:frame_creator_v2/basic_importation.dart';
 
-class FromCenterPositionAsTheIntroductorySectionPomodoroSS02CharacterFlameWidget extends FlameGame {
-  FromCenterPositionAsTheIntroductorySectionPomodoroSS02CharacterFlameWidget({required this.sizeDx, required this.sizeDy});
+class FromCenterPositionAsTheIntroductorySectionPomodoroSS02CharacterFlameWidget extends FlameGame with PositionedCharacterMixin {
+  FromCenterPositionAsTheIntroductorySectionPomodoroSS02CharacterFlameWidget({required this.sizeDx, required this.sizeDy, required this.coreFeature});
 
   final double sizeDx;
   final double sizeDy;
+
+  final CoreFeature? coreFeature;
 
   late SpriteAnimationComponent spriteComponentSS01;
   late SpriteAnimationComponent spriteComponentSS02;

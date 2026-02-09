@@ -6,9 +6,6 @@ import 'package:frame_creator_v2/core/simple_position_size.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_bottom_end_position_as_one_character_conversation_functional_feature/models/from_bottom_end_position_as_one_character_conversation_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_bottom_end_position_as_one_character_conversation_functional_feature/widgets/contents/from_bottom_end_position_as_one_character_conversation_character_widget.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_bottom_end_position_as_one_character_conversation_functional_feature/widgets/contents/from_bottom_end_position_as_one_character_conversation_content_widget.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_top_end_position_as_one_character_conversation_functional_feature/models/from_top_end_position_as_one_character_conversation_functional_feature.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_top_end_position_as_one_character_conversation_functional_feature/widgets/contents/from_top_end_position_as_one_character_conversation_character_widget.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_top_end_position_as_one_character_conversation_functional_feature/widgets/contents/from_top_end_position_as_one_character_conversation_content_widget.dart';
 
 class FromBottomEndPositionAsOneCharacterConversationWidget extends StatefulWidget {
   const FromBottomEndPositionAsOneCharacterConversationWidget({super.key, required this.fromBottomEndPositionAsOneCharacterConversationFunctionalFeature});
@@ -154,7 +151,7 @@ class _FromTopFromBottomEndPositionAsOneCharacterConversationWidgetState extends
                             left: 0,
                             width: sizeDx,
                             height: sizeDy,
-                            child: FromBottomEndPositionAsOneCharacterConversationCharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy),
+                            child: FromBottomEndPositionAsOneCharacterConversationCharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy, coreFeature: widget.fromBottomEndPositionAsOneCharacterConversationFunctionalFeature),
                           )
                         : Container(),
                   ],

@@ -3,15 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:frame_creator_v2/components/transparent_effect_wall/transparent_effect_wall_widget.dart';
 import 'package:frame_creator_v2/core/simple_position_size.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_introductory_section_pomodoro_ss01_functional_feature/models/from_center_position_as_the_introductory_section_pomodoro_ss01_functional_feature.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_introductory_section_pomodoro_ss01_functional_feature/widgets/contents/from_center_position_as_the_introductory_section_pomodoro_ss01_character_widget.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_introductory_section_pomodoro_ss01_functional_feature/widgets/contents/from_center_position_as_the_introductory_section_pomodoro_ss01_content_widget.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_introductory_section_pomodoro_ss03_functional_feature/models/from_center_position_as_the_introductory_section_pomodoro_ss03_functional_feature.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_introductory_section_pomodoro_ss03_functional_feature/widgets/contents/from_center_position_as_the_introductory_section_pomodoro_ss03_character_widget.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_introductory_section_pomodoro_ss03_functional_feature/widgets/contents/from_center_position_as_the_introductory_section_pomodoro_ss03_content_widget.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_conversation_functional_feature/models/from_center_start_position_as_one_character_conversation_functional_feature.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_conversation_functional_feature/widgets/contents/from_center_start_position_as_one_character_conversation_character_widget.dart';
-import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_one_character_conversation_functional_feature/widgets/contents/from_center_start_position_as_one_character_conversation_content_widget.dart';
 
 class FromCenterPositionAsTheIntroductorySectionPomodoroSS03Widget extends StatefulWidget {
   const FromCenterPositionAsTheIntroductorySectionPomodoroSS03Widget({super.key, required this.fromCenterPositionAsTheIntroductorySectionPomodoroSS03FunctionalFeature});
@@ -157,7 +151,7 @@ class _FromCenterPositionAsTheIntroductorySectionPomodoroSS03WidgetState extends
                             left: 0,
                             width: sizeDx,
                             height: sizeDy,
-                            child: FromCenterPositionAsTheIntroductorySectionPomodoroSS03CharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy),
+                            child: FromCenterPositionAsTheIntroductorySectionPomodoroSS03CharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy, coreFeature: widget.fromCenterPositionAsTheIntroductorySectionPomodoroSS03FunctionalFeature),
                           )
                         : Container(),
                   ],

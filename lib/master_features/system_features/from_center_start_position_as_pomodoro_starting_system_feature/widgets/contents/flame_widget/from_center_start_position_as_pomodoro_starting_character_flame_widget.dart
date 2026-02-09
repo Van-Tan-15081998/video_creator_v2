@@ -1,13 +1,13 @@
-import 'package:flame/components.dart';
-import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:frame_creator_v2/basic_importation.dart';
 
-class FromCenterStartPositionAsPomodoroStartingCharacterFlameWidget extends FlameGame {
-  FromCenterStartPositionAsPomodoroStartingCharacterFlameWidget({required this.sizeDx, required this.sizeDy});
+class FromCenterStartPositionAsPomodoroStartingCharacterFlameWidget extends FlameGame with PositionedCharacterMixin {
+  FromCenterStartPositionAsPomodoroStartingCharacterFlameWidget({required this.sizeDx, required this.sizeDy, required this.coreFeature});
 
   final double sizeDx;
   final double sizeDy;
+
+  final CoreFeature? coreFeature;
 
   late SpriteAnimationComponent spriteComponentSS01;
   late SpriteAnimationComponent spriteComponentSS02;
@@ -17,6 +17,11 @@ class FromCenterStartPositionAsPomodoroStartingCharacterFlameWidget extends Flam
 
   @override
   Future<void> onLoad() async {
+
+    await onLoadCharacter(sizeDx: sizeDx, sizeDy: sizeDy, coreFeature: coreFeature, flameGame: this);
+
+    return;
+
     // Load sprite sheet
     final imageSS01 = await images.load('sprite_sheet/12C/monster12C.png');
     final imageSS02 = await images.load('sprite_sheet/20A/monster20A.png');

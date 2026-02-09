@@ -1,9 +1,32 @@
+import 'package:flame/components.dart';
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
+import 'package:frame_creator_v2/master_features/constant_data/details/models/character_sprite_animation_management.dart';
 
+/// -----
+/// TODO:
+/// -----
 class CharacterModel with ExecutionCore {
-  CharacterModel({required String? characterId, required String? characterName}) {
+  CharacterModel({
+    required String? characterId,
+    required String? characterName,
+    required double? sizeDx,
+    required double? sizeDy,
+    required String? imageSource,
+    required double? totalFrame,
+    required double? framePerRow,
+    required CharacterSpriteAnimationManagement? characterSpriteAnimationManagement,
+  }) {
     setCharacterId(value: characterId, isPriorityOverride: true);
+
+    setSizeDx(value: sizeDx, isPriorityOverride: true);
+    setSizeDy(value: sizeDy, isPriorityOverride: true);
+    setImageSource(value: imageSource, isPriorityOverride: true);
+    setTotalFrame(value: totalFrame, isPriorityOverride: true);
+    setFramePerRow(value: framePerRow, isPriorityOverride: true);
+
     setCharacterName(value: characterName, isPriorityOverride: true);
+
+    setCharacterSpriteAnimationManagement(value: characterSpriteAnimationManagement, isPriorityOverride: true);
   }
 
   /// -----
@@ -31,6 +54,111 @@ class CharacterModel with ExecutionCore {
       _characterName = value;
     } else {
       _characterName ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  double? _totalFrame;
+  double? get getTotalFrame => _totalFrame;
+  void setTotalFrame({required double? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _totalFrame = value;
+    } else {
+      _totalFrame ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  double? _framePerRow;
+  double? get getFramePerRow => _framePerRow;
+  void setFramePerRow({required double? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _framePerRow = value;
+    } else {
+      _framePerRow ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  double? _sizeDx;
+  double? get getSizeDx => _sizeDx;
+  void setSizeDx({required double? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _sizeDx = value;
+    } else {
+      _sizeDx ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  double? _sizeDy;
+  double? get getSizeDy => _sizeDy;
+  void setSizeDy({required double? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _sizeDy = value;
+    } else {
+      _sizeDy ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  String? _imageSource;
+  String? get getImageSource => _imageSource;
+  void setImageSource({required String? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _imageSource = value;
+    } else {
+      _imageSource ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  SpriteAnimation? _spriteAnimation;
+  SpriteAnimation? get getSpriteAnimation => _spriteAnimation;
+  void setSpriteAnimation({required SpriteAnimation? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _spriteAnimation = value;
+    } else {
+      _spriteAnimation ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  CharacterSpriteAnimationManagement? _characterSpriteAnimationManagement;
+  CharacterSpriteAnimationManagement? get getCharacterSpriteAnimationManagement => _characterSpriteAnimationManagement;
+  void setCharacterSpriteAnimationManagement({required CharacterSpriteAnimationManagement? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _characterSpriteAnimationManagement = value;
+    } else {
+      _characterSpriteAnimationManagement ??= value;
     }
 
     return;
@@ -69,6 +197,7 @@ class CharacterModel with ExecutionCore {
       /// -----
       /// TODO:
       /// -----
+      await getCharacterSpriteAnimationManagement?.onGenerateSpriteAnimation(stateModel: this);
 
       /// -----
       /// TODO: Init Root For SubCom

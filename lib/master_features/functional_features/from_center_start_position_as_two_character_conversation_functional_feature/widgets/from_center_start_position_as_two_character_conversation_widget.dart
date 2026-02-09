@@ -151,7 +151,7 @@ class _FromCenterStartPositionAsTwoCharacterConversationWidgetState extends Stat
                             left: 0,
                             width: sizeDx,
                             height: sizeDy,
-                            child: FromCenterStartPositionAsTwoCharacterConversationCharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy),
+                            child: FromCenterStartPositionAsTwoCharacterConversationCharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy, coreFeature: widget.fromCenterStartPositionAsTwoCharacterConversationFunctionalFeature),
                           )
                         : Container(),
                   ],

@@ -28,12 +28,10 @@ class TopicCBridgeScriptFrameAs1stFromDoneFirstStartToGoPomodoroStayFocusedSs01 
   /// -----
   @override
   void onGenerateDetailSequentialExecutionScript({required ContentItemUnit? contentItemUnit}) {
-
     return;
 
     getCommonAction?.onStartWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterStartPositionAsPomodoroComingUpWindow, gapTime: 10);
     getCommonAction?.onFinishWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterStartPositionAsPomodoroComingUpWindow, gapTime: 10);
-
 
     getCommonAction?.onStartWindow(contentItemUnit: contentItemUnit, windowId: SystemWindow.fromCenterStartPositionAsPomodoroStartingWindow, gapTime: 5);
 

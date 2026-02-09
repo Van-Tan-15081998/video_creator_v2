@@ -434,8 +434,6 @@ class _MemoryGameBoardContentWidgetState extends State<MemoryGameBoardContentWid
     // String engSentence = "Learning daily builds _confidence and long term success.";
     // String vieSentence = "Học mỗi ngày sẽ xây dựng _sự _tự _tin và tạo nên thành công lâu dài.";
 
-
-
     List<String> engWordList = [];
     List<String> vieWordList = [];
 
@@ -711,8 +709,6 @@ class _MemoryGameBoardContentWidgetState extends State<MemoryGameBoardContentWid
 
     // String engSentence = "Learning daily builds _confidence and long term success.";
     // String vieSentence = "Học mỗi ngày sẽ xây dựng _sự _tự _tin và tạo nên thành công lâu dài.";
-
-
 
     List<String> engWordList = [];
     List<String> vieWordList = [];

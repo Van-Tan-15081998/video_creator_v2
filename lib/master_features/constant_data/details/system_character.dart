@@ -1,5 +1,7 @@
 import 'package:frame_creator_v2/core/cau_truc_thuc_thi_co_ban.dart';
 import 'package:frame_creator_v2/master_features/constant_data/details/models/character_model.dart';
+import 'package:frame_creator_v2/master_features/constant_data/details/models/character_sprite_animation_management.dart';
+import 'package:frame_creator_v2/master_features/constant_data/details/models/character_state.dart';
 
 class SystemCharacter with ExecutionCore {
   static const String characterA01Id = '[CHARACTER_A01]';
@@ -44,6 +46,36 @@ class SystemCharacter with ExecutionCore {
       _tommy = value;
     } else {
       _tommy ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  CharacterState? _nathan;
+  CharacterState? get getNathan => _nathan;
+  void setNathan({required CharacterState? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _nathan = value;
+    } else {
+      _nathan ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  CharacterSpriteAnimationManagement? _characterSpriteAnimationManagement;
+  CharacterSpriteAnimationManagement? get getCharacterSpriteAnimationManagement => _characterSpriteAnimationManagement;
+  void setCharacterSpriteAnimationManagement({required CharacterSpriteAnimationManagement? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _characterSpriteAnimationManagement = value;
+    } else {
+      _characterSpriteAnimationManagement ??= value;
     }
 
     return;
@@ -106,8 +138,41 @@ class SystemCharacter with ExecutionCore {
       /// -----
       /// TODO:
       /// -----
+      setCharacterSpriteAnimationManagement(value: CharacterSpriteAnimationManagement(), isPriorityOverride: true);
+
+      /// -----
+      /// TODO:
+      /// -----
       setTommy(
-        value: CharacterModel(characterId: '[TOMMY_CHARACTER]', characterName: 'Tommy'),
+        value: CharacterModel(
+          characterId: '[TOMMY_CHARACTER]',
+          characterName: 'Tommy', //
+          sizeDx: 269.0, //
+          sizeDy: 230.0, //
+          imageSource: 'assets/images/sprite_sheet/24A/monster24A.png',
+          totalFrame: 91,
+          framePerRow: 13,
+          characterSpriteAnimationManagement: getCharacterSpriteAnimationManagement,
+        ),
+        isPriorityOverride: true,
+      );
+
+      /// -----
+      /// TODO:
+      /// -----
+      setNathan(
+        value: CharacterState(
+          stateModel: CharacterModel(
+            characterId: '[NATHAN_CHARACTER]',
+            characterName: 'Nathan', //
+            sizeDx: 260.0, //
+            sizeDy: 250.0, //
+            imageSource: 'assets/images/sprite_sheet/20A/monster20A.png',
+            totalFrame: 91,
+            framePerRow: 13,
+            characterSpriteAnimationManagement: getCharacterSpriteAnimationManagement,
+          ),
+        ),
         isPriorityOverride: true,
       );
 
@@ -175,7 +240,13 @@ class SystemCharacter with ExecutionCore {
       /// -----
       /// TODO:
       /// -----
-      getTommy?.onSetupRoot();
+      await getCharacterSpriteAnimationManagement?.onSetupRoot();
+
+      /// -----
+      /// TODO:
+      /// -----
+      await getTommy?.onSetupRoot();
+      await getNathan?.getStateModel?.onSetupRoot();
     } catch (e) {
       await onReportRootIssue(nameFunction: '[onSetupRootForSubCom]');
     }
@@ -193,7 +264,13 @@ class SystemCharacter with ExecutionCore {
       /// -----
       /// TODO:
       /// -----
-      getTommy?.onInitRoot();
+      await getCharacterSpriteAnimationManagement?.onInitRoot();
+
+      /// -----
+      /// TODO:
+      /// -----
+      await getTommy?.onInitRoot();
+      await getNathan?.getStateModel?.onInitRoot();
     } catch (e) {
       await onReportRootIssue(nameFunction: '[onInitRootForSubCom]');
     }

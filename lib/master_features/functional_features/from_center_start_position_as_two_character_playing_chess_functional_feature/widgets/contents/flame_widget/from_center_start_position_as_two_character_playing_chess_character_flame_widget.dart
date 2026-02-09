@@ -1,13 +1,13 @@
-import 'package:flame/components.dart';
-import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:frame_creator_v2/basic_importation.dart';
 
-class FromCenterStartPositionAsTwoCharacterPlayingChessCharacterFlameWidget extends FlameGame {
-  FromCenterStartPositionAsTwoCharacterPlayingChessCharacterFlameWidget({required this.sizeDx, required this.sizeDy});
+class FromCenterStartPositionAsTwoCharacterPlayingChessCharacterFlameWidget extends FlameGame with PositionedCharacterMixin {
+  FromCenterStartPositionAsTwoCharacterPlayingChessCharacterFlameWidget({required this.sizeDx, required this.sizeDy, required this.coreFeature});
 
   final double sizeDx;
   final double sizeDy;
+
+  final CoreFeature? coreFeature;
 
   late SpriteAnimationComponent spriteComponentSS01;
   late SpriteAnimationComponent spriteComponentSS02;

@@ -1,12 +1,14 @@
-import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
+import 'package:frame_creator_v2/basic_importation.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_start_position_as_two_character_playing_chess_functional_feature/widgets/contents/flame_widget/from_center_start_position_as_two_character_playing_chess_character_flame_widget.dart';
 
 class FromCenterStartPositionAsTwoCharacterPlayingChessCharacterWidget extends StatefulWidget {
-  const FromCenterStartPositionAsTwoCharacterPlayingChessCharacterWidget({super.key, required this.sizeDx, required this.sizeDy});
+  const FromCenterStartPositionAsTwoCharacterPlayingChessCharacterWidget({super.key, required this.sizeDx, required this.sizeDy, required this.coreFeature});
 
   final double sizeDx;
   final double sizeDy;
+
+  final CoreFeature? coreFeature;
 
   @override
   State<FromCenterStartPositionAsTwoCharacterPlayingChessCharacterWidget> createState() => _FromCenterStartPositionAsTwoCharacterPlayingChessCharacterWidgetState();
@@ -42,7 +44,7 @@ class _FromCenterStartPositionAsTwoCharacterPlayingChessCharacterWidgetState ext
             width: widget.sizeDx,
             height: widget.sizeDy,
             child: GameWidget(
-              game: FromCenterStartPositionAsTwoCharacterPlayingChessCharacterFlameWidget(sizeDx: widget.sizeDx, sizeDy: widget.sizeDy),
+              game: FromCenterStartPositionAsTwoCharacterPlayingChessCharacterFlameWidget(sizeDx: widget.sizeDx, sizeDy: widget.sizeDy, coreFeature: widget.coreFeature),
             ),
           ),
         ],

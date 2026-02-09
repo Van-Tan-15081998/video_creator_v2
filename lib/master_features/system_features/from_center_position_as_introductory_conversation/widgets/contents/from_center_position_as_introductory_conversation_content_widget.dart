@@ -1,6 +1,6 @@
 import 'dart:async';
-import 'dart:math';
 import 'dart:math' as math;
+import 'dart:math';
 
 import 'package:flame_audio/flame_audio.dart';
 import 'package:flutter/material.dart';
@@ -1020,7 +1020,6 @@ class _FromCenterPositionAsIntroductoryConversationContentWidgetState extends St
           //     ),
           //   ),
           // ),
-
           AnimatedPositioned(
             duration: const Duration(milliseconds: 100),
             bottom: 20.0,

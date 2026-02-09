@@ -23,6 +23,16 @@ class TopicCFirstStartScriptFrame1stAsGo extends FirstStartScriptFrame1stAsGo {
   /// -----
   @override
   void onGenerateDetailSequentialExecutionScript({required ContentItemUnit? contentItemUnit}) {
+    getSequentialExecutionController
+        ?.getSystemFeatureManagement
+        ?.getFromCenterPositionAsIntroductoryConversationSystemFeature //
+        ?.setBottomStartCharacter(value: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.getNathan, isPriorityOverride: true);
+
+    getSequentialExecutionController
+        ?.getSystemFeatureManagement
+        ?.getFromCenterPositionAsIntroductoryConversationSystemFeature //
+        ?.setBottomEndCharacter(value: getSystemStateManagement?.getSystemConstantData?.getSystemCharacter?.getNathan, isPriorityOverride: true);
+
     return;
   }
 }

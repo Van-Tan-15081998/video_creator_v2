@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:frame_creator_v2/master_data/content_item/01_content_item_unit/content_item_unit.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/script_frame/05_stay_focused/stay_focused_ss01/pomodoro_stay_focused_ss01_script_frame_2nd_as_main.dart';
-import 'package:frame_creator_v2/master_data/functional_sequential_execution/script/system_sequential_execution_script.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/contents/details/step_item_content_as_new_message_conversation.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/functional_sequential_execution_step_item_state.dart';
@@ -33,7 +32,6 @@ class TopicCPomodoroStayFocusedSs01ScriptFrame2ndAsMain extends PomodoroStayFocu
   /// -----
   @override
   void onGenerateDetailSequentialExecutionScript({required ContentItemUnit? contentItemUnit}) {
-
     return;
 
     /// -----

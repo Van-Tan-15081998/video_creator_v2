@@ -149,7 +149,6 @@ class _FromCenterStartPositionAsTwoCharacterConversationContentWidgetState exten
     ];
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
-
       _ticker = createTicker((Duration elapsed) {
         if (getFunctionalSequentialExecutionController?.getFlowController?.getMessageFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.isNotEmpty == true) {
           /// -----

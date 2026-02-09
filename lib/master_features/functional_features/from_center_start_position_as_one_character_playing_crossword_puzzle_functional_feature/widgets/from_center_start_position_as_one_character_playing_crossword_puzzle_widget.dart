@@ -151,7 +151,7 @@ class _FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleWidgetState ex
                             left: 0,
                             width: sizeDx,
                             height: sizeDy,
-                            child: FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleCharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy),
+                            child: FromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleCharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy, coreFeature: widget.fromCenterStartPositionAsOneCharacterPlayingCrosswordPuzzleFunctionalFeature),
                           )
                         : Container(),
                   ],

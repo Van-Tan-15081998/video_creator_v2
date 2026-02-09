@@ -1,12 +1,14 @@
-import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
+import 'package:frame_creator_v2/basic_importation.dart';
 import 'package:frame_creator_v2/master_features/functional_features/from_center_position_as_the_introductory_section_pomodoro_ss04_functional_feature/widgets/contents/flame_widget/from_center_position_as_the_introductory_section_pomodoro_ss04_character_flame_widget.dart';
 
 class FromCenterPositionAsTheIntroductorySectionPomodoroSS04CharacterWidget extends StatefulWidget {
-  const FromCenterPositionAsTheIntroductorySectionPomodoroSS04CharacterWidget({super.key, required this.sizeDx, required this.sizeDy});
+  const FromCenterPositionAsTheIntroductorySectionPomodoroSS04CharacterWidget({super.key, required this.sizeDx, required this.sizeDy, required this.coreFeature});
 
   final double sizeDx;
   final double sizeDy;
+
+  final CoreFeature? coreFeature;
 
   @override
   State<FromCenterPositionAsTheIntroductorySectionPomodoroSS04CharacterWidget> createState() => _FromCenterPositionAsTheIntroductorySectionPomodoroSS04CharacterWidgetState();
@@ -42,7 +44,7 @@ class _FromCenterPositionAsTheIntroductorySectionPomodoroSS04CharacterWidgetStat
             width: widget.sizeDx,
             height: widget.sizeDy,
             child: GameWidget(
-              game: FromCenterPositionAsTheIntroductorySectionPomodoroSS04CharacterFlameWidget(sizeDx: widget.sizeDx, sizeDy: widget.sizeDy),
+              game: FromCenterPositionAsTheIntroductorySectionPomodoroSS04CharacterFlameWidget(sizeDx: widget.sizeDx, sizeDy: widget.sizeDy, coreFeature: widget.coreFeature),
             ),
           ),
         ],

@@ -151,7 +151,7 @@ class _FromCenterPositionAsIntroductoryConversationWidgetState extends State<Fro
                             left: 0,
                             width: sizeDx,
                             height: sizeDy,
-                            child: FromCenterPositionAsIntroductoryConversationCharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy),
+                            child: FromCenterPositionAsIntroductoryConversationCharacterWidget(sizeDx: sizeDx, sizeDy: sizeDy, coreFeature: widget.fromCenterPositionAsIntroductoryConversationSystemFeature),
                           )
                         : Container(),
                   ],

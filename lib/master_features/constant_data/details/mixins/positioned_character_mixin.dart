@@ -1,24 +1,72 @@
 import 'package:flutter/material.dart';
 import 'package:frame_creator_v2/basic_importation.dart';
+import 'package:frame_creator_v2/master_features/constant_data/details/models/character_state.dart';
 
-class FromCenterStartPositionAsIntroductoryConversationCharacterFlameWidget extends FlameGame with PositionedCharacterMixin {
-  FromCenterStartPositionAsIntroductoryConversationCharacterFlameWidget({required this.sizeDx, required this.sizeDy, required this.coreFeature});
-
-  final double sizeDx;
-  final double sizeDy;
-
-  final CoreFeature? coreFeature;
-
-  @override
-  Color backgroundColor() => Colors.transparent; // ví dụ: tím đậm
-
-  @override
-  Future<void> onLoad() async {
-
-    await onLoadCharacter(sizeDx: sizeDx, sizeDy: sizeDy, coreFeature: coreFeature, flameGame: this);
+mixin PositionedCharacterMixin {
+  /// -----
+  /// TODO:
+  /// -----
+  CharacterState? _topStartCharacter;
+  CharacterState? get getTopStartCharacter => _topStartCharacter;
+  void setTopStartCharacter({required CharacterState? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _topStartCharacter = value;
+    } else {
+      _topStartCharacter ??= value;
+    }
 
     return;
+  }
 
+  /// -----
+  /// TODO:
+  /// -----
+  CharacterState? _topEndCharacter;
+  CharacterState? get getTopEndCharacter => _topEndCharacter;
+  void setTopEndCharacter({required CharacterState? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _topEndCharacter = value;
+    } else {
+      _topEndCharacter ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  CharacterState? _bottomStartCharacter;
+  CharacterState? get getBottomStartCharacter => _bottomStartCharacter;
+  void setBottomStartCharacter({required CharacterState? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bottomStartCharacter = value;
+    } else {
+      _bottomStartCharacter ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  CharacterState? _bottomEndCharacter;
+  CharacterState? get getBottomEndCharacter => _bottomEndCharacter;
+  void setBottomEndCharacter({required CharacterState? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _bottomEndCharacter = value;
+    } else {
+      _bottomEndCharacter ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  Future<void> onLoadCharacter({required double sizeDx, required double sizeDy, required CoreFeature? coreFeature, required FlameGame flameGame}) async {
     SpriteAnimationComponent? spriteAnimationComponentTopStartCharacter;
     TextComponent? borderNameComponentTopStartCharacter;
     TextComponent? nameComponentTopStartCharacter;
@@ -72,9 +120,9 @@ class FromCenterStartPositionAsIntroductoryConversationCharacterFlameWidget exte
       borderNameComponentTopStartCharacter.anchor = Anchor.center;
       nameComponentTopStartCharacter.anchor = Anchor.center;
 
-      add(spriteAnimationComponentTopStartCharacter);
-      add(borderNameComponentTopStartCharacter);
-      add(nameComponentTopStartCharacter);
+      flameGame.add(spriteAnimationComponentTopStartCharacter);
+      flameGame.add(borderNameComponentTopStartCharacter);
+      flameGame.add(nameComponentTopStartCharacter);
     }
 
     /// TODO: _TopEnd
@@ -114,9 +162,9 @@ class FromCenterStartPositionAsIntroductoryConversationCharacterFlameWidget exte
       borderNameComponentTopEndCharacter.anchor = Anchor.center;
       nameComponentTopEndCharacter.anchor = Anchor.center;
 
-      add(spriteAnimationComponentTopEndCharacter);
-      add(borderNameComponentTopEndCharacter);
-      add(nameComponentTopEndCharacter);
+      flameGame.add(spriteAnimationComponentTopEndCharacter);
+      flameGame.add(borderNameComponentTopEndCharacter);
+      flameGame.add(nameComponentTopEndCharacter);
     }
 
     /// TODO: _BottomStart
@@ -156,9 +204,9 @@ class FromCenterStartPositionAsIntroductoryConversationCharacterFlameWidget exte
       borderNameComponentBottomStartCharacter.anchor = Anchor.center;
       nameComponentBottomStartCharacter.anchor = Anchor.center;
 
-      add(spriteAnimationComponentBottomStartCharacter);
-      add(borderNameComponentBottomStartCharacter);
-      add(nameComponentBottomStartCharacter);
+      flameGame.add(spriteAnimationComponentBottomStartCharacter);
+      flameGame.add(borderNameComponentBottomStartCharacter);
+      flameGame.add(nameComponentBottomStartCharacter);
     }
 
     /// TODO: _BottomEnd
@@ -198,9 +246,9 @@ class FromCenterStartPositionAsIntroductoryConversationCharacterFlameWidget exte
       borderNameComponentBottomEndCharacter.anchor = Anchor.center;
       nameComponentBottomEndCharacter.anchor = Anchor.center;
 
-      add(spriteAnimationComponentBottomEndCharacter);
-      add(borderNameComponentBottomEndCharacter);
-      add(nameComponentBottomEndCharacter);
+      flameGame.add(spriteAnimationComponentBottomEndCharacter);
+      flameGame.add(borderNameComponentBottomEndCharacter);
+      flameGame.add(nameComponentBottomEndCharacter);
     }
 
     return;
