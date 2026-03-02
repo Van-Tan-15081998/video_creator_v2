@@ -78,6 +78,38 @@ class CommonActionModel {
   /// -----
   /// TODO:
   /// -----
+  onCreateNewMessageReaction({required ContentItemUnit? contentItemUnit, required StepItemContentAsNewMessageConversation? messageData, required int? gapTime}) {
+    //
+    contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit
+      ?..getFunctionalSequentialExecutionStepItemStateListAsStack?.add(
+        FunctionalSequentialExecutionStepItemState(
+          stateModel: FunctionalSequentialExecutionStepItem.asMessageReactionFlow(flowController: getFunctionalSequentialExecutionController?.getFlowController)
+            ..setPerformId(value: '[PERFORM_ID__]', isPriorityOverride: true)
+            ..onSetupRoot()
+            ..onInitRoot()
+            ..onStart = () {
+              if (kDebugMode) {
+                print('[ON_START]_____[_]');
+              }
+
+              ///
+            }
+            ..onPerform = () {
+              if (kDebugMode) {
+                print('[ON_PERFORM]_____[_]');
+              }
+            }
+            ..setStepItemContent(value: messageData, isPriorityOverride: true),
+        ),
+      )
+      ..addGap(flowController: getFunctionalSequentialExecutionController?.getFlowController, seconds: gapTime);
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
   onCreateNewImageSlide({required ContentItemUnit? contentItemUnit, required StepItemContentAsNewMessageConversation? messageData, required int? gapTime}) {
     //
     contentItemUnit?.getFunctionalSequentialExecutionContentItemUnit
@@ -617,9 +649,23 @@ class CommonActionModel {
         imageSource: null, //
         windowId: windowId,
         characterId: characterId,
+        id: '[TIN_NHAN_A1]',
       ),
       gapTime: 2,
     );
+    onCreateNewMessageReaction(
+      contentItemUnit: contentItemUnit,
+      messageData: StepItemContentAsNewMessageConversation(
+        message: '1234567890 ..... _10',
+        messageReaction: '🤪',
+        imageSource: null, //
+        windowId: windowId,
+        characterId: characterId,
+        id: '[REACTION_TIN_NHAN_A1]',
+      ),
+      gapTime: 2,
+    );
+
     onCreateNewMessage(
       contentItemUnit: contentItemUnit,
       messageData: StepItemContentAsNewMessageConversation(

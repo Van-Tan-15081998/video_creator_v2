@@ -37,6 +37,13 @@ class FlowType with ExecutionCore {
   }
 
   ///
+  /// TODO: as MessageReactionFlow
+  ///
+  FlowType.asMessageReactionFlow() {
+    setTypeAsMessageReactionFlow();
+  }
+
+  ///
   /// TODO: as ImageSlideFlow
   ///
   FlowType.asImageSlideFlow() {
@@ -163,6 +170,21 @@ class FlowType with ExecutionCore {
 
   bool isTypeAsMessageFlow() {
     if (getType == '[MESSAGE_FLOW]') {
+      return true;
+    }
+
+    return false;
+  }
+
+  ///
+  /// TODO: Loại => Message Reaction Flow
+  ///
+  void setTypeAsMessageReactionFlow() {
+    setType(value: '[MESSAGE_REACTION_FLOW]', isPriorityOverride: true);
+  }
+
+  bool isTypeAsMessageReactionFlow() {
+    if (getType == '[MESSAGE_REACTION_FLOW]') {
       return true;
     }
 

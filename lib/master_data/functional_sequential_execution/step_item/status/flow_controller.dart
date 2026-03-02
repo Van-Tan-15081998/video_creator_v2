@@ -5,6 +5,7 @@ import 'package:frame_creator_v2/master_data/functional_sequential_execution/ste
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/crossword_puzzle_flow_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/image_slide_flow_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/message_flow_controller.dart';
+import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/message_reaction_flow_controller.dart';
 import 'package:frame_creator_v2/master_data/functional_sequential_execution/step_item/attributes/window_flow_controller.dart';
 
 class FlowController with ExecutionCore {
@@ -68,6 +69,21 @@ class FlowController with ExecutionCore {
       _messageFlowController = value;
     } else {
       _messageFlowController ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  MessageReactionFlowController? _messageReactionFlowController;
+  MessageReactionFlowController? get getMessageReactionFlowController => _messageReactionFlowController;
+  void setMessageReactionFlowController({required MessageReactionFlowController? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _messageReactionFlowController = value;
+    } else {
+      _messageReactionFlowController ??= value;
     }
 
     return;
@@ -179,6 +195,7 @@ class FlowController with ExecutionCore {
       setCharacterFlowController(value: CharacterFlowController(), isPriorityOverride: true);
       setImageSlideFlowController(value: ImageSlideFlowController(), isPriorityOverride: true);
       setMessageFlowController(value: MessageFlowController(), isPriorityOverride: true);
+      setMessageReactionFlowController(value: MessageReactionFlowController(), isPriorityOverride: true);
       setWindowFlowController(value: WindowFlowController(), isPriorityOverride: true);
       setChessFlowController(value: ChessFlowController(), isPriorityOverride: true);
       setCrosswordPuzzleFlowController(value: CrosswordPuzzleFlowController(), isPriorityOverride: true);
@@ -251,6 +268,7 @@ class FlowController with ExecutionCore {
       await getCharacterFlowController?.onSetupRoot();
       await getImageSlideFlowController?.onSetupRoot();
       await getMessageFlowController?.onSetupRoot();
+      await getMessageReactionFlowController?.onSetupRoot();
       await getWindowFlowController?.onSetupRoot();
       await getChessFlowController?.onSetupRoot();
       await getCrosswordPuzzleFlowController?.onSetupRoot();
@@ -275,6 +293,7 @@ class FlowController with ExecutionCore {
       await getCharacterFlowController?.onInitRoot();
       await getImageSlideFlowController?.onInitRoot();
       await getMessageFlowController?.onInitRoot();
+      await getMessageReactionFlowController?.onInitRoot();
       await getWindowFlowController?.onInitRoot();
       await getChessFlowController?.onInitRoot();
       await getCrosswordPuzzleFlowController?.onInitRoot();

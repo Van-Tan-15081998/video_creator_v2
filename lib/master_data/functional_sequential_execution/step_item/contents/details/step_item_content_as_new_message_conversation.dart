@@ -17,6 +17,7 @@ class StepItemContentAsNewMessageConversation extends StepItemContentAbstract {
     CharacterModel? character, //
     TextStyle? style, //
     String? id, //
+    String? messageReaction, //
   }) {
     setMessage(value: message, isPriorityOverride: true);
     setImageSource(value: imageSource, isPriorityOverride: true);
@@ -25,6 +26,7 @@ class StepItemContentAsNewMessageConversation extends StepItemContentAbstract {
     setCharacter(value: character, isPriorityOverride: true);
     setStyle(value: style, isPriorityOverride: true);
     setId(value: id, isPriorityOverride: true);
+    setMessageReaction(value: messageReaction, isPriorityOverride: true);
   }
 
   /// -----
@@ -52,6 +54,21 @@ class StepItemContentAsNewMessageConversation extends StepItemContentAbstract {
       _message = value;
     } else {
       _message ??= value;
+    }
+
+    return;
+  }
+
+  /// -----
+  /// TODO:
+  /// -----
+  String? _messageReaction;
+  String? get getMessageReaction => _messageReaction;
+  void setMessageReaction({required String? value, bool? isPriorityOverride}) {
+    if (isPriorityOverride == true) {
+      _messageReaction = value;
+    } else {
+      _messageReaction ??= value;
     }
 
     return;

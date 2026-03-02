@@ -66,6 +66,17 @@ class FunctionalSequentialExecutionStepItem with ExecutionCore {
   }
 
   ///
+  /// TODO: as MessageReactionFlow
+  ///
+  FunctionalSequentialExecutionStepItem.asMessageReactionFlow({required FlowController? flowController}) {
+    setGapTime(value: GapTime.asDefault(), isPriorityOverride: true);
+    setFlowController(value: flowController, isPriorityOverride: true);
+    setFlowType(value: FlowType.asMessageReactionFlow(), isPriorityOverride: true);
+    setContentExistenceStatus(value: ContentExistenceStatus.asExistingContent(), isPriorityOverride: true);
+    setActiveStatus(value: ActiveStatus.asActive(), isPriorityOverride: true);
+  }
+
+  ///
   /// TODO: as ImageSlideFlow
   ///
   FunctionalSequentialExecutionStepItem.asImageSlideFlow({required FlowController? flowController}) {

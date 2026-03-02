@@ -36,6 +36,7 @@ class _FromCenterPositionAsIntroductoryConversationContentWidgetState extends St
   Timer? _timer;
 
   final ScrollController _scrollController = ScrollController();
+  final ScrollController _messageReactionScrollController = ScrollController();
   final ScrollController _imageSlideScrollController = ScrollController();
 
   int totalMinutes = 1;
@@ -52,6 +53,7 @@ class _FromCenterPositionAsIntroductoryConversationContentWidgetState extends St
   int counterMessage = 0;
 
   List<Widget> messageList = [];
+  List<Widget> messageReactionList = [];
   List<Widget> imageSlideList = [];
 
   /// -----
@@ -151,6 +153,13 @@ class _FromCenterPositionAsIntroductoryConversationContentWidgetState extends St
       Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 300.0, color: Colors.transparent),
       Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 300.0, color: Colors.transparent),
     ];
+    messageReactionList = [
+      Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 300.0, color: Colors.transparent),
+      Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 300.0, color: Colors.transparent),
+      Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 300.0, color: Colors.transparent),
+      Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 300.0, color: Colors.transparent),
+      Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 300.0, color: Colors.transparent),
+    ];
 
     imageSlideList = [Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 100.0, color: Colors.transparent)];
 
@@ -176,6 +185,31 @@ class _FromCenterPositionAsIntroductoryConversationContentWidgetState extends St
               /// -----
               if (getFunctionalSequentialExecutionController?.getFlowController?.getMessageFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.first?.getStateModel?.getFlowType?.isTypeAsMessageFlow() == true) {
                 getFunctionalSequentialExecutionController?.getFlowController?.getMessageFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.removeAt(0);
+              }
+            }
+          }
+        }
+
+        if (getFunctionalSequentialExecutionController?.getFlowController?.getMessageReactionFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.isNotEmpty == true) {
+          /// -----
+          /// TODO: Kiểm Tra Loại Flow
+          /// -----
+          if (getFunctionalSequentialExecutionController?.getFlowController?.getMessageReactionFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.first?.getStateModel?.getFlowType?.isTypeAsMessageReactionFlow() == true) {
+            ///
+            if (getFunctionalSequentialExecutionController?.getFlowController?.getMessageReactionFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.first?.getStateModel?.getStepItemContent?.getStepItemContentAs<StepItemContentAsNewMessageConversation>()?.getWindowId ==
+                getWindowId) {
+              ///
+              setCurrentFunctionalSequentialExecutionStepItemState(
+                //
+                value: getFunctionalSequentialExecutionController?.getFlowController?.getMessageReactionFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.first, //
+                isPriorityOverride: true,
+              );
+
+              /// -----
+              /// TODO: Clear Stack
+              /// -----
+              if (getFunctionalSequentialExecutionController?.getFlowController?.getMessageReactionFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.first?.getStateModel?.getFlowType?.isTypeAsMessageReactionFlow() == true) {
+                getFunctionalSequentialExecutionController?.getFlowController?.getMessageReactionFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.removeAt(0);
               }
             }
           }
@@ -227,14 +261,30 @@ class _FromCenterPositionAsIntroductoryConversationContentWidgetState extends St
               getStepItemContentAsNewMessageConversationAsList?.add(newMessageConversation);
 
               setState(() {
-                if (getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getMessage?.isNotEmpty == true) {
+                if (getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getMessageReaction?.isNotEmpty == true) {
+                  messageReactionList.add(Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 250.0, color: Colors.transparent));
+                  messageReactionList.add(
+                    messageByWordWidget(
+                      isLeftSide: true,
+                      isRightSide: false,
+                      engSentence: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getMessage ?? '',
+                      style: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getStyle,
+                      messageReaction: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getMessageReaction,
+                    ),
+                  );
+                } else if (getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getMessage?.isNotEmpty == true) {
                   messageList.add(Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 250.0, color: Colors.transparent));
                   messageList.add(messageByWordWidget(isLeftSide: true, isRightSide: false, engSentence: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getMessage ?? '', style: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getStyle));
+
+                  //
+                  messageReactionList.add(Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 250.0, color: Colors.transparent));
+                  messageReactionList.add(messageByWordWidget(isLeftSide: true, isRightSide: false, engSentence: '', style: null, messageReaction: null, isEmptyMessageReaction: true));
                 } else if (getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getImageSource?.isNotEmpty == true) {
                   messageList.add(Container(margin: EdgeInsets.all(5.0), width: widget.sizeDx, height: 250.0, color: Colors.transparent));
                   messageList.add(pictureMessageByWordWidget(isLeftSide: true, isRightSide: false, imageSource: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getImageSource ?? ''));
                 } else {
                   messageList.clear();
+                  messageReactionList.clear();
                 }
               });
 
@@ -252,6 +302,7 @@ class _FromCenterPositionAsIntroductoryConversationContentWidgetState extends St
                   messageList.add(pictureMessageByWordWidget(isLeftSide: false, isRightSide: true, imageSource: getStepItemContentAsNewMessageConversationAsList?.firstOrNull?.getImageSource ?? ''));
                 } else {
                   messageList.clear();
+                  messageReactionList.clear();
                 }
               });
 
@@ -268,6 +319,9 @@ class _FromCenterPositionAsIntroductoryConversationContentWidgetState extends St
           WidgetsBinding.instance.addPostFrameCallback((_) {
             if (_scrollController.hasClients) {
               _scrollController.animateTo(_scrollController.position.maxScrollExtent, duration: Duration(milliseconds: 500), curve: Curves.easeOut);
+            }
+            if (_messageReactionScrollController.hasClients) {
+              _messageReactionScrollController.animateTo(_messageReactionScrollController.position.maxScrollExtent, duration: Duration(milliseconds: 500), curve: Curves.easeOut);
             }
             if (_imageSlideScrollController.hasClients) {
               _imageSlideScrollController.animateTo(_imageSlideScrollController.position.maxScrollExtent, duration: Duration(milliseconds: 500), curve: Curves.easeOut);
@@ -462,6 +516,48 @@ class _FromCenterPositionAsIntroductoryConversationContentWidgetState extends St
               ),
             ),
           ),
+          Positioned(
+            bottom: 320.0,
+            left: 0,
+            width: widget.sizeDx,
+            height: 500.0,
+            child: Container(
+              width: widget.sizeDx,
+              height: 500.0,
+              color: Colors.transparent,
+              child: ShaderMask(
+                blendMode: BlendMode.dstIn,
+                shaderCallback: (Rect bounds) {
+                  return LinearGradient(
+                    begin: Alignment.bottomCenter,
+                    end: Alignment.topCenter,
+                    colors: [
+                      // Colors.white,
+                      Colors.white.withValues(alpha: 0.99),
+                      Colors.white.withValues(alpha: 0.98),
+                      Colors.white.withValues(alpha: 0.97),
+                      Colors.white.withValues(alpha: 0.96),
+                      Colors.white.withValues(alpha: 0.95),
+                      Colors.white.withValues(alpha: 0.94),
+                      Colors.white.withValues(alpha: 0.93),
+                      Colors.white.withValues(alpha: 0.92),
+                      Colors.white.withValues(alpha: 0.91),
+                      Colors.white.withValues(alpha: 0.90),
+                      Colors.transparent,
+                      Colors.transparent,
+                      Colors.transparent,
+                    ],
+                    stops: [0.88, 0.89, 0.90, 0.91, 0.92, 0.93, 0.94, 0.95, 0.96, 0.97, 0.98, 0.99, 1.0],
+                  ).createShader(bounds);
+                },
+                child: SingleChildScrollView(
+                  controller: _messageReactionScrollController,
+
+                  child: Column(children: messageReactionList),
+                ),
+              ),
+            ),
+          ),
 
           ///
           /// TODO: Image Slide
@@ -511,7 +607,9 @@ class _FromCenterPositionAsIntroductoryConversationContentWidgetState extends St
     );
   }
 
-  Widget messageByWordWidget({required bool isLeftSide, required bool isRightSide, required String engSentence, TextStyle? style}) {
+  Widget messageByWordWidget({required bool isLeftSide, required bool isRightSide, required String engSentence, String? messageReaction, bool? isEmptyMessageReaction, TextStyle? style}) {
+    bool isMessageReaction = messageReaction?.isNotEmpty == true;
+
     double distanceToBorder = 5.0;
 
     List<String> engWordList = [];
@@ -708,41 +806,67 @@ class _FromCenterPositionAsIntroductoryConversationContentWidgetState extends St
       child: Stack(
         alignment: AlignmentDirectional.bottomStart,
         children: [
-          AnimatedPositioned(
-            bottom: 25.0,
-            duration: const Duration(milliseconds: 100),
-            right: isRightSide ? distanceToBorder : null,
-            left: isLeftSide ? distanceToBorder : null,
-            width: engSentenceWidth,
-            height: engSentenceHeight,
-            child: Container(
-              width: engSentenceWidth,
-              height: engSentenceHeight,
-              decoration: BoxDecoration(
-                color: Color(0xFFFFFFFF).withValues(alpha: 0.95),
-                border: Border.all(width: 8.0, color: Color(0xFFFFFFFF).withValues(alpha: 0.95)),
-                borderRadius: isRightSide
-                    ? BorderRadius.only(topLeft: Radius.circular(45.0), topRight: Radius.circular(45.0), bottomRight: Radius.circular(0), bottomLeft: Radius.circular(45.0))
-                    : BorderRadius.only(topLeft: Radius.circular(45.0), topRight: Radius.circular(45.0), bottomRight: Radius.circular(45.0), bottomLeft: Radius.circular(0)),
-                boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.5), blurRadius: 8.0, spreadRadius: 1.0, offset: Offset(0, 0))],
-              ),
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    RichText(
-                      textAlign: TextAlign.center,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: lineNumber,
-                      text: TextSpan(children: engWordWidgetSpan),
+          ((isEmptyMessageReaction == false || isEmptyMessageReaction == null) && isMessageReaction == false)
+              ? AnimatedPositioned(
+                  bottom: 35.0,
+                  duration: const Duration(milliseconds: 100),
+                  right: isRightSide ? distanceToBorder : null,
+                  left: isLeftSide ? distanceToBorder : null,
+                  width: engSentenceWidth,
+                  height: engSentenceHeight,
+                  child: Container(
+                    width: engSentenceWidth,
+                    height: engSentenceHeight,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFFFFFFF).withValues(alpha: 0.95),
+                      border: Border.all(width: 8.0, color: Color(0xFFFFFFFF).withValues(alpha: 0.95)),
+                      borderRadius: isRightSide
+                          ? BorderRadius.only(topLeft: Radius.circular(45.0), topRight: Radius.circular(45.0), bottomRight: Radius.circular(0), bottomLeft: Radius.circular(45.0))
+                          : BorderRadius.only(topLeft: Radius.circular(45.0), topRight: Radius.circular(45.0), bottomRight: Radius.circular(45.0), bottomLeft: Radius.circular(0)),
+                      boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.5), blurRadius: 8.0, spreadRadius: 1.0, offset: Offset(0, 0))],
                     ),
-                  ],
-                ),
-              ),
-            ),
-          ),
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          RichText(
+                            textAlign: TextAlign.center,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: lineNumber,
+                            text: TextSpan(children: engWordWidgetSpan),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                )
+              : Container(),
+          isMessageReaction == true
+              ? AnimatedPositioned(
+                  bottom: 0,
+                  duration: const Duration(milliseconds: 100),
+                  right: isRightSide ? (engSentenceWidth - 200.0) : null,
+                  left: isLeftSide ? (engSentenceWidth - 200.0) : null,
+                  width: 120.0,
+                  height: 80.0,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Color(0xFFFFFFFF).withValues(alpha: 0.95),
+                      border: Border.all(width: 5.0, color: Color(0xFFFFFFFF).withValues(alpha: 0.95)),
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(50.0), topRight: Radius.circular(50.0), bottomRight: Radius.circular(50.0), bottomLeft: Radius.circular(50.0)),
+                      boxShadow: [BoxShadow(color: Color(0xFF3C3C3C).withValues(alpha: 0.85), blurRadius: 2.0, spreadRadius: 1.0, offset: Offset(0, 0))],
+                    ),
+                    child: Center(
+                      child: Text(
+                        messageReaction ?? '',
+                        style: GoogleFonts.robotoSlab(color: Color(0xFF000000), fontWeight: FontWeight.w800, fontSize: 36, height: 1.2),
+                      ),
+                    ),
+                  ),
+                )
+              : Container(),
         ],
       ),
     );

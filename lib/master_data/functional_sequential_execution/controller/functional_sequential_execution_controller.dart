@@ -457,6 +457,19 @@ class FunctionalSequentialExecutionController with ExecutionCore {
           }
 
           /// -----
+          /// TODO: Message Reaction Flow
+          /// -----
+          if (functionalSequentialExecutionStepItemState?.getStateModel?.getFlowType?.isTypeAsMessageReactionFlow() == true) {
+            getFlowController?.getMessageReactionFlowController?.getFunctionalSequentialExecutionStepItemStateListAsStack?.add(functionalSequentialExecutionStepItemState);
+            contentStage?.getFunctionalSequentialExecutionStepItemStateListAsStack?.remove(functionalSequentialExecutionStepItemState);
+
+            /// TODO: Perform
+            functionalSequentialExecutionStepItemState?.getStateModel?.onPerform?.call();
+
+            ///
+          }
+
+          /// -----
           /// TODO: Chess Flow
           /// -----
           if (functionalSequentialExecutionStepItemState?.getStateModel?.getFlowType?.isTypeAsChessFlow() == true) {
